@@ -1,0 +1,33 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "modules",
+  "status": "released",
+  "data_list_name": "modules",
+  "rows": [
+    {
+      "id": "demo_module",
+      "status": "released",
+      "page_count": 3,
+      "completed": false,
+      "title": "Demo",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Demo"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "data/modules_CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+  "_metadata": {
+    "page_count": {
+      "type": "number"
+    },
+    "completed": {
+      "type": "boolean"
+    }
+  }
+}

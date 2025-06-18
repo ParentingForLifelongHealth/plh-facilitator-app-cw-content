@@ -1,0 +1,212 @@
+{
+  "flow_type": "template",
+  "flow_name": "delete_group",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id",
+      "value": "@fields.current_group_no",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "group_id",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields.current_group_no",
+            "matchedExpression": "@fields.current_group_no",
+            "type": "fields",
+            "fieldName": "current_group_no"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.current_group_no": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "group_name",
+      "value": "[name]",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "group_name"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Are you sure you want to delete @fields.current_group_name?",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "title",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Are you sure you want to delete @fields.current_group_name?",
+            "matchedExpression": "@fields.current_group_name",
+            "type": "fields",
+            "fieldName": "current_group_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.current_group_name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "text_warning",
+      "value": "This will delete all of @fields.current_group_name group data. The action cannot be undone.",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text_warning",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "This will delete all of @fields.current_group_name group data. The action cannot be undone.",
+            "matchedExpression": "@fields.current_group_name",
+            "type": "fields",
+            "fieldName": "current_group_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.current_group_name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "name": "buttons",
+      "rows": [
+        {
+          "type": "button",
+          "name": "button_no",
+          "value": "Cancel",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "uncompleted"
+              ],
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
+            }
+          ],
+          "parameter_list": {
+            "style": "card"
+          },
+          "style_list": [
+            "flex:1"
+          ],
+          "_nested_name": "buttons.button_no"
+        },
+        {
+          "type": "button",
+          "name": "button_delete",
+          "value": "Delete",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_data",
+              "args": [],
+              "_raw": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived: TRUE",
+              "_cleaned": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived: TRUE",
+              "params": {
+                "_list_id": "parent_groups",
+                "_id": "@fields.current_group_id",
+                "archived": true
+              }
+            },
+            {
+              "trigger": "click",
+              "action_id": "set_field",
+              "args": [
+                "current_group_no",
+                "NULL"
+              ],
+              "_raw": "click | set_field: current_group_no: NULL",
+              "_cleaned": "click | set_field: current_group_no: NULL"
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
+            }
+          ],
+          "parameter_list": {
+            "style": "card"
+          },
+          "style_list": [
+            "flex:1"
+          ],
+          "_nested_name": "buttons.button_delete",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "_raw": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived: TRUE",
+                    "matchedExpression": "@fields.current_group_id",
+                    "type": "fields",
+                    "fieldName": "current_group_id"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived: TRUE",
+                    "matchedExpression": "@fields.current_group_id",
+                    "type": "fields",
+                    "fieldName": "current_group_id"
+                  }
+                ],
+                "params": {
+                  "_id": [
+                    {
+                      "fullExpression": "@fields.current_group_id",
+                      "matchedExpression": "@fields.current_group_id",
+                      "type": "fields",
+                      "fieldName": "current_group_id"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "_dynamicDependencies": {
+            "@fields.current_group_id": [
+              "action_list.0._raw",
+              "action_list.0._cleaned",
+              "action_list.0.params._id"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "buttons"
+    }
+  ],
+  "_xlsxPath": "templates/profile.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

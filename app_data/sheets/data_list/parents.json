@@ -1,0 +1,57 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "parents",
+  "status": "released",
+  "data_list_name": "parents",
+  "rows": [
+    {
+      "id": "text_field",
+      "group_id": "text_field",
+      "first_name": "text_field",
+      "last_name": "text_field",
+      "text_id": "text_field",
+      "co_parent_id": "text_field",
+      "co_parent_name": "text_field",
+      "archived": true,
+      "onboarding_day_chat": false,
+      "day_3_mh_stress": false,
+      "day_5_final_chat_session_5ux": false,
+      "before_chat": false,
+      "week_1_chat": false,
+      "week_2_chat": false,
+      "week_3_chat": false,
+      "week_4_chat": false
+    }
+  ],
+  "_xlsxPath": "data/profile_data.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+  "_metadata": {
+    "archived": {
+      "type": "boolean"
+    },
+    "onboarding_day_chat": {
+      "type": "boolean"
+    },
+    "day_3_mh_stress": {
+      "type": "boolean"
+    },
+    "day_5_final_chat_session_5ux": {
+      "type": "boolean"
+    },
+    "before_chat": {
+      "type": "boolean"
+    },
+    "week_1_chat": {
+      "type": "boolean"
+    },
+    "week_2_chat": {
+      "type": "boolean"
+    },
+    "week_3_chat": {
+      "type": "boolean"
+    },
+    "week_4_chat": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "language",
+  "status": "released",
+  "data_list_name": "language",
+  "flow_subtype": "app_config_language_list",
+  "rows": [
+    {
+      "id": "gb_en",
+      "country_code": "gb",
+      "country_label": "United Kingdom",
+      "country_icon": "images/flags/gb.svg",
+      "language_code": "en",
+      "language_label": "English",
+      "name": "gb_en",
+      "text": "English",
+      "image": "images/flags/gb.svg"
+    },
+    {
+      "id": "nl_ms",
+      "country_code": "nl",
+      "country_label": "Dutch",
+      "country_icon": "images/flags/nl.svg",
+      "language_code": "ms",
+      "language_label": "Dutch",
+      "name": "nl_ms",
+      "text": "Dutch",
+      "image": "images/flags/nl.svg"
+    }
+  ],
+  "_xlsxPath": "data/deployment_data_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

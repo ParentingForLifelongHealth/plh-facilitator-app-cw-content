@@ -1,0 +1,82 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "app_section_data",
+  "status": "released",
+  "data_list_name": "app_section",
+  "rows": [
+    {
+      "id": "home",
+      "icon_asset": "images/logos/bird_white.svg",
+      "template": "home_screen",
+      "image": "@global.home_icon_asset",
+      "target_template": "home_screen",
+      "title": "Sessions",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Sessions"
+        },
+        "description": {
+          "eng": "Welcome to the @global.app_name. Each week you should select your weekly topic, share the message to your @global.share_groups, and report attendance."
+        }
+      },
+      "description": "Welcome to the @global.app_name. Each week you should select your weekly topic, share the message to your @global.share_groups, and report attendance."
+    },
+    {
+      "id": "reports",
+      "icon_asset": "images/icons/pencil_white.svg",
+      "template": "reports",
+      "title": "Report",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Report"
+        }
+      }
+    },
+    {
+      "id": "library",
+      "icon_asset": "images/icons/library_white.svg",
+      "template": "library",
+      "image": "images/icons/library.png",
+      "target_template": "library",
+      "title": "Library",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Library"
+        }
+      }
+    },
+    {
+      "id": "settings",
+      "icon_asset": "images/icons/cog_white.svg",
+      "template": "profile",
+      "image": "images/icons/cog_white.svg",
+      "target_template": "profile",
+      "title": "Settings",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Settings"
+        },
+        "description": {
+          "eng": "Your profile provides your facilitator ID and is also where you can edit the list of parents attending your groups."
+        }
+      },
+      "description": "Your profile provides your facilitator ID and is also where you can edit the list of parents attending your groups."
+    }
+  ],
+  "_xlsxPath": "data/navigation_data.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

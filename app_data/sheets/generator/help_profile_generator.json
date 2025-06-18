@@ -1,0 +1,42 @@
+{
+  "flow_type": "generator",
+  "flow_name": "help_profile_generator",
+  "status": "released",
+  "parameter_list": {
+    "input_data_list": "profile_section_data",
+    "output_flow_name": "help_@gen.id",
+    "output_flow_type": "template",
+    "output_flow_subtype": "generated"
+  },
+  "rows": [
+    {
+      "type": "text",
+      "name": "text",
+      "value": "@gen.description"
+    }
+  ],
+  "_xlsxPath": "templates/help.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+  "_output_flows": [
+    {
+      "flow_name": "help_about",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "help_id",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "help_group",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "help_groups",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    }
+  ]
+}

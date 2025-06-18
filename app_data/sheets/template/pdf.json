@@ -1,0 +1,237 @@
+{
+  "flow_type": "template",
+  "flow_name": "pdf",
+  "status": "released",
+  "rows": [
+    {
+      "name": "pdf_id",
+      "value": "pdf_1",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "pdf_id"
+    },
+    {
+      "name": "pdf_asset",
+      "type": "set_variable",
+      "_nested_name": "pdf_asset"
+    },
+    {
+      "name": "pdf_title",
+      "type": "set_variable",
+      "_nested_name": "pdf_title"
+    },
+    {
+      "type": "data_items",
+      "value": "pdf",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "filter": "@item.id == @local.pdf_id",
+        "limit": "1"
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "pdf_asset",
+            "@items[0].pdf_asset"
+          ],
+          "_raw": "data_changed | set_local : pdf_asset: @items[0].pdf_asset",
+          "_cleaned": "data_changed | set_local : pdf_asset: @items[0].pdf_asset"
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "pdf_title",
+            "@items[0].title"
+          ],
+          "_raw": "data_changed | set_local : pdf_title: @items[0].title",
+          "_cleaned": "data_changed | set_local : pdf_title: @items[0].title"
+        }
+      ],
+      "name": "data_items_5",
+      "_nested_name": "data_items_5",
+      "_dynamicFields": {
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "@item.id == @local.pdf_id",
+              "matchedExpression": "@item.id",
+              "type": "item",
+              "fieldName": "id"
+            },
+            {
+              "fullExpression": "@item.id == @local.pdf_id",
+              "matchedExpression": "@local.pdf_id",
+              "type": "local",
+              "fieldName": "pdf_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@item.id": [
+          "parameter_list.filter"
+        ],
+        "@local.pdf_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": [
+        {
+          "trigger": "uncompleted",
+          "action_id": "emit",
+          "args": [
+            "uncompleted"
+          ],
+          "_raw": "uncompleted | emit: uncompleted",
+          "_cleaned": "uncompleted | emit: uncompleted"
+        }
+      ],
+      "rows": [
+        {
+          "name": "title",
+          "value": "@local.pdf_title",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "header.title",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.pdf_title",
+                "matchedExpression": "@local.pdf_title",
+                "type": "local",
+                "fieldName": "pdf_title"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.pdf_title": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "header"
+    },
+    {
+      "type": "display_group",
+      "rows": [
+        {
+          "type": "text",
+          "name": "spacer",
+          "value": "",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "flex: 1"
+          ],
+          "_nested_name": "display_group_8.spacer"
+        },
+        {
+          "type": "round_button",
+          "name": "download",
+          "parameter_list": {
+            "variant": "no-background",
+            "icon_src": "images/icons/download.svg"
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "save_to_device",
+              "args": [
+                "@local.pdf_asset"
+              ],
+              "_raw": "click | save_to_device: @local.pdf_asset",
+              "_cleaned": "click | save_to_device: @local.pdf_asset"
+            }
+          ],
+          "_nested_name": "display_group_8.download",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "args": {
+                  "0": [
+                    {
+                      "fullExpression": "@local.pdf_asset",
+                      "matchedExpression": "@local.pdf_asset",
+                      "type": "local",
+                      "fieldName": "pdf_asset"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | save_to_device: @local.pdf_asset",
+                    "matchedExpression": "@local.pdf_asset",
+                    "type": "local",
+                    "fieldName": "pdf_asset"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | save_to_device: @local.pdf_asset",
+                    "matchedExpression": "@local.pdf_asset",
+                    "type": "local",
+                    "fieldName": "pdf_asset"
+                  }
+                ]
+              }
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.pdf_asset": [
+              "action_list.0.args.0",
+              "action_list.0._raw",
+              "action_list.0._cleaned"
+            ]
+          }
+        }
+      ],
+      "name": "display_group_8",
+      "_nested_name": "display_group_8"
+    },
+    {
+      "type": "pdf",
+      "name": "pdf",
+      "value": "@local.pdf_asset",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "starting_page": "1"
+      },
+      "_nested_name": "pdf",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.pdf_asset",
+            "matchedExpression": "@local.pdf_asset",
+            "type": "local",
+            "fieldName": "pdf_asset"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.pdf_asset": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/media.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

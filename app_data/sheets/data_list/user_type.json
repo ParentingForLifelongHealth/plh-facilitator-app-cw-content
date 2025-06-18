@@ -1,0 +1,36 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "user_type",
+  "status": "released",
+  "data_list_name": "user_type",
+  "rows": [
+    {
+      "id": "facilitator",
+      "name": "facilitator",
+      "text": "Facilitator",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Facilitator"
+        }
+      }
+    },
+    {
+      "id": "tester",
+      "name": "tester",
+      "text": "System tester",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "System tester"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "data/deployment_data.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

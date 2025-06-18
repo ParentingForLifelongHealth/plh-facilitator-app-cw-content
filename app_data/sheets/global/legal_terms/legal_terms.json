@@ -1,0 +1,26 @@
+{
+  "flow_type": "global",
+  "flow_name": "legal_terms",
+  "status": "released",
+  "flow_subtype": "legal_terms",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "terms_and_conditions",
+      "value": "Terms & Conditions",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "privacy_policy",
+      "value": "Privacy Policy",
+      "_translations": {
+        "value": {}
+      }
+    }
+  ],
+  "_xlsxPath": "data/deployment_data.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

@@ -1,0 +1,31 @@
+{
+  "flow_name": "help_library",
+  "flow_subtype": "generated",
+  "flow_type": "template",
+  "rows": [
+    {
+      "type": "text",
+      "name": "text",
+      "value": "@gen.description",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@gen.description",
+            "matchedExpression": "@gen.description",
+            "type": "gen",
+            "fieldName": "description"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@gen.description": [
+          "value"
+        ]
+      }
+    }
+  ]
+}

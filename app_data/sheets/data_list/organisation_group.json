@@ -1,0 +1,34 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "organisation_group",
+  "status": "released",
+  "data_list_name": "organisation_group",
+  "rows": [
+    {
+      "id": "partners",
+      "name": "Partners",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Partners"
+        }
+      }
+    },
+    {
+      "id": "funders",
+      "name": "Donors",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Donors"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "data/deployment_data_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}
