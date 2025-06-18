@@ -1,0 +1,1337 @@
+{
+  "flow_type": "template",
+  "flow_name": "parent_list",
+  "status": "released",
+  "rows": [
+    {
+      "type": "display_group",
+      "rows": [
+        {
+          "type": "text",
+          "value": "Add Parent to Group",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "color: #74777C"
+          ],
+          "name": "text_1",
+          "_nested_name": "display_group_2.text_1"
+        },
+        {
+          "type": "round_button",
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "go_to",
+              "args": [
+                "add_parent"
+              ],
+              "_raw": "click | go_to: add_parent",
+              "_cleaned": "click | go_to: add_parent"
+            }
+          ],
+          "parameter_list": {
+            "variant": "no-background",
+            "icon_src": "images/icons/add_circle.svg"
+          },
+          "name": "round_button_2",
+          "_nested_name": "display_group_2.round_button_2"
+        }
+      ],
+      "name": "display_group_2",
+      "_nested_name": "display_group_2"
+    },
+    {
+      "name": "first_name",
+      "value": "",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "first_name"
+    },
+    {
+      "name": "last_name",
+      "value": "",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "last_name"
+    },
+    {
+      "type": "data_items",
+      "value": "parents",
+      "rows": [
+        {
+          "type": "text",
+          "value": "current: @fields.current_group_no",
+          "_translations": {
+            "value": {}
+          },
+          "condition": false,
+          "exclude_from_translation": true,
+          "name": "text_1_@item.id",
+          "_nested_name": "data_items_6.text_1_@item.id",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "current: @fields.current_group_no",
+                "matchedExpression": "@fields.current_group_no",
+                "type": "fields",
+                "fieldName": "current_group_no"
+              }
+            ],
+            "name": [
+              {
+                "fullExpression": "text_1_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "data_items_6.text_1_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@fields.current_group_no": [
+              "value"
+            ],
+            "@item.id": [
+              "name",
+              "_nested_name"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "value": "@item.group_id",
+          "_translations": {
+            "value": {}
+          },
+          "condition": false,
+          "exclude_from_translation": true,
+          "name": "text_2_@item.id",
+          "_nested_name": "data_items_6.text_2_@item.id",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.group_id",
+                "matchedExpression": "@item.group_id",
+                "type": "item",
+                "fieldName": "group_id"
+              }
+            ],
+            "name": [
+              {
+                "fullExpression": "text_2_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "data_items_6.text_2_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.group_id": [
+              "value"
+            ],
+            "@item.id": [
+              "name",
+              "_nested_name"
+            ]
+          }
+        },
+        {
+          "type": "display_group",
+          "style_list": [
+            "margin-bottom: 12px"
+          ],
+          "condition": "@item.group_id == @fields.current_group_no && !@item.archived",
+          "rows": [
+            {
+              "name": "parent_name",
+              "value": "@item.first_name @item.last_name",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "data_items_6.display_group_3_@item.id.parent_name",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.first_name @item.last_name",
+                    "matchedExpression": "@item.first_name",
+                    "type": "item",
+                    "fieldName": "first_name"
+                  },
+                  {
+                    "fullExpression": "@item.first_name @item.last_name",
+                    "matchedExpression": "@item.last_name",
+                    "type": "item",
+                    "fieldName": "last_name"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.parent_name",
+                    "matchedExpression": "@item.id.parent_name",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.first_name": [
+                  "value"
+                ],
+                "@item.last_name": [
+                  "value"
+                ],
+                "@item.id.parent_name": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "exclude_from_translation": true,
+              "type": "set_variable",
+              "name": "set_variable_2",
+              "_nested_name": "data_items_6.display_group_3_@item.id.set_variable_2",
+              "_dynamicFields": {
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.set_variable_2",
+                    "matchedExpression": "@item.id.set_variable_2",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id.set_variable_2": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "display_group",
+              "parameter_list": {
+                "style": "column"
+              },
+              "style_list": [
+                "flex: 1"
+              ],
+              "rows": [
+                {
+                  "name": "first_name",
+                  "value": "",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "exclude_from_translation": true,
+                  "type": "set_variable",
+                  "_nested_name": "data_items_6.display_group_3_@item.id.display_group_3.first_name",
+                  "_dynamicFields": {
+                    "_nested_name": [
+                      {
+                        "fullExpression": "data_items_6.display_group_3_@item.id.display_group_3.first_name",
+                        "matchedExpression": "@item.id.display_group_3.first_name",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.id.display_group_3.first_name": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "name": "last_name",
+                  "value": "",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "exclude_from_translation": true,
+                  "type": "set_variable",
+                  "_nested_name": "data_items_6.display_group_3_@item.id.display_group_3.last_name",
+                  "_dynamicFields": {
+                    "_nested_name": [
+                      {
+                        "fullExpression": "data_items_6.display_group_3_@item.id.display_group_3.last_name",
+                        "matchedExpression": "@item.id.display_group_3.last_name",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.id.display_group_3.last_name": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "name": "first_name",
+                  "value": "@item.first_name",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "condition": "@item.first_name",
+                  "exclude_from_translation": true,
+                  "type": "set_variable",
+                  "_nested_name": "data_items_6.display_group_3_@item.id.display_group_3.first_name",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@item.first_name",
+                        "matchedExpression": "@item.first_name",
+                        "type": "item",
+                        "fieldName": "first_name"
+                      }
+                    ],
+                    "condition": [
+                      {
+                        "fullExpression": "@item.first_name",
+                        "matchedExpression": "@item.first_name",
+                        "type": "item",
+                        "fieldName": "first_name"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "data_items_6.display_group_3_@item.id.display_group_3.first_name",
+                        "matchedExpression": "@item.id.display_group_3.first_name",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.first_name": [
+                      "value",
+                      "condition"
+                    ],
+                    "@item.id.display_group_3.first_name": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "name": "last_name",
+                  "value": "@item.last_name",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "condition": "@item.last_name",
+                  "exclude_from_translation": true,
+                  "type": "set_variable",
+                  "_nested_name": "data_items_6.display_group_3_@item.id.display_group_3.last_name",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@item.last_name",
+                        "matchedExpression": "@item.last_name",
+                        "type": "item",
+                        "fieldName": "last_name"
+                      }
+                    ],
+                    "condition": [
+                      {
+                        "fullExpression": "@item.last_name",
+                        "matchedExpression": "@item.last_name",
+                        "type": "item",
+                        "fieldName": "last_name"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "data_items_6.display_group_3_@item.id.display_group_3.last_name",
+                        "matchedExpression": "@item.id.display_group_3.last_name",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.last_name": [
+                      "value",
+                      "condition"
+                    ],
+                    "@item.id.display_group_3.last_name": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "type": "text",
+                  "name": "text_@item.parent_no",
+                  "value": "@local.first_name @local.last_name",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "style_list": [
+                    "color: #46607F"
+                  ],
+                  "condition": true,
+                  "exclude_from_translation": true,
+                  "_nested_name": "data_items_6.display_group_3_@item.id.display_group_3.text_@item.parent_no",
+                  "_dynamicFields": {
+                    "name": [
+                      {
+                        "fullExpression": "text_@item.parent_no",
+                        "matchedExpression": "@item.parent_no",
+                        "type": "item",
+                        "fieldName": "parent_no"
+                      }
+                    ],
+                    "value": [
+                      {
+                        "fullExpression": "@local.first_name @local.last_name",
+                        "matchedExpression": "@local.first_name",
+                        "type": "local",
+                        "fieldName": "first_name"
+                      },
+                      {
+                        "fullExpression": "@local.first_name @local.last_name",
+                        "matchedExpression": "@local.last_name",
+                        "type": "local",
+                        "fieldName": "last_name"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "data_items_6.display_group_3_@item.id.display_group_3.text_@item.parent_no",
+                        "matchedExpression": "@item.id.display_group_3.text_",
+                        "type": "item",
+                        "fieldName": "id"
+                      },
+                      {
+                        "fullExpression": "data_items_6.display_group_3_@item.id.display_group_3.text_@item.parent_no",
+                        "matchedExpression": "@item.parent_no",
+                        "type": "item",
+                        "fieldName": "parent_no"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.parent_no": [
+                      "name",
+                      "_nested_name"
+                    ],
+                    "@local.first_name": [
+                      "value"
+                    ],
+                    "@local.last_name": [
+                      "value"
+                    ],
+                    "@item.id.display_group_3.text_": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "Co-parent: @item.co_parent_name",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "style_list": [
+                    "font-size: 12px",
+                    "color: #46607F",
+                    "margin-top: -8px",
+                    "margin-bottom: -8px"
+                  ],
+                  "condition": "@item.co_parent_id",
+                  "name": "text_6",
+                  "_nested_name": "data_items_6.display_group_3_@item.id.display_group_3.text_6",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "Co-parent: @item.co_parent_name",
+                        "matchedExpression": "@item.co_parent_name",
+                        "type": "item",
+                        "fieldName": "co_parent_name"
+                      }
+                    ],
+                    "condition": [
+                      {
+                        "fullExpression": "@item.co_parent_id",
+                        "matchedExpression": "@item.co_parent_id",
+                        "type": "item",
+                        "fieldName": "co_parent_id"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "data_items_6.display_group_3_@item.id.display_group_3.text_6",
+                        "matchedExpression": "@item.id.display_group_3.text_6",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.co_parent_name": [
+                      "value"
+                    ],
+                    "@item.co_parent_id": [
+                      "condition"
+                    ],
+                    "@item.id.display_group_3.text_6": [
+                      "_nested_name"
+                    ]
+                  }
+                }
+              ],
+              "name": "display_group_3",
+              "_nested_name": "data_items_6.display_group_3_@item.id.display_group_3",
+              "_dynamicFields": {
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.display_group_3",
+                    "matchedExpression": "@item.id.display_group_3",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id.display_group_3": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "round_button",
+              "name": "button_co_add_@item.id",
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_parent_no",
+                    "@item.id"
+                  ],
+                  "_raw": "click | set_field: current_parent_no: @item.id",
+                  "_cleaned": "click | set_field: current_parent_no: @item.id"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_parent_name",
+                    "@item.first_name @item.last_name"
+                  ],
+                  "_raw": "click | set_field: current_parent_name: @item.first_name @item.last_name",
+                  "_cleaned": "click | set_field: current_parent_name: @item.first_name @item.last_name"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "pop_up",
+                  "args": [
+                    "add_coparent"
+                  ],
+                  "_raw": "click | pop_up: add_coparent",
+                  "_cleaned": "click | pop_up: add_coparent"
+                }
+              ],
+              "parameter_list": {
+                "icon_src": "images/icons/group_add_dark.svg",
+                "variant": "primary_light"
+              },
+              "condition": "!@item.co_parent_id",
+              "_nested_name": "data_items_6.display_group_3_@item.id.button_co_add_@item.id",
+              "_dynamicFields": {
+                "name": [
+                  {
+                    "fullExpression": "button_co_add_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ],
+                "action_list": {
+                  "0": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@item.id",
+                          "matchedExpression": "@item.id",
+                          "type": "item",
+                          "fieldName": "id"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_no: @item.id",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_no: @item.id",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "1": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@item.first_name @item.last_name",
+                          "matchedExpression": "@item.first_name",
+                          "type": "item",
+                          "fieldName": "first_name"
+                        },
+                        {
+                          "fullExpression": "@item.first_name @item.last_name",
+                          "matchedExpression": "@item.last_name",
+                          "type": "item",
+                          "fieldName": "last_name"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_name: @item.first_name @item.last_name",
+                        "matchedExpression": "@item.first_name",
+                        "type": "item",
+                        "fieldName": "first_name"
+                      },
+                      {
+                        "fullExpression": "click | set_field: current_parent_name: @item.first_name @item.last_name",
+                        "matchedExpression": "@item.last_name",
+                        "type": "item",
+                        "fieldName": "last_name"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_name: @item.first_name @item.last_name",
+                        "matchedExpression": "@item.first_name",
+                        "type": "item",
+                        "fieldName": "first_name"
+                      },
+                      {
+                        "fullExpression": "click | set_field: current_parent_name: @item.first_name @item.last_name",
+                        "matchedExpression": "@item.last_name",
+                        "type": "item",
+                        "fieldName": "last_name"
+                      }
+                    ]
+                  }
+                },
+                "condition": [
+                  {
+                    "fullExpression": "!@item.co_parent_id",
+                    "matchedExpression": "!@item.co_parent_id",
+                    "type": "item",
+                    "fieldName": "co_parent_id"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.button_co_add_@item.id",
+                    "matchedExpression": "@item.id.button_co_add_",
+                    "type": "item",
+                    "fieldName": "id"
+                  },
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.button_co_add_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id": [
+                  "name",
+                  "action_list.0.args.1",
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "_nested_name"
+                ],
+                "@item.first_name": [
+                  "action_list.1.args.1",
+                  "action_list.1._raw",
+                  "action_list.1._cleaned"
+                ],
+                "@item.last_name": [
+                  "action_list.1.args.1",
+                  "action_list.1._raw",
+                  "action_list.1._cleaned"
+                ],
+                "!@item.co_parent_id": [
+                  "condition"
+                ],
+                "@item.id.button_co_add_": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "round_button",
+              "name": "button_co_remove_@item.id",
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "set_data",
+                  "args": [],
+                  "_raw": "click | set_data |\n_list_id: parents,\n_id: @item.co_parent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                  "_cleaned": "click | set_data |\n_list_id: parents,\n_id: @item.co_parent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                  "params": {
+                    "_list_id": "parents",
+                    "_id": "@item.co_parent_id",
+                    "co_parent_id": "",
+                    "co_parent_name": ""
+                  }
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "set_data",
+                  "args": [],
+                  "_raw": "click | set_data |\n_list_id: parents,\n_id: @item.id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                  "_cleaned": "click | set_data |\n_list_id: parents,\n_id: @item.id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                  "params": {
+                    "_list_id": "parents",
+                    "_id": "@item.id",
+                    "co_parent_id": "",
+                    "co_parent_name": ""
+                  }
+                }
+              ],
+              "parameter_list": {
+                "icon_src": "images/icons/person_remove.svg"
+              },
+              "condition": "@item.co_parent_id",
+              "_nested_name": "data_items_6.display_group_3_@item.id.button_co_remove_@item.id",
+              "_dynamicFields": {
+                "name": [
+                  {
+                    "fullExpression": "button_co_remove_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ],
+                "action_list": {
+                  "0": {
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @item.co_parent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                        "matchedExpression": "@item.co_parent_id",
+                        "type": "item",
+                        "fieldName": "co_parent_id"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @item.co_parent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                        "matchedExpression": "@item.co_parent_id",
+                        "type": "item",
+                        "fieldName": "co_parent_id"
+                      }
+                    ],
+                    "params": {
+                      "_id": [
+                        {
+                          "fullExpression": "@item.co_parent_id",
+                          "matchedExpression": "@item.co_parent_id",
+                          "type": "item",
+                          "fieldName": "co_parent_id"
+                        }
+                      ]
+                    }
+                  },
+                  "1": {
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @item.id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @item.id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ],
+                    "params": {
+                      "_id": [
+                        {
+                          "fullExpression": "@item.id",
+                          "matchedExpression": "@item.id",
+                          "type": "item",
+                          "fieldName": "id"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "condition": [
+                  {
+                    "fullExpression": "@item.co_parent_id",
+                    "matchedExpression": "@item.co_parent_id",
+                    "type": "item",
+                    "fieldName": "co_parent_id"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.button_co_remove_@item.id",
+                    "matchedExpression": "@item.id.button_co_remove_",
+                    "type": "item",
+                    "fieldName": "id"
+                  },
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.button_co_remove_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id": [
+                  "name",
+                  "action_list.1._raw",
+                  "action_list.1._cleaned",
+                  "action_list.1.params._id",
+                  "_nested_name"
+                ],
+                "@item.co_parent_id": [
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "action_list.0.params._id",
+                  "condition"
+                ],
+                "@item.id.button_co_remove_": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "round_button",
+              "name": "button_edit_@item.id",
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_parent_no",
+                    "@item.id"
+                  ],
+                  "_raw": "click | set_field: current_parent_no: @item.id",
+                  "_cleaned": "click | set_field: current_parent_no: @item.id"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_parent_first_name",
+                    "@local.first_name"
+                  ],
+                  "_raw": "click | set_field: current_parent_first_name: @local.first_name",
+                  "_cleaned": "click | set_field: current_parent_first_name: @local.first_name"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_parent_last_name",
+                    "@local.last_name"
+                  ],
+                  "_raw": "click | set_field: current_parent_last_name: @local.last_name",
+                  "_cleaned": "click | set_field: current_parent_last_name: @local.last_name"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_parent_text_id",
+                    "@item.text_id"
+                  ],
+                  "_raw": "click | set_field: current_parent_text_id: @item.text_id",
+                  "_cleaned": "click | set_field: current_parent_text_id: @item.text_id"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "go_to",
+                  "args": [
+                    "edit_parent"
+                  ],
+                  "_raw": "click | go_to: edit_parent",
+                  "_cleaned": "click | go_to: edit_parent"
+                }
+              ],
+              "parameter_list": {
+                "icon_src": "images/icons/edit.svg"
+              },
+              "condition": true,
+              "_nested_name": "data_items_6.display_group_3_@item.id.button_edit_@item.id",
+              "_dynamicFields": {
+                "name": [
+                  {
+                    "fullExpression": "button_edit_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ],
+                "action_list": {
+                  "0": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@item.id",
+                          "matchedExpression": "@item.id",
+                          "type": "item",
+                          "fieldName": "id"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_no: @item.id",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_no: @item.id",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "1": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@local.first_name",
+                          "matchedExpression": "@local.first_name",
+                          "type": "local",
+                          "fieldName": "first_name"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_first_name: @local.first_name",
+                        "matchedExpression": "@local.first_name",
+                        "type": "local",
+                        "fieldName": "first_name"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_first_name: @local.first_name",
+                        "matchedExpression": "@local.first_name",
+                        "type": "local",
+                        "fieldName": "first_name"
+                      }
+                    ]
+                  },
+                  "2": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@local.last_name",
+                          "matchedExpression": "@local.last_name",
+                          "type": "local",
+                          "fieldName": "last_name"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_last_name: @local.last_name",
+                        "matchedExpression": "@local.last_name",
+                        "type": "local",
+                        "fieldName": "last_name"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_last_name: @local.last_name",
+                        "matchedExpression": "@local.last_name",
+                        "type": "local",
+                        "fieldName": "last_name"
+                      }
+                    ]
+                  },
+                  "3": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@item.text_id",
+                          "matchedExpression": "@item.text_id",
+                          "type": "item",
+                          "fieldName": "text_id"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_text_id: @item.text_id",
+                        "matchedExpression": "@item.text_id",
+                        "type": "item",
+                        "fieldName": "text_id"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_text_id: @item.text_id",
+                        "matchedExpression": "@item.text_id",
+                        "type": "item",
+                        "fieldName": "text_id"
+                      }
+                    ]
+                  }
+                },
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.button_edit_@item.id",
+                    "matchedExpression": "@item.id.button_edit_",
+                    "type": "item",
+                    "fieldName": "id"
+                  },
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.button_edit_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id": [
+                  "name",
+                  "action_list.0.args.1",
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "_nested_name"
+                ],
+                "@local.first_name": [
+                  "action_list.1.args.1",
+                  "action_list.1._raw",
+                  "action_list.1._cleaned"
+                ],
+                "@local.last_name": [
+                  "action_list.2.args.1",
+                  "action_list.2._raw",
+                  "action_list.2._cleaned"
+                ],
+                "@item.text_id": [
+                  "action_list.3.args.1",
+                  "action_list.3._raw",
+                  "action_list.3._cleaned"
+                ],
+                "@item.id.button_edit_": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "round_button",
+              "name": "button_delete_@item.id",
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_parent_no",
+                    "@item.id"
+                  ],
+                  "_raw": "click | set_field: current_parent_no: @item.id",
+                  "_cleaned": "click | set_field: current_parent_no: @item.id"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_parent_name",
+                    "@local.first_name @local.last_name"
+                  ],
+                  "_raw": "click | set_field: current_parent_name: @local.first_name @local.last_name",
+                  "_cleaned": "click | set_field: current_parent_name: @local.first_name @local.last_name"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_coparent_id",
+                    "@item.co_parent_id"
+                  ],
+                  "_raw": "click | set_field: current_coparent_id: @item.co_parent_id",
+                  "_cleaned": "click | set_field: current_coparent_id: @item.co_parent_id"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "pop_up",
+                  "args": [
+                    "delete_parent"
+                  ],
+                  "_raw": "click | pop_up: delete_parent",
+                  "_cleaned": "click | pop_up: delete_parent"
+                }
+              ],
+              "parameter_list": {
+                "variant": "no-background",
+                "icon_src": "images/icons/delete.svg"
+              },
+              "condition": true,
+              "_nested_name": "data_items_6.display_group_3_@item.id.button_delete_@item.id",
+              "_dynamicFields": {
+                "name": [
+                  {
+                    "fullExpression": "button_delete_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ],
+                "action_list": {
+                  "0": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@item.id",
+                          "matchedExpression": "@item.id",
+                          "type": "item",
+                          "fieldName": "id"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_no: @item.id",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_no: @item.id",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "1": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@local.first_name @local.last_name",
+                          "matchedExpression": "@local.first_name",
+                          "type": "local",
+                          "fieldName": "first_name"
+                        },
+                        {
+                          "fullExpression": "@local.first_name @local.last_name",
+                          "matchedExpression": "@local.last_name",
+                          "type": "local",
+                          "fieldName": "last_name"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_name: @local.first_name @local.last_name",
+                        "matchedExpression": "@local.first_name",
+                        "type": "local",
+                        "fieldName": "first_name"
+                      },
+                      {
+                        "fullExpression": "click | set_field: current_parent_name: @local.first_name @local.last_name",
+                        "matchedExpression": "@local.last_name",
+                        "type": "local",
+                        "fieldName": "last_name"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_parent_name: @local.first_name @local.last_name",
+                        "matchedExpression": "@local.first_name",
+                        "type": "local",
+                        "fieldName": "first_name"
+                      },
+                      {
+                        "fullExpression": "click | set_field: current_parent_name: @local.first_name @local.last_name",
+                        "matchedExpression": "@local.last_name",
+                        "type": "local",
+                        "fieldName": "last_name"
+                      }
+                    ]
+                  },
+                  "2": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@item.co_parent_id",
+                          "matchedExpression": "@item.co_parent_id",
+                          "type": "item",
+                          "fieldName": "co_parent_id"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_coparent_id: @item.co_parent_id",
+                        "matchedExpression": "@item.co_parent_id",
+                        "type": "item",
+                        "fieldName": "co_parent_id"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | set_field: current_coparent_id: @item.co_parent_id",
+                        "matchedExpression": "@item.co_parent_id",
+                        "type": "item",
+                        "fieldName": "co_parent_id"
+                      }
+                    ]
+                  }
+                },
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.button_delete_@item.id",
+                    "matchedExpression": "@item.id.button_delete_",
+                    "type": "item",
+                    "fieldName": "id"
+                  },
+                  {
+                    "fullExpression": "data_items_6.display_group_3_@item.id.button_delete_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id": [
+                  "name",
+                  "action_list.0.args.1",
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "_nested_name"
+                ],
+                "@local.first_name": [
+                  "action_list.1.args.1",
+                  "action_list.1._raw",
+                  "action_list.1._cleaned"
+                ],
+                "@local.last_name": [
+                  "action_list.1.args.1",
+                  "action_list.1._raw",
+                  "action_list.1._cleaned"
+                ],
+                "@item.co_parent_id": [
+                  "action_list.2.args.1",
+                  "action_list.2._raw",
+                  "action_list.2._cleaned"
+                ],
+                "@item.id.button_delete_": [
+                  "_nested_name"
+                ]
+              }
+            }
+          ],
+          "name": "display_group_3_@item.id",
+          "_nested_name": "data_items_6.display_group_3_@item.id",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@item.group_id == @fields.current_group_no && !@item.archived",
+                "matchedExpression": "@item.group_id",
+                "type": "item",
+                "fieldName": "group_id"
+              },
+              {
+                "fullExpression": "@item.group_id == @fields.current_group_no && !@item.archived",
+                "matchedExpression": "@fields.current_group_no",
+                "type": "fields",
+                "fieldName": "current_group_no"
+              },
+              {
+                "fullExpression": "@item.group_id == @fields.current_group_no && !@item.archived",
+                "matchedExpression": "!@item.archived",
+                "type": "item",
+                "fieldName": "archived"
+              }
+            ],
+            "name": [
+              {
+                "fullExpression": "display_group_3_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "data_items_6.display_group_3_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.group_id": [
+              "condition"
+            ],
+            "@fields.current_group_no": [
+              "condition"
+            ],
+            "!@item.archived": [
+              "condition"
+            ],
+            "@item.id": [
+              "name",
+              "_nested_name"
+            ]
+          }
+        }
+      ],
+      "name": "data_items_6",
+      "_nested_name": "data_items_6"
+    }
+  ],
+  "_xlsxPath": "templates/profile.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

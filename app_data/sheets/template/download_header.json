@@ -1,0 +1,87 @@
+{
+  "flow_type": "template",
+  "flow_name": "download_header",
+  "status": "released",
+  "rows": [
+    {
+      "type": "display_group",
+      "name": "dg_header",
+      "rows": [
+        {
+          "name": "asset",
+          "type": "set_variable",
+          "_nested_name": "dg_header.asset"
+        },
+        {
+          "type": "title",
+          "name": "title",
+          "style_list": [
+            "flex:1"
+          ],
+          "_nested_name": "dg_header.title"
+        },
+        {
+          "type": "round_button",
+          "name": "download_button",
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "save_to_device",
+              "args": [
+                "@local.asset"
+              ],
+              "_raw": "click | save_to_device: @local.asset",
+              "_cleaned": "click | save_to_device: @local.asset"
+            }
+          ],
+          "parameter_list": {
+            "icon_src": "download"
+          },
+          "_nested_name": "dg_header.download_button",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "args": {
+                  "0": [
+                    {
+                      "fullExpression": "@local.asset",
+                      "matchedExpression": "@local.asset",
+                      "type": "local",
+                      "fieldName": "asset"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | save_to_device: @local.asset",
+                    "matchedExpression": "@local.asset",
+                    "type": "local",
+                    "fieldName": "asset"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | save_to_device: @local.asset",
+                    "matchedExpression": "@local.asset",
+                    "type": "local",
+                    "fieldName": "asset"
+                  }
+                ]
+              }
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.asset": [
+              "action_list.0.args.0",
+              "action_list.0._raw",
+              "action_list.0._cleaned"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "dg_header"
+    }
+  ],
+  "_xlsxPath": "templates/media.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

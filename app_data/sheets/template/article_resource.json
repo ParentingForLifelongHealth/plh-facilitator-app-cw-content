@@ -1,0 +1,256 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_resource",
+  "status": "released",
+  "rows": [
+    {
+      "name": "article_id",
+      "value": "test",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "article_id"
+    },
+    {
+      "name": "is_module",
+      "value": false,
+      "type": "set_variable",
+      "_nested_name": "is_module"
+    },
+    {
+      "type": "data_items",
+      "name": "loop_resources",
+      "value": "@data.m_resources",
+      "condition": "!!@local.is_module",
+      "rows": [
+        {
+          "type": "template",
+          "name": "resource_element",
+          "value": "resource_element",
+          "condition": "@item.foreign_key == @local.article_id",
+          "rows": [
+            {
+              "name": "resource_type",
+              "value": "@item.media_type",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_resources.resource_element.resource_type",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.media_type",
+                    "matchedExpression": "@item.media_type",
+                    "type": "item",
+                    "fieldName": "media_type"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_type": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "resource_id",
+              "value": "@item.media_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_resources.resource_element.resource_id",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.media_asset",
+                    "matchedExpression": "@item.media_asset",
+                    "type": "item",
+                    "fieldName": "media_asset"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_asset": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "loop_resources.resource_element",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@item.foreign_key == @local.article_id",
+                "matchedExpression": "@item.foreign_key",
+                "type": "item",
+                "fieldName": "foreign_key"
+              },
+              {
+                "fullExpression": "@item.foreign_key == @local.article_id",
+                "matchedExpression": "@local.article_id",
+                "type": "local",
+                "fieldName": "article_id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.foreign_key": [
+              "condition"
+            ],
+            "@local.article_id": [
+              "condition"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "loop_resources",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.m_resources",
+            "matchedExpression": "@data.m_resources",
+            "type": "data",
+            "fieldName": "m_resources"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!!@local.is_module",
+            "matchedExpression": "!@local.is_module",
+            "type": "local",
+            "fieldName": "is_module"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.m_resources": [
+          "value"
+        ],
+        "!@local.is_module": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "loop_resources",
+      "value": "@data.a_resources",
+      "condition": "!@local.is_module",
+      "rows": [
+        {
+          "type": "template",
+          "name": "resource_element",
+          "value": "resource_element",
+          "condition": "@item.foreign_key == @local.article_id",
+          "rows": [
+            {
+              "name": "resource_type",
+              "value": "@item.media_type",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_resources.resource_element.resource_type",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.media_type",
+                    "matchedExpression": "@item.media_type",
+                    "type": "item",
+                    "fieldName": "media_type"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_type": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "resource_id",
+              "value": "@item.media_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_resources.resource_element.resource_id",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.media_asset",
+                    "matchedExpression": "@item.media_asset",
+                    "type": "item",
+                    "fieldName": "media_asset"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_asset": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "loop_resources.resource_element",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@item.foreign_key == @local.article_id",
+                "matchedExpression": "@item.foreign_key",
+                "type": "item",
+                "fieldName": "foreign_key"
+              },
+              {
+                "fullExpression": "@item.foreign_key == @local.article_id",
+                "matchedExpression": "@local.article_id",
+                "type": "local",
+                "fieldName": "article_id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.foreign_key": [
+              "condition"
+            ],
+            "@local.article_id": [
+              "condition"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "loop_resources",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.a_resources",
+            "matchedExpression": "@data.a_resources",
+            "type": "data",
+            "fieldName": "a_resources"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!@local.is_module",
+            "matchedExpression": "!@local.is_module",
+            "type": "local",
+            "fieldName": "is_module"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.a_resources": [
+          "value"
+        ],
+        "!@local.is_module": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/module_flow.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

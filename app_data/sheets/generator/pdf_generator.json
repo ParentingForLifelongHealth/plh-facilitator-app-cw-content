@@ -1,0 +1,80 @@
+{
+  "flow_type": "generator",
+  "flow_name": "pdf_generator",
+  "status": "released",
+  "parameter_list": {
+    "input_data_list": "pdf_data",
+    "output_flow_name": "pdf_@gen.id",
+    "output_flow_type": "template",
+    "output_flow_subtype": "generated"
+  },
+  "rows": [
+    {
+      "type": "template",
+      "name": "pdf",
+      "value": "pdf",
+      "action_list": [
+        {
+          "trigger": "completed",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "completed | emit: completed",
+          "_cleaned": "completed | emit: completed"
+        },
+        {
+          "trigger": "uncompleted",
+          "action_id": "emit",
+          "args": [
+            "uncompleted"
+          ],
+          "_raw": "uncompleted | emit: uncompleted",
+          "_cleaned": "uncompleted | emit: uncompleted"
+        }
+      ],
+      "exclude_from_translation": true,
+      "rows": [
+        {
+          "name": "data",
+          "value": "pdf",
+          "exclude_from_translation": true
+        },
+        {
+          "name": "pdf_id",
+          "value": "@gen.id",
+          "exclude_from_translation": true
+        }
+      ]
+    }
+  ],
+  "_xlsxPath": "templates/media.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+  "_output_flows": [
+    {
+      "flow_name": "pdf_kemas_rct_overview",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_kemas_rct_onboarding",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_group_masw_overview",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_group_masw_onboarding",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_group_masw_closing",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    }
+  ]
+}

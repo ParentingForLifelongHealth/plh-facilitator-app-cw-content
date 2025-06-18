@@ -1,0 +1,86 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "profile_section_data",
+  "status": "released",
+  "data_list_name": "profile_section",
+  "rows": [
+    {
+      "id": "about",
+      "template": "about",
+      "show": "@global.has_profile_about",
+      "title": "About you",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "About you"
+        },
+        "description": {
+          "eng": "We will use this to personalise the messages for sharing with your @global.share_groups."
+        }
+      },
+      "description": "We will use this to personalise the messages for sharing with your @global.share_groups."
+    },
+    {
+      "id": "id",
+      "template": "id",
+      "show": true,
+      "title": "Your Facilitator ID",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Your Facilitator ID"
+        },
+        "description": {
+          "eng": "Here you can find your unique code. You may be asked to share this code with people who will support your @global.app_name journey."
+        }
+      },
+      "description": "Here you can find your unique code. You may be asked to share this code with people who will support your @global.app_name journey."
+    },
+    {
+      "id": "group",
+      "template": "group",
+      "show": "!@global.allow_multiple_parent_groups && @global.has_parent_groups",
+      "title": "Your Parent Group",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Your Parent Group"
+        },
+        "description": {
+          "eng": "See and edit the list of parents attending your groups."
+        }
+      },
+      "description": "See and edit the list of parents attending your groups."
+    },
+    {
+      "id": "groups",
+      "template": "groups",
+      "show": "@global.allow_multiple_parent_groups && @global.has_parent_groups",
+      "title": "Your Parent Groups",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Your Parent Groups"
+        },
+        "description": {
+          "eng": "See and edit the lists of parents attending your groups."
+        }
+      },
+      "description": "See and edit the lists of parents attending your groups."
+    }
+  ],
+  "_xlsxPath": "data/profile_data.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

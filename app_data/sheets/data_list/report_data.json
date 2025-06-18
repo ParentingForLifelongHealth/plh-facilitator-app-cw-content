@@ -1,0 +1,195 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "report_data",
+  "status": "released",
+  "data_list_name": "report",
+  "rows": [
+    {
+      "id": "onboarding",
+      "module_id": "NONE",
+      "type": "in_person",
+      "tag_list": [
+        "masw",
+        "kemas"
+      ],
+      "name": "Onboarding",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Onboarding"
+        }
+      }
+    },
+    {
+      "id": "week_0",
+      "module_id": "week_0_introduction",
+      "type": "virtual",
+      "tag_list": [
+        "masw"
+      ],
+      "name": "After Onboarding Session",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "After Onboarding Session"
+        }
+      }
+    },
+    {
+      "id": "week_2",
+      "module_id": "week_2_check_in",
+      "type": "virtual",
+      "tag_list": [
+        "masw"
+      ],
+      "name": "Week 2: Check-in",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Week 2: Check-in"
+        }
+      }
+    },
+    {
+      "id": "week_4",
+      "module_id": "week_4_check_in",
+      "type": "virtual",
+      "tag_list": [
+        "masw"
+      ],
+      "name": "Week 4: Check-in",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Week 4: Check-in"
+        }
+      }
+    },
+    {
+      "id": "week_6",
+      "module_id": "week_6_check_in",
+      "type": "virtual",
+      "tag_list": [
+        "masw"
+      ],
+      "name": "Week 6: Check-in",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Week 6: Check-in"
+        }
+      }
+    },
+    {
+      "id": "week_8",
+      "module_id": "week_8_final_chat_session",
+      "type": "virtual",
+      "name": "Week 4: Final Chat Session",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Week 4: Final Chat Session"
+        }
+      }
+    },
+    {
+      "id": "week_0_kemas",
+      "module_id": "week_0_introduction_kemas",
+      "type": "virtual",
+      "tag_list": [
+        "kemas"
+      ],
+      "name": "After Onboarding Session",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "After Onboarding Session"
+        }
+      }
+    },
+    {
+      "id": "week_2_kemas",
+      "module_id": "week_2_check_in_kemas",
+      "type": "virtual",
+      "tag_list": [
+        "kemas"
+      ],
+      "name": "Week 2: Check-in",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Week 2: Check-in"
+        }
+      }
+    },
+    {
+      "id": "week_4_kemas",
+      "module_id": "week_4_check_in_kemas",
+      "type": "virtual",
+      "tag_list": [
+        "kemas"
+      ],
+      "name": "Week 4: Check-in",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Week 4: Check-in"
+        }
+      }
+    },
+    {
+      "id": "week_6_kemas",
+      "module_id": "week_6_check_in_kemas",
+      "type": "virtual",
+      "tag_list": [
+        "kemas"
+      ],
+      "name": "Week 6: Check-in",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Week 6: Check-in"
+        }
+      }
+    },
+    {
+      "id": "week_8_kemas",
+      "module_id": "week_8_final_chat_session_kemas",
+      "type": "virtual",
+      "tag_list": [
+        "kemas"
+      ],
+      "name": "Week 8: Final Chat Session",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Week 8: Final Chat Session"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "data/Copy of FacilitatorApp MY articles.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

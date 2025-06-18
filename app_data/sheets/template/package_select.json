@@ -1,0 +1,127 @@
+{
+  "flow_type": "template",
+  "flow_name": "package_select",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "title",
+      "value": "@global.your_package",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "title",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.your_package",
+            "matchedExpression": "@global.your_package",
+            "type": "global",
+            "fieldName": "your_package"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.your_package": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "value": "Choose which content you want to see.",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "radio_button_grid",
+      "value": "@fields.current_package",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "set_field",
+          "args": [
+            "current_package",
+            "this.value"
+          ],
+          "_raw": "changed | set_field: current_package: this.value",
+          "_cleaned": "changed | set_field: current_package: this.value"
+        }
+      ],
+      "parameter_list": {
+        "answer_list": "@data.package"
+      },
+      "_nested_name": "radio_button_grid",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields.current_package",
+            "matchedExpression": "@fields.current_package",
+            "type": "fields",
+            "fieldName": "current_package"
+          }
+        ],
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@data.package",
+              "matchedExpression": "@data.package",
+              "type": "data",
+              "fieldName": "package"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@fields.current_package": [
+          "value"
+        ],
+        "@data.package": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "button_completed",
+      "value": "Continue",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "click | emit: completed",
+          "_cleaned": "click | emit: completed"
+        },
+        {
+          "trigger": "click",
+          "action_id": "set_field",
+          "args": [
+            "package_selected",
+            true
+          ],
+          "_raw": "click | set_field: package_selected: TRUE",
+          "_cleaned": "click | set_field: package_selected: TRUE"
+        }
+      ],
+      "parameter_list": {
+        "style": "navigation"
+      },
+      "_nested_name": "button_completed"
+    }
+  ],
+  "_xlsxPath": "templates/app_launch.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

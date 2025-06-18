@@ -1,0 +1,263 @@
+{
+  "flow_type": "template",
+  "flow_name": "add_report",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id",
+      "value": "@field.current_group_no",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "group_id",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@field.current_group_no",
+            "matchedExpression": "@field.current_group_no",
+            "type": "field",
+            "fieldName": "current_group_no"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@field.current_group_no": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "module_id",
+      "value": "@field:current_module_no",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "module_id"
+    },
+    {
+      "name": "report_name",
+      "type": "set_variable",
+      "_nested_name": "report_name"
+    },
+    {
+      "name": "report_type",
+      "type": "set_variable",
+      "_nested_name": "report_type"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_data",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "report_name",
+            "@items[0].name"
+          ],
+          "_raw": "data_changed | set_local : report_name: @items[0].name",
+          "_cleaned": "data_changed | set_local : report_name: @items[0].name"
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "report_type",
+            "@items[0].type"
+          ],
+          "_raw": "data_changed | set_local : report_type: @items[0].type",
+          "_cleaned": "data_changed | set_local : report_type: @items[0].type"
+        }
+      ],
+      "parameter_list": {
+        "filter": "@item.id == @fields.current_report_id",
+        "limit": "1"
+      },
+      "name": "data_items_6",
+      "_nested_name": "data_items_6",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_data",
+            "matchedExpression": "@data.report_data",
+            "type": "data",
+            "fieldName": "report_data"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "@item.id == @fields.current_report_id",
+              "matchedExpression": "@item.id",
+              "type": "item",
+              "fieldName": "id"
+            },
+            {
+              "fullExpression": "@item.id == @fields.current_report_id",
+              "matchedExpression": "@fields.current_report_id",
+              "type": "fields",
+              "fieldName": "current_report_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_data": [
+          "value"
+        ],
+        "@item.id": [
+          "parameter_list.filter"
+        ],
+        "@fields.current_report_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "name": "dg_top",
+      "parameter_list": {
+        "sticky": "top",
+        "variant": "inline_padding"
+      },
+      "exclude_from_translation": true,
+      "style_list": [
+        "background-color: var(--ion-color-primary-100)"
+      ],
+      "rows": [
+        {
+          "type": "display_group",
+          "parameter_list": {
+            "style": "column"
+          },
+          "rows": [
+            {
+              "type": "template",
+              "name": "header",
+              "value": "section_header",
+              "action_list": [
+                {
+                  "trigger": "uncompleted",
+                  "action_id": "emit",
+                  "args": [
+                    "uncompleted"
+                  ],
+                  "_raw": "uncompleted | emit: uncompleted",
+                  "_cleaned": "uncompleted | emit: uncompleted"
+                }
+              ],
+              "style_list": [
+                "padding-block: 24px"
+              ],
+              "rows": [
+                {
+                  "name": "title",
+                  "value": "@local.report_name",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "type": "set_variable",
+                  "_nested_name": "dg_top.display_group_1.header.title",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@local.report_name",
+                        "matchedExpression": "@local.report_name",
+                        "type": "local",
+                        "fieldName": "report_name"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@local.report_name": [
+                      "value"
+                    ]
+                  }
+                }
+              ],
+              "_nested_name": "dg_top.display_group_1.header"
+            }
+          ],
+          "name": "display_group_1",
+          "_nested_name": "dg_top.display_group_1"
+        }
+      ],
+      "_nested_name": "dg_top"
+    },
+    {
+      "type": "template",
+      "name": "add_in_person",
+      "value": "add_in_person",
+      "action_list": [
+        {
+          "trigger": "completed",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "completed | emit: completed",
+          "_cleaned": "completed | emit: completed"
+        }
+      ],
+      "condition": "@local.report_type == \"in_person\"",
+      "rows": [],
+      "_nested_name": "add_in_person",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.report_type == \"in_person\"",
+            "matchedExpression": "@local.report_type",
+            "type": "local",
+            "fieldName": "report_type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "name": "add_remote",
+      "value": "add_remote",
+      "action_list": [
+        {
+          "trigger": "completed",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "completed | emit: completed",
+          "_cleaned": "completed | emit: completed"
+        }
+      ],
+      "condition": "@local.report_type == \"virtual\"",
+      "rows": [],
+      "_nested_name": "add_remote",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.report_type == \"virtual\"",
+            "matchedExpression": "@local.report_type",
+            "type": "local",
+            "fieldName": "report_type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_type": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/reports.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

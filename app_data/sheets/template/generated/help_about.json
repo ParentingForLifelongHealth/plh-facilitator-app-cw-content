@@ -1,0 +1,31 @@
+{
+  "flow_name": "help_about",
+  "flow_subtype": "generated",
+  "flow_type": "template",
+  "rows": [
+    {
+      "type": "text",
+      "name": "text",
+      "value": "We will use this to personalise the messages for sharing with your @global.share_groups.",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "We will use this to personalise the messages for sharing with your @global.share_groups.",
+            "matchedExpression": "@global.share_groups",
+            "type": "global",
+            "fieldName": "share_groups"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.share_groups": [
+          "value"
+        ]
+      }
+    }
+  ]
+}

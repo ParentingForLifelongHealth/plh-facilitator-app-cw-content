@@ -1,0 +1,47 @@
+{
+  "flow_name": "library_faq",
+  "flow_subtype": "generated",
+  "flow_type": "template",
+  "rows": [
+    {
+      "type": "template",
+      "name": "library_list",
+      "value": "library_list",
+      "action_list": [
+        {
+          "trigger": "uncompleted",
+          "action_id": "emit",
+          "args": [
+            "uncompleted"
+          ],
+          "_raw": "uncompleted | emit: uncompleted",
+          "_cleaned": "uncompleted | emit: uncompleted"
+        }
+      ],
+      "exclude_from_translation": true,
+      "rows": [
+        {
+          "name": "library_id",
+          "value": "faq",
+          "_translations": {
+            "value": {}
+          },
+          "exclude_from_translation": true,
+          "type": "set_variable",
+          "_nested_name": "library_list.library_id"
+        },
+        {
+          "name": "display_title",
+          "value": "Frequently Asked Questions",
+          "_translations": {
+            "value": {}
+          },
+          "exclude_from_translation": true,
+          "type": "set_variable",
+          "_nested_name": "library_list.display_title"
+        }
+      ],
+      "_nested_name": "library_list"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "flow_type": "template",
+  "flow_name": "delete_report",
+  "status": "released",
+  "rows": [
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_2",
+      "_nested_name": "set_variable_2"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_3",
+      "_nested_name": "set_variable_3"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Are you sure you want to delete this report?",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": false,
+      "_nested_name": "title"
+    },
+    {
+      "type": "text",
+      "name": "text_warning",
+      "value": "This will delete all of your report data and entries. The action cannot be undone!",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": false,
+      "_nested_name": "text_warning"
+    },
+    {
+      "type": "display_group",
+      "name": "buttons",
+      "rows": [
+        {
+          "type": "button",
+          "name": "button_no",
+          "value": "Cancel",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "uncompleted"
+              ],
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
+            }
+          ],
+          "parameter_list": {
+            "style": "card"
+          },
+          "style_list": [
+            "flex:1"
+          ],
+          "exclude_from_translation": false,
+          "_nested_name": "buttons.button_no"
+        },
+        {
+          "type": "button",
+          "name": "button_delete",
+          "value": "Delete",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_data",
+              "args": [],
+              "_raw": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true",
+              "_cleaned": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true",
+              "params": {
+                "_list_id": "report_answers",
+                "_id": "@fields.current_report_no",
+                "archived": true
+              }
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
+            }
+          ],
+          "parameter_list": {
+            "style": "card"
+          },
+          "style_list": [
+            "flex:1"
+          ],
+          "exclude_from_translation": false,
+          "_nested_name": "buttons.button_delete",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "_raw": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true",
+                    "matchedExpression": "@fields.current_report_no",
+                    "type": "fields",
+                    "fieldName": "current_report_no"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true",
+                    "matchedExpression": "@fields.current_report_no",
+                    "type": "fields",
+                    "fieldName": "current_report_no"
+                  }
+                ],
+                "params": {
+                  "_id": [
+                    {
+                      "fullExpression": "@fields.current_report_no",
+                      "matchedExpression": "@fields.current_report_no",
+                      "type": "fields",
+                      "fieldName": "current_report_no"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "_dynamicDependencies": {
+            "@fields.current_report_no": [
+              "action_list.0._raw",
+              "action_list.0._cleaned",
+              "action_list.0.params._id"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "buttons"
+    }
+  ],
+  "_xlsxPath": "templates/reports.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}
