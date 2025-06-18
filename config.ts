@@ -30,7 +30,7 @@ config.ios.app_name = "";
 
 config.git = {
   content_repo: "https://github.com/ParentingForLifelongHealth/plh-facilitator-app-cw-content.git",
-  content_tag_latest: "1.1.2",
+  content_tag_latest: "1.1.3",
 };
 
 config.firebase = {
@@ -57,7 +57,7 @@ config.app_config.APP_THEMES.defaultThemeName = "professional";
 config.app_config.APP_UPDATES.enabled = true;
 config.app_config.APP_UPDATES.completeUpdateTemplate = "app_update_complete";
 config.app_config.APP_FOOTER_DEFAULTS.templateName = "footer";
-config.app_config.APP_THEMES.available = ["plh_facilitator_cw"];
+config.app_config.APP_THEMES.available = ["plh_facilitator_mx"];
 config.app_config.APP_THEMES.defaultThemeName = "plh_facilitator_mx";
 
 config.error_logging = { dsn: "https://2eaa21152a344a62890d6801802fd635@app.glitchtip.com/11777"};
