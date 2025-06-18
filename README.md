@@ -9,5 +9,3 @@ Data can be syncd from corresponding google drive folders via the script
 ```
 yarn scripts app-data-sync
 ```
-
-
