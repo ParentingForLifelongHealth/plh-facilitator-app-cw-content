@@ -1,0 +1,23 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "article_data",
+  "status": "released",
+  "data_list_name": "article_data",
+  "rows": [
+    {
+      "id": "example_article",
+      "section": "safeguarding",
+      "title": "This is an example article",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "This is an example article"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "data/articles_CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

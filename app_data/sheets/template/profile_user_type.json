@@ -1,0 +1,217 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile_user_type",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "choose_role",
+      "value": "@global.choose_role",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "style": "emphasised"
+      },
+      "_nested_name": "choose_role",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.choose_role",
+            "matchedExpression": "@global.choose_role",
+            "type": "global",
+            "fieldName": "choose_role"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.choose_role": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "combo_box",
+      "name": "user_type_select",
+      "value": "@fields.user_type",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "answer_list": "@data.user_type",
+        "placeholder": "@global.select_response",
+        "variant": "dropdown"
+      },
+      "exclude_from_translation": true,
+      "_nested_name": "user_type_select",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields.user_type",
+            "matchedExpression": "@fields.user_type",
+            "type": "fields",
+            "fieldName": "user_type"
+          }
+        ],
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@data.user_type",
+              "matchedExpression": "@data.user_type",
+              "type": "data",
+              "fieldName": "user_type"
+            }
+          ],
+          "placeholder": [
+            {
+              "fullExpression": "@global.select_response",
+              "matchedExpression": "@global.select_response",
+              "type": "global",
+              "fieldName": "select_response"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@fields.user_type": [
+          "value"
+        ],
+        "@data.user_type": [
+          "parameter_list.answer_list"
+        ],
+        "@global.select_response": [
+          "parameter_list.placeholder"
+        ]
+      }
+    },
+    {
+      "name": "completed_enabled",
+      "value": "!!@local.user_type_select",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "completed_enabled",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "!!@local.user_type_select",
+            "matchedExpression": "!@local.user_type_select",
+            "type": "local",
+            "fieldName": "user_type_select"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.user_type_select": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "name": "dg_footer",
+      "parameter_list": {
+        "sticky": "bottom"
+      },
+      "style_list": [
+        "padding: 12px 24px"
+      ],
+      "rows": [
+        {
+          "type": "button",
+          "name": "button_completed",
+          "value": "Continue",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_field",
+              "args": [
+                "user_type",
+                "@local.user_type_select"
+              ],
+              "_raw": "click | set_field: user_type: @local.user_type_select",
+              "_cleaned": "click | set_field: user_type: @local.user_type_select"
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
+            }
+          ],
+          "parameter_list": {
+            "style": "navigation",
+            "disabled": "!@local.completed_enabled"
+          },
+          "style_list": [
+            "flex: 1"
+          ],
+          "_nested_name": "dg_footer.button_completed",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "args": {
+                  "1": [
+                    {
+                      "fullExpression": "@local.user_type_select",
+                      "matchedExpression": "@local.user_type_select",
+                      "type": "local",
+                      "fieldName": "user_type_select"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
+                    "matchedExpression": "@local.user_type_select",
+                    "type": "local",
+                    "fieldName": "user_type_select"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
+                    "matchedExpression": "@local.user_type_select",
+                    "type": "local",
+                    "fieldName": "user_type_select"
+                  }
+                ]
+              }
+            },
+            "parameter_list": {
+              "disabled": [
+                {
+                  "fullExpression": "!@local.completed_enabled",
+                  "matchedExpression": "!@local.completed_enabled",
+                  "type": "local",
+                  "fieldName": "completed_enabled"
+                }
+              ]
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.user_type_select": [
+              "action_list.0.args.1",
+              "action_list.0._raw",
+              "action_list.0._cleaned"
+            ],
+            "!@local.completed_enabled": [
+              "parameter_list.disabled"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "dg_footer"
+    }
+  ],
+  "_xlsxPath": "templates/app_launch.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

@@ -1,0 +1,25 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "report_answers",
+  "status": "released",
+  "rows": [
+    {
+      "id": "text",
+      "group_id": "text",
+      "module_id": "text",
+      "type": "text",
+      "archived": false,
+      "question_1": "text",
+      "question_2": "text",
+      "question_3": "text",
+      "dynamic_question": "{}"
+    }
+  ],
+  "_xlsxPath": "templates/reports.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+  "_metadata": {
+    "archived": {
+      "type": "boolean"
+    }
+  }
+}

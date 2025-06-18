@@ -1,0 +1,25 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "parent_groups",
+  "status": "released",
+  "data_list_name": "parent_groups",
+  "rows": [
+    {
+      "id": "text_field",
+      "name": "text_field",
+      "text": "text_field",
+      "archived": true,
+      "hidden": false
+    }
+  ],
+  "_xlsxPath": "data/profile_data.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+  "_metadata": {
+    "archived": {
+      "type": "boolean"
+    },
+    "hidden": {
+      "type": "boolean"
+    }
+  }
+}

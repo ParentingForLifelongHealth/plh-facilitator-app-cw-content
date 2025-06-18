@@ -1,0 +1,61 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "report_questions",
+  "status": "released",
+  "rows": [
+    {
+      "id": "question_1",
+      "type": "text",
+      "question": "How many minutes did it take you to prepare for this session?",
+      "_translations": {
+        "question": {}
+      },
+      "_translatedFields": {
+        "question": {
+          "eng": "How many minutes did it take you to prepare for this session?"
+        }
+      }
+    },
+    {
+      "id": "question_2",
+      "type": "text",
+      "question": "How many minutes did it take you to travel to the location where the session was delivered?",
+      "_translations": {
+        "question": {}
+      },
+      "_translatedFields": {
+        "question": {
+          "eng": "How many minutes did it take you to travel to the location where the session was delivered?"
+        }
+      }
+    },
+    {
+      "id": "question_3",
+      "type": "text",
+      "question": "How many minutes did it take you to deliver the sessions?",
+      "_translations": {
+        "question": {}
+      },
+      "_translatedFields": {
+        "question": {
+          "eng": "How many minutes did it take you to deliver the sessions?"
+        }
+      }
+    },
+    {
+      "id": "question_4",
+      "type": "select",
+      "question": "Which of the parents in this group attended your in-person session?",
+      "_translations": {
+        "question": {}
+      },
+      "_translatedFields": {
+        "question": {
+          "eng": "Which of the parents in this group attended your in-person session?"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "templates/reports.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

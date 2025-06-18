@@ -1,0 +1,689 @@
+{
+  "template_components": {
+    "data": [
+      {
+        "type": "accordion",
+        "count": 1
+      },
+      {
+        "type": "accordion_section",
+        "count": 1
+      },
+      {
+        "type": "apple_sign_in_button",
+        "count": 1
+      },
+      {
+        "type": "audio",
+        "count": 2
+      },
+      {
+        "type": "button",
+        "count": 82
+      },
+      {
+        "type": "carousel",
+        "count": 2
+      },
+      {
+        "type": "combo_box",
+        "count": 4
+      },
+      {
+        "type": "data_items",
+        "count": 40
+      },
+      {
+        "type": "debug_toggle",
+        "count": 1
+      },
+      {
+        "type": "display_grid",
+        "count": 2
+      },
+      {
+        "type": "display_group",
+        "count": 99
+      },
+      {
+        "type": "drawer",
+        "count": 1
+      },
+      {
+        "type": "google_sign_in_button",
+        "count": 2
+      },
+      {
+        "type": "image",
+        "count": 10
+      },
+      {
+        "type": "items",
+        "count": 22
+      },
+      {
+        "type": "lottie_animation",
+        "count": 2
+      },
+      {
+        "type": "navigation_bar",
+        "count": 1
+      },
+      {
+        "type": "pdf",
+        "count": 1
+      },
+      {
+        "type": "qr_code",
+        "count": 1
+      },
+      {
+        "type": "radio_button_grid",
+        "count": 8
+      },
+      {
+        "type": "round_button",
+        "count": 34
+      },
+      {
+        "type": "select_text",
+        "count": 1
+      },
+      {
+        "type": "set_variable",
+        "count": 553
+      },
+      {
+        "type": "simple_checkbox",
+        "count": 2
+      },
+      {
+        "type": "task_card",
+        "count": 5
+      },
+      {
+        "type": "task_progress_bar",
+        "count": 2
+      },
+      {
+        "type": "template",
+        "count": 50
+      },
+      {
+        "type": "test",
+        "count": 1
+      },
+      {
+        "type": "text",
+        "count": 163
+      },
+      {
+        "type": "text_area",
+        "count": 2
+      },
+      {
+        "type": "text_box",
+        "count": 24
+      },
+      {
+        "type": "title",
+        "count": 36
+      },
+      {
+        "type": "toggle_bar",
+        "count": 7
+      },
+      {
+        "type": "update_action_list",
+        "count": 3
+      },
+      {
+        "type": "video",
+        "count": 2
+      }
+    ]
+  },
+  "template_actions": {
+    "data": [
+      {
+        "type": "add_data",
+        "count": 5
+      },
+      {
+        "type": "app_update",
+        "count": 1
+      },
+      {
+        "type": "auth",
+        "count": 2
+      },
+      {
+        "type": "emit: completed",
+        "count": 32
+      },
+      {
+        "type": "emit: force_reload",
+        "count": 8
+      },
+      {
+        "type": "emit: force_reprocess",
+        "count": 14
+      },
+      {
+        "type": "emit: force_restart",
+        "count": 4
+      },
+      {
+        "type": "emit: server_sync",
+        "count": 15
+      },
+      {
+        "type": "emit: set_language",
+        "count": 1
+      },
+      {
+        "type": "emit: uncompleted",
+        "count": 23
+      },
+      {
+        "type": "feedback",
+        "count": 13
+      },
+      {
+        "type": "go_to",
+        "count": 35
+      },
+      {
+        "type": "nav_stack",
+        "count": 6
+      },
+      {
+        "type": "pop_up",
+        "count": 15
+      },
+      {
+        "type": "reset_app",
+        "count": 1
+      },
+      {
+        "type": "save_to_device",
+        "count": 4
+      },
+      {
+        "type": "set_data",
+        "count": 21
+      },
+      {
+        "type": "set_field",
+        "count": 68
+      },
+      {
+        "type": "set_item",
+        "count": 8
+      },
+      {
+        "type": "set_local",
+        "count": 38
+      },
+      {
+        "type": "share",
+        "count": 2
+      },
+      {
+        "type": "user",
+        "count": 3
+      }
+    ]
+  },
+  "assets_size": {
+    "data": [
+      {
+        "assets": "total",
+        "KB": "208 KB",
+        "MB": "0.2 MB"
+      },
+      {
+        "assets": "unused",
+        "KB": "125 KB",
+        "MB": "0.1 MB"
+      }
+    ]
+  },
+  "assets_unused": {
+    "data": [
+      {
+        "path": "images/backgrounds/library_bottom_left.svg",
+        "size_kb": 2.3
+      },
+      {
+        "path": "images/backgrounds/library_top_right.svg",
+        "size_kb": 0.3
+      },
+      {
+        "path": "images/backgrounds/report_edit.svg",
+        "size_kb": 0.2
+      },
+      {
+        "path": "images/flags/mx.svg",
+        "size_kb": 91.3
+      },
+      {
+        "path": "images/flags/my.svg",
+        "size_kb": 1.4
+      },
+      {
+        "path": "images/flags/tz.svg",
+        "size_kb": 0.5
+      },
+      {
+        "path": "images/flags/ug.svg",
+        "size_kb": 3.9
+      },
+      {
+        "path": "images/flags/zm.svg",
+        "size_kb": 5.4
+      },
+      {
+        "path": "images/icons/bar_chart_white.svg",
+        "size_kb": 1.5
+      },
+      {
+        "path": "images/icons/book_white.svg",
+        "size_kb": 1.5
+      },
+      {
+        "path": "images/icons/check_circle.svg",
+        "size_kb": 1.2
+      },
+      {
+        "path": "images/icons/copy-outline.svg",
+        "size_kb": 0.4
+      },
+      {
+        "path": "images/icons/globe_blue.svg",
+        "size_kb": 3.9
+      },
+      {
+        "path": "images/icons/group_add.svg",
+        "size_kb": 2.2
+      },
+      {
+        "path": "images/icons/house_white.svg",
+        "size_kb": 0.4
+      },
+      {
+        "path": "images/icons/library.svg",
+        "size_kb": 0.9
+      },
+      {
+        "path": "images/icons/paper_plane_white.svg",
+        "size_kb": 1.4
+      },
+      {
+        "path": "images/icons/person_cog.png",
+        "size_kb": 0.8
+      },
+      {
+        "path": "images/icons/person_white.svg",
+        "size_kb": 1.5
+      },
+      {
+        "path": "images/icons/plus_emoji.svg",
+        "size_kb": 0.2
+      },
+      {
+        "path": "images/icons/reader_blue.svg",
+        "size_kb": 1.4
+      },
+      {
+        "path": "images/icons/red_plus.svg",
+        "size_kb": 0.6
+      },
+      {
+        "path": "images/icons/report.svg",
+        "size_kb": 0.3
+      },
+      {
+        "path": "images/icons/settings.svg",
+        "size_kb": 1.2
+      }
+    ]
+  },
+  "assets_missing": {
+    "data": [
+      {
+        "path": ".png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/flags/nl.svg",
+        "count": 2,
+        "missing": true
+      },
+      {
+        "path": "images/icons/feather.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/icons/magnify_glass.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/KEMAS.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/LPPKN.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/Oxford.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/UPM.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/app_logo.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/bird_on_light.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/bird_white.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/favicon.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/lego.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/masw.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/logos/thsn.png",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/no_group_selected.svg",
+        "count": 1,
+        "missing": true
+      }
+    ]
+  },
+  "asset_summary": {
+    "data": [
+      {
+        "path": "images/backgrounds/home_bottom_right.svg",
+        "count": 1,
+        "size_kb": 2.3
+      },
+      {
+        "path": "images/backgrounds/home_top_left.svg",
+        "count": 2,
+        "size_kb": 2.4
+      },
+      {
+        "path": "images/backgrounds/reports_top_right.svg",
+        "count": 1,
+        "size_kb": 2
+      },
+      {
+        "path": "images/flags/gb.svg",
+        "count": 2,
+        "size_kb": 0.5
+      },
+      {
+        "path": "images/icons/add_circle.svg",
+        "count": 2,
+        "size_kb": 0.4
+      },
+      {
+        "path": "images/icons/archive.svg",
+        "count": 1,
+        "size_kb": 0.5
+      },
+      {
+        "path": "images/icons/arrow_back.svg",
+        "count": 1,
+        "size_kb": 0.2
+      },
+      {
+        "path": "images/icons/arrow_forward.svg",
+        "count": 1,
+        "size_kb": 0.2
+      },
+      {
+        "path": "images/icons/cancel.svg",
+        "count": 1,
+        "size_kb": 0.4
+      },
+      {
+        "path": "images/icons/check_circle.png",
+        "count": 1,
+        "size_kb": 0.6
+      },
+      {
+        "path": "images/icons/checkmark-outline.svg",
+        "count": 2,
+        "size_kb": 0.2
+      },
+      {
+        "path": "images/icons/cog_white.svg",
+        "count": 2,
+        "size_kb": 3.6
+      },
+      {
+        "path": "images/icons/content.svg",
+        "count": 2,
+        "size_kb": 7.2
+      },
+      {
+        "path": "images/icons/delete.svg",
+        "count": 3,
+        "size_kb": 0.6
+      },
+      {
+        "path": "images/icons/docs.svg",
+        "count": 1,
+        "size_kb": 0.5
+      },
+      {
+        "path": "images/icons/download.svg",
+        "count": 2,
+        "size_kb": 0.4
+      },
+      {
+        "path": "images/icons/download_white.svg",
+        "count": 1,
+        "size_kb": 0.7
+      },
+      {
+        "path": "images/icons/edit.svg",
+        "count": 5,
+        "size_kb": 0.9
+      },
+      {
+        "path": "images/icons/group_add_dark.svg",
+        "count": 1,
+        "size_kb": 0.6
+      },
+      {
+        "path": "images/icons/help.svg",
+        "count": 1,
+        "size_kb": 0.5
+      },
+      {
+        "path": "images/icons/home_white.svg",
+        "count": 1,
+        "size_kb": 1.7
+      },
+      {
+        "path": "images/icons/key.svg",
+        "count": 2,
+        "size_kb": 5.5
+      },
+      {
+        "path": "images/icons/library.png",
+        "count": 2,
+        "size_kb": 1
+      },
+      {
+        "path": "images/icons/library_white.svg",
+        "count": 1,
+        "size_kb": 2.8
+      },
+      {
+        "path": "images/icons/pencil_white.svg",
+        "count": 1,
+        "size_kb": 2
+      },
+      {
+        "path": "images/icons/people_network.svg",
+        "count": 1,
+        "size_kb": 6.9
+      },
+      {
+        "path": "images/icons/person_cog.svg",
+        "count": 2,
+        "size_kb": 2.9
+      },
+      {
+        "path": "images/icons/person_remove.svg",
+        "count": 1,
+        "size_kb": 1.5
+      },
+      {
+        "path": "images/icons/profile_card.svg",
+        "count": 1,
+        "size_kb": 7.4
+      },
+      {
+        "path": "images/icons/report.png",
+        "count": 1,
+        "size_kb": 0.5
+      },
+      {
+        "path": "images/icons/sessions.png",
+        "count": 1,
+        "size_kb": 0.9
+      },
+      {
+        "path": "images/icons/settings.png",
+        "count": 1,
+        "size_kb": 1.2
+      },
+      {
+        "path": "images/icons/share.svg",
+        "count": 2,
+        "size_kb": 2.3
+      },
+      {
+        "path": "images/icons/unarchive.svg",
+        "count": 1,
+        "size_kb": 1.1
+      },
+      {
+        "path": "images/icons/visibility.svg",
+        "count": 1,
+        "size_kb": 0.5
+      },
+      {
+        "path": "images/icons/world.svg",
+        "count": 1,
+        "size_kb": 6.2
+      },
+      {
+        "path": "images/logos/IDEMS.png",
+        "count": 1,
+        "size_kb": 84.6
+      },
+      {
+        "path": "images/logos/PLH.png",
+        "count": 1,
+        "size_kb": 26.6
+      },
+      {
+        "path": "images/logos/UNICEF.jpg",
+        "count": 1,
+        "size_kb": 27.7
+      }
+    ]
+  },
+  "flows_by_type": {
+    "data": [
+      {
+        "type": "data_list",
+        "subtype": null,
+        "total": 25
+      },
+      {
+        "type": "data_list",
+        "subtype": "app_config_language_list",
+        "total": 1
+      },
+      {
+        "type": "data_list",
+        "subtype": "legal_terms",
+        "total": 2
+      },
+      {
+        "type": "data_list",
+        "subtype": "lifecycle_actions",
+        "total": 1
+      },
+      {
+        "type": "generator",
+        "subtype": null,
+        "total": 3
+      },
+      {
+        "type": "global",
+        "subtype": null,
+        "total": 6
+      },
+      {
+        "type": "global",
+        "subtype": "legal_terms",
+        "total": 1
+      },
+      {
+        "type": "template",
+        "subtype": null,
+        "total": 71
+      },
+      {
+        "type": "template",
+        "subtype": "generated",
+        "total": 9
+      },
+      {
+        "type": "template",
+        "subtype": "legal_terms",
+        "total": 4
+      }
+    ]
+  }
+}

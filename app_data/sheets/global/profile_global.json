@@ -1,0 +1,104 @@
+{
+  "flow_type": "global",
+  "flow_name": "profile_global",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "user_name_question",
+      "value": "Your name",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "user_name_default",
+      "value": "[INSERT NAME]",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_field_default",
+      "name": "user_name",
+      "value": "@global.user_name_default",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "state_question",
+      "value": "Which state do you live in?",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "region_question",
+      "value": "Which region of @global.deployment_country do you live in?",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_field_default",
+      "name": "first_unused_parent_no",
+      "value": 1
+    },
+    {
+      "type": "declare_field_default",
+      "name": "no_of_parent_groups",
+      "value": 1
+    },
+    {
+      "type": "declare_field_default",
+      "name": "parent_data",
+      "value": "{}",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "archived_parent_data",
+      "value": "{}",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "attendance_data",
+      "value": "{}",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "family_data",
+      "value": "[]",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "group_data",
+      "value": "{}",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
+    }
+  ],
+  "_xlsxPath": "data/profile_data.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

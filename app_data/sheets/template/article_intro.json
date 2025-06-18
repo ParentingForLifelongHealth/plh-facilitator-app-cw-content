@@ -1,0 +1,304 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_intro",
+  "status": "released",
+  "rows": [
+    {
+      "name": "article_id",
+      "value": "test",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "article_id"
+    },
+    {
+      "name": "is_module",
+      "value": false,
+      "type": "set_variable",
+      "_nested_name": "is_module"
+    },
+    {
+      "type": "data_items",
+      "name": "loop_intros",
+      "value": "@data.m_intro",
+      "condition": "!!@local.is_module",
+      "rows": [
+        {
+          "type": "template",
+          "name": "intro_element",
+          "value": "intro_element",
+          "condition": "@item.foreign_key == @local.article_id",
+          "rows": [
+            {
+              "name": "image",
+              "value": "@item.image_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.image",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.image_asset",
+                    "matchedExpression": "@item.image_asset",
+                    "type": "item",
+                    "fieldName": "image_asset"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.image_asset": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "text",
+              "value": "@item.text_1",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.text",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.text_1",
+                    "matchedExpression": "@item.text_1",
+                    "type": "item",
+                    "fieldName": "text_1"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.text_1": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "text_2",
+              "value": "@item.text_2",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.text_2",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.text_2",
+                    "matchedExpression": "@item.text_2",
+                    "type": "item",
+                    "fieldName": "text_2"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.text_2": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "loop_intros.intro_element",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@item.foreign_key == @local.article_id",
+                "matchedExpression": "@item.foreign_key",
+                "type": "item",
+                "fieldName": "foreign_key"
+              },
+              {
+                "fullExpression": "@item.foreign_key == @local.article_id",
+                "matchedExpression": "@local.article_id",
+                "type": "local",
+                "fieldName": "article_id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.foreign_key": [
+              "condition"
+            ],
+            "@local.article_id": [
+              "condition"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "loop_intros",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.m_intro",
+            "matchedExpression": "@data.m_intro",
+            "type": "data",
+            "fieldName": "m_intro"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!!@local.is_module",
+            "matchedExpression": "!@local.is_module",
+            "type": "local",
+            "fieldName": "is_module"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.m_intro": [
+          "value"
+        ],
+        "!@local.is_module": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "loop_intros",
+      "value": "@data.a_intro",
+      "condition": "!@local.is_module",
+      "rows": [
+        {
+          "type": "template",
+          "name": "intro_element",
+          "value": "intro_element",
+          "condition": "@item.foreign_key == @local.article_id",
+          "rows": [
+            {
+              "name": "image",
+              "value": "@item.image_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.image",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.image_asset",
+                    "matchedExpression": "@item.image_asset",
+                    "type": "item",
+                    "fieldName": "image_asset"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.image_asset": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "text",
+              "value": "@item.text_1",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.text",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.text_1",
+                    "matchedExpression": "@item.text_1",
+                    "type": "item",
+                    "fieldName": "text_1"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.text_1": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "text_2",
+              "value": "@item.text_2",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.text_2",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.text_2",
+                    "matchedExpression": "@item.text_2",
+                    "type": "item",
+                    "fieldName": "text_2"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.text_2": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "loop_intros.intro_element",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@item.foreign_key == @local.article_id",
+                "matchedExpression": "@item.foreign_key",
+                "type": "item",
+                "fieldName": "foreign_key"
+              },
+              {
+                "fullExpression": "@item.foreign_key == @local.article_id",
+                "matchedExpression": "@local.article_id",
+                "type": "local",
+                "fieldName": "article_id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.foreign_key": [
+              "condition"
+            ],
+            "@local.article_id": [
+              "condition"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "loop_intros",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.a_intro",
+            "matchedExpression": "@data.a_intro",
+            "type": "data",
+            "fieldName": "a_intro"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!@local.is_module",
+            "matchedExpression": "!@local.is_module",
+            "type": "local",
+            "fieldName": "is_module"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.a_intro": [
+          "value"
+        ],
+        "!@local.is_module": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/module_flow.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

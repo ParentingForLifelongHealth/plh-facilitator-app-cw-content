@@ -1,0 +1,31 @@
+{
+  "flow_name": "help_id",
+  "flow_subtype": "generated",
+  "flow_type": "template",
+  "rows": [
+    {
+      "type": "text",
+      "name": "text",
+      "value": "Here you can find your unique code. You may be asked to share this code with people who will support your @global.app_name journey.",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Here you can find your unique code. You may be asked to share this code with people who will support your @global.app_name journey.",
+            "matchedExpression": "@global.app_name",
+            "type": "global",
+            "fieldName": "app_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.app_name": [
+          "value"
+        ]
+      }
+    }
+  ]
+}

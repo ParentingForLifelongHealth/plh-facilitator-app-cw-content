@@ -1,0 +1,265 @@
+{
+  "flow_type": "template",
+  "flow_name": "add_group_button",
+  "status": "released",
+  "rows": [
+    {
+      "name": "name",
+      "value": "test",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "name"
+    },
+    {
+      "name": "text",
+      "value": "test",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "text"
+    },
+    {
+      "name": "completed_field",
+      "value": "completed_@local.name",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "completed_field",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "completed_@local.name",
+            "matchedExpression": "@local.name",
+            "type": "local",
+            "fieldName": "name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "pages_field",
+      "value": "pages_@local.name",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "pages_field",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "pages_@local.name",
+            "matchedExpression": "@local.name",
+            "type": "local",
+            "fieldName": "name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "save",
+      "value": "Save",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "click | emit: completed",
+          "_cleaned": "click | emit: completed"
+        },
+        {
+          "trigger": "click",
+          "action_id": "add_data",
+          "args": [],
+          "_raw": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+          "_cleaned": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+          "params": {
+            "_list_id": "parent_groups",
+            "archived": false,
+            "name": "@local.name",
+            "text": "@local.text"
+          }
+        },
+        {
+          "trigger": "click",
+          "action_id": "set_data",
+          "args": [],
+          "_raw": "click | set_data |\n_list_id: sub_items,\n@local.completed_field: FALSE",
+          "_cleaned": "click | set_data |\n_list_id: sub_items,\n@local.completed_field: FALSE",
+          "params": {
+            "_list_id": "sub_items",
+            "@local.completed_field": false
+          }
+        },
+        {
+          "trigger": "click",
+          "action_id": "set_data",
+          "args": [],
+          "_raw": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+          "_cleaned": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+          "params": {
+            "_list_id": "modules",
+            "@local.completed_field": false,
+            "@local.pages_field": false
+          }
+        },
+        {
+          "trigger": "click",
+          "action_id": "emit",
+          "args": [
+            "server_sync"
+          ],
+          "_raw": "click | emit: server_sync",
+          "_cleaned": "click | emit: server_sync"
+        }
+      ],
+      "parameter_list": {
+        "variant": "card"
+      },
+      "_nested_name": "save",
+      "_dynamicFields": {
+        "action_list": {
+          "1": {
+            "_raw": [
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+                "matchedExpression": "@local.name",
+                "type": "local",
+                "fieldName": "name"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+                "matchedExpression": "@local.text",
+                "type": "local",
+                "fieldName": "text"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+                "matchedExpression": "@local.name",
+                "type": "local",
+                "fieldName": "name"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+                "matchedExpression": "@local.text",
+                "type": "local",
+                "fieldName": "text"
+              }
+            ],
+            "params": {
+              "name": [
+                {
+                  "fullExpression": "@local.name",
+                  "matchedExpression": "@local.name",
+                  "type": "local",
+                  "fieldName": "name"
+                }
+              ],
+              "text": [
+                {
+                  "fullExpression": "@local.text",
+                  "matchedExpression": "@local.text",
+                  "type": "local",
+                  "fieldName": "text"
+                }
+              ]
+            }
+          },
+          "2": {
+            "_raw": [
+              {
+                "fullExpression": "click | set_data |\n_list_id: sub_items,\n@local.completed_field: FALSE",
+                "matchedExpression": "@local.completed_field",
+                "type": "local",
+                "fieldName": "completed_field"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "click | set_data |\n_list_id: sub_items,\n@local.completed_field: FALSE",
+                "matchedExpression": "@local.completed_field",
+                "type": "local",
+                "fieldName": "completed_field"
+              }
+            ]
+          },
+          "3": {
+            "_raw": [
+              {
+                "fullExpression": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+                "matchedExpression": "@local.completed_field",
+                "type": "local",
+                "fieldName": "completed_field"
+              },
+              {
+                "fullExpression": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+                "matchedExpression": "@local.pages_field",
+                "type": "local",
+                "fieldName": "pages_field"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+                "matchedExpression": "@local.completed_field",
+                "type": "local",
+                "fieldName": "completed_field"
+              },
+              {
+                "fullExpression": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+                "matchedExpression": "@local.pages_field",
+                "type": "local",
+                "fieldName": "pages_field"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.name": [
+          "action_list.1._raw",
+          "action_list.1._cleaned",
+          "action_list.1.params.name"
+        ],
+        "@local.text": [
+          "action_list.1._raw",
+          "action_list.1._cleaned",
+          "action_list.1.params.text"
+        ],
+        "@local.completed_field": [
+          "action_list.2._raw",
+          "action_list.2._cleaned",
+          "action_list.3._raw",
+          "action_list.3._cleaned"
+        ],
+        "@local.pages_field": [
+          "action_list.3._raw",
+          "action_list.3._cleaned"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/profile.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

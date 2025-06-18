@@ -1,0 +1,247 @@
+{
+  "flow_type": "template",
+  "flow_name": "media",
+  "status": "released",
+  "rows": [
+    {
+      "name": "media_id",
+      "value": "media_1",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "media_id"
+    },
+    {
+      "name": "data",
+      "value": "media",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "data"
+    },
+    {
+      "name": "concat_media_id",
+      "value": "@local.data.@local.media_id",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "concat_media_id",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.data.@local.media_id",
+            "matchedExpression": "@local.data",
+            "type": "local",
+            "fieldName": "data"
+          },
+          {
+            "fullExpression": "@local.data.@local.media_id",
+            "matchedExpression": "@local.media_id",
+            "type": "local",
+            "fieldName": "media_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.data": [
+          "value"
+        ],
+        "@local.media_id": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "media_data",
+      "value": "@data.@local.concat_media_id",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "media_data",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.@local.concat_media_id",
+            "matchedExpression": "@local.concat_media_id",
+            "type": "local",
+            "fieldName": "concat_media_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.concat_media_id": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "name": "top",
+      "parameter_list": {
+        "style": "column"
+      },
+      "rows": [
+        {
+          "type": "template",
+          "name": "header",
+          "value": "download_header",
+          "rows": [
+            {
+              "name": "title",
+              "value": "@local.media_data.title",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "top.header.title",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.media_data.title",
+                    "matchedExpression": "@local.media_data.title",
+                    "type": "local",
+                    "fieldName": "media_data"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.media_data.title": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "asset",
+              "value": "@local.media_data.media_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "top.header.asset",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.media_data.media_asset",
+                    "matchedExpression": "@local.media_data.media_asset",
+                    "type": "local",
+                    "fieldName": "media_data"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.media_data.media_asset": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "top.header"
+        }
+      ],
+      "_nested_name": "top"
+    },
+    {
+      "type": "text",
+      "name": "introduction",
+      "value": "@local.article_media.introduction",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "introduction",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.article_media.introduction",
+            "matchedExpression": "@local.article_media.introduction",
+            "type": "local",
+            "fieldName": "article_media"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.article_media.introduction": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "video",
+      "name": "video",
+      "value": "@local.media_data.media_asset",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.media_data.type == \"video\"",
+      "_nested_name": "video",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.media_data.media_asset",
+            "matchedExpression": "@local.media_data.media_asset",
+            "type": "local",
+            "fieldName": "media_data"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.media_data.type == \"video\"",
+            "matchedExpression": "@local.media_data.type",
+            "type": "local",
+            "fieldName": "media_data"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.media_data.media_asset": [
+          "value"
+        ],
+        "@local.media_data.type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "audio",
+      "name": "audio",
+      "value": "@local.media_data.media_asset",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.media_data.type == \"audio\"",
+      "_nested_name": "audio",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.media_data.media_asset",
+            "matchedExpression": "@local.media_data.media_asset",
+            "type": "local",
+            "fieldName": "media_data"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.media_data.type == \"audio\"",
+            "matchedExpression": "@local.media_data.type",
+            "type": "local",
+            "fieldName": "media_data"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.media_data.media_asset": [
+          "value"
+        ],
+        "@local.media_data.type": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/media.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

@@ -1,0 +1,89 @@
+{
+  "flow_type": "template",
+  "flow_name": "footer",
+  "status": "released",
+  "rows": [
+    {
+      "name": "button_list",
+      "value": [
+        {
+          "image": "images/icons/sessions.png",
+          "target_template": "@data.app_section.home.template"
+        },
+        {
+          "image": "images/icons/report.png",
+          "target_template": "reports"
+        },
+        {
+          "image": "images/icons/library.png",
+          "target_template": "@data.app_section.library.template"
+        },
+        {
+          "image": "images/icons/settings.png",
+          "target_template": "profile"
+        }
+      ],
+      "type": "set_variable",
+      "_nested_name": "button_list",
+      "_dynamicFields": {
+        "value": {
+          "0": {
+            "target_template": [
+              {
+                "fullExpression": "@data.app_section.home.template",
+                "matchedExpression": "@data.app_section.home.template",
+                "type": "data",
+                "fieldName": "app_section"
+              }
+            ]
+          },
+          "2": {
+            "target_template": [
+              {
+                "fullExpression": "@data.app_section.library.template",
+                "matchedExpression": "@data.app_section.library.template",
+                "type": "data",
+                "fieldName": "app_section"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.app_section.home.template": [
+          "value.0.target_template"
+        ],
+        "@data.app_section.library.template": [
+          "value.2.target_template"
+        ]
+      }
+    },
+    {
+      "type": "navigation_bar",
+      "name": "navigation_bar",
+      "parameter_list": {
+        "button_list": "@local.button_list"
+      },
+      "_nested_name": "navigation_bar",
+      "_dynamicFields": {
+        "parameter_list": {
+          "button_list": [
+            {
+              "fullExpression": "@local.button_list",
+              "matchedExpression": "@local.button_list",
+              "type": "local",
+              "fieldName": "button_list"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.button_list": [
+          "parameter_list.button_list"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/footer.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}
