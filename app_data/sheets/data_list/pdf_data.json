@@ -5,7 +5,7 @@
   "data_list_name": "pdf",
   "rows": [
     {
-      "id": "kemas_rct_overview",
+      "id": "child_development_domain",
       "pdf_asset": "pdf/kemas_rct_overview.pdf",
       "library_asset": false,
       "title": "Programme Overview",
@@ -22,65 +22,9 @@
         }
       },
       "description": "Overview of the Naungan Kasih programme."
-    },
-    {
-      "id": "kemas_rct_onboarding",
-      "pdf_asset": "pdf/kemas_rct_onboarding.pdf",
-      "library_asset": false,
-      "title": "Onboarding Guide",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Onboarding Guide"
-        }
-      }
-    },
-    {
-      "id": "group_masw_overview",
-      "pdf_asset": "pdf/group_masw_overview.pdf",
-      "library_asset": false,
-      "title": "Programme Overview",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Programme Overview"
-        }
-      }
-    },
-    {
-      "id": "group_masw_onboarding",
-      "pdf_asset": "pdf/group_masw_onboarding.pdf",
-      "library_asset": false,
-      "title": "Onboarding Guide",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Onboarding Guide"
-        }
-      }
-    },
-    {
-      "id": "group_masw_closing",
-      "pdf_asset": "pdf/group_masw_closing.pdf",
-      "library_asset": false,
-      "title": "Closing Guide",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Closing Guide"
-        }
-      }
     }
   ],
-  "_xlsxPath": "data/Copy of FacilitatorApp MY articles.xlsx",
+  "_xlsxPath": "data/media_data CW.xlsx",
   "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
   "_metadata": {
     "library_asset": {

@@ -5,16 +5,55 @@
   "data_list_name": "about_this_app",
   "rows": [
     {
-      "id": "text_1",
-      "text": "@global.app_name is an app designed by IDEMS International and Parenting for Lifelong Health. The content herein is available under an open source Creative Commons International 4.0 license. It was developed in collaboration with key partners:",
+      "id": "section_1",
+      "text": "About @global.app_name",
       "_translations": {
-        "text": {}
+        "text": {},
+        "title": {}
       },
       "_translatedFields": {
         "text": {
-          "eng": "@global.app_name is an app designed by IDEMS International and Parenting for Lifelong Health. The content herein is available under an open source Creative Commons International 4.0 license. It was developed in collaboration with key partners:"
+          "eng": "About @global.app_name"
+        },
+        "title": {
+          "eng": "@global.app_name is an app designed by IDEMS International, Parenting for Lifelong Health, Ministry of Social Development, Labour, and Welfare, UNICEF the Netherlands, to support the delivery of [Programme Name] in Curaçao. The content herein is available under an open source Creative Commons International 4.0 license. It was developed in collaboration with key partners:"
         }
-      }
+      },
+      "title": "@global.app_name is an app designed by IDEMS International, Parenting for Lifelong Health, Ministry of Social Development, Labour, and Welfare, UNICEF the Netherlands, to support the delivery of [Programme Name] in Curaçao. The content herein is available under an open source Creative Commons International 4.0 license. It was developed in collaboration with key partners:"
+    },
+    {
+      "id": "section_2",
+      "text": "Illustrations",
+      "_translations": {
+        "text": {},
+        "title": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Illustrations"
+        },
+        "title": {
+          "eng": "All illustrations in this app are generated using AI, inspired by the works of illustrators Orli Setton & Natalia Calixto. The original and the AI generated artworks are licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license."
+        }
+      },
+      "title": "All illustrations in this app are generated using AI, inspired by the works of illustrators Orli Setton & Natalia Calixto. The original and the AI generated artworks are licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license."
+    },
+    {
+      "id": "section_3",
+      "text": "Special Mention",
+      "_translations": {
+        "text": {},
+        "title": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Special Mention"
+        },
+        "title": {
+          "eng": "Special thanks are due to the caregivers who participated in focus groups and shared their insights, helping to shape the programme around real needs. We also acknowledge the program facilitators—from social workers and school administrators to community psychologists and NGO partners—whose feedback during has helped ground the programme in everyday practice.\n\nFinally, we thank all the families who participated in the project and shared with us their parenting goals, challenges, and triumphs. This app is dedicated to YOU."
+        }
+      },
+      "title": "Special thanks are due to the caregivers who participated in focus groups and shared their insights, helping to shape the programme around real needs. We also acknowledge the program facilitators—from social workers and school administrators to community psychologists and NGO partners—whose feedback during has helped ground the programme in everyday practice.\n\nFinally, we thank all the families who participated in the project and shared with us their parenting goals, challenges, and triumphs. This app is dedicated to YOU."
     }
   ],
   "_xlsxPath": "data/deployment_data_cw.xlsx",

@@ -121,6 +121,9 @@
           "name": "related_element",
           "value": "related_element",
           "condition": "@item.foreign_key == @local.article_id",
+          "style_list": [
+            "margin-bottom: 12px"
+          ],
           "rows": [
             {
               "name": "article_id",

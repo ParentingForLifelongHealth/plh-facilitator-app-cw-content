@@ -1,0 +1,109 @@
+{
+  "flow_type": "template",
+  "flow_name": "confirm_exit",
+  "status": "released",
+  "rows": [
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_2",
+      "_nested_name": "set_variable_2"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_3",
+      "_nested_name": "set_variable_3"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Unsaved values",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": false,
+      "_nested_name": "title"
+    },
+    {
+      "type": "text",
+      "name": "text_warning",
+      "value": "Are you sure you want to exit without saving?",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": false,
+      "_nested_name": "text_warning"
+    },
+    {
+      "type": "display_group",
+      "name": "buttons",
+      "rows": [
+        {
+          "type": "button",
+          "name": "button_no",
+          "value": "Cancel",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "uncompleted"
+              ],
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
+            }
+          ],
+          "exclude_from_translation": false,
+          "parameter_list": {
+            "style": "card"
+          },
+          "style_list": [
+            "flex:1"
+          ],
+          "_nested_name": "buttons.button_no"
+        },
+        {
+          "type": "button",
+          "name": "button_delete",
+          "value": "Exit without saving",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
+            },
+            {
+              "trigger": "click",
+              "action_id": "navigate_back",
+              "args": [],
+              "_raw": "click | navigate_back",
+              "_cleaned": "click | navigate_back"
+            }
+          ],
+          "exclude_from_translation": false,
+          "parameter_list": {
+            "style": "card"
+          },
+          "style_list": [
+            "flex:1"
+          ],
+          "_nested_name": "buttons.button_delete"
+        }
+      ],
+      "_nested_name": "buttons"
+    }
+  ],
+  "_xlsxPath": "templates/navigation.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+}

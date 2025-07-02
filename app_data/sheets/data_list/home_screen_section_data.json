@@ -6,59 +6,30 @@
   "rows": [
     {
       "id": "programme",
-      "image": "images/week_4_final_chat_sessions.svg",
-      "title": "Facilitator Guide",
+      "title": "About @global.prog_name",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Facilitator Guide"
+          "eng": "About @global.prog_name"
         }
       }
     },
     {
-      "id": "sessions",
-      "image": "images/learning_challenges.svg",
-      "title": "Chat Sessions",
+      "id": "guide",
+      "title": "Guide for delivering @global.prog_name",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Chat Sessions"
-        }
-      }
-    },
-    {
-      "id": "challenges",
-      "image": "images/during_disclosed_abuse.svg",
-      "title": "Common Challenges",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Common Challenges"
-        }
-      }
-    },
-    {
-      "id": "faq",
-      "image": "images/crisis_hotlines.svg",
-      "title": "Frequently Asked Questions",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Frequently Asked Questions"
+          "eng": "Guide for delivering @global.prog_name"
         }
       }
     },
     {
       "id": "safeguarding",
-      "image": "images/faq_h_sharing_emotions_new.svg",
       "title": "Safeguarding",
       "_translations": {
         "title": {}
@@ -68,8 +39,20 @@
           "eng": "Safeguarding"
         }
       }
+    },
+    {
+      "id": "facilitation",
+      "title": "Facilitation Skills",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Facilitation Skills"
+        }
+      }
     }
   ],
-  "_xlsxPath": "data/Copy of FacilitatorApp MY articles.xlsx",
+  "_xlsxPath": "data/articles_CW.xlsx",
   "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }
