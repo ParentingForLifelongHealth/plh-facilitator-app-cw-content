@@ -5,15 +5,589 @@
   "data_list_name": "article_data",
   "rows": [
     {
-      "id": "example_article",
-      "section": "safeguarding",
-      "title": "This is an example article",
+      "id": "prog_1",
+      "section": "programme",
+      "title": "Who is this @global.app_name for?",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "This is an example article"
+          "eng": "Who is this @global.app_name for?"
+        }
+      }
+    },
+    {
+      "id": "prog_2",
+      "section": "programme",
+      "title": "About @global.prog_name",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "About @global.prog_name"
+        },
+        "related_articles_title": {
+          "eng": "Next"
+        }
+      },
+      "related_articles_title": "Next"
+    },
+    {
+      "id": "prog_3",
+      "section": "programme",
+      "title": "Who developed @global.prog_name?",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Who developed @global.prog_name?"
+        },
+        "related_articles_title": {
+          "eng": "Next"
+        }
+      },
+      "related_articles_title": "Next"
+    },
+    {
+      "id": "prog_4",
+      "section": "programme",
+      "title": "What is @global.prog_name aiming to do?",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "What is @global.prog_name aiming to do?"
+        },
+        "related_articles_title": {
+          "eng": "Next"
+        }
+      },
+      "related_articles_title": "Next"
+    },
+    {
+      "id": "prog_5",
+      "section": "programme",
+      "title": "Programme Overview",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Programme Overview"
+        },
+        "related_articles_title": {
+          "eng": "Next"
+        }
+      },
+      "related_articles_title": "Next"
+    },
+    {
+      "id": "prog_6",
+      "section": "programme",
+      "title": "How @global.prog_name works?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "How @global.prog_name works?"
+        }
+      }
+    },
+    {
+      "id": "what_is_safeguarding",
+      "section": "safeguarding",
+      "title": "What is Safeguarding?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "What is Safeguarding?"
+        }
+      }
+    },
+    {
+      "id": "during_disclosed_abuse",
+      "section": "safeguarding",
+      "title": "What should I do during the disclosure of abuse, neglect, or exploitation?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "What should I do during the disclosure of abuse, neglect, or exploitation?"
+        }
+      }
+    },
+    {
+      "id": "after_disclosed_abuse",
+      "section": "safeguarding",
+      "title": "What can I do after a participant discloses abuse, neglect or exploitation?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "What can I do after a participant discloses abuse, neglect or exploitation?"
+        }
+      }
+    },
+    {
+      "id": "how_to_report_abuse",
+      "section": "safeguarding",
+      "title": "How should I report abuse?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "How should I report abuse?"
+        }
+      }
+    },
+    {
+      "id": "contact_for_reporting_abuse",
+      "section": "safeguarding",
+      "title": "How should I report abuse?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "How should I report abuse?"
+        }
+      }
+    },
+    {
+      "id": "contact_for_reporting_abuse",
+      "section": "safeguarding",
+      "title": "Abuse, Neglect and Violence Hotline",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Abuse, Neglect and Violence Hotline"
+        }
+      }
+    },
+    {
+      "id": "crisis_hotlines",
+      "section": "safeguarding",
+      "title": "Crisis Hotlines",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Crisis Hotlines"
+        }
+      }
+    },
+    {
+      "id": "crisis_hotlines",
+      "section": "safeguarding",
+      "title": "Crisis Hotlines",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Crisis Hotlines"
+        }
+      }
+    },
+    {
+      "id": "programme_structure_in_in",
+      "section": "guide",
+      "tag_list": [
+        "inperson_inperson"
+      ],
+      "title": "Programme Structure",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Programme Structure"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "programme_structure_in_remote",
+      "section": "guide",
+      "tag_list": [
+        "inperson_remote"
+      ],
+      "title": "Programme Structure",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Programme Structure"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "programme_structure_remote_in",
+      "section": "guide",
+      "tag_list": [
+        "remote_inperson"
+      ],
+      "title": "Programme Structure",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Programme Structure"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "programme_structure_remote_remote",
+      "section": "guide",
+      "tag_list": [
+        "remote_remote"
+      ],
+      "title": "Programme Structure",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Programme Structure"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "prepare",
+      "section": "guide",
+      "title": "Prepare for Each Day",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Prepare for Each Day"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "parent_group",
+      "section": "guide",
+      "title": "Create & Manage Parent Groups",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Create & Manage Parent Groups"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "in_person_session",
+      "section": "guide",
+      "tag_list": [
+        "inperson_inperson",
+        "inperson_remote",
+        "remote_inperson"
+      ],
+      "title": "Deliver In-person Session",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {},
+        "sections_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Deliver In-person Session"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        },
+        "sections_title": {
+          "eng": "Tips for effective facilitation of in-person sessions"
+        }
+      },
+      "related_articles_title": "Next:",
+      "sections_title": "Tips for effective facilitation of in-person sessions"
+    },
+    {
+      "id": "lesson_content",
+      "section": "guide",
+      "title": "Deliver Lesson Content",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Deliver Lesson Content"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "reminders",
+      "section": "guide",
+      "title": "Deliver Reminders",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Deliver Reminders"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "live_chat_session",
+      "section": "guide",
+      "title": "Deliver Live Chat Session",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Deliver Live Chat Session"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "report",
+      "section": "guide",
+      "title": "Report on Sessions",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Report on Sessions"
+        }
+      }
+    },
+    {
+      "id": "facilitation_overview",
+      "section": "guide",
+      "title": "Effective Facilitation Skills Overview",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Effective Facilitation Skills Overview"
+        }
+      }
+    },
+    {
+      "id": "facilitation_0",
+      "section": "facilitation",
+      "title": "Effective Facilitation Skills Overview",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Effective Facilitation Skills Overview"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "facilitation_1",
+      "section": "facilitation",
+      "title": "1️⃣Use a collaborative approach to learning",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "1️⃣Use a collaborative approach to learning"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "facilitation_2",
+      "section": "facilitation",
+      "title": "2️⃣Model the behaviour you want to see",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "2️⃣Model the behaviour you want to see"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "facilitation_3",
+      "section": "facilitation",
+      "title": "3️⃣Go at your parent’s pace",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "3️⃣Go at your parent’s pace"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "facilitation_4",
+      "section": "facilitation",
+      "title": "4️⃣Practice A-E-C-P: Accept, Explore, Connect, and Practice",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "4️⃣Practice A-E-C-P: Accept, Explore, Connect, and Practice"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "facilitation_5",
+      "section": "facilitation",
+      "title": "5️⃣Be aware of child developmental stages & milestones",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "5️⃣Be aware of child developmental stages & milestones"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "facilitation_6",
+      "section": "facilitation",
+      "title": "6️⃣Come prepared for each lesson",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "6️⃣Come prepared for each lesson"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "facilitation_7",
+      "section": "facilitation",
+      "title": "7️⃣ Make @global_prog.name a happy",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "7️⃣ Make @global_prog.name a happy"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "facilitation_8",
+      "section": "facilitation",
+      "title": "8️⃣Lastly, have fun!",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "8️⃣Lastly, have fun!"
         }
       }
     }

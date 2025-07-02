@@ -8,11 +8,19 @@
     {
       "type": "declare_global_constant",
       "name": "app_name",
-      "value": "BLANK",
+      "value": "APP NAME",
       "_translations": {
         "value": {}
       },
       "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "prog_name",
+      "value": "PROGRAM",
+      "_translations": {
+        "value": {}
+      }
     },
     {
       "type": "declare_global_constant",

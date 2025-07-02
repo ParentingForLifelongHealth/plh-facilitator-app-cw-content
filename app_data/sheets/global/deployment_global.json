@@ -180,6 +180,14 @@
     },
     {
       "type": "declare_global_constant",
+      "name": "close_stack_icon",
+      "value": "images/icons/cancel.svg",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
       "name": "active_group_title",
       "value": "Your Active Groups",
       "_translations": {

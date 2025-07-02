@@ -7,34 +7,33 @@
 | accordion_section | 1 |
 | apple_sign_in_button | 1 |
 | audio | 2 |
-| button | 82 |
+| button | 86 |
 | carousel | 2 |
 | combo_box | 4 |
-| data_items | 40 |
+| data_items | 41 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 99 |
-| drawer | 1 |
+| display_group | 108 |
 | google_sign_in_button | 2 |
-| image | 10 |
-| items | 22 |
-| lottie_animation | 2 |
+| image | 16 |
+| items | 17 |
+| lottie_animation | 6 |
 | navigation_bar | 1 |
 | pdf | 1 |
 | qr_code | 1 |
 | radio_button_grid | 8 |
-| round_button | 34 |
+| round_button | 35 |
 | select_text | 1 |
-| set_variable | 581 |
+| set_variable | 567 |
 | simple_checkbox | 2 |
-| task_card | 5 |
-| task_progress_bar | 2 |
-| template | 64 |
+| task_card | 6 |
+| task_progress_bar | 1 |
+| template | 88 |
 | test | 1 |
-| text | 163 |
+| text | 168 |
 | text_area | 2 |
 | text_box | 24 |
-| title | 36 |
+| title | 37 |
 | toggle_bar | 7 |
 | update_action_list | 3 |
 | video | 2 |
@@ -48,23 +47,24 @@
 | add_data | 5 |
 | app_update | 1 |
 | auth | 2 |
-| emit: completed | 41 |
-| emit: force_reload | 8 |
+| emit: completed | 35 |
+| emit: force_reload | 9 |
 | emit: force_reprocess | 14 |
 | emit: force_restart | 4 |
-| emit: server_sync | 15 |
+| emit: server_sync | 16 |
 | emit: set_language | 1 |
-| emit: uncompleted | 37 |
+| emit: uncompleted | 62 |
 | feedback | 13 |
-| go_to | 35 |
-| nav_stack | 6 |
-| pop_up | 15 |
+| go_to | 37 |
+| nav_stack | 7 |
+| navigate_back | 1 |
+| pop_up | 16 |
 | reset_app | 1 |
 | save_to_device | 4 |
-| set_data | 21 |
-| set_field | 68 |
+| set_data | 22 |
+| set_field | 71 |
 | set_item | 8 |
-| set_local | 38 |
+| set_local | 39 |
 | share | 2 |
 | user | 3 |
 </details>
@@ -74,7 +74,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 208 KB | 0.2 MB |
+| total | 857 KB | 0.9 MB |
 | unused | 125 KB | 0.1 MB |
 </details>
 
@@ -119,26 +119,22 @@ Assets that have references within sheets but do not appear in app-data
 | path | count |
 | --- | --- |
 | .png | 1 |
-| images/crisis_hotlines.svg | 1 |
-| images/during_disclosed_abuse.svg | 1 |
-| images/faq_h_sharing_emotions_new.svg | 1 |
+| @data.pdf | 3 |
 | images/flags/nl.svg | 2 |
 | images/icons/feather.svg | 1 |
 | images/icons/magnify_glass.svg | 1 |
-| images/learning_challenges.svg | 1 |
 | images/logos/KEMAS.png | 1 |
 | images/logos/LPPKN.png | 1 |
 | images/logos/Oxford.png | 1 |
 | images/logos/UPM.png | 1 |
 | images/logos/app_logo.png | 1 |
-| images/logos/bird_on_light.svg | 1 |
 | images/logos/bird_white.svg | 1 |
 | images/logos/favicon.png | 1 |
 | images/logos/lego.png | 1 |
 | images/logos/masw.png | 1 |
 | images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
-| images/week_4_final_chat_sessions.svg | 1 |
+| pdf/kemas_rct_overview.pdf | 1 |
 </details>
 
 <details >
@@ -156,7 +152,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/archive.svg | 0.5 | 1 |
 | images/icons/arrow_back.svg | 0.2 | 1 |
 | images/icons/arrow_forward.svg | 0.2 | 1 |
-| images/icons/cancel.svg | 0.4 | 1 |
+| images/icons/cancel.svg | 0.4 | 2 |
 | images/icons/check_circle.png | 0.6 | 1 |
 | images/icons/checkmark-outline.svg | 0.2 | 2 |
 | images/icons/cog_white.svg | 3.6 | 2 |
@@ -187,6 +183,8 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/logos/IDEMS.png | 84.6 | 1 |
 | images/logos/PLH.png | 26.6 | 1 |
 | images/logos/UNICEF.jpg | 27.7 | 1 |
+| pdf/child_development_domain.pdf | 141 | 1 |
+| pdf/child_development_stage.pdf | 508.2 | 1 |
 </details>
 
 <details >
@@ -201,9 +199,9 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | data_list | lifecycle_actions | 1 |
 | data_pipe |  | 1 |
 | generator |  | 6 |
-| global |  | 7 |
+| global |  | 8 |
 | global | legal_terms | 1 |
-| template |  | 71 |
-| template | generated | 23 |
+| template |  | 72 |
+| template | generated | 47 |
 | template | legal_terms | 4 |
 </details>

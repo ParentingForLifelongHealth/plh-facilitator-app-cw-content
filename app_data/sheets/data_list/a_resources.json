@@ -3,7 +3,38 @@
   "flow_name": "a_resources",
   "status": "released",
   "data_list_name": "a_resources",
-  "rows": [],
+  "rows": [
+    {
+      "id": "resource0",
+      "foreign_key": "facilitation_5",
+      "media_type": "pdf",
+      "media_asset": "pdf/child_development_domain.pdf",
+      "media_title": "Domains of child development",
+      "_translations": {
+        "media_title": {}
+      },
+      "_translatedFields": {
+        "media_title": {
+          "eng": "Domains of child development"
+        }
+      }
+    },
+    {
+      "id": "resource1",
+      "foreign_key": "facilitation_5",
+      "media_type": "pdf",
+      "media_asset": "pdf/child_development_stage.pdf",
+      "media_title": "Stages of Child Development",
+      "_translations": {
+        "media_title": {}
+      },
+      "_translatedFields": {
+        "media_title": {
+          "eng": "Stages of Child Development"
+        }
+      }
+    }
+  ],
   "_xlsxPath": "data/articles_CW.xlsx",
   "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

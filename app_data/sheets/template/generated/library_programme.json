@@ -32,13 +32,28 @@
         },
         {
           "name": "display_title",
-          "value": "Facilitator Guide",
+          "value": "About @global.prog_name",
           "_translations": {
             "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",
-          "_nested_name": "library_list.display_title"
+          "_nested_name": "library_list.display_title",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "About @global.prog_name",
+                "matchedExpression": "@global.prog_name",
+                "type": "global",
+                "fieldName": "prog_name"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@global.prog_name": [
+              "value"
+            ]
+          }
         }
       ],
       "_nested_name": "library_list"

@@ -4,32 +4,60 @@
   "flow_type": "data_list",
   "rows": [
     {
-      "id": "masw",
-      "title": "masw",
+      "id": "inperson_inperson",
+      "title": "In-person Onboarding & Closing Session",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "masw"
+          "eng": "In-person Onboarding & Closing Session"
         }
       },
-      "name": "masw",
-      "text": "masw"
+      "name": "inperson_inperson",
+      "text": "In-person Onboarding & Closing Session"
     },
     {
-      "id": "kemas",
-      "title": "kemas",
+      "id": "inperson_remote",
+      "title": "In-person Onboarding & Remote Closing Session",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "kemas"
+          "eng": "In-person Onboarding & Remote Closing Session"
         }
       },
-      "name": "kemas",
-      "text": "kemas"
+      "name": "inperson_remote",
+      "text": "In-person Onboarding & Remote Closing Session"
+    },
+    {
+      "id": "remote_inperson",
+      "title": "Remote Onboarding & In-person Closing Session",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Remote Onboarding & In-person Closing Session"
+        }
+      },
+      "name": "remote_inperson",
+      "text": "Remote Onboarding & In-person Closing Session"
+    },
+    {
+      "id": "remote_remote",
+      "title": "Remote Onboarding & Closing Session",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Remote Onboarding & Closing Session"
+        }
+      },
+      "name": "remote_remote",
+      "text": "Remote Onboarding & Closing Session"
     }
   ]
 }

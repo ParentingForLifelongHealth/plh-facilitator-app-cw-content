@@ -1,22 +1,13 @@
 {
-  "flow_name": "pdf_group_masw_overview",
+  "flow_name": "library_facilitation",
   "flow_subtype": "generated",
   "flow_type": "template",
   "rows": [
     {
       "type": "template",
-      "name": "pdf",
-      "value": "pdf",
+      "name": "library_list",
+      "value": "library_list",
       "action_list": [
-        {
-          "trigger": "completed",
-          "action_id": "emit",
-          "args": [
-            "completed"
-          ],
-          "_raw": "completed | emit: completed",
-          "_cleaned": "completed | emit: completed"
-        },
         {
           "trigger": "uncompleted",
           "action_id": "emit",
@@ -30,27 +21,27 @@
       "exclude_from_translation": true,
       "rows": [
         {
-          "name": "data",
-          "value": "pdf",
+          "name": "library_id",
+          "value": "facilitation",
           "_translations": {
             "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",
-          "_nested_name": "pdf.data"
+          "_nested_name": "library_list.library_id"
         },
         {
-          "name": "pdf_id",
-          "value": "group_masw_overview",
+          "name": "display_title",
+          "value": "Facilitation Skills",
           "_translations": {
             "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",
-          "_nested_name": "pdf.pdf_id"
+          "_nested_name": "library_list.display_title"
         }
       ],
-      "_nested_name": "pdf"
+      "_nested_name": "library_list"
     }
   ]
 }

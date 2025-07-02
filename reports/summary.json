@@ -19,7 +19,7 @@
       },
       {
         "type": "button",
-        "count": 82
+        "count": 86
       },
       {
         "type": "carousel",
@@ -31,7 +31,7 @@
       },
       {
         "type": "data_items",
-        "count": 40
+        "count": 41
       },
       {
         "type": "debug_toggle",
@@ -43,11 +43,7 @@
       },
       {
         "type": "display_group",
-        "count": 99
-      },
-      {
-        "type": "drawer",
-        "count": 1
+        "count": 108
       },
       {
         "type": "google_sign_in_button",
@@ -55,15 +51,15 @@
       },
       {
         "type": "image",
-        "count": 10
+        "count": 16
       },
       {
         "type": "items",
-        "count": 22
+        "count": 17
       },
       {
         "type": "lottie_animation",
-        "count": 2
+        "count": 6
       },
       {
         "type": "navigation_bar",
@@ -83,7 +79,7 @@
       },
       {
         "type": "round_button",
-        "count": 34
+        "count": 35
       },
       {
         "type": "select_text",
@@ -91,7 +87,7 @@
       },
       {
         "type": "set_variable",
-        "count": 581
+        "count": 567
       },
       {
         "type": "simple_checkbox",
@@ -99,15 +95,15 @@
       },
       {
         "type": "task_card",
-        "count": 5
+        "count": 6
       },
       {
         "type": "task_progress_bar",
-        "count": 2
+        "count": 1
       },
       {
         "type": "template",
-        "count": 64
+        "count": 88
       },
       {
         "type": "test",
@@ -115,7 +111,7 @@
       },
       {
         "type": "text",
-        "count": 163
+        "count": 168
       },
       {
         "type": "text_area",
@@ -127,7 +123,7 @@
       },
       {
         "type": "title",
-        "count": 36
+        "count": 37
       },
       {
         "type": "toggle_bar",
@@ -159,11 +155,11 @@
       },
       {
         "type": "emit: completed",
-        "count": 41
+        "count": 35
       },
       {
         "type": "emit: force_reload",
-        "count": 8
+        "count": 9
       },
       {
         "type": "emit: force_reprocess",
@@ -175,7 +171,7 @@
       },
       {
         "type": "emit: server_sync",
-        "count": 15
+        "count": 16
       },
       {
         "type": "emit: set_language",
@@ -183,7 +179,7 @@
       },
       {
         "type": "emit: uncompleted",
-        "count": 37
+        "count": 62
       },
       {
         "type": "feedback",
@@ -191,15 +187,19 @@
       },
       {
         "type": "go_to",
-        "count": 35
+        "count": 37
       },
       {
         "type": "nav_stack",
-        "count": 6
+        "count": 7
+      },
+      {
+        "type": "navigate_back",
+        "count": 1
       },
       {
         "type": "pop_up",
-        "count": 15
+        "count": 16
       },
       {
         "type": "reset_app",
@@ -211,11 +211,11 @@
       },
       {
         "type": "set_data",
-        "count": 21
+        "count": 22
       },
       {
         "type": "set_field",
-        "count": 68
+        "count": 71
       },
       {
         "type": "set_item",
@@ -223,7 +223,7 @@
       },
       {
         "type": "set_local",
-        "count": 38
+        "count": 39
       },
       {
         "type": "share",
@@ -239,8 +239,8 @@
     "data": [
       {
         "assets": "total",
-        "KB": "208 KB",
-        "MB": "0.2 MB"
+        "KB": "857 KB",
+        "MB": "0.9 MB"
       },
       {
         "assets": "unused",
@@ -357,18 +357,8 @@
         "missing": true
       },
       {
-        "path": "images/crisis_hotlines.svg",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/during_disclosed_abuse.svg",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/faq_h_sharing_emotions_new.svg",
-        "count": 1,
+        "path": "@data.pdf",
+        "count": 3,
         "missing": true
       },
       {
@@ -383,11 +373,6 @@
       },
       {
         "path": "images/icons/magnify_glass.svg",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/learning_challenges.svg",
         "count": 1,
         "missing": true
       },
@@ -413,11 +398,6 @@
       },
       {
         "path": "images/logos/app_logo.png",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/logos/bird_on_light.svg",
         "count": 1,
         "missing": true
       },
@@ -452,7 +432,7 @@
         "missing": true
       },
       {
-        "path": "images/week_4_final_chat_sessions.svg",
+        "path": "pdf/kemas_rct_overview.pdf",
         "count": 1,
         "missing": true
       }
@@ -502,7 +482,7 @@
       },
       {
         "path": "images/icons/cancel.svg",
-        "count": 1,
+        "count": 2,
         "size_kb": 0.4
       },
       {
@@ -654,6 +634,16 @@
         "path": "images/logos/UNICEF.jpg",
         "count": 1,
         "size_kb": 27.7
+      },
+      {
+        "path": "pdf/child_development_domain.pdf",
+        "count": 1,
+        "size_kb": 141
+      },
+      {
+        "path": "pdf/child_development_stage.pdf",
+        "count": 1,
+        "size_kb": 508.2
       }
     ]
   },
@@ -697,7 +687,7 @@
       {
         "type": "global",
         "subtype": null,
-        "total": 7
+        "total": 8
       },
       {
         "type": "global",
@@ -707,12 +697,12 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 71
+        "total": 72
       },
       {
         "type": "template",
         "subtype": "generated",
-        "total": 23
+        "total": 47
       },
       {
         "type": "template",
