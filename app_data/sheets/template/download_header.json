@@ -4,14 +4,14 @@
   "status": "released",
   "rows": [
     {
+      "name": "asset",
+      "type": "set_variable",
+      "_nested_name": "asset"
+    },
+    {
       "type": "display_group",
       "name": "dg_header",
       "rows": [
-        {
-          "name": "asset",
-          "type": "set_variable",
-          "_nested_name": "dg_header.asset"
-        },
         {
           "type": "title",
           "name": "title",

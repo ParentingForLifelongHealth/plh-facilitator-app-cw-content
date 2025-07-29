@@ -5,29 +5,323 @@
   "data_list_name": "modules",
   "rows": [
     {
-      "id": "demo_module",
-      "status": "released",
-      "page_count": 3,
-      "completed": false,
-      "title": "Demo",
+      "id": "individual_consultation",
+      "title": "Individual consultations",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Individual consultations"
+        },
+        "description": {
+          "eng": "Introducing the programme to parents"
+        }
+      },
+      "description": "Introducing the programme to parents"
+    },
+    {
+      "id": "module_1_prepare",
+      "title": "One-on-one time: Prepare",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Demo"
+          "eng": "One-on-one time: Prepare"
+        }
+      }
+    },
+    {
+      "id": "module_1_lesson",
+      "title": "One-on-one time: Watch  and try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time: Watch  and try"
+        }
+      }
+    },
+    {
+      "id": "module_1_reminder_1",
+      "title": "One-on-one time: Remember to try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time: Remember to try"
+        }
+      }
+    },
+    {
+      "id": "module_1_reminder_2",
+      "title": "One-on-one time: Chat coming soon",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time: Chat coming soon"
+        }
+      }
+    },
+    {
+      "id": "module_1_chat",
+      "title": "One-on-one time: Let’s connect",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time: Let’s connect"
+        }
+      }
+    },
+    {
+      "id": "module_2_prepare",
+      "title": "Talking about feelings: Prepare",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about feelings: Prepare"
+        }
+      }
+    },
+    {
+      "id": "module_2_lesson",
+      "title": "Talking about feelings: Watch & try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about feelings: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_2_reminder_1",
+      "title": "Talking about feelings: Remember to try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about feelings: Remember to try"
+        }
+      }
+    },
+    {
+      "id": "module_2_reminder_2",
+      "title": "Talking about feelings: Chat coming soon",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about feelings: Chat coming soon"
+        }
+      }
+    },
+    {
+      "id": "module_2_chat",
+      "title": "Talking about feelings: Let’s connect",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about feelings: Let’s connect"
+        }
+      }
+    },
+    {
+      "id": "module_3_prepare",
+      "title": "Keeping it positive: Prepare",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keeping it positive: Prepare"
+        }
+      }
+    },
+    {
+      "id": "module_3_lesson",
+      "title": "Keeping it positive: Watch and try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keeping it positive: Watch and try"
+        }
+      }
+    },
+    {
+      "id": "module_3_reminder_1",
+      "title": "Keeping it positive: Remember to try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keeping it positive: Remember to try"
+        }
+      }
+    },
+    {
+      "id": "module_3_reminder_2",
+      "title": "Keeping it positive: Chat coming soon",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keeping it positive: Chat coming soon"
+        }
+      }
+    },
+    {
+      "id": "module_3_chat",
+      "title": "Keeping it positive: Let’s connect",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keeping it positive: Let’s connect"
+        }
+      }
+    },
+    {
+      "id": "module_4_prepare",
+      "title": "Rules & routines: Prepare",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Rules & routines: Prepare"
+        }
+      }
+    },
+    {
+      "id": "module_4_lesson",
+      "title": "Rules & routines: Watch & try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Rules & routines: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_4_reminder_1",
+      "title": "Rules & routines: Remember to try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Rules & routines: Remember to try"
+        }
+      }
+    },
+    {
+      "id": "module_4_reminder_2",
+      "title": "Keeping it positive: Chat coming soon",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keeping it positive: Chat coming soon"
+        }
+      }
+    },
+    {
+      "id": "module_4_chat",
+      "title": "Rules & routines: Let’s connect",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Rules & routines: Let’s connect"
+        }
+      }
+    },
+    {
+      "id": "module_6_prepare",
+      "title": "Problem solving & closing: Prepare",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Problem solving & closing: Prepare"
+        }
+      }
+    },
+    {
+      "id": "module_6_lesson",
+      "title": "Problem solving & closing: Watch & try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Problem solving & closing: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_6_reminder_1",
+      "title": "Problem solving & closing: Remember to try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Problem solving & closing: Remember to try"
+        }
+      }
+    },
+    {
+      "id": "module_6_reminder_2",
+      "title": "Problem solving & closing: Chat coming soon",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Problem solving & closing: Chat coming soon"
+        }
+      }
+    },
+    {
+      "id": "module_6_chat",
+      "title": "Problem solving & closing: Let’s connect",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Problem solving & closing: Let’s connect"
         }
       }
     }
   ],
   "_xlsxPath": "data/modules_CW.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
-  "_metadata": {
-    "page_count": {
-      "type": "number"
-    },
-    "completed": {
-      "type": "boolean"
-    }
-  }
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

@@ -10,16 +10,12 @@
         "count": 1
       },
       {
-        "type": "apple_sign_in_button",
-        "count": 1
-      },
-      {
         "type": "audio",
         "count": 2
       },
       {
         "type": "button",
-        "count": 86
+        "count": 85
       },
       {
         "type": "carousel",
@@ -43,11 +39,11 @@
       },
       {
         "type": "display_group",
-        "count": 108
+        "count": 106
       },
       {
         "type": "google_sign_in_button",
-        "count": 2
+        "count": 1
       },
       {
         "type": "image",
@@ -55,11 +51,11 @@
       },
       {
         "type": "items",
-        "count": 17
+        "count": 16
       },
       {
         "type": "lottie_animation",
-        "count": 6
+        "count": 7
       },
       {
         "type": "navigation_bar",
@@ -79,7 +75,7 @@
       },
       {
         "type": "round_button",
-        "count": 35
+        "count": 31
       },
       {
         "type": "select_text",
@@ -87,7 +83,7 @@
       },
       {
         "type": "set_variable",
-        "count": 567
+        "count": 553
       },
       {
         "type": "simple_checkbox",
@@ -103,7 +99,7 @@
       },
       {
         "type": "template",
-        "count": 88
+        "count": 89
       },
       {
         "type": "test",
@@ -111,7 +107,7 @@
       },
       {
         "type": "text",
-        "count": 168
+        "count": 159
       },
       {
         "type": "text_area",
@@ -119,11 +115,11 @@
       },
       {
         "type": "text_box",
-        "count": 24
+        "count": 21
       },
       {
         "type": "title",
-        "count": 37
+        "count": 36
       },
       {
         "type": "toggle_bar",
@@ -131,7 +127,7 @@
       },
       {
         "type": "update_action_list",
-        "count": 3
+        "count": 1
       },
       {
         "type": "video",
@@ -143,7 +139,7 @@
     "data": [
       {
         "type": "add_data",
-        "count": 5
+        "count": 7
       },
       {
         "type": "app_update",
@@ -151,7 +147,7 @@
       },
       {
         "type": "auth",
-        "count": 2
+        "count": 1
       },
       {
         "type": "emit: completed",
@@ -159,19 +155,19 @@
       },
       {
         "type": "emit: force_reload",
-        "count": 9
+        "count": 7
       },
       {
         "type": "emit: force_reprocess",
-        "count": 14
+        "count": 11
       },
       {
         "type": "emit: force_restart",
-        "count": 4
+        "count": 2
       },
       {
         "type": "emit: server_sync",
-        "count": 16
+        "count": 15
       },
       {
         "type": "emit: set_language",
@@ -179,7 +175,7 @@
       },
       {
         "type": "emit: uncompleted",
-        "count": 62
+        "count": 60
       },
       {
         "type": "feedback",
@@ -187,19 +183,19 @@
       },
       {
         "type": "go_to",
-        "count": 37
+        "count": 39
+      },
+      {
+        "type": "nav",
+        "count": 1
       },
       {
         "type": "nav_stack",
         "count": 7
       },
       {
-        "type": "navigate_back",
-        "count": 1
-      },
-      {
         "type": "pop_up",
-        "count": 16
+        "count": 13
       },
       {
         "type": "reset_app",
@@ -215,7 +211,7 @@
       },
       {
         "type": "set_field",
-        "count": 71
+        "count": 66
       },
       {
         "type": "set_item",
@@ -223,7 +219,7 @@
       },
       {
         "type": "set_local",
-        "count": 39
+        "count": 38
       },
       {
         "type": "share",
@@ -231,7 +227,7 @@
       },
       {
         "type": "user",
-        "count": 3
+        "count": 2
       }
     ]
   },
@@ -652,7 +648,7 @@
       {
         "type": "data_list",
         "subtype": null,
-        "total": 31
+        "total": 32
       },
       {
         "type": "data_list",
@@ -697,12 +693,12 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 72
+        "total": 70
       },
       {
         "type": "template",
         "subtype": "generated",
-        "total": 47
+        "total": 46
       },
       {
         "type": "template",

@@ -91,6 +91,12 @@
               "value"
             ]
           }
+        },
+        {
+          "name": "confirm_exit",
+          "value": true,
+          "type": "set_variable",
+          "_nested_name": "header.confirm_exit"
         }
       ],
       "_nested_name": "header"
@@ -357,6 +363,6 @@
       }
     }
   ],
-  "_xlsxPath": "templates/profile.xlsx",
+  "_xlsxPath": "templates/parent groups.xlsx",
   "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
 }

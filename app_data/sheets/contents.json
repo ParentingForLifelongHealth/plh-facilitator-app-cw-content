@@ -147,20 +147,18 @@
       "_xlsxPath": "data/media_data CW.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
+    "message_log": {
+      "flow_type": "data_list",
+      "flow_name": "message_log",
+      "_xlsxPath": "templates/article_elements.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+    },
     "modules": {
       "flow_type": "data_list",
       "flow_name": "modules",
       "data_list_name": "modules",
       "_xlsxPath": "data/modules_CW.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
-      "_metadata": {
-        "page_count": {
-          "type": "number"
-        },
-        "completed": {
-          "type": "boolean"
-        }
-      }
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "number_data": {
       "flow_type": "data_list",
@@ -396,16 +394,6 @@
           "flow_type": "template"
         },
         {
-          "flow_name": "library_article_contact_for_reporting_abuse",
-          "flow_subtype": "generated",
-          "flow_type": "template"
-        },
-        {
-          "flow_name": "library_article_crisis_hotlines",
-          "flow_subtype": "generated",
-          "flow_type": "template"
-        },
-        {
           "flow_name": "library_article_crisis_hotlines",
           "flow_subtype": "generated",
           "flow_type": "template"
@@ -467,11 +455,6 @@
         },
         {
           "flow_name": "library_article_facilitation_overview",
-          "flow_subtype": "generated",
-          "flow_type": "template"
-        },
-        {
-          "flow_name": "library_article_facilitation_0",
           "flow_subtype": "generated",
           "flow_type": "template"
         },
@@ -721,13 +704,13 @@
     "add_coparent": {
       "flow_type": "template",
       "flow_name": "add_coparent",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "add_group_button": {
       "flow_type": "template",
       "flow_name": "add_group_button",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "add_in_person": {
@@ -739,13 +722,13 @@
     "add_parent": {
       "flow_type": "template",
       "flow_name": "add_parent",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "add_parent_group": {
       "flow_type": "template",
       "flow_name": "add_parent_group",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "add_remote": {
@@ -781,7 +764,7 @@
     "archive_group": {
       "flow_type": "template",
       "flow_name": "archive_group",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "article_intro": {
@@ -835,13 +818,13 @@
     "delete_group": {
       "flow_type": "template",
       "flow_name": "delete_group",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "delete_parent": {
       "flow_type": "template",
       "flow_name": "delete_parent",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "delete_report": {
@@ -865,13 +848,13 @@
     "edit_parent": {
       "flow_type": "template",
       "flow_name": "edit_parent",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "edit_parent_group": {
       "flow_type": "template",
       "flow_name": "edit_parent_group",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "edit_remote": {
@@ -982,11 +965,6 @@
     },
     "library_article_during_disclosed_abuse": {
       "flow_name": "library_article_during_disclosed_abuse",
-      "flow_subtype": "generated",
-      "flow_type": "template"
-    },
-    "library_article_facilitation_0": {
-      "flow_name": "library_article_facilitation_0",
       "flow_subtype": "generated",
       "flow_type": "template"
     },
@@ -1312,19 +1290,13 @@
     "parent_group": {
       "flow_type": "template",
       "flow_name": "parent_group",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "parent_list": {
       "flow_type": "template",
       "flow_name": "parent_list",
-      "_xlsxPath": "templates/profile.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
-    },
-    "parent_profile": {
-      "flow_type": "template",
-      "flow_name": "parent_profile",
-      "_xlsxPath": "templates/profile.xlsx",
+      "_xlsxPath": "templates/parent groups.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
     "pdf": {
@@ -1355,12 +1327,6 @@
     "profile_about": {
       "flow_type": "template",
       "flow_name": "profile_about",
-      "_xlsxPath": "templates/profile.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
-    },
-    "profile_group": {
-      "flow_type": "template",
-      "flow_name": "profile_group",
       "_xlsxPath": "templates/profile.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },

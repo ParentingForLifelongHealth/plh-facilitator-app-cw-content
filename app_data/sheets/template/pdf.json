@@ -212,7 +212,9 @@
         "value": {}
       },
       "parameter_list": {
-        "starting_page": "1"
+        "starting_page": "1",
+        "compatibility_error_message": "@global.pdf_compatibility_error_message",
+        "open_external_text": "@global.pdf_open_external_text"
       },
       "_nested_name": "pdf",
       "_dynamicFields": {
@@ -223,11 +225,35 @@
             "type": "local",
             "fieldName": "pdf_asset"
           }
-        ]
+        ],
+        "parameter_list": {
+          "compatibility_error_message": [
+            {
+              "fullExpression": "@global.pdf_compatibility_error_message",
+              "matchedExpression": "@global.pdf_compatibility_error_message",
+              "type": "global",
+              "fieldName": "pdf_compatibility_error_message"
+            }
+          ],
+          "open_external_text": [
+            {
+              "fullExpression": "@global.pdf_open_external_text",
+              "matchedExpression": "@global.pdf_open_external_text",
+              "type": "global",
+              "fieldName": "pdf_open_external_text"
+            }
+          ]
+        }
       },
       "_dynamicDependencies": {
         "@local.pdf_asset": [
           "value"
+        ],
+        "@global.pdf_compatibility_error_message": [
+          "parameter_list.compatibility_error_message"
+        ],
+        "@global.pdf_open_external_text": [
+          "parameter_list.open_external_text"
         ]
       }
     }
