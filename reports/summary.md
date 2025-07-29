@@ -5,37 +5,36 @@
 | --- | --- |
 | accordion | 1 |
 | accordion_section | 1 |
-| apple_sign_in_button | 1 |
 | audio | 2 |
-| button | 86 |
+| button | 85 |
 | carousel | 2 |
 | combo_box | 4 |
 | data_items | 41 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 108 |
-| google_sign_in_button | 2 |
+| display_group | 106 |
+| google_sign_in_button | 1 |
 | image | 16 |
-| items | 17 |
-| lottie_animation | 6 |
+| items | 16 |
+| lottie_animation | 7 |
 | navigation_bar | 1 |
 | pdf | 1 |
 | qr_code | 1 |
 | radio_button_grid | 8 |
-| round_button | 35 |
+| round_button | 31 |
 | select_text | 1 |
-| set_variable | 567 |
+| set_variable | 553 |
 | simple_checkbox | 2 |
 | task_card | 6 |
 | task_progress_bar | 1 |
-| template | 88 |
+| template | 89 |
 | test | 1 |
-| text | 168 |
+| text | 159 |
 | text_area | 2 |
-| text_box | 24 |
-| title | 37 |
+| text_box | 21 |
+| title | 36 |
 | toggle_bar | 7 |
-| update_action_list | 3 |
+| update_action_list | 1 |
 | video | 2 |
 </details>
 
@@ -44,29 +43,29 @@
 
 | type | count |
 | --- | --- |
-| add_data | 5 |
+| add_data | 7 |
 | app_update | 1 |
-| auth | 2 |
+| auth | 1 |
 | emit: completed | 35 |
-| emit: force_reload | 9 |
-| emit: force_reprocess | 14 |
-| emit: force_restart | 4 |
-| emit: server_sync | 16 |
+| emit: force_reload | 7 |
+| emit: force_reprocess | 11 |
+| emit: force_restart | 2 |
+| emit: server_sync | 15 |
 | emit: set_language | 1 |
-| emit: uncompleted | 62 |
+| emit: uncompleted | 60 |
 | feedback | 13 |
-| go_to | 37 |
+| go_to | 39 |
+| nav | 1 |
 | nav_stack | 7 |
-| navigate_back | 1 |
-| pop_up | 16 |
+| pop_up | 13 |
 | reset_app | 1 |
 | save_to_device | 4 |
 | set_data | 22 |
-| set_field | 71 |
+| set_field | 66 |
 | set_item | 8 |
-| set_local | 39 |
+| set_local | 38 |
 | share | 2 |
-| user | 3 |
+| user | 2 |
 </details>
 
 <details open>
@@ -192,7 +191,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | type | subtype | total |
 | --- | --- | --- |
-| data_list |  | 31 |
+| data_list |  | 32 |
 | data_list | app_config_language_list | 1 |
 | data_list | generated | 1 |
 | data_list | legal_terms | 2 |
@@ -201,7 +200,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | generator |  | 6 |
 | global |  | 8 |
 | global | legal_terms | 1 |
-| template |  | 72 |
-| template | generated | 47 |
+| template |  | 70 |
+| template | generated | 46 |
 | template | legal_terms | 4 |
 </details>

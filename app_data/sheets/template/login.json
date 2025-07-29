@@ -146,15 +146,6 @@
           "action_list": [
             {
               "trigger": "click",
-              "action_id": "emit",
-              "args": [
-                "completed"
-              ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
-            },
-            {
-              "trigger": "click",
               "action_id": "set_field",
               "args": [
                 "login_passed",
@@ -162,6 +153,15 @@
               ],
               "_raw": "click | set_field: login_passed: true",
               "_cleaned": "click | set_field: login_passed: true"
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             }
           ],
           "parameter_list": {
@@ -379,10 +379,19 @@
                   "trigger": "click",
                   "action_id": "emit",
                   "args": [
-                    "force_restart"
+                    "force_reprocess"
                   ],
-                  "_raw": "click | emit: force_restart",
-                  "_cleaned": "click | emit: force_restart"
+                  "_raw": "click | emit: force_reprocess",
+                  "_cleaned": "click | emit: force_reprocess"
+                },
+                {
+                  "trigger": "click",
+                  "action_id": "emit",
+                  "args": [
+                    "completed"
+                  ],
+                  "_raw": "click | emit: completed",
+                  "_cleaned": "click | emit: completed"
                 }
               ],
               "parameter_list": {
@@ -453,15 +462,6 @@
           "action_list": [
             {
               "trigger": "click",
-              "action_id": "emit",
-              "args": [
-                "completed"
-              ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
-            },
-            {
-              "trigger": "click",
               "action_id": "set_field",
               "args": [
                 "login_passed",
@@ -469,6 +469,15 @@
               ],
               "_raw": "click | set_field: login_passed: true",
               "_cleaned": "click | set_field: login_passed: true"
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             }
           ],
           "condition": "!@fields.exists_previous_auth_id",

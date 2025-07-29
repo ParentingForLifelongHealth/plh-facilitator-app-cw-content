@@ -345,6 +345,80 @@
       }
     },
     {
+      "name": "message_shared",
+      "type": "set_variable",
+      "_nested_name": "message_shared"
+    },
+    {
+      "type": "data_items",
+      "name": "get_message_share",
+      "value": "message_log",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "message_shared",
+            "(@items.length > 0)"
+          ],
+          "_raw": "data_changed | set_local : message_shared : (@items.length > 0)",
+          "_cleaned": "data_changed | set_local : message_shared : (@items.length > 0)"
+        }
+      ],
+      "parameter_list": {
+        "filter": "@item.group_id == @fields.current_group_no && @item.module == @fields.current_module_no"
+      },
+      "exclude_from_translation": true,
+      "_nested_name": "get_message_share",
+      "_dynamicFields": {
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "@item.group_id == @fields.current_group_no && @item.module == @fields.current_module_no",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "@item.group_id == @fields.current_group_no && @item.module == @fields.current_module_no",
+              "matchedExpression": "@fields.current_group_no",
+              "type": "fields",
+              "fieldName": "current_group_no"
+            },
+            {
+              "fullExpression": "@item.group_id == @fields.current_group_no && @item.module == @fields.current_module_no",
+              "matchedExpression": "@item.module",
+              "type": "item",
+              "fieldName": "module"
+            },
+            {
+              "fullExpression": "@item.group_id == @fields.current_group_no && @item.module == @fields.current_module_no",
+              "matchedExpression": "@fields.current_module_no",
+              "type": "fields",
+              "fieldName": "current_module_no"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@fields.current_group_no": [
+          "parameter_list.filter"
+        ],
+        "@item.module": [
+          "parameter_list.filter"
+        ],
+        "@fields.current_module_no": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
       "type": "display_group",
       "name": "dg_top",
       "parameter_list": {
@@ -392,8 +466,8 @@
     {
       "exclude_from_translation": true,
       "type": "set_variable",
-      "name": "set_variable_14",
-      "_nested_name": "set_variable_14"
+      "name": "set_variable_16",
+      "_nested_name": "set_variable_16"
     },
     {
       "type": "display_group",
@@ -525,11 +599,140 @@
           "rows": [
             {
               "type": "display_group",
+              "name": "message_not_shared",
+              "parameter_list": {
+                "style": "column"
+              },
+              "condition": "!@local.message_shared",
+              "rows": [
+                {
+                  "type": "lottie_animation",
+                  "name": "message_not_shared_lottie",
+                  "value": "@global.message_not_sharede_lottie",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.message_not_shared.message_not_shared_lottie",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@global.message_not_sharede_lottie",
+                        "matchedExpression": "@global.message_not_sharede_lottie",
+                        "type": "global",
+                        "fieldName": "message_not_sharede_lottie"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@global.message_not_sharede_lottie": [
+                      "value"
+                    ]
+                  }
+                },
+                {
+                  "type": "image",
+                  "name": "message_not_shared_image",
+                  "value": "@global.message_not_shared_image",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.message_not_shared.message_not_shared_image",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@global.message_not_shared_image",
+                        "matchedExpression": "@global.message_not_shared_image",
+                        "type": "global",
+                        "fieldName": "message_not_shared_image"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@global.message_not_shared_image": [
+                      "value"
+                    ]
+                  }
+                },
+                {
+                  "type": "text",
+                  "name": "message_not_shared_text",
+                  "value": "@global.message_not_shared_text",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "parameter_list": {
+                    "text_align": "center"
+                  },
+                  "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.message_not_shared.message_not_shared_text",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@global.message_not_shared_text",
+                        "matchedExpression": "@global.message_not_shared_text",
+                        "type": "global",
+                        "fieldName": "message_not_shared_text"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@global.message_not_shared_text": [
+                      "value"
+                    ]
+                  }
+                },
+                {
+                  "type": "button",
+                  "name": "complete_module",
+                  "value": "@global.mark_delivered",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "parameter_list": {
+                    "disabled": "true"
+                  },
+                  "exclude_from_translation": true,
+                  "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.message_not_shared.complete_module",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@global.mark_delivered",
+                        "matchedExpression": "@global.mark_delivered",
+                        "type": "global",
+                        "fieldName": "mark_delivered"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@global.mark_delivered": [
+                      "value"
+                    ]
+                  }
+                }
+              ],
+              "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.message_not_shared",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "!@local.message_shared",
+                    "matchedExpression": "!@local.message_shared",
+                    "type": "local",
+                    "fieldName": "message_shared"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "!@local.message_shared": [
+                  "condition"
+                ]
+              }
+            },
+            {
+              "type": "display_group",
               "name": "module_not_complete_no_report",
               "parameter_list": {
                 "style": "column"
               },
-              "condition": "@fields.current_report_id == \"empty\"",
+              "condition": "!!@local.message_shared && @fields.current_report_id == \"empty\"",
               "rows": [
                 {
                   "type": "lottie_animation",
@@ -710,7 +913,13 @@
               "_dynamicFields": {
                 "condition": [
                   {
-                    "fullExpression": "@fields.current_report_id == \"empty\"",
+                    "fullExpression": "!!@local.message_shared && @fields.current_report_id == \"empty\"",
+                    "matchedExpression": "!@local.message_shared",
+                    "type": "local",
+                    "fieldName": "message_shared"
+                  },
+                  {
+                    "fullExpression": "!!@local.message_shared && @fields.current_report_id == \"empty\"",
                     "matchedExpression": "@fields.current_report_id",
                     "type": "fields",
                     "fieldName": "current_report_id"
@@ -718,6 +927,9 @@
                 ]
               },
               "_dynamicDependencies": {
+                "!@local.message_shared": [
+                  "condition"
+                ],
                 "@fields.current_report_id": [
                   "condition"
                 ]
@@ -729,7 +941,7 @@
               "parameter_list": {
                 "style": "column"
               },
-              "condition": "@fields.current_report_id !== \"empty\"",
+              "condition": "!!@local.message_shared && @fields.current_report_id !== \"empty\"",
               "rows": [
                 {
                   "type": "lottie_animation",
@@ -910,7 +1122,13 @@
               "_dynamicFields": {
                 "condition": [
                   {
-                    "fullExpression": "@fields.current_report_id !== \"empty\"",
+                    "fullExpression": "!!@local.message_shared && @fields.current_report_id !== \"empty\"",
+                    "matchedExpression": "!@local.message_shared",
+                    "type": "local",
+                    "fieldName": "message_shared"
+                  },
+                  {
+                    "fullExpression": "!!@local.message_shared && @fields.current_report_id !== \"empty\"",
                     "matchedExpression": "@fields.current_report_id",
                     "type": "fields",
                     "fieldName": "current_report_id"
@@ -918,6 +1136,9 @@
                 ]
               },
               "_dynamicDependencies": {
+                "!@local.message_shared": [
+                  "condition"
+                ],
                 "@fields.current_report_id": [
                   "condition"
                 ]

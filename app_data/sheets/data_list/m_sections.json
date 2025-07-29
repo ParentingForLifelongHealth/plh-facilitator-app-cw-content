@@ -3,7 +3,561 @@
   "flow_name": "m_sections",
   "status": "released",
   "data_list_name": "m_sections",
-  "rows": [],
+  "rows": [
+    {
+      "id": "section0",
+      "foreign_key": "individual_consultation",
+      "title": "The goal should be specific",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "The goal should be specific"
+        },
+        "text": {
+          "eng": "Parents will often give vague goals such as, “I want my child to be good,” or “I want my child to succeed at school.” You may need to guide them to be more specific about what the parent means by “good” or “succeed at school.” \n\nIt is your job to help parents describe a behaviour as specifically as possible. You will need to use questions to get them to be more and more specific. We recommend that you ask parents what “being good” or “succeeding at school” means to them. Further, exploring when, where, and why they would like this behaviour to happen will help make their goal more specific.\n\nMaking goals specific will help the parents identify behaviours that they can actually help encourage to happen more often as they develop more positive relationships with their child. \n\nA parent who wants her child “to be good” may eventually have a goal such as “I want my child to greet his elders in a respectful way when they enter the house.” \n\nLikewise, you can help a parent who wants his child to “succeed at school” to identify a more specific goal such as, “I want my child to do her homework immediately after coming home from school.”"
+        }
+      },
+      "text": "Parents will often give vague goals such as, “I want my child to be good,” or “I want my child to succeed at school.” You may need to guide them to be more specific about what the parent means by “good” or “succeed at school.” \n\nIt is your job to help parents describe a behaviour as specifically as possible. You will need to use questions to get them to be more and more specific. We recommend that you ask parents what “being good” or “succeeding at school” means to them. Further, exploring when, where, and why they would like this behaviour to happen will help make their goal more specific.\n\nMaking goals specific will help the parents identify behaviours that they can actually help encourage to happen more often as they develop more positive relationships with their child. \n\nA parent who wants her child “to be good” may eventually have a goal such as “I want my child to greet his elders in a respectful way when they enter the house.” \n\nLikewise, you can help a parent who wants his child to “succeed at school” to identify a more specific goal such as, “I want my child to do her homework immediately after coming home from school.”"
+    },
+    {
+      "id": "section1",
+      "foreign_key": "individual_consultation",
+      "title": "The goal should also be stated in a positive way.",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "The goal should also be stated in a positive way."
+        },
+        "text": {
+          "eng": "For example, instead of saying, “I want my child to stop swearing at me,” a parent should be helped to state the behaviour that s/he wants to see: “I want my child to use friendly words when talking to me.” \nWhen you and the parent are happy with the specific, positive, and realistic goal, you should write it down and send it to them as a text message for safekeeping."
+        }
+      },
+      "text": "For example, instead of saying, “I want my child to stop swearing at me,” a parent should be helped to state the behaviour that s/he wants to see: “I want my child to use friendly words when talking to me.” \nWhen you and the parent are happy with the specific, positive, and realistic goal, you should write it down and send it to them as a text message for safekeeping."
+    },
+    {
+      "id": "section2",
+      "foreign_key": "individual_consultation",
+      "title": "The goal should also be realistic",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "The goal should also be realistic"
+        },
+        "text": {
+          "eng": "Parents will often want to choose goals that are not achievable during the programme or sometimes are impossible for their child’s developmental stage. You can gently guide parents to have more realistic expectations for their children.\n\nFor example, if a parent says that she wants her child to pass her school examinations at the end of the year, you might want to ask her what specific behaviours her child needs to do in order to make that possible.\n\nLikewise, if a parent wants his 2-year-old child to be able to get dressed by himself in the morning, you need to explore whether that is a reasonable expectation and why the child cannot get dressed by himself. You then could help the parent identify a more realistic goal that would help his child develop the skills to get dressed by himself such as, “I would like my child to cooperate with me while I help him get dressed in the morning.”"
+        }
+      },
+      "text": "Parents will often want to choose goals that are not achievable during the programme or sometimes are impossible for their child’s developmental stage. You can gently guide parents to have more realistic expectations for their children.\n\nFor example, if a parent says that she wants her child to pass her school examinations at the end of the year, you might want to ask her what specific behaviours her child needs to do in order to make that possible.\n\nLikewise, if a parent wants his 2-year-old child to be able to get dressed by himself in the morning, you need to explore whether that is a reasonable expectation and why the child cannot get dressed by himself. You then could help the parent identify a more realistic goal that would help his child develop the skills to get dressed by himself such as, “I would like my child to cooperate with me while I help him get dressed in the morning.”"
+    },
+    {
+      "id": "section3",
+      "foreign_key": "module_1_chat",
+      "title": "1️⃣ I didn’t have enough time",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "1️⃣ I didn’t have enough time"
+        },
+        "text": {
+          "eng": "It can be hard to find time during your day, with work, chores, and everything else. \n\n✨Think of a time each day that you could spare 5 minutes. You can even make household chores into a game to do together. \n\nUse the time that you and your girls and boys are already sharing, like going to the school, picking up them, waking them up or say good by for sleeping. \n\nYou can even make household chores into a game to do together."
+        }
+      },
+      "text": "It can be hard to find time during your day, with work, chores, and everything else. \n\n✨Think of a time each day that you could spare 5 minutes. You can even make household chores into a game to do together. \n\nUse the time that you and your girls and boys are already sharing, like going to the school, picking up them, waking them up or say good by for sleeping. \n\nYou can even make household chores into a game to do together."
+    },
+    {
+      "id": "section4",
+      "foreign_key": "module_1_chat",
+      "title": "2️⃣ My child did not want to spend time with me",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "2️⃣ My child did not want to spend time with me"
+        },
+        "text": {
+          "eng": "😔 It can hurt when your child does not want to spend 1-on- time with you. \n\n💡 Think to yourself: When are they more open to you? In the morning? Right before bedtime?\n\n💙 Try again so that your child can see that you care and want to spend this time with them."
+        }
+      },
+      "text": "😔 It can hurt when your child does not want to spend 1-on- time with you. \n\n💡 Think to yourself: When are they more open to you? In the morning? Right before bedtime?\n\n💙 Try again so that your child can see that you care and want to spend this time with them."
+    },
+    {
+      "id": "section5",
+      "foreign_key": "module_1_chat",
+      "title": "3️⃣ All my child wanted to do was watch TV or play with a gadget",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "3️⃣ All my child wanted to do was watch TV or play with a gadget"
+        },
+        "text": {
+          "eng": "📺Children often want to spend time watching T.V. or playing with a gadget.\n\n❓ You could watch or play on the gadget with them.\n\n💚Caring about their interests is a great start!\n\n🌷 Once you begin spending time together you can suggest another activity."
+        }
+      },
+      "text": "📺Children often want to spend time watching T.V. or playing with a gadget.\n\n❓ You could watch or play on the gadget with them.\n\n💚Caring about their interests is a great start!\n\n🌷 Once you begin spending time together you can suggest another activity."
+    },
+    {
+      "id": "section6",
+      "foreign_key": "module_1_chat",
+      "title": "4️⃣ My child wanted to do things I felt uncomfortable about",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "4️⃣ My child wanted to do things I felt uncomfortable about"
+        },
+        "text": {
+          "eng": "☀️ If your child wants to do things that are too difficult for you to do, you could watch them.\n\n🏁If they are younger, you could describe what they are doing like a sports announcer.You can also express enthusiasm by clapping, smiling, or offering a thumbs-up. \n\n💛 Praise them while they do it!\n\n📱 Sometimes older children will suggest activities that are violent or unsafe. \n\n🚩 Explain *why* you can't do them, and suggest a different activity."
+        }
+      },
+      "text": "☀️ If your child wants to do things that are too difficult for you to do, you could watch them.\n\n🏁If they are younger, you could describe what they are doing like a sports announcer.You can also express enthusiasm by clapping, smiling, or offering a thumbs-up. \n\n💛 Praise them while they do it!\n\n📱 Sometimes older children will suggest activities that are violent or unsafe. \n\n🚩 Explain *why* you can't do them, and suggest a different activity."
+    },
+    {
+      "id": "section7",
+      "foreign_key": "module_2_prepare",
+      "title": "Talking about emotions can be new",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about emotions can be new"
+        },
+        "text": {
+          "eng": "It is completely normal for parents to have difficulty talking about and expressing emotions and feelings. Parents may be trying to recognise their own emotions and communicate about them for the first time here. Talking about feelings also has the benefit of bringing awareness to positive emotions such as happiness or calmness!"
+        }
+      },
+      "text": "It is completely normal for parents to have difficulty talking about and expressing emotions and feelings. Parents may be trying to recognise their own emotions and communicate about them for the first time here. Talking about feelings also has the benefit of bringing awareness to positive emotions such as happiness or calmness!"
+    },
+    {
+      "id": "section8",
+      "foreign_key": "module_2_prepare",
+      "title": "Emotions and gender",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Emotions and gender"
+        },
+        "text": {
+          "eng": "Many people are taught not to cry when they are sad. This might be especially true for boys and men. It’s important to understand that boys and men have the same feelings as girls and women, and that sharing emotions does not need to reduce their sense of masculinity. Sharing emotions is a sign of courage and strength."
+        }
+      },
+      "text": "Many people are taught not to cry when they are sad. This might be especially true for boys and men. It’s important to understand that boys and men have the same feelings as girls and women, and that sharing emotions does not need to reduce their sense of masculinity. Sharing emotions is a sign of courage and strength."
+    },
+    {
+      "id": "section9",
+      "foreign_key": "module_2_prepare",
+      "title": "Accepting negative emotions",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Accepting negative emotions"
+        },
+        "text": {
+          "eng": "Negative emotions are just as normal as positive emotions! Some parents might feel disrespected when their children display negative emotions. This does not mean that parents are losing control or authority over their child. Parents should encourage children to be aware of their emotions by helping them to name emotions, and to talk about how they are experiencing their emotions as this will help them to regulate their emotions."
+        }
+      },
+      "text": "Negative emotions are just as normal as positive emotions! Some parents might feel disrespected when their children display negative emotions. This does not mean that parents are losing control or authority over their child. Parents should encourage children to be aware of their emotions by helping them to name emotions, and to talk about how they are experiencing their emotions as this will help them to regulate their emotions."
+    },
+    {
+      "id": "section10",
+      "foreign_key": "module_2_chat",
+      "title": "1️⃣My child did not want to share their feelings",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "1️⃣My child did not want to share their feelings"
+        },
+        "text": {
+          "eng": "😣 Sharing emotions can be hard. It’s even harder when they are strong emotions!\n\n💚 Help your teen know that you are open and willing to listen when they are ready.\n\n👂 Remember, the most important part is just to listen to them."
+        }
+      },
+      "text": "😣 Sharing emotions can be hard. It’s even harder when they are strong emotions!\n\n💚 Help your teen know that you are open and willing to listen when they are ready.\n\n👂 Remember, the most important part is just to listen to them."
+    },
+    {
+      "id": "section11",
+      "foreign_key": "module_2_chat",
+      "title": "2️⃣ I felt uncomfortable talking about my feelings",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "2️⃣ I felt uncomfortable talking about my feelings"
+        },
+        "text": {
+          "eng": "▶️ Starting a new thing is always difficult at first. \n\n⏰ Give yourselves some time to get used to it, and keep giving a good example by noticing and sharing your emotions. \n\n💚 Over time, your teen will learn to do the same – and they will feel even more loved and cared for."
+        }
+      },
+      "text": "▶️ Starting a new thing is always difficult at first. \n\n⏰ Give yourselves some time to get used to it, and keep giving a good example by noticing and sharing your emotions. \n\n💚 Over time, your teen will learn to do the same – and they will feel even more loved and cared for."
+    },
+    {
+      "id": "section12",
+      "foreign_key": "module_2_chat",
+      "title": "3️⃣ I was afraid my child might think I am weak for sharing my own emotions.",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "3️⃣ I was afraid my child might think I am weak for sharing my own emotions."
+        },
+        "text": {
+          "eng": "💛 Sharing your emotions sets an important example for your teen - even more when sharing difficult emotions! \n\n🌷 It makes everyone in the family stronger, because it means you can understand and support each other better."
+        }
+      },
+      "text": "💛 Sharing your emotions sets an important example for your teen - even more when sharing difficult emotions! \n\n🌷 It makes everyone in the family stronger, because it means you can understand and support each other better."
+    },
+    {
+      "id": "section13",
+      "foreign_key": "module_2_chat",
+      "title": "4️⃣I was too stressed or angry to share my emotions, I prefer to be alone when I feel like that.",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "4️⃣I was too stressed or angry to share my emotions, I prefer to be alone when I feel like that."
+        },
+        "text": {
+          "eng": "💛 It’s okay not to want to share when your feelings are strong.\n\n🌱 When you feel calmer, find time to explain so that everyone can understand."
+        }
+      },
+      "text": "💛 It’s okay not to want to share when your feelings are strong.\n\n🌱 When you feel calmer, find time to explain so that everyone can understand."
+    },
+    {
+      "id": "section14",
+      "foreign_key": "module_3_prepare",
+      "title": "Keep focus on positive instead of negative behaviour",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keep focus on positive instead of negative behaviour"
+        },
+        "text": {
+          "eng": "Parents usually only notice the times when children do not follow instructions and miss the times when they do. Parents need to know what behaviour they want to see from their children and start describing that when giving instructions."
+        }
+      },
+      "text": "Parents usually only notice the times when children do not follow instructions and miss the times when they do. Parents need to know what behaviour they want to see from their children and start describing that when giving instructions."
+    },
+    {
+      "id": "section15",
+      "foreign_key": "module_3_prepare",
+      "title": "Giving positive instructions can be challenging at first",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Giving positive instructions can be challenging at first"
+        },
+        "text": {
+          "eng": "Learning how to give positive instructions can be challenging for parents at first. They are used to giving instructions in a negative way. Your job as a facilitator is to model how to give positive instructions. In this way, parents are encouraged to give clear, positive instructions."
+        }
+      },
+      "text": "Learning how to give positive instructions can be challenging for parents at first. They are used to giving instructions in a negative way. Your job as a facilitator is to model how to give positive instructions. In this way, parents are encouraged to give clear, positive instructions."
+    },
+    {
+      "id": "section16",
+      "foreign_key": "module_3_prepare",
+      "title": "Supporting children living with disabilities",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Supporting children living with disabilities"
+        },
+        "text": {
+          "eng": "Parents should support their children to be able to follow instructions by thinking about how to break them down into smaller pieces while still allowing their children the space to work independently. This will help children feel more confident while still being supported. They should also allow time and space for children to work things out before interfering."
+        }
+      },
+      "text": "Parents should support their children to be able to follow instructions by thinking about how to break them down into smaller pieces while still allowing their children the space to work independently. This will help children feel more confident while still being supported. They should also allow time and space for children to work things out before interfering."
+    },
+    {
+      "id": "section17",
+      "foreign_key": "module_3_prepare",
+      "title": "Praising can feel awkward at first",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Praising can feel awkward at first"
+        },
+        "text": {
+          "eng": "Many parents don’t have experience of praise or positive attention themselves. They can feel embarrassed or awkward about praising their children. But praising becomes easier with practice – and it is rewarded by the response that children provide to being praised."
+        }
+      },
+      "text": "Many parents don’t have experience of praise or positive attention themselves. They can feel embarrassed or awkward about praising their children. But praising becomes easier with practice – and it is rewarded by the response that children provide to being praised."
+    },
+    {
+      "id": "section18",
+      "foreign_key": "module_3_chat",
+      "title": "1️⃣My child did not follow my instructions, even when I used the tips.",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "1️⃣My child did not follow my instructions, even when I used the tips."
+        },
+        "text": {
+          "eng": "Children need time to learn to follow instructions. Be patient. Try again. Remember to praise them every time they follow an instruction."
+        }
+      },
+      "text": "Children need time to learn to follow instructions. Be patient. Try again. Remember to praise them every time they follow an instruction."
+    },
+    {
+      "id": "section19",
+      "foreign_key": "module_3_chat",
+      "title": "2️⃣I forgot to praise my child.",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "2️⃣I forgot to praise my child."
+        },
+        "text": {
+          "eng": "It can sometimes be hard to remember to praise our children. Next time you spend one-on-one time with your child, try and think of one thing you can praise them for. You can even say, “Thank you for spending time with me!”"
+        }
+      },
+      "text": "It can sometimes be hard to remember to praise our children. Next time you spend one-on-one time with your child, try and think of one thing you can praise them for. You can even say, “Thank you for spending time with me!”"
+    },
+    {
+      "id": "section20",
+      "foreign_key": "module_3_chat",
+      "title": "3️⃣I shouted at my child when they behaved negatively instead of giving them a positive instruction for what they should do.",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "3️⃣I shouted at my child when they behaved negatively instead of giving them a positive instruction for what they should do."
+        },
+        "text": {
+          "eng": "It’s difficult to give instructions in a calm way when we are still angry. Try to find a time when you are calm or to use a calming strategy like Take a Pause before you introduce a positive instruction."
+        }
+      },
+      "text": "It’s difficult to give instructions in a calm way when we are still angry. Try to find a time when you are calm or to use a calming strategy like Take a Pause before you introduce a positive instruction."
+    },
+    {
+      "id": "section21",
+      "foreign_key": "module_3_chat",
+      "title": "4️⃣It is hard to remember to use positive words when giving instructions.",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "4️⃣It is hard to remember to use positive words when giving instructions."
+        },
+        "text": {
+          "eng": "This is difficult to remember for everyone at first! Try to take a breath before giving an instruction. Also, remember to be gentle with yourself when you forget. It happens to everyone!"
+        }
+      },
+      "text": "This is difficult to remember for everyone at first! Try to take a breath before giving an instruction. Also, remember to be gentle with yourself when you forget. It happens to everyone!"
+    },
+    {
+      "id": "section22",
+      "foreign_key": "module_4_prepare",
+      "title": "Involving everyone in the household in rules and routines",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Involving everyone in the household in rules and routines"
+        },
+        "text": {
+          "eng": "While it’s important to involve the entire household in making household rules and routines, this can be difficult in some families where decisions are not made together. \n\nYou can explore how discussing different ideas for rules and routines with members of the family can have a positive impact on everyone’s well-being. Children will feel respected and listened to and teens are more likely to follow rules if they have been involved in creating them."
+        }
+      },
+      "text": "While it’s important to involve the entire household in making household rules and routines, this can be difficult in some families where decisions are not made together. \n\nYou can explore how discussing different ideas for rules and routines with members of the family can have a positive impact on everyone’s well-being. Children will feel respected and listened to and teens are more likely to follow rules if they have been involved in creating them."
+    },
+    {
+      "id": "section23",
+      "foreign_key": "module_4_prepare",
+      "title": "The importance of sleep and bedtime routines",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "The importance of sleep and bedtime routines"
+        },
+        "text": {
+          "eng": "Bedtime is one of the most important routines that parents can establish for their children. Children need enough sleep to grow and be healthy. A routine is a good way to help ensure that they get enough sleep. \n\nIt’s also important to stress that parents, too, need to get enough sleep. Sleep deprivation affects everyone’s behaviour! Bedtime routines last about 30 minutes and can involve washing, establishing a quiet and calm environment, singing, or reading to your child and then providing an affectionate goodnight. \n\nBedtime routines can even be helpful for teens. Less screen time and more relaxing activities help a teen get a good night of sleep. The same is true for parents and you!\n\nSome families may live in crowded or stressful environments, or have irregular routines because of shift work or money worries. But even small, predictable bedtime moments can help children feel safe and secure."
+        }
+      },
+      "text": "Bedtime is one of the most important routines that parents can establish for their children. Children need enough sleep to grow and be healthy. A routine is a good way to help ensure that they get enough sleep. \n\nIt’s also important to stress that parents, too, need to get enough sleep. Sleep deprivation affects everyone’s behaviour! Bedtime routines last about 30 minutes and can involve washing, establishing a quiet and calm environment, singing, or reading to your child and then providing an affectionate goodnight. \n\nBedtime routines can even be helpful for teens. Less screen time and more relaxing activities help a teen get a good night of sleep. The same is true for parents and you!\n\nSome families may live in crowded or stressful environments, or have irregular routines because of shift work or money worries. But even small, predictable bedtime moments can help children feel safe and secure."
+    },
+    {
+      "id": "section24",
+      "foreign_key": "module_4_prepare",
+      "title": "Gender",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Gender"
+        },
+        "text": {
+          "eng": "In some families the rules for boys and girls are different. This is often because of expectations or traditional norms relating to the different roles that boys and girls can play. This is something that could be explored further to see if the different rules are really necessary or are limiting boys or girls. Parents may need support thinking about how this may affect their children."
+        }
+      },
+      "text": "In some families the rules for boys and girls are different. This is often because of expectations or traditional norms relating to the different roles that boys and girls can play. This is something that could be explored further to see if the different rules are really necessary or are limiting boys or girls. Parents may need support thinking about how this may affect their children."
+    },
+    {
+      "id": "section25",
+      "foreign_key": "module_4_chat",
+      "title": "1️⃣We were not able to stick to the rule",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "1️⃣We were not able to stick to the rule"
+        },
+        "text": {
+          "eng": "Make sure to have a rule that can be kept easily. For example, try having one meal together every week instead of every night."
+        }
+      },
+      "text": "Make sure to have a rule that can be kept easily. For example, try having one meal together every week instead of every night."
+    },
+    {
+      "id": "section26",
+      "foreign_key": "module_4_chat",
+      "title": "2️⃣My child and I could not agree on a rule",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "2️⃣My child and I could not agree on a rule"
+        },
+        "text": {
+          "eng": "📖 When creating rules, it is important to think about the age & ability of each teen so you can come up with realistic routines for Your Teen.\n\n⏰ This is most important for bedtime, the time to come home, and household chores.\n\n💡 Try to agree on a small and meaningful incentive that can motivate Your Teen to follow the rule. Consider options like watching a movie or playing a video game. \n\nWhat other ideas come to mind?"
+        }
+      },
+      "text": "📖 When creating rules, it is important to think about the age & ability of each teen so you can come up with realistic routines for Your Teen.\n\n⏰ This is most important for bedtime, the time to come home, and household chores.\n\n💡 Try to agree on a small and meaningful incentive that can motivate Your Teen to follow the rule. Consider options like watching a movie or playing a video game. \n\nWhat other ideas come to mind?"
+    },
+    {
+      "id": "section27",
+      "foreign_key": "module_4_chat",
+      "title": "3️⃣I felt uncomfortable, because I feel parents should be the one establishing the rule not my child",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "3️⃣I felt uncomfortable, because I feel parents should be the one establishing the rule not my child"
+        },
+        "text": {
+          "eng": "🌷 When we create rules together with our children, we build trust and an open relationship with them. \n\n🔑 The rules we set will be more realistic and your child will be more willing and able to follow the rules.\n\n💡Think about the valuable lessons you’ll be teaching your child, such as working together and taking initiative. Try to start with an easy and small rule."
+        }
+      },
+      "text": "🌷 When we create rules together with our children, we build trust and an open relationship with them. \n\n🔑 The rules we set will be more realistic and your child will be more willing and able to follow the rules.\n\n💡Think about the valuable lessons you’ll be teaching your child, such as working together and taking initiative. Try to start with an easy and small rule."
+    },
+    {
+      "id": "section28",
+      "foreign_key": "module_4_chat",
+      "title": "4️⃣Another caregiver at home didn’t agree with the rule",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "4️⃣Another caregiver at home didn’t agree with the rule"
+        }
+      }
+    },
+    {
+      "id": "section29",
+      "foreign_key": "module_6_prepare",
+      "title": "Last module blues",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Last module blues"
+        },
+        "text": {
+          "eng": "The last module of the programme can be emotionally challenging for parents, who may have developed relationships with each other. Many parents will also have come to depend on the support that they get from each other – especially for those who have a lot of challenges at home. It’s important to stress to parents that they can continue to support each other after the programme ends, and with someone taking over the administration of the chat, they can continue to go to the same space and meet the same people for that support."
+        }
+      },
+      "text": "The last module of the programme can be emotionally challenging for parents, who may have developed relationships with each other. Many parents will also have come to depend on the support that they get from each other – especially for those who have a lot of challenges at home. It’s important to stress to parents that they can continue to support each other after the programme ends, and with someone taking over the administration of the chat, they can continue to go to the same space and meet the same people for that support."
+    },
+    {
+      "id": "section30",
+      "foreign_key": "module_6_chat",
+      "title": "Possible answers from parents:",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Possible answers from parents:"
+        },
+        "text": {
+          "eng": "We can continue to stay in touch.\nWe can continue to chat weekly.\nWe can keep practicing the Building Blocks we have learnt.\nWe can learn what family and parenting services are available in our community."
+        }
+      },
+      "text": "We can continue to stay in touch.\nWe can continue to chat weekly.\nWe can keep practicing the Building Blocks we have learnt.\nWe can learn what family and parenting services are available in our community."
+    }
+  ],
   "_xlsxPath": "data/modules_CW.xlsx",
   "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

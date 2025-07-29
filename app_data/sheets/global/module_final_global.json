@@ -5,8 +5,20 @@
   "rows": [
     {
       "type": "declare_global_constant",
-      "name": "module_final_title",
-      "value": "You've reached the end of this session. What would you like to do next?",
+      "name": "module_final_title"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "support_button",
+      "value": "Frequently Asked Questions",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "go_to_start",
+      "value": "View Module from Start",
       "_translations": {
         "value": {}
       }
@@ -123,8 +135,7 @@
       "value": "Review Report",
       "_translations": {
         "value": {}
-      },
-      "exclude_from_translation": true
+      }
     },
     {
       "type": "declare_global_constant",
@@ -132,11 +143,13 @@
       "value": "lottie/checkmark_blue.json",
       "_translations": {
         "value": {}
-      }
+      },
+      "exclude_from_translation": true
     },
     {
       "type": "declare_global_constant",
-      "name": "no_report_image"
+      "name": "no_report_image",
+      "exclude_from_translation": true
     },
     {
       "type": "declare_global_constant",
@@ -144,31 +157,30 @@
       "value": "You successfully completed this session!",
       "_translations": {
         "value": {}
-      },
-      "exclude_from_translation": true
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "go_to_start",
-      "value": "View Module from Start",
-      "_translations": {
-        "value": {}
-      },
-      "exclude_from_translation": true
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "support_button",
-      "value": "Frequently Asked Questions",
-      "_translations": {
-        "value": {}
-      },
-      "exclude_from_translation": true
+      }
     },
     {
       "type": "declare_global_constant",
       "name": "mark_delivered_report",
       "value": "Mark Session as Delivered and add report",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_sharede_lottie",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_shared_image",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_shared_text",
+      "value": "Please share your message with the parent group before marking this module as delivered.",
       "_translations": {
         "value": {}
       }

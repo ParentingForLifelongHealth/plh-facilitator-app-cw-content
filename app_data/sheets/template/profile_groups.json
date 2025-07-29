@@ -514,6 +514,31 @@
       }
     },
     {
+      "name": "no_of_parent_groups",
+      "value": "+@fields.no_of_parent_groups",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "no_of_parent_groups",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "+@fields.no_of_parent_groups",
+            "matchedExpression": "@fields.no_of_parent_groups",
+            "type": "fields",
+            "fieldName": "no_of_parent_groups"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.no_of_parent_groups": [
+          "value"
+        ]
+      }
+    },
+    {
       "type": "display_group",
       "parameter_list": {
         "sticky": "bottom"
@@ -523,31 +548,6 @@
         "padding: 12px 24px"
       ],
       "rows": [
-        {
-          "name": "no_of_parent_groups",
-          "value": "+@fields.no_of_parent_groups",
-          "_translations": {
-            "value": {}
-          },
-          "exclude_from_translation": true,
-          "type": "set_variable",
-          "_nested_name": "display_group_15.no_of_parent_groups",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "+@fields.no_of_parent_groups",
-                "matchedExpression": "@fields.no_of_parent_groups",
-                "type": "fields",
-                "fieldName": "no_of_parent_groups"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@fields.no_of_parent_groups": [
-              "value"
-            ]
-          }
-        },
         {
           "type": "button",
           "name": "add_group",

@@ -191,6 +191,20 @@
               "action_list": [
                 {
                   "trigger": "click",
+                  "action_id": "add_data",
+                  "args": [],
+                  "_raw": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                  "_cleaned": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                  "params": {
+                    "_list_id": "message_log",
+                    "group_id": "@fields.current_group_no",
+                    "module": "@fields.current_module_no",
+                    "message": "@local.title",
+                    "date": "@calc(now())"
+                  }
+                },
+                {
+                  "trigger": "click",
                   "action_id": "share",
                   "args": [],
                   "_raw": "click | share | text: @local.message_text",
@@ -208,6 +222,94 @@
               "_dynamicFields": {
                 "action_list": {
                   "0": {
+                    "_raw": [
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@fields.current_group_no",
+                        "type": "fields",
+                        "fieldName": "current_group_no"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@fields.current_module_no",
+                        "type": "fields",
+                        "fieldName": "current_module_no"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@local.title",
+                        "type": "local",
+                        "fieldName": "title"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@calc(now())",
+                        "type": "calc",
+                        "fieldName": "now()"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@fields.current_group_no",
+                        "type": "fields",
+                        "fieldName": "current_group_no"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@fields.current_module_no",
+                        "type": "fields",
+                        "fieldName": "current_module_no"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@local.title",
+                        "type": "local",
+                        "fieldName": "title"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@calc(now())",
+                        "type": "calc",
+                        "fieldName": "now()"
+                      }
+                    ],
+                    "params": {
+                      "group_id": [
+                        {
+                          "fullExpression": "@fields.current_group_no",
+                          "matchedExpression": "@fields.current_group_no",
+                          "type": "fields",
+                          "fieldName": "current_group_no"
+                        }
+                      ],
+                      "module": [
+                        {
+                          "fullExpression": "@fields.current_module_no",
+                          "matchedExpression": "@fields.current_module_no",
+                          "type": "fields",
+                          "fieldName": "current_module_no"
+                        }
+                      ],
+                      "message": [
+                        {
+                          "fullExpression": "@local.title",
+                          "matchedExpression": "@local.title",
+                          "type": "local",
+                          "fieldName": "title"
+                        }
+                      ],
+                      "date": [
+                        {
+                          "fullExpression": "@calc(now())",
+                          "matchedExpression": "@calc(now())",
+                          "type": "calc",
+                          "fieldName": "now()"
+                        }
+                      ]
+                    }
+                  },
+                  "1": {
                     "_raw": [
                       {
                         "fullExpression": "click | share | text: @local.message_text",
@@ -246,10 +348,30 @@
                 ]
               },
               "_dynamicDependencies": {
-                "@local.message_text": [
+                "@fields.current_group_no": [
                   "action_list.0._raw",
                   "action_list.0._cleaned",
-                  "action_list.0.params.text"
+                  "action_list.0.params.group_id"
+                ],
+                "@fields.current_module_no": [
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "action_list.0.params.module"
+                ],
+                "@local.title": [
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "action_list.0.params.message"
+                ],
+                "@calc(now())": [
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "action_list.0.params.date"
+                ],
+                "@local.message_text": [
+                  "action_list.1._raw",
+                  "action_list.1._cleaned",
+                  "action_list.1.params.text"
                 ],
                 "@local.asset": [
                   "condition"
@@ -264,6 +386,20 @@
                 "value": {}
               },
               "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "add_data",
+                  "args": [],
+                  "_raw": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                  "_cleaned": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                  "params": {
+                    "_list_id": "message_log",
+                    "group_id": "@fields.current_group_no",
+                    "module": "@fields.current_module_no",
+                    "message": "@local.title",
+                    "date": "@calc(now())"
+                  }
+                },
                 {
                   "trigger": "click",
                   "action_id": "share",
@@ -284,6 +420,94 @@
               "_dynamicFields": {
                 "action_list": {
                   "0": {
+                    "_raw": [
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@fields.current_group_no",
+                        "type": "fields",
+                        "fieldName": "current_group_no"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@fields.current_module_no",
+                        "type": "fields",
+                        "fieldName": "current_module_no"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@local.title",
+                        "type": "local",
+                        "fieldName": "title"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@calc(now())",
+                        "type": "calc",
+                        "fieldName": "now()"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@fields.current_group_no",
+                        "type": "fields",
+                        "fieldName": "current_group_no"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@fields.current_module_no",
+                        "type": "fields",
+                        "fieldName": "current_module_no"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@local.title",
+                        "type": "local",
+                        "fieldName": "title"
+                      },
+                      {
+                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                        "matchedExpression": "@calc(now())",
+                        "type": "calc",
+                        "fieldName": "now()"
+                      }
+                    ],
+                    "params": {
+                      "group_id": [
+                        {
+                          "fullExpression": "@fields.current_group_no",
+                          "matchedExpression": "@fields.current_group_no",
+                          "type": "fields",
+                          "fieldName": "current_group_no"
+                        }
+                      ],
+                      "module": [
+                        {
+                          "fullExpression": "@fields.current_module_no",
+                          "matchedExpression": "@fields.current_module_no",
+                          "type": "fields",
+                          "fieldName": "current_module_no"
+                        }
+                      ],
+                      "message": [
+                        {
+                          "fullExpression": "@local.title",
+                          "matchedExpression": "@local.title",
+                          "type": "local",
+                          "fieldName": "title"
+                        }
+                      ],
+                      "date": [
+                        {
+                          "fullExpression": "@calc(now())",
+                          "matchedExpression": "@calc(now())",
+                          "type": "calc",
+                          "fieldName": "now()"
+                        }
+                      ]
+                    }
+                  },
+                  "1": {
                     "_raw": [
                       {
                         "fullExpression": "click | share |\ntext: @local.message_text,\nfile: @local.asset",
@@ -342,15 +566,35 @@
                 ]
               },
               "_dynamicDependencies": {
-                "@local.message_text": [
+                "@fields.current_group_no": [
                   "action_list.0._raw",
                   "action_list.0._cleaned",
-                  "action_list.0.params.text"
+                  "action_list.0.params.group_id"
+                ],
+                "@fields.current_module_no": [
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "action_list.0.params.module"
+                ],
+                "@local.title": [
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "action_list.0.params.message"
+                ],
+                "@calc(now())": [
+                  "action_list.0._raw",
+                  "action_list.0._cleaned",
+                  "action_list.0.params.date"
+                ],
+                "@local.message_text": [
+                  "action_list.1._raw",
+                  "action_list.1._cleaned",
+                  "action_list.1.params.text"
                 ],
                 "@local.asset": [
-                  "action_list.0._raw",
-                  "action_list.0._cleaned",
-                  "action_list.0.params.file",
+                  "action_list.1._raw",
+                  "action_list.1._cleaned",
+                  "action_list.1.params.file",
                   "condition"
                 ]
               }

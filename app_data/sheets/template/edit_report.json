@@ -118,6 +118,27 @@
                               "_nested_name"
                             ]
                           }
+                        },
+                        {
+                          "name": "confirm_exit",
+                          "value": true,
+                          "type": "set_variable",
+                          "_nested_name": "items_4.display_group_1_@item.id.dg_top.display_group_1.header.confirm_exit",
+                          "_dynamicFields": {
+                            "_nested_name": [
+                              {
+                                "fullExpression": "items_4.display_group_1_@item.id.dg_top.display_group_1.header.confirm_exit",
+                                "matchedExpression": "@item.id.dg_top.display_group_1.header.confirm_exit",
+                                "type": "item",
+                                "fieldName": "id"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.id.dg_top.display_group_1.header.confirm_exit": [
+                              "_nested_name"
+                            ]
+                          }
                         }
                       ],
                       "_nested_name": "items_4.display_group_1_@item.id.dg_top.display_group_1.header",
