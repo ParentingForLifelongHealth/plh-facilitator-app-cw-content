@@ -6,26 +6,22 @@
   "flow_subtype": "app_config_language_list",
   "rows": [
     {
-      "id": "gb_en",
-      "country_code": "gb",
-      "country_label": "United Kingdom",
-      "country_icon": "images/flags/gb.svg",
-      "language_code": "en",
-      "language_label": "English",
-      "name": "gb_en",
-      "text": "English",
-      "image": "images/flags/gb.svg"
+      "id": "cw_pap",
+      "country_code": "cw",
+      "country_label": "Curaçao",
+      "language_code": "pap",
+      "language_label": "Papiamento",
+      "name": "cw_pap",
+      "text": "Papiamento"
     },
     {
-      "id": "nl_ms",
-      "country_code": "nl",
-      "country_label": "Dutch",
-      "country_icon": "images/flags/nl.svg",
-      "language_code": "ms",
-      "language_label": "Dutch",
-      "name": "nl_ms",
-      "text": "Dutch",
-      "image": "images/flags/nl.svg"
+      "id": "cw_en",
+      "country_code": "cw",
+      "country_label": "Curaçao",
+      "language_code": "en",
+      "language_label": "English",
+      "name": "cw_en",
+      "text": "English"
     }
   ],
   "_xlsxPath": "data/deployment_data_cw.xlsx",
