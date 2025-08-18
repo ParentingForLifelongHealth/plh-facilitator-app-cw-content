@@ -5,36 +5,33 @@
   "data_list_name": "modules",
   "rows": [
     {
-      "id": "individual_consultation",
-      "title": "Individual consultations",
-      "_translations": {
-        "title": {},
-        "description": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Individual consultations"
-        },
-        "description": {
-          "eng": "Introducing the programme to parents"
-        }
-      },
-      "description": "Introducing the programme to parents"
-    },
-    {
-      "id": "module_1_prepare",
-      "title": "One-on-one time: Prepare",
+      "id": "module_1_lesson",
+      "status": "released",
+      "tag_list": [
+        "mixed_closing",
+        "mixed_remote"
+      ],
+      "page_count": 4,
+      "completed": false,
+      "title": "One-on-one time: Watch and try",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "One-on-one time: Prepare"
+          "eng": "One-on-one time: Watch and try"
         }
       }
     },
     {
-      "id": "module_1_lesson",
+      "id": "module_1_lesson_yc",
+      "status": "released",
+      "tag_list": [
+        "yc_remote",
+        "yc_closing"
+      ],
+      "page_count": 3,
+      "completed": false,
       "title": "One-on-one time: Watch  and try",
       "_translations": {
         "title": {}
@@ -46,7 +43,89 @@
       }
     },
     {
+      "id": "module_1_lesson_teen",
+      "status": "released",
+      "tag_list": [
+        "teen_remote",
+        "teen_closing"
+      ],
+      "page_count": 3,
+      "completed": false,
+      "title": "One-on-one time: Watch  and try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time: Watch  and try"
+        }
+      }
+    },
+    {
+      "id": "module_1_in_person",
+      "status": "released",
+      "tag_list": [
+        "mixed_welcome",
+        "mixed_closing",
+        "mixed_welcome_closing"
+      ],
+      "page_count": 7,
+      "completed": false,
+      "title": "One-on-one time: In-person session",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time: In-person session"
+        }
+      }
+    },
+    {
+      "id": "module_1_in_person_yc",
+      "status": "released",
+      "tag_list": [
+        "yc_welcome",
+        "yc_closing",
+        "yc_welcome_closing"
+      ],
+      "page_count": 7,
+      "completed": false,
+      "title": "One-on-one time: In-person session",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time: In-person session"
+        }
+      }
+    },
+    {
+      "id": "module_1_in_person_teen",
+      "status": "released",
+      "tag_list": [
+        "teen_welcome",
+        "teen_closing",
+        "teen_welcome_closing"
+      ],
+      "page_count": 7,
+      "completed": false,
+      "title": "One-on-one time: In-person session",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time: In-person session"
+        }
+      }
+    },
+    {
       "id": "module_1_reminder_1",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
       "title": "One-on-one time: Remember to try",
       "_translations": {
         "title": {}
@@ -59,6 +138,9 @@
     },
     {
       "id": "module_1_reminder_2",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
       "title": "One-on-one time: Chat coming soon",
       "_translations": {
         "title": {}
@@ -71,6 +153,17 @@
     },
     {
       "id": "module_1_chat",
+      "status": "released",
+      "tag_list": [
+        "yc_closing",
+        "yc_remote",
+        "teen_closing",
+        "teen_remote",
+        "mixed_closing",
+        "mixed_remote"
+      ],
+      "page_count": 8,
+      "completed": false,
       "title": "One-on-one time: Let’s connect",
       "_translations": {
         "title": {}
@@ -82,19 +175,81 @@
       }
     },
     {
-      "id": "module_2_prepare",
-      "title": "Talking about feelings: Prepare",
+      "id": "module_1_chat_inperson",
+      "status": "released",
+      "tag_list": [
+        "yc_welcome",
+        "yc_welcome_closing",
+        "teen_welcome",
+        "teen_welcome_closing",
+        "mixed_welcome",
+        "mixed_welcome_closing"
+      ],
+      "page_count": 8,
+      "completed": false,
+      "title": "One-on-one time: Let’s connect",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Talking about feelings: Prepare"
+          "eng": "One-on-one time: Let’s connect"
         }
       }
     },
     {
       "id": "module_2_lesson",
+      "status": "released",
+      "tag_list": [
+        "mixed_welcome",
+        "mixed_closing",
+        "mixed_welcome_closing",
+        "mixed_remote"
+      ],
+      "page_count": 4,
+      "completed": false,
+      "title": "Talking about feelings: Watch & try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about feelings: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_2_lesson_yc",
+      "status": "released",
+      "tag_list": [
+        "yc_welcome",
+        "yc_closing",
+        "yc_welcome_closing",
+        "yc_remote"
+      ],
+      "page_count": 3,
+      "completed": false,
+      "title": "Talking about feelings: Watch & try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about feelings: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_2_lesson_teen",
+      "status": "released",
+      "tag_list": [
+        "teen_welcome",
+        "teen_closing",
+        "teen_welcome_closing",
+        "teen_remote"
+      ],
+      "page_count": 3,
+      "completed": false,
       "title": "Talking about feelings: Watch & try",
       "_translations": {
         "title": {}
@@ -107,6 +262,9 @@
     },
     {
       "id": "module_2_reminder_1",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
       "title": "Talking about feelings: Remember to try",
       "_translations": {
         "title": {}
@@ -119,6 +277,9 @@
     },
     {
       "id": "module_2_reminder_2",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
       "title": "Talking about feelings: Chat coming soon",
       "_translations": {
         "title": {}
@@ -131,6 +292,9 @@
     },
     {
       "id": "module_2_chat",
+      "status": "released",
+      "page_count": 6,
+      "completed": false,
       "title": "Talking about feelings: Let’s connect",
       "_translations": {
         "title": {}
@@ -142,19 +306,58 @@
       }
     },
     {
-      "id": "module_3_prepare",
-      "title": "Keeping it positive: Prepare",
+      "id": "module_3_lesson",
+      "status": "released",
+      "tag_list": [
+        "mixed_welcome",
+        "mixed_closing",
+        "mixed_welcome_closing",
+        "mixed_remote"
+      ],
+      "page_count": 4,
+      "completed": false,
+      "title": "Keeping it positive: Watch and try",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Keeping it positive: Prepare"
+          "eng": "Keeping it positive: Watch and try"
         }
       }
     },
     {
-      "id": "module_3_lesson",
+      "id": "module_3_lesson_yc",
+      "status": "released",
+      "tag_list": [
+        "yc_welcome",
+        "yc_closing",
+        "yc_welcome_closing",
+        "yc_remote"
+      ],
+      "page_count": 3,
+      "completed": false,
+      "title": "Keeping it positive: Watch and try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keeping it positive: Watch and try"
+        }
+      }
+    },
+    {
+      "id": "module_3_lesson_teen",
+      "status": "released",
+      "tag_list": [
+        "teen_welcome",
+        "teen_closing",
+        "teen_welcome_closing",
+        "teen_remote"
+      ],
+      "page_count": 3,
+      "completed": false,
       "title": "Keeping it positive: Watch and try",
       "_translations": {
         "title": {}
@@ -167,6 +370,9 @@
     },
     {
       "id": "module_3_reminder_1",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
       "title": "Keeping it positive: Remember to try",
       "_translations": {
         "title": {}
@@ -179,6 +385,9 @@
     },
     {
       "id": "module_3_reminder_2",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
       "title": "Keeping it positive: Chat coming soon",
       "_translations": {
         "title": {}
@@ -191,6 +400,9 @@
     },
     {
       "id": "module_3_chat",
+      "status": "released",
+      "page_count": 6,
+      "completed": false,
       "title": "Keeping it positive: Let’s connect",
       "_translations": {
         "title": {}
@@ -202,19 +414,58 @@
       }
     },
     {
-      "id": "module_4_prepare",
-      "title": "Rules & routines: Prepare",
+      "id": "module_4_lesson",
+      "status": "released",
+      "tag_list": [
+        "mixed_welcome",
+        "mixed_closing",
+        "mixed_welcome_closing",
+        "mixed_remote"
+      ],
+      "page_count": 4,
+      "completed": false,
+      "title": "Rules & routines: Watch & try",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Rules & routines: Prepare"
+          "eng": "Rules & routines: Watch & try"
         }
       }
     },
     {
-      "id": "module_4_lesson",
+      "id": "module_4_lesson_yc",
+      "status": "released",
+      "tag_list": [
+        "yc_welcome",
+        "yc_closing",
+        "yc_welcome_closing",
+        "yc_remote"
+      ],
+      "page_count": 4,
+      "completed": false,
+      "title": "Rules & routines: Watch & try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Rules & routines: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_4_lesson_teen",
+      "status": "released",
+      "tag_list": [
+        "teen_welcome",
+        "teen_closing",
+        "teen_welcome_closing",
+        "teen_remote"
+      ],
+      "page_count": 3,
+      "completed": false,
       "title": "Rules & routines: Watch & try",
       "_translations": {
         "title": {}
@@ -227,6 +478,9 @@
     },
     {
       "id": "module_4_reminder_1",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
       "title": "Rules & routines: Remember to try",
       "_translations": {
         "title": {}
@@ -239,18 +493,24 @@
     },
     {
       "id": "module_4_reminder_2",
-      "title": "Keeping it positive: Chat coming soon",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
+      "title": "Rules and routines: Chat coming soon",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Keeping it positive: Chat coming soon"
+          "eng": "Rules and routines: Chat coming soon"
         }
       }
     },
     {
       "id": "module_4_chat",
+      "status": "released",
+      "page_count": 6,
+      "completed": false,
       "title": "Rules & routines: Let’s connect",
       "_translations": {
         "title": {}
@@ -262,19 +522,118 @@
       }
     },
     {
-      "id": "module_6_prepare",
-      "title": "Problem solving & closing: Prepare",
+      "id": "module_5_lesson",
+      "status": "released",
+      "tag_list": [
+        "mixed_welcome",
+        "mixed_closing",
+        "mixed_welcome_closing",
+        "mixed_remote"
+      ],
+      "page_count": 4,
+      "completed": false,
+      "title": "Positive Discipline: Watch & try",
       "_translations": {
         "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Problem solving & closing: Prepare"
+          "eng": "Positive Discipline: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_5_lesson_yc",
+      "status": "released",
+      "tag_list": [
+        "yc_welcome",
+        "yc_closing",
+        "yc_welcome_closing",
+        "yc_remote"
+      ],
+      "page_count": 4,
+      "completed": false,
+      "title": "Positive Discipline: Watch & try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Positive Discipline: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_5_lesson_teen",
+      "status": "released",
+      "tag_list": [
+        "teen_welcome",
+        "teen_closing",
+        "teen_welcome_closing",
+        "teen_remote"
+      ],
+      "page_count": 3,
+      "completed": false,
+      "title": "Positive Discipline: Watch & try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Positive Discipline: Watch & try"
+        }
+      }
+    },
+    {
+      "id": "module_5_reminder_1",
+      "status": "released",
+      "page_count": 3,
+      "completed": false,
+      "title": "Positive discipline: Remember to try",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Positive discipline: Remember to try"
+        }
+      }
+    },
+    {
+      "id": "module_5_reminder_2",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
+      "title": "Positive discipline: Chat coming soon",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Positive discipline: Chat coming soon"
+        }
+      }
+    },
+    {
+      "id": "module_5_chat",
+      "status": "released",
+      "page_count": 6,
+      "completed": false,
+      "title": "Positive Discipline: Let’s connect",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Positive Discipline: Let’s connect"
         }
       }
     },
     {
       "id": "module_6_lesson",
+      "status": "released",
+      "page_count": 4,
+      "completed": false,
       "title": "Problem solving & closing: Watch & try",
       "_translations": {
         "title": {}
@@ -287,6 +646,9 @@
     },
     {
       "id": "module_6_reminder_1",
+      "status": "released",
+      "page_count": 3,
+      "completed": false,
       "title": "Problem solving & closing: Remember to try",
       "_translations": {
         "title": {}
@@ -299,6 +661,9 @@
     },
     {
       "id": "module_6_reminder_2",
+      "status": "released",
+      "page_count": 1,
+      "completed": false,
       "title": "Problem solving & closing: Chat coming soon",
       "_translations": {
         "title": {}
@@ -311,6 +676,9 @@
     },
     {
       "id": "module_6_chat",
+      "status": "released",
+      "page_count": 7,
+      "completed": false,
       "title": "Problem solving & closing: Let’s connect",
       "_translations": {
         "title": {}
@@ -323,5 +691,13 @@
     }
   ],
   "_xlsxPath": "data/modules_CW.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+  "_metadata": {
+    "page_count": {
+      "type": "number"
+    },
+    "completed": {
+      "type": "boolean"
+    }
+  }
 }

@@ -3,7 +3,568 @@
   "flow_name": "sub_items",
   "status": "released",
   "data_list_name": "sub_items",
-  "rows": [],
+  "rows": [
+    {
+      "id": "sub_item0",
+      "foreign_key": "module_1_lesson"
+    },
+    {
+      "id": "sub_item1",
+      "foreign_key": "module_1_lesson"
+    },
+    {
+      "id": "sub_item2",
+      "foreign_key": "module_1_lesson"
+    },
+    {
+      "id": "sub_item3",
+      "foreign_key": "module_1_lesson"
+    },
+    {
+      "id": "sub_item4",
+      "foreign_key": "module_1_lesson_yc"
+    },
+    {
+      "id": "sub_item5",
+      "foreign_key": "module_1_lesson_yc"
+    },
+    {
+      "id": "sub_item6",
+      "foreign_key": "module_1_lesson_yc"
+    },
+    {
+      "id": "sub_item7",
+      "foreign_key": "module_1_lesson_teen"
+    },
+    {
+      "id": "sub_item8",
+      "foreign_key": "module_1_lesson_teen"
+    },
+    {
+      "id": "sub_item9",
+      "foreign_key": "module_1_lesson_teen"
+    },
+    {
+      "id": "sub_item10",
+      "foreign_key": "module_1_in_person"
+    },
+    {
+      "id": "sub_item11",
+      "foreign_key": "module_1_in_person"
+    },
+    {
+      "id": "sub_item12",
+      "foreign_key": "module_1_in_person"
+    },
+    {
+      "id": "sub_item13",
+      "foreign_key": "module_1_in_person"
+    },
+    {
+      "id": "sub_item14",
+      "foreign_key": "module_1_in_person"
+    },
+    {
+      "id": "sub_item15",
+      "foreign_key": "module_1_in_person"
+    },
+    {
+      "id": "sub_item16",
+      "foreign_key": "module_1_in_person"
+    },
+    {
+      "id": "sub_item17",
+      "foreign_key": "module_1_in_person_yc"
+    },
+    {
+      "id": "sub_item18",
+      "foreign_key": "module_1_in_person_yc"
+    },
+    {
+      "id": "sub_item19",
+      "foreign_key": "module_1_in_person_yc"
+    },
+    {
+      "id": "sub_item20",
+      "foreign_key": "module_1_in_person_yc"
+    },
+    {
+      "id": "sub_item21",
+      "foreign_key": "module_1_in_person_yc"
+    },
+    {
+      "id": "sub_item22",
+      "foreign_key": "module_1_in_person_yc"
+    },
+    {
+      "id": "sub_item23",
+      "foreign_key": "module_1_in_person_yc"
+    },
+    {
+      "id": "sub_item24",
+      "foreign_key": "module_1_in_person_teen"
+    },
+    {
+      "id": "sub_item25",
+      "foreign_key": "module_1_in_person_teen"
+    },
+    {
+      "id": "sub_item26",
+      "foreign_key": "module_1_in_person_teen"
+    },
+    {
+      "id": "sub_item27",
+      "foreign_key": "module_1_in_person_teen"
+    },
+    {
+      "id": "sub_item28",
+      "foreign_key": "module_1_in_person_teen"
+    },
+    {
+      "id": "sub_item29",
+      "foreign_key": "module_1_in_person_teen"
+    },
+    {
+      "id": "sub_item30",
+      "foreign_key": "module_1_in_person_teen"
+    },
+    {
+      "id": "sub_item31",
+      "foreign_key": "module_1_reminder_1"
+    },
+    {
+      "id": "sub_item32",
+      "foreign_key": "module_1_reminder_2"
+    },
+    {
+      "id": "sub_item33",
+      "foreign_key": "module_1_chat"
+    },
+    {
+      "id": "sub_item34",
+      "foreign_key": "module_1_chat"
+    },
+    {
+      "id": "sub_item35",
+      "foreign_key": "module_1_chat"
+    },
+    {
+      "id": "sub_item36",
+      "foreign_key": "module_1_chat"
+    },
+    {
+      "id": "sub_item37",
+      "foreign_key": "module_1_chat"
+    },
+    {
+      "id": "sub_item38",
+      "foreign_key": "module_1_chat"
+    },
+    {
+      "id": "sub_item39",
+      "foreign_key": "module_1_chat"
+    },
+    {
+      "id": "sub_item40",
+      "foreign_key": "module_1_chat"
+    },
+    {
+      "id": "sub_item41",
+      "foreign_key": "module_1_chat_inperson"
+    },
+    {
+      "id": "sub_item42",
+      "foreign_key": "module_1_chat_inperson"
+    },
+    {
+      "id": "sub_item43",
+      "foreign_key": "module_1_chat_inperson"
+    },
+    {
+      "id": "sub_item44",
+      "foreign_key": "module_1_chat_inperson"
+    },
+    {
+      "id": "sub_item45",
+      "foreign_key": "module_1_chat_inperson"
+    },
+    {
+      "id": "sub_item46",
+      "foreign_key": "module_1_chat_inperson"
+    },
+    {
+      "id": "sub_item47",
+      "foreign_key": "module_1_chat_inperson"
+    },
+    {
+      "id": "sub_item48",
+      "foreign_key": "module_1_chat_inperson"
+    },
+    {
+      "id": "sub_item49",
+      "foreign_key": "module_2_lesson"
+    },
+    {
+      "id": "sub_item50",
+      "foreign_key": "module_2_lesson"
+    },
+    {
+      "id": "sub_item51",
+      "foreign_key": "module_2_lesson"
+    },
+    {
+      "id": "sub_item52",
+      "foreign_key": "module_2_lesson"
+    },
+    {
+      "id": "sub_item53",
+      "foreign_key": "module_2_lesson_yc"
+    },
+    {
+      "id": "sub_item54",
+      "foreign_key": "module_2_lesson_yc"
+    },
+    {
+      "id": "sub_item55",
+      "foreign_key": "module_2_lesson_yc"
+    },
+    {
+      "id": "sub_item56",
+      "foreign_key": "module_2_lesson_teen"
+    },
+    {
+      "id": "sub_item57",
+      "foreign_key": "module_2_lesson_teen"
+    },
+    {
+      "id": "sub_item58",
+      "foreign_key": "module_2_lesson_teen"
+    },
+    {
+      "id": "sub_item59",
+      "foreign_key": "module_2_reminder_1"
+    },
+    {
+      "id": "sub_item60",
+      "foreign_key": "module_2_reminder_2"
+    },
+    {
+      "id": "sub_item61",
+      "foreign_key": "module_2_chat"
+    },
+    {
+      "id": "sub_item62",
+      "foreign_key": "module_2_chat"
+    },
+    {
+      "id": "sub_item63",
+      "foreign_key": "module_2_chat"
+    },
+    {
+      "id": "sub_item64",
+      "foreign_key": "module_2_chat"
+    },
+    {
+      "id": "sub_item65",
+      "foreign_key": "module_2_chat"
+    },
+    {
+      "id": "sub_item66",
+      "foreign_key": "module_2_chat"
+    },
+    {
+      "id": "sub_item67",
+      "foreign_key": "module_3_lesson"
+    },
+    {
+      "id": "sub_item68",
+      "foreign_key": "module_3_lesson"
+    },
+    {
+      "id": "sub_item69",
+      "foreign_key": "module_3_lesson"
+    },
+    {
+      "id": "sub_item70",
+      "foreign_key": "module_3_lesson"
+    },
+    {
+      "id": "sub_item71",
+      "foreign_key": "module_3_lesson_yc"
+    },
+    {
+      "id": "sub_item72",
+      "foreign_key": "module_3_lesson_yc"
+    },
+    {
+      "id": "sub_item73",
+      "foreign_key": "module_3_lesson_yc"
+    },
+    {
+      "id": "sub_item74",
+      "foreign_key": "module_3_lesson_teen"
+    },
+    {
+      "id": "sub_item75",
+      "foreign_key": "module_3_lesson_teen"
+    },
+    {
+      "id": "sub_item76",
+      "foreign_key": "module_3_lesson_teen"
+    },
+    {
+      "id": "sub_item77",
+      "foreign_key": "module_3_reminder_1"
+    },
+    {
+      "id": "sub_item78",
+      "foreign_key": "module_3_reminder_2"
+    },
+    {
+      "id": "sub_item79",
+      "foreign_key": "module_3_chat"
+    },
+    {
+      "id": "sub_item80",
+      "foreign_key": "module_3_chat"
+    },
+    {
+      "id": "sub_item81",
+      "foreign_key": "module_3_chat"
+    },
+    {
+      "id": "sub_item82",
+      "foreign_key": "module_3_chat"
+    },
+    {
+      "id": "sub_item83",
+      "foreign_key": "module_3_chat"
+    },
+    {
+      "id": "sub_item84",
+      "foreign_key": "module_3_chat"
+    },
+    {
+      "id": "sub_item85",
+      "foreign_key": "module_4_lesson"
+    },
+    {
+      "id": "sub_item86",
+      "foreign_key": "module_4_lesson"
+    },
+    {
+      "id": "sub_item87",
+      "foreign_key": "module_4_lesson"
+    },
+    {
+      "id": "sub_item88",
+      "foreign_key": "module_4_lesson"
+    },
+    {
+      "id": "sub_item89",
+      "foreign_key": "module_4_lesson_yc"
+    },
+    {
+      "id": "sub_item90",
+      "foreign_key": "module_4_lesson_yc"
+    },
+    {
+      "id": "sub_item91",
+      "foreign_key": "module_4_lesson_yc"
+    },
+    {
+      "id": "sub_item92",
+      "foreign_key": "module_4_lesson_yc"
+    },
+    {
+      "id": "sub_item93",
+      "foreign_key": "module_4_lesson_teen"
+    },
+    {
+      "id": "sub_item94",
+      "foreign_key": "module_4_lesson_teen"
+    },
+    {
+      "id": "sub_item95",
+      "foreign_key": "module_4_lesson_teen"
+    },
+    {
+      "id": "sub_item96",
+      "foreign_key": "module_4_reminder_1"
+    },
+    {
+      "id": "sub_item97",
+      "foreign_key": "module_4_reminder_2"
+    },
+    {
+      "id": "sub_item98",
+      "foreign_key": "module_4_chat"
+    },
+    {
+      "id": "sub_item99",
+      "foreign_key": "module_4_chat"
+    },
+    {
+      "id": "sub_item100",
+      "foreign_key": "module_4_chat"
+    },
+    {
+      "id": "sub_item101",
+      "foreign_key": "module_4_chat"
+    },
+    {
+      "id": "sub_item102",
+      "foreign_key": "module_4_chat"
+    },
+    {
+      "id": "sub_item103",
+      "foreign_key": "module_4_chat"
+    },
+    {
+      "id": "sub_item104",
+      "foreign_key": "module_5_lesson"
+    },
+    {
+      "id": "sub_item105",
+      "foreign_key": "module_5_lesson"
+    },
+    {
+      "id": "sub_item106",
+      "foreign_key": "module_5_lesson"
+    },
+    {
+      "id": "sub_item107",
+      "foreign_key": "module_5_lesson"
+    },
+    {
+      "id": "sub_item108",
+      "foreign_key": "module_5_lesson_yc"
+    },
+    {
+      "id": "sub_item109",
+      "foreign_key": "module_5_lesson_yc"
+    },
+    {
+      "id": "sub_item110",
+      "foreign_key": "module_5_lesson_yc"
+    },
+    {
+      "id": "sub_item111",
+      "foreign_key": "module_5_lesson_yc"
+    },
+    {
+      "id": "sub_item112",
+      "foreign_key": "module_5_lesson_teen"
+    },
+    {
+      "id": "sub_item113",
+      "foreign_key": "module_5_lesson_teen"
+    },
+    {
+      "id": "sub_item114",
+      "foreign_key": "module_5_lesson_teen"
+    },
+    {
+      "id": "sub_item115",
+      "foreign_key": "module_5_reminder_1"
+    },
+    {
+      "id": "sub_item116",
+      "foreign_key": "module_5_reminder_1"
+    },
+    {
+      "id": "sub_item117",
+      "foreign_key": "module_5_reminder_1"
+    },
+    {
+      "id": "sub_item118",
+      "foreign_key": "module_5_reminder_2"
+    },
+    {
+      "id": "sub_item119",
+      "foreign_key": "module_5_chat"
+    },
+    {
+      "id": "sub_item120",
+      "foreign_key": "module_5_chat"
+    },
+    {
+      "id": "sub_item121",
+      "foreign_key": "module_5_chat"
+    },
+    {
+      "id": "sub_item122",
+      "foreign_key": "module_5_chat"
+    },
+    {
+      "id": "sub_item123",
+      "foreign_key": "module_5_chat"
+    },
+    {
+      "id": "sub_item124",
+      "foreign_key": "module_5_chat"
+    },
+    {
+      "id": "sub_item125",
+      "foreign_key": "module_6_lesson"
+    },
+    {
+      "id": "sub_item126",
+      "foreign_key": "module_6_lesson"
+    },
+    {
+      "id": "sub_item127",
+      "foreign_key": "module_6_lesson"
+    },
+    {
+      "id": "sub_item128",
+      "foreign_key": "module_6_lesson"
+    },
+    {
+      "id": "sub_item129",
+      "foreign_key": "module_6_reminder_1"
+    },
+    {
+      "id": "sub_item130",
+      "foreign_key": "module_6_reminder_1"
+    },
+    {
+      "id": "sub_item131",
+      "foreign_key": "module_6_reminder_1"
+    },
+    {
+      "id": "sub_item132",
+      "foreign_key": "module_6_reminder_2"
+    },
+    {
+      "id": "sub_item133",
+      "foreign_key": "module_6_chat"
+    },
+    {
+      "id": "sub_item134",
+      "foreign_key": "module_6_chat"
+    },
+    {
+      "id": "sub_item135",
+      "foreign_key": "module_6_chat"
+    },
+    {
+      "id": "sub_item136",
+      "foreign_key": "module_6_chat"
+    },
+    {
+      "id": "sub_item137",
+      "foreign_key": "module_6_chat"
+    },
+    {
+      "id": "sub_item138",
+      "foreign_key": "module_6_chat"
+    },
+    {
+      "id": "sub_item139",
+      "foreign_key": "module_6_chat"
+    }
+  ],
   "_xlsxPath": "data/modules_CW.xlsx",
   "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

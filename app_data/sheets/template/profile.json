@@ -127,8 +127,8 @@
       "rows": [
         {
           "type": "button",
-          "name": "button_login",
-          "value": "@global.login",
+          "name": "button_account",
+          "value": "@global.account",
           "_translations": {
             "value": {}
           },
@@ -150,15 +150,14 @@
               "_cleaned": "click | go_to: profile_login"
             }
           ],
-          "condition": "!(@fields._auth_user_id)",
-          "_nested_name": "dg_account.button_login",
+          "_nested_name": "dg_account.button_account",
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "@global.login",
-                "matchedExpression": "@global.login",
+                "fullExpression": "@global.account",
+                "matchedExpression": "@global.account",
                 "type": "global",
-                "fieldName": "login"
+                "fieldName": "account"
               }
             ],
             "parameter_list": {
@@ -178,96 +177,10 @@
                   "fieldName": "next_icon_asset"
                 }
               ]
-            },
-            "condition": [
-              {
-                "fullExpression": "!(@fields._auth_user_id)",
-                "matchedExpression": "@fields._auth_user_id",
-                "type": "fields",
-                "fieldName": "_auth_user_id"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@global.login": [
-              "value"
-            ],
-            "@local.login_icon": [
-              "parameter_list.icon"
-            ],
-            "@local.next_icon_asset": [
-              "parameter_list.icon_secondary_asset"
-            ],
-            "@fields._auth_user_id": [
-              "condition"
-            ]
-          }
-        },
-        {
-          "type": "button",
-          "name": "button_logout",
-          "value": "@global.logout",
-          "_translations": {
-            "value": {}
-          },
-          "parameter_list": {
-            "variant": "card",
-            "icon": "@local.login_icon",
-            "icon_secondary_asset": "@local.next_icon_asset",
-            "style": "no-background",
-            "text_align": "left"
-          },
-          "action_list": [
-            {
-              "trigger": "click",
-              "action_id": "go_to",
-              "args": [
-                "profile_login"
-              ],
-              "_raw": "click | go_to: profile_login",
-              "_cleaned": "click | go_to: profile_login"
             }
-          ],
-          "condition": "!!(@fields._auth_user_id)",
-          "_nested_name": "dg_account.button_logout",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@global.logout",
-                "matchedExpression": "@global.logout",
-                "type": "global",
-                "fieldName": "logout"
-              }
-            ],
-            "parameter_list": {
-              "icon": [
-                {
-                  "fullExpression": "@local.login_icon",
-                  "matchedExpression": "@local.login_icon",
-                  "type": "local",
-                  "fieldName": "login_icon"
-                }
-              ],
-              "icon_secondary_asset": [
-                {
-                  "fullExpression": "@local.next_icon_asset",
-                  "matchedExpression": "@local.next_icon_asset",
-                  "type": "local",
-                  "fieldName": "next_icon_asset"
-                }
-              ]
-            },
-            "condition": [
-              {
-                "fullExpression": "!!(@fields._auth_user_id)",
-                "matchedExpression": "@fields._auth_user_id",
-                "type": "fields",
-                "fieldName": "_auth_user_id"
-              }
-            ]
           },
           "_dynamicDependencies": {
-            "@global.logout": [
+            "@global.account": [
               "value"
             ],
             "@local.login_icon": [
@@ -275,9 +188,6 @@
             ],
             "@local.next_icon_asset": [
               "parameter_list.icon_secondary_asset"
-            ],
-            "@fields._auth_user_id": [
-              "condition"
             ]
           }
         },

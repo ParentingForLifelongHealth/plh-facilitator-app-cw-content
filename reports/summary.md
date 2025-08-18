@@ -6,7 +6,7 @@
 | accordion | 1 |
 | accordion_section | 1 |
 | audio | 2 |
-| button | 85 |
+| button | 84 |
 | carousel | 2 |
 | combo_box | 4 |
 | data_items | 41 |
@@ -23,7 +23,7 @@
 | radio_button_grid | 8 |
 | round_button | 31 |
 | select_text | 1 |
-| set_variable | 553 |
+| set_variable | 552 |
 | simple_checkbox | 2 |
 | task_card | 6 |
 | task_progress_bar | 1 |
@@ -54,7 +54,7 @@
 | emit: set_language | 1 |
 | emit: uncompleted | 60 |
 | feedback | 13 |
-| go_to | 39 |
+| go_to | 37 |
 | nav | 1 |
 | nav_stack | 7 |
 | pop_up | 13 |
@@ -87,6 +87,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/backgrounds/library_bottom_left.svg | 2.3 |
 | images/backgrounds/library_top_right.svg | 0.3 |
 | images/backgrounds/report_edit.svg | 0.2 |
+| images/flags/gb.svg | 0.5 |
 | images/flags/mx.svg | 91.3 |
 | images/flags/my.svg | 1.4 |
 | images/flags/tz.svg | 0.5 |
@@ -119,7 +120,6 @@ Assets that have references within sheets but do not appear in app-data
 | --- | --- |
 | .png | 1 |
 | @data.pdf | 3 |
-| images/flags/nl.svg | 2 |
 | images/icons/feather.svg | 1 |
 | images/icons/magnify_glass.svg | 1 |
 | images/logos/KEMAS.png | 1 |
@@ -146,7 +146,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/backgrounds/home_bottom_right.svg | 2.3 | 1 |
 | images/backgrounds/home_top_left.svg | 2.4 | 2 |
 | images/backgrounds/reports_top_right.svg | 2 | 1 |
-| images/flags/gb.svg | 0.5 | 2 |
 | images/icons/add_circle.svg | 0.4 | 2 |
 | images/icons/archive.svg | 0.5 | 1 |
 | images/icons/arrow_back.svg | 0.2 | 1 |

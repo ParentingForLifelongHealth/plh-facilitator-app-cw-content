@@ -46,87 +46,30 @@
           ],
           "_raw": "uncompleted | emit: uncompleted",
           "_cleaned": "uncompleted | emit: uncompleted"
-        },
-        {
-          "trigger": "uncompleted",
-          "action_id": "go_to",
-          "args": [
-            "profile"
-          ],
-          "_raw": "uncompleted | go_to: profile",
-          "_cleaned": "uncompleted | go_to: profile"
         }
       ],
       "rows": [
         {
           "name": "title",
-          "value": "@global.login",
+          "value": "@global.account",
           "_translations": {
             "value": {}
           },
-          "condition": "!@local.is_user_signed_in",
           "type": "set_variable",
           "_nested_name": "header.title",
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "@global.login",
-                "matchedExpression": "@global.login",
+                "fullExpression": "@global.account",
+                "matchedExpression": "@global.account",
                 "type": "global",
-                "fieldName": "login"
-              }
-            ],
-            "condition": [
-              {
-                "fullExpression": "!@local.is_user_signed_in",
-                "matchedExpression": "!@local.is_user_signed_in",
-                "type": "local",
-                "fieldName": "is_user_signed_in"
+                "fieldName": "account"
               }
             ]
           },
           "_dynamicDependencies": {
-            "@global.login": [
+            "@global.account": [
               "value"
-            ],
-            "!@local.is_user_signed_in": [
-              "condition"
-            ]
-          }
-        },
-        {
-          "name": "title",
-          "value": "@global.logout",
-          "_translations": {
-            "value": {}
-          },
-          "condition": "@local.is_user_signed_in",
-          "type": "set_variable",
-          "_nested_name": "header.title",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@global.logout",
-                "matchedExpression": "@global.logout",
-                "type": "global",
-                "fieldName": "logout"
-              }
-            ],
-            "condition": [
-              {
-                "fullExpression": "@local.is_user_signed_in",
-                "matchedExpression": "@local.is_user_signed_in",
-                "type": "local",
-                "fieldName": "is_user_signed_in"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@global.logout": [
-              "value"
-            ],
-            "@local.is_user_signed_in": [
-              "condition"
             ]
           }
         }

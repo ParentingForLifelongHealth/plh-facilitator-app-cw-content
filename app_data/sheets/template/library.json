@@ -5,7 +5,7 @@
   "parameter_list": {
     "app_config": {
       "APP_FOOTER_DEFAULTS": {
-        "templateName": "footer"
+        "template": "footer"
       }
     }
   },
@@ -242,6 +242,9 @@
               "_raw": "click | go_to: library_@item.id",
               "_cleaned": "click | go_to: library_@item.id"
             }
+          ],
+          "style_list": [
+            "margin-bottom: 12px"
           ],
           "rows": [
             {
