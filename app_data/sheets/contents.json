@@ -158,7 +158,15 @@
       "flow_name": "modules",
       "data_list_name": "modules",
       "_xlsxPath": "data/modules_CW.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+      "_metadata": {
+        "page_count": {
+          "type": "number"
+        },
+        "completed": {
+          "type": "boolean"
+        }
+      }
     },
     "number_data": {
       "flow_type": "data_list",
@@ -1220,7 +1228,7 @@
       "parameter_list": {
         "app_config": {
           "APP_FOOTER_DEFAULTS": {
-            "templateName": "footer"
+            "template": "footer"
           }
         }
       },
