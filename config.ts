@@ -30,7 +30,7 @@ config.ios.app_name = "";
 
 config.git = {
   content_repo: "https://github.com/ParentingForLifelongHealth/plh-facilitator-app-cw-content.git",
-  content_tag_latest: "1.2.4",
+  content_tag_latest: "1.2.5",
 };
 
 config.firebase = {
