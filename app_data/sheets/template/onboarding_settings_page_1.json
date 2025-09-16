@@ -4,97 +4,326 @@
   "status": "released",
   "rows": [
     {
-      "name": "speaker_position",
-      "value": "left",
+      "type": "text",
+      "name": "settings_intro",
+      "value": "@global.settings_intro",
       "_translations": {
         "value": {}
       },
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "_nested_name": "speaker_position"
-    },
-    {
-      "name": "variant",
-      "value": "gray",
-      "_translations": {
-        "value": {}
-      },
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "_nested_name": "variant"
-    },
-    {
-      "type": "text_bubble",
-      "name": "text_bubble",
-      "value": "@global.facilitator_message_1",
-      "_translations": {
-        "value": {}
-      },
-      "parameter_list": {
-        "speaker_position": "@local.speaker_position",
-        "variant": "@local.variant"
-      },
-      "_nested_name": "text_bubble",
+      "_nested_name": "settings_intro",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@global.facilitator_message_1",
-            "matchedExpression": "@global.facilitator_message_1",
+            "fullExpression": "@global.settings_intro",
+            "matchedExpression": "@global.settings_intro",
             "type": "global",
-            "fieldName": "facilitator_message_1"
+            "fieldName": "settings_intro"
           }
-        ],
-        "parameter_list": {
-          "speaker_position": [
-            {
-              "fullExpression": "@local.speaker_position",
-              "matchedExpression": "@local.speaker_position",
-              "type": "local",
-              "fieldName": "speaker_position"
-            }
-          ],
-          "variant": [
-            {
-              "fullExpression": "@local.variant",
-              "matchedExpression": "@local.variant",
-              "type": "local",
-              "fieldName": "variant"
-            }
-          ]
-        }
+        ]
       },
       "_dynamicDependencies": {
-        "@global.facilitator_message_1": [
+        "@global.settings_intro": [
           "value"
-        ],
-        "@local.speaker_position": [
-          "parameter_list.speaker_position"
-        ],
-        "@local.variant": [
-          "parameter_list.variant"
         ]
       }
     },
     {
-      "type": "image",
-      "name": "image",
-      "value": "@global.facilitator_intro_image_asset",
+      "type": "text",
+      "name": "question_user_type",
+      "value": "@global.question_user_type",
       "_translations": {
         "value": {}
       },
-      "_nested_name": "image",
+      "parameter_list": {
+        "style": "emphasised"
+      },
+      "_nested_name": "question_user_type",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@global.facilitator_intro_image_asset",
-            "matchedExpression": "@global.facilitator_intro_image_asset",
+            "fullExpression": "@global.question_user_type",
+            "matchedExpression": "@global.question_user_type",
             "type": "global",
-            "fieldName": "facilitator_intro_image_asset"
+            "fieldName": "question_user_type"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@global.facilitator_intro_image_asset": [
+        "@global.question_user_type": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "combo_box",
+      "name": "user_type_select",
+      "value": "@fields.user_type",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "answer_list": "@data.user_type",
+        "placeholder": "@global.placeholder_user_type",
+        "variant": "dropdown"
+      },
+      "condition": "!!@fields.user_type",
+      "exclude_from_translation": true,
+      "_nested_name": "user_type_select",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields.user_type",
+            "matchedExpression": "@fields.user_type",
+            "type": "fields",
+            "fieldName": "user_type"
+          }
+        ],
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@data.user_type",
+              "matchedExpression": "@data.user_type",
+              "type": "data",
+              "fieldName": "user_type"
+            }
+          ],
+          "placeholder": [
+            {
+              "fullExpression": "@global.placeholder_user_type",
+              "matchedExpression": "@global.placeholder_user_type",
+              "type": "global",
+              "fieldName": "placeholder_user_type"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "fullExpression": "!!@fields.user_type",
+            "matchedExpression": "!@fields.user_type",
+            "type": "fields",
+            "fieldName": "user_type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.user_type": [
+          "value"
+        ],
+        "@data.user_type": [
+          "parameter_list.answer_list"
+        ],
+        "@global.placeholder_user_type": [
+          "parameter_list.placeholder"
+        ],
+        "!@fields.user_type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "combo_box",
+      "name": "user_type_select",
+      "parameter_list": {
+        "answer_list": "@data.user_type",
+        "placeholder": "@global.placeholder_user_type",
+        "variant": "dropdown"
+      },
+      "condition": "!@fields.user_type",
+      "exclude_from_translation": true,
+      "_nested_name": "user_type_select",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@data.user_type",
+              "matchedExpression": "@data.user_type",
+              "type": "data",
+              "fieldName": "user_type"
+            }
+          ],
+          "placeholder": [
+            {
+              "fullExpression": "@global.placeholder_user_type",
+              "matchedExpression": "@global.placeholder_user_type",
+              "type": "global",
+              "fieldName": "placeholder_user_type"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "fullExpression": "!@fields.user_type",
+            "matchedExpression": "!@fields.user_type",
+            "type": "fields",
+            "fieldName": "user_type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.user_type": [
+          "parameter_list.answer_list"
+        ],
+        "@global.placeholder_user_type": [
+          "parameter_list.placeholder"
+        ],
+        "!@fields.user_type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "language_select_options",
+      "value": "@data.language",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "language_select_options",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.language",
+            "matchedExpression": "@data.language",
+            "type": "data",
+            "fieldName": "language"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.language": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "question_language",
+      "value": "@global.question_language",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "style": "emphasised"
+      },
+      "condition": "@local.user_type_select == \"system_tester\"",
+      "_nested_name": "question_language",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.question_language",
+            "matchedExpression": "@global.question_language",
+            "type": "global",
+            "fieldName": "question_language"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.user_type_select == \"system_tester\"",
+            "matchedExpression": "@local.user_type_select",
+            "type": "local",
+            "fieldName": "user_type_select"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.question_language": [
+          "value"
+        ],
+        "@local.user_type_select": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "language_grid",
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "emit",
+          "args": [
+            "set_language",
+            "this.value"
+          ],
+          "_raw": "changed | emit: set_language: this.value",
+          "_cleaned": "changed | emit: set_language: this.value"
+        },
+        {
+          "trigger": "changed",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "changed | emit: completed",
+          "_cleaned": "changed | emit: completed"
+        },
+        {
+          "trigger": "changed",
+          "action_id": "set_field",
+          "args": [
+            "onboarding_language_select_completed",
+            true
+          ],
+          "_raw": "changed | set_field: onboarding_language_select_completed: true",
+          "_cleaned": "changed | set_field: onboarding_language_select_completed: true"
+        }
+      ],
+      "parameter_list": {
+        "answer_list": "@local.language_select_options",
+        "item_width": "200px"
+      },
+      "condition": "@local.user_type_select == \"system_tester\"",
+      "_nested_name": "language_grid",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.language_select_options",
+              "matchedExpression": "@local.language_select_options",
+              "type": "local",
+              "fieldName": "language_select_options"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "fullExpression": "@local.user_type_select == \"system_tester\"",
+            "matchedExpression": "@local.user_type_select",
+            "type": "local",
+            "fieldName": "user_type_select"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.language_select_options": [
+          "parameter_list.answer_list"
+        ],
+        "@local.user_type_select": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "completed_enabled",
+      "value": "!!@local.user_type_select",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "completed_enabled",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "!!@local.user_type_select",
+            "matchedExpression": "!@local.user_type_select",
+            "type": "local",
+            "fieldName": "user_type_select"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.user_type_select": [
           "value"
         ]
       }
@@ -111,12 +340,22 @@
       "rows": [
         {
           "type": "button",
-          "name": "button_completed_2",
+          "name": "button_completed_1",
           "value": "@global.continue",
           "_translations": {
             "value": {}
           },
           "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_field",
+              "args": [
+                "user_type",
+                "@local.user_type_select"
+              ],
+              "_raw": "click | set_field: user_type: @local.user_type_select",
+              "_cleaned": "click | set_field: user_type: @local.user_type_select"
+            },
             {
               "trigger": "click",
               "action_id": "emit",
@@ -128,8 +367,130 @@
             }
           ],
           "parameter_list": {
-            "style": "navigation"
+            "style": "navigation",
+            "disabled": "!@local.completed_enabled"
           },
+          "condition": "@local.user_type_select != \"system_tester\"",
+          "style_list": [
+            "flex: 1"
+          ],
+          "_nested_name": "dg_footer.button_completed_1",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.continue",
+                "matchedExpression": "@global.continue",
+                "type": "global",
+                "fieldName": "continue"
+              }
+            ],
+            "action_list": {
+              "0": {
+                "args": {
+                  "1": [
+                    {
+                      "fullExpression": "@local.user_type_select",
+                      "matchedExpression": "@local.user_type_select",
+                      "type": "local",
+                      "fieldName": "user_type_select"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
+                    "matchedExpression": "@local.user_type_select",
+                    "type": "local",
+                    "fieldName": "user_type_select"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
+                    "matchedExpression": "@local.user_type_select",
+                    "type": "local",
+                    "fieldName": "user_type_select"
+                  }
+                ]
+              }
+            },
+            "parameter_list": {
+              "disabled": [
+                {
+                  "fullExpression": "!@local.completed_enabled",
+                  "matchedExpression": "!@local.completed_enabled",
+                  "type": "local",
+                  "fieldName": "completed_enabled"
+                }
+              ]
+            },
+            "condition": [
+              {
+                "fullExpression": "@local.user_type_select != \"system_tester\"",
+                "matchedExpression": "@local.user_type_select",
+                "type": "local",
+                "fieldName": "user_type_select"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@global.continue": [
+              "value"
+            ],
+            "@local.user_type_select": [
+              "action_list.0.args.1",
+              "action_list.0._raw",
+              "action_list.0._cleaned",
+              "condition"
+            ],
+            "!@local.completed_enabled": [
+              "parameter_list.disabled"
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "name": "button_completed_2",
+          "value": "@global.continue",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_field",
+              "args": [
+                "user_type",
+                "@local.user_type_select"
+              ],
+              "_raw": "click | set_field: user_type: @local.user_type_select",
+              "_cleaned": "click | set_field: user_type: @local.user_type_select"
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "set_language",
+                "@local.language_grid"
+              ],
+              "_raw": "click | emit: set_language: @local.language_grid",
+              "_cleaned": "click | emit: set_language: @local.language_grid"
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
+            }
+          ],
+          "parameter_list": {
+            "style": "navigation",
+            "disabled": "!@local.completed_enabled"
+          },
+          "condition": "@local.user_type_select == \"system_tester\"",
           "style_list": [
             "flex: 1"
           ],
@@ -142,11 +503,101 @@
                 "type": "global",
                 "fieldName": "continue"
               }
+            ],
+            "action_list": {
+              "0": {
+                "args": {
+                  "1": [
+                    {
+                      "fullExpression": "@local.user_type_select",
+                      "matchedExpression": "@local.user_type_select",
+                      "type": "local",
+                      "fieldName": "user_type_select"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
+                    "matchedExpression": "@local.user_type_select",
+                    "type": "local",
+                    "fieldName": "user_type_select"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
+                    "matchedExpression": "@local.user_type_select",
+                    "type": "local",
+                    "fieldName": "user_type_select"
+                  }
+                ]
+              },
+              "1": {
+                "args": {
+                  "1": [
+                    {
+                      "fullExpression": "@local.language_grid",
+                      "matchedExpression": "@local.language_grid",
+                      "type": "local",
+                      "fieldName": "language_grid"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | emit: set_language: @local.language_grid",
+                    "matchedExpression": "@local.language_grid",
+                    "type": "local",
+                    "fieldName": "language_grid"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | emit: set_language: @local.language_grid",
+                    "matchedExpression": "@local.language_grid",
+                    "type": "local",
+                    "fieldName": "language_grid"
+                  }
+                ]
+              }
+            },
+            "parameter_list": {
+              "disabled": [
+                {
+                  "fullExpression": "!@local.completed_enabled",
+                  "matchedExpression": "!@local.completed_enabled",
+                  "type": "local",
+                  "fieldName": "completed_enabled"
+                }
+              ]
+            },
+            "condition": [
+              {
+                "fullExpression": "@local.user_type_select == \"system_tester\"",
+                "matchedExpression": "@local.user_type_select",
+                "type": "local",
+                "fieldName": "user_type_select"
+              }
             ]
           },
           "_dynamicDependencies": {
             "@global.continue": [
               "value"
+            ],
+            "@local.user_type_select": [
+              "action_list.0.args.1",
+              "action_list.0._raw",
+              "action_list.0._cleaned",
+              "condition"
+            ],
+            "@local.language_grid": [
+              "action_list.1.args.1",
+              "action_list.1._raw",
+              "action_list.1._cleaned"
+            ],
+            "!@local.completed_enabled": [
+              "parameter_list.disabled"
             ]
           }
         }
