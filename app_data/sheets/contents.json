@@ -333,13 +333,6 @@
       "_xlsxPath": "templates/reports.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
-    "state": {
-      "flow_type": "data_list",
-      "flow_name": "state",
-      "data_list_name": "state",
-      "_xlsxPath": "data/deployment_data_cw.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
-    },
     "sub_items": {
       "flow_type": "data_list",
       "flow_name": "sub_items",
@@ -352,6 +345,20 @@
       "flow_name": "tag_data",
       "data_list_name": "tag",
       "_xlsxPath": "data/articles_CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
+    "user_municipality": {
+      "flow_type": "data_list",
+      "flow_name": "user_municipality",
+      "data_list_name": "user_municipality",
+      "_xlsxPath": "data/deployment_data_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
+    "user_organisation": {
+      "flow_type": "data_list",
+      "flow_name": "user_organisation",
+      "data_list_name": "user_organisation",
+      "_xlsxPath": "data/deployment_data_cw.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "user_type": {
@@ -1477,12 +1484,6 @@
     "onboarding_settings_page_3": {
       "flow_type": "template",
       "flow_name": "onboarding_settings_page_3",
-      "_xlsxPath": "templates/CW onboarding templates.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
-    },
-    "onboarding_settings_page_4": {
-      "flow_type": "template",
-      "flow_name": "onboarding_settings_page_4",
       "_xlsxPath": "templates/CW onboarding templates.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
