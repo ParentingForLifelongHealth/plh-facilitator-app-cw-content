@@ -205,7 +205,7 @@
       "parameter_list": {
         "style": "emphasised"
       },
-      "condition": "@local.user_type_select == \"system_tester\"",
+      "condition": "@local.user_type_select == \"tester\"",
       "_nested_name": "question_language",
       "_dynamicFields": {
         "value": [
@@ -218,7 +218,7 @@
         ],
         "condition": [
           {
-            "fullExpression": "@local.user_type_select == \"system_tester\"",
+            "fullExpression": "@local.user_type_select == \"tester\"",
             "matchedExpression": "@local.user_type_select",
             "type": "local",
             "fieldName": "user_type_select"
@@ -237,42 +237,11 @@
     {
       "type": "radio_button_grid",
       "name": "language_grid",
-      "action_list": [
-        {
-          "trigger": "changed",
-          "action_id": "emit",
-          "args": [
-            "set_language",
-            "this.value"
-          ],
-          "_raw": "changed | emit: set_language: this.value",
-          "_cleaned": "changed | emit: set_language: this.value"
-        },
-        {
-          "trigger": "changed",
-          "action_id": "emit",
-          "args": [
-            "completed"
-          ],
-          "_raw": "changed | emit: completed",
-          "_cleaned": "changed | emit: completed"
-        },
-        {
-          "trigger": "changed",
-          "action_id": "set_field",
-          "args": [
-            "onboarding_language_select_completed",
-            true
-          ],
-          "_raw": "changed | set_field: onboarding_language_select_completed: true",
-          "_cleaned": "changed | set_field: onboarding_language_select_completed: true"
-        }
-      ],
       "parameter_list": {
         "answer_list": "@local.language_select_options",
         "item_width": "200px"
       },
-      "condition": "@local.user_type_select == \"system_tester\"",
+      "condition": "@local.user_type_select == \"tester\"",
       "_nested_name": "language_grid",
       "_dynamicFields": {
         "parameter_list": {
@@ -287,7 +256,7 @@
         },
         "condition": [
           {
-            "fullExpression": "@local.user_type_select == \"system_tester\"",
+            "fullExpression": "@local.user_type_select == \"tester\"",
             "matchedExpression": "@local.user_type_select",
             "type": "local",
             "fieldName": "user_type_select"
@@ -370,7 +339,7 @@
             "style": "navigation",
             "disabled": "!@local.completed_enabled"
           },
-          "condition": "@local.user_type_select != \"system_tester\"",
+          "condition": "@local.user_type_select != \"tester\"",
           "style_list": [
             "flex: 1"
           ],
@@ -426,7 +395,7 @@
             },
             "condition": [
               {
-                "fullExpression": "@local.user_type_select != \"system_tester\"",
+                "fullExpression": "@local.user_type_select != \"tester\"",
                 "matchedExpression": "@local.user_type_select",
                 "type": "local",
                 "fieldName": "user_type_select"
@@ -490,7 +459,7 @@
             "style": "navigation",
             "disabled": "!@local.completed_enabled"
           },
-          "condition": "@local.user_type_select == \"system_tester\"",
+          "condition": "@local.user_type_select == \"tester\"",
           "style_list": [
             "flex: 1"
           ],
@@ -574,7 +543,7 @@
             },
             "condition": [
               {
-                "fullExpression": "@local.user_type_select == \"system_tester\"",
+                "fullExpression": "@local.user_type_select == \"tester\"",
                 "matchedExpression": "@local.user_type_select",
                 "type": "local",
                 "fieldName": "user_type_select"
