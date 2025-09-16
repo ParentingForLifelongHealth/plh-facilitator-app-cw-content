@@ -8,7 +8,9 @@ const config = generateDeploymentConfig("plh_facilitator_cw");
  */
 
 config.google_drive.sheets_folder_ids =  [
+  "19wSspWYMbRc75een-kS0q0aq24--75u8", // library_app_menu
   "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",  //Global
+  "1XBq4iGIZHEwzwPk3xbHDAm9WCesjR7kR", // library PLH onboarding
   "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"   //CW Sheets
 ];
 config.google_drive.assets_folder_ids = [
@@ -30,7 +32,7 @@ config.ios.app_name = "";
 
 config.git = {
   content_repo: "https://github.com/ParentingForLifelongHealth/plh-facilitator-app-cw-content.git",
-  content_tag_latest: "1.2.6",
+  content_tag_latest: "1.2.7",
 };
 
 config.firebase = {
@@ -46,7 +48,7 @@ config.api.db_name = "plh_facilitator_cw"
 
 config.app_data.output_path = "./app_data";
 
-config.app_config.APP_LANGUAGES.default = "gb_en";
+config.app_config.APP_LANGUAGES.default = "cw_pap";
 config.app_config.APP_SIDEMENU_DEFAULTS.title = "";
 config.app_config.APP_HEADER_DEFAULTS.title = "";
 config.app_config.APP_HEADER_DEFAULTS.hidden = true;

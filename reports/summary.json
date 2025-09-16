@@ -10,12 +10,24 @@
         "count": 1
       },
       {
+        "type": "animated_section",
+        "count": 1
+      },
+      {
+        "type": "animated_slides",
+        "count": 1
+      },
+      {
+        "type": "apple_sign_in_button",
+        "count": 2
+      },
+      {
         "type": "audio",
         "count": 2
       },
       {
         "type": "button",
-        "count": 84
+        "count": 118
       },
       {
         "type": "carousel",
@@ -23,11 +35,11 @@
       },
       {
         "type": "combo_box",
-        "count": 4
+        "count": 9
       },
       {
         "type": "data_items",
-        "count": 41
+        "count": 59
       },
       {
         "type": "debug_toggle",
@@ -39,15 +51,15 @@
       },
       {
         "type": "display_group",
-        "count": 106
+        "count": 148
       },
       {
         "type": "google_sign_in_button",
-        "count": 1
+        "count": 3
       },
       {
         "type": "image",
-        "count": 16
+        "count": 22
       },
       {
         "type": "items",
@@ -55,7 +67,7 @@
       },
       {
         "type": "lottie_animation",
-        "count": 7
+        "count": 8
       },
       {
         "type": "navigation_bar",
@@ -67,23 +79,27 @@
       },
       {
         "type": "qr_code",
-        "count": 1
+        "count": 2
       },
       {
         "type": "radio_button_grid",
-        "count": 8
+        "count": 9
       },
       {
         "type": "round_button",
-        "count": 31
+        "count": 34
       },
       {
         "type": "select_text",
-        "count": 1
+        "count": 2
+      },
+      {
+        "type": "set_field",
+        "count": 4
       },
       {
         "type": "set_variable",
-        "count": 552
+        "count": 693
       },
       {
         "type": "simple_checkbox",
@@ -95,11 +111,11 @@
       },
       {
         "type": "task_progress_bar",
-        "count": 1
+        "count": 2
       },
       {
         "type": "template",
-        "count": 89
+        "count": 98
       },
       {
         "type": "test",
@@ -107,19 +123,23 @@
       },
       {
         "type": "text",
-        "count": 159
+        "count": 203
       },
       {
         "type": "text_area",
-        "count": 2
+        "count": 4
       },
       {
         "type": "text_box",
-        "count": 21
+        "count": 38
+      },
+      {
+        "type": "text_bubble",
+        "count": 4
       },
       {
         "type": "title",
-        "count": 36
+        "count": 53
       },
       {
         "type": "toggle_bar",
@@ -139,7 +159,7 @@
     "data": [
       {
         "type": "add_data",
-        "count": 7
+        "count": 11
       },
       {
         "type": "app_update",
@@ -147,11 +167,11 @@
       },
       {
         "type": "auth",
-        "count": 1
+        "count": 4
       },
       {
         "type": "emit: completed",
-        "count": 35
+        "count": 45
       },
       {
         "type": "emit: force_reload",
@@ -159,7 +179,7 @@
       },
       {
         "type": "emit: force_reprocess",
-        "count": 11
+        "count": 21
       },
       {
         "type": "emit: force_restart",
@@ -167,23 +187,23 @@
       },
       {
         "type": "emit: server_sync",
-        "count": 15
+        "count": 19
       },
       {
         "type": "emit: set_language",
-        "count": 1
+        "count": 2
       },
       {
         "type": "emit: uncompleted",
-        "count": 60
+        "count": 65
       },
       {
         "type": "feedback",
-        "count": 13
+        "count": 24
       },
       {
         "type": "go_to",
-        "count": 37
+        "count": 38
       },
       {
         "type": "nav",
@@ -195,11 +215,15 @@
       },
       {
         "type": "pop_up",
-        "count": 13
+        "count": 16
       },
       {
         "type": "reset_app",
-        "count": 1
+        "count": 4
+      },
+      {
+        "type": "reset_data",
+        "count": 3
       },
       {
         "type": "save_to_device",
@@ -207,11 +231,11 @@
       },
       {
         "type": "set_data",
-        "count": 22
+        "count": 24
       },
       {
         "type": "set_field",
-        "count": 66
+        "count": 87
       },
       {
         "type": "set_item",
@@ -219,7 +243,7 @@
       },
       {
         "type": "set_local",
-        "count": 38
+        "count": 102
       },
       {
         "type": "share",
@@ -227,7 +251,7 @@
       },
       {
         "type": "user",
-        "count": 2
+        "count": 4
       }
     ]
   },
@@ -235,12 +259,12 @@
     "data": [
       {
         "assets": "total",
-        "KB": "857 KB",
-        "MB": "0.9 MB"
+        "KB": "2153 KB",
+        "MB": "2.2 MB"
       },
       {
         "assets": "unused",
-        "KB": "125 KB",
+        "KB": "128 KB",
         "MB": "0.1 MB"
       }
     ]
@@ -340,8 +364,20 @@
         "size_kb": 0.6
       },
       {
+        "path": "images/icons/report.png",
+        "size_kb": 0.5
+      },
+      {
         "path": "images/icons/report.svg",
         "size_kb": 0.3
+      },
+      {
+        "path": "images/icons/sessions.png",
+        "size_kb": 0.9
+      },
+      {
+        "path": "images/icons/settings.png",
+        "size_kb": 1.2
       },
       {
         "path": "images/icons/settings.svg",
@@ -367,7 +403,27 @@
         "missing": true
       },
       {
+        "path": "images/icons/home-outline-white.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/icons/library-outline-white.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
         "path": "images/icons/magnify_glass.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/icons/pencil-outline-white.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/icons/settings-outline-white.svg",
         "count": 1,
         "missing": true
       },
@@ -417,6 +473,11 @@
         "missing": true
       },
       {
+        "path": "images/logos/plh_logomark.png",
+        "count": 1,
+        "missing": true
+      },
+      {
         "path": "images/logos/thsn.png",
         "count": 1,
         "missing": true
@@ -449,6 +510,11 @@
         "path": "images/backgrounds/reports_top_right.svg",
         "count": 1,
         "size_kb": 2
+      },
+      {
+        "path": "images/icons/add-outline.svg",
+        "count": 1,
+        "size_kb": 0.2
       },
       {
         "path": "images/icons/add_circle.svg",
@@ -542,7 +608,7 @@
       },
       {
         "path": "images/icons/library.png",
-        "count": 2,
+        "count": 1,
         "size_kb": 1
       },
       {
@@ -576,21 +642,6 @@
         "size_kb": 7.4
       },
       {
-        "path": "images/icons/report.png",
-        "count": 1,
-        "size_kb": 0.5
-      },
-      {
-        "path": "images/icons/sessions.png",
-        "count": 1,
-        "size_kb": 0.9
-      },
-      {
-        "path": "images/icons/settings.png",
-        "count": 1,
-        "size_kb": 1.2
-      },
-      {
         "path": "images/icons/share.svg",
         "count": 2,
         "size_kb": 2.3
@@ -617,13 +668,38 @@
       },
       {
         "path": "images/logos/PLH.png",
-        "count": 1,
+        "count": 2,
         "size_kb": 26.6
       },
       {
         "path": "images/logos/UNICEF.jpg",
         "count": 1,
         "size_kb": 27.7
+      },
+      {
+        "path": "images/onboarding/splash_1.jpg",
+        "count": 1,
+        "size_kb": 266
+      },
+      {
+        "path": "images/onboarding/splash_2.jpg",
+        "count": 1,
+        "size_kb": 247.5
+      },
+      {
+        "path": "images/onboarding/splash_3.jpg",
+        "count": 1,
+        "size_kb": 276.8
+      },
+      {
+        "path": "images/onboarding/splash_4.jpg",
+        "count": 1,
+        "size_kb": 279.3
+      },
+      {
+        "path": "images/onboarding/splash_5.jpg",
+        "count": 1,
+        "size_kb": 228.9
       },
       {
         "path": "pdf/child_development_domain.pdf",
@@ -642,7 +718,7 @@
       {
         "type": "data_list",
         "subtype": null,
-        "total": 32
+        "total": 35
       },
       {
         "type": "data_list",
@@ -665,6 +741,11 @@
         "total": 1
       },
       {
+        "type": "data_list",
+        "subtype": "onboarding",
+        "total": 1
+      },
+      {
         "type": "data_pipe",
         "subtype": null,
         "total": 1
@@ -677,17 +758,22 @@
       {
         "type": "global",
         "subtype": null,
-        "total": 8
+        "total": 10
       },
       {
         "type": "global",
         "subtype": "legal_terms",
-        "total": 1
+        "total": 2
+      },
+      {
+        "type": "global",
+        "subtype": "onboarding",
+        "total": 2
       },
       {
         "type": "template",
         "subtype": null,
-        "total": 70
+        "total": 91
       },
       {
         "type": "template",
