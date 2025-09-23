@@ -4,22 +4,76 @@
   "status": "released",
   "rows": [
     {
+      "name": "home",
+      "value": "Sessions",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "home"
+    },
+    {
+      "name": "actions",
+      "value": "Actions",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "actions"
+    },
+    {
+      "name": "reports",
+      "value": "Reports",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "reports"
+    },
+    {
+      "name": "library",
+      "value": "Library",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "library"
+    },
+    {
+      "name": "settings",
+      "value": "Settings",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "settings"
+    },
+    {
       "name": "button_list",
       "value": [
         {
-          "image": "images/icons/sessions.png",
+          "image": "images/icons/home-outline-white.svg",
+          "text": "@local.home",
           "target_template": "@data.app_section.home.template"
         },
         {
-          "image": "images/icons/report.png",
+          "image": "images/icons/add-outline.svg",
+          "text": "@local.actions",
+          "target_template": "actions"
+        },
+        {
+          "image": "images/icons/pencil-outline-white.svg",
+          "text": "@local.reports",
           "target_template": "reports"
         },
         {
-          "image": "images/icons/library.png",
+          "image": "images/icons/library-outline-white.svg",
+          "text": "@local.library",
           "target_template": "@data.app_section.library.template"
         },
         {
-          "image": "images/icons/settings.png",
+          "image": "images/icons/settings-outline-white.svg",
+          "text": "@local.settings",
           "target_template": "profile"
         }
       ],
@@ -28,6 +82,14 @@
       "_dynamicFields": {
         "value": {
           "0": {
+            "text": [
+              {
+                "fullExpression": "@local.home",
+                "matchedExpression": "@local.home",
+                "type": "local",
+                "fieldName": "home"
+              }
+            ],
             "target_template": [
               {
                 "fullExpression": "@data.app_section.home.template",
@@ -37,7 +99,35 @@
               }
             ]
           },
+          "1": {
+            "text": [
+              {
+                "fullExpression": "@local.actions",
+                "matchedExpression": "@local.actions",
+                "type": "local",
+                "fieldName": "actions"
+              }
+            ]
+          },
           "2": {
+            "text": [
+              {
+                "fullExpression": "@local.reports",
+                "matchedExpression": "@local.reports",
+                "type": "local",
+                "fieldName": "reports"
+              }
+            ]
+          },
+          "3": {
+            "text": [
+              {
+                "fullExpression": "@local.library",
+                "matchedExpression": "@local.library",
+                "type": "local",
+                "fieldName": "library"
+              }
+            ],
             "target_template": [
               {
                 "fullExpression": "@data.app_section.library.template",
@@ -46,15 +136,40 @@
                 "fieldName": "app_section"
               }
             ]
+          },
+          "4": {
+            "text": [
+              {
+                "fullExpression": "@local.settings",
+                "matchedExpression": "@local.settings",
+                "type": "local",
+                "fieldName": "settings"
+              }
+            ]
           }
         }
       },
       "_dynamicDependencies": {
+        "@local.home": [
+          "value.0.text"
+        ],
         "@data.app_section.home.template": [
           "value.0.target_template"
         ],
+        "@local.actions": [
+          "value.1.text"
+        ],
+        "@local.reports": [
+          "value.2.text"
+        ],
+        "@local.library": [
+          "value.3.text"
+        ],
         "@data.app_section.library.template": [
-          "value.2.target_template"
+          "value.3.target_template"
+        ],
+        "@local.settings": [
+          "value.4.text"
         ]
       }
     },
@@ -84,6 +199,6 @@
       }
     }
   ],
-  "_xlsxPath": "templates/footer.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_xlsxPath": "templates/footer_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

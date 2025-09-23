@@ -1,0 +1,125 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "in_person_questions",
+  "status": "released",
+  "rows": [
+    {
+      "id": "Q1",
+      "name": "answer_1",
+      "validation_name": "valid_1",
+      "required_name": "required_1",
+      "display_text": "text with no validation",
+      "placeholder": "text",
+      "type": "text",
+      "validation_text": "no validation",
+      "validation_min": 2,
+      "validation_max": 5,
+      "required": false
+    },
+    {
+      "id": "Q2",
+      "name": "answer_2",
+      "validation_name": "valid_2",
+      "required_name": "required_2",
+      "display_text": "number with no validation",
+      "placeholder": "number",
+      "type": "number",
+      "validation_text": "no validation",
+      "required": false
+    },
+    {
+      "id": "Q3",
+      "name": "answer_3",
+      "validation_name": "valid_3",
+      "required_name": "required_3",
+      "display_text": "combobox with no validation",
+      "placeholder": "combo",
+      "type": "combo_box",
+      "validation_text": "no validation",
+      "required": false,
+      "answer_list": [
+        "name: name_1 | text: This is text 1",
+        "name: name_2 | text: This is text 2",
+        "name: name_3 | text: This is text 3",
+        "name: name_4 | text: This is text 4"
+      ]
+    },
+    {
+      "id": "Q4",
+      "name": "answer_4",
+      "validation_name": "valid_4",
+      "required_name": "required_4",
+      "display_text": "text with no validation but required",
+      "placeholder": "text",
+      "type": "text",
+      "validation_text": "this is required",
+      "required": true
+    },
+    {
+      "id": "Q5",
+      "name": "answer_5",
+      "validation_name": "valid_5",
+      "required_name": "required_5",
+      "display_text": "number with no validation but required",
+      "placeholder": "number",
+      "type": "number",
+      "validation_text": "this is required",
+      "required": true
+    },
+    {
+      "id": "Q6",
+      "name": "answer_6",
+      "validation_name": "valid_6",
+      "required_name": "required_6",
+      "display_text": "combobox required",
+      "placeholder": "combo",
+      "type": "combo_box",
+      "validation_text": "this is required",
+      "required": true,
+      "answer_list": [
+        "name: name_1 | text: This is text 1",
+        "name: name_2 | text: This is text 2",
+        "name: name_3 | text: This is text 3",
+        "name: name_4 | text: This is text 4"
+      ]
+    },
+    {
+      "id": "Q7",
+      "name": "answer_7",
+      "validation_name": "valid_7",
+      "required_name": "required_7",
+      "display_text": "text minimum 2 characters",
+      "placeholder": "text",
+      "type": "text",
+      "validation_text": "must be over 2 characters",
+      "validation_min": 2,
+      "required": true
+    },
+    {
+      "id": "Q8",
+      "name": "answer_8",
+      "validation_name": "valid_8",
+      "required_name": "required_8",
+      "display_text": "number between 10 and 20",
+      "placeholder": "number",
+      "type": "number",
+      "validation_text": "must be between 10 and 20",
+      "validation_min": 10,
+      "validation_max": 20,
+      "required": true
+    }
+  ],
+  "_xlsxPath": "templates/reports_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+  "_metadata": {
+    "validation_min": {
+      "type": "number"
+    },
+    "validation_max": {
+      "type": "number"
+    },
+    "required": {
+      "type": "boolean"
+    }
+  }
+}

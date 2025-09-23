@@ -1,0 +1,53 @@
+{
+  "flow_type": "template",
+  "flow_name": "actions",
+  "status": "released",
+  "rows": [
+    {
+      "type": "template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": [
+        {
+          "trigger": "uncompleted",
+          "action_id": "emit",
+          "args": [
+            "uncompleted"
+          ],
+          "_raw": "uncompleted | emit: uncompleted",
+          "_cleaned": "uncompleted | emit: uncompleted"
+        }
+      ],
+      "exclude_from_translation": true,
+      "rows": [
+        {
+          "name": "title",
+          "value": "Actions",
+          "_translations": {
+            "value": {}
+          },
+          "exclude_from_translation": true,
+          "type": "set_variable",
+          "_nested_name": "header.title"
+        }
+      ],
+      "_nested_name": "header"
+    },
+    {
+      "type": "template",
+      "name": "pending_reports",
+      "value": "pending_reports",
+      "rows": [],
+      "_nested_name": "pending_reports"
+    },
+    {
+      "type": "template",
+      "name": "follow_up",
+      "value": "follow_up",
+      "rows": [],
+      "_nested_name": "follow_up"
+    }
+  ],
+  "_xlsxPath": "templates/actions_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}
