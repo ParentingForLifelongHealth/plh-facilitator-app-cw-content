@@ -5,8 +5,26 @@
   "data_list_name": "m_intro",
   "rows": [
     {
-      "id": "intro0",
-      "foreign_key": "sub_item10",
+      "id": "intro18",
+      "foreign_key": "sub_item126",
+      "text_1": "Record the following audio message",
+      "_translations": {
+        "text_1": {},
+        "text_2": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "Record the following audio message"
+        },
+        "text_2": {
+          "eng": "You may want to close your eyes and sit comfortably while you listen to this message.\n\nTake a moment to think about what your lives and children were like before the programme began.\n\nNow think about each of the parts of the ParentChat programme:\n\nSpending One-on-One time with your child\n\nTalking about feelings\n\nKeeping it positive with praise and instructions\n\nInvolving your children in making household rules and daily routines\n\nUsing positive discipline like redirect and consequences\n\nInvolving your children in solving problems\n\nThink about how the things you learned during the programme were different from the way you interacted with your children before the programme.\n\nThink about how you have changed, how your relationship to your children has changed, and how your children’s behaviours have changed.\n\nWhen you are ready, you can open your eyes."
+        }
+      },
+      "text_2": "You may want to close your eyes and sit comfortably while you listen to this message.\n\nTake a moment to think about what your lives and children were like before the programme began.\n\nNow think about each of the parts of the ParentChat programme:\n\nSpending One-on-One time with your child\n\nTalking about feelings\n\nKeeping it positive with praise and instructions\n\nInvolving your children in making household rules and daily routines\n\nUsing positive discipline like redirect and consequences\n\nInvolving your children in solving problems\n\nThink about how the things you learned during the programme were different from the way you interacted with your children before the programme.\n\nThink about how you have changed, how your relationship to your children has changed, and how your children’s behaviours have changed.\n\nWhen you are ready, you can open your eyes."
+    },
+    {
+      "id": "intro29",
+      "foreign_key": "sub_item159",
       "text_1": "**Preparation**",
       "_translations": {
         "text_1": {},
@@ -17,14 +35,14 @@
           "eng": "**Preparation**"
         },
         "text_2": {
-          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the illustrated stories."
+          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video stories."
         }
       },
-      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the illustrated stories."
+      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video stories."
     },
     {
-      "id": "intro1",
-      "foreign_key": "sub_item11",
+      "id": "intro30",
+      "foreign_key": "sub_item160",
       "text_1": "**Session overview**\nTotal Time: 2 hours",
       "_translations": {
         "text_1": {},
@@ -41,8 +59,8 @@
       "text_2": "**WELCOME (15 minutes)**\n- Begin by welcoming the participants.\n- Do a Name Game to help everyone get to know each other.\n- Remind the group of the programme structure and content.\n- Lead a short physical exercise to energize the group.\n- Review the ground rules for the session.\n\n**OVERVIEW (30 minutes)**\n- Reminder of programme structure and content \n- Ground rules \n- Parent goals\n\n**BREAK (15 min)**\n\n**CORE LESSON: Parenting Skill – One-on-One Time (50 minutes)**\n- Video Story 1 and role-play the scenario together as a big group.\n- Video Story 2 and do another big group role-play.\n- Discuss the benefits of spending One-on-One Time with your child.\n- Brainstorm activities caregivers can do with their children during One-on-One Time.\n- Practice One-on-One Time in pairs.\n- Review tips for making One-on-One Time effective and enjoyable.\n\n\n**HOME ACTIVITIES & CLOSING (10 minutes)**\nCaregivers are encouraged to:\n- Have a conversation with their child about the goals identified in the session.\n- Spend at least 5 minutes each day in One-on-One Time with their child.\n- Take a Pause whenever feeling stressed or upset.\n- Do the Physical Exercise every morning after waking up.\nFor closing: \n- Review the core topics covered in the session.\n- Inform caregivers about the text messages they will receive.\n- Remind them about the next online session and the home activities.\n- Thank and praise all participants for their contributions."
     },
     {
-      "id": "intro2",
-      "foreign_key": "sub_item12",
+      "id": "intro31",
+      "foreign_key": "sub_item161",
       "text_1": "**WELCOME (20 minutes)**",
       "_translations": {
         "text_1": {}
@@ -54,26 +72,21 @@
       }
     },
     {
-      "id": "intro3",
-      "foreign_key": "sub_item13",
+      "id": "intro32",
+      "foreign_key": "sub_item161",
       "text_1": "**OVERVIEW (30 min)**",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {}
       },
       "_translatedFields": {
         "text_1": {
           "eng": "**OVERVIEW (30 min)**"
-        },
-        "text_2": {
-          "eng": "Have a group discussion about sharing goals that are positive, specific, and realistic."
         }
-      },
-      "text_2": "Have a group discussion about sharing goals that are positive, specific, and realistic."
+      }
     },
     {
-      "id": "intro4",
-      "foreign_key": "sub_item14",
+      "id": "intro33",
+      "foreign_key": "sub_item161",
       "text_1": "**CORE LESSON: Parenting Skill – One-on-One Time (50 minutes)**",
       "_translations": {
         "text_1": {}
@@ -85,8 +98,8 @@
       }
     },
     {
-      "id": "intro5",
-      "foreign_key": "sub_item15",
+      "id": "intro34",
+      "foreign_key": "sub_item161",
       "text_1": "**HOME ACTIVITIES & CLOSING (10 minutes)**",
       "_translations": {
         "text_1": {}
@@ -98,8 +111,8 @@
       }
     },
     {
-      "id": "intro6",
-      "foreign_key": "sub_item17",
+      "id": "intro35",
+      "foreign_key": "sub_item163",
       "text_1": "**Preparation**",
       "_translations": {
         "text_1": {},
@@ -110,14 +123,14 @@
           "eng": "**Preparation**"
         },
         "text_2": {
-          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the illustrated stories."
+          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video story."
         }
       },
-      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the illustrated stories."
+      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video story."
     },
     {
-      "id": "intro7",
-      "foreign_key": "sub_item18",
+      "id": "intro36",
+      "foreign_key": "sub_item164",
       "text_1": "**Session overview**\nTotal Time: 2 hours",
       "_translations": {
         "text_1": {},
@@ -134,8 +147,8 @@
       "text_2": "**WELCOME (15 minutes)**\n- Begin by welcoming the participants.\n- Do a Name Game to help everyone get to know each other.\n- Remind the group of the programme structure and content.\n- Lead a short physical exercise to energize the group.\n- Review the ground rules for the session.\n\n**OVERVIEW (30 minutes)**\n- Reminder of programme structure and content \n- Ground rules \n- Parent goals\n\n**BREAK (15 min)**\n\n**CORE LESSON: Parenting Skill – One-on-One Time (50 minutes)**\n- Video Story 1 and role-play the scenario together as a big group.\n- Discuss the benefits of spending One-on-One Time with your child.\n- Brainstorm activities caregivers can do with their children during One-on-One Time.\n- Practice One-on-One Time in pairs.\n- Review tips for making One-on-One Time effective and enjoyable.\n\n\n**HOME ACTIVITIES & CLOSING (10 minutes)**\nCaregivers are encouraged to:\n- Have a conversation with their child about the goals identified in the session.\n- Spend at least 5 minutes each day in One-on-One Time with their child.\n- Take a Pause whenever feeling stressed or upset.\n- Do the Physical Exercise every morning after waking up.\nFor closing: \n- Review the core topics covered in the session.\n- Inform caregivers about the text messages they will receive.\n- Remind them about the next online session and the home activities.\n- Thank and praise all participants for their contributions."
     },
     {
-      "id": "intro8",
-      "foreign_key": "sub_item19",
+      "id": "intro37",
+      "foreign_key": "sub_item165",
       "text_1": "**WELCOME (20 minutes)**",
       "_translations": {
         "text_1": {}
@@ -147,26 +160,21 @@
       }
     },
     {
-      "id": "intro9",
-      "foreign_key": "sub_item20",
+      "id": "intro38",
+      "foreign_key": "sub_item165",
       "text_1": "**OVERVIEW (30 min)**",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {}
       },
       "_translatedFields": {
         "text_1": {
           "eng": "**OVERVIEW (30 min)**"
-        },
-        "text_2": {
-          "eng": "Have a group discussion about sharing goals that are positive, specific, and realistic."
         }
-      },
-      "text_2": "Have a group discussion about sharing goals that are positive, specific, and realistic."
+      }
     },
     {
-      "id": "intro10",
-      "foreign_key": "sub_item21",
+      "id": "intro39",
+      "foreign_key": "sub_item165",
       "text_1": "**CORE LESSON: Parenting Skill – One-on-One Time (50 minutes)**",
       "_translations": {
         "text_1": {}
@@ -178,8 +186,8 @@
       }
     },
     {
-      "id": "intro11",
-      "foreign_key": "sub_item22",
+      "id": "intro40",
+      "foreign_key": "sub_item165",
       "text_1": "**HOME ACTIVITIES & CLOSING (10 minutes)**",
       "_translations": {
         "text_1": {}
@@ -191,8 +199,8 @@
       }
     },
     {
-      "id": "intro12",
-      "foreign_key": "sub_item24",
+      "id": "intro41",
+      "foreign_key": "sub_item167",
       "text_1": "**Preparation**",
       "_translations": {
         "text_1": {},
@@ -203,14 +211,14 @@
           "eng": "**Preparation**"
         },
         "text_2": {
-          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the illustrated stories."
+          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video stories."
         }
       },
-      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the illustrated stories."
+      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video stories."
     },
     {
-      "id": "intro13",
-      "foreign_key": "sub_item25",
+      "id": "intro42",
+      "foreign_key": "sub_item168",
       "text_1": "**Session overview**\nTotal Time: 2 hours",
       "_translations": {
         "text_1": {},
@@ -227,8 +235,8 @@
       "text_2": "**WELCOME (15 minutes)**\n- Begin by welcoming the participants.\n- Do a Name Game to help everyone get to know each other.\n- Remind the group of the programme structure and content.\n- Lead a short physical exercise to energize the group.\n- Review the ground rules for the session.\n\n**OVERVIEW (30 minutes)**\n- Reminder of programme structure and content \n- Ground rules \n- Parent goals\n\n**BREAK (15 min)**\n\n**CORE LESSON: Parenting Skill – One-on-One Time (50 minutes)**\n- Video Story 1 and do big group role-play.\n- Discuss the benefits of spending One-on-One Time with your child.\n- Brainstorm activities caregivers can do with their children during One-on-One Time.\n- Practice One-on-One Time in pairs.\n- Review tips for making One-on-One Time effective and enjoyable.\n\n\n**HOME ACTIVITIES & CLOSING (10 minutes)**\nCaregivers are encouraged to:\n- Have a conversation with their child about the goals identified in the session.\n- Spend at least 5 minutes each day in One-on-One Time with their child.\n- Take a Pause whenever feeling stressed or upset.\n- Do the Physical Exercise every morning after waking up.\nFor closing: \n- Review the core topics covered in the session.\n- Inform caregivers about the text messages they will receive.\n- Remind them about the next online session and the home activities.\n- Thank and praise all participants for their contributions."
     },
     {
-      "id": "intro14",
-      "foreign_key": "sub_item26",
+      "id": "intro43",
+      "foreign_key": "sub_item169",
       "text_1": "**WELCOME (20 minutes)**",
       "_translations": {
         "text_1": {}
@@ -240,26 +248,21 @@
       }
     },
     {
-      "id": "intro15",
-      "foreign_key": "sub_item27",
+      "id": "intro44",
+      "foreign_key": "sub_item169",
       "text_1": "**OVERVIEW (30 min)**",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {}
       },
       "_translatedFields": {
         "text_1": {
           "eng": "**OVERVIEW (30 min)**"
-        },
-        "text_2": {
-          "eng": "Have a group discussion about sharing goals that are positive, specific, and realistic."
         }
-      },
-      "text_2": "Have a group discussion about sharing goals that are positive, specific, and realistic."
+      }
     },
     {
-      "id": "intro16",
-      "foreign_key": "sub_item28",
+      "id": "intro45",
+      "foreign_key": "sub_item169",
       "text_1": "**CORE LESSON: Parenting Skill – One-on-One Time (50 minutes)**",
       "_translations": {
         "text_1": {}
@@ -271,8 +274,8 @@
       }
     },
     {
-      "id": "intro17",
-      "foreign_key": "sub_item29",
+      "id": "intro46",
+      "foreign_key": "sub_item169",
       "text_1": "**HOME ACTIVITIES & CLOSING (10 minutes)**",
       "_translations": {
         "text_1": {}
@@ -284,26 +287,145 @@
       }
     },
     {
-      "id": "intro18",
-      "foreign_key": "sub_item129",
-      "text_1": "Record the following audio message.",
+      "id": "intro47",
+      "foreign_key": "sub_item260",
+      "text_1": "**Preparation**",
       "_translations": {
         "text_1": {},
         "text_2": {}
       },
       "_translatedFields": {
         "text_1": {
-          "eng": "Record the following audio message."
+          "eng": "**Preparation**"
         },
         "text_2": {
-          "eng": "You may want to close your eyes and sit comfortably while you listen to this message.\n\nTake a moment to think about what your lives and children were like before the programme began.\n\nNow think about each of the parts of the ParentChat programme:\n\nSpending One-on-One time with your child\n\nTalking about feelings\n\nKeeping it positive with praise and instructions\n\nInvolving your children in making household rules and daily routines\n\nUsing positive discipline like redirect and consequences\n\nInvolving your children in solving problems\n\nThink about how the things you learned during the programme were different from the way you interacted with your children before the programme.\n\nThink about how you have changed, how your relationship to your children has changed, and how your children’s behaviours have changed.\n\nWhen you are ready, you can open your eyes."
+          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, toys, refreshments for the break (if relevant) are ready.\n2️⃣ You need paper and crayons for the art activity!\n3️⃣ Ensure you have access to music (for the dance party).\n4️⃣ Don’t forget the completion certificates!\n\n5️⃣ Set up the room with chairs in a circle."
         }
       },
-      "text_2": "You may want to close your eyes and sit comfortably while you listen to this message.\n\nTake a moment to think about what your lives and children were like before the programme began.\n\nNow think about each of the parts of the ParentChat programme:\n\nSpending One-on-One time with your child\n\nTalking about feelings\n\nKeeping it positive with praise and instructions\n\nInvolving your children in making household rules and daily routines\n\nUsing positive discipline like redirect and consequences\n\nInvolving your children in solving problems\n\nThink about how the things you learned during the programme were different from the way you interacted with your children before the programme.\n\nThink about how you have changed, how your relationship to your children has changed, and how your children’s behaviours have changed.\n\nWhen you are ready, you can open your eyes."
+      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, toys, refreshments for the break (if relevant) are ready.\n2️⃣ You need paper and crayons for the art activity!\n3️⃣ Ensure you have access to music (for the dance party).\n4️⃣ Don’t forget the completion certificates!\n\n5️⃣ Set up the room with chairs in a circle."
     },
     {
-      "id": "intro19",
-      "foreign_key": "sub_item133",
+      "id": "intro48",
+      "foreign_key": "sub_item261",
+      "text_1": "**Arrange for certificates**\n\nParents who have attended more than 4 sessions automatically qualify. Your supervisor will already see who is eligible on the dashboard and prepare the certificates.",
+      "_translations": {
+        "text_1": {},
+        "text_2": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "**Arrange for certificates**\n\nParents who have attended more than 4 sessions automatically qualify. Your supervisor will already see who is eligible on the dashboard and prepare the certificates."
+        },
+        "text_2": {
+          "eng": "1️⃣ ** Review reports**: Take a quick look at your group’s reports and make sure you have filled the attendance accurately. This helps make sure no parent misses out. \n\n2️⃣ ** Reach out to your supervisor**: Let your supervisor know the program has finished and that parents in your group are ready for certificates. This gives them a heads-up to prepare the files for you.\n\n3️⃣ ** Receive certificates from your supervisor**: Your supervisor will generate the certificates for all eligible parents. Coordinate with your supervisors to receive the physical copies of the certifiecates"
+        }
+      },
+      "text_2": "1️⃣ ** Review reports**: Take a quick look at your group’s reports and make sure you have filled the attendance accurately. This helps make sure no parent misses out. \n\n2️⃣ ** Reach out to your supervisor**: Let your supervisor know the program has finished and that parents in your group are ready for certificates. This gives them a heads-up to prepare the files for you.\n\n3️⃣ ** Receive certificates from your supervisor**: Your supervisor will generate the certificates for all eligible parents. Coordinate with your supervisors to receive the physical copies of the certifiecates"
+    },
+    {
+      "id": "intro49",
+      "foreign_key": "sub_item262",
+      "text_1": "**Session overview**\nTotal Time: 2 hours",
+      "_translations": {
+        "text_1": {},
+        "text_2": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "**Session overview**\nTotal Time: 2 hours"
+        },
+        "text_2": {
+          "eng": "**WELCOME (15 minutes)**\n- Welcome \n- Take a Pause\n- Emotional Check-In\n- Physical exercise\n\n**CORE LESSON: PROGRAMME REFLECTION (30 minutes)**\n- Silent Reflection \n- Art Activity \n- Sharing in Group\n\n**BREAK (10 min)**\n\n**CORE LESSON: MOVING ON (20 minutes)**\n- Story: Stone Soup \n- Discussion: Keeping the momentum moving forward\n- Review: Tips for continuing support\n\n** CLOSING (15 minute)**\n- Loving kindness meditation \n- Ongoing home activities \n\n** CELEBRATION (30 minutes)** \n- Certificates\n- Compliment Circle\n- Emotional check-out\n- Thank and praise families"
+        }
+      },
+      "text_2": "**WELCOME (15 minutes)**\n- Welcome \n- Take a Pause\n- Emotional Check-In\n- Physical exercise\n\n**CORE LESSON: PROGRAMME REFLECTION (30 minutes)**\n- Silent Reflection \n- Art Activity \n- Sharing in Group\n\n**BREAK (10 min)**\n\n**CORE LESSON: MOVING ON (20 minutes)**\n- Story: Stone Soup \n- Discussion: Keeping the momentum moving forward\n- Review: Tips for continuing support\n\n** CLOSING (15 minute)**\n- Loving kindness meditation \n- Ongoing home activities \n\n** CELEBRATION (30 minutes)** \n- Certificates\n- Compliment Circle\n- Emotional check-out\n- Thank and praise families"
+    },
+    {
+      "id": "intro50",
+      "foreign_key": "sub_item263",
+      "text_1": "**WELCOME (15 minutes)**",
+      "_translations": {
+        "text_1": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "**WELCOME (15 minutes)**"
+        }
+      }
+    },
+    {
+      "id": "intro51",
+      "foreign_key": "sub_item264",
+      "text_1": "**CORE LESSON: PROGRAMME REFLECTION (30 minutes)**",
+      "_translations": {
+        "text_1": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "**CORE LESSON: PROGRAMME REFLECTION (30 minutes)**"
+        }
+      }
+    },
+    {
+      "id": "intro52",
+      "foreign_key": "sub_item265",
+      "text_1": "***CORE LESSON: MOVING ON (20 minutes)**",
+      "_translations": {
+        "text_1": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "***CORE LESSON: MOVING ON (20 minutes)**"
+        }
+      }
+    },
+    {
+      "id": "intro53",
+      "foreign_key": "sub_item266",
+      "text_1": "** CLOSING (15 minute)**",
+      "_translations": {
+        "text_1": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "** CLOSING (15 minute)**"
+        }
+      }
+    },
+    {
+      "id": "intro54",
+      "foreign_key": "sub_item267",
+      "text_1": "**CELEBRATION (30 minutes)**",
+      "_translations": {
+        "text_1": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "**CELEBRATION (30 minutes)**"
+        }
+      }
+    },
+    {
+      "id": "intro55",
+      "foreign_key": "sub_item269",
+      "text_1": "At the end of the programme, we celebrate parents’ hard work and commitment by giving them a digital certificate. \n\nParents who have attended more than 4 sessions automatically qualify. Your supervisor will already see who is eligible on the dashboard and prepare the certificates. \n\nYour role is simple but meaningful: you get to personally hand over these certificates and cheer parents on for their achievement!",
+      "_translations": {
+        "text_1": {},
+        "text_2": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "At the end of the programme, we celebrate parents’ hard work and commitment by giving them a digital certificate. \n\nParents who have attended more than 4 sessions automatically qualify. Your supervisor will already see who is eligible on the dashboard and prepare the certificates. \n\nYour role is simple but meaningful: you get to personally hand over these certificates and cheer parents on for their achievement!"
+        },
+        "text_2": {
+          "eng": "1️⃣ ** Review reports**: Take a quick look at your group’s reports and make sure you have filled the attendance accurately. This helps make sure no parent misses out. \n\n2️⃣ ** Reach out to your supervisor**: Let your supervisor know the program has finished and that parents in your group are ready for certificates. This gives them a heads-up to prepare the files for you.\n\n3️⃣ ** Receive certificates from your supervisor**: Your supervisor will generate the certificates for all eligible parents. They’ll share the ready digital copies (PDF or image) with you."
+        }
+      },
+      "text_2": "1️⃣ ** Review reports**: Take a quick look at your group’s reports and make sure you have filled the attendance accurately. This helps make sure no parent misses out. \n\n2️⃣ ** Reach out to your supervisor**: Let your supervisor know the program has finished and that parents in your group are ready for certificates. This gives them a heads-up to prepare the files for you.\n\n3️⃣ ** Receive certificates from your supervisor**: Your supervisor will generate the certificates for all eligible parents. They’ll share the ready digital copies (PDF or image) with you."
+    },
+    {
+      "id": "intro56",
+      "foreign_key": "sub_item271",
       "text_1": "At this stage, please introduce the new administrator of the group. If time permits, suggest that the group make a concrete plan about when they would next like to meet.",
       "_translations": {
         "text_1": {}
