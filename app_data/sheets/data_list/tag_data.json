@@ -3,56 +3,7 @@
   "flow_name": "tag_data",
   "status": "released",
   "data_list_name": "tag",
-  "rows": [
-    {
-      "id": "inperson_inperson",
-      "title": "In-person Onboarding & Closing Session",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "In-person Onboarding & Closing Session"
-        }
-      }
-    },
-    {
-      "id": "inperson_remote",
-      "title": "In-person Onboarding & Remote Closing Session",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "In-person Onboarding & Remote Closing Session"
-        }
-      }
-    },
-    {
-      "id": "remote_inperson",
-      "title": "Remote Onboarding & In-person Closing Session",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Remote Onboarding & In-person Closing Session"
-        }
-      }
-    },
-    {
-      "id": "remote_remote",
-      "title": "Remote Onboarding & Closing Session",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Remote Onboarding & Closing Session"
-        }
-      }
-    }
-  ],
+  "rows": [],
   "_xlsxPath": "data/articles_CW.xlsx",
   "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

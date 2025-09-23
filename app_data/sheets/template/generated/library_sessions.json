@@ -1,5 +1,5 @@
 {
-  "flow_name": "library_facilitation",
+  "flow_name": "library_sessions",
   "flow_subtype": "generated",
   "flow_type": "template",
   "rows": [
@@ -22,7 +22,7 @@
       "rows": [
         {
           "name": "library_id",
-          "value": "facilitation",
+          "value": "sessions",
           "_translations": {
             "value": {}
           },
@@ -32,7 +32,7 @@
         },
         {
           "name": "display_title",
-          "value": "Facilitation skills",
+          "value": "Session preparation",
           "_translations": {
             "value": {}
           },

@@ -152,77 +152,80 @@
       "_nested_name": "set_variable_11"
     },
     {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_12",
-      "_nested_name": "set_variable_12"
-    },
-    {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_13",
-      "_nested_name": "set_variable_13"
-    },
-    {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_14",
-      "_nested_name": "set_variable_14"
-    },
-    {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_15",
-      "_nested_name": "set_variable_15"
-    },
-    {
-      "type": "text_box",
-      "name": "text_box",
-      "value": "@fields.current_group_name",
+      "type": "text",
+      "name": "text_group_name",
+      "value": "Group Status",
       "_translations": {
         "value": {}
       },
       "parameter_list": {
-        "placeholder": "@local.text_group_name"
+        "style": "emphasised"
       },
+      "_nested_name": "text_group_name"
+    },
+    {
+      "type": "text",
+      "value": "before: @fields.current_group_no",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
       "exclude_from_translation": true,
-      "_nested_name": "text_box",
+      "name": "text_13",
+      "_nested_name": "text_13",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@fields.current_group_name",
-            "matchedExpression": "@fields.current_group_name",
+            "fullExpression": "before: @fields.current_group_no",
+            "matchedExpression": "@fields.current_group_no",
             "type": "fields",
-            "fieldName": "current_group_name"
+            "fieldName": "current_group_no"
           }
-        ],
-        "parameter_list": {
-          "placeholder": [
-            {
-              "fullExpression": "@local.text_group_name",
-              "matchedExpression": "@local.text_group_name",
-              "type": "local",
-              "fieldName": "text_group_name"
-            }
-          ]
-        }
+        ]
       },
       "_dynamicDependencies": {
-        "@fields.current_group_name": [
+        "@fields.current_group_no": [
           "value"
-        ],
-        "@local.text_group_name": [
-          "parameter_list.placeholder"
         ]
       }
     },
     {
-      "type": "template",
-      "name": "parent_list",
-      "value": "parent_list",
+      "type": "text",
+      "name": "text_group_name",
+      "value": "Danger Zone",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "style": "emphasised"
+      },
+      "_nested_name": "text_group_name"
+    },
+    {
+      "type": "text",
+      "value": "before: @fields.current_group_no",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
       "exclude_from_translation": true,
-      "rows": [],
-      "_nested_name": "parent_list"
+      "name": "text_15",
+      "_nested_name": "text_15",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "before: @fields.current_group_no",
+            "matchedExpression": "@fields.current_group_no",
+            "type": "fields",
+            "fieldName": "current_group_no"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.current_group_no": [
+          "value"
+        ]
+      }
     },
     {
       "type": "display_group",
@@ -277,7 +280,7 @@
           "parameter_list": {
             "variant": "card"
           },
-          "_nested_name": "display_group_19.save",
+          "_nested_name": "display_group_16.save",
           "_dynamicFields": {
             "action_list": {
               "0": {
@@ -344,8 +347,8 @@
           }
         }
       ],
-      "name": "display_group_19",
-      "_nested_name": "display_group_19",
+      "name": "display_group_16",
+      "_nested_name": "display_group_16",
       "_dynamicFields": {
         "condition": [
           {
@@ -363,6 +366,6 @@
       }
     }
   ],
-  "_xlsxPath": "templates/parent groups.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_xlsxPath": "templates/Parent Groups CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

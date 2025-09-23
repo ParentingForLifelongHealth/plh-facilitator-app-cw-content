@@ -54,6 +54,7 @@
           "_cleaned": "data_changed | set_local : pdf_title: @items[0].title"
         }
       ],
+      "exclude_from_translation": true,
       "name": "data_items_5",
       "_nested_name": "data_items_5",
       "_dynamicFields": {
