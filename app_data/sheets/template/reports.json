@@ -233,316 +233,482 @@
       "condition": "@local.report_group",
       "rows": [
         {
-          "type": "items",
+          "type": "data_items",
           "value": "@data.modules",
+          "parameter_list": {
+            "filter": "!!@item.report_id"
+          },
           "exclude_from_translation": true,
           "rows": [
             {
-              "name": "packages",
-              "value": "ALL",
-              "_translations": {
-                "value": {}
+              "type": "display_group",
+              "name": "no_packages",
+              "parameter_list": {
+                "style": "column"
               },
-              "condition": "!@item.tag_list || !@global.has_multiple_content_packages",
+              "condition": "!@global.has_multiple_content_packages",
               "exclude_from_translation": true,
-              "type": "set_variable",
-              "_nested_name": "display_group_5.items_1.packages",
-              "_dynamicFields": {
-                "condition": [
-                  {
-                    "fullExpression": "!@item.tag_list || !@global.has_multiple_content_packages",
-                    "matchedExpression": "!@item.tag_list",
-                    "type": "item",
-                    "fieldName": "tag_list"
-                  },
-                  {
-                    "fullExpression": "!@item.tag_list || !@global.has_multiple_content_packages",
-                    "matchedExpression": "!@global.has_multiple_content_packages",
-                    "type": "global",
-                    "fieldName": "has_multiple_content_packages"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "!@item.tag_list": [
-                  "condition"
-                ],
-                "!@global.has_multiple_content_packages": [
-                  "condition"
-                ]
-              }
-            },
-            {
-              "name": "condition_package",
-              "value": true,
-              "condition": "!@item.tag_list || !@global.has_multiple_content_packages",
-              "type": "set_variable",
-              "_nested_name": "display_group_5.items_1.condition_package",
-              "_dynamicFields": {
-                "condition": [
-                  {
-                    "fullExpression": "!@item.tag_list || !@global.has_multiple_content_packages",
-                    "matchedExpression": "!@item.tag_list",
-                    "type": "item",
-                    "fieldName": "tag_list"
-                  },
-                  {
-                    "fullExpression": "!@item.tag_list || !@global.has_multiple_content_packages",
-                    "matchedExpression": "!@global.has_multiple_content_packages",
-                    "type": "global",
-                    "fieldName": "has_multiple_content_packages"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "!@item.tag_list": [
-                  "condition"
-                ],
-                "!@global.has_multiple_content_packages": [
-                  "condition"
-                ]
-              }
-            },
-            {
-              "name": "packages",
-              "value": "@item.tag_list",
-              "_translations": {
-                "value": {}
-              },
-              "condition": "!!@item.tag_list && @global.has_multiple_content_packages",
-              "type": "set_variable",
-              "_nested_name": "display_group_5.items_1.packages",
-              "_dynamicFields": {
-                "value": [
-                  {
-                    "fullExpression": "@item.tag_list",
-                    "matchedExpression": "@item.tag_list",
-                    "type": "item",
-                    "fieldName": "tag_list"
-                  }
-                ],
-                "condition": [
-                  {
-                    "fullExpression": "!!@item.tag_list && @global.has_multiple_content_packages",
-                    "matchedExpression": "!@item.tag_list",
-                    "type": "item",
-                    "fieldName": "tag_list"
-                  },
-                  {
-                    "fullExpression": "!!@item.tag_list && @global.has_multiple_content_packages",
-                    "matchedExpression": "@global.has_multiple_content_packages",
-                    "type": "global",
-                    "fieldName": "has_multiple_content_packages"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@item.tag_list": [
-                  "value"
-                ],
-                "!@item.tag_list": [
-                  "condition"
-                ],
-                "@global.has_multiple_content_packages": [
-                  "condition"
-                ]
-              }
-            },
-            {
-              "name": "condition_package",
-              "value": "@calc(@local.packages.includes(@fields.current_package))",
-              "_translations": {
-                "value": {}
-              },
-              "condition": "!!@item.tag_list && @global.has_multiple_content_packages",
-              "type": "set_variable",
-              "_nested_name": "display_group_5.items_1.condition_package",
-              "_dynamicFields": {
-                "value": [
-                  {
-                    "fullExpression": "@calc(@local.packages.includes(@fields.current_package))",
-                    "matchedExpression": "@local.packages.includes",
-                    "type": "local",
-                    "fieldName": "packages"
-                  },
-                  {
-                    "fullExpression": "@calc(@local.packages.includes(@fields.current_package))",
-                    "matchedExpression": "@fields.current_package",
-                    "type": "fields",
-                    "fieldName": "current_package"
-                  },
-                  {
-                    "fullExpression": "@calc(@local.packages.includes(@fields.current_package))",
-                    "matchedExpression": "@calc(@local.packages.includes(@fields.current_package))",
-                    "type": "calc",
-                    "fieldName": "@local.packages.includes(@fields.current_package)"
-                  }
-                ],
-                "condition": [
-                  {
-                    "fullExpression": "!!@item.tag_list && @global.has_multiple_content_packages",
-                    "matchedExpression": "!@item.tag_list",
-                    "type": "item",
-                    "fieldName": "tag_list"
-                  },
-                  {
-                    "fullExpression": "!!@item.tag_list && @global.has_multiple_content_packages",
-                    "matchedExpression": "@global.has_multiple_content_packages",
-                    "type": "global",
-                    "fieldName": "has_multiple_content_packages"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@local.packages.includes": [
-                  "value"
-                ],
-                "@fields.current_package": [
-                  "value"
-                ],
-                "@calc(@local.packages.includes(@fields.current_package))": [
-                  "value"
-                ],
-                "!@item.tag_list": [
-                  "condition"
-                ],
-                "@global.has_multiple_content_packages": [
-                  "condition"
-                ]
-              }
-            },
-            {
-              "type": "template",
-              "name": "report_card",
-              "value": "report_card",
-              "condition": "@local.condition_package && @item.report_id",
               "rows": [
                 {
-                  "name": "group_id",
-                  "value": "@local.report_group",
-                  "_translations": {
-                    "value": {}
+                  "type": "template",
+                  "name": "report_card",
+                  "value": "report_card",
+                  "exclude_from_translation": true,
+                  "rows": [
+                    {
+                      "name": "group_id",
+                      "value": "@local.report_group",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "exclude_from_translation": true,
+                      "type": "set_variable",
+                      "_nested_name": "display_group_5.data_items_1.no_packages.report_card.group_id",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@local.report_group",
+                            "matchedExpression": "@local.report_group",
+                            "type": "local",
+                            "fieldName": "report_group"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@local.report_group": [
+                          "value"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "module_id",
+                      "value": "@item.id",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "exclude_from_translation": true,
+                      "type": "set_variable",
+                      "_nested_name": "display_group_5.data_items_1.no_packages.report_card.module_id",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.id",
+                            "matchedExpression": "@item.id",
+                            "type": "item",
+                            "fieldName": "id"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.id": [
+                          "value"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "module_name",
+                      "value": "@item.title",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "exclude_from_translation": true,
+                      "type": "set_variable",
+                      "_nested_name": "display_group_5.data_items_1.no_packages.report_card.module_name",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.title",
+                            "matchedExpression": "@item.title",
+                            "type": "item",
+                            "fieldName": "title"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.title": [
+                          "value"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "report_id",
+                      "value": "@item.report_id",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "exclude_from_translation": true,
+                      "type": "set_variable",
+                      "_nested_name": "display_group_5.data_items_1.no_packages.report_card.report_id",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.report_id",
+                            "matchedExpression": "@item.report_id",
+                            "type": "item",
+                            "fieldName": "report_id"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.report_id": [
+                          "value"
+                        ]
+                      }
+                    }
+                  ],
+                  "_nested_name": "display_group_5.data_items_1.no_packages.report_card"
+                }
+              ],
+              "_nested_name": "display_group_5.data_items_1.no_packages",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "!@global.has_multiple_content_packages",
+                    "matchedExpression": "!@global.has_multiple_content_packages",
+                    "type": "global",
+                    "fieldName": "has_multiple_content_packages"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "!@global.has_multiple_content_packages": [
+                  "condition"
+                ]
+              }
+            },
+            {
+              "type": "display_group",
+              "name": "has_packages",
+              "parameter_list": {
+                "style": "column"
+              },
+              "condition": "@global.has_multiple_content_packages",
+              "exclude_from_translation": true,
+              "rows": [
+                {
+                  "type": "display_group",
+                  "name": "no_tag",
+                  "parameter_list": {
+                    "style": "column"
                   },
-                  "type": "set_variable",
-                  "_nested_name": "display_group_5.items_1.report_card.group_id",
+                  "condition": "@item.tag_list == \"ALL\" || !@item.tag_list",
+                  "exclude_from_translation": true,
+                  "rows": [
+                    {
+                      "type": "template",
+                      "name": "report_card",
+                      "value": "report_card",
+                      "rows": [
+                        {
+                          "name": "group_id",
+                          "value": "@local.report_group",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "display_group_5.data_items_1.has_packages.no_tag.report_card.group_id",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@local.report_group",
+                                "matchedExpression": "@local.report_group",
+                                "type": "local",
+                                "fieldName": "report_group"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@local.report_group": [
+                              "value"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "module_id",
+                          "value": "@item.id",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "display_group_5.data_items_1.has_packages.no_tag.report_card.module_id",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@item.id",
+                                "matchedExpression": "@item.id",
+                                "type": "item",
+                                "fieldName": "id"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.id": [
+                              "value"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "module_name",
+                          "value": "@item.title",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "display_group_5.data_items_1.has_packages.no_tag.report_card.module_name",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@item.title",
+                                "matchedExpression": "@item.title",
+                                "type": "item",
+                                "fieldName": "title"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.title": [
+                              "value"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "report_id",
+                          "value": "@item.report_id",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "display_group_5.data_items_1.has_packages.no_tag.report_card.report_id",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@item.report_id",
+                                "matchedExpression": "@item.report_id",
+                                "type": "item",
+                                "fieldName": "report_id"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.report_id": [
+                              "value"
+                            ]
+                          }
+                        }
+                      ],
+                      "_nested_name": "display_group_5.data_items_1.has_packages.no_tag.report_card"
+                    }
+                  ],
+                  "_nested_name": "display_group_5.data_items_1.has_packages.no_tag",
                   "_dynamicFields": {
-                    "value": [
+                    "condition": [
                       {
-                        "fullExpression": "@local.report_group",
-                        "matchedExpression": "@local.report_group",
-                        "type": "local",
-                        "fieldName": "report_group"
+                        "fullExpression": "@item.tag_list == \"ALL\" || !@item.tag_list",
+                        "matchedExpression": "@item.tag_list",
+                        "type": "item",
+                        "fieldName": "tag_list"
+                      },
+                      {
+                        "fullExpression": "@item.tag_list == \"ALL\" || !@item.tag_list",
+                        "matchedExpression": "!@item.tag_list",
+                        "type": "item",
+                        "fieldName": "tag_list"
                       }
                     ]
                   },
                   "_dynamicDependencies": {
-                    "@local.report_group": [
-                      "value"
+                    "@item.tag_list": [
+                      "condition"
+                    ],
+                    "!@item.tag_list": [
+                      "condition"
                     ]
                   }
                 },
                 {
-                  "name": "module_id",
-                  "value": "@item.id",
-                  "_translations": {
-                    "value": {}
+                  "type": "display_group",
+                  "name": "has_tag",
+                  "parameter_list": {
+                    "style": "column"
                   },
-                  "type": "set_variable",
-                  "_nested_name": "display_group_5.items_1.report_card.module_id",
+                  "condition": "@item.tag_list !== \"ALL\" && @item.tag_list",
+                  "exclude_from_translation": true,
+                  "rows": [
+                    {
+                      "type": "template",
+                      "name": "report_card",
+                      "value": "report_card",
+                      "condition": "@item.tag_list.includes(@fields.current_package)",
+                      "rows": [
+                        {
+                          "name": "group_id",
+                          "value": "@local.report_group",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "display_group_5.data_items_1.has_packages.has_tag.report_card.group_id",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@local.report_group",
+                                "matchedExpression": "@local.report_group",
+                                "type": "local",
+                                "fieldName": "report_group"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@local.report_group": [
+                              "value"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "module_id",
+                          "value": "@item.id",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "display_group_5.data_items_1.has_packages.has_tag.report_card.module_id",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@item.id",
+                                "matchedExpression": "@item.id",
+                                "type": "item",
+                                "fieldName": "id"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.id": [
+                              "value"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "module_name",
+                          "value": "@item.title",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "display_group_5.data_items_1.has_packages.has_tag.report_card.module_name",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@item.title",
+                                "matchedExpression": "@item.title",
+                                "type": "item",
+                                "fieldName": "title"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.title": [
+                              "value"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "report_id",
+                          "value": "@item.report_id",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "display_group_5.data_items_1.has_packages.has_tag.report_card.report_id",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@item.report_id",
+                                "matchedExpression": "@item.report_id",
+                                "type": "item",
+                                "fieldName": "report_id"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.report_id": [
+                              "value"
+                            ]
+                          }
+                        }
+                      ],
+                      "_nested_name": "display_group_5.data_items_1.has_packages.has_tag.report_card",
+                      "_dynamicFields": {
+                        "condition": [
+                          {
+                            "fullExpression": "@item.tag_list.includes(@fields.current_package)",
+                            "matchedExpression": "@item.tag_list.includes",
+                            "type": "item",
+                            "fieldName": "tag_list"
+                          },
+                          {
+                            "fullExpression": "@item.tag_list.includes(@fields.current_package)",
+                            "matchedExpression": "@fields.current_package",
+                            "type": "fields",
+                            "fieldName": "current_package"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.tag_list.includes": [
+                          "condition"
+                        ],
+                        "@fields.current_package": [
+                          "condition"
+                        ]
+                      }
+                    }
+                  ],
+                  "_nested_name": "display_group_5.data_items_1.has_packages.has_tag",
                   "_dynamicFields": {
-                    "value": [
+                    "condition": [
                       {
-                        "fullExpression": "@item.id",
-                        "matchedExpression": "@item.id",
+                        "fullExpression": "@item.tag_list !== \"ALL\" && @item.tag_list",
+                        "matchedExpression": "@item.tag_list",
                         "type": "item",
-                        "fieldName": "id"
+                        "fieldName": "tag_list"
+                      },
+                      {
+                        "fullExpression": "@item.tag_list !== \"ALL\" && @item.tag_list",
+                        "matchedExpression": "@item.tag_list",
+                        "type": "item",
+                        "fieldName": "tag_list"
                       }
                     ]
                   },
                   "_dynamicDependencies": {
-                    "@item.id": [
-                      "value"
-                    ]
-                  }
-                },
-                {
-                  "name": "module_name",
-                  "value": "@item.title",
-                  "_translations": {
-                    "value": {}
-                  },
-                  "type": "set_variable",
-                  "_nested_name": "display_group_5.items_1.report_card.module_name",
-                  "_dynamicFields": {
-                    "value": [
-                      {
-                        "fullExpression": "@item.title",
-                        "matchedExpression": "@item.title",
-                        "type": "item",
-                        "fieldName": "title"
-                      }
-                    ]
-                  },
-                  "_dynamicDependencies": {
-                    "@item.title": [
-                      "value"
-                    ]
-                  }
-                },
-                {
-                  "name": "report_id",
-                  "value": "@item.report_id",
-                  "_translations": {
-                    "value": {}
-                  },
-                  "type": "set_variable",
-                  "_nested_name": "display_group_5.items_1.report_card.report_id",
-                  "_dynamicFields": {
-                    "value": [
-                      {
-                        "fullExpression": "@item.report_id",
-                        "matchedExpression": "@item.report_id",
-                        "type": "item",
-                        "fieldName": "report_id"
-                      }
-                    ]
-                  },
-                  "_dynamicDependencies": {
-                    "@item.report_id": [
-                      "value"
+                    "@item.tag_list": [
+                      "condition",
+                      "condition"
                     ]
                   }
                 }
               ],
-              "_nested_name": "display_group_5.items_1.report_card",
+              "_nested_name": "display_group_5.data_items_1.has_packages",
               "_dynamicFields": {
                 "condition": [
                   {
-                    "fullExpression": "@local.condition_package && @item.report_id",
-                    "matchedExpression": "@local.condition_package",
-                    "type": "local",
-                    "fieldName": "condition_package"
-                  },
-                  {
-                    "fullExpression": "@local.condition_package && @item.report_id",
-                    "matchedExpression": "@item.report_id",
-                    "type": "item",
-                    "fieldName": "report_id"
+                    "fullExpression": "@global.has_multiple_content_packages",
+                    "matchedExpression": "@global.has_multiple_content_packages",
+                    "type": "global",
+                    "fieldName": "has_multiple_content_packages"
                   }
                 ]
               },
               "_dynamicDependencies": {
-                "@local.condition_package": [
-                  "condition"
-                ],
-                "@item.report_id": [
+                "@global.has_multiple_content_packages": [
                   "condition"
                 ]
               }
             }
           ],
-          "name": "items_1",
-          "_nested_name": "display_group_5.items_1",
+          "name": "data_items_1",
+          "_nested_name": "display_group_5.data_items_1",
           "_dynamicFields": {
             "value": [
               {
@@ -551,11 +717,24 @@
                 "type": "data",
                 "fieldName": "modules"
               }
-            ]
+            ],
+            "parameter_list": {
+              "filter": [
+                {
+                  "fullExpression": "!!@item.report_id",
+                  "matchedExpression": "!@item.report_id",
+                  "type": "item",
+                  "fieldName": "report_id"
+                }
+              ]
+            }
           },
           "_dynamicDependencies": {
             "@data.modules": [
               "value"
+            ],
+            "!@item.report_id": [
+              "parameter_list.filter"
             ]
           }
         }

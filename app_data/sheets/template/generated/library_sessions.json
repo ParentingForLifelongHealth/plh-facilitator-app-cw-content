@@ -1,12 +1,12 @@
 {
-  "flow_name": "library_article_prog_4",
+  "flow_name": "library_sessions",
   "flow_subtype": "generated",
   "flow_type": "template",
   "rows": [
     {
       "type": "template",
-      "name": "library_article",
-      "value": "library_article",
+      "name": "library_list",
+      "value": "library_list",
       "action_list": [
         {
           "trigger": "uncompleted",
@@ -21,17 +21,27 @@
       "exclude_from_translation": true,
       "rows": [
         {
-          "name": "article_id",
-          "value": "prog_4",
+          "name": "library_id",
+          "value": "sessions",
           "_translations": {
             "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",
-          "_nested_name": "library_article.article_id"
+          "_nested_name": "library_list.library_id"
+        },
+        {
+          "name": "display_title",
+          "value": "Session preparation",
+          "_translations": {
+            "value": {}
+          },
+          "exclude_from_translation": true,
+          "type": "set_variable",
+          "_nested_name": "library_list.display_title"
         }
       ],
-      "_nested_name": "library_article"
+      "_nested_name": "library_list"
     }
   ]
 }

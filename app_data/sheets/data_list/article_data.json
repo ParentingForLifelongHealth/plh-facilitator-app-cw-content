@@ -5,7 +5,25 @@
   "data_list_name": "article_data",
   "rows": [
     {
-      "id": "prog_1",
+      "id": "about_prog",
+      "section": "programme",
+      "title": "@global.prog_name Overview",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "@global.prog_name Overview"
+        },
+        "related_articles_title": {
+          "eng": "Next"
+        }
+      },
+      "related_articles_title": "Next"
+    },
+    {
+      "id": "about_app",
       "section": "programme",
       "title": "Who is this @global.app_name for?",
       "_translations": {
@@ -18,25 +36,7 @@
       }
     },
     {
-      "id": "prog_2",
-      "section": "programme",
-      "title": "About @global.prog_name",
-      "_translations": {
-        "title": {},
-        "related_articles_title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "About @global.prog_name"
-        },
-        "related_articles_title": {
-          "eng": "Next"
-        }
-      },
-      "related_articles_title": "Next"
-    },
-    {
-      "id": "prog_3",
+      "id": "prog_develop",
       "section": "programme",
       "title": "Who developed @global.prog_name?",
       "_translations": {
@@ -54,16 +54,16 @@
       "related_articles_title": "Next"
     },
     {
-      "id": "prog_4",
+      "id": "prog_goals",
       "section": "programme",
-      "title": "What is @global.prog_name aiming to do?",
+      "title": "@global.prog_name goals",
       "_translations": {
         "title": {},
         "related_articles_title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "What is @global.prog_name aiming to do?"
+          "eng": "@global.prog_name goals"
         },
         "related_articles_title": {
           "eng": "Next"
@@ -72,16 +72,16 @@
       "related_articles_title": "Next"
     },
     {
-      "id": "prog_5",
+      "id": "prog_delivery",
       "section": "programme",
-      "title": "Programme Overview",
+      "title": "How is the programme delivered?",
       "_translations": {
         "title": {},
         "related_articles_title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Programme Overview"
+          "eng": "How is the programme delivered?"
         },
         "related_articles_title": {
           "eng": "Next"
@@ -90,7 +90,25 @@
       "related_articles_title": "Next"
     },
     {
-      "id": "prog_6",
+      "id": "prog_content",
+      "section": "programme",
+      "title": "Programme Content",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Programme Content"
+        },
+        "related_articles_title": {
+          "eng": "Next"
+        }
+      },
+      "related_articles_title": "Next"
+    },
+    {
+      "id": "prog_work",
       "section": "programme",
       "title": "How @global.prog_name works?",
       "_translations": {
@@ -103,178 +121,16 @@
       }
     },
     {
-      "id": "what_is_safeguarding",
-      "section": "safeguarding",
-      "title": "What is Safeguarding?",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "What is Safeguarding?"
-        }
-      }
-    },
-    {
-      "id": "during_disclosed_abuse",
-      "section": "safeguarding",
-      "title": "What should I do during the disclosure of abuse, neglect, or exploitation?",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "What should I do during the disclosure of abuse, neglect, or exploitation?"
-        }
-      }
-    },
-    {
-      "id": "after_disclosed_abuse",
-      "section": "safeguarding",
-      "title": "What can I do after a participant discloses abuse, neglect or exploitation?",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "What can I do after a participant discloses abuse, neglect or exploitation?"
-        }
-      }
-    },
-    {
-      "id": "how_to_report_abuse",
-      "section": "safeguarding",
-      "title": "How should I report abuse?",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "How should I report abuse?"
-        }
-      }
-    },
-    {
-      "id": "contact_for_reporting_abuse",
-      "section": "safeguarding",
-      "title": "How should I report abuse?",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "How should I report abuse?"
-        }
-      }
-    },
-    {
-      "id": "crisis_hotlines",
-      "section": "safeguarding",
-      "title": "Crisis Hotlines",
-      "_translations": {
-        "title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Crisis Hotlines"
-        }
-      }
-    },
-    {
-      "id": "programme_structure_in_in",
+      "id": "individual_consultation",
       "section": "guide",
-      "tag_list": [
-        "inperson_inperson"
-      ],
-      "title": "Programme Structure",
+      "title": "Getting started with your caregiver group",
       "_translations": {
         "title": {},
         "related_articles_title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Programme Structure"
-        },
-        "related_articles_title": {
-          "eng": "Next:"
-        }
-      },
-      "related_articles_title": "Next:"
-    },
-    {
-      "id": "programme_structure_in_remote",
-      "section": "guide",
-      "tag_list": [
-        "inperson_remote"
-      ],
-      "title": "Programme Structure",
-      "_translations": {
-        "title": {},
-        "related_articles_title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Programme Structure"
-        },
-        "related_articles_title": {
-          "eng": "Next:"
-        }
-      },
-      "related_articles_title": "Next:"
-    },
-    {
-      "id": "programme_structure_remote_in",
-      "section": "guide",
-      "tag_list": [
-        "remote_inperson"
-      ],
-      "title": "Programme Structure",
-      "_translations": {
-        "title": {},
-        "related_articles_title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Programme Structure"
-        },
-        "related_articles_title": {
-          "eng": "Next:"
-        }
-      },
-      "related_articles_title": "Next:"
-    },
-    {
-      "id": "programme_structure_remote_remote",
-      "section": "guide",
-      "tag_list": [
-        "remote_remote"
-      ],
-      "title": "Programme Structure",
-      "_translations": {
-        "title": {},
-        "related_articles_title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Programme Structure"
-        },
-        "related_articles_title": {
-          "eng": "Next:"
-        }
-      },
-      "related_articles_title": "Next:"
-    },
-    {
-      "id": "prepare",
-      "section": "guide",
-      "title": "Prepare for Each Day",
-      "_translations": {
-        "title": {},
-        "related_articles_title": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Prepare for Each Day"
+          "eng": "Getting started with your caregiver group"
         },
         "related_articles_title": {
           "eng": "Next:"
@@ -303,12 +159,7 @@
     {
       "id": "in_person_session",
       "section": "guide",
-      "tag_list": [
-        "inperson_inperson",
-        "inperson_remote",
-        "remote_inperson"
-      ],
-      "title": "Deliver In-person Session",
+      "title": "Prepare for in-person sessions",
       "_translations": {
         "title": {},
         "related_articles_title": {},
@@ -316,7 +167,7 @@
       },
       "_translatedFields": {
         "title": {
-          "eng": "Deliver In-person Session"
+          "eng": "Prepare for in-person sessions"
         },
         "related_articles_title": {
           "eng": "Next:"
@@ -329,16 +180,34 @@
       "sections_title": "Tips for effective facilitation of in-person sessions"
     },
     {
-      "id": "lesson_content",
+      "id": "prepare",
       "section": "guide",
-      "title": "Deliver Lesson Content",
+      "title": "Prepare for Each Day",
       "_translations": {
         "title": {},
         "related_articles_title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Deliver Lesson Content"
+          "eng": "Prepare for Each Day"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "lesson_content",
+      "section": "guide",
+      "title": "Deliver Watch and Try",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Deliver Watch and Try"
         },
         "related_articles_title": {
           "eng": "Next:"
@@ -367,14 +236,14 @@
     {
       "id": "live_chat_session",
       "section": "guide",
-      "title": "Deliver Live Chat Session",
+      "title": "Deliver Let’s Connect",
       "_translations": {
         "title": {},
         "related_articles_title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Deliver Live Chat Session"
+          "eng": "Deliver Let’s Connect"
         },
         "related_articles_title": {
           "eng": "Next:"
@@ -396,8 +265,57 @@
       }
     },
     {
-      "id": "facilitation_overview",
+      "id": "handover_group_admin",
       "section": "guide",
+      "title": "How to handover your caregiver group",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "How to handover your caregiver group"
+        }
+      }
+    },
+    {
+      "id": "faq_h_after_group_ended",
+      "title": "If parents or group admin reach out to you after the group has ended.",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "If parents or group admin reach out to you after the group has ended."
+        }
+      }
+    },
+    {
+      "id": "faq_h_prompts",
+      "title": "Chat session prompts for new group admin",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Chat session prompts for new group admin"
+        }
+      }
+    },
+    {
+      "id": "faq_h_no_volunteers",
+      "title": "No one volunteered to be group admin",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "No one volunteered to be group admin"
+        }
+      }
+    },
+    {
+      "id": "facilitation_overview",
+      "section": "facilitation",
       "title": "Effective Facilitation Skills Overview",
       "_translations": {
         "title": {}
@@ -541,6 +459,280 @@
       "_translatedFields": {
         "title": {
           "eng": "8️⃣ Lastly, have fun!"
+        }
+      }
+    },
+    {
+      "id": "what_is_safeguarding",
+      "section": "safeguarding",
+      "title": "What is Safeguarding?",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "What is Safeguarding?"
+        },
+        "related_articles_title": {
+          "eng": "Next"
+        }
+      },
+      "related_articles_title": "Next"
+    },
+    {
+      "id": "during_disclosed_abuse",
+      "section": "safeguarding",
+      "title": "What should I do during the disclosure of abuse, neglect, or exploitation?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "What should I do during the disclosure of abuse, neglect, or exploitation?"
+        }
+      }
+    },
+    {
+      "id": "after_disclosed_abuse",
+      "section": "safeguarding",
+      "title": "What can I do after a participant discloses abuse, neglect or exploitation?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "What can I do after a participant discloses abuse, neglect or exploitation?"
+        }
+      }
+    },
+    {
+      "id": "how_to_report_abuse",
+      "section": "safeguarding",
+      "title": "How should I report abuse?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "How should I report abuse?"
+        }
+      }
+    },
+    {
+      "id": "crisis_hotlines",
+      "section": "safeguarding",
+      "title": "Crisis Hotlines",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Crisis Hotlines"
+        }
+      }
+    },
+    {
+      "id": "module_1_prepare",
+      "section": "sessions",
+      "title": "One-on-one time",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "One-on-one time"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        }
+      },
+      "related_articles_title": "Next:"
+    },
+    {
+      "id": "module_2_prepare",
+      "section": "sessions",
+      "title": "Talking about feelings",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {},
+        "sections_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about feelings"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        },
+        "sections_title": {
+          "eng": "Key issues to be aware of:"
+        }
+      },
+      "related_articles_title": "Next:",
+      "sections_title": "Key issues to be aware of:"
+    },
+    {
+      "id": "module_3_prepare",
+      "section": "sessions",
+      "title": "Keeping it positive",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {},
+        "sections_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keeping it positive"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        },
+        "sections_title": {
+          "eng": "Key issues to be aware of:"
+        }
+      },
+      "related_articles_title": "Next:",
+      "sections_title": "Key issues to be aware of:"
+    },
+    {
+      "id": "module_4_prepare",
+      "section": "sessions",
+      "title": "Rules and routines",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {},
+        "sections_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Rules and routines"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        },
+        "sections_title": {
+          "eng": "Key issues to be aware of:"
+        }
+      },
+      "related_articles_title": "Next:",
+      "sections_title": "Key issues to be aware of:"
+    },
+    {
+      "id": "module_5_prepare",
+      "section": "sessions",
+      "title": "Positive Discipline",
+      "_translations": {
+        "title": {},
+        "related_articles_title": {},
+        "sections_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Positive Discipline"
+        },
+        "related_articles_title": {
+          "eng": "Next:"
+        },
+        "sections_title": {
+          "eng": "Key issues to be aware of:"
+        }
+      },
+      "related_articles_title": "Next:",
+      "sections_title": "Key issues to be aware of:"
+    },
+    {
+      "id": "module_6_prepare",
+      "section": "sessions",
+      "title": "Problem solving with children and final reflection",
+      "_translations": {
+        "title": {},
+        "sections_title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Problem solving with children and final reflection"
+        },
+        "sections_title": {
+          "eng": "Key issues to be aware of:"
+        }
+      },
+      "sections_title": "Key issues to be aware of:"
+    },
+    {
+      "id": "faq_h_still_struggling",
+      "title": "Participants share that the programme was not helpful or that they are still struggling",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Participants share that the programme was not helpful or that they are still struggling"
+        }
+      }
+    },
+    {
+      "id": "faq_h_sad_to_end",
+      "title": "Parents are feeling concerned, stressed or sad as the programme comes to an end.",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Parents are feeling concerned, stressed or sad as the programme comes to an end."
+        }
+      }
+    },
+    {
+      "id": "faq_ground_rules",
+      "section": "faq",
+      "title": "A parent cannot commit to the ground rules.",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "A parent cannot commit to the ground rules."
+        }
+      }
+    },
+    {
+      "id": "faq_misbehaviour",
+      "section": "faq",
+      "title": "A parent is personally messaging me or calling me with lots of questions on their parenting habits or child’s misbehaviours.",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "A parent is personally messaging me or calling me with lots of questions on their parenting habits or child’s misbehaviours."
+        }
+      }
+    },
+    {
+      "id": "faq_small_group_active",
+      "section": "faq",
+      "title": "Only a small group of parents are actively participating in the chat sessions, while other parents are not responding.",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Only a small group of parents are actively participating in the chat sessions, while other parents are not responding."
+        }
+      }
+    },
+    {
+      "id": "faq_no_participation_general",
+      "section": "faq",
+      "title": "What if no one participates?",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "What if no one participates?"
         }
       }
     }
