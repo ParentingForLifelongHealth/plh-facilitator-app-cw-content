@@ -1,12 +1,12 @@
 {
-  "flow_name": "library_facilitation",
+  "flow_name": "library_article_faq_h_still_struggling",
   "flow_subtype": "generated",
   "flow_type": "template",
   "rows": [
     {
       "type": "template",
-      "name": "library_list",
-      "value": "library_list",
+      "name": "library_article",
+      "value": "library_article",
       "action_list": [
         {
           "trigger": "uncompleted",
@@ -21,27 +21,17 @@
       "exclude_from_translation": true,
       "rows": [
         {
-          "name": "library_id",
-          "value": "facilitation",
+          "name": "article_id",
+          "value": "faq_h_still_struggling",
           "_translations": {
             "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",
-          "_nested_name": "library_list.library_id"
-        },
-        {
-          "name": "display_title",
-          "value": "Facilitation skills",
-          "_translations": {
-            "value": {}
-          },
-          "exclude_from_translation": true,
-          "type": "set_variable",
-          "_nested_name": "library_list.display_title"
+          "_nested_name": "library_article.article_id"
         }
       ],
-      "_nested_name": "library_list"
+      "_nested_name": "library_article"
     }
   ]
 }

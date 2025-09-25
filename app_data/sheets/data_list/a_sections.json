@@ -6,6 +6,24 @@
   "rows": [
     {
       "id": "section0",
+      "foreign_key": "about_prog",
+      "title": "Research and materials that shaped this programme",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Research and materials that shaped this programme"
+        },
+        "text": {
+          "eng": "The structure and content of this current programme were drawn and adapted from the following key resource materials:\n\nLachman, J. & Hutchings, J. (2018) _Parenting for Lifelong Health Programme for Young Children – Facilitator Manual_. European Version. Fifth Edition\n\nLachman, J. & Hutchings, J. (2017). _Parenting for Lifelong Health Programme for Young Children. Parent Handbook_. Fourth Edition\n\nDoubt et al. (2015). _Sinovuyo Caring Families Programme for mothers, fathers, and caregivers and Teens. Facilitator Manual._ Parenting for Lifelong Health for Teens. Third Edition\n\nDoubt et al. (2016). _Sinovuyo Caring Families Programme for mothers, fathers, and caregivers and Teens. Family Guidebook._ Parenting for Lifelong Health for Teens. First Edition\n\nEducation Endowment Foundation. (2018). _Preparing for Literacy: Improving Communication, Language and Literacy in the Early Years_. Education Endowment Foundation.\n\nEducation Endowment Foundation. (2021). _Working with mothers, fathers, and caregivers to Support Children’s Learning_, London: Education Endowment Foundation.\n\nSave the Children's Ready to Learn programming. Evidence-driven, play-based response to the global learning crisis in which millions of children are not gaining the skills they need to succeed in school and life.\n\nLinehan, M. (2020). _DBT skills training manual: for the therapist. (1st ed)_. EDULP, 2020. Digital book, EPUB"
+        }
+      },
+      "text": "The structure and content of this current programme were drawn and adapted from the following key resource materials:\n\nLachman, J. & Hutchings, J. (2018) _Parenting for Lifelong Health Programme for Young Children – Facilitator Manual_. European Version. Fifth Edition\n\nLachman, J. & Hutchings, J. (2017). _Parenting for Lifelong Health Programme for Young Children. Parent Handbook_. Fourth Edition\n\nDoubt et al. (2015). _Sinovuyo Caring Families Programme for mothers, fathers, and caregivers and Teens. Facilitator Manual._ Parenting for Lifelong Health for Teens. Third Edition\n\nDoubt et al. (2016). _Sinovuyo Caring Families Programme for mothers, fathers, and caregivers and Teens. Family Guidebook._ Parenting for Lifelong Health for Teens. First Edition\n\nEducation Endowment Foundation. (2018). _Preparing for Literacy: Improving Communication, Language and Literacy in the Early Years_. Education Endowment Foundation.\n\nEducation Endowment Foundation. (2021). _Working with mothers, fathers, and caregivers to Support Children’s Learning_, London: Education Endowment Foundation.\n\nSave the Children's Ready to Learn programming. Evidence-driven, play-based response to the global learning crisis in which millions of children are not gaining the skills they need to succeed in school and life.\n\nLinehan, M. (2020). _DBT skills training manual: for the therapist. (1st ed)_. EDULP, 2020. Digital book, EPUB"
+    },
+    {
+      "id": "section1",
       "foreign_key": "in_person_session",
       "title": "Use collaborative approach to learning",
       "_translations": {
@@ -23,7 +41,7 @@
       "text": "In many other programmes, facilitators tell participants what to do and why it is important.\n\nIn @global.prog_name, we do things differently. We like to think of this as a collaborative and participatory approach to learning. As facilitators, you are collaborators or partners working with mothers, fathers, and caregivers to identify plans and practice solutions that will help them improve their lives at home.\n\nIt is helpful to think of mothers, fathers, and caregivers as experts who know their own children and circumstances. Many mothers, fathers, and caregivers will already be practising many positive ways of parenting their children. Others will be able to identify ways of improving their parenting on their own with guidance.\n\nOur job is to support mothers, fathers, and caregivers learn for themselves how to achieve their goals. This sometimes means we have to work harder to ask the right sort of open-ended questions that will help mothers, fathers, and caregivers work out the benefits of positive parenting and nonviolent discipline for their children.\n\nWhen mothers, fathers, and caregivers teach themselves, they learn a skill that will help them for a long time after the programme ends."
     },
     {
-      "id": "section1",
+      "id": "section2",
       "foreign_key": "in_person_session",
       "title": "Model the behaviour you want to see",
       "_translations": {
@@ -41,7 +59,7 @@
       "text": "The modelling principle forms the foundation of how we deliver @global.prog_name.\n\nIf we lead sessions in a collaborative approach, praise mothers, fathers, and caregivers often, practise active listening, and use positive instructions, mothers, fathers, and caregivers will do the same with their children.\n\nLikewise, if we tell mothers, fathers, and caregivers what to do, criticise or laugh at them, ignore their needs or concerns, or only say what we do not want them to do, they will do the same.\n\nPractise relaxation activities to help reduce your own stress. It can even just be taking a deep breath. Mothers, fathers, and caregivers will learn from your example and begin to mirror your behaviour.\n\nIn many ways, you are parenting the mothers, fathers, and caregivers in the way that you would like them to parent their children. It really works!"
     },
     {
-      "id": "section2",
+      "id": "section3",
       "foreign_key": "in_person_session",
       "title": "Go at the pace of the group",
       "_translations": {
@@ -59,7 +77,7 @@
       "text": "You should always go at your mothers, fathers, and caregivers’ pace when delivering the programme. Make sure that the mothers, fathers, and caregivers in your group have understood the current content before moving on to new content.\n\nThis may mean that you take extra time problem-solve issues that come up during the sessions."
     },
     {
-      "id": "section3",
+      "id": "section4",
       "foreign_key": "in_person_session",
       "title": "Make @global.prog_name a happy and safe space to learn",
       "_translations": {
@@ -77,76 +95,310 @@
       "text": "Everyone likes a place that is warm and inviting. Tips for facilitators to make @global.prog_name a happy place to learn:\n\nInvite mothers, fathers, and caregivers to participate: Notice when someone is holding back and ask if he or she wishes to share an opinion or experience.\nMention that this is a safe and empathetic space where no one will be judged. Experiences shared within the group will be kept confidential.\nMake sure that everyone in the room can hear you (and each other).\nSit when you are talking. Be on the same level as the mothers, fathers, and caregivers and sit among them. If possible, try to sit among the mothers, fathers, and caregivers instead of at the front of the group.\nCreate a comfortable and welcoming place to meet.\nMake sure there are enough chairs and that the room is clean. In the summer, use a fan or an air conditioner (if available). You can even decorate the room if you want!\nEstablish the language needs of the participants.\nRespect whatever a parent shares with the group.\nThere will be lots of laughter in the group but try to laugh with not at a parent even if what they say sounds ridiculous. \nPraise mothers, fathers, and caregivers for their effort and dedication.\nModel the behaviour you want from the mothers, fathers, and caregivers in the way that you treat them.\nPraise, respect, and reflect on mothers, fathers, and caregivers’ contributions."
     },
     {
-      "id": "section4",
-      "foreign_key": "facilitation_4",
-      "title": "Accept",
-      "_translations": {
-        "title": {},
-        "text": {}
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Accept"
-        },
-        "text": {
-          "eng": "Participants feel empowered to share when Facilitators accept whatever is said. There is no wrong answer. Facilitators can show that they have really heard the participant by reflecting back or rewording what she/he says to the entire group. \nThis also clarifies that the Facilitators understand what is being shared."
-        }
-      },
-      "text": "Participants feel empowered to share when Facilitators accept whatever is said. There is no wrong answer. Facilitators can show that they have really heard the participant by reflecting back or rewording what she/he says to the entire group. \nThis also clarifies that the Facilitators understand what is being shared."
-    },
-    {
       "id": "section5",
-      "foreign_key": "facilitation_4",
-      "title": "Explore",
+      "foreign_key": "handover_group_admin",
+      "title": "What to cover in the WhatsApp Call?",
       "_translations": {
         "title": {},
         "text": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Explore"
+          "eng": "What to cover in the WhatsApp Call?"
         },
         "text": {
-          "eng": "Take time to explore the experience with the participant. \nSometimes we need to ask questions and really hear the details about something to understand it properly. Facilitators can bring a sense of curiosity to this part of discussion to explore where, what, who, and how of the emotional/physical/mental experience. \n\n**Do not be afraid to go deeply into the experience!**"
+          "eng": "Thank the parent for volunteering to lead the WhatsApp group.  \n\nWhile engaging with other parents in the group, keep the following in mind:\n🔵 Greet parents when engaging with them.\n🔵 Respect what participants share and be aware of different ages, genders, values and circumstances.\n🔵 Encourage parents to share and respond to each other - and praise them for it.\n🔵 Remind parents of ground rules when needed.\n🔵 Model the behaviour you want to see among the parents.\n\nIf the parent needs any prompts for discussion, share the following: \n\nLet us celebrate our successes! What was something positive you experienced when you tried one of the @global.prog_name skills with your child?\n\nTrying out new skills can be hard at first. What was something difficult that you experienced when you tried a @global.prog_name skill with your child at home?\nRemind the parent that they are not obligated to respond to messages all times. Participants may send messages at any time during the week. To keep your workload manageable, you can respond to messages once or twice a day, depending on your schedule. \n\nAsk them if they have any questions. \n\nRemind the parent that unfortunately, you will no longer be able to participate in the WhatsApp group."
         }
       },
-      "text": "Take time to explore the experience with the participant. \nSometimes we need to ask questions and really hear the details about something to understand it properly. Facilitators can bring a sense of curiosity to this part of discussion to explore where, what, who, and how of the emotional/physical/mental experience. \n\n**Do not be afraid to go deeply into the experience!**"
+      "text": "Thank the parent for volunteering to lead the WhatsApp group.  \n\nWhile engaging with other parents in the group, keep the following in mind:\n🔵 Greet parents when engaging with them.\n🔵 Respect what participants share and be aware of different ages, genders, values and circumstances.\n🔵 Encourage parents to share and respond to each other - and praise them for it.\n🔵 Remind parents of ground rules when needed.\n🔵 Model the behaviour you want to see among the parents.\n\nIf the parent needs any prompts for discussion, share the following: \n\nLet us celebrate our successes! What was something positive you experienced when you tried one of the @global.prog_name skills with your child?\n\nTrying out new skills can be hard at first. What was something difficult that you experienced when you tried a @global.prog_name skill with your child at home?\nRemind the parent that they are not obligated to respond to messages all times. Participants may send messages at any time during the week. To keep your workload manageable, you can respond to messages once or twice a day, depending on your schedule. \n\nAsk them if they have any questions. \n\nRemind the parent that unfortunately, you will no longer be able to participate in the WhatsApp group."
     },
     {
       "id": "section6",
-      "foreign_key": "facilitation_4",
-      "title": "Connect",
+      "foreign_key": "module_1_prepare",
+      "title": "Some more building blocks for one-on-one time",
       "_translations": {
         "title": {},
         "text": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Connect"
+          "eng": "Some more building blocks for one-on-one time"
         },
         "text": {
-          "eng": "Facilitators connect parents’ experiences to the programme. In discussion with participants, the group may make their own connections on how a certain experience might inform other parts of their lives."
+          "eng": "Use words to describe what your child is doing during One-on-One Time – it shows you are paying attention to them and helps build vocabulary for younger children,\n\nAllow your child to take the lead during One-on-One time.\n\nAllow your child to invite you into their world by showing interest in what they are doing.\n\nAccept and observe instead of asking questions and criticising your child when playing.\n\nPlay at your child’s developmental level and pace.\n\nFind ways of playing together instead of competitive games during One-on-One time.\n\nMore One-on-One time building blocks for parents with adolescents:\n\nOne-on-One time means giving your full attention to your teen.\n\nAllow your teen to talk to lead in a conversation or activity.\n\nLook at your teen while they are speaking.\n\nShow interest in their story and acceptance of their feelings."
         }
       },
-      "text": "Facilitators connect parents’ experiences to the programme. In discussion with participants, the group may make their own connections on how a certain experience might inform other parts of their lives."
+      "text": "Use words to describe what your child is doing during One-on-One Time – it shows you are paying attention to them and helps build vocabulary for younger children,\n\nAllow your child to take the lead during One-on-One time.\n\nAllow your child to invite you into their world by showing interest in what they are doing.\n\nAccept and observe instead of asking questions and criticising your child when playing.\n\nPlay at your child’s developmental level and pace.\n\nFind ways of playing together instead of competitive games during One-on-One time.\n\nMore One-on-One time building blocks for parents with adolescents:\n\nOne-on-One time means giving your full attention to your teen.\n\nAllow your teen to talk to lead in a conversation or activity.\n\nLook at your teen while they are speaking.\n\nShow interest in their story and acceptance of their feelings."
     },
     {
       "id": "section7",
-      "foreign_key": "facilitation_4",
-      "title": "Practice",
+      "foreign_key": "module_1_prepare",
+      "title": "Key issues to be aware of",
       "_translations": {
         "title": {},
         "text": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Practice"
+          "eng": "Key issues to be aware of"
         },
         "text": {
-          "eng": "A core building block in the @global.prog_name is that it is what you do at home that makes a difference. \nScientific evidence tells us that participants are more likely to use new skills at home if they practice them during the session. This means that you have to give participants as many opportunities as possible to practice key skills. \n\nPractice may also happen during Home Activity Discussion, such as when a participant shares a challenging situation. This allows the participant to practice a possible solution to her challenging situation before trying it at home."
+          "eng": "In this first module it’s important to create a welcoming space for everyone. \n\nGround rules should be developed at the beginning of the programme and owned by the group – so everybody should agree. \n- Try to help parents make specific rules. \n- Make sure everybody in the group understands each rule and what is required of the group.\n- Help parents to make positive rules! Instead of ‘no criticising’ try ‘provide supportive feedback’.\n- Give parents a chance to debate the rules that are being suggested. This will help everyone to own the final set of rules. \n- Praise suggestions!\n\n**Praise & confidence building**: Remember that just like speaking up in a group for the first time, parents might be feeling nervous. Give parents as much positive reinforcement and thanks for sharing as you can on day one. \n\n**Normalising difficult households**: Make sure you remind parents that no household is perfect! We all have problems and challenges – praise parents regularly for being here because they want to put in the work to change something for the better. \n\n**Confidentiality:** This means that what gets said or circulated in the group, stays in the group! It’s important to be clear right at the beginning what is okay to share with others outside the group and what is not. In order for people to feel comfortable enough to participate, they need to know that they can trust the group with the stories they are sharing – and that these will not be shared outside of the group. Sharing new positive information is absolutely fine, though! \n\nIf there is a need to break confidentiality, it is because a parent has disclosed or has shown evidence or significant risk of harm to themselves or their children (physical, emotional, or physical). The facilitator needs to break confidentiality if there is a risk of self-harm or harm to others. When this happens, the facilitator will ensure that they communicate directly in private with the person in question."
         }
       },
-      "text": "A core building block in the @global.prog_name is that it is what you do at home that makes a difference. \nScientific evidence tells us that participants are more likely to use new skills at home if they practice them during the session. This means that you have to give participants as many opportunities as possible to practice key skills. \n\nPractice may also happen during Home Activity Discussion, such as when a participant shares a challenging situation. This allows the participant to practice a possible solution to her challenging situation before trying it at home."
+      "text": "In this first module it’s important to create a welcoming space for everyone. \n\nGround rules should be developed at the beginning of the programme and owned by the group – so everybody should agree. \n- Try to help parents make specific rules. \n- Make sure everybody in the group understands each rule and what is required of the group.\n- Help parents to make positive rules! Instead of ‘no criticising’ try ‘provide supportive feedback’.\n- Give parents a chance to debate the rules that are being suggested. This will help everyone to own the final set of rules. \n- Praise suggestions!\n\n**Praise & confidence building**: Remember that just like speaking up in a group for the first time, parents might be feeling nervous. Give parents as much positive reinforcement and thanks for sharing as you can on day one. \n\n**Normalising difficult households**: Make sure you remind parents that no household is perfect! We all have problems and challenges – praise parents regularly for being here because they want to put in the work to change something for the better. \n\n**Confidentiality:** This means that what gets said or circulated in the group, stays in the group! It’s important to be clear right at the beginning what is okay to share with others outside the group and what is not. In order for people to feel comfortable enough to participate, they need to know that they can trust the group with the stories they are sharing – and that these will not be shared outside of the group. Sharing new positive information is absolutely fine, though! \n\nIf there is a need to break confidentiality, it is because a parent has disclosed or has shown evidence or significant risk of harm to themselves or their children (physical, emotional, or physical). The facilitator needs to break confidentiality if there is a risk of self-harm or harm to others. When this happens, the facilitator will ensure that they communicate directly in private with the person in question."
+    },
+    {
+      "id": "section8",
+      "foreign_key": "module_2_prepare",
+      "title": "Talking about emotions can be new",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Talking about emotions can be new"
+        },
+        "text": {
+          "eng": "It is completely normal for parents to have difficulty talking about and expressing emotions and feelings. Parents may be trying to recognise their own emotions and communicate about them for the first time here. Talking about feelings also has the benefit of bringing awareness to positive emotions such as happiness or calmness!"
+        }
+      },
+      "text": "It is completely normal for parents to have difficulty talking about and expressing emotions and feelings. Parents may be trying to recognise their own emotions and communicate about them for the first time here. Talking about feelings also has the benefit of bringing awareness to positive emotions such as happiness or calmness!"
+    },
+    {
+      "id": "section9",
+      "foreign_key": "module_2_prepare",
+      "title": "Emotions and gender",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Emotions and gender"
+        },
+        "text": {
+          "eng": "Many people are taught not to cry when they are sad. This might be especially true for boys and men. It’s important to understand that boys and men have the same feelings as girls and women, and that sharing emotions does not need to reduce their sense of masculinity. Sharing emotions is a sign of courage and strength."
+        }
+      },
+      "text": "Many people are taught not to cry when they are sad. This might be especially true for boys and men. It’s important to understand that boys and men have the same feelings as girls and women, and that sharing emotions does not need to reduce their sense of masculinity. Sharing emotions is a sign of courage and strength."
+    },
+    {
+      "id": "section10",
+      "foreign_key": "module_2_prepare",
+      "title": "Accepting negative emotions",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Accepting negative emotions"
+        },
+        "text": {
+          "eng": "Negative emotions are just as normal as positive emotions! Some parents might feel disrespected when their children display negative emotions. This does not mean that parents are losing control or authority over their child. Parents should encourage children to be aware of their emotions by helping them to name emotions, and to talk about how they are experiencing their emotions as this will help them to regulate their emotions."
+        }
+      },
+      "text": "Negative emotions are just as normal as positive emotions! Some parents might feel disrespected when their children display negative emotions. This does not mean that parents are losing control or authority over their child. Parents should encourage children to be aware of their emotions by helping them to name emotions, and to talk about how they are experiencing their emotions as this will help them to regulate their emotions."
+    },
+    {
+      "id": "section11",
+      "foreign_key": "module_3_prepare",
+      "title": "Keep focus on positive instead of negative behaviour",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Keep focus on positive instead of negative behaviour"
+        },
+        "text": {
+          "eng": "Parents usually only notice the times when children do not follow instructions and miss the times when they do. Parents need to know what behaviour they want to see from their children and start describing that when giving instructions."
+        }
+      },
+      "text": "Parents usually only notice the times when children do not follow instructions and miss the times when they do. Parents need to know what behaviour they want to see from their children and start describing that when giving instructions."
+    },
+    {
+      "id": "section12",
+      "foreign_key": "module_3_prepare",
+      "title": "Giving positive instructions can be challenging at first",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Giving positive instructions can be challenging at first"
+        },
+        "text": {
+          "eng": "Learning how to give positive instructions can be challenging for parents at first. They are used to giving instructions in a negative way. Your job as a facilitator is to model how to give positive instructions. In this way, parents are encouraged to give clear, positive instructions."
+        }
+      },
+      "text": "Learning how to give positive instructions can be challenging for parents at first. They are used to giving instructions in a negative way. Your job as a facilitator is to model how to give positive instructions. In this way, parents are encouraged to give clear, positive instructions."
+    },
+    {
+      "id": "section13",
+      "foreign_key": "module_3_prepare",
+      "title": "Supporting children living with disabilities",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Supporting children living with disabilities"
+        },
+        "text": {
+          "eng": "Parents should support their children to be able to follow instructions by thinking about how to break them down into smaller pieces while still allowing their children the space to work independently. This will help children feel more confident while still being supported. They should also allow time and space for children to work things out before interfering."
+        }
+      },
+      "text": "Parents should support their children to be able to follow instructions by thinking about how to break them down into smaller pieces while still allowing their children the space to work independently. This will help children feel more confident while still being supported. They should also allow time and space for children to work things out before interfering."
+    },
+    {
+      "id": "section14",
+      "foreign_key": "module_3_prepare",
+      "title": "Praising can feel awkward at first",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Praising can feel awkward at first"
+        },
+        "text": {
+          "eng": "Many parents don’t have experience of praise or positive attention themselves. They can feel embarrassed or awkward about praising their children. But praising becomes easier with practice – and it is rewarded by the response that children provide to being praised."
+        }
+      },
+      "text": "Many parents don’t have experience of praise or positive attention themselves. They can feel embarrassed or awkward about praising their children. But praising becomes easier with practice – and it is rewarded by the response that children provide to being praised."
+    },
+    {
+      "id": "section15",
+      "foreign_key": "module_4_prepare",
+      "title": "Involving everyone in the household in rules and routines",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Involving everyone in the household in rules and routines"
+        },
+        "text": {
+          "eng": "While it’s important to involve the entire household in making household rules and routines, this can be difficult in some families where decisions are not made together. \n\nYou can explore how discussing different ideas for rules and routines with members of the family can have a positive impact on everyone’s well-being. Children will feel respected and listened to and teens are more likely to follow rules if they have been involved in creating them."
+        }
+      },
+      "text": "While it’s important to involve the entire household in making household rules and routines, this can be difficult in some families where decisions are not made together. \n\nYou can explore how discussing different ideas for rules and routines with members of the family can have a positive impact on everyone’s well-being. Children will feel respected and listened to and teens are more likely to follow rules if they have been involved in creating them."
+    },
+    {
+      "id": "section16",
+      "foreign_key": "module_4_prepare",
+      "title": "The importance of sleep and bedtime routines",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "The importance of sleep and bedtime routines"
+        },
+        "text": {
+          "eng": "Bedtime is one of the most important routines that parents can establish for their children. Children need enough sleep to grow and be healthy. A routine is a good way to help ensure that they get enough sleep. \n\nIt’s also important to stress that parents, too, need to get enough sleep. Sleep deprivation affects everyone’s behaviour! Bedtime routines last about 30 minutes and can involve washing, establishing a quiet and calm environment, singing, or reading to your child and then providing an affectionate goodnight. \n\nBedtime routines can even be helpful for teens. Less screen time and more relaxing activities help a teen get a good night of sleep. The same is true for parents and you!\n\nSome families may live in crowded or stressful environments, or have irregular routines because of shift work or money worries. But even small, predictable bedtime moments can help children feel safe and secure."
+        }
+      },
+      "text": "Bedtime is one of the most important routines that parents can establish for their children. Children need enough sleep to grow and be healthy. A routine is a good way to help ensure that they get enough sleep. \n\nIt’s also important to stress that parents, too, need to get enough sleep. Sleep deprivation affects everyone’s behaviour! Bedtime routines last about 30 minutes and can involve washing, establishing a quiet and calm environment, singing, or reading to your child and then providing an affectionate goodnight. \n\nBedtime routines can even be helpful for teens. Less screen time and more relaxing activities help a teen get a good night of sleep. The same is true for parents and you!\n\nSome families may live in crowded or stressful environments, or have irregular routines because of shift work or money worries. But even small, predictable bedtime moments can help children feel safe and secure."
+    },
+    {
+      "id": "section17",
+      "foreign_key": "module_4_prepare",
+      "title": "Gender",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Gender"
+        },
+        "text": {
+          "eng": "In some families the rules for boys and girls are different. This is often because of expectations or traditional norms relating to the different roles that boys and girls can play. This is something that could be explored further to see if the different rules are really necessary or are limiting boys or girls. Parents may need support thinking about how this may affect their children."
+        }
+      },
+      "text": "In some families the rules for boys and girls are different. This is often because of expectations or traditional norms relating to the different roles that boys and girls can play. This is something that could be explored further to see if the different rules are really necessary or are limiting boys or girls. Parents may need support thinking about how this may affect their children."
+    },
+    {
+      "id": "section18",
+      "foreign_key": "module_5_prepare",
+      "title": "Try to avoid misbehaviour in the first place",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Try to avoid misbehaviour in the first place"
+        },
+        "text": {
+          "eng": "Parents should try to avoid misbehaviour in the first place. By redirecting a child’s attention away from a problem behaviour towards a positive behaviour, parents can avoid needing to discipline their child. Parents should use redirect before the negative behaviour gets worse by giving a clear and positive instruction towards another activity. In this way they ignore the misbehaviour"
+        }
+      },
+      "text": "Parents should try to avoid misbehaviour in the first place. By redirecting a child’s attention away from a problem behaviour towards a positive behaviour, parents can avoid needing to discipline their child. Parents should use redirect before the negative behaviour gets worse by giving a clear and positive instruction towards another activity. In this way they ignore the misbehaviour"
+    },
+    {
+      "id": "section19",
+      "foreign_key": "module_5_prepare",
+      "title": "Consequences are not punishments",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Consequences are not punishments"
+        },
+        "text": {
+          "eng": "It is more helpful for parents to think of consequences as opportunities to teach their children that their actions have an impact both on themselves and on others. This, in turn, helps children to learn about responsibility and decision-making."
+        }
+      },
+      "text": "It is more helpful for parents to think of consequences as opportunities to teach their children that their actions have an impact both on themselves and on others. This, in turn, helps children to learn about responsibility and decision-making."
+    },
+    {
+      "id": "section20",
+      "foreign_key": "module_5_prepare",
+      "title": "Remember: There are no ‘bad’ children…",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Remember: There are no ‘bad’ children…"
+        },
+        "text": {
+          "eng": "… Just ‘bad’ behaviours! Parents should try to keep their focus on their children’s behaviour. This will help them to remember that children need as much love and nurturing as they can provide."
+        }
+      },
+      "text": "… Just ‘bad’ behaviours! Parents should try to keep their focus on their children’s behaviour. This will help them to remember that children need as much love and nurturing as they can provide."
+    },
+    {
+      "id": "section21",
+      "foreign_key": "module_6_prepare",
+      "title": "Last module blues",
+      "_translations": {
+        "title": {},
+        "text": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Last module blues"
+        },
+        "text": {
+          "eng": "The last module of the programme can be emotionally challenging for parents, who may have developed relationships with each other. Many parents will also have come to depend on the support that they get from each other – especially for those who have a lot of challenges at home. It’s important to stress to parents that they can continue to support each other after the programme ends, and with someone taking over the administration of the chat, they can continue to go to the same space and meet the same people for that support."
+        }
+      },
+      "text": "The last module of the programme can be emotionally challenging for parents, who may have developed relationships with each other. Many parents will also have come to depend on the support that they get from each other – especially for those who have a lot of challenges at home. It’s important to stress to parents that they can continue to support each other after the programme ends, and with someone taking over the administration of the chat, they can continue to go to the same space and meet the same people for that support."
     }
   ],
   "_xlsxPath": "data/articles_CW.xlsx",

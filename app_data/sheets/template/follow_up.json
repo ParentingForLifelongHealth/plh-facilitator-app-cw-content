@@ -1,0 +1,388 @@
+{
+  "flow_type": "template",
+  "flow_name": "follow_up",
+  "status": "released",
+  "rows": [
+    {
+      "name": "number_delivered_sessions",
+      "type": "set_variable",
+      "_nested_name": "number_delivered_sessions"
+    },
+    {
+      "name": "number_parent_groups",
+      "type": "set_variable",
+      "_nested_name": "number_parent_groups"
+    },
+    {
+      "name": "number_parents",
+      "type": "set_variable",
+      "_nested_name": "number_parents"
+    },
+    {
+      "name": "missed_sessions_limit",
+      "value": 2,
+      "type": "set_variable",
+      "_nested_name": "missed_sessions_limit"
+    },
+    {
+      "type": "data_items",
+      "name": "counting_delivered",
+      "value": "@data.report_answers",
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "number_delivered_sessions",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : number_delivered_sessions : @items.length",
+          "_cleaned": "data_changed | set_local : number_delivered_sessions : @items.length"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.pending"
+      },
+      "rows": [],
+      "_nested_name": "counting_delivered",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_answers",
+            "matchedExpression": "@data.report_answers",
+            "type": "data",
+            "fieldName": "report_answers"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.pending",
+              "matchedExpression": "!@item.pending",
+              "type": "item",
+              "fieldName": "pending"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_answers": [
+          "value"
+        ],
+        "!@item.pending": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "counting_parent_groups",
+      "value": "@data.parent_groups",
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "number_parent_groups",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : number_parent_groups : @items.length",
+          "_cleaned": "data_changed | set_local : number_parent_groups : @items.length"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.archived"
+      },
+      "rows": [],
+      "_nested_name": "counting_parent_groups",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parent_groups",
+            "matchedExpression": "@data.parent_groups",
+            "type": "data",
+            "fieldName": "parent_groups"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.archived",
+              "matchedExpression": "!@item.archived",
+              "type": "item",
+              "fieldName": "archived"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.parent_groups": [
+          "value"
+        ],
+        "!@item.archived": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "counting_parents",
+      "value": "@data.parents",
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "number_parents",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : number_parents : @items.length",
+          "_cleaned": "data_changed | set_local : number_parents : @items.length"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.archived"
+      },
+      "rows": [],
+      "_nested_name": "counting_parents",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parents",
+            "matchedExpression": "@data.parents",
+            "type": "data",
+            "fieldName": "parents"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.archived",
+              "matchedExpression": "!@item.archived",
+              "type": "item",
+              "fieldName": "archived"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.parents": [
+          "value"
+        ],
+        "!@item.archived": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "name": "first_time_condition",
+      "value": "@local.number_delivered_sessions == 0 || @local.number_parent_groups == 0 || @local.number_parents == 0;",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "first_time_condition",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.number_delivered_sessions == 0 || @local.number_parent_groups == 0 || @local.number_parents == 0;",
+            "matchedExpression": "@local.number_delivered_sessions",
+            "type": "local",
+            "fieldName": "number_delivered_sessions"
+          },
+          {
+            "fullExpression": "@local.number_delivered_sessions == 0 || @local.number_parent_groups == 0 || @local.number_parents == 0;",
+            "matchedExpression": "@local.number_parent_groups",
+            "type": "local",
+            "fieldName": "number_parent_groups"
+          },
+          {
+            "fullExpression": "@local.number_delivered_sessions == 0 || @local.number_parent_groups == 0 || @local.number_parents == 0;",
+            "matchedExpression": "@local.number_parents",
+            "type": "local",
+            "fieldName": "number_parents"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.number_delivered_sessions": [
+          "value"
+        ],
+        "@local.number_parent_groups": [
+          "value"
+        ],
+        "@local.number_parents": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "parameter_list": {
+        "style": "column"
+      },
+      "condition": "@local.first_time_condition;",
+      "rows": [
+        {
+          "type": "title",
+          "name": "text_no_follow_up",
+          "value": "No Follow ups",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "display_group_13.text_no_follow_up"
+        },
+        {
+          "type": "text",
+          "name": "text_first_time",
+          "value": "This is where you'll see parents who need follow-up.",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "style": "contextual"
+          },
+          "_nested_name": "display_group_13.text_first_time"
+        }
+      ],
+      "name": "display_group_13",
+      "_nested_name": "display_group_13",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.first_time_condition;",
+            "matchedExpression": "@local.first_time_condition",
+            "type": "local",
+            "fieldName": "first_time_condition"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.first_time_condition": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "calculating_attendance",
+      "value": "@data.parents",
+      "parameter_list": {
+        "filter": "!@item.archived"
+      },
+      "rows": [
+        {
+          "type": "template",
+          "name": "attendance",
+          "value": "attendance",
+          "rows": [
+            {
+              "name": "parent_id",
+              "value": "@item.id",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.attendance.parent_id",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "m_s_l",
+              "value": "@local.missed_sessions_limit",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.attendance.m_s_l",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.missed_sessions_limit",
+                    "matchedExpression": "@local.missed_sessions_limit",
+                    "type": "local",
+                    "fieldName": "missed_sessions_limit"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.missed_sessions_limit": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "parent_group_id",
+              "value": "@item.group_id",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.attendance.parent_group_id",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.group_id",
+                    "matchedExpression": "@item.group_id",
+                    "type": "item",
+                    "fieldName": "group_id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.group_id": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "calculating_attendance.attendance"
+        }
+      ],
+      "_nested_name": "calculating_attendance",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parents",
+            "matchedExpression": "@data.parents",
+            "type": "data",
+            "fieldName": "parents"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.archived",
+              "matchedExpression": "!@item.archived",
+              "type": "item",
+              "fieldName": "archived"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.parents": [
+          "value"
+        ],
+        "!@item.archived": [
+          "parameter_list.filter"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/actions_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

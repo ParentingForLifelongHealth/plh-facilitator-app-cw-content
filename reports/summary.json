@@ -27,7 +27,7 @@
       },
       {
         "type": "button",
-        "count": 118
+        "count": 120
       },
       {
         "type": "carousel",
@@ -35,11 +35,11 @@
       },
       {
         "type": "combo_box",
-        "count": 9
+        "count": 11
       },
       {
         "type": "data_items",
-        "count": 59
+        "count": 67
       },
       {
         "type": "debug_toggle",
@@ -51,7 +51,7 @@
       },
       {
         "type": "display_group",
-        "count": 148
+        "count": 153
       },
       {
         "type": "google_sign_in_button",
@@ -59,7 +59,7 @@
       },
       {
         "type": "image",
-        "count": 22
+        "count": 21
       },
       {
         "type": "items",
@@ -83,11 +83,11 @@
       },
       {
         "type": "radio_button_grid",
-        "count": 9
+        "count": 10
       },
       {
         "type": "round_button",
-        "count": 34
+        "count": 30
       },
       {
         "type": "select_text",
@@ -99,7 +99,7 @@
       },
       {
         "type": "set_variable",
-        "count": 693
+        "count": 742
       },
       {
         "type": "simple_checkbox",
@@ -111,11 +111,11 @@
       },
       {
         "type": "task_progress_bar",
-        "count": 2
+        "count": 3
       },
       {
         "type": "template",
-        "count": 98
+        "count": 112
       },
       {
         "type": "test",
@@ -123,7 +123,7 @@
       },
       {
         "type": "text",
-        "count": 203
+        "count": 221
       },
       {
         "type": "text_area",
@@ -131,19 +131,15 @@
       },
       {
         "type": "text_box",
-        "count": 38
-      },
-      {
-        "type": "text_bubble",
-        "count": 4
+        "count": 28
       },
       {
         "type": "title",
-        "count": 53
+        "count": 54
       },
       {
         "type": "toggle_bar",
-        "count": 7
+        "count": 8
       },
       {
         "type": "update_action_list",
@@ -191,11 +187,11 @@
       },
       {
         "type": "emit: set_language",
-        "count": 2
+        "count": 3
       },
       {
         "type": "emit: uncompleted",
-        "count": 65
+        "count": 78
       },
       {
         "type": "feedback",
@@ -215,7 +211,7 @@
       },
       {
         "type": "pop_up",
-        "count": 16
+        "count": 14
       },
       {
         "type": "reset_app",
@@ -235,15 +231,15 @@
       },
       {
         "type": "set_field",
-        "count": 87
+        "count": 79
       },
       {
         "type": "set_item",
-        "count": 8
+        "count": 9
       },
       {
         "type": "set_local",
-        "count": 102
+        "count": 104
       },
       {
         "type": "share",
@@ -259,7 +255,7 @@
     "data": [
       {
         "assets": "total",
-        "KB": "2153 KB",
+        "KB": "2152 KB",
         "MB": "2.2 MB"
       },
       {
@@ -306,6 +302,10 @@
       {
         "path": "images/flags/zm.svg",
         "size_kb": 5.4
+      },
+      {
+        "path": "images/icons/archive.svg",
+        "size_kb": 0.5
       },
       {
         "path": "images/icons/bar_chart_white.svg",
@@ -522,11 +522,6 @@
         "size_kb": 0.4
       },
       {
-        "path": "images/icons/archive.svg",
-        "count": 1,
-        "size_kb": 0.5
-      },
-      {
         "path": "images/icons/arrow_back.svg",
         "count": 1,
         "size_kb": 0.2
@@ -563,7 +558,7 @@
       },
       {
         "path": "images/icons/delete.svg",
-        "count": 3,
+        "count": 2,
         "size_kb": 0.6
       },
       {
@@ -583,7 +578,7 @@
       },
       {
         "path": "images/icons/edit.svg",
-        "count": 5,
+        "count": 4,
         "size_kb": 0.9
       },
       {
@@ -718,7 +713,7 @@
       {
         "type": "data_list",
         "subtype": null,
-        "total": 35
+        "total": 36
       },
       {
         "type": "data_list",
@@ -773,12 +768,12 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 91
+        "total": 92
       },
       {
         "type": "template",
         "subtype": "generated",
-        "total": 46
+        "total": 61
       },
       {
         "type": "template",
