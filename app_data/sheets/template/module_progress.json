@@ -1,0 +1,297 @@
+{
+  "flow_type": "template",
+  "flow_name": "module_progress",
+  "status": "released",
+  "rows": [
+    {
+      "name": "calc_module_count",
+      "value": false,
+      "type": "set_variable",
+      "_nested_name": "calc_module_count"
+    },
+    {
+      "name": "module_count",
+      "value": 0,
+      "type": "set_variable",
+      "_nested_name": "module_count"
+    },
+    {
+      "name": "complete_count",
+      "value": 0,
+      "type": "set_variable",
+      "_nested_name": "complete_count"
+    },
+    {
+      "name": "divide",
+      "value": "/",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "divide"
+    },
+    {
+      "name": "sessions",
+      "value": "sessions",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "sessions"
+    },
+    {
+      "name": "complete_field",
+      "value": "completed_@fields.current_group_no",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "complete_field",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "completed_@fields.current_group_no",
+            "matchedExpression": "@fields.current_group_no",
+            "type": "fields",
+            "fieldName": "current_group_no"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.current_group_no": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "get_module_count",
+      "value": "@data.modules",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "module_count",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : module_count: @items.length",
+          "_cleaned": "data_changed | set_local : module_count: @items.length"
+        }
+      ],
+      "condition": "!!@local.calc_module_count",
+      "_nested_name": "get_module_count",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.modules",
+            "matchedExpression": "@data.modules",
+            "type": "data",
+            "fieldName": "modules"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!!@local.calc_module_count",
+            "matchedExpression": "!@local.calc_module_count",
+            "type": "local",
+            "fieldName": "calc_module_count"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.modules": [
+          "value"
+        ],
+        "!@local.calc_module_count": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "get_complete_count",
+      "value": "@data.modules",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "complete_count",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : complete_count: @items.length",
+          "_cleaned": "data_changed | set_local : complete_count: @items.length"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!!@item.@local.complete_field"
+      },
+      "_nested_name": "get_complete_count",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.modules",
+            "matchedExpression": "@data.modules",
+            "type": "data",
+            "fieldName": "modules"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!!@item.@local.complete_field",
+              "matchedExpression": "@local.complete_field",
+              "type": "local",
+              "fieldName": "complete_field"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.modules": [
+          "value"
+        ],
+        "@local.complete_field": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "name": "progress",
+      "value": "@calc(((@local.complete_count)/(@local.module_count))*100)",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "progress",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(((@local.complete_count)/(@local.module_count))*100)",
+            "matchedExpression": "@local.complete_count",
+            "type": "local",
+            "fieldName": "complete_count"
+          },
+          {
+            "fullExpression": "@calc(((@local.complete_count)/(@local.module_count))*100)",
+            "matchedExpression": "@local.module_count",
+            "type": "local",
+            "fieldName": "module_count"
+          },
+          {
+            "fullExpression": "@calc(((@local.complete_count)/(@local.module_count))*100)",
+            "matchedExpression": "@calc(((@local.complete_count)/(@local.module_count))*100)",
+            "type": "calc",
+            "fieldName": "((@local.complete_count)/(@local.module_count))*100"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.complete_count": [
+          "value"
+        ],
+        "@local.module_count": [
+          "value"
+        ],
+        "@calc(((@local.complete_count)/(@local.module_count))*100)": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "rows": [
+        {
+          "type": "task_progress_bar",
+          "parameter_list": {
+            "progress_percent": "@local.progress"
+          },
+          "style_list": [
+            "flex: 1"
+          ],
+          "name": "task_progress_bar_1",
+          "_nested_name": "display_group_11.task_progress_bar_1",
+          "_dynamicFields": {
+            "parameter_list": {
+              "progress_percent": [
+                {
+                  "fullExpression": "@local.progress",
+                  "matchedExpression": "@local.progress",
+                  "type": "local",
+                  "fieldName": "progress"
+                }
+              ]
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.progress": [
+              "parameter_list.progress_percent"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "value": "@local.complete_count@local.divide@local.module_count@local.sessions",
+          "_translations": {
+            "value": {}
+          },
+          "name": "text_2",
+          "_nested_name": "display_group_11.text_2",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.complete_count@local.divide@local.module_count@local.sessions",
+                "matchedExpression": "@local.complete_count",
+                "type": "local",
+                "fieldName": "complete_count"
+              },
+              {
+                "fullExpression": "@local.complete_count@local.divide@local.module_count@local.sessions",
+                "matchedExpression": "@local.divide",
+                "type": "local",
+                "fieldName": "divide"
+              },
+              {
+                "fullExpression": "@local.complete_count@local.divide@local.module_count@local.sessions",
+                "matchedExpression": "@local.module_count",
+                "type": "local",
+                "fieldName": "module_count"
+              },
+              {
+                "fullExpression": "@local.complete_count@local.divide@local.module_count@local.sessions",
+                "matchedExpression": "@local.sessions",
+                "type": "local",
+                "fieldName": "sessions"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.complete_count": [
+              "value"
+            ],
+            "@local.divide": [
+              "value"
+            ],
+            "@local.module_count": [
+              "value"
+            ],
+            "@local.sessions": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "name": "display_group_11",
+      "_nested_name": "display_group_11"
+    }
+  ],
+  "_xlsxPath": "templates/Parent Groups CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

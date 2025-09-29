@@ -457,10 +457,71 @@
       "_nested_name": "set_variable_8"
     },
     {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_field",
+          "args": [
+            "current_package",
+            "@items[0].content_package"
+          ],
+          "_raw": "data_changed | set_field : current_package: @items[0].content_package",
+          "_cleaned": "data_changed | set_field : current_package: @items[0].content_package"
+        }
+      ],
+      "parameter_list": {
+        "filter": "@item.name == @local.selected_group"
+      },
+      "name": "data_items_9",
+      "_nested_name": "data_items_9",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parent_groups",
+            "matchedExpression": "@data.parent_groups",
+            "type": "data",
+            "fieldName": "parent_groups"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "@item.name == @local.selected_group",
+              "matchedExpression": "@item.name",
+              "type": "item",
+              "fieldName": "name"
+            },
+            {
+              "fullExpression": "@item.name == @local.selected_group",
+              "matchedExpression": "@local.selected_group",
+              "type": "local",
+              "fieldName": "selected_group"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.parent_groups": [
+          "value"
+        ],
+        "@item.name": [
+          "parameter_list.filter"
+        ],
+        "@local.selected_group": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
       "exclude_from_translation": true,
       "type": "set_variable",
-      "name": "set_variable_9",
-      "_nested_name": "set_variable_9"
+      "name": "set_variable_10",
+      "_nested_name": "set_variable_10"
     },
     {
       "name": "t_group_data",
@@ -580,7 +641,7 @@
               "exclude_from_translation": true,
               "name": "undefined_1_@item.id",
               "type": "set_variable",
-              "_nested_name": "display_group_16.data_items_1.undefined_1_@item.id",
+              "_nested_name": "display_group_17.data_items_1.undefined_1_@item.id",
               "_dynamicFields": {
                 "name": [
                   {
@@ -592,7 +653,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_16.data_items_1.undefined_1_@item.id",
+                    "fullExpression": "display_group_17.data_items_1.undefined_1_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -612,7 +673,7 @@
               "condition": "@item._first",
               "exclude_from_translation": true,
               "type": "set_variable",
-              "_nested_name": "display_group_16.data_items_1.image_count",
+              "_nested_name": "display_group_17.data_items_1.image_count",
               "_dynamicFields": {
                 "condition": [
                   {
@@ -638,7 +699,7 @@
               "exclude_from_translation": true,
               "name": "undefined_3_@item.id",
               "type": "set_variable",
-              "_nested_name": "display_group_16.data_items_1.undefined_3_@item.id",
+              "_nested_name": "display_group_17.data_items_1.undefined_3_@item.id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -670,7 +731,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_16.data_items_1.undefined_3_@item.id",
+                    "fullExpression": "display_group_17.data_items_1.undefined_3_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -702,7 +763,7 @@
               "condition": false,
               "exclude_from_translation": true,
               "name": "text_4_@item.id",
-              "_nested_name": "display_group_16.data_items_1.text_4_@item.id",
+              "_nested_name": "display_group_17.data_items_1.text_4_@item.id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -728,7 +789,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_16.data_items_1.text_4_@item.id",
+                    "fullExpression": "display_group_17.data_items_1.text_4_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -757,7 +818,7 @@
               "condition": false,
               "exclude_from_translation": true,
               "name": "text_5_@item.id",
-              "_nested_name": "display_group_16.data_items_1.text_5_@item.id",
+              "_nested_name": "display_group_17.data_items_1.text_5_@item.id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -783,7 +844,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_16.data_items_1.text_5_@item.id",
+                    "fullExpression": "display_group_17.data_items_1.text_5_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -812,7 +873,7 @@
               "condition": false,
               "exclude_from_translation": true,
               "name": "text_6_@item.id",
-              "_nested_name": "display_group_16.data_items_1.text_6_@item.id",
+              "_nested_name": "display_group_17.data_items_1.text_6_@item.id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -838,7 +899,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_16.data_items_1.text_6_@item.id",
+                    "fullExpression": "display_group_17.data_items_1.text_6_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -867,7 +928,7 @@
               "condition": false,
               "exclude_from_translation": true,
               "name": "text_7_@item.id",
-              "_nested_name": "display_group_16.data_items_1.text_7_@item.id",
+              "_nested_name": "display_group_17.data_items_1.text_7_@item.id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -893,7 +954,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_16.data_items_1.text_7_@item.id",
+                    "fullExpression": "display_group_17.data_items_1.text_7_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -939,7 +1000,7 @@
                       },
                       "exclude_from_translation": true,
                       "type": "set_variable",
-                      "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card.module_id",
+                      "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card.module_id",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -964,7 +1025,7 @@
                       },
                       "exclude_from_translation": true,
                       "type": "set_variable",
-                      "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card.module_name",
+                      "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card.module_name",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -989,7 +1050,7 @@
                       },
                       "exclude_from_translation": true,
                       "type": "set_variable",
-                      "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card.report_id",
+                      "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card.report_id",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -1015,7 +1076,7 @@
                       "condition": "!@global.use_module_image",
                       "exclude_from_translation": true,
                       "type": "set_variable",
-                      "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card.image",
+                      "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card.image",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -1070,7 +1131,7 @@
                       "condition": "@global.use_module_image",
                       "exclude_from_translation": true,
                       "type": "set_variable",
-                      "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card.image",
+                      "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card.image",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -1106,7 +1167,7 @@
                       },
                       "exclude_from_translation": true,
                       "type": "set_variable",
-                      "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card.completed",
+                      "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card.completed",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -1140,7 +1201,7 @@
                       },
                       "exclude_from_translation": true,
                       "type": "set_variable",
-                      "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card.all_pages_complete",
+                      "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card.all_pages_complete",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -1174,7 +1235,7 @@
                       },
                       "exclude_from_translation": true,
                       "type": "set_variable",
-                      "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card.page_count",
+                      "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card.page_count",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -1192,10 +1253,10 @@
                       }
                     }
                   ],
-                  "_nested_name": "display_group_16.data_items_1.no_packages.menu_task_card"
+                  "_nested_name": "display_group_17.data_items_1.no_packages.menu_task_card"
                 }
               ],
-              "_nested_name": "display_group_16.data_items_1.no_packages",
+              "_nested_name": "display_group_17.data_items_1.no_packages",
               "_dynamicFields": {
                 "condition": [
                   {
@@ -1247,7 +1308,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card.module_id",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card.module_id",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1272,7 +1333,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card.module_name",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card.module_name",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1297,7 +1358,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card.report_id",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card.report_id",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1323,7 +1384,7 @@
                           "condition": "!@global.use_module_image",
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card.image",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card.image",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1378,7 +1439,7 @@
                           "condition": "@global.use_module_image",
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card.image",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card.image",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1414,7 +1475,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card.completed",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card.completed",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1448,7 +1509,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card.all_pages_complete",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card.all_pages_complete",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1482,7 +1543,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card.page_count",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card.page_count",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1500,10 +1561,10 @@
                           }
                         }
                       ],
-                      "_nested_name": "display_group_16.data_items_1.has_packages.no_tag.menu_task_card"
+                      "_nested_name": "display_group_17.data_items_1.has_packages.no_tag.menu_task_card"
                     }
                   ],
-                  "_nested_name": "display_group_16.data_items_1.has_packages.no_tag",
+                  "_nested_name": "display_group_17.data_items_1.has_packages.no_tag",
                   "_dynamicFields": {
                     "condition": [
                       {
@@ -1556,7 +1617,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card.module_id",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card.module_id",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1581,7 +1642,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card.module_name",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card.module_name",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1606,7 +1667,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card.report_id",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card.report_id",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1632,7 +1693,7 @@
                           "condition": "!@global.use_module_image",
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card.image",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card.image",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1687,7 +1748,7 @@
                           "condition": "@global.use_module_image",
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card.image",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card.image",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1723,7 +1784,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card.completed",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card.completed",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1757,7 +1818,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card.all_pages_complete",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card.all_pages_complete",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1791,7 +1852,7 @@
                           },
                           "exclude_from_translation": true,
                           "type": "set_variable",
-                          "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card.page_count",
+                          "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card.page_count",
                           "_dynamicFields": {
                             "value": [
                               {
@@ -1809,7 +1870,7 @@
                           }
                         }
                       ],
-                      "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.menu_task_card",
+                      "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.menu_task_card",
                       "_dynamicFields": {
                         "condition": [
                           {
@@ -1839,10 +1900,10 @@
                       "exclude_from_translation": true,
                       "type": "set_variable",
                       "name": "set_variable_2",
-                      "_nested_name": "display_group_16.data_items_1.has_packages.has_tag.set_variable_2"
+                      "_nested_name": "display_group_17.data_items_1.has_packages.has_tag.set_variable_2"
                     }
                   ],
-                  "_nested_name": "display_group_16.data_items_1.has_packages.has_tag",
+                  "_nested_name": "display_group_17.data_items_1.has_packages.has_tag",
                   "_dynamicFields": {
                     "condition": [
                       {
@@ -1867,7 +1928,7 @@
                   }
                 }
               ],
-              "_nested_name": "display_group_16.data_items_1.has_packages",
+              "_nested_name": "display_group_17.data_items_1.has_packages",
               "_dynamicFields": {
                 "condition": [
                   {
@@ -1893,7 +1954,7 @@
               "condition": "@local.condition_package",
               "exclude_from_translation": true,
               "type": "set_variable",
-              "_nested_name": "display_group_16.data_items_1.image_count",
+              "_nested_name": "display_group_17.data_items_1.image_count",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1932,7 +1993,7 @@
             }
           ],
           "name": "data_items_1",
-          "_nested_name": "display_group_16.data_items_1",
+          "_nested_name": "display_group_17.data_items_1",
           "_dynamicFields": {
             "value": [
               {
@@ -1950,8 +2011,8 @@
           }
         }
       ],
-      "name": "display_group_16",
-      "_nested_name": "display_group_16",
+      "name": "display_group_17",
+      "_nested_name": "display_group_17",
       "_dynamicFields": {
         "condition": [
           {
@@ -2002,7 +2063,7 @@
           "style_list": [
             "width: 40%"
           ],
-          "_nested_name": "display_group_18.logo",
+          "_nested_name": "display_group_19.logo",
           "_dynamicFields": {
             "value": [
               {
@@ -2030,7 +2091,7 @@
           },
           "exclude_from_translation": true,
           "name": "text_2",
-          "_nested_name": "display_group_18.text_2",
+          "_nested_name": "display_group_19.text_2",
           "_dynamicFields": {
             "value": [
               {
@@ -2048,8 +2109,8 @@
           }
         }
       ],
-      "name": "display_group_18",
-      "_nested_name": "display_group_18",
+      "name": "display_group_19",
+      "_nested_name": "display_group_19",
       "_dynamicFields": {
         "condition": [
           {
@@ -2108,6 +2169,6 @@
       }
     }
   ],
-  "_xlsxPath": "templates/module menu.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_xlsxPath": "templates/module menu cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

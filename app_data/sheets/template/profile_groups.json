@@ -184,26 +184,25 @@
               }
             },
             {
-              "name": "module_count",
-              "value": "@local.module_count",
+              "name": "content_package",
+              "value": "@item.package",
               "_translations": {
                 "value": {}
               },
-              "exclude_from_translation": true,
               "type": "set_variable",
-              "_nested_name": "data_items_8.parent_group.module_count",
+              "_nested_name": "data_items_8.parent_group.content_package",
               "_dynamicFields": {
                 "value": [
                   {
-                    "fullExpression": "@local.module_count",
-                    "matchedExpression": "@local.module_count",
-                    "type": "local",
-                    "fieldName": "module_count"
+                    "fullExpression": "@item.package",
+                    "matchedExpression": "@item.package",
+                    "type": "item",
+                    "fieldName": "package"
                   }
                 ]
               },
               "_dynamicDependencies": {
-                "@local.module_count": [
+                "@item.package": [
                   "value"
                 ]
               }

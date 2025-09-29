@@ -478,7 +478,8 @@
                     "value": {}
                   },
                   "style_list": [
-                    "flex:1"
+                    "flex:1",
+                    "margin-bottom: 12px"
                   ],
                   "_nested_name": "display_group_17.data_items_1.display_group_5_@item.id.module_title_text",
                   "_dynamicFields": {
@@ -759,8 +760,8 @@
                   "style_list": [
                     "font-size: 16px",
                     "color: #46607F",
-                    "margin-top: -14px",
-                    "margin-bottom: 0px"
+                    "margin-top: -10px",
+                    "margin-bottom: 12px"
                   ],
                   "condition": "@local.group_id == @item.name",
                   "_nested_name": "display_group_17.data_items_1.data_items_6_@item.id.group_name",

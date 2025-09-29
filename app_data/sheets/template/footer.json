@@ -32,7 +32,7 @@
     },
     {
       "name": "library",
-      "value": "Library",
+      "value": "Resources",
       "_translations": {
         "value": {}
       },
@@ -52,7 +52,7 @@
       "name": "button_list",
       "value": [
         {
-          "image": "images/icons/home-outline-white.svg",
+          "image": "images/icons/home-outline.svg",
           "text": "@local.home",
           "target_template": "@data.app_section.home.template"
         },
@@ -62,17 +62,17 @@
           "target_template": "actions"
         },
         {
-          "image": "images/icons/pencil-outline-white.svg",
+          "image": "images/icons/pencil-outline.svg",
           "text": "@local.reports",
           "target_template": "reports"
         },
         {
-          "image": "images/icons/library-outline-white.svg",
+          "image": "images/icons/bookmarks-outline.svg",
           "text": "@local.library",
           "target_template": "@data.app_section.library.template"
         },
         {
-          "image": "images/icons/settings-outline-white.svg",
+          "image": "images/icons/settings-outline.svg",
           "text": "@local.settings",
           "target_template": "profile"
         }
@@ -177,7 +177,8 @@
       "type": "navigation_bar",
       "name": "navigation_bar",
       "parameter_list": {
-        "button_list": "@local.button_list"
+        "button_list": "@local.button_list",
+        "variant": "text_primary"
       },
       "_nested_name": "navigation_bar",
       "_dynamicFields": {

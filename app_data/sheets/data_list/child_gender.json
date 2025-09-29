@@ -1,0 +1,61 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "child_gender",
+  "status": "released",
+  "rows": [
+    {
+      "id": "woman",
+      "name": "woman",
+      "text": "Girl",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Girl"
+        }
+      }
+    },
+    {
+      "id": "man",
+      "name": "man",
+      "text": "Boy",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Boy"
+        }
+      }
+    },
+    {
+      "id": "opt_out",
+      "name": "opt_out",
+      "text": "Prefer not to say",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Prefer not to say"
+        }
+      }
+    },
+    {
+      "id": "other",
+      "name": "other",
+      "text": "Other",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Other"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "templates/Parent Groups CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

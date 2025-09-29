@@ -14,12 +14,23 @@
     },
     {
       "name": "text",
-      "value": "test",
-      "_translations": {
-        "value": {}
-      },
       "type": "set_variable",
       "_nested_name": "text"
+    },
+    {
+      "name": "delivery_type",
+      "type": "set_variable",
+      "_nested_name": "delivery_type"
+    },
+    {
+      "name": "age_group",
+      "type": "set_variable",
+      "_nested_name": "age_group"
+    },
+    {
+      "name": "content_package",
+      "type": "set_variable",
+      "_nested_name": "content_package"
     },
     {
       "name": "completed_field",
@@ -70,6 +81,49 @@
       }
     },
     {
+      "name": "valid",
+      "value": "!!@local.text && !!@local.delivery_type && !!@local.content_package",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "valid",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "!!@local.text && !!@local.delivery_type && !!@local.content_package",
+            "matchedExpression": "!@local.text",
+            "type": "local",
+            "fieldName": "text"
+          },
+          {
+            "fullExpression": "!!@local.text && !!@local.delivery_type && !!@local.content_package",
+            "matchedExpression": "!@local.delivery_type",
+            "type": "local",
+            "fieldName": "delivery_type"
+          },
+          {
+            "fullExpression": "!!@local.text && !!@local.delivery_type && !!@local.content_package",
+            "matchedExpression": "!@local.content_package",
+            "type": "local",
+            "fieldName": "content_package"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.text": [
+          "value"
+        ],
+        "!@local.delivery_type": [
+          "value"
+        ],
+        "!@local.content_package": [
+          "value"
+        ]
+      }
+    },
+    {
       "type": "button",
       "name": "save",
       "value": "Save",
@@ -90,13 +144,16 @@
           "trigger": "click",
           "action_id": "add_data",
           "args": [],
-          "_raw": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
-          "_cleaned": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+          "_raw": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+          "_cleaned": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
           "params": {
             "_list_id": "parent_groups",
             "archived": false,
             "name": "@local.name",
-            "text": "@local.text"
+            "text": "@local.text",
+            "delivery_type": "@local.delivery_type",
+            "age_group": "@local.age_group",
+            "content_package": "@local.content_package"
           }
         },
         {
@@ -133,7 +190,8 @@
         }
       ],
       "parameter_list": {
-        "variant": "card"
+        "variant": "card",
+        "disabled": "!@local.valid"
       },
       "_nested_name": "save",
       "_dynamicFields": {
@@ -141,30 +199,66 @@
           "1": {
             "_raw": [
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
                 "matchedExpression": "@local.name",
                 "type": "local",
                 "fieldName": "name"
               },
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
                 "matchedExpression": "@local.text",
                 "type": "local",
                 "fieldName": "text"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.delivery_type",
+                "type": "local",
+                "fieldName": "delivery_type"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.age_group",
+                "type": "local",
+                "fieldName": "age_group"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.content_package",
+                "type": "local",
+                "fieldName": "content_package"
               }
             ],
             "_cleaned": [
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
                 "matchedExpression": "@local.name",
                 "type": "local",
                 "fieldName": "name"
               },
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
                 "matchedExpression": "@local.text",
                 "type": "local",
                 "fieldName": "text"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.delivery_type",
+                "type": "local",
+                "fieldName": "delivery_type"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.age_group",
+                "type": "local",
+                "fieldName": "age_group"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.content_package",
+                "type": "local",
+                "fieldName": "content_package"
               }
             ],
             "params": {
@@ -182,6 +276,30 @@
                   "matchedExpression": "@local.text",
                   "type": "local",
                   "fieldName": "text"
+                }
+              ],
+              "delivery_type": [
+                {
+                  "fullExpression": "@local.delivery_type",
+                  "matchedExpression": "@local.delivery_type",
+                  "type": "local",
+                  "fieldName": "delivery_type"
+                }
+              ],
+              "age_group": [
+                {
+                  "fullExpression": "@local.age_group",
+                  "matchedExpression": "@local.age_group",
+                  "type": "local",
+                  "fieldName": "age_group"
+                }
+              ],
+              "content_package": [
+                {
+                  "fullExpression": "@local.content_package",
+                  "matchedExpression": "@local.content_package",
+                  "type": "local",
+                  "fieldName": "content_package"
                 }
               ]
             }
@@ -234,6 +352,16 @@
               }
             ]
           }
+        },
+        "parameter_list": {
+          "disabled": [
+            {
+              "fullExpression": "!@local.valid",
+              "matchedExpression": "!@local.valid",
+              "type": "local",
+              "fieldName": "valid"
+            }
+          ]
         }
       },
       "_dynamicDependencies": {
@@ -247,6 +375,21 @@
           "action_list.1._cleaned",
           "action_list.1.params.text"
         ],
+        "@local.delivery_type": [
+          "action_list.1._raw",
+          "action_list.1._cleaned",
+          "action_list.1.params.delivery_type"
+        ],
+        "@local.age_group": [
+          "action_list.1._raw",
+          "action_list.1._cleaned",
+          "action_list.1.params.age_group"
+        ],
+        "@local.content_package": [
+          "action_list.1._raw",
+          "action_list.1._cleaned",
+          "action_list.1.params.content_package"
+        ],
         "@local.completed_field": [
           "action_list.2._raw",
           "action_list.2._cleaned",
@@ -256,10 +399,13 @@
         "@local.pages_field": [
           "action_list.3._raw",
           "action_list.3._cleaned"
+        ],
+        "!@local.valid": [
+          "parameter_list.disabled"
         ]
       }
     }
   ],
-  "_xlsxPath": "templates/parent groups.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_xlsxPath": "templates/Parent Groups CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

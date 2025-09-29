@@ -195,94 +195,6 @@
       }
     },
     {
-      "type": "text",
-      "name": "text_state",
-      "value": "@global.state_question",
-      "_translations": {
-        "value": {}
-      },
-      "_nested_name": "text_state",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@global.state_question",
-            "matchedExpression": "@global.state_question",
-            "type": "global",
-            "fieldName": "state_question"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@global.state_question": [
-          "value"
-        ]
-      }
-    },
-    {
-      "type": "combo_box",
-      "name": "user_state",
-      "value": "@fields.user_state",
-      "_translations": {
-        "value": {}
-      },
-      "condition": "changed | set_field: user_state: @local.user_state",
-      "parameter_list": {
-        "answer_list": "@data.state",
-        "placeholder": "@global.select_prompt"
-      },
-      "_nested_name": "user_state",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@fields.user_state",
-            "matchedExpression": "@fields.user_state",
-            "type": "fields",
-            "fieldName": "user_state"
-          }
-        ],
-        "condition": [
-          {
-            "fullExpression": "changed | set_field: user_state: @local.user_state",
-            "matchedExpression": "@local.user_state",
-            "type": "local",
-            "fieldName": "user_state"
-          }
-        ],
-        "parameter_list": {
-          "answer_list": [
-            {
-              "fullExpression": "@data.state",
-              "matchedExpression": "@data.state",
-              "type": "data",
-              "fieldName": "state"
-            }
-          ],
-          "placeholder": [
-            {
-              "fullExpression": "@global.select_prompt",
-              "matchedExpression": "@global.select_prompt",
-              "type": "global",
-              "fieldName": "select_prompt"
-            }
-          ]
-        }
-      },
-      "_dynamicDependencies": {
-        "@fields.user_state": [
-          "value"
-        ],
-        "@local.user_state": [
-          "condition"
-        ],
-        "@data.state": [
-          "parameter_list.answer_list"
-        ],
-        "@global.select_prompt": [
-          "parameter_list.placeholder"
-        ]
-      }
-    },
-    {
       "type": "display_group",
       "name": "dg_bottom",
       "parameter_list": {
@@ -408,6 +320,6 @@
       "_nested_name": "dg_bottom"
     }
   ],
-  "_xlsxPath": "templates/profile.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_xlsxPath": "templates/profile_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }
