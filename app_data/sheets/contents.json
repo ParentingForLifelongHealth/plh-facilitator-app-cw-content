@@ -65,6 +65,25 @@
       "_xlsxPath": "data/articles_CW.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
+    "child_gender": {
+      "flow_type": "data_list",
+      "flow_name": "child_gender",
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
+    "delivery_data": {
+      "flow_type": "data_list",
+      "flow_name": "delivery_data",
+      "data_list_name": "delivery",
+      "_xlsxPath": "data/articles_CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
+    "gender": {
+      "flow_type": "data_list",
+      "flow_name": "gender",
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
     "package": {
       "flow_name": "package",
       "flow_subtype": "generated",
@@ -352,6 +371,12 @@
           "type": "boolean"
         }
       }
+    },
+    "yes_no": {
+      "flow_type": "data_list",
+      "flow_name": "yes_no",
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     }
   },
   "data_pipe": {
@@ -845,6 +870,12 @@
       "_xlsxPath": "data/CW onboarding.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
+    "parent_group_global": {
+      "flow_type": "global",
+      "flow_name": "parent_group_global",
+      "_xlsxPath": "data/deployment_data_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
     "profile_global": {
       "flow_type": "global",
       "flow_name": "profile_global",
@@ -874,8 +905,8 @@
     "add_group_button": {
       "flow_type": "template",
       "flow_name": "add_group_button",
-      "_xlsxPath": "templates/parent groups.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "add_in_person": {
       "flow_type": "template",
@@ -886,14 +917,14 @@
     "add_parent": {
       "flow_type": "template",
       "flow_name": "add_parent",
-      "_xlsxPath": "templates/parent groups.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "add_parent_group": {
       "flow_type": "template",
       "flow_name": "add_parent_group",
-      "_xlsxPath": "templates/parent groups.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "add_remote": {
       "flow_type": "template",
@@ -1025,6 +1056,7 @@
     "dynamic_report": {
       "flow_type": "template",
       "flow_name": "dynamic_report",
+      "parameter_list": {},
       "_xlsxPath": "templates/reports_cw.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
@@ -1037,8 +1069,8 @@
     "edit_parent": {
       "flow_type": "template",
       "flow_name": "edit_parent",
-      "_xlsxPath": "templates/parent groups.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "edit_parent_group": {
       "flow_type": "template",
@@ -1554,8 +1586,8 @@
     "menu_task_flow": {
       "flow_type": "template",
       "flow_name": "menu_task_flow",
-      "_xlsxPath": "templates/module menu.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/module menu cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "message_element": {
       "flow_type": "template",
@@ -1567,6 +1599,12 @@
       "flow_type": "template",
       "flow_name": "module_final",
       "_xlsxPath": "templates/module_final_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
+    "module_progress": {
+      "flow_type": "template",
+      "flow_name": "module_progress",
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "nav_buttons": {
@@ -1675,14 +1713,14 @@
           }
         }
       },
-      "_xlsxPath": "templates/profile.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/profile_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "profile_about": {
       "flow_type": "template",
       "flow_name": "profile_about",
-      "_xlsxPath": "templates/profile.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/profile_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "profile_groups": {
       "flow_type": "template",
@@ -1749,6 +1787,12 @@
       "flow_name": "user_id",
       "_xlsxPath": "app_menu.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/19wSspWYMbRc75een-kS0q0aq24--75u8"
+    },
+    "view_parent_group": {
+      "flow_type": "template",
+      "flow_name": "view_parent_group",
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "virtual_form": {
       "flow_type": "template",

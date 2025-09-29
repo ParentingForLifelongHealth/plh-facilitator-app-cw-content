@@ -37,8 +37,26 @@
       "_nested_name": "next_icon_asset"
     },
     {
+      "name": "login_icon",
+      "value": "images/icons/log-in-outline.svg",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "login_icon"
+    },
+    {
+      "name": "logout_icon",
+      "value": "images/icons/log-out-outline.svg",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "logout_icon"
+    },
+    {
       "name": "profile_icon",
-      "value": "images/icons/profile_card.svg",
+      "value": "images/icons/person-circle-outline.svg",
       "_translations": {
         "value": {}
       },
@@ -47,7 +65,7 @@
     },
     {
       "name": "language_icon",
-      "value": "images/icons/world.svg",
+      "value": "images/icons/globe-outline.svg",
       "_translations": {
         "value": {}
       },
@@ -56,7 +74,7 @@
     },
     {
       "name": "user_id_icon",
-      "value": "images/icons/key.svg",
+      "value": "images/icons/qr-code-outline.svg",
       "_translations": {
         "value": {}
       },
@@ -64,17 +82,8 @@
       "_nested_name": "user_id_icon"
     },
     {
-      "name": "login_icon",
-      "value": "images/icons/key.svg",
-      "_translations": {
-        "value": {}
-      },
-      "type": "set_variable",
-      "_nested_name": "login_icon"
-    },
-    {
       "name": "content_icon",
-      "value": "images/icons/content.svg",
+      "value": "images/icons/file-tray-full-outline.svg",
       "_translations": {
         "value": {}
       },
@@ -83,12 +92,39 @@
     },
     {
       "name": "parent_icon",
-      "value": "images/icons/people_network.svg",
+      "value": "images/icons/people-outline.svg",
       "_translations": {
         "value": {}
       },
       "type": "set_variable",
       "_nested_name": "parent_icon"
+    },
+    {
+      "name": "about_icon",
+      "value": "images/icons/information-circle-outline.svg",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "about_icon"
+    },
+    {
+      "name": "terms_icon",
+      "value": "images/icons/document-text-outline.svg",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "terms_icon"
+    },
+    {
+      "name": "privacy_icon",
+      "value": "images/icons/document-lock-outline.svg",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "privacy_icon"
     },
     {
       "type": "title",
@@ -381,6 +417,7 @@
               "_cleaned": "click | go_to: package_select"
             }
           ],
+          "condition": false,
           "_nested_name": "dg_account.button_content",
           "_dynamicFields": {
             "parameter_list": {
@@ -521,7 +558,7 @@
           },
           "parameter_list": {
             "variant": "card",
-            "icon": "images/icons/magnify_glass.svg",
+            "icon": "@local.about_icon",
             "icon_secondary_asset": "@local.next_icon_asset",
             "style": "no-background",
             "text_align": "left"
@@ -551,6 +588,14 @@
               }
             ],
             "parameter_list": {
+              "icon": [
+                {
+                  "fullExpression": "@local.about_icon",
+                  "matchedExpression": "@local.about_icon",
+                  "type": "local",
+                  "fieldName": "about_icon"
+                }
+              ],
               "icon_secondary_asset": [
                 {
                   "fullExpression": "@local.next_icon_asset",
@@ -564,6 +609,9 @@
           "_dynamicDependencies": {
             "@global.about_this_app": [
               "value"
+            ],
+            "@local.about_icon": [
+              "parameter_list.icon"
             ],
             "@local.next_icon_asset": [
               "parameter_list.icon_secondary_asset"
@@ -579,7 +627,7 @@
           },
           "parameter_list": {
             "variant": "card",
-            "icon": "images/icons/feather.svg",
+            "icon": "@local.terms_icon",
             "icon_secondary_asset": "@local.next_icon_asset",
             "style": "no-background",
             "text_align": "left"
@@ -609,6 +657,14 @@
               }
             ],
             "parameter_list": {
+              "icon": [
+                {
+                  "fullExpression": "@local.terms_icon",
+                  "matchedExpression": "@local.terms_icon",
+                  "type": "local",
+                  "fieldName": "terms_icon"
+                }
+              ],
               "icon_secondary_asset": [
                 {
                   "fullExpression": "@local.next_icon_asset",
@@ -622,6 +678,9 @@
           "_dynamicDependencies": {
             "@global.terms_and_conditions": [
               "value"
+            ],
+            "@local.terms_icon": [
+              "parameter_list.icon"
             ],
             "@local.next_icon_asset": [
               "parameter_list.icon_secondary_asset"
@@ -637,7 +696,7 @@
           },
           "parameter_list": {
             "variant": "card",
-            "icon": "images/icons/content.svg",
+            "icon": "@local.privacy_icon",
             "icon_secondary_asset": "@local.next_icon_asset",
             "style": "no-background",
             "text_align": "left"
@@ -667,6 +726,14 @@
               }
             ],
             "parameter_list": {
+              "icon": [
+                {
+                  "fullExpression": "@local.privacy_icon",
+                  "matchedExpression": "@local.privacy_icon",
+                  "type": "local",
+                  "fieldName": "privacy_icon"
+                }
+              ],
               "icon_secondary_asset": [
                 {
                   "fullExpression": "@local.next_icon_asset",
@@ -681,6 +748,9 @@
             "@global.privacy_policy": [
               "value"
             ],
+            "@local.privacy_icon": [
+              "parameter_list.icon"
+            ],
             "@local.next_icon_asset": [
               "parameter_list.icon_secondary_asset"
             ]
@@ -690,6 +760,6 @@
       "_nested_name": "dg_account"
     }
   ],
-  "_xlsxPath": "templates/profile.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_xlsxPath": "templates/profile_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

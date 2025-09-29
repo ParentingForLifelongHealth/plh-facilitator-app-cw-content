@@ -25,6 +25,11 @@
       "_nested_name": "group_no"
     },
     {
+      "name": "content_package",
+      "type": "set_variable",
+      "_nested_name": "content_package"
+    },
+    {
       "name": "module_count",
       "value": 0,
       "type": "set_variable",
@@ -75,6 +80,76 @@
       "_dynamicDependencies": {
         "@fields.current_group_no": [
           "value"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "get_module_count",
+      "value": "@data.modules",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "module_count",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : module_count: @items.length",
+          "_cleaned": "data_changed | set_local : module_count: @items.length"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.tag_list || @item.tag_list.includes(@local.content_pacakge)"
+      },
+      "_nested_name": "get_module_count",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.modules",
+            "matchedExpression": "@data.modules",
+            "type": "data",
+            "fieldName": "modules"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_pacakge)",
+              "matchedExpression": "!@item.tag_list",
+              "type": "item",
+              "fieldName": "tag_list"
+            },
+            {
+              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_pacakge)",
+              "matchedExpression": "@item.tag_list.includes",
+              "type": "item",
+              "fieldName": "tag_list"
+            },
+            {
+              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_pacakge)",
+              "matchedExpression": "@local.content_pacakge",
+              "type": "local",
+              "fieldName": "content_pacakge"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.modules": [
+          "value"
+        ],
+        "!@item.tag_list": [
+          "parameter_list.filter"
+        ],
+        "@item.tag_list.includes": [
+          "parameter_list.filter"
+        ],
+        "@local.content_pacakge": [
+          "parameter_list.filter"
         ]
       }
     },

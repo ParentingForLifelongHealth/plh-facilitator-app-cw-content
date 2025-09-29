@@ -1,0 +1,62 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "delivery_data",
+  "status": "released",
+  "data_list_name": "delivery",
+  "rows": [
+    {
+      "id": "welcome",
+      "name": "welcome",
+      "text": "Welcome session in-person",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Welcome session in-person"
+        }
+      }
+    },
+    {
+      "id": "closing",
+      "name": "closing",
+      "text": "Closing session in-person",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Closing session in-person"
+        }
+      }
+    },
+    {
+      "id": "welcome_closing",
+      "name": "welcome_closing",
+      "text": "Welcome & closing session in-person",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "Welcome & closing session in-person"
+        }
+      }
+    },
+    {
+      "id": "remote",
+      "name": "remote",
+      "text": "No in-person session",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "No in-person session"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "data/articles_CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

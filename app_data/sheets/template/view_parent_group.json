@@ -1,0 +1,218 @@
+{
+  "flow_type": "template",
+  "flow_name": "view_parent_group",
+  "status": "released",
+  "rows": [
+    {
+      "style_list": [
+        "flex:1"
+      ],
+      "condition": "!!@local.title",
+      "type": "set_variable",
+      "name": "set_variable_2",
+      "_nested_name": "set_variable_2",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "!!@local.title",
+            "matchedExpression": "!@local.title",
+            "type": "local",
+            "fieldName": "title"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.title": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "name": "dg_header",
+      "rows": [
+        {
+          "type": "round_button",
+          "name": "back",
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "uncompleted"
+              ],
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
+            }
+          ],
+          "parameter_list": {
+            "icon_src": "chevron-back",
+            "variant": "navigation"
+          },
+          "_nested_name": "dg_header.back"
+        },
+        {
+          "type": "round_button",
+          "name": "edit",
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "go_to",
+              "args": [
+                "edit_parent_group"
+              ],
+              "_raw": "click | go_to: edit_parent_group",
+              "_cleaned": "click | go_to: edit_parent_group"
+            }
+          ],
+          "parameter_list": {
+            "icon_src": "create-outline"
+          },
+          "_nested_name": "dg_header.edit"
+        }
+      ],
+      "_nested_name": "dg_header"
+    },
+    {
+      "type": "text",
+      "name": "group_name",
+      "value": "@fields.current_group_name",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "group_name",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields.current_group_name",
+            "matchedExpression": "@fields.current_group_name",
+            "type": "fields",
+            "fieldName": "current_group_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.current_group_name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "value": "module_progress",
+      "rows": [
+        {
+          "name": "calc_module_count",
+          "value": true,
+          "type": "set_variable",
+          "_nested_name": "module_progress.calc_module_count"
+        }
+      ],
+      "name": "module_progress",
+      "_nested_name": "module_progress"
+    },
+    {
+      "name": "display_actions",
+      "value": true,
+      "type": "set_variable",
+      "_nested_name": "display_actions"
+    },
+    {
+      "type": "display_group",
+      "rows": [
+        {
+          "type": "button",
+          "value": "Actions",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_local",
+              "args": [
+                "display_actions",
+                true
+              ],
+              "_raw": "click | set_local: display_actions : TRUE",
+              "_cleaned": "click | set_local: display_actions : TRUE"
+            }
+          ],
+          "name": "button_1",
+          "_nested_name": "display_group_8.button_1"
+        },
+        {
+          "type": "button",
+          "value": "Parents",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_local",
+              "args": [
+                "display_actions",
+                false
+              ],
+              "_raw": "click | set_local: display_actions : FALSE",
+              "_cleaned": "click | set_local: display_actions : FALSE"
+            }
+          ],
+          "name": "button_2",
+          "_nested_name": "display_group_8.button_2"
+        }
+      ],
+      "name": "display_group_8",
+      "_nested_name": "display_group_8"
+    },
+    {
+      "type": "template",
+      "value": "group_actions",
+      "condition": "!!@local.display_actions",
+      "rows": [],
+      "name": "group_actions",
+      "_nested_name": "group_actions",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "!!@local.display_actions",
+            "matchedExpression": "!@local.display_actions",
+            "type": "local",
+            "fieldName": "display_actions"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.display_actions": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "value": "parent_list",
+      "condition": "!@local.display_actions",
+      "rows": [],
+      "name": "parent_list",
+      "_nested_name": "parent_list",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "!@local.display_actions",
+            "matchedExpression": "!@local.display_actions",
+            "type": "local",
+            "fieldName": "display_actions"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.display_actions": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/Parent Groups CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}
