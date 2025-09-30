@@ -1,0 +1,49 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "characters",
+  "data_list_name": "characters",
+  "status": "released",
+  "rows": [
+    {
+      "id": "f1_father",
+      "caps_id": "F1_FATHER",
+      "name": "Father",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Father"
+        }
+      }
+    },
+    {
+      "id": "f1_son_5",
+      "caps_id": "F1_SON_5",
+      "name": "Son 5",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Son 5"
+        }
+      }
+    },
+    {
+      "id": "f1_son_17",
+      "caps_id": "F1_SON_17",
+      "name": "Son 17",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Son 17"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "data/characters CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

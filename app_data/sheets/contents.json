@@ -65,6 +65,13 @@
       "_xlsxPath": "data/articles_CW.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
+    "characters": {
+      "flow_type": "data_list",
+      "flow_name": "characters",
+      "data_list_name": "characters",
+      "_xlsxPath": "data/characters CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
     "child_gender": {
       "flow_type": "data_list",
       "flow_name": "child_gender",
@@ -95,23 +102,6 @@
       "data_list_name": "home_screen_section",
       "_xlsxPath": "data/articles_CW.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
-    },
-    "in_person_questions": {
-      "flow_type": "data_list",
-      "flow_name": "in_person_questions",
-      "_xlsxPath": "templates/reports_cw.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
-      "_metadata": {
-        "validation_min": {
-          "type": "number"
-        },
-        "validation_max": {
-          "type": "number"
-        },
-        "required": {
-          "type": "boolean"
-        }
-      }
     },
     "privacy_policy": {
       "flow_type": "data_list",
@@ -194,7 +184,15 @@
       "flow_name": "modules",
       "data_list_name": "modules",
       "_xlsxPath": "data/modules_CW.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+      "_metadata": {
+        "page_count": {
+          "type": "number"
+        },
+        "completed": {
+          "type": "boolean"
+        }
+      }
     },
     "number_data": {
       "flow_type": "data_list",
@@ -290,6 +288,17 @@
       "_xlsxPath": "data/profile_data.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
+    "rating_answer": {
+      "flow_type": "data_list",
+      "flow_name": "rating_answer",
+      "_xlsxPath": "templates/reports_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+      "_metadata": {
+        "name": {
+          "type": "number"
+        }
+      }
+    },
     "report_answers": {
       "flow_type": "data_list",
       "flow_name": "report_answers",
@@ -317,8 +326,22 @@
     "report_questions": {
       "flow_type": "data_list",
       "flow_name": "report_questions",
-      "_xlsxPath": "templates/reports.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/reports_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+      "_metadata": {
+        "required": {
+          "type": "boolean"
+        },
+        "condition": {
+          "type": "boolean"
+        },
+        "validation_min": {
+          "type": "number"
+        },
+        "condition_less": {
+          "type": "number"
+        }
+      }
     },
     "sub_items": {
       "flow_type": "data_list",
@@ -354,23 +377,6 @@
       "data_list_name": "user_type",
       "_xlsxPath": "data/deployment_data_cw.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
-    },
-    "virtual_questions": {
-      "flow_type": "data_list",
-      "flow_name": "virtual_questions",
-      "_xlsxPath": "templates/reports_cw.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
-      "_metadata": {
-        "validation_min": {
-          "type": "number"
-        },
-        "validation_max": {
-          "type": "number"
-        },
-        "required": {
-          "type": "boolean"
-        }
-      }
     },
     "yes_no": {
       "flow_type": "data_list",
@@ -1056,7 +1062,6 @@
     "dynamic_report": {
       "flow_type": "template",
       "flow_name": "dynamic_report",
-      "parameter_list": {},
       "_xlsxPath": "templates/reports_cw.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },

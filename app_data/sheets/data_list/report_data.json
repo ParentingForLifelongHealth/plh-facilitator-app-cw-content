@@ -5,30 +5,80 @@
   "data_list_name": "report",
   "rows": [
     {
-      "id": "onboarding",
-      "module_id": "NONE",
-      "type": "in_person",
-      "name": "Onboarding",
+      "id": "week_1",
+      "type": "report_questions",
+      "name": "week 1 - placholder",
       "_translations": {
         "name": {}
       },
       "_translatedFields": {
         "name": {
-          "eng": "Onboarding"
+          "eng": "week 1 - placholder"
         }
       }
     },
     {
-      "id": "week_0",
-      "module_id": "week_0_introduction",
-      "type": "virtual",
-      "name": "After Onboarding Session",
+      "id": "week_2",
+      "type": "report_questions",
+      "name": "week 2 - placholder",
       "_translations": {
         "name": {}
       },
       "_translatedFields": {
         "name": {
-          "eng": "After Onboarding Session"
+          "eng": "week 2 - placholder"
+        }
+      }
+    },
+    {
+      "id": "week_3",
+      "type": "report_questions",
+      "name": "week 3 - placholder",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "week 3 - placholder"
+        }
+      }
+    },
+    {
+      "id": "week_4",
+      "type": "report_questions",
+      "name": "week 4 - placholder",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "week 4 - placholder"
+        }
+      }
+    },
+    {
+      "id": "week_5",
+      "type": "report_questions",
+      "name": "week 5 - placholder",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "week 5 - placholder"
+        }
+      }
+    },
+    {
+      "id": "week_6",
+      "type": "report_questions",
+      "name": "week 6 - placholder",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "week 6 - placholder"
         }
       }
     }
