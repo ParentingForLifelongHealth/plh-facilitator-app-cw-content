@@ -1,0 +1,79 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "rating_answer",
+  "status": "released",
+  "rows": [
+    {
+      "id": "rating_1",
+      "name": 5,
+      "text": "5 - Excellent",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "5 - Excellent"
+        }
+      }
+    },
+    {
+      "id": "rating_2",
+      "name": 4,
+      "text": "4 - Good",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "4 - Good"
+        }
+      }
+    },
+    {
+      "id": "rating_3",
+      "name": 3,
+      "text": "3 - OK",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "3 - OK"
+        }
+      }
+    },
+    {
+      "id": "rating_4",
+      "name": 2,
+      "text": "2 - Bad",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "2 - Bad"
+        }
+      }
+    },
+    {
+      "id": "rating_5",
+      "name": 1,
+      "text": "1 - Very Bad",
+      "_translations": {
+        "text": {}
+      },
+      "_translatedFields": {
+        "text": {
+          "eng": "1 - Very Bad"
+        }
+      }
+    }
+  ],
+  "_xlsxPath": "templates/reports_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+  "_metadata": {
+    "name": {
+      "type": "number"
+    }
+  }
+}

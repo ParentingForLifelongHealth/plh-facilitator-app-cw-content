@@ -4,58 +4,123 @@
   "status": "released",
   "rows": [
     {
-      "id": "question_1",
-      "type": "text",
-      "question": "How many minutes did it take you to prepare for this session?",
+      "id": "Q1",
+      "name": "answer_1",
+      "validation_name": "valid_1",
+      "required_name": "required_1",
+      "type": "date",
+      "required": true,
+      "condition": true,
+      "display_text": "Date of session",
       "_translations": {
-        "question": {}
+        "display_text": {},
+        "validation_text": {}
       },
       "_translatedFields": {
-        "question": {
-          "eng": "How many minutes did it take you to prepare for this session?"
+        "display_text": {
+          "eng": "Date of session"
+        },
+        "validation_text": {
+          "eng": "Please enter a date"
+        }
+      },
+      "validation_text": "Please enter a date"
+    },
+    {
+      "id": "Q2",
+      "name": "answer_2",
+      "validation_name": "valid_2",
+      "required_name": "required_2",
+      "type": "parent_check",
+      "required": false,
+      "condition": true,
+      "display_text": "Parent's Attendance",
+      "_translations": {
+        "display_text": {}
+      },
+      "_translatedFields": {
+        "display_text": {
+          "eng": "Parent's Attendance"
         }
       }
     },
     {
-      "id": "question_2",
-      "type": "text",
-      "question": "How many minutes did it take you to travel to the location where the session was delivered?",
+      "id": "Q3",
+      "name": "answer_3",
+      "validation_name": "valid_3",
+      "required_name": "required_3",
+      "type": "combo_box",
+      "required": true,
+      "answer_list": [
+        "rating_answer"
+      ],
+      "condition": true,
+      "display_text": "How did your session go?",
       "_translations": {
-        "question": {}
+        "display_text": {},
+        "placeholder": {},
+        "validation_text": {}
       },
       "_translatedFields": {
-        "question": {
-          "eng": "How many minutes did it take you to travel to the location where the session was delivered?"
+        "display_text": {
+          "eng": "How did your session go?"
+        },
+        "placeholder": {
+          "eng": "enter value"
+        },
+        "validation_text": {
+          "eng": "Please select a value"
         }
-      }
+      },
+      "placeholder": "enter value",
+      "validation_text": "Please select a value"
     },
     {
-      "id": "question_3",
+      "id": "Q4",
+      "name": "answer_4",
+      "validation_name": "valid_4",
+      "required_name": "required_4",
       "type": "text",
-      "question": "How many minutes did it take you to deliver the sessions?",
+      "validation_min": 10,
+      "required": true,
+      "condition": "!!@local.answer_3 && (@local.answer_3 <= 3)",
+      "condition_field": "answer_3",
+      "condition_less": 4,
+      "display_text": "What challenges did you face in delivering @fields.current_module_name Be specific.",
       "_translations": {
-        "question": {}
+        "display_text": {},
+        "placeholder": {},
+        "validation_text": {}
       },
       "_translatedFields": {
-        "question": {
-          "eng": "How many minutes did it take you to deliver the sessions?"
+        "display_text": {
+          "eng": "What challenges did you face in delivering @fields.current_module_name Be specific."
+        },
+        "placeholder": {
+          "eng": "challenges"
+        },
+        "validation_text": {
+          "eng": "Please enter a description"
         }
-      }
-    },
-    {
-      "id": "question_4",
-      "type": "select",
-      "question": "Which of the parents in this group attended your in-person session?",
-      "_translations": {
-        "question": {}
       },
-      "_translatedFields": {
-        "question": {
-          "eng": "Which of the parents in this group attended your in-person session?"
-        }
-      }
+      "placeholder": "challenges",
+      "validation_text": "Please enter a description"
     }
   ],
-  "_xlsxPath": "templates/reports.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_xlsxPath": "templates/reports_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+  "_metadata": {
+    "required": {
+      "type": "boolean"
+    },
+    "condition": {
+      "type": "boolean"
+    },
+    "validation_min": {
+      "type": "number"
+    },
+    "condition_less": {
+      "type": "number"
+    }
+  }
 }

@@ -12,11 +12,11 @@
 | button | 126 |
 | carousel | 2 |
 | combo_box | 18 |
-| data_items | 71 |
-| date_time_picker | 2 |
+| data_items | 69 |
+| date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 157 |
+| display_group | 154 |
 | google_sign_in_button | 3 |
 | image | 21 |
 | items | 16 |
@@ -28,15 +28,15 @@
 | round_button | 29 |
 | select_text | 2 |
 | set_field | 4 |
-| set_variable | 822 |
+| set_variable | 780 |
 | simple_checkbox | 2 |
 | task_card | 6 |
 | task_progress_bar | 4 |
 | template | 114 |
 | test | 1 |
-| text | 293 |
+| text | 291 |
 | text_area | 4 |
-| text_box | 39 |
+| text_box | 32 |
 | title | 54 |
 | toggle_bar | 8 |
 | update_action_list | 1 |
@@ -70,7 +70,7 @@
 | set_data | 22 |
 | set_field | 75 |
 | set_item | 9 |
-| set_local | 152 |
+| set_local | 109 |
 | share | 2 |
 | user | 4 |
 </details>
@@ -80,7 +80,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 2126 KB | 2.1 MB |
+| total | 2336 KB | 2.3 MB |
 | unused | 176 KB | 0.2 MB |
 </details>
 
@@ -211,6 +211,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/logos/IDEMS.png | 84.6 | 1 |
 | images/logos/PLH.png | 26.6 | 2 |
 | images/logos/UNICEF.jpg | 27.7 | 1 |
+| images/modules/place_holder.png | 210 | 19 |
 | images/onboarding/splash_1.jpg | 266 | 1 |
 | images/onboarding/splash_2.jpg | 247.5 | 1 |
 | images/onboarding/splash_3.jpg | 276.8 | 1 |
