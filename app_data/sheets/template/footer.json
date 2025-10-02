@@ -22,13 +22,13 @@
       "_nested_name": "actions"
     },
     {
-      "name": "reports",
-      "value": "Reports",
+      "name": "groups",
+      "value": "Groups",
       "_translations": {
         "value": {}
       },
       "type": "set_variable",
-      "_nested_name": "reports"
+      "_nested_name": "groups"
     },
     {
       "name": "library",
@@ -62,9 +62,9 @@
           "target_template": "actions"
         },
         {
-          "image": "images/icons/pencil-outline.svg",
-          "text": "@local.reports",
-          "target_template": "reports"
+          "image": "images/icons/people.svg",
+          "text": "@local.groups",
+          "target_template": "profile_groups"
         },
         {
           "image": "images/icons/bookmarks-outline.svg",
@@ -112,10 +112,10 @@
           "2": {
             "text": [
               {
-                "fullExpression": "@local.reports",
-                "matchedExpression": "@local.reports",
+                "fullExpression": "@local.groups",
+                "matchedExpression": "@local.groups",
                 "type": "local",
-                "fieldName": "reports"
+                "fieldName": "groups"
               }
             ]
           },
@@ -159,7 +159,7 @@
         "@local.actions": [
           "value.1.text"
         ],
-        "@local.reports": [
+        "@local.groups": [
           "value.2.text"
         ],
         "@local.library": [
