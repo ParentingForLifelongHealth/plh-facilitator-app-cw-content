@@ -461,6 +461,7 @@
       "parameter_list": {
         "variant": "section_banner"
       },
+      "condition": false,
       "_nested_name": "parent"
     },
     {
@@ -470,6 +471,7 @@
         "variant": "inline_padding",
         "style": "column"
       },
+      "condition": false,
       "rows": [
         {
           "type": "button",
@@ -496,6 +498,7 @@
               "_cleaned": "click | go_to: profile_groups"
             }
           ],
+          "condition": false,
           "_nested_name": "dg_parent.button_parents",
           "_dynamicFields": {
             "parameter_list": {

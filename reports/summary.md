@@ -28,7 +28,7 @@
 | round_button | 29 |
 | select_text | 2 |
 | set_field | 4 |
-| set_variable | 780 |
+| set_variable | 778 |
 | simple_checkbox | 2 |
 | task_card | 6 |
 | task_progress_bar | 4 |
@@ -80,7 +80,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 2336 KB | 2.3 MB |
+| total | 2337 KB | 2.3 MB |
 | unused | 176 KB | 0.2 MB |
 </details>
 
@@ -116,7 +116,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/library.svg | 0.9 |
 | images/icons/paper_plane_white.svg | 1.4 |
 | images/icons/pencil-outline-white.svg | 1.4 |
-| images/icons/people.svg | 1 |
+| images/icons/pencil-outline.svg | 0.3 |
 | images/icons/people_network.svg | 6.9 |
 | images/icons/person-add-outline.svg | 0.6 |
 | images/icons/person-remove-outline.svg | 0.6 |
@@ -198,9 +198,9 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/library_white.svg | 2.8 | 1 |
 | images/icons/log-in-outline.svg | 0.4 | 1 |
 | images/icons/log-out-outline.svg | 0.3 | 1 |
-| images/icons/pencil-outline.svg | 0.3 | 1 |
 | images/icons/pencil_white.svg | 2 | 1 |
 | images/icons/people-outline.svg | 0.9 | 1 |
+| images/icons/people.svg | 1 | 1 |
 | images/icons/person-circle-outline.svg | 0.7 | 1 |
 | images/icons/person_cog.svg | 2.9 | 3 |
 | images/icons/qr-code-outline.svg | 1 | 1 |
