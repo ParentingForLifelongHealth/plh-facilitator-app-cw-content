@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 2 |
-| button | 126 |
+| button | 125 |
 | carousel | 2 |
 | combo_box | 18 |
-| data_items | 69 |
+| data_items | 70 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 154 |
+| display_group | 153 |
 | google_sign_in_button | 3 |
 | image | 21 |
 | items | 16 |
@@ -25,19 +25,19 @@
 | pdf | 1 |
 | qr_code | 2 |
 | radio_button_grid | 10 |
-| round_button | 29 |
+| round_button | 28 |
 | select_text | 2 |
 | set_field | 4 |
-| set_variable | 778 |
-| simple_checkbox | 2 |
+| set_variable | 789 |
+| simple_checkbox | 5 |
 | task_card | 6 |
 | task_progress_bar | 4 |
-| template | 114 |
+| template | 113 |
 | test | 1 |
-| text | 291 |
+| text | 292 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 54 |
+| title | 56 |
 | toggle_bar | 8 |
 | update_action_list | 1 |
 | video | 2 |
@@ -51,15 +51,15 @@
 | add_data | 11 |
 | app_update | 1 |
 | auth | 4 |
-| emit: completed | 45 |
+| emit: completed | 44 |
 | emit: force_reload | 7 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 20 |
 | emit: set_language | 3 |
-| emit: uncompleted | 79 |
+| emit: uncompleted | 78 |
 | feedback | 24 |
-| go_to | 39 |
+| go_to | 38 |
 | nav | 1 |
 | nav_stack | 7 |
 | pop_up | 16 |
@@ -67,10 +67,10 @@
 | reset_data | 3 |
 | save_to_device | 4 |
 | scroll | 1 |
-| set_data | 22 |
+| set_data | 21 |
 | set_field | 75 |
-| set_item | 9 |
-| set_local | 109 |
+| set_item | 13 |
+| set_local | 111 |
 | share | 2 |
 | user | 4 |
 </details>
@@ -107,6 +107,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/check_circle.svg | 1.2 |
 | images/icons/content.svg | 7.2 |
 | images/icons/copy-outline.svg | 0.4 |
+| images/icons/create-outline.svg | 0.6 |
 | images/icons/globe_blue.svg | 3.9 |
 | images/icons/group_add.svg | 2.2 |
 | images/icons/home-outline-white.svg | 1.6 |

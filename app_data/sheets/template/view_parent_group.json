@@ -4,6 +4,26 @@
   "status": "released",
   "rows": [
     {
+      "type": "round_button",
+      "name": "back",
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "emit",
+          "args": [
+            "uncompleted"
+          ],
+          "_raw": "click | emit: uncompleted",
+          "_cleaned": "click | emit: uncompleted"
+        }
+      ],
+      "parameter_list": {
+        "icon_src": "chevron-back",
+        "variant": "navigation"
+      },
+      "_nested_name": "back"
+    },
+    {
       "style_list": [
         "flex:1"
       ],
@@ -32,28 +52,32 @@
       "name": "dg_header",
       "rows": [
         {
-          "type": "round_button",
-          "name": "back",
-          "action_list": [
-            {
-              "trigger": "click",
-              "action_id": "emit",
-              "args": [
-                "uncompleted"
-              ],
-              "_raw": "click | emit: uncompleted",
-              "_cleaned": "click | emit: uncompleted"
-            }
-          ],
-          "parameter_list": {
-            "icon_src": "chevron-back",
-            "variant": "navigation"
+          "type": "title",
+          "name": "group_name",
+          "value": "@fields.current_group_name",
+          "_translations": {
+            "value": {}
           },
-          "_nested_name": "dg_header.back"
+          "_nested_name": "dg_header.group_name",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@fields.current_group_name",
+                "matchedExpression": "@fields.current_group_name",
+                "type": "fields",
+                "fieldName": "current_group_name"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@fields.current_group_name": [
+              "value"
+            ]
+          }
         },
         {
           "type": "round_button",
-          "name": "edit",
+          "name": "edit_icon",
           "action_list": [
             {
               "trigger": "click",
@@ -66,36 +90,13 @@
             }
           ],
           "parameter_list": {
+            "variant": "no-background",
             "icon_src": "create-outline"
           },
-          "_nested_name": "dg_header.edit"
+          "_nested_name": "dg_header.edit_icon"
         }
       ],
       "_nested_name": "dg_header"
-    },
-    {
-      "type": "text",
-      "name": "group_name",
-      "value": "@fields.current_group_name",
-      "_translations": {
-        "value": {}
-      },
-      "_nested_name": "group_name",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@fields.current_group_name",
-            "matchedExpression": "@fields.current_group_name",
-            "type": "fields",
-            "fieldName": "current_group_name"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@fields.current_group_name": [
-          "value"
-        ]
-      }
     },
     {
       "type": "template",

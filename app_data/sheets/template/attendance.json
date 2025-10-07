@@ -2120,6 +2120,9 @@
                   "_translations": {
                     "value": {}
                   },
+                  "style_list": [
+                    "margin-bottom: 12px"
+                  ],
                   "condition": "@item.id == @local.parent_id",
                   "name": "text_1_@item.id",
                   "_nested_name": "display_group_49.display_group_1.parent_name.text_1_@item.id",
@@ -2224,6 +2227,9 @@
               "_translations": {
                 "value": {}
               },
+              "parameter_list": {
+                "style": "alternative"
+              },
               "_nested_name": "display_group_49.display_group_1.follow_up_button"
             }
           ],
@@ -2240,8 +2246,8 @@
           "style_list": [
             "font-size: 16px",
             "color: #46607F",
-            "margin-top: -14px",
-            "margin-bottom: 0px"
+            "margin-top: -10px",
+            "margin-bottom: 12px"
           ],
           "_nested_name": "display_group_49.total_attendance_text",
           "_dynamicFields": {
