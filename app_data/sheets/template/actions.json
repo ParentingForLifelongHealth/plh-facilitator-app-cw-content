@@ -4,34 +4,17 @@
   "status": "released",
   "rows": [
     {
-      "type": "template",
-      "name": "header",
-      "value": "section_header",
-      "action_list": [
-        {
-          "trigger": "uncompleted",
-          "action_id": "emit",
-          "args": [
-            "uncompleted"
-          ],
-          "_raw": "uncompleted | emit: uncompleted",
-          "_cleaned": "uncompleted | emit: uncompleted"
-        }
-      ],
+      "type": "title",
+      "name": "title",
+      "value": "Actions",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "variant": "page_banner"
+      },
       "exclude_from_translation": true,
-      "rows": [
-        {
-          "name": "title",
-          "value": "Actions",
-          "_translations": {
-            "value": {}
-          },
-          "exclude_from_translation": true,
-          "type": "set_variable",
-          "_nested_name": "header.title"
-        }
-      ],
-      "_nested_name": "header"
+      "_nested_name": "title"
     },
     {
       "type": "template",
