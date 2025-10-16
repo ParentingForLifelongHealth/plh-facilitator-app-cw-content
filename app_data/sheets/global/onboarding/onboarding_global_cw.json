@@ -46,7 +46,7 @@
     {
       "type": "declare_global_constant",
       "name": "onboarding_header_image_asset",
-      "value": "images/logos/PLH.png",
+      "value": "images/logos/MK_whitewithcolor.png",
       "_translations": {
         "value": {}
       },
@@ -60,6 +60,10 @@
     {
       "type": "declare_global_constant",
       "name": "onboarding_completed_lottie_asset",
+      "value": "lottie/cw_profile_complete.lottie",
+      "_translations": {
+        "value": {}
+      },
       "exclude_from_translation": true
     },
     {

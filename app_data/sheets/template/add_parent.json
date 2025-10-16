@@ -750,9 +750,6 @@
           "parameter_list": {
             "placeholder": "@global.edit_first_name"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.first_name",
           "_dynamicFields": {
@@ -845,9 +842,6 @@
           "parameter_list": {
             "placeholder": "@global.edit_last_name"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.last_name",
           "_dynamicFields": {
@@ -952,9 +946,6 @@
           "parameter_list": {
             "placeholder": "@global.edit_number"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.number",
           "_dynamicFields": {
@@ -1068,9 +1059,6 @@
           "parameter_list": {
             "placeholder": "@global.edit_age"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.age",
           "_dynamicFields": {
@@ -1185,9 +1173,6 @@
             "placeholder": "@global.edit_sex",
             "answer_list": "@local.gender_select_options"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "condition": "answer_list: @local.gender_select_options",
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.sex",
@@ -1350,9 +1335,6 @@
           "parameter_list": {
             "placeholder": "@global.edit_child_count"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.child_count",
           "_dynamicFields": {
@@ -1546,9 +1528,6 @@
           "parameter_list": {
             "placeholder": "@global.edit_child_age"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.child_age",
           "_dynamicFields": {
@@ -1663,9 +1642,6 @@
             "placeholder": "@global.edit_child_sex",
             "answer_list": "@local.child_gender_select_options"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.child_sex",
           "_dynamicFields": {
@@ -1791,9 +1767,6 @@
             "placeholder": "@global.edit_other_home",
             "answer_list": "@local.other_home_options"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.other_home",
           "_dynamicFields": {
@@ -1918,9 +1891,6 @@
           "parameter_list": {
             "placeholder": "@global.edit_hours"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.hours",
           "_dynamicFields": {
@@ -2022,9 +1992,6 @@
           "parameter_list": {
             "placeholder": "@global.edit_goal"
           },
-          "style_list": [
-            "margin-top: -10px"
-          ],
           "exclude_from_translation": true,
           "_nested_name": "display_group_15.goal",
           "_dynamicFields": {

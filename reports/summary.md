@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 2 |
-| button | 125 |
+| button | 127 |
 | carousel | 2 |
 | combo_box | 18 |
-| data_items | 70 |
+| data_items | 67 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 153 |
+| display_group | 157 |
 | google_sign_in_button | 3 |
 | image | 21 |
 | items | 16 |
@@ -27,17 +27,17 @@
 | radio_button_grid | 10 |
 | round_button | 28 |
 | select_text | 2 |
-| set_field | 4 |
-| set_variable | 789 |
+| set_field | 6 |
+| set_variable | 847 |
 | simple_checkbox | 5 |
 | task_card | 6 |
 | task_progress_bar | 4 |
 | template | 113 |
 | test | 1 |
-| text | 292 |
+| text | 323 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 56 |
+| title | 61 |
 | toggle_bar | 8 |
 | update_action_list | 1 |
 | video | 2 |
@@ -71,7 +71,7 @@
 | set_field | 75 |
 | set_item | 13 |
 | set_local | 111 |
-| share | 2 |
+| share | 4 |
 | user | 4 |
 </details>
 
@@ -80,7 +80,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 2337 KB | 2.3 MB |
+| total | 9713 KB | 9.7 MB |
 | unused | 176 KB | 0.2 MB |
 </details>
 
@@ -210,7 +210,8 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/unarchive.svg | 1.1 | 1 |
 | images/icons/visibility.svg | 0.5 | 1 |
 | images/logos/IDEMS.png | 84.6 | 1 |
-| images/logos/PLH.png | 26.6 | 2 |
+| images/logos/MK_whitewithcolor.png | 7376.2 | 1 |
+| images/logos/PLH.png | 26.6 | 1 |
 | images/logos/UNICEF.jpg | 27.7 | 1 |
 | images/modules/place_holder.png | 210 | 19 |
 | images/onboarding/splash_1.jpg | 266 | 1 |
@@ -238,7 +239,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 11 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 94 |
+| template |  | 95 |
 | template | generated | 61 |
 | template | legal_terms | 4 |
 </details>

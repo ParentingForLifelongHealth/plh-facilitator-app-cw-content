@@ -25,6 +25,18 @@
       "_nested_name": "missed_sessions_limit"
     },
     {
+      "name": "current_follow_ups_number_local",
+      "value": 0,
+      "type": "set_variable",
+      "_nested_name": "current_follow_ups_number_local"
+    },
+    {
+      "type": "set_field",
+      "name": "current_follow_ups_number",
+      "value": 0,
+      "_nested_name": "current_follow_ups_number"
+    },
+    {
       "type": "data_items",
       "name": "counting_delivered",
       "value": "@data.report_answers",
@@ -34,15 +46,12 @@
           "action_id": "set_local",
           "args": [
             "number_delivered_sessions",
-            "@items.length"
+            "@items.length -1"
           ],
-          "_raw": "data_changed | set_local : number_delivered_sessions : @items.length",
-          "_cleaned": "data_changed | set_local : number_delivered_sessions : @items.length"
+          "_raw": "data_changed | set_local : number_delivered_sessions : @items.length -1",
+          "_cleaned": "data_changed | set_local : number_delivered_sessions : @items.length -1"
         }
       ],
-      "parameter_list": {
-        "filter": "!@item.pending"
-      },
       "rows": [],
       "_nested_name": "counting_delivered",
       "_dynamicFields": {
@@ -53,24 +62,11 @@
             "type": "data",
             "fieldName": "report_answers"
           }
-        ],
-        "parameter_list": {
-          "filter": [
-            {
-              "fullExpression": "!@item.pending",
-              "matchedExpression": "!@item.pending",
-              "type": "item",
-              "fieldName": "pending"
-            }
-          ]
-        }
+        ]
       },
       "_dynamicDependencies": {
         "@data.report_answers": [
           "value"
-        ],
-        "!@item.pending": [
-          "parameter_list.filter"
         ]
       }
     },
@@ -175,29 +171,68 @@
       }
     },
     {
-      "name": "first_time_condition",
-      "value": "@local.number_delivered_sessions == 0 || @local.number_parent_groups == 0 || @local.number_parents == 0;",
+      "type": "text",
+      "name": "test_delivered",
+      "value": "delivered = @local.number_delivered_sessions",
       "_translations": {
         "value": {}
       },
-      "type": "set_variable",
-      "_nested_name": "first_time_condition",
+      "condition": false,
+      "_nested_name": "test_delivered",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@local.number_delivered_sessions == 0 || @local.number_parent_groups == 0 || @local.number_parents == 0;",
+            "fullExpression": "delivered = @local.number_delivered_sessions",
             "matchedExpression": "@local.number_delivered_sessions",
             "type": "local",
             "fieldName": "number_delivered_sessions"
-          },
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.number_delivered_sessions": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "test_parent_groups",
+      "value": "parent_groups = @local.number_parent_groups",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "_nested_name": "test_parent_groups",
+      "_dynamicFields": {
+        "value": [
           {
-            "fullExpression": "@local.number_delivered_sessions == 0 || @local.number_parent_groups == 0 || @local.number_parents == 0;",
+            "fullExpression": "parent_groups = @local.number_parent_groups",
             "matchedExpression": "@local.number_parent_groups",
             "type": "local",
             "fieldName": "number_parent_groups"
-          },
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.number_parent_groups": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "test_parents",
+      "value": "parents = @local.number_parents",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "_nested_name": "test_parents",
+      "_dynamicFields": {
+        "value": [
           {
-            "fullExpression": "@local.number_delivered_sessions == 0 || @local.number_parent_groups == 0 || @local.number_parents == 0;",
+            "fullExpression": "parents = @local.number_parents",
             "matchedExpression": "@local.number_parents",
             "type": "local",
             "fieldName": "number_parents"
@@ -205,23 +240,63 @@
         ]
       },
       "_dynamicDependencies": {
-        "@local.number_delivered_sessions": [
-          "value"
-        ],
-        "@local.number_parent_groups": [
-          "value"
-        ],
         "@local.number_parents": [
           "value"
         ]
       }
     },
     {
+      "condition": false,
+      "type": "set_variable",
+      "name": "set_variable_17",
+      "_nested_name": "set_variable_17"
+    },
+    {
+      "type": "text",
+      "value": "true delivered condition",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_18",
+      "_nested_name": "text_18"
+    },
+    {
+      "type": "text",
+      "value": "true parent_groups condition",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_19",
+      "_nested_name": "text_19"
+    },
+    {
+      "type": "text",
+      "value": "true parents condition",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_20",
+      "_nested_name": "text_20"
+    },
+    {
+      "type": "text",
+      "value": "true condition",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_21",
+      "_nested_name": "text_21"
+    },
+    {
       "type": "display_group",
       "parameter_list": {
         "style": "column"
       },
-      "condition": "@local.first_time_condition;",
+      "condition": false,
       "rows": [
         {
           "type": "title",
@@ -230,7 +305,7 @@
           "_translations": {
             "value": {}
           },
-          "_nested_name": "display_group_13.text_no_follow_up"
+          "_nested_name": "display_group_22.text_no_follow_up"
         },
         {
           "type": "text",
@@ -242,26 +317,43 @@
           "parameter_list": {
             "style": "contextual"
           },
-          "_nested_name": "display_group_13.text_first_time"
+          "_nested_name": "display_group_22.text_first_time"
         }
       ],
-      "name": "display_group_13",
-      "_nested_name": "display_group_13",
-      "_dynamicFields": {
-        "condition": [
-          {
-            "fullExpression": "@local.first_time_condition;",
-            "matchedExpression": "@local.first_time_condition",
-            "type": "local",
-            "fieldName": "first_time_condition"
-          }
-        ]
+      "name": "display_group_22",
+      "_nested_name": "display_group_22"
+    },
+    {
+      "type": "display_group",
+      "parameter_list": {
+        "style": "column"
       },
-      "_dynamicDependencies": {
-        "@local.first_time_condition": [
-          "condition"
-        ]
-      }
+      "condition": false,
+      "rows": [
+        {
+          "type": "title",
+          "name": "text_no_follow_up",
+          "value": "No Follow ups",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "display_group_24.text_no_follow_up"
+        },
+        {
+          "type": "text",
+          "name": "text_first_time",
+          "value": "All your parents are engaged–keep it up!",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "style": "contextual"
+          },
+          "_nested_name": "display_group_24.text_first_time"
+        }
+      ],
+      "name": "display_group_24",
+      "_nested_name": "display_group_24"
     },
     {
       "type": "data_items",
@@ -272,84 +364,3812 @@
       },
       "rows": [
         {
-          "type": "template",
-          "name": "attendance",
-          "value": "attendance",
+          "name": "test_string",
+          "value": "modules.module_1_reminder_1.image_asset",
+          "_translations": {
+            "value": {}
+          },
+          "condition": false,
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.test_string"
+        },
+        {
+          "type": "text",
+          "name": "test_string_text",
+          "value": "@local.test_string",
+          "_translations": {
+            "value": {}
+          },
+          "condition": false,
+          "_nested_name": "calculating_attendance.test_string_text",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.test_string",
+                "matchedExpression": "@local.test_string",
+                "type": "local",
+                "fieldName": "test_string"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.test_string": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "testtest",
+          "value": "will it work? @data.@local.test_string",
+          "_translations": {
+            "value": {}
+          },
+          "condition": false,
+          "_nested_name": "calculating_attendance.testtest",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "will it work? @data.@local.test_string",
+                "matchedExpression": "@local.test_string",
+                "type": "local",
+                "fieldName": "test_string"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.test_string": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s1",
+          "value": "@item.module_1_reminder_1",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s1",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_1_reminder_1",
+                "matchedExpression": "@item.module_1_reminder_1",
+                "type": "item",
+                "fieldName": "module_1_reminder_1"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_1_reminder_1": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s2",
+          "value": "@item.module_1_reminder_2",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s2",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_1_reminder_2",
+                "matchedExpression": "@item.module_1_reminder_2",
+                "type": "item",
+                "fieldName": "module_1_reminder_2"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_1_reminder_2": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s3",
+          "value": "@item.module_2_reminder_1",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s3",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_2_reminder_1",
+                "matchedExpression": "@item.module_2_reminder_1",
+                "type": "item",
+                "fieldName": "module_2_reminder_1"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_2_reminder_1": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s4",
+          "value": "@item.module_2_reminder_2",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s4",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_2_reminder_2",
+                "matchedExpression": "@item.module_2_reminder_2",
+                "type": "item",
+                "fieldName": "module_2_reminder_2"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_2_reminder_2": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s5",
+          "value": "@item.module_2_chat",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s5",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_2_chat",
+                "matchedExpression": "@item.module_2_chat",
+                "type": "item",
+                "fieldName": "module_2_chat"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_2_chat": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s6",
+          "value": "@item.module_3_reminder_1",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s6",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_3_reminder_1",
+                "matchedExpression": "@item.module_3_reminder_1",
+                "type": "item",
+                "fieldName": "module_3_reminder_1"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_3_reminder_1": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s7",
+          "value": "@item.module_3_reminder_2",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s7",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_3_reminder_2",
+                "matchedExpression": "@item.module_3_reminder_2",
+                "type": "item",
+                "fieldName": "module_3_reminder_2"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_3_reminder_2": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s8",
+          "value": "@item.module_3_chat",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s8",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_3_chat",
+                "matchedExpression": "@item.module_3_chat",
+                "type": "item",
+                "fieldName": "module_3_chat"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_3_chat": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s9",
+          "value": "@item.module_4_reminder_1",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s9",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_4_reminder_1",
+                "matchedExpression": "@item.module_4_reminder_1",
+                "type": "item",
+                "fieldName": "module_4_reminder_1"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_4_reminder_1": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s10",
+          "value": "@item.module_4_reminder_2",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s10",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_4_reminder_2",
+                "matchedExpression": "@item.module_4_reminder_2",
+                "type": "item",
+                "fieldName": "module_4_reminder_2"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_4_reminder_2": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s11",
+          "value": "@item.module_4_chat",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s11",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_4_chat",
+                "matchedExpression": "@item.module_4_chat",
+                "type": "item",
+                "fieldName": "module_4_chat"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_4_chat": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s12",
+          "value": "@item.module_5_reminder_1",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s12",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_5_reminder_1",
+                "matchedExpression": "@item.module_5_reminder_1",
+                "type": "item",
+                "fieldName": "module_5_reminder_1"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_5_reminder_1": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s13",
+          "value": "@item.module_5_reminder_2",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s13",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_5_reminder_2",
+                "matchedExpression": "@item.module_5_reminder_2",
+                "type": "item",
+                "fieldName": "module_5_reminder_2"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_5_reminder_2": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "s14",
+          "value": "@item.module_5_chat",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "calculating_attendance.s14",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.module_5_chat",
+                "matchedExpression": "@item.module_5_chat",
+                "type": "item",
+                "fieldName": "module_5_chat"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.module_5_chat": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "display_group",
           "rows": [
             {
-              "name": "parent_id",
-              "value": "@item.id",
+              "name": "attendance_1",
+              "value": "@calc(0 *0)",
               "_translations": {
                 "value": {}
               },
+              "condition": "@local.s1 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.attendance.parent_id",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_1",
               "_dynamicFields": {
                 "value": [
                   {
-                    "fullExpression": "@item.id",
-                    "matchedExpression": "@item.id",
+                    "fullExpression": "@calc(0 *0)",
+                    "matchedExpression": "@calc(0 *0)",
+                    "type": "calc",
+                    "fieldName": "0 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s1 == true",
+                    "matchedExpression": "@local.s1",
+                    "type": "local",
+                    "fieldName": "s1"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_1",
+                    "matchedExpression": "@item.id.attendance_1",
                     "type": "item",
                     "fieldName": "id"
                   }
                 ]
               },
               "_dynamicDependencies": {
-                "@item.id": [
+                "@calc(0 *0)": [
                   "value"
+                ],
+                "@local.s1": [
+                  "condition"
+                ],
+                "@item.id.attendance_1": [
+                  "_nested_name"
                 ]
               }
             },
             {
-              "name": "m_s_l",
-              "value": "@local.missed_sessions_limit",
+              "name": "attendance_1",
+              "value": "@calc(0 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s1 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_1",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(0 +1)",
+                    "matchedExpression": "@calc(0 +1)",
+                    "type": "calc",
+                    "fieldName": "0 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s1 == false",
+                    "matchedExpression": "@local.s1",
+                    "type": "local",
+                    "fieldName": "s1"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_1",
+                    "matchedExpression": "@item.id.attendance_1",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@calc(0 +1)": [
+                  "value"
+                ],
+                "@local.s1": [
+                  "condition"
+                ],
+                "@item.id.attendance_1": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_1",
+              "value": "@calc(0 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s1 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_1",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(0 *1)",
+                    "matchedExpression": "@calc(0 *1)",
+                    "type": "calc",
+                    "fieldName": "0 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s1 == undefined",
+                    "matchedExpression": "@local.s1",
+                    "type": "local",
+                    "fieldName": "s1"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_1",
+                    "matchedExpression": "@item.id.attendance_1",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@calc(0 *1)": [
+                  "value"
+                ],
+                "@local.s1": [
+                  "condition"
+                ],
+                "@item.id.attendance_1": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_1",
+              "value": "attendance_1 = @local.attendance_1",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_1",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_1 = @local.attendance_1",
+                    "matchedExpression": "@local.attendance_1",
+                    "type": "local",
+                    "fieldName": "attendance_1"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_1",
+                    "matchedExpression": "@item.id.test_attendance_1",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_1": [
+                  "value"
+                ],
+                "@item.id.test_attendance_1": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_2",
+              "value": "@calc(@local.attendance_1 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s2 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_2",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_1 *0)",
+                    "matchedExpression": "@local.attendance_1",
+                    "type": "local",
+                    "fieldName": "attendance_1"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_1 *0)",
+                    "matchedExpression": "@calc(@local.attendance_1 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_1 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s2 == true",
+                    "matchedExpression": "@local.s2",
+                    "type": "local",
+                    "fieldName": "s2"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_2",
+                    "matchedExpression": "@item.id.attendance_2",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_1": [
+                  "value"
+                ],
+                "@calc(@local.attendance_1 *0)": [
+                  "value"
+                ],
+                "@local.s2": [
+                  "condition"
+                ],
+                "@item.id.attendance_2": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_2",
+              "value": "@calc(@local.attendance_1 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s2 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_2",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_1 +1)",
+                    "matchedExpression": "@local.attendance_1",
+                    "type": "local",
+                    "fieldName": "attendance_1"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_1 +1)",
+                    "matchedExpression": "@calc(@local.attendance_1 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_1 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s2 == false",
+                    "matchedExpression": "@local.s2",
+                    "type": "local",
+                    "fieldName": "s2"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_2",
+                    "matchedExpression": "@item.id.attendance_2",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_1": [
+                  "value"
+                ],
+                "@calc(@local.attendance_1 +1)": [
+                  "value"
+                ],
+                "@local.s2": [
+                  "condition"
+                ],
+                "@item.id.attendance_2": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_2",
+              "value": "@calc(@local.attendance_1 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s2 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_2",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_1 *1)",
+                    "matchedExpression": "@local.attendance_1",
+                    "type": "local",
+                    "fieldName": "attendance_1"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_1 *1)",
+                    "matchedExpression": "@calc(@local.attendance_1 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_1 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s2 == undefined",
+                    "matchedExpression": "@local.s2",
+                    "type": "local",
+                    "fieldName": "s2"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_2",
+                    "matchedExpression": "@item.id.attendance_2",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_1": [
+                  "value"
+                ],
+                "@calc(@local.attendance_1 *1)": [
+                  "value"
+                ],
+                "@local.s2": [
+                  "condition"
+                ],
+                "@item.id.attendance_2": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_2",
+              "value": "attendance_2 = @local.attendance_2",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_2",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_2 = @local.attendance_2",
+                    "matchedExpression": "@local.attendance_2",
+                    "type": "local",
+                    "fieldName": "attendance_2"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_2",
+                    "matchedExpression": "@item.id.test_attendance_2",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_2": [
+                  "value"
+                ],
+                "@item.id.test_attendance_2": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_3",
+              "value": "@calc(@local.attendance_2 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s3 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_3",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_2 *0)",
+                    "matchedExpression": "@local.attendance_2",
+                    "type": "local",
+                    "fieldName": "attendance_2"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_2 *0)",
+                    "matchedExpression": "@calc(@local.attendance_2 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_2 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s3 == true",
+                    "matchedExpression": "@local.s3",
+                    "type": "local",
+                    "fieldName": "s3"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_3",
+                    "matchedExpression": "@item.id.attendance_3",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_2": [
+                  "value"
+                ],
+                "@calc(@local.attendance_2 *0)": [
+                  "value"
+                ],
+                "@local.s3": [
+                  "condition"
+                ],
+                "@item.id.attendance_3": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_3",
+              "value": "@calc(@local.attendance_2 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s3 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_3",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_2 +1)",
+                    "matchedExpression": "@local.attendance_2",
+                    "type": "local",
+                    "fieldName": "attendance_2"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_2 +1)",
+                    "matchedExpression": "@calc(@local.attendance_2 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_2 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s3 == false",
+                    "matchedExpression": "@local.s3",
+                    "type": "local",
+                    "fieldName": "s3"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_3",
+                    "matchedExpression": "@item.id.attendance_3",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_2": [
+                  "value"
+                ],
+                "@calc(@local.attendance_2 +1)": [
+                  "value"
+                ],
+                "@local.s3": [
+                  "condition"
+                ],
+                "@item.id.attendance_3": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_3",
+              "value": "@calc(@local.attendance_2 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s3 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_3",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_2 *1)",
+                    "matchedExpression": "@local.attendance_2",
+                    "type": "local",
+                    "fieldName": "attendance_2"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_2 *1)",
+                    "matchedExpression": "@calc(@local.attendance_2 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_2 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s3 == undefined",
+                    "matchedExpression": "@local.s3",
+                    "type": "local",
+                    "fieldName": "s3"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_3",
+                    "matchedExpression": "@item.id.attendance_3",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_2": [
+                  "value"
+                ],
+                "@calc(@local.attendance_2 *1)": [
+                  "value"
+                ],
+                "@local.s3": [
+                  "condition"
+                ],
+                "@item.id.attendance_3": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_3",
+              "value": "attendance_3 = @local.attendance_3",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_3",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_3 = @local.attendance_3",
+                    "matchedExpression": "@local.attendance_3",
+                    "type": "local",
+                    "fieldName": "attendance_3"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_3",
+                    "matchedExpression": "@item.id.test_attendance_3",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_3": [
+                  "value"
+                ],
+                "@item.id.test_attendance_3": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_4",
+              "value": "@calc(@local.attendance_3 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s4 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_4",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_3 *0)",
+                    "matchedExpression": "@local.attendance_3",
+                    "type": "local",
+                    "fieldName": "attendance_3"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_3 *0)",
+                    "matchedExpression": "@calc(@local.attendance_3 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_3 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s4 == true",
+                    "matchedExpression": "@local.s4",
+                    "type": "local",
+                    "fieldName": "s4"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_4",
+                    "matchedExpression": "@item.id.attendance_4",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_3": [
+                  "value"
+                ],
+                "@calc(@local.attendance_3 *0)": [
+                  "value"
+                ],
+                "@local.s4": [
+                  "condition"
+                ],
+                "@item.id.attendance_4": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_4",
+              "value": "@calc(@local.attendance_3 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s4 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_4",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_3 +1)",
+                    "matchedExpression": "@local.attendance_3",
+                    "type": "local",
+                    "fieldName": "attendance_3"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_3 +1)",
+                    "matchedExpression": "@calc(@local.attendance_3 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_3 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s4 == false",
+                    "matchedExpression": "@local.s4",
+                    "type": "local",
+                    "fieldName": "s4"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_4",
+                    "matchedExpression": "@item.id.attendance_4",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_3": [
+                  "value"
+                ],
+                "@calc(@local.attendance_3 +1)": [
+                  "value"
+                ],
+                "@local.s4": [
+                  "condition"
+                ],
+                "@item.id.attendance_4": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_4",
+              "value": "@calc(@local.attendance_3 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s4 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_4",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_3 *1)",
+                    "matchedExpression": "@local.attendance_3",
+                    "type": "local",
+                    "fieldName": "attendance_3"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_3 *1)",
+                    "matchedExpression": "@calc(@local.attendance_3 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_3 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s4 == undefined",
+                    "matchedExpression": "@local.s4",
+                    "type": "local",
+                    "fieldName": "s4"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_4",
+                    "matchedExpression": "@item.id.attendance_4",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_3": [
+                  "value"
+                ],
+                "@calc(@local.attendance_3 *1)": [
+                  "value"
+                ],
+                "@local.s4": [
+                  "condition"
+                ],
+                "@item.id.attendance_4": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_4",
+              "value": "attendance_4 = @local.attendance_4",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_4",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_4 = @local.attendance_4",
+                    "matchedExpression": "@local.attendance_4",
+                    "type": "local",
+                    "fieldName": "attendance_4"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_4",
+                    "matchedExpression": "@item.id.test_attendance_4",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_4": [
+                  "value"
+                ],
+                "@item.id.test_attendance_4": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_5",
+              "value": "@calc(@local.attendance_4 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s5 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_5",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_4 *0)",
+                    "matchedExpression": "@local.attendance_4",
+                    "type": "local",
+                    "fieldName": "attendance_4"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_4 *0)",
+                    "matchedExpression": "@calc(@local.attendance_4 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_4 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s5 == true",
+                    "matchedExpression": "@local.s5",
+                    "type": "local",
+                    "fieldName": "s5"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_5",
+                    "matchedExpression": "@item.id.attendance_5",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_4": [
+                  "value"
+                ],
+                "@calc(@local.attendance_4 *0)": [
+                  "value"
+                ],
+                "@local.s5": [
+                  "condition"
+                ],
+                "@item.id.attendance_5": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_5",
+              "value": "@calc(@local.attendance_4 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s5 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_5",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_4 +1)",
+                    "matchedExpression": "@local.attendance_4",
+                    "type": "local",
+                    "fieldName": "attendance_4"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_4 +1)",
+                    "matchedExpression": "@calc(@local.attendance_4 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_4 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s5 == false",
+                    "matchedExpression": "@local.s5",
+                    "type": "local",
+                    "fieldName": "s5"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_5",
+                    "matchedExpression": "@item.id.attendance_5",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_4": [
+                  "value"
+                ],
+                "@calc(@local.attendance_4 +1)": [
+                  "value"
+                ],
+                "@local.s5": [
+                  "condition"
+                ],
+                "@item.id.attendance_5": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_5",
+              "value": "@calc(@local.attendance_4 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s5 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_5",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_4 *1)",
+                    "matchedExpression": "@local.attendance_4",
+                    "type": "local",
+                    "fieldName": "attendance_4"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_4 *1)",
+                    "matchedExpression": "@calc(@local.attendance_4 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_4 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s5 == undefined",
+                    "matchedExpression": "@local.s5",
+                    "type": "local",
+                    "fieldName": "s5"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_5",
+                    "matchedExpression": "@item.id.attendance_5",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_4": [
+                  "value"
+                ],
+                "@calc(@local.attendance_4 *1)": [
+                  "value"
+                ],
+                "@local.s5": [
+                  "condition"
+                ],
+                "@item.id.attendance_5": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_5",
+              "value": "attendance_5 = @local.attendance_5",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_5",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_5 = @local.attendance_5",
+                    "matchedExpression": "@local.attendance_5",
+                    "type": "local",
+                    "fieldName": "attendance_5"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_5",
+                    "matchedExpression": "@item.id.test_attendance_5",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_5": [
+                  "value"
+                ],
+                "@item.id.test_attendance_5": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_6",
+              "value": "@calc(@local.attendance_5 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s6 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_6",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_5 *0)",
+                    "matchedExpression": "@local.attendance_5",
+                    "type": "local",
+                    "fieldName": "attendance_5"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_5 *0)",
+                    "matchedExpression": "@calc(@local.attendance_5 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_5 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s6 == true",
+                    "matchedExpression": "@local.s6",
+                    "type": "local",
+                    "fieldName": "s6"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_6",
+                    "matchedExpression": "@item.id.attendance_6",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_5": [
+                  "value"
+                ],
+                "@calc(@local.attendance_5 *0)": [
+                  "value"
+                ],
+                "@local.s6": [
+                  "condition"
+                ],
+                "@item.id.attendance_6": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_6",
+              "value": "@calc(@local.attendance_5 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s6 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_6",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_5 +1)",
+                    "matchedExpression": "@local.attendance_5",
+                    "type": "local",
+                    "fieldName": "attendance_5"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_5 +1)",
+                    "matchedExpression": "@calc(@local.attendance_5 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_5 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s6 == false",
+                    "matchedExpression": "@local.s6",
+                    "type": "local",
+                    "fieldName": "s6"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_6",
+                    "matchedExpression": "@item.id.attendance_6",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_5": [
+                  "value"
+                ],
+                "@calc(@local.attendance_5 +1)": [
+                  "value"
+                ],
+                "@local.s6": [
+                  "condition"
+                ],
+                "@item.id.attendance_6": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_6",
+              "value": "@calc(@local.attendance_5 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s6 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_6",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_5 *1)",
+                    "matchedExpression": "@local.attendance_5",
+                    "type": "local",
+                    "fieldName": "attendance_5"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_5 *1)",
+                    "matchedExpression": "@calc(@local.attendance_5 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_5 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s6 == undefined",
+                    "matchedExpression": "@local.s6",
+                    "type": "local",
+                    "fieldName": "s6"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_6",
+                    "matchedExpression": "@item.id.attendance_6",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_5": [
+                  "value"
+                ],
+                "@calc(@local.attendance_5 *1)": [
+                  "value"
+                ],
+                "@local.s6": [
+                  "condition"
+                ],
+                "@item.id.attendance_6": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_6",
+              "value": "attendance_6 = @local.attendance_6",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_6",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_6 = @local.attendance_6",
+                    "matchedExpression": "@local.attendance_6",
+                    "type": "local",
+                    "fieldName": "attendance_6"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_6",
+                    "matchedExpression": "@item.id.test_attendance_6",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_6": [
+                  "value"
+                ],
+                "@item.id.test_attendance_6": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_7",
+              "value": "@calc(@local.attendance_6 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s7 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_7",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_6 *0)",
+                    "matchedExpression": "@local.attendance_6",
+                    "type": "local",
+                    "fieldName": "attendance_6"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_6 *0)",
+                    "matchedExpression": "@calc(@local.attendance_6 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_6 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s7 == true",
+                    "matchedExpression": "@local.s7",
+                    "type": "local",
+                    "fieldName": "s7"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_7",
+                    "matchedExpression": "@item.id.attendance_7",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_6": [
+                  "value"
+                ],
+                "@calc(@local.attendance_6 *0)": [
+                  "value"
+                ],
+                "@local.s7": [
+                  "condition"
+                ],
+                "@item.id.attendance_7": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_7",
+              "value": "@calc(@local.attendance_6 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s7 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_7",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_6 +1)",
+                    "matchedExpression": "@local.attendance_6",
+                    "type": "local",
+                    "fieldName": "attendance_6"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_6 +1)",
+                    "matchedExpression": "@calc(@local.attendance_6 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_6 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s7 == false",
+                    "matchedExpression": "@local.s7",
+                    "type": "local",
+                    "fieldName": "s7"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_7",
+                    "matchedExpression": "@item.id.attendance_7",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_6": [
+                  "value"
+                ],
+                "@calc(@local.attendance_6 +1)": [
+                  "value"
+                ],
+                "@local.s7": [
+                  "condition"
+                ],
+                "@item.id.attendance_7": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_7",
+              "value": "@calc(@local.attendance_6 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s7 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_7",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_6 *1)",
+                    "matchedExpression": "@local.attendance_6",
+                    "type": "local",
+                    "fieldName": "attendance_6"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_6 *1)",
+                    "matchedExpression": "@calc(@local.attendance_6 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_6 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s7 == undefined",
+                    "matchedExpression": "@local.s7",
+                    "type": "local",
+                    "fieldName": "s7"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_7",
+                    "matchedExpression": "@item.id.attendance_7",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_6": [
+                  "value"
+                ],
+                "@calc(@local.attendance_6 *1)": [
+                  "value"
+                ],
+                "@local.s7": [
+                  "condition"
+                ],
+                "@item.id.attendance_7": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_7",
+              "value": "attendance_7 = @local.attendance_7",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_7",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_7 = @local.attendance_7",
+                    "matchedExpression": "@local.attendance_7",
+                    "type": "local",
+                    "fieldName": "attendance_7"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_7",
+                    "matchedExpression": "@item.id.test_attendance_7",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_7": [
+                  "value"
+                ],
+                "@item.id.test_attendance_7": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_8",
+              "value": "@calc(@local.attendance_7 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s8 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_8",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_7 *0)",
+                    "matchedExpression": "@local.attendance_7",
+                    "type": "local",
+                    "fieldName": "attendance_7"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_7 *0)",
+                    "matchedExpression": "@calc(@local.attendance_7 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_7 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s8 == true",
+                    "matchedExpression": "@local.s8",
+                    "type": "local",
+                    "fieldName": "s8"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_8",
+                    "matchedExpression": "@item.id.attendance_8",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_7": [
+                  "value"
+                ],
+                "@calc(@local.attendance_7 *0)": [
+                  "value"
+                ],
+                "@local.s8": [
+                  "condition"
+                ],
+                "@item.id.attendance_8": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_8",
+              "value": "@calc(@local.attendance_7 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s8 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_8",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_7 +1)",
+                    "matchedExpression": "@local.attendance_7",
+                    "type": "local",
+                    "fieldName": "attendance_7"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_7 +1)",
+                    "matchedExpression": "@calc(@local.attendance_7 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_7 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s8 == false",
+                    "matchedExpression": "@local.s8",
+                    "type": "local",
+                    "fieldName": "s8"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_8",
+                    "matchedExpression": "@item.id.attendance_8",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_7": [
+                  "value"
+                ],
+                "@calc(@local.attendance_7 +1)": [
+                  "value"
+                ],
+                "@local.s8": [
+                  "condition"
+                ],
+                "@item.id.attendance_8": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_8",
+              "value": "@calc(@local.attendance_7 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s8 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_8",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_7 *1)",
+                    "matchedExpression": "@local.attendance_7",
+                    "type": "local",
+                    "fieldName": "attendance_7"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_7 *1)",
+                    "matchedExpression": "@calc(@local.attendance_7 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_7 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s8 == undefined",
+                    "matchedExpression": "@local.s8",
+                    "type": "local",
+                    "fieldName": "s8"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_8",
+                    "matchedExpression": "@item.id.attendance_8",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_7": [
+                  "value"
+                ],
+                "@calc(@local.attendance_7 *1)": [
+                  "value"
+                ],
+                "@local.s8": [
+                  "condition"
+                ],
+                "@item.id.attendance_8": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_8",
+              "value": "attendance_8 = @local.attendance_8",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_8",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_8 = @local.attendance_8",
+                    "matchedExpression": "@local.attendance_8",
+                    "type": "local",
+                    "fieldName": "attendance_8"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_8",
+                    "matchedExpression": "@item.id.test_attendance_8",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_8": [
+                  "value"
+                ],
+                "@item.id.test_attendance_8": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_9",
+              "value": "@calc(@local.attendance_8 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s9 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_9",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_8 *0)",
+                    "matchedExpression": "@local.attendance_8",
+                    "type": "local",
+                    "fieldName": "attendance_8"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_8 *0)",
+                    "matchedExpression": "@calc(@local.attendance_8 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_8 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s9 == true",
+                    "matchedExpression": "@local.s9",
+                    "type": "local",
+                    "fieldName": "s9"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_9",
+                    "matchedExpression": "@item.id.attendance_9",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_8": [
+                  "value"
+                ],
+                "@calc(@local.attendance_8 *0)": [
+                  "value"
+                ],
+                "@local.s9": [
+                  "condition"
+                ],
+                "@item.id.attendance_9": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_9",
+              "value": "@calc(@local.attendance_8 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s9 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_9",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_8 +1)",
+                    "matchedExpression": "@local.attendance_8",
+                    "type": "local",
+                    "fieldName": "attendance_8"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_8 +1)",
+                    "matchedExpression": "@calc(@local.attendance_8 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_8 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s9 == false",
+                    "matchedExpression": "@local.s9",
+                    "type": "local",
+                    "fieldName": "s9"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_9",
+                    "matchedExpression": "@item.id.attendance_9",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_8": [
+                  "value"
+                ],
+                "@calc(@local.attendance_8 +1)": [
+                  "value"
+                ],
+                "@local.s9": [
+                  "condition"
+                ],
+                "@item.id.attendance_9": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_9",
+              "value": "@calc(@local.attendance_8 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s9 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_9",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_8 *1)",
+                    "matchedExpression": "@local.attendance_8",
+                    "type": "local",
+                    "fieldName": "attendance_8"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_8 *1)",
+                    "matchedExpression": "@calc(@local.attendance_8 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_8 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s9 == undefined",
+                    "matchedExpression": "@local.s9",
+                    "type": "local",
+                    "fieldName": "s9"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_9",
+                    "matchedExpression": "@item.id.attendance_9",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_8": [
+                  "value"
+                ],
+                "@calc(@local.attendance_8 *1)": [
+                  "value"
+                ],
+                "@local.s9": [
+                  "condition"
+                ],
+                "@item.id.attendance_9": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_9",
+              "value": "attendance_9 = @local.attendance_9",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_9",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_9 = @local.attendance_9",
+                    "matchedExpression": "@local.attendance_9",
+                    "type": "local",
+                    "fieldName": "attendance_9"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_9",
+                    "matchedExpression": "@item.id.test_attendance_9",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_9": [
+                  "value"
+                ],
+                "@item.id.test_attendance_9": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_10",
+              "value": "@calc(@local.attendance_9 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s10 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_10",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_9 *0)",
+                    "matchedExpression": "@local.attendance_9",
+                    "type": "local",
+                    "fieldName": "attendance_9"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_9 *0)",
+                    "matchedExpression": "@calc(@local.attendance_9 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_9 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s10 == true",
+                    "matchedExpression": "@local.s10",
+                    "type": "local",
+                    "fieldName": "s10"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_10",
+                    "matchedExpression": "@item.id.attendance_10",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_9": [
+                  "value"
+                ],
+                "@calc(@local.attendance_9 *0)": [
+                  "value"
+                ],
+                "@local.s10": [
+                  "condition"
+                ],
+                "@item.id.attendance_10": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_10",
+              "value": "@calc(@local.attendance_9 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s10 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_10",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_9 +1)",
+                    "matchedExpression": "@local.attendance_9",
+                    "type": "local",
+                    "fieldName": "attendance_9"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_9 +1)",
+                    "matchedExpression": "@calc(@local.attendance_9 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_9 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s10 == false",
+                    "matchedExpression": "@local.s10",
+                    "type": "local",
+                    "fieldName": "s10"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_10",
+                    "matchedExpression": "@item.id.attendance_10",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_9": [
+                  "value"
+                ],
+                "@calc(@local.attendance_9 +1)": [
+                  "value"
+                ],
+                "@local.s10": [
+                  "condition"
+                ],
+                "@item.id.attendance_10": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_10",
+              "value": "@calc(@local.attendance_9 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s10 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_10",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_9 *1)",
+                    "matchedExpression": "@local.attendance_9",
+                    "type": "local",
+                    "fieldName": "attendance_9"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_9 *1)",
+                    "matchedExpression": "@calc(@local.attendance_9 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_9 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s10 == undefined",
+                    "matchedExpression": "@local.s10",
+                    "type": "local",
+                    "fieldName": "s10"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_10",
+                    "matchedExpression": "@item.id.attendance_10",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_9": [
+                  "value"
+                ],
+                "@calc(@local.attendance_9 *1)": [
+                  "value"
+                ],
+                "@local.s10": [
+                  "condition"
+                ],
+                "@item.id.attendance_10": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_10",
+              "value": "attendance_10 = @local.attendance_10",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_10",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_10 = @local.attendance_10",
+                    "matchedExpression": "@local.attendance_10",
+                    "type": "local",
+                    "fieldName": "attendance_10"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_10",
+                    "matchedExpression": "@item.id.test_attendance_10",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_10": [
+                  "value"
+                ],
+                "@item.id.test_attendance_10": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_11",
+              "value": "@calc(@local.attendance_10 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s11 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_11",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_10 *0)",
+                    "matchedExpression": "@local.attendance_10",
+                    "type": "local",
+                    "fieldName": "attendance_10"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_10 *0)",
+                    "matchedExpression": "@calc(@local.attendance_10 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_10 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s11 == true",
+                    "matchedExpression": "@local.s11",
+                    "type": "local",
+                    "fieldName": "s11"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_11",
+                    "matchedExpression": "@item.id.attendance_11",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_10": [
+                  "value"
+                ],
+                "@calc(@local.attendance_10 *0)": [
+                  "value"
+                ],
+                "@local.s11": [
+                  "condition"
+                ],
+                "@item.id.attendance_11": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_11",
+              "value": "@calc(@local.attendance_10 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s11 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_11",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_10 +1)",
+                    "matchedExpression": "@local.attendance_10",
+                    "type": "local",
+                    "fieldName": "attendance_10"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_10 +1)",
+                    "matchedExpression": "@calc(@local.attendance_10 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_10 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s11 == false",
+                    "matchedExpression": "@local.s11",
+                    "type": "local",
+                    "fieldName": "s11"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_11",
+                    "matchedExpression": "@item.id.attendance_11",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_10": [
+                  "value"
+                ],
+                "@calc(@local.attendance_10 +1)": [
+                  "value"
+                ],
+                "@local.s11": [
+                  "condition"
+                ],
+                "@item.id.attendance_11": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_11",
+              "value": "@calc(@local.attendance_10 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s11 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_11",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_10 *1)",
+                    "matchedExpression": "@local.attendance_10",
+                    "type": "local",
+                    "fieldName": "attendance_10"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_10 *1)",
+                    "matchedExpression": "@calc(@local.attendance_10 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_10 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s11 == undefined",
+                    "matchedExpression": "@local.s11",
+                    "type": "local",
+                    "fieldName": "s11"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_11",
+                    "matchedExpression": "@item.id.attendance_11",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_10": [
+                  "value"
+                ],
+                "@calc(@local.attendance_10 *1)": [
+                  "value"
+                ],
+                "@local.s11": [
+                  "condition"
+                ],
+                "@item.id.attendance_11": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_11",
+              "value": "attendance_11 = @local.attendance_11",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_11",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_11 = @local.attendance_11",
+                    "matchedExpression": "@local.attendance_11",
+                    "type": "local",
+                    "fieldName": "attendance_11"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_11",
+                    "matchedExpression": "@item.id.test_attendance_11",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_11": [
+                  "value"
+                ],
+                "@item.id.test_attendance_11": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_12",
+              "value": "@calc(@local.attendance_11 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s12 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_12",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_11 *0)",
+                    "matchedExpression": "@local.attendance_11",
+                    "type": "local",
+                    "fieldName": "attendance_11"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_11 *0)",
+                    "matchedExpression": "@calc(@local.attendance_11 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_11 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s12 == true",
+                    "matchedExpression": "@local.s12",
+                    "type": "local",
+                    "fieldName": "s12"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_12",
+                    "matchedExpression": "@item.id.attendance_12",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_11": [
+                  "value"
+                ],
+                "@calc(@local.attendance_11 *0)": [
+                  "value"
+                ],
+                "@local.s12": [
+                  "condition"
+                ],
+                "@item.id.attendance_12": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_12",
+              "value": "@calc(@local.attendance_11 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s12 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_12",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_11 +1)",
+                    "matchedExpression": "@local.attendance_11",
+                    "type": "local",
+                    "fieldName": "attendance_11"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_11 +1)",
+                    "matchedExpression": "@calc(@local.attendance_11 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_11 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s12 == false",
+                    "matchedExpression": "@local.s12",
+                    "type": "local",
+                    "fieldName": "s12"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_12",
+                    "matchedExpression": "@item.id.attendance_12",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_11": [
+                  "value"
+                ],
+                "@calc(@local.attendance_11 +1)": [
+                  "value"
+                ],
+                "@local.s12": [
+                  "condition"
+                ],
+                "@item.id.attendance_12": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_12",
+              "value": "@calc(@local.attendance_11 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s12 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_12",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_11 *1)",
+                    "matchedExpression": "@local.attendance_11",
+                    "type": "local",
+                    "fieldName": "attendance_11"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_11 *1)",
+                    "matchedExpression": "@calc(@local.attendance_11 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_11 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s12 == undefined",
+                    "matchedExpression": "@local.s12",
+                    "type": "local",
+                    "fieldName": "s12"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_12",
+                    "matchedExpression": "@item.id.attendance_12",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_11": [
+                  "value"
+                ],
+                "@calc(@local.attendance_11 *1)": [
+                  "value"
+                ],
+                "@local.s12": [
+                  "condition"
+                ],
+                "@item.id.attendance_12": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_12",
+              "value": "attendance_12 = @local.attendance_12",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_12",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_12 = @local.attendance_12",
+                    "matchedExpression": "@local.attendance_12",
+                    "type": "local",
+                    "fieldName": "attendance_12"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_12",
+                    "matchedExpression": "@item.id.test_attendance_12",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_12": [
+                  "value"
+                ],
+                "@item.id.test_attendance_12": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_13",
+              "value": "@calc(@local.attendance_12 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s13 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_13",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_12 *0)",
+                    "matchedExpression": "@local.attendance_12",
+                    "type": "local",
+                    "fieldName": "attendance_12"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_12 *0)",
+                    "matchedExpression": "@calc(@local.attendance_12 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_12 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s13 == true",
+                    "matchedExpression": "@local.s13",
+                    "type": "local",
+                    "fieldName": "s13"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_13",
+                    "matchedExpression": "@item.id.attendance_13",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_12": [
+                  "value"
+                ],
+                "@calc(@local.attendance_12 *0)": [
+                  "value"
+                ],
+                "@local.s13": [
+                  "condition"
+                ],
+                "@item.id.attendance_13": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_13",
+              "value": "@calc(@local.attendance_12 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s13 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_13",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_12 +1)",
+                    "matchedExpression": "@local.attendance_12",
+                    "type": "local",
+                    "fieldName": "attendance_12"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_12 +1)",
+                    "matchedExpression": "@calc(@local.attendance_12 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_12 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s13 == false",
+                    "matchedExpression": "@local.s13",
+                    "type": "local",
+                    "fieldName": "s13"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_13",
+                    "matchedExpression": "@item.id.attendance_13",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_12": [
+                  "value"
+                ],
+                "@calc(@local.attendance_12 +1)": [
+                  "value"
+                ],
+                "@local.s13": [
+                  "condition"
+                ],
+                "@item.id.attendance_13": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_13",
+              "value": "@calc(@local.attendance_12 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s13 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_13",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_12 *1)",
+                    "matchedExpression": "@local.attendance_12",
+                    "type": "local",
+                    "fieldName": "attendance_12"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_12 *1)",
+                    "matchedExpression": "@calc(@local.attendance_12 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_12 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s13 == undefined",
+                    "matchedExpression": "@local.s13",
+                    "type": "local",
+                    "fieldName": "s13"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_13",
+                    "matchedExpression": "@item.id.attendance_13",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_12": [
+                  "value"
+                ],
+                "@calc(@local.attendance_12 *1)": [
+                  "value"
+                ],
+                "@local.s13": [
+                  "condition"
+                ],
+                "@item.id.attendance_13": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_13",
+              "value": "attendance_13 = @local.attendance_13",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_13",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_13 = @local.attendance_13",
+                    "matchedExpression": "@local.attendance_13",
+                    "type": "local",
+                    "fieldName": "attendance_13"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_13",
+                    "matchedExpression": "@item.id.test_attendance_13",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_13": [
+                  "value"
+                ],
+                "@item.id.test_attendance_13": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_14",
+              "value": "@calc(@local.attendance_13 *0)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s14 == true",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_14",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_13 *0)",
+                    "matchedExpression": "@local.attendance_13",
+                    "type": "local",
+                    "fieldName": "attendance_13"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_13 *0)",
+                    "matchedExpression": "@calc(@local.attendance_13 *0)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_13 *0"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s14 == true",
+                    "matchedExpression": "@local.s14",
+                    "type": "local",
+                    "fieldName": "s14"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_14",
+                    "matchedExpression": "@item.id.attendance_14",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_13": [
+                  "value"
+                ],
+                "@calc(@local.attendance_13 *0)": [
+                  "value"
+                ],
+                "@local.s14": [
+                  "condition"
+                ],
+                "@item.id.attendance_14": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_14",
+              "value": "@calc(@local.attendance_13 +1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s14 == false",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_14",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_13 +1)",
+                    "matchedExpression": "@local.attendance_13",
+                    "type": "local",
+                    "fieldName": "attendance_13"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_13 +1)",
+                    "matchedExpression": "@calc(@local.attendance_13 +1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_13 +1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s14 == false",
+                    "matchedExpression": "@local.s14",
+                    "type": "local",
+                    "fieldName": "s14"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_14",
+                    "matchedExpression": "@item.id.attendance_14",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_13": [
+                  "value"
+                ],
+                "@calc(@local.attendance_13 +1)": [
+                  "value"
+                ],
+                "@local.s14": [
+                  "condition"
+                ],
+                "@item.id.attendance_14": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "attendance_14",
+              "value": "@calc(@local.attendance_13 *1)",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "@local.s14 == undefined",
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_14",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@calc(@local.attendance_13 *1)",
+                    "matchedExpression": "@local.attendance_13",
+                    "type": "local",
+                    "fieldName": "attendance_13"
+                  },
+                  {
+                    "fullExpression": "@calc(@local.attendance_13 *1)",
+                    "matchedExpression": "@calc(@local.attendance_13 *1)",
+                    "type": "calc",
+                    "fieldName": "@local.attendance_13 *1"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "@local.s14 == undefined",
+                    "matchedExpression": "@local.s14",
+                    "type": "local",
+                    "fieldName": "s14"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_14",
+                    "matchedExpression": "@item.id.attendance_14",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_13": [
+                  "value"
+                ],
+                "@calc(@local.attendance_13 *1)": [
+                  "value"
+                ],
+                "@local.s14": [
+                  "condition"
+                ],
+                "@item.id.attendance_14": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance_14",
+              "value": "attendance_14 = @local.attendance_14",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_14",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance_14 = @local.attendance_14",
+                    "matchedExpression": "@local.attendance_14",
+                    "type": "local",
+                    "fieldName": "attendance_14"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_14",
+                    "matchedExpression": "@item.id.test_attendance_14",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_14": [
+                  "value"
+                ],
+                "@item.id.test_attendance_14": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "total_attendance",
+              "value": "@local.attendance_14",
               "_translations": {
                 "value": {}
               },
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.attendance.m_s_l",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.total_attendance",
               "_dynamicFields": {
                 "value": [
                   {
-                    "fullExpression": "@local.missed_sessions_limit",
+                    "fullExpression": "@local.attendance_14",
+                    "matchedExpression": "@local.attendance_14",
+                    "type": "local",
+                    "fieldName": "attendance_14"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.total_attendance",
+                    "matchedExpression": "@item.id.total_attendance",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.attendance_14": [
+                  "value"
+                ],
+                "@item.id.total_attendance": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "test_attendance",
+              "value": "attendance = @local.total_attendance",
+              "_translations": {
+                "value": {}
+              },
+              "condition": false,
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "attendance = @local.total_attendance",
+                    "matchedExpression": "@local.total_attendance",
+                    "type": "local",
+                    "fieldName": "total_attendance"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance",
+                    "matchedExpression": "@item.id.test_attendance",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.total_attendance": [
+                  "value"
+                ],
+                "@item.id.test_attendance": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "display_group",
+              "rows": [
+                {
+                  "type": "text",
+                  "value": "index = @item._index",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "condition": false,
+                  "name": "text_1",
+                  "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59.text_1",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "index = @item._index",
+                        "matchedExpression": "@item._index",
+                        "type": "item",
+                        "fieldName": "_index"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59.text_1",
+                        "matchedExpression": "@item.id.display_group_59.text_1",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item._index": [
+                      "value"
+                    ],
+                    "@item.id.display_group_59.text_1": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "name": "first",
+                  "value": true,
+                  "condition": "@item._index == 0",
+                  "type": "set_variable",
+                  "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59.first",
+                  "_dynamicFields": {
+                    "condition": [
+                      {
+                        "fullExpression": "@item._index == 0",
+                        "matchedExpression": "@item._index",
+                        "type": "item",
+                        "fieldName": "_index"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59.first",
+                        "matchedExpression": "@item.id.display_group_59.first",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item._index": [
+                      "condition"
+                    ],
+                    "@item.id.display_group_59.first": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "name": "first",
+                  "value": false,
+                  "condition": "@item._index !== 0",
+                  "type": "set_variable",
+                  "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59.first",
+                  "_dynamicFields": {
+                    "condition": [
+                      {
+                        "fullExpression": "@item._index !== 0",
+                        "matchedExpression": "@item._index",
+                        "type": "item",
+                        "fieldName": "_index"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59.first",
+                        "matchedExpression": "@item.id.display_group_59.first",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item._index": [
+                      "condition"
+                    ],
+                    "@item.id.display_group_59.first": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "first= @local.first",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "condition": false,
+                  "name": "text_4",
+                  "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59.text_4",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "first= @local.first",
+                        "matchedExpression": "@local.first",
+                        "type": "local",
+                        "fieldName": "first"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59.text_4",
+                        "matchedExpression": "@item.id.display_group_59.text_4",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@local.first": [
+                      "value"
+                    ],
+                    "@item.id.display_group_59.text_4": [
+                      "_nested_name"
+                    ]
+                  }
+                }
+              ],
+              "name": "display_group_59",
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59",
+              "_dynamicFields": {
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59",
+                    "matchedExpression": "@item.id.display_group_59",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id.display_group_59": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "template",
+              "name": "add_one",
+              "value": "add_one",
+              "condition": "@local.total_attendance >= @local.missed_sessions_limit",
+              "rows": [
+                {
+                  "name": "last",
+                  "value": "@local.first",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "type": "set_variable",
+                  "_nested_name": "calculating_attendance.display_group_18_@item.id.add_one.last",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@local.first",
+                        "matchedExpression": "@local.first",
+                        "type": "local",
+                        "fieldName": "first"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "calculating_attendance.display_group_18_@item.id.add_one.last",
+                        "matchedExpression": "@item.id.add_one.last",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@local.first": [
+                      "value"
+                    ],
+                    "@item.id.add_one.last": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "name": "show_count",
+                  "value": "@local.first",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "type": "set_variable",
+                  "_nested_name": "calculating_attendance.display_group_18_@item.id.add_one.show_count",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@local.first",
+                        "matchedExpression": "@local.first",
+                        "type": "local",
+                        "fieldName": "first"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "calculating_attendance.display_group_18_@item.id.add_one.show_count",
+                        "matchedExpression": "@item.id.add_one.show_count",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@local.first": [
+                      "value"
+                    ],
+                    "@item.id.add_one.show_count": [
+                      "_nested_name"
+                    ]
+                  }
+                }
+              ],
+              "_nested_name": "calculating_attendance.display_group_18_@item.id.add_one",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "@local.total_attendance >= @local.missed_sessions_limit",
+                    "matchedExpression": "@local.total_attendance",
+                    "type": "local",
+                    "fieldName": "total_attendance"
+                  },
+                  {
+                    "fullExpression": "@local.total_attendance >= @local.missed_sessions_limit",
                     "matchedExpression": "@local.missed_sessions_limit",
                     "type": "local",
                     "fieldName": "missed_sessions_limit"
                   }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@local.missed_sessions_limit": [
-                  "value"
-                ]
-              }
-            },
-            {
-              "name": "parent_group_id",
-              "value": "@item.group_id",
-              "_translations": {
-                "value": {}
-              },
-              "type": "set_variable",
-              "_nested_name": "calculating_attendance.attendance.parent_group_id",
-              "_dynamicFields": {
-                "value": [
+                ],
+                "_nested_name": [
                   {
-                    "fullExpression": "@item.group_id",
-                    "matchedExpression": "@item.group_id",
+                    "fullExpression": "calculating_attendance.display_group_18_@item.id.add_one",
+                    "matchedExpression": "@item.id.add_one",
                     "type": "item",
-                    "fieldName": "group_id"
+                    "fieldName": "id"
                   }
                 ]
               },
               "_dynamicDependencies": {
-                "@item.group_id": [
-                  "value"
+                "@local.total_attendance": [
+                  "condition"
+                ],
+                "@local.missed_sessions_limit": [
+                  "condition"
+                ],
+                "@item.id.add_one": [
+                  "_nested_name"
                 ]
               }
             }
           ],
-          "_nested_name": "calculating_attendance.attendance"
+          "name": "display_group_18_@item.id",
+          "_nested_name": "calculating_attendance.display_group_18_@item.id",
+          "_dynamicFields": {
+            "name": [
+              {
+                "fullExpression": "display_group_18_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "calculating_attendance.display_group_18_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.id": [
+              "name",
+              "_nested_name"
+            ]
+          }
+        },
+        {
+          "type": "display_group",
+          "parameter_list": {
+            "style": "column"
+          },
+          "condition": "@local.total_attendance >= @local.missed_sessions_limit",
+          "rows": [
+            {
+              "type": "display_group",
+              "style_list": [
+                "justify-content: space-between"
+              ],
+              "rows": [
+                {
+                  "type": "text",
+                  "value": "@item.first_name @item.last_name",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "style_list": [
+                    "margin-bottom: 12px"
+                  ],
+                  "name": "text_1",
+                  "_nested_name": "calculating_attendance.display_group_19_@item.id.display_group_1.text_1",
+                  "_dynamicFields": {
+                    "value": [
+                      {
+                        "fullExpression": "@item.first_name @item.last_name",
+                        "matchedExpression": "@item.first_name",
+                        "type": "item",
+                        "fieldName": "first_name"
+                      },
+                      {
+                        "fullExpression": "@item.first_name @item.last_name",
+                        "matchedExpression": "@item.last_name",
+                        "type": "item",
+                        "fieldName": "last_name"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "calculating_attendance.display_group_19_@item.id.display_group_1.text_1",
+                        "matchedExpression": "@item.id.display_group_1.text_1",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.first_name": [
+                      "value"
+                    ],
+                    "@item.last_name": [
+                      "value"
+                    ],
+                    "@item.id.display_group_1.text_1": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "type": "button",
+                  "name": "follow_up_button",
+                  "value": "Follow Up",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "action_list": [
+                    {
+                      "trigger": "click",
+                      "action_id": "share",
+                      "args": [],
+                      "_raw": "click | share | text: Follow Up",
+                      "_cleaned": "click | share | text: Follow Up",
+                      "params": {
+                        "text": "Follow Up"
+                      }
+                    }
+                  ],
+                  "parameter_list": {
+                    "variant": "card"
+                  },
+                  "_nested_name": "calculating_attendance.display_group_19_@item.id.display_group_1.follow_up_button",
+                  "_dynamicFields": {
+                    "_nested_name": [
+                      {
+                        "fullExpression": "calculating_attendance.display_group_19_@item.id.display_group_1.follow_up_button",
+                        "matchedExpression": "@item.id.display_group_1.follow_up_button",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.id.display_group_1.follow_up_button": [
+                      "_nested_name"
+                    ]
+                  }
+                }
+              ],
+              "name": "display_group_1",
+              "_nested_name": "calculating_attendance.display_group_19_@item.id.display_group_1",
+              "_dynamicFields": {
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_19_@item.id.display_group_1",
+                    "matchedExpression": "@item.id.display_group_1",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id.display_group_1": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "name": "total_attendance_text",
+              "value": "Missed the last **@local.total_attendance** reported sessions",
+              "_translations": {
+                "value": {}
+              },
+              "style_list": [
+                "font-size: 12px",
+                "color: #46607F",
+                "margin-top: -10px",
+                "margin-bottom: 12px"
+              ],
+              "_nested_name": "calculating_attendance.display_group_19_@item.id.total_attendance_text",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "Missed the last **@local.total_attendance** reported sessions",
+                    "matchedExpression": "@local.total_attendance",
+                    "type": "local",
+                    "fieldName": "total_attendance"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "calculating_attendance.display_group_19_@item.id.total_attendance_text",
+                    "matchedExpression": "@item.id.total_attendance_text",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.total_attendance": [
+                  "value"
+                ],
+                "@item.id.total_attendance_text": [
+                  "_nested_name"
+                ]
+              }
+            }
+          ],
+          "name": "display_group_19_@item.id",
+          "_nested_name": "calculating_attendance.display_group_19_@item.id",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@local.total_attendance >= @local.missed_sessions_limit",
+                "matchedExpression": "@local.total_attendance",
+                "type": "local",
+                "fieldName": "total_attendance"
+              },
+              {
+                "fullExpression": "@local.total_attendance >= @local.missed_sessions_limit",
+                "matchedExpression": "@local.missed_sessions_limit",
+                "type": "local",
+                "fieldName": "missed_sessions_limit"
+              }
+            ],
+            "name": [
+              {
+                "fullExpression": "display_group_19_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "calculating_attendance.display_group_19_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.total_attendance": [
+              "condition"
+            ],
+            "@local.missed_sessions_limit": [
+              "condition"
+            ],
+            "@item.id": [
+              "name",
+              "_nested_name"
+            ]
+          }
         }
       ],
       "_nested_name": "calculating_attendance",

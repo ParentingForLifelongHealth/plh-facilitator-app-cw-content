@@ -139,6 +139,12 @@
               "_cleaned": "click | set_local: display_actions : TRUE"
             }
           ],
+          "parameter_list": {
+            "style": "alternative flexible"
+          },
+          "style_list": [
+            "flex:1"
+          ],
           "name": "button_1",
           "_nested_name": "display_group_8.button_1"
         },
@@ -159,6 +165,12 @@
               "_raw": "click | set_local: display_actions : FALSE",
               "_cleaned": "click | set_local: display_actions : FALSE"
             }
+          ],
+          "parameter_list": {
+            "style": "alternative flexible"
+          },
+          "style_list": [
+            "flex:1"
           ],
           "name": "button_2",
           "_nested_name": "display_group_8.button_2"
