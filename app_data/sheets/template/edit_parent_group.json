@@ -115,7 +115,8 @@
         "value": {}
       },
       "parameter_list": {
-        "style": "emphasised"
+        "style": "emphasised",
+        "text_align": "center"
       },
       "_nested_name": "text_group_name",
       "_dynamicFields": {
@@ -173,7 +174,8 @@
         "value": {}
       },
       "parameter_list": {
-        "style": "emphasised"
+        "style": "emphasised",
+        "text_align": "center"
       },
       "_nested_name": "text_group_name",
       "_dynamicFields": {
@@ -197,6 +199,9 @@
       "value": "@global.group_status_text",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "text_align": "center"
       },
       "exclude_from_translation": true,
       "name": "text_13",
@@ -234,6 +239,10 @@
           "_cleaned": "click | pop_up: archive_group"
         }
       ],
+      "parameter_list": {
+        "button_align": "center",
+        "style": "alternative flexible"
+      },
       "name": "button_14",
       "_nested_name": "button_14",
       "_dynamicFields": {
@@ -260,7 +269,8 @@
         "value": {}
       },
       "parameter_list": {
-        "style": "emphasised"
+        "style": "emphasised",
+        "text_align": "center"
       },
       "_nested_name": "text_group_name",
       "_dynamicFields": {
@@ -284,6 +294,9 @@
       "value": "@global.group_delete_text",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "text_align": "center"
       },
       "exclude_from_translation": true,
       "name": "text_16",
@@ -321,6 +334,10 @@
           "_cleaned": "click | pop_up: delete_group"
         }
       ],
+      "parameter_list": {
+        "button_align": "center",
+        "style": "navigation flexible"
+      },
       "name": "button_17",
       "_nested_name": "button_17",
       "_dynamicFields": {

@@ -238,7 +238,7 @@
         },
         {
           "type": "text",
-          "value": "@local.complete_count@local.divide@local.module_count@local.sessions",
+          "value": "@local.complete_count@local.divide@local.module_count @local.sessions",
           "_translations": {
             "value": {}
           },
@@ -247,25 +247,25 @@
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "@local.complete_count@local.divide@local.module_count@local.sessions",
+                "fullExpression": "@local.complete_count@local.divide@local.module_count @local.sessions",
                 "matchedExpression": "@local.complete_count",
                 "type": "local",
                 "fieldName": "complete_count"
               },
               {
-                "fullExpression": "@local.complete_count@local.divide@local.module_count@local.sessions",
+                "fullExpression": "@local.complete_count@local.divide@local.module_count @local.sessions",
                 "matchedExpression": "@local.divide",
                 "type": "local",
                 "fieldName": "divide"
               },
               {
-                "fullExpression": "@local.complete_count@local.divide@local.module_count@local.sessions",
+                "fullExpression": "@local.complete_count@local.divide@local.module_count @local.sessions",
                 "matchedExpression": "@local.module_count",
                 "type": "local",
                 "fieldName": "module_count"
               },
               {
-                "fullExpression": "@local.complete_count@local.divide@local.module_count@local.sessions",
+                "fullExpression": "@local.complete_count@local.divide@local.module_count @local.sessions",
                 "matchedExpression": "@local.sessions",
                 "type": "local",
                 "fieldName": "sessions"

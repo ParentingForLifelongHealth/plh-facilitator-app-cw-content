@@ -54,7 +54,7 @@
     {
       "type": "declare_global_constant",
       "name": "new_parent_group",
-      "value": "Create Caregiver Group",
+      "value": "Create Parent Group",
       "_translations": {
         "value": {}
       }
@@ -454,6 +454,11 @@
     {
       "type": "declare_field_default",
       "name": "no_of_co_groups",
+      "value": 0
+    },
+    {
+      "type": "declare_field_default",
+      "name": "current_follow_ups_number",
       "value": 0
     }
   ],

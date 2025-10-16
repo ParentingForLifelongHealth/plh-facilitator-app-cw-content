@@ -113,7 +113,7 @@
       "rows": [
         {
           "type": "text",
-          "value": "@local.parent_count@global.parent_count_text",
+          "value": "@local.parent_count @global.parent_count_text",
           "_translations": {
             "value": {}
           },
@@ -122,13 +122,13 @@
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "@local.parent_count@global.parent_count_text",
+                "fullExpression": "@local.parent_count @global.parent_count_text",
                 "matchedExpression": "@local.parent_count",
                 "type": "local",
                 "fieldName": "parent_count"
               },
               {
-                "fullExpression": "@local.parent_count@global.parent_count_text",
+                "fullExpression": "@local.parent_count @global.parent_count_text",
                 "matchedExpression": "@global.parent_count_text",
                 "type": "global",
                 "fieldName": "parent_count_text"
@@ -161,6 +161,9 @@
               "_cleaned": "click | go_to: add_parent"
             }
           ],
+          "parameter_list": {
+            "style": "alternative"
+          },
           "name": "button_2",
           "_nested_name": "display_group_6.button_2",
           "_dynamicFields": {

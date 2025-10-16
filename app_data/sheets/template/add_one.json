@@ -1,0 +1,204 @@
+{
+  "flow_type": "template",
+  "flow_name": "add_one",
+  "status": "released",
+  "rows": [
+    {
+      "name": "show_count",
+      "value": true,
+      "type": "set_variable",
+      "_nested_name": "show_count"
+    },
+    {
+      "type": "set_field",
+      "name": "current_follow_ups_number",
+      "value": "@calc(Number(@field.current_follow_ups_number) +1)",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "current_follow_ups_number",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(Number(@field.current_follow_ups_number) +1)",
+            "matchedExpression": "@field.current_follow_ups_number",
+            "type": "field",
+            "fieldName": "current_follow_ups_number"
+          },
+          {
+            "fullExpression": "@calc(Number(@field.current_follow_ups_number) +1)",
+            "matchedExpression": "@calc(Number(@field.current_follow_ups_number) +1)",
+            "type": "calc",
+            "fieldName": "Number(@field.current_follow_ups_number) +1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@field.current_follow_ups_number": [
+          "value"
+        ],
+        "@calc(Number(@field.current_follow_ups_number) +1)": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "condition": "@local.show_count",
+      "rows": [
+        {
+          "type": "title",
+          "name": "title_follow_up_1",
+          "value": "All parents are engaged",
+          "_translations": {
+            "value": {}
+          },
+          "condition": "@field.current_follow_ups_number == 0",
+          "_nested_name": "display_group_4.title_follow_up_1",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@field.current_follow_ups_number == 0",
+                "matchedExpression": "@field.current_follow_ups_number",
+                "type": "field",
+                "fieldName": "current_follow_ups_number"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@field.current_follow_ups_number": [
+              "condition"
+            ]
+          }
+        },
+        {
+          "type": "title",
+          "name": "title_follow_up_2",
+          "value": "@field.current_follow_ups_number Follow up",
+          "_translations": {
+            "value": {}
+          },
+          "condition": "(@field.current_follow_ups_number ==1)",
+          "_nested_name": "display_group_4.title_follow_up_2",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@field.current_follow_ups_number Follow up",
+                "matchedExpression": "@field.current_follow_ups_number",
+                "type": "field",
+                "fieldName": "current_follow_ups_number"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "(@field.current_follow_ups_number ==1)",
+                "matchedExpression": "@field.current_follow_ups_number",
+                "type": "field",
+                "fieldName": "current_follow_ups_number"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@field.current_follow_ups_number": [
+              "value",
+              "condition"
+            ]
+          }
+        },
+        {
+          "type": "title",
+          "name": "title_follow_up_3",
+          "value": "@field.current_follow_ups_number Follow ups",
+          "_translations": {
+            "value": {}
+          },
+          "condition": "(@field.current_follow_ups_number > 1)",
+          "_nested_name": "display_group_4.title_follow_up_3",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@field.current_follow_ups_number Follow ups",
+                "matchedExpression": "@field.current_follow_ups_number",
+                "type": "field",
+                "fieldName": "current_follow_ups_number"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "(@field.current_follow_ups_number > 1)",
+                "matchedExpression": "@field.current_follow_ups_number",
+                "type": "field",
+                "fieldName": "current_follow_ups_number"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@field.current_follow_ups_number": [
+              "value",
+              "condition"
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "name": "show more",
+          "value": "Follow Up",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "share",
+              "args": [],
+              "_raw": "click | share | text: Follow Up",
+              "_cleaned": "click | share | text: Follow Up",
+              "params": {
+                "text": "Follow Up"
+              }
+            }
+          ],
+          "parameter_list": {
+            "variant": "card"
+          },
+          "condition": "(@field.current_follow_ups_number > 2)",
+          "_nested_name": "display_group_4.show more",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "(@field.current_follow_ups_number > 2)",
+                "matchedExpression": "@field.current_follow_ups_number",
+                "type": "field",
+                "fieldName": "current_follow_ups_number"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@field.current_follow_ups_number": [
+              "condition"
+            ]
+          }
+        }
+      ],
+      "name": "display_group_4",
+      "_nested_name": "display_group_4",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.show_count",
+            "matchedExpression": "@local.show_count",
+            "type": "local",
+            "fieldName": "show_count"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.show_count": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/actions_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

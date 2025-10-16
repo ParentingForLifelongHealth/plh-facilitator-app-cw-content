@@ -10,7 +10,8 @@
         "value": {}
       },
       "parameter_list": {
-        "style": "emphasised"
+        "style": "emphasised",
+        "text_align": "center"
       },
       "exclude_from_translation": false,
       "name": "text_2",
@@ -18,10 +19,16 @@
     },
     {
       "type": "text",
-      "value": "to do add next session here",
+      "value": "TO DO",
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "text_align": "center"
+      },
+      "style_list": [
+        "color: #46607F"
+      ],
       "name": "text_3",
       "_nested_name": "text_3"
     },
@@ -32,7 +39,8 @@
         "value": {}
       },
       "parameter_list": {
-        "style": "emphasised"
+        "style": "emphasised",
+        "text_align": "center"
       },
       "exclude_from_translation": false,
       "name": "text_4",
@@ -40,10 +48,16 @@
     },
     {
       "type": "text",
-      "value": "to do add pending reports here",
+      "value": "TO DO",
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "text_align": "center"
+      },
+      "style_list": [
+        "color: #46607F"
+      ],
       "name": "text_5",
       "_nested_name": "text_5"
     },
@@ -54,7 +68,8 @@
         "value": {}
       },
       "parameter_list": {
-        "style": "emphasised"
+        "style": "emphasised",
+        "text_align": "center"
       },
       "exclude_from_translation": false,
       "name": "text_6",
@@ -62,10 +77,16 @@
     },
     {
       "type": "text",
-      "value": "to do add follow ups here",
+      "value": "TO DO",
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "text_align": "center"
+      },
+      "style_list": [
+        "color: #46607F"
+      ],
       "name": "text_7",
       "_nested_name": "text_7"
     }
