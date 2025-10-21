@@ -28,7 +28,7 @@
 | round_button | 28 |
 | select_text | 2 |
 | set_field | 6 |
-| set_variable | 847 |
+| set_variable | 848 |
 | simple_checkbox | 5 |
 | task_card | 6 |
 | task_progress_bar | 4 |
@@ -51,7 +51,7 @@
 | add_data | 11 |
 | app_update | 1 |
 | auth | 4 |
-| emit: completed | 44 |
+| emit: completed | 45 |
 | emit: force_reload | 7 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
@@ -80,7 +80,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 9713 KB | 9.7 MB |
+| total | 9822 KB | 9.8 MB |
 | unused | 176 KB | 0.2 MB |
 </details>
 
@@ -169,6 +169,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | path | size_kb | count |
 | --- | --- | --- |
+| images/articles/about_app_1.png | 109.2 | 1 |
 | images/backgrounds/home_bottom_right.svg | 2.3 | 1 |
 | images/backgrounds/home_top_left.svg | 2.4 | 2 |
 | images/backgrounds/reports_top_right.svg | 2 | 1 |
