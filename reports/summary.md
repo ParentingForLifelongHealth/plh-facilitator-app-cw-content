@@ -11,7 +11,7 @@
 | audio | 2 |
 | button | 127 |
 | carousel | 2 |
-| combo_box | 18 |
+| combo_box | 16 |
 | data_items | 67 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
@@ -24,7 +24,7 @@
 | navigation_bar | 1 |
 | pdf | 1 |
 | qr_code | 2 |
-| radio_button_grid | 10 |
+| radio_button_grid | 12 |
 | round_button | 28 |
 | select_text | 2 |
 | set_field | 6 |
@@ -80,8 +80,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 9836 KB | 9.8 MB |
-| unused | 176 KB | 0.2 MB |
+| total | 8537 KB | 8.5 MB |
+| unused | 10263 KB | 10.3 MB |
 </details>
 
 <details open>
@@ -136,6 +136,11 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/settings.svg | 1.2 |
 | images/icons/unarchive-outline-white.svg | 1.8 |
 | images/icons/world.svg | 6.2 |
+| images/onboarding/splash_1.png | 2484.4 |
+| images/onboarding/splash_2.png | 2220.7 |
+| images/onboarding/splash_3.png | 1760.5 |
+| images/onboarding/splash_4.png | 1425.9 |
+| images/onboarding/splash_5.png | 2195 |
 </details>
 
 <details open>
@@ -159,6 +164,11 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/plh_logomark.png | 1 |
 | images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
+| images/onboarding/splash_1.jpg | 1 |
+| images/onboarding/splash_2.jpg | 1 |
+| images/onboarding/splash_3.jpg | 1 |
+| images/onboarding/splash_4.jpg | 1 |
+| images/onboarding/splash_5.jpg | 1 |
 | lottie/checkmark_blue.json | 3 |
 | pdf/kemas_rct_overview.pdf | 1 |
 </details>
@@ -216,11 +226,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/logos/PLH.png | 26.6 | 1 |
 | images/logos/UNICEF.jpg | 27.7 | 1 |
 | images/modules/place_holder.png | 210 | 19 |
-| images/onboarding/splash_1.jpg | 266 | 1 |
-| images/onboarding/splash_2.jpg | 247.5 | 1 |
-| images/onboarding/splash_3.jpg | 276.8 | 1 |
-| images/onboarding/splash_4.jpg | 279.3 | 1 |
-| images/onboarding/splash_5.jpg | 228.9 | 1 |
 | lottie/cw_profile_complete.json | 13.4 | 1 |
 | pdf/child_development_domain.pdf | 141 | 1 |
 | pdf/child_development_stage.pdf | 508.2 | 1 |

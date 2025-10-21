@@ -134,7 +134,11 @@
     },
     {
       "type": "declare_global_constant",
-      "name": "welcome_message"
+      "name": "welcome_message_subtext",
+      "value": "Your partner in delivering @global.programme_name",
+      "_translations": {
+        "value": {}
+      }
     }
   ],
   "_xlsxPath": "data/CW onboarding.xlsx",

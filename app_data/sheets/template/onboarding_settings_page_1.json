@@ -55,7 +55,7 @@
       }
     },
     {
-      "type": "combo_box",
+      "type": "radio_button_grid",
       "name": "user_type_select",
       "value": "@fields.user_type",
       "_translations": {
@@ -63,8 +63,7 @@
       },
       "parameter_list": {
         "answer_list": "@data.user_type",
-        "placeholder": "@global.placeholder_user_type",
-        "variant": "dropdown"
+        "item_width": "100%"
       },
       "condition": "!!@fields.user_type",
       "exclude_from_translation": true,
@@ -86,14 +85,6 @@
               "type": "data",
               "fieldName": "user_type"
             }
-          ],
-          "placeholder": [
-            {
-              "fullExpression": "@global.placeholder_user_type",
-              "matchedExpression": "@global.placeholder_user_type",
-              "type": "global",
-              "fieldName": "placeholder_user_type"
-            }
           ]
         },
         "condition": [
@@ -112,21 +103,17 @@
         "@data.user_type": [
           "parameter_list.answer_list"
         ],
-        "@global.placeholder_user_type": [
-          "parameter_list.placeholder"
-        ],
         "!@fields.user_type": [
           "condition"
         ]
       }
     },
     {
-      "type": "combo_box",
+      "type": "radio_button_grid",
       "name": "user_type_select",
       "parameter_list": {
         "answer_list": "@data.user_type",
-        "placeholder": "@global.placeholder_user_type",
-        "variant": "dropdown"
+        "item_width": "100%"
       },
       "condition": "!@fields.user_type",
       "exclude_from_translation": true,
@@ -139,14 +126,6 @@
               "matchedExpression": "@data.user_type",
               "type": "data",
               "fieldName": "user_type"
-            }
-          ],
-          "placeholder": [
-            {
-              "fullExpression": "@global.placeholder_user_type",
-              "matchedExpression": "@global.placeholder_user_type",
-              "type": "global",
-              "fieldName": "placeholder_user_type"
             }
           ]
         },
@@ -162,9 +141,6 @@
       "_dynamicDependencies": {
         "@data.user_type": [
           "parameter_list.answer_list"
-        ],
-        "@global.placeholder_user_type": [
-          "parameter_list.placeholder"
         ],
         "!@fields.user_type": [
           "condition"
@@ -274,7 +250,7 @@
     },
     {
       "name": "completed_enabled",
-      "value": "!!@local.user_type_select",
+      "value": "!!@local.user_type_select && (@local.user_type_select != \"tester\" || !!@local.language_grid)",
       "_translations": {
         "value": {}
       },
@@ -284,15 +260,33 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "!!@local.user_type_select",
+            "fullExpression": "!!@local.user_type_select && (@local.user_type_select != \"tester\" || !!@local.language_grid)",
             "matchedExpression": "!@local.user_type_select",
             "type": "local",
             "fieldName": "user_type_select"
+          },
+          {
+            "fullExpression": "!!@local.user_type_select && (@local.user_type_select != \"tester\" || !!@local.language_grid)",
+            "matchedExpression": "@local.user_type_select",
+            "type": "local",
+            "fieldName": "user_type_select"
+          },
+          {
+            "fullExpression": "!!@local.user_type_select && (@local.user_type_select != \"tester\" || !!@local.language_grid)",
+            "matchedExpression": "!@local.language_grid",
+            "type": "local",
+            "fieldName": "language_grid"
           }
         ]
       },
       "_dynamicDependencies": {
         "!@local.user_type_select": [
+          "value"
+        ],
+        "@local.user_type_select": [
+          "value"
+        ],
+        "!@local.language_grid": [
           "value"
         ]
       }
