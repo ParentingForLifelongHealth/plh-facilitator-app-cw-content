@@ -33,7 +33,9 @@
               "type": "title",
               "value": "Your Reports",
               "_translations": {
-                "value": {}
+                "value": {
+                  "cw_pap": true
+                }
               },
               "parameter_list": {
                 "variant": "page_banner"
@@ -47,7 +49,9 @@
               "name": "label_group",
               "value": "Parent Group",
               "_translations": {
-                "value": {}
+                "value": {
+                  "cw_pap": true
+                }
               },
               "exclude_from_translation": false,
               "_nested_name": "dg_top.dg_top_column.label_group"

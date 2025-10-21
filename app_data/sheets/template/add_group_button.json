@@ -7,7 +7,9 @@
       "name": "name",
       "value": "test",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "name"
@@ -128,7 +130,9 @@
       "name": "save",
       "value": "Save",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "action_list": [
         {

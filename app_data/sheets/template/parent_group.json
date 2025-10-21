@@ -13,7 +13,9 @@
       "name": "group_name",
       "value": "test",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "group_name"

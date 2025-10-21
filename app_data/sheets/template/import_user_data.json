@@ -8,7 +8,9 @@
       "name": "title",
       "value": "Import user",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "title"
     },
@@ -16,7 +18,9 @@
       "name": "user_id_name",
       "value": "Facilitator ID",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "user_id_name"
@@ -26,7 +30,9 @@
       "name": "text_instruction",
       "value": "Paste the @local.facilitator_id of a user to import their account data.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "text_instruction",
       "_dynamicFields": {
@@ -55,7 +61,9 @@
       "name": "button_import",
       "value": "Import data",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "action_list": [
         {
@@ -123,7 +131,9 @@
       "name": "validation",
       "value": "Validation",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "validation"
@@ -132,7 +142,9 @@
       "name": "user_name",
       "value": "User name (on the current account)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "user_name"
@@ -201,7 +213,9 @@
       "name": "button",
       "value": "Clear user name",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "action_list": [
         {
@@ -231,7 +245,9 @@
       "name": "text",
       "value": "If you had set a user name on your old account and the data was imported succesfully, the user name above should update.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "text"
     }

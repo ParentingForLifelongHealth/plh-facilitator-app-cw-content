@@ -8,7 +8,9 @@
       "name": "user_name_question",
       "value": "Your name",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -16,7 +18,9 @@
       "name": "user_name_default",
       "value": "[INSERT NAME]",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -32,7 +36,9 @@
       "name": "state_question",
       "value": "Which state do you live in?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -40,7 +46,9 @@
       "name": "region_question",
       "value": "Which region of @global.deployment_country do you live in?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {

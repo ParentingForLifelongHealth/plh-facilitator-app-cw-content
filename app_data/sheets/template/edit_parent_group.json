@@ -13,7 +13,9 @@
       "name": "title_label",
       "value": "Edit Parent Group",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "title_label"
@@ -372,7 +374,9 @@
           "name": "save",
           "value": "Save",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {

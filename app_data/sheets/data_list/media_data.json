@@ -10,8 +10,12 @@
       "media_asset": "videos/onboard_caregivers.mp4",
       "title": "Onboarding Caregivers into the Course",
       "_translations": {
-        "title": {},
-        "introduction": {}
+        "title": {
+          "cw_pap": true
+        },
+        "introduction": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {

@@ -34,7 +34,9 @@
           "name": "display_title",
           "value": "About @global.prog_name",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "exclude_from_translation": true,
           "type": "set_variable",

@@ -73,7 +73,9 @@
           "name": "button_cancel",
           "value": "Cancel",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
@@ -94,7 +96,9 @@
           "name": "button_submit",
           "value": "Submit",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {

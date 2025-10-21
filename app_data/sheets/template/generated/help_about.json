@@ -8,7 +8,9 @@
       "name": "text",
       "value": "We will use this to personalise the messages for sharing with your @global.share_groups.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "text",
       "_dynamicFields": {

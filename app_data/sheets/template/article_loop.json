@@ -14,7 +14,9 @@
       "name": "article_id",
       "value": "test",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": true,
       "type": "set_variable",

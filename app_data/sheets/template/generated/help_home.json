@@ -8,7 +8,9 @@
       "name": "text",
       "value": "Welcome to the @global.app_name. Each week you should select your weekly topic, share the message to your @global.share_groups, and report attendance.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "text",
       "_dynamicFields": {

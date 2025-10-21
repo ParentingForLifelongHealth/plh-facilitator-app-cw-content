@@ -7,7 +7,9 @@
       "name": "library_id",
       "value": "test",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "library_id"
@@ -16,7 +18,9 @@
       "name": "display_title",
       "value": "test",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "display_title"

@@ -43,7 +43,9 @@
       "name": "title",
       "value": "Are you sure you want to archive @fields.current_group_name?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "title",
       "_dynamicFields": {
@@ -67,7 +69,9 @@
       "name": "text_warning",
       "value": "Archiving this group will remove it from your active list.\nYou can still view its data later if needed.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "text_warning"
     },
@@ -80,7 +84,9 @@
           "name": "button_no",
           "value": "Cancel",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
@@ -106,7 +112,9 @@
           "name": "button_delete",
           "value": "Archive",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
