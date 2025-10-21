@@ -16,7 +16,7 @@
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 157 |
+| display_group | 156 |
 | google_sign_in_button | 3 |
 | image | 21 |
 | items | 16 |
@@ -80,8 +80,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 8537 KB | 8.5 MB |
-| unused | 10263 KB | 10.3 MB |
+| total | 8535 KB | 8.5 MB |
+| unused | 10265 KB | 10.3 MB |
 </details>
 
 <details open>
@@ -91,6 +91,7 @@ Assets that appear in app-data but do not have references within sheets
 
 | path | size_kb |
 | --- | --- |
+| images/backgrounds/home_bottom_right.svg | 2.3 |
 | images/backgrounds/library_bottom_left.svg | 2.3 |
 | images/backgrounds/library_top_right.svg | 0.3 |
 | images/backgrounds/report_edit.svg | 0.2 |
@@ -181,8 +182,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | path | size_kb | count |
 | --- | --- | --- |
 | images/articles/about_app_1.png | 109.2 | 1 |
-| images/backgrounds/home_bottom_right.svg | 2.3 | 1 |
-| images/backgrounds/home_top_left.svg | 2.4 | 2 |
+| images/backgrounds/home_top_left.svg | 2.4 | 1 |
 | images/backgrounds/reports_top_right.svg | 2 | 1 |
 | images/icons/add-outline.svg | 0.2 | 1 |
 | images/icons/add_circle.svg | 0.4 | 1 |
