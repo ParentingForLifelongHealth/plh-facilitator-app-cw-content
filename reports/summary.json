@@ -103,7 +103,7 @@
       },
       {
         "type": "set_variable",
-        "count": 847
+        "count": 848
       },
       {
         "type": "simple_checkbox",
@@ -171,7 +171,7 @@
       },
       {
         "type": "emit: completed",
-        "count": 44
+        "count": 45
       },
       {
         "type": "emit: force_reload",
@@ -263,8 +263,8 @@
     "data": [
       {
         "assets": "total",
-        "KB": "9713 KB",
-        "MB": "9.7 MB"
+        "KB": "9822 KB",
+        "MB": "9.8 MB"
       },
       {
         "assets": "unused",
@@ -538,6 +538,11 @@
   },
   "asset_summary": {
     "data": [
+      {
+        "path": "images/articles/about_app_1.png",
+        "count": 1,
+        "size_kb": 109.2
+      },
       {
         "path": "images/backgrounds/home_bottom_right.svg",
         "count": 1,

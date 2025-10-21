@@ -5,7 +5,7 @@
   "data_list_name": "a_messages",
   "rows": [
     {
-      "id": "message0",
+      "id": "handover_group_admin0",
       "foreign_key": "handover_group_admin",
       "title": "Send this message after your WhatsApp Call",
       "_translations": {
@@ -23,7 +23,7 @@
       "text": "Hi! Thank you for volunteering to lead the group discussions. \n\n*While engaging with other parents in the group, keep the following in mind*: \n\n👋 Greet parents when engaging with them.\n\n💛 Respect what participants share and be aware of different ages, genders, values and circumstances. \n\n🏅 Encourage parents to share and respond to each other - and praise them for it.\n\n🔔 Remind parents of ground rules when needed.\n\n🔑 Model the behaviour you want to see among the parents."
     },
     {
-      "id": "message1",
+      "id": "handover_group_admin1",
       "foreign_key": "handover_group_admin",
       "title": "When should the group admin respond to messages?",
       "_translations": {
@@ -36,17 +36,17 @@
           "eng": "When should the group admin respond to messages?"
         },
         "text": {
-          "eng": "*When should you respond to messages?*\n\n⏰ Participants may send messages at any time during the week. To keep your workload manageable, you can respond to messages once or twice a day, depending on your schedule. \n\n👍 You can also respond to messages with a relevant emoji or short response when you can."
+          "eng": "⏰ Participants may send messages at any time during the week. To keep your workload manageable, you can respond to messages once or twice a day, depending on your schedule. \n\n👍 You can also respond to messages with a relevant emoji or short response when you can."
         },
         "guidance": {
           "eng": "Send this message to the group admin volunteers."
         }
       },
-      "text": "*When should you respond to messages?*\n\n⏰ Participants may send messages at any time during the week. To keep your workload manageable, you can respond to messages once or twice a day, depending on your schedule. \n\n👍 You can also respond to messages with a relevant emoji or short response when you can.",
+      "text": "⏰ Participants may send messages at any time during the week. To keep your workload manageable, you can respond to messages once or twice a day, depending on your schedule. \n\n👍 You can also respond to messages with a relevant emoji or short response when you can.",
       "guidance": "Send this message to the group admin volunteers."
     },
     {
-      "id": "message2",
+      "id": "faq_h_after_group_ended0",
       "foreign_key": "faq_h_after_group_ended",
       "text": "Hi!😃Thank you for your message. \n\nMy role with @global.prog_name was limited. I unfortunately will not be further involved with the programme. \n\nIf your WhatsApp Support group is still active, feel free to post your questions in the group. Other parents may be able to support you with helpful suggestions. 💡",
       "_translations": {
@@ -59,20 +59,20 @@
       }
     },
     {
-      "id": "message3",
+      "id": "faq_h_prompts0",
       "foreign_key": "faq_h_prompts",
-      "text": "Here are some prompts you can use with the caregiver group: \n\n🎉Let us celebrate our successes! What was something positive you experienced when you tried one of the @global.prog_name skills with your child?\n\n🌱Trying out new skills can be hard at first. What was something *difficult* that you experienced when you tried a @global.prog_name skill with your child at home?\n\n💙You are welcome to use this WhatsApp space to share any questions or experiences you have on your @global.prog_name journey. Remember, I may not always be able to respond, but this is our group – *together we can find all the answers we need*!",
+      "text": "Here are some prompts you can use with the parent group: \n\n🎉Let us celebrate our successes! What was something positive you experienced when you tried one of the @global.prog_name skills with your child?\n\n🌱Trying out new skills can be hard at first. What was something *difficult* that you experienced when you tried a @global.prog_name skill with your child at home?\n\n💙You are welcome to use this WhatsApp space to share any questions or experiences you have on your @global.prog_name journey. Remember, I may not always be able to respond, but this is our group – *together we can find all the answers we need*!",
       "_translations": {
         "text": {}
       },
       "_translatedFields": {
         "text": {
-          "eng": "Here are some prompts you can use with the caregiver group: \n\n🎉Let us celebrate our successes! What was something positive you experienced when you tried one of the @global.prog_name skills with your child?\n\n🌱Trying out new skills can be hard at first. What was something *difficult* that you experienced when you tried a @global.prog_name skill with your child at home?\n\n💙You are welcome to use this WhatsApp space to share any questions or experiences you have on your @global.prog_name journey. Remember, I may not always be able to respond, but this is our group – *together we can find all the answers we need*!"
+          "eng": "Here are some prompts you can use with the parent group: \n\n🎉Let us celebrate our successes! What was something positive you experienced when you tried one of the @global.prog_name skills with your child?\n\n🌱Trying out new skills can be hard at first. What was something *difficult* that you experienced when you tried a @global.prog_name skill with your child at home?\n\n💙You are welcome to use this WhatsApp space to share any questions or experiences you have on your @global.prog_name journey. Remember, I may not always be able to respond, but this is our group – *together we can find all the answers we need*!"
         }
       }
     },
     {
-      "id": "message4",
+      "id": "faq_h_no_volunteers0",
       "foreign_key": "faq_h_no_volunteers",
       "title": "Alternate Closing Message",
       "_translations": {
@@ -84,13 +84,13 @@
           "eng": "Alternate Closing Message"
         },
         "text": {
-          "eng": "Thank you for sharing your thoughts 💙\n\nSince we don’t have any volunteers for group admin, I will be closing this WhatsApp Support Group at the end of the Programme. \n\nRemember, you can still continue your NKText journey with your family!"
+          "eng": "Thank you for sharing your thoughts 💙\n\nSince we don’t have any volunteers for group admin, I will be closing this WhatsApp Support Group at the end of the Programme. \n\nRemember, you can still continue your @global.prog_name journey with your family!"
         }
       },
-      "text": "Thank you for sharing your thoughts 💙\n\nSince we don’t have any volunteers for group admin, I will be closing this WhatsApp Support Group at the end of the Programme. \n\nRemember, you can still continue your NKText journey with your family!"
+      "text": "Thank you for sharing your thoughts 💙\n\nSince we don’t have any volunteers for group admin, I will be closing this WhatsApp Support Group at the end of the Programme. \n\nRemember, you can still continue your @global.prog_name journey with your family!"
     },
     {
-      "id": "message5",
+      "id": "faq_h_still_struggling0",
       "foreign_key": "faq_h_still_struggling",
       "title": "Message of Support",
       "_translations": {
@@ -108,7 +108,7 @@
       "text": "Hello 👋\n\nThank you for sharing your thoughts about the programme. I’m sorry that you’re facing challenges. Here are a couple of things you can try: \n\n1️⃣If there’s a skill or goal that you are finding difficult, remember you can always go back and rewatch the stories. Practice makes perfect! ✨\n\n2️⃣If you feel comfortable, please feel free to chat about the areas you’re finding tough with your peers in the WhatsApp Support Group. Your peers might have some helpful tips 👍\n\nRemember, everyone’s learning journey is unique, and change takes time. But trust me, if you keep practising the skills you’ve learned, you’ll start to see progress. 🏅"
     },
     {
-      "id": "message6",
+      "id": "faq_h_sad_to_end0",
       "foreign_key": "faq_h_sad_to_end",
       "title": "Message of Support",
       "_translations": {
@@ -126,7 +126,7 @@
       "text": "Hello 👋\n\nThank you for sharing your feelings. \nIt’s okay to have fears or feel sad when something you’ve been a part of is ending. \n\nRemember, \n\n1️⃣Even though @global.prog_name is ending, your journey can continue. You have gained some ⭐amazing ⭐parenting skills that you can carry with you. \n\n2️⃣The WhatsApp group can be a source of support well beyond the programme. Keep sharing your success and struggles in the WhatsApp Support Group, or with your peers. \n\n3️⃣If you ever want to go back to any parenting skills or goals, you are review our chats. Practise makes perfect ✨\n\nYou did great throughout your @global.prog_name journey!"
     },
     {
-      "id": "message7",
+      "id": "faq_ground_rules0",
       "foreign_key": "faq_ground_rules",
       "title": "Send this reminder message to the group",
       "_translations": {
@@ -144,7 +144,7 @@
       "text": "Hello ⭐\n\n👀 I'd like to take a moment to remind everyone about the importance of our group's ground rules. \n\n💚They're here to ensure that all of us feel comfortable sharing and maintain a positive environment. \n\n🌱It's all about making this group a great place for everyone.\n\n❗Please keep in mind that if the ground rules aren't consistently followed, we might need to consider removing members from the WhatsApp group for the well-being of all.\n\nSee you in the next chat session."
     },
     {
-      "id": "message8",
+      "id": "faq_ground_rules1",
       "foreign_key": "faq_ground_rules",
       "title": "Send this reminder message to the parent who broke the ground rule",
       "_translations": {
@@ -162,7 +162,7 @@
       "text": "Hello ⭐\n\n👀 Creating a positive environment in our WhatsApp group is important, and that relies on everyone following the ground rules.\n\n🌱 I believe in the strength of our community. \n\nHowever, if difficulties continue, I may have to consider removing you from the group. \n\nLet's work together to maintain a respectful and supportive atmosphere. \n\nSee you in the next chat session."
     },
     {
-      "id": "message9",
+      "id": "faq_ground_rules2",
       "foreign_key": "faq_ground_rules",
       "title": "Send this message to the parent after removing them from the WhatsApp Group",
       "_translations": {
@@ -185,7 +185,7 @@
       "guidance": "Notify your supervisor once you remove them. \n\nYou can block the parent if they continue to reach out to you."
     },
     {
-      "id": "message10",
+      "id": "faq_ground_rules3",
       "foreign_key": "faq_ground_rules",
       "title": "Send this message to the group after removing the parent who broke the ground rule",
       "_translations": {
@@ -203,7 +203,7 @@
       "text": "Hello Everyone ⭐,\n\n👀 We want our group to be positive for everyone, and that means following the rules.\n\n💚 Unfortunately, someone had to be removed because they weren't following the rules despite reminders.\n\nLet's keep things respectful and supportive.\n\nSee you in the next chat session!"
     },
     {
-      "id": "message11",
+      "id": "faq_misbehaviour0",
       "foreign_key": "faq_misbehaviour",
       "title": "Send This Message to the Parent",
       "_translations": {
@@ -221,7 +221,7 @@
       "text": "Hi!😃Thank you for your message. \n\nMy role in this activity is limited to sharing messages in the group only. I unfortunately do not have the capacity to respond to each individual message.😔\n\n🔑 If you are comfortable posting your questions in the group, please feel free to do so during our chat sessions! 💡"
     },
     {
-      "id": "message12",
+      "id": "faq_small_group_active0",
       "foreign_key": "faq_small_group_active",
       "title": "Reminder for Participation",
       "_translations": {
@@ -239,7 +239,7 @@
       "text": "🔔 Quick Reminder:\n\nWe all benefit when everyone joins in! Your experiences are important. Share your thoughts and let's keep this group lively and supportive for everyone. 🌷"
     },
     {
-      "id": "message13",
+      "id": "faq_small_group_active1",
       "foreign_key": "faq_small_group_active",
       "title": "Praising active parents",
       "_translations": {
@@ -257,7 +257,7 @@
       "text": "Big shoutout to those actively participating! \n\n🌟 Your experiences matter. \n\nIf you haven't shared yet, we'd love to hear from you too. \n\nEvery parent is important! 💚"
     },
     {
-      "id": "message14",
+      "id": "faq_small_group_active2",
       "foreign_key": "faq_small_group_active",
       "title": "Setting expectations for the group",
       "_translations": {
@@ -275,7 +275,7 @@
       "text": "Just a friendly reminder: This group is a safe space for sharing and learning. 💙\n\nWe encourage everyone to participate and make this a positive experience for all. 🌱\n\nLet's build a supportive community together! 🌷"
     },
     {
-      "id": "message15",
+      "id": "faq_small_group_active3",
       "foreign_key": "faq_small_group_active",
       "title": "Privately messaging the parent",
       "_translations": {
@@ -293,7 +293,7 @@
       "text": "Hi there! 👋 \n\nWe've noticed you haven't shared much in the group. \n\nIs there anything specific you'd like to see or discuss? \n\nYour input is important to us!\n\nFeel free to share your thoughts. 😊"
     },
     {
-      "id": "message16",
+      "id": "faq_no_participation_general0",
       "foreign_key": "faq_no_participation_general",
       "title": "Directly ask a specific parent to share",
       "_translations": {
@@ -316,7 +316,7 @@
       "guidance": "Before hitting send, please make sure to tag a specific parent by typing @Parent’s Name"
     },
     {
-      "id": "message17",
+      "id": "faq_no_participation_general1",
       "foreign_key": "faq_no_participation_general",
       "title": "Check if it is a good time for WhatsApp Chat",
       "_translations": {

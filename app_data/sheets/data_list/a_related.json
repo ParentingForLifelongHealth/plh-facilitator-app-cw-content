@@ -5,179 +5,179 @@
   "data_list_name": "a_related",
   "rows": [
     {
-      "id": "releated0",
+      "id": "about_prog0",
       "foreign_key": "about_prog",
       "article_id": "about_app"
     },
     {
-      "id": "releated1",
+      "id": "about_app0",
       "foreign_key": "about_app",
       "article_id": "prog_develop"
     },
     {
-      "id": "releated2",
+      "id": "prog_develop0",
       "foreign_key": "prog_develop",
       "article_id": "prog_goals"
     },
     {
-      "id": "releated3",
+      "id": "prog_goals0",
       "foreign_key": "prog_goals",
       "article_id": "prog_delivery"
     },
     {
-      "id": "releated4",
+      "id": "prog_delivery0",
       "foreign_key": "prog_delivery",
       "article_id": "prog_content"
     },
     {
-      "id": "releated5",
+      "id": "prog_content0",
       "foreign_key": "prog_content",
       "article_id": "prog_work"
     },
     {
-      "id": "releated6",
+      "id": "individual_consultation0",
       "foreign_key": "individual_consultation",
-      "article_id": "parent_group"
-    },
-    {
-      "id": "releated7",
-      "foreign_key": "parent_group",
       "article_id": "in_person_session"
     },
     {
-      "id": "releated8",
+      "id": "in_person_session0",
       "foreign_key": "in_person_session",
       "article_id": "prepare"
     },
     {
-      "id": "releated9",
+      "id": "prepare0",
       "foreign_key": "prepare",
       "article_id": "lesson_content"
     },
     {
-      "id": "releated10",
+      "id": "lesson_content0",
       "foreign_key": "lesson_content",
       "article_id": "reminders"
     },
     {
-      "id": "releated11",
+      "id": "reminders0",
       "foreign_key": "reminders",
       "article_id": "live_chat_session"
     },
     {
-      "id": "releated12",
+      "id": "live_chat_session0",
       "foreign_key": "live_chat_session",
       "article_id": "report"
     },
     {
-      "id": "releated13",
+      "id": "report0",
+      "foreign_key": "report",
+      "article_id": "handover_group_admin"
+    },
+    {
+      "id": "handover_group_admin0",
       "foreign_key": "handover_group_admin",
       "article_id": "faq_h_after_group_ended"
     },
     {
-      "id": "releated14",
+      "id": "handover_group_admin1",
       "foreign_key": "handover_group_admin",
       "article_id": "faq_h_prompts"
     },
     {
-      "id": "releated15",
+      "id": "handover_group_admin2",
       "foreign_key": "handover_group_admin",
       "article_id": "faq_h_no_volunteers"
     },
     {
-      "id": "releated16",
+      "id": "facilitation_overview0",
       "foreign_key": "facilitation_overview",
       "article_id": "facilitation_1"
     },
     {
-      "id": "releated17",
+      "id": "facilitation_10",
       "foreign_key": "facilitation_1",
       "article_id": "facilitation_2"
     },
     {
-      "id": "releated18",
+      "id": "facilitation_20",
       "foreign_key": "facilitation_2",
       "article_id": "facilitation_3"
     },
     {
-      "id": "releated19",
+      "id": "facilitation_30",
       "foreign_key": "facilitation_3",
       "article_id": "facilitation_4"
     },
     {
-      "id": "releated20",
+      "id": "facilitation_40",
       "foreign_key": "facilitation_4",
       "article_id": "facilitation_5"
     },
     {
-      "id": "releated21",
+      "id": "facilitation_50",
       "foreign_key": "facilitation_5",
       "article_id": "facilitation_6"
     },
     {
-      "id": "releated22",
+      "id": "facilitation_60",
       "foreign_key": "facilitation_6",
       "article_id": "facilitation_7"
     },
     {
-      "id": "releated23",
+      "id": "facilitation_70",
       "foreign_key": "facilitation_7",
       "article_id": "facilitation_8"
     },
     {
-      "id": "releated24",
+      "id": "what_is_safeguarding0",
       "foreign_key": "what_is_safeguarding",
       "article_id": "during_disclosed_abuse"
     },
     {
-      "id": "releated25",
+      "id": "during_disclosed_abuse0",
       "foreign_key": "during_disclosed_abuse",
       "article_id": "after_disclosed_abuse"
     },
     {
-      "id": "releated26",
+      "id": "after_disclosed_abuse0",
       "foreign_key": "after_disclosed_abuse",
       "article_id": "how_to_report_abuse"
     },
     {
-      "id": "releated27",
+      "id": "how_to_report_abuse0",
       "foreign_key": "how_to_report_abuse",
       "article_id": "crisis_hotlines"
     },
     {
-      "id": "releated28",
+      "id": "module_1_prepare0",
       "foreign_key": "module_1_prepare",
       "article_id": "module_2_prepare"
     },
     {
-      "id": "releated29",
+      "id": "module_2_prepare0",
       "foreign_key": "module_2_prepare",
       "article_id": "module_3_prepare"
     },
     {
-      "id": "releated30",
+      "id": "module_3_prepare0",
       "foreign_key": "module_3_prepare",
       "article_id": "module_4_prepare"
     },
     {
-      "id": "releated31",
+      "id": "module_4_prepare0",
       "foreign_key": "module_4_prepare",
       "article_id": "module_5_prepare"
     },
     {
-      "id": "releated32",
+      "id": "module_5_prepare0",
       "foreign_key": "module_5_prepare",
       "article_id": "module_6_prepare"
     },
     {
-      "id": "releated33",
+      "id": "module_6_prepare0",
       "foreign_key": "module_6_prepare",
       "article_id": "faq_h_still_struggling"
     },
     {
-      "id": "releated34",
+      "id": "module_6_prepare1",
       "foreign_key": "module_6_prepare",
-      "article_id": "faw_h_sad_to_end"
+      "article_id": "faq_h_sad_to_end"
     }
   ],
   "_xlsxPath": "data/articles_CW.xlsx",
