@@ -8,7 +8,9 @@
       "name": "text",
       "value": "Your profile provides your facilitator ID and is also where you can edit the list of parents attending your groups.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "text"
     }

@@ -43,7 +43,9 @@
       "name": "title",
       "value": "Are you sure you want to delete @fields.current_group_name?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "title",
       "_dynamicFields": {
@@ -67,7 +69,9 @@
       "name": "text_warning",
       "value": "This will delete all of @fields.current_group_name group data. The action cannot be undone.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "text_warning",
       "_dynamicFields": {
@@ -95,7 +99,9 @@
           "name": "button_no",
           "value": "Cancel",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
@@ -121,7 +127,9 @@
           "name": "button_delete",
           "value": "Delete",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {

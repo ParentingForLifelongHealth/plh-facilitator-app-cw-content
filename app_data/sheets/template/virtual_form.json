@@ -765,7 +765,9 @@
       "name": "placeholder",
       "value": "minutes",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "placeholder"
@@ -775,7 +777,9 @@
       "name": "question_session_time",
       "value": "How many minutes did you spend facilitating your parent @global.share_medium group over the last week?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "parameter_list": {
         "style": "emphasised"
@@ -906,7 +910,9 @@
       "name": "question_participants",
       "value": "**Which of the parents in your group participated?**\n*Participation is defined as any parent who posts a comment, question, reply or reaction (such as a thumbs up) within the chat since you shared the first message from the weekly discussion.*",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "question_participants"
     },
@@ -914,7 +920,9 @@
       "name": "parent",
       "value": "Parent",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "parent"
@@ -1592,7 +1600,9 @@
       "name": "question_sent_messages",
       "value": "I was able to send...",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "parameter_list": {
         "style": "emphasised"
@@ -1603,7 +1613,9 @@
       "name": "all",
       "value": "All of the messages",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "all"
@@ -1612,7 +1624,9 @@
       "name": "some",
       "value": "Some of the messages",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "some"
@@ -1621,7 +1635,9 @@
       "name": "none",
       "value": "None of the messages",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "none"
@@ -1797,7 +1813,9 @@
       "name": "question_how_session_went",
       "value": "How do you feel the session went?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "parameter_list": {
         "style": "emphasised"
@@ -1808,7 +1826,9 @@
       "name": "very_well",
       "value": "Very well",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "very_well"
@@ -1817,7 +1837,9 @@
       "name": "well",
       "value": "Well",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "well"
@@ -1826,7 +1848,9 @@
       "name": "okay",
       "value": "Acceptable / Okay",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "okay"
@@ -1835,7 +1859,9 @@
       "name": "poorly",
       "value": "Poorly",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "poorly"
@@ -1844,7 +1870,9 @@
       "name": "very_poorly",
       "value": "Very poorly",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "very_poorly"

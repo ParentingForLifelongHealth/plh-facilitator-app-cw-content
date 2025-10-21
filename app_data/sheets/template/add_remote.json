@@ -59,7 +59,9 @@
       "name": "question_1",
       "value": "How many minutes did you spend facilitating your parent @global.share_medium group over the last week?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "question_1",
       "_dynamicFields": {
@@ -110,7 +112,9 @@
       "name": "question_2",
       "value": "I was able to send...",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "question_2"
     },
@@ -118,7 +122,9 @@
       "name": "all",
       "value": "All of the messages",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "all"
@@ -127,7 +133,9 @@
       "name": "some",
       "value": "Some of the messages",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "some"
@@ -136,7 +144,9 @@
       "name": "none",
       "value": "None of the messages",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "none"
@@ -236,7 +246,9 @@
       "name": "question_3",
       "value": "How do you feel the session went?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "question_3"
     },
@@ -244,7 +256,9 @@
       "name": "very_well",
       "value": "Very well",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "very_well"
@@ -253,7 +267,9 @@
       "name": "well",
       "value": "Well",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "well"
@@ -262,7 +278,9 @@
       "name": "ok",
       "value": "Acceptable / Okay",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "ok"
@@ -271,7 +289,9 @@
       "name": "poorly",
       "value": "Poorly",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "poorly"
@@ -280,7 +300,9 @@
       "name": "very_poorly",
       "value": "Very Poorly",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "very_poorly"
@@ -414,7 +436,9 @@
       "name": "question_4",
       "value": "Which of the parents in this group attended your @global.virtual_session_platform group session?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "question_4",
       "_dynamicFields": {
@@ -786,7 +810,9 @@
           "name": "save",
           "value": "Save",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {

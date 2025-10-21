@@ -12,8 +12,12 @@
       "target_template": "home_screen",
       "title": "Sessions",
       "_translations": {
-        "title": {},
-        "description": {}
+        "title": {
+          "cw_pap": true
+        },
+        "description": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -31,7 +35,9 @@
       "template": "reports",
       "title": "Report",
       "_translations": {
-        "title": {}
+        "title": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -47,7 +53,9 @@
       "target_template": "library",
       "title": "Library",
       "_translations": {
-        "title": {}
+        "title": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -63,8 +71,12 @@
       "target_template": "profile",
       "title": "Settings",
       "_translations": {
-        "title": {},
-        "description": {}
+        "title": {
+          "cw_pap": true
+        },
+        "description": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {

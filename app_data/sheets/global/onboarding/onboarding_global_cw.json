@@ -95,7 +95,9 @@
       "name": "question_language",
       "value": "Language",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -129,6 +131,10 @@
       "_translations": {
         "value": {}
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "welcome_message"
     }
   ],
   "_xlsxPath": "data/CW onboarding.xlsx",

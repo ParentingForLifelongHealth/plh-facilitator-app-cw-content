@@ -20,7 +20,9 @@
       "name": "title",
       "value": "Are you sure you want to delete this report?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": false,
       "_nested_name": "title"
@@ -30,7 +32,9 @@
       "name": "text_warning",
       "value": "This will delete all of your report data and entries. The action cannot be undone!",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": false,
       "_nested_name": "text_warning"
@@ -44,7 +48,9 @@
           "name": "button_no",
           "value": "Cancel",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
@@ -71,7 +77,9 @@
           "name": "button_delete",
           "value": "Delete",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {

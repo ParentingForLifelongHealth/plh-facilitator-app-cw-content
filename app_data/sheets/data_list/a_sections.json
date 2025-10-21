@@ -99,8 +99,12 @@
       "foreign_key": "in_person_session",
       "title": "Use collaborative approach to learning",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -117,8 +121,12 @@
       "foreign_key": "in_person_session",
       "title": "Model the behaviour you want to see",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -135,8 +143,12 @@
       "foreign_key": "in_person_session",
       "title": "Go at the pace of the group",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -153,7 +165,9 @@
       "foreign_key": "in_person_session",
       "title": "Make @global.prog_name a happy and safe space to learn",
       "_translations": {
-        "title": {},
+        "title": {
+          "cw_pap": true
+        },
         "text": {}
       },
       "_translatedFields": {

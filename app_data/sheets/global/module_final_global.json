@@ -12,7 +12,9 @@
       "name": "support_button",
       "value": "Frequently Asked Questions",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -20,7 +22,9 @@
       "name": "go_to_start",
       "value": "View Module from Start",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -52,7 +56,9 @@
       "name": "module_not_complete_text",
       "value": "Please make sure messages have been shared before completing session",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -70,7 +76,9 @@
       "name": "module_not_complete_report_text",
       "value": "Please make sure messages have been shared before completing session",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -78,7 +86,9 @@
       "name": "mark_delivered",
       "value": "Mark Session as Delivered",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -96,7 +106,9 @@
       "name": "report_to_do_text",
       "value": "You successfully completed this session! Please complete the report",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -104,7 +116,9 @@
       "name": "submit_report",
       "value": "Add Report",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -126,7 +140,9 @@
       "name": "report_complete_text",
       "value": "You successfully completed the report for this session!",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -134,7 +150,9 @@
       "name": "review_report",
       "value": "Review Report",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -156,7 +174,9 @@
       "name": "no_report_text",
       "value": "You successfully completed this session!",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -164,7 +184,9 @@
       "name": "mark_delivered_report",
       "value": "Mark Session as Delivered and add report",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -182,7 +204,9 @@
       "name": "message_not_shared_text",
       "value": "Please share your message with the parent group before marking this module as delivered.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     }
   ],

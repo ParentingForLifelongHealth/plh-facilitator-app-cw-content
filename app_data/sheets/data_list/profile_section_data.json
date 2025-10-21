@@ -10,8 +10,12 @@
       "show": "@global.has_profile_about",
       "title": "About you",
       "_translations": {
-        "title": {},
-        "description": {}
+        "title": {
+          "cw_pap": true
+        },
+        "description": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -29,8 +33,12 @@
       "show": true,
       "title": "Your Facilitator ID",
       "_translations": {
-        "title": {},
-        "description": {}
+        "title": {
+          "cw_pap": true
+        },
+        "description": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -48,8 +56,12 @@
       "show": "!@global.allow_multiple_parent_groups && @global.has_parent_groups",
       "title": "Your Parent Group",
       "_translations": {
-        "title": {},
-        "description": {}
+        "title": {
+          "cw_pap": true
+        },
+        "description": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -67,8 +79,12 @@
       "show": "@global.allow_multiple_parent_groups && @global.has_parent_groups",
       "title": "Your Parent Groups",
       "_translations": {
-        "title": {},
-        "description": {}
+        "title": {
+          "cw_pap": true
+        },
+        "description": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {

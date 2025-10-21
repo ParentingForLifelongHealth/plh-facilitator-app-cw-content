@@ -8,7 +8,9 @@
       "name": "title",
       "value": "Co-parenting with",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "title"
     },
@@ -403,7 +405,9 @@
           "name": "new_co_parent_id",
           "value": "test",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "condition": "@item.co_parent_id !== \"test\"",
           "type": "set_variable",

@@ -21,7 +21,9 @@
       "name": "login",
       "value": "Sign in",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -37,7 +39,9 @@
       "name": "login_google",
       "value": "Sign in with Google",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -45,7 +49,9 @@
       "name": "logout",
       "value": "Sign out",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -109,7 +115,9 @@
       "name": "previous_login",
       "value": "It looks like you've logged in on another device before. Would you like to continue from where you left off? \n\nIf you do, any progress made on this device will be lost.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -117,7 +125,9 @@
       "name": "restore_data",
       "value": "Load saved progress",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     }
   ],
