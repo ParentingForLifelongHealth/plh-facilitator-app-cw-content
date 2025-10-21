@@ -35,7 +35,7 @@
       },
       {
         "type": "combo_box",
-        "count": 18
+        "count": 16
       },
       {
         "type": "data_items",
@@ -87,7 +87,7 @@
       },
       {
         "type": "radio_button_grid",
-        "count": 10
+        "count": 12
       },
       {
         "type": "round_button",
@@ -263,13 +263,13 @@
     "data": [
       {
         "assets": "total",
-        "KB": "9836 KB",
-        "MB": "9.8 MB"
+        "KB": "8537 KB",
+        "MB": "8.5 MB"
       },
       {
         "assets": "unused",
-        "KB": "176 KB",
-        "MB": "0.2 MB"
+        "KB": "10263 KB",
+        "MB": "10.3 MB"
       }
     ]
   },
@@ -454,6 +454,26 @@
       {
         "path": "images/icons/world.svg",
         "size_kb": 6.2
+      },
+      {
+        "path": "images/onboarding/splash_1.png",
+        "size_kb": 2484.4
+      },
+      {
+        "path": "images/onboarding/splash_2.png",
+        "size_kb": 2220.7
+      },
+      {
+        "path": "images/onboarding/splash_3.png",
+        "size_kb": 1760.5
+      },
+      {
+        "path": "images/onboarding/splash_4.png",
+        "size_kb": 1425.9
+      },
+      {
+        "path": "images/onboarding/splash_5.png",
+        "size_kb": 2195
       }
     ]
   },
@@ -526,6 +546,31 @@
       },
       {
         "path": "images/no_group_selected.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/onboarding/splash_1.jpg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/onboarding/splash_2.jpg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/onboarding/splash_3.jpg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/onboarding/splash_4.jpg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "images/onboarding/splash_5.jpg",
         "count": 1,
         "missing": true
       },
@@ -772,31 +817,6 @@
         "path": "images/modules/place_holder.png",
         "count": 19,
         "size_kb": 210
-      },
-      {
-        "path": "images/onboarding/splash_1.jpg",
-        "count": 1,
-        "size_kb": 266
-      },
-      {
-        "path": "images/onboarding/splash_2.jpg",
-        "count": 1,
-        "size_kb": 247.5
-      },
-      {
-        "path": "images/onboarding/splash_3.jpg",
-        "count": 1,
-        "size_kb": 276.8
-      },
-      {
-        "path": "images/onboarding/splash_4.jpg",
-        "count": 1,
-        "size_kb": 279.3
-      },
-      {
-        "path": "images/onboarding/splash_5.jpg",
-        "count": 1,
-        "size_kb": 228.9
       },
       {
         "path": "lottie/cw_profile_complete.json",
