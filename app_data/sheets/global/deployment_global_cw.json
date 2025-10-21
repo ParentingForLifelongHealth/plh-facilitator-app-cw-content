@@ -349,6 +349,14 @@
           "cw_pap": true
         }
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "supervisor_name",
+      "value": "your supervisor",
+      "_translations": {
+        "value": {}
+      }
     }
   ],
   "_xlsxPath": "data/deployment_data_cw.xlsx",

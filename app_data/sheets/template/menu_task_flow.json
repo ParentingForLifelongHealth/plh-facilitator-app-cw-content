@@ -44,16 +44,12 @@
       "name": "dg_top",
       "parameter_list": {
         "sticky": "top",
-        "background_image_asset": "images/backgrounds/home_top_left.svg",
-        "background_image_position": "top left",
         "style": "background_solid"
       },
       "exclude_from_translation": true,
       "style_list": [
-        "width: 105%",
         "align-items: flex-start",
-        "padding: 24px",
-        "min-height: 192px"
+        "padding: 24px"
       ],
       "rows": [
         {
@@ -1959,38 +1955,6 @@
           "condition"
         ],
         "@fields.current_group_no": [
-          "condition"
-        ]
-      }
-    },
-    {
-      "type": "display_group",
-      "name": "dg_footer",
-      "parameter_list": {
-        "sticky": "bottom",
-        "background_image_asset": "images/backgrounds/home_bottom_right.svg",
-        "background_image_position": "bottom right"
-      },
-      "condition": "!@local.selected_group",
-      "exclude_from_translation": true,
-      "style_list": [
-        "width: 110%",
-        "min-height: 144px"
-      ],
-      "rows": [],
-      "_nested_name": "dg_footer",
-      "_dynamicFields": {
-        "condition": [
-          {
-            "fullExpression": "!@local.selected_group",
-            "matchedExpression": "!@local.selected_group",
-            "type": "local",
-            "fieldName": "selected_group"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "!@local.selected_group": [
           "condition"
         ]
       }

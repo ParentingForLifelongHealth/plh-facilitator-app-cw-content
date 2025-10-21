@@ -55,7 +55,7 @@
       },
       {
         "type": "display_group",
-        "count": 157
+        "count": 156
       },
       {
         "type": "google_sign_in_button",
@@ -263,18 +263,22 @@
     "data": [
       {
         "assets": "total",
-        "KB": "8537 KB",
+        "KB": "8535 KB",
         "MB": "8.5 MB"
       },
       {
         "assets": "unused",
-        "KB": "10263 KB",
+        "KB": "10265 KB",
         "MB": "10.3 MB"
       }
     ]
   },
   "assets_unused": {
     "data": [
+      {
+        "path": "images/backgrounds/home_bottom_right.svg",
+        "size_kb": 2.3
+      },
       {
         "path": "images/backgrounds/library_bottom_left.svg",
         "size_kb": 2.3
@@ -594,13 +598,8 @@
         "size_kb": 109.2
       },
       {
-        "path": "images/backgrounds/home_bottom_right.svg",
-        "count": 1,
-        "size_kb": 2.3
-      },
-      {
         "path": "images/backgrounds/home_top_left.svg",
-        "count": 2,
+        "count": 1,
         "size_kb": 2.4
       },
       {
