@@ -37,7 +37,7 @@
     {
       "type": "declare_global_constant",
       "name": "onboarding_header_background_colour",
-      "value": "var(--ion-color-gray-100)",
+      "value": "#3D1700",
       "_translations": {
         "value": {}
       },
@@ -60,7 +60,7 @@
     {
       "type": "declare_global_constant",
       "name": "onboarding_completed_lottie_asset",
-      "value": "lottie/cw_profile_complete.lottie",
+      "value": "lottie/cw_profile_complete.json",
       "_translations": {
         "value": {}
       },
