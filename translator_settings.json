@@ -5,7 +5,7 @@
     "SplitGroups": [["main","plh_facilitator_cw"], ["legal_terms","plh_facilitator_cw"]],
     "ExtractResult": "app/2_extract_result",
     "ReadyForTranslation": "app/3_ready_for_translators",
-    "PostTranslation": ["../plh-digital-content/translations/plh_facilitator_cw"],
+    "PostTranslation": ["../translation_repo/translations/plh_facilitator_cw"],
     "PostTranslationJSONs": "app/4_result_from_translators",
     "FinalDictionaries": "app/5_completed_dictionaries"
 }
