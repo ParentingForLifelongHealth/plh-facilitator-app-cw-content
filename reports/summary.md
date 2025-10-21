@@ -80,7 +80,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 9822 KB | 9.8 MB |
+| total | 9836 KB | 9.8 MB |
 | unused | 176 KB | 0.2 MB |
 </details>
 
@@ -159,6 +159,7 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/plh_logomark.png | 1 |
 | images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
+| lottie/checkmark_blue.json | 3 |
 | pdf/kemas_rct_overview.pdf | 1 |
 </details>
 
@@ -220,6 +221,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/onboarding/splash_3.jpg | 276.8 | 1 |
 | images/onboarding/splash_4.jpg | 279.3 | 1 |
 | images/onboarding/splash_5.jpg | 228.9 | 1 |
+| lottie/cw_profile_complete.json | 13.4 | 1 |
 | pdf/child_development_domain.pdf | 141 | 1 |
 | pdf/child_development_stage.pdf | 508.2 | 1 |
 </details>
