@@ -48,13 +48,41 @@
       "rows": [
         {
           "type": "title",
-          "name": "title_follow_up_1",
-          "value": "All parents are engaged",
+          "name": "text_no_follow_up",
+          "value": "No Follow ups",
           "_translations": {
             "value": {}
           },
           "condition": "@field.current_follow_ups_number == 0",
-          "_nested_name": "display_group_4.title_follow_up_1",
+          "_nested_name": "display_group_4.text_no_follow_up",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@field.current_follow_ups_number == 0",
+                "matchedExpression": "@field.current_follow_ups_number",
+                "type": "field",
+                "fieldName": "current_follow_ups_number"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@field.current_follow_ups_number": [
+              "condition"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "text_first_time",
+          "value": "All your parents are engaged–keep it up!",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "style": "contextual"
+          },
+          "condition": "@field.current_follow_ups_number == 0",
+          "_nested_name": "display_group_4.text_first_time",
           "_dynamicFields": {
             "condition": [
               {
@@ -142,22 +170,10 @@
         {
           "type": "button",
           "name": "show more",
-          "value": "Follow Up",
+          "value": "Show More",
           "_translations": {
             "value": {}
           },
-          "action_list": [
-            {
-              "trigger": "click",
-              "action_id": "share",
-              "args": [],
-              "_raw": "click | share | text: Follow Up",
-              "_cleaned": "click | share | text: Follow Up",
-              "params": {
-                "text": "Follow Up"
-              }
-            }
-          ],
           "parameter_list": {
             "variant": "card"
           },

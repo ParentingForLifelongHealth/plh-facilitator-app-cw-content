@@ -296,7 +296,7 @@
       "parameter_list": {
         "style": "column"
       },
-      "condition": false,
+      "condition": "(@local.number_delivered_sessions == 0) || (@local.number_parent_groups == 0) || (@local.number_parents == 0)",
       "rows": [
         {
           "type": "title",
@@ -321,39 +321,40 @@
         }
       ],
       "name": "display_group_22",
-      "_nested_name": "display_group_22"
-    },
-    {
-      "type": "display_group",
-      "parameter_list": {
-        "style": "column"
+      "_nested_name": "display_group_22",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "(@local.number_delivered_sessions == 0) || (@local.number_parent_groups == 0) || (@local.number_parents == 0)",
+            "matchedExpression": "@local.number_delivered_sessions",
+            "type": "local",
+            "fieldName": "number_delivered_sessions"
+          },
+          {
+            "fullExpression": "(@local.number_delivered_sessions == 0) || (@local.number_parent_groups == 0) || (@local.number_parents == 0)",
+            "matchedExpression": "@local.number_parent_groups",
+            "type": "local",
+            "fieldName": "number_parent_groups"
+          },
+          {
+            "fullExpression": "(@local.number_delivered_sessions == 0) || (@local.number_parent_groups == 0) || (@local.number_parents == 0)",
+            "matchedExpression": "@local.number_parents",
+            "type": "local",
+            "fieldName": "number_parents"
+          }
+        ]
       },
-      "condition": false,
-      "rows": [
-        {
-          "type": "title",
-          "name": "text_no_follow_up",
-          "value": "No Follow ups",
-          "_translations": {
-            "value": {}
-          },
-          "_nested_name": "display_group_24.text_no_follow_up"
-        },
-        {
-          "type": "text",
-          "name": "text_first_time",
-          "value": "All your parents are engaged–keep it up!",
-          "_translations": {
-            "value": {}
-          },
-          "parameter_list": {
-            "style": "contextual"
-          },
-          "_nested_name": "display_group_24.text_first_time"
-        }
-      ],
-      "name": "display_group_24",
-      "_nested_name": "display_group_24"
+      "_dynamicDependencies": {
+        "@local.number_delivered_sessions": [
+          "condition"
+        ],
+        "@local.number_parent_groups": [
+          "condition"
+        ],
+        "@local.number_parents": [
+          "condition"
+        ]
+      }
     },
     {
       "type": "data_items",
@@ -362,90 +363,72 @@
       "parameter_list": {
         "filter": "!@item.archived"
       },
+      "condition": "!((@local.number_delivered_sessions == 0) || (@local.number_parent_groups == 0) || (@local.number_parents == 0))",
       "rows": [
         {
-          "name": "test_string",
-          "value": "modules.module_1_reminder_1.image_asset",
-          "_translations": {
-            "value": {}
-          },
-          "condition": false,
-          "type": "set_variable",
-          "_nested_name": "calculating_attendance.test_string"
-        },
-        {
-          "type": "text",
-          "name": "test_string_text",
-          "value": "@local.test_string",
-          "_translations": {
-            "value": {}
-          },
-          "condition": false,
-          "_nested_name": "calculating_attendance.test_string_text",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@local.test_string",
-                "matchedExpression": "@local.test_string",
-                "type": "local",
-                "fieldName": "test_string"
+          "type": "template",
+          "name": "single_attendance",
+          "value": "single_attendance",
+          "rows": [
+            {
+              "name": "parents_group",
+              "value": "@item.group_id",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.single_attendance.parents_group",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.group_id",
+                    "matchedExpression": "@item.group_id",
+                    "type": "item",
+                    "fieldName": "group_id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.group_id": [
+                  "value"
+                ]
               }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@local.test_string": [
-              "value"
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "name": "testtest",
-          "value": "will it work? @data.@local.test_string",
-          "_translations": {
-            "value": {}
-          },
-          "condition": false,
-          "_nested_name": "calculating_attendance.testtest",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "will it work? @data.@local.test_string",
-                "matchedExpression": "@local.test_string",
-                "type": "local",
-                "fieldName": "test_string"
+            },
+            {
+              "name": "parent_attendance_1",
+              "value": "@item.module_1_reminder_1",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.single_attendance.parent_attendance_1",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.module_1_reminder_1",
+                    "matchedExpression": "@item.module_1_reminder_1",
+                    "type": "item",
+                    "fieldName": "module_1_reminder_1"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.module_1_reminder_1": [
+                  "value"
+                ]
               }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@local.test_string": [
-              "value"
-            ]
-          }
-        },
-        {
-          "name": "s1",
-          "value": "@item.module_1_reminder_1",
-          "_translations": {
-            "value": {}
-          },
-          "type": "set_variable",
-          "_nested_name": "calculating_attendance.s1",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@item.module_1_reminder_1",
-                "matchedExpression": "@item.module_1_reminder_1",
-                "type": "item",
-                "fieldName": "module_1_reminder_1"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@item.module_1_reminder_1": [
-              "value"
-            ]
-          }
+            },
+            {
+              "name": "module",
+              "value": "module_1_reminder_1",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "calculating_attendance.single_attendance.module"
+            }
+          ],
+          "_nested_name": "calculating_attendance.single_attendance"
         },
         {
           "name": "s2",
@@ -770,7 +753,7 @@
               },
               "condition": "@local.s1 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_1",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_1",
               "_dynamicFields": {
                 "value": [
                   {
@@ -790,7 +773,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_1",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_1",
                     "matchedExpression": "@item.id.attendance_1",
                     "type": "item",
                     "fieldName": "id"
@@ -817,7 +800,7 @@
               },
               "condition": "@local.s1 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_1",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_1",
               "_dynamicFields": {
                 "value": [
                   {
@@ -837,7 +820,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_1",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_1",
                     "matchedExpression": "@item.id.attendance_1",
                     "type": "item",
                     "fieldName": "id"
@@ -864,7 +847,7 @@
               },
               "condition": "@local.s1 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_1",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_1",
               "_dynamicFields": {
                 "value": [
                   {
@@ -884,7 +867,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_1",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_1",
                     "matchedExpression": "@item.id.attendance_1",
                     "type": "item",
                     "fieldName": "id"
@@ -911,7 +894,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_1",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_1",
               "_dynamicFields": {
                 "value": [
                   {
@@ -923,7 +906,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_1",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_1",
                     "matchedExpression": "@item.id.test_attendance_1",
                     "type": "item",
                     "fieldName": "id"
@@ -947,7 +930,7 @@
               },
               "condition": "@local.s2 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_2",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_2",
               "_dynamicFields": {
                 "value": [
                   {
@@ -973,7 +956,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_2",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_2",
                     "matchedExpression": "@item.id.attendance_2",
                     "type": "item",
                     "fieldName": "id"
@@ -1003,7 +986,7 @@
               },
               "condition": "@local.s2 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_2",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_2",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1029,7 +1012,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_2",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_2",
                     "matchedExpression": "@item.id.attendance_2",
                     "type": "item",
                     "fieldName": "id"
@@ -1059,7 +1042,7 @@
               },
               "condition": "@local.s2 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_2",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_2",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1085,7 +1068,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_2",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_2",
                     "matchedExpression": "@item.id.attendance_2",
                     "type": "item",
                     "fieldName": "id"
@@ -1115,7 +1098,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_2",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_2",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1127,7 +1110,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_2",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_2",
                     "matchedExpression": "@item.id.test_attendance_2",
                     "type": "item",
                     "fieldName": "id"
@@ -1151,7 +1134,7 @@
               },
               "condition": "@local.s3 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_3",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_3",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1177,7 +1160,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_3",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_3",
                     "matchedExpression": "@item.id.attendance_3",
                     "type": "item",
                     "fieldName": "id"
@@ -1207,7 +1190,7 @@
               },
               "condition": "@local.s3 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_3",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_3",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1233,7 +1216,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_3",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_3",
                     "matchedExpression": "@item.id.attendance_3",
                     "type": "item",
                     "fieldName": "id"
@@ -1263,7 +1246,7 @@
               },
               "condition": "@local.s3 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_3",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_3",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1289,7 +1272,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_3",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_3",
                     "matchedExpression": "@item.id.attendance_3",
                     "type": "item",
                     "fieldName": "id"
@@ -1319,7 +1302,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_3",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_3",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1331,7 +1314,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_3",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_3",
                     "matchedExpression": "@item.id.test_attendance_3",
                     "type": "item",
                     "fieldName": "id"
@@ -1355,7 +1338,7 @@
               },
               "condition": "@local.s4 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_4",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_4",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1381,7 +1364,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_4",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_4",
                     "matchedExpression": "@item.id.attendance_4",
                     "type": "item",
                     "fieldName": "id"
@@ -1411,7 +1394,7 @@
               },
               "condition": "@local.s4 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_4",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_4",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1437,7 +1420,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_4",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_4",
                     "matchedExpression": "@item.id.attendance_4",
                     "type": "item",
                     "fieldName": "id"
@@ -1467,7 +1450,7 @@
               },
               "condition": "@local.s4 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_4",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_4",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1493,7 +1476,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_4",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_4",
                     "matchedExpression": "@item.id.attendance_4",
                     "type": "item",
                     "fieldName": "id"
@@ -1523,7 +1506,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_4",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_4",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1535,7 +1518,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_4",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_4",
                     "matchedExpression": "@item.id.test_attendance_4",
                     "type": "item",
                     "fieldName": "id"
@@ -1559,7 +1542,7 @@
               },
               "condition": "@local.s5 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_5",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_5",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1585,7 +1568,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_5",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_5",
                     "matchedExpression": "@item.id.attendance_5",
                     "type": "item",
                     "fieldName": "id"
@@ -1615,7 +1598,7 @@
               },
               "condition": "@local.s5 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_5",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_5",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1641,7 +1624,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_5",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_5",
                     "matchedExpression": "@item.id.attendance_5",
                     "type": "item",
                     "fieldName": "id"
@@ -1671,7 +1654,7 @@
               },
               "condition": "@local.s5 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_5",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_5",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1697,7 +1680,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_5",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_5",
                     "matchedExpression": "@item.id.attendance_5",
                     "type": "item",
                     "fieldName": "id"
@@ -1727,7 +1710,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_5",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_5",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1739,7 +1722,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_5",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_5",
                     "matchedExpression": "@item.id.test_attendance_5",
                     "type": "item",
                     "fieldName": "id"
@@ -1763,7 +1746,7 @@
               },
               "condition": "@local.s6 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_6",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_6",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1789,7 +1772,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_6",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_6",
                     "matchedExpression": "@item.id.attendance_6",
                     "type": "item",
                     "fieldName": "id"
@@ -1819,7 +1802,7 @@
               },
               "condition": "@local.s6 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_6",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_6",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1845,7 +1828,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_6",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_6",
                     "matchedExpression": "@item.id.attendance_6",
                     "type": "item",
                     "fieldName": "id"
@@ -1875,7 +1858,7 @@
               },
               "condition": "@local.s6 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_6",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_6",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1901,7 +1884,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_6",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_6",
                     "matchedExpression": "@item.id.attendance_6",
                     "type": "item",
                     "fieldName": "id"
@@ -1931,7 +1914,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_6",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_6",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1943,7 +1926,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_6",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_6",
                     "matchedExpression": "@item.id.test_attendance_6",
                     "type": "item",
                     "fieldName": "id"
@@ -1967,7 +1950,7 @@
               },
               "condition": "@local.s7 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_7",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_7",
               "_dynamicFields": {
                 "value": [
                   {
@@ -1993,7 +1976,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_7",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_7",
                     "matchedExpression": "@item.id.attendance_7",
                     "type": "item",
                     "fieldName": "id"
@@ -2023,7 +2006,7 @@
               },
               "condition": "@local.s7 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_7",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_7",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2049,7 +2032,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_7",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_7",
                     "matchedExpression": "@item.id.attendance_7",
                     "type": "item",
                     "fieldName": "id"
@@ -2079,7 +2062,7 @@
               },
               "condition": "@local.s7 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_7",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_7",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2105,7 +2088,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_7",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_7",
                     "matchedExpression": "@item.id.attendance_7",
                     "type": "item",
                     "fieldName": "id"
@@ -2135,7 +2118,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_7",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_7",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2147,7 +2130,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_7",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_7",
                     "matchedExpression": "@item.id.test_attendance_7",
                     "type": "item",
                     "fieldName": "id"
@@ -2171,7 +2154,7 @@
               },
               "condition": "@local.s8 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_8",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_8",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2197,7 +2180,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_8",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_8",
                     "matchedExpression": "@item.id.attendance_8",
                     "type": "item",
                     "fieldName": "id"
@@ -2227,7 +2210,7 @@
               },
               "condition": "@local.s8 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_8",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_8",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2253,7 +2236,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_8",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_8",
                     "matchedExpression": "@item.id.attendance_8",
                     "type": "item",
                     "fieldName": "id"
@@ -2283,7 +2266,7 @@
               },
               "condition": "@local.s8 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_8",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_8",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2309,7 +2292,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_8",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_8",
                     "matchedExpression": "@item.id.attendance_8",
                     "type": "item",
                     "fieldName": "id"
@@ -2339,7 +2322,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_8",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_8",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2351,7 +2334,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_8",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_8",
                     "matchedExpression": "@item.id.test_attendance_8",
                     "type": "item",
                     "fieldName": "id"
@@ -2375,7 +2358,7 @@
               },
               "condition": "@local.s9 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_9",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_9",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2401,7 +2384,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_9",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_9",
                     "matchedExpression": "@item.id.attendance_9",
                     "type": "item",
                     "fieldName": "id"
@@ -2431,7 +2414,7 @@
               },
               "condition": "@local.s9 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_9",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_9",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2457,7 +2440,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_9",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_9",
                     "matchedExpression": "@item.id.attendance_9",
                     "type": "item",
                     "fieldName": "id"
@@ -2487,7 +2470,7 @@
               },
               "condition": "@local.s9 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_9",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_9",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2513,7 +2496,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_9",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_9",
                     "matchedExpression": "@item.id.attendance_9",
                     "type": "item",
                     "fieldName": "id"
@@ -2543,7 +2526,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_9",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_9",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2555,7 +2538,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_9",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_9",
                     "matchedExpression": "@item.id.test_attendance_9",
                     "type": "item",
                     "fieldName": "id"
@@ -2579,7 +2562,7 @@
               },
               "condition": "@local.s10 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_10",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_10",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2605,7 +2588,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_10",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_10",
                     "matchedExpression": "@item.id.attendance_10",
                     "type": "item",
                     "fieldName": "id"
@@ -2635,7 +2618,7 @@
               },
               "condition": "@local.s10 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_10",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_10",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2661,7 +2644,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_10",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_10",
                     "matchedExpression": "@item.id.attendance_10",
                     "type": "item",
                     "fieldName": "id"
@@ -2691,7 +2674,7 @@
               },
               "condition": "@local.s10 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_10",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_10",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2717,7 +2700,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_10",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_10",
                     "matchedExpression": "@item.id.attendance_10",
                     "type": "item",
                     "fieldName": "id"
@@ -2747,7 +2730,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_10",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_10",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2759,7 +2742,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_10",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_10",
                     "matchedExpression": "@item.id.test_attendance_10",
                     "type": "item",
                     "fieldName": "id"
@@ -2783,7 +2766,7 @@
               },
               "condition": "@local.s11 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_11",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_11",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2809,7 +2792,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_11",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_11",
                     "matchedExpression": "@item.id.attendance_11",
                     "type": "item",
                     "fieldName": "id"
@@ -2839,7 +2822,7 @@
               },
               "condition": "@local.s11 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_11",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_11",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2865,7 +2848,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_11",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_11",
                     "matchedExpression": "@item.id.attendance_11",
                     "type": "item",
                     "fieldName": "id"
@@ -2895,7 +2878,7 @@
               },
               "condition": "@local.s11 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_11",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_11",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2921,7 +2904,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_11",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_11",
                     "matchedExpression": "@item.id.attendance_11",
                     "type": "item",
                     "fieldName": "id"
@@ -2951,7 +2934,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_11",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_11",
               "_dynamicFields": {
                 "value": [
                   {
@@ -2963,7 +2946,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_11",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_11",
                     "matchedExpression": "@item.id.test_attendance_11",
                     "type": "item",
                     "fieldName": "id"
@@ -2987,7 +2970,7 @@
               },
               "condition": "@local.s12 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_12",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_12",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3013,7 +2996,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_12",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_12",
                     "matchedExpression": "@item.id.attendance_12",
                     "type": "item",
                     "fieldName": "id"
@@ -3043,7 +3026,7 @@
               },
               "condition": "@local.s12 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_12",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_12",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3069,7 +3052,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_12",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_12",
                     "matchedExpression": "@item.id.attendance_12",
                     "type": "item",
                     "fieldName": "id"
@@ -3099,7 +3082,7 @@
               },
               "condition": "@local.s12 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_12",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_12",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3125,7 +3108,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_12",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_12",
                     "matchedExpression": "@item.id.attendance_12",
                     "type": "item",
                     "fieldName": "id"
@@ -3155,7 +3138,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_12",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_12",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3167,7 +3150,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_12",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_12",
                     "matchedExpression": "@item.id.test_attendance_12",
                     "type": "item",
                     "fieldName": "id"
@@ -3191,7 +3174,7 @@
               },
               "condition": "@local.s13 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_13",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_13",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3217,7 +3200,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_13",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_13",
                     "matchedExpression": "@item.id.attendance_13",
                     "type": "item",
                     "fieldName": "id"
@@ -3247,7 +3230,7 @@
               },
               "condition": "@local.s13 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_13",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_13",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3273,7 +3256,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_13",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_13",
                     "matchedExpression": "@item.id.attendance_13",
                     "type": "item",
                     "fieldName": "id"
@@ -3303,7 +3286,7 @@
               },
               "condition": "@local.s13 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_13",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_13",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3329,7 +3312,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_13",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_13",
                     "matchedExpression": "@item.id.attendance_13",
                     "type": "item",
                     "fieldName": "id"
@@ -3359,7 +3342,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_13",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_13",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3371,7 +3354,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_13",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_13",
                     "matchedExpression": "@item.id.test_attendance_13",
                     "type": "item",
                     "fieldName": "id"
@@ -3395,7 +3378,7 @@
               },
               "condition": "@local.s14 == true",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_14",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_14",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3421,7 +3404,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_14",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_14",
                     "matchedExpression": "@item.id.attendance_14",
                     "type": "item",
                     "fieldName": "id"
@@ -3451,7 +3434,7 @@
               },
               "condition": "@local.s14 == false",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_14",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_14",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3477,7 +3460,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_14",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_14",
                     "matchedExpression": "@item.id.attendance_14",
                     "type": "item",
                     "fieldName": "id"
@@ -3507,7 +3490,7 @@
               },
               "condition": "@local.s14 == undefined",
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.attendance_14",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.attendance_14",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3533,7 +3516,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.attendance_14",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.attendance_14",
                     "matchedExpression": "@item.id.attendance_14",
                     "type": "item",
                     "fieldName": "id"
@@ -3563,7 +3546,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance_14",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance_14",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3575,7 +3558,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance_14",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance_14",
                     "matchedExpression": "@item.id.test_attendance_14",
                     "type": "item",
                     "fieldName": "id"
@@ -3598,7 +3581,7 @@
                 "value": {}
               },
               "type": "set_variable",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.total_attendance",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.total_attendance",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3610,7 +3593,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.total_attendance",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.total_attendance",
                     "matchedExpression": "@item.id.total_attendance",
                     "type": "item",
                     "fieldName": "id"
@@ -3634,7 +3617,7 @@
                 "value": {}
               },
               "condition": false,
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.test_attendance",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.test_attendance",
               "_dynamicFields": {
                 "value": [
                   {
@@ -3646,7 +3629,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.test_attendance",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.test_attendance",
                     "matchedExpression": "@item.id.test_attendance",
                     "type": "item",
                     "fieldName": "id"
@@ -3673,7 +3656,7 @@
                   },
                   "condition": false,
                   "name": "text_1",
-                  "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59.text_1",
+                  "_nested_name": "calculating_attendance.display_group_15_@item.id.display_group_59.text_1",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -3685,7 +3668,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59.text_1",
+                        "fullExpression": "calculating_attendance.display_group_15_@item.id.display_group_59.text_1",
                         "matchedExpression": "@item.id.display_group_59.text_1",
                         "type": "item",
                         "fieldName": "id"
@@ -3706,7 +3689,7 @@
                   "value": true,
                   "condition": "@item._index == 0",
                   "type": "set_variable",
-                  "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59.first",
+                  "_nested_name": "calculating_attendance.display_group_15_@item.id.display_group_59.first",
                   "_dynamicFields": {
                     "condition": [
                       {
@@ -3718,7 +3701,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59.first",
+                        "fullExpression": "calculating_attendance.display_group_15_@item.id.display_group_59.first",
                         "matchedExpression": "@item.id.display_group_59.first",
                         "type": "item",
                         "fieldName": "id"
@@ -3739,7 +3722,7 @@
                   "value": false,
                   "condition": "@item._index !== 0",
                   "type": "set_variable",
-                  "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59.first",
+                  "_nested_name": "calculating_attendance.display_group_15_@item.id.display_group_59.first",
                   "_dynamicFields": {
                     "condition": [
                       {
@@ -3751,7 +3734,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59.first",
+                        "fullExpression": "calculating_attendance.display_group_15_@item.id.display_group_59.first",
                         "matchedExpression": "@item.id.display_group_59.first",
                         "type": "item",
                         "fieldName": "id"
@@ -3775,7 +3758,7 @@
                   },
                   "condition": false,
                   "name": "text_4",
-                  "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59.text_4",
+                  "_nested_name": "calculating_attendance.display_group_15_@item.id.display_group_59.text_4",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -3787,7 +3770,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59.text_4",
+                        "fullExpression": "calculating_attendance.display_group_15_@item.id.display_group_59.text_4",
                         "matchedExpression": "@item.id.display_group_59.text_4",
                         "type": "item",
                         "fieldName": "id"
@@ -3805,11 +3788,11 @@
                 }
               ],
               "name": "display_group_59",
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.display_group_59",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.display_group_59",
               "_dynamicFields": {
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.display_group_59",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.display_group_59",
                     "matchedExpression": "@item.id.display_group_59",
                     "type": "item",
                     "fieldName": "id"
@@ -3835,7 +3818,7 @@
                     "value": {}
                   },
                   "type": "set_variable",
-                  "_nested_name": "calculating_attendance.display_group_18_@item.id.add_one.last",
+                  "_nested_name": "calculating_attendance.display_group_15_@item.id.add_one.last",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -3847,7 +3830,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "calculating_attendance.display_group_18_@item.id.add_one.last",
+                        "fullExpression": "calculating_attendance.display_group_15_@item.id.add_one.last",
                         "matchedExpression": "@item.id.add_one.last",
                         "type": "item",
                         "fieldName": "id"
@@ -3870,7 +3853,7 @@
                     "value": {}
                   },
                   "type": "set_variable",
-                  "_nested_name": "calculating_attendance.display_group_18_@item.id.add_one.show_count",
+                  "_nested_name": "calculating_attendance.display_group_15_@item.id.add_one.show_count",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -3882,7 +3865,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "calculating_attendance.display_group_18_@item.id.add_one.show_count",
+                        "fullExpression": "calculating_attendance.display_group_15_@item.id.add_one.show_count",
                         "matchedExpression": "@item.id.add_one.show_count",
                         "type": "item",
                         "fieldName": "id"
@@ -3899,7 +3882,7 @@
                   }
                 }
               ],
-              "_nested_name": "calculating_attendance.display_group_18_@item.id.add_one",
+              "_nested_name": "calculating_attendance.display_group_15_@item.id.add_one",
               "_dynamicFields": {
                 "condition": [
                   {
@@ -3917,7 +3900,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_18_@item.id.add_one",
+                    "fullExpression": "calculating_attendance.display_group_15_@item.id.add_one",
                     "matchedExpression": "@item.id.add_one",
                     "type": "item",
                     "fieldName": "id"
@@ -3937,12 +3920,12 @@
               }
             }
           ],
-          "name": "display_group_18_@item.id",
-          "_nested_name": "calculating_attendance.display_group_18_@item.id",
+          "name": "display_group_15_@item.id",
+          "_nested_name": "calculating_attendance.display_group_15_@item.id",
           "_dynamicFields": {
             "name": [
               {
-                "fullExpression": "display_group_18_@item.id",
+                "fullExpression": "display_group_15_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -3950,7 +3933,7 @@
             ],
             "_nested_name": [
               {
-                "fullExpression": "calculating_attendance.display_group_18_@item.id",
+                "fullExpression": "calculating_attendance.display_group_15_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -3987,7 +3970,7 @@
                     "margin-bottom: 12px"
                   ],
                   "name": "text_1",
-                  "_nested_name": "calculating_attendance.display_group_19_@item.id.display_group_1.text_1",
+                  "_nested_name": "calculating_attendance.display_group_16_@item.id.display_group_1.text_1",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -4005,7 +3988,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "calculating_attendance.display_group_19_@item.id.display_group_1.text_1",
+                        "fullExpression": "calculating_attendance.display_group_16_@item.id.display_group_1.text_1",
                         "matchedExpression": "@item.id.display_group_1.text_1",
                         "type": "item",
                         "fieldName": "id"
@@ -4046,11 +4029,11 @@
                   "parameter_list": {
                     "variant": "card"
                   },
-                  "_nested_name": "calculating_attendance.display_group_19_@item.id.display_group_1.follow_up_button",
+                  "_nested_name": "calculating_attendance.display_group_16_@item.id.display_group_1.follow_up_button",
                   "_dynamicFields": {
                     "_nested_name": [
                       {
-                        "fullExpression": "calculating_attendance.display_group_19_@item.id.display_group_1.follow_up_button",
+                        "fullExpression": "calculating_attendance.display_group_16_@item.id.display_group_1.follow_up_button",
                         "matchedExpression": "@item.id.display_group_1.follow_up_button",
                         "type": "item",
                         "fieldName": "id"
@@ -4065,11 +4048,11 @@
                 }
               ],
               "name": "display_group_1",
-              "_nested_name": "calculating_attendance.display_group_19_@item.id.display_group_1",
+              "_nested_name": "calculating_attendance.display_group_16_@item.id.display_group_1",
               "_dynamicFields": {
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_19_@item.id.display_group_1",
+                    "fullExpression": "calculating_attendance.display_group_16_@item.id.display_group_1",
                     "matchedExpression": "@item.id.display_group_1",
                     "type": "item",
                     "fieldName": "id"
@@ -4095,7 +4078,7 @@
                 "margin-top: -10px",
                 "margin-bottom: 12px"
               ],
-              "_nested_name": "calculating_attendance.display_group_19_@item.id.total_attendance_text",
+              "_nested_name": "calculating_attendance.display_group_16_@item.id.total_attendance_text",
               "_dynamicFields": {
                 "value": [
                   {
@@ -4107,7 +4090,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "calculating_attendance.display_group_19_@item.id.total_attendance_text",
+                    "fullExpression": "calculating_attendance.display_group_16_@item.id.total_attendance_text",
                     "matchedExpression": "@item.id.total_attendance_text",
                     "type": "item",
                     "fieldName": "id"
@@ -4124,8 +4107,8 @@
               }
             }
           ],
-          "name": "display_group_19_@item.id",
-          "_nested_name": "calculating_attendance.display_group_19_@item.id",
+          "name": "display_group_16_@item.id",
+          "_nested_name": "calculating_attendance.display_group_16_@item.id",
           "_dynamicFields": {
             "condition": [
               {
@@ -4143,7 +4126,7 @@
             ],
             "name": [
               {
-                "fullExpression": "display_group_19_@item.id",
+                "fullExpression": "display_group_16_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -4151,7 +4134,7 @@
             ],
             "_nested_name": [
               {
-                "fullExpression": "calculating_attendance.display_group_19_@item.id",
+                "fullExpression": "calculating_attendance.display_group_16_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -4191,7 +4174,27 @@
               "fieldName": "archived"
             }
           ]
-        }
+        },
+        "condition": [
+          {
+            "fullExpression": "!((@local.number_delivered_sessions == 0) || (@local.number_parent_groups == 0) || (@local.number_parents == 0))",
+            "matchedExpression": "@local.number_delivered_sessions",
+            "type": "local",
+            "fieldName": "number_delivered_sessions"
+          },
+          {
+            "fullExpression": "!((@local.number_delivered_sessions == 0) || (@local.number_parent_groups == 0) || (@local.number_parents == 0))",
+            "matchedExpression": "@local.number_parent_groups",
+            "type": "local",
+            "fieldName": "number_parent_groups"
+          },
+          {
+            "fullExpression": "!((@local.number_delivered_sessions == 0) || (@local.number_parent_groups == 0) || (@local.number_parents == 0))",
+            "matchedExpression": "@local.number_parents",
+            "type": "local",
+            "fieldName": "number_parents"
+          }
+        ]
       },
       "_dynamicDependencies": {
         "@data.parents": [
@@ -4199,6 +4202,15 @@
         ],
         "!@item.archived": [
           "parameter_list.filter"
+        ],
+        "@local.number_delivered_sessions": [
+          "condition"
+        ],
+        "@local.number_parent_groups": [
+          "condition"
+        ],
+        "@local.number_parents": [
+          "condition"
         ]
       }
     }
