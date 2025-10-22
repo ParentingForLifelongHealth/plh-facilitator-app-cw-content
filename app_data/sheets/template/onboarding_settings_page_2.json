@@ -5,151 +5,151 @@
   "rows": [
     {
       "type": "text",
-      "name": "question_user_municipality",
-      "value": "@global.question_user_municipality",
+      "name": "question_user_organisation",
+      "value": "@global.question_user_organisation",
       "_translations": {
         "value": {}
       },
       "parameter_list": {
         "style": "emphasised"
       },
-      "_nested_name": "question_user_municipality",
+      "_nested_name": "question_user_organisation",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@global.question_user_municipality",
-            "matchedExpression": "@global.question_user_municipality",
+            "fullExpression": "@global.question_user_organisation",
+            "matchedExpression": "@global.question_user_organisation",
             "type": "global",
-            "fieldName": "question_user_municipality"
+            "fieldName": "question_user_organisation"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@global.question_user_municipality": [
+        "@global.question_user_organisation": [
           "value"
         ]
       }
     },
     {
       "type": "combo_box",
-      "name": "user_municipality_select",
-      "value": "@fields.user_municipality",
+      "name": "user_organisation_select",
+      "value": "@fields.user_organisation",
       "_translations": {
         "value": {}
       },
       "parameter_list": {
-        "answer_list": "@data.user_municipality",
-        "placeholder": "@global.placeholder_user_municipality",
+        "answer_list": "@data.user_organisation",
+        "placeholder": "@global.placeholder_user_organisation",
         "variant": "dropdown"
       },
-      "condition": "!!@fields.user_municipality",
+      "condition": "!!@fields.user_organisation",
       "exclude_from_translation": true,
-      "_nested_name": "user_municipality_select",
+      "_nested_name": "user_organisation_select",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@fields.user_municipality",
-            "matchedExpression": "@fields.user_municipality",
+            "fullExpression": "@fields.user_organisation",
+            "matchedExpression": "@fields.user_organisation",
             "type": "fields",
-            "fieldName": "user_municipality"
+            "fieldName": "user_organisation"
           }
         ],
         "parameter_list": {
           "answer_list": [
             {
-              "fullExpression": "@data.user_municipality",
-              "matchedExpression": "@data.user_municipality",
+              "fullExpression": "@data.user_organisation",
+              "matchedExpression": "@data.user_organisation",
               "type": "data",
-              "fieldName": "user_municipality"
+              "fieldName": "user_organisation"
             }
           ],
           "placeholder": [
             {
-              "fullExpression": "@global.placeholder_user_municipality",
-              "matchedExpression": "@global.placeholder_user_municipality",
+              "fullExpression": "@global.placeholder_user_organisation",
+              "matchedExpression": "@global.placeholder_user_organisation",
               "type": "global",
-              "fieldName": "placeholder_user_municipality"
+              "fieldName": "placeholder_user_organisation"
             }
           ]
         },
         "condition": [
           {
-            "fullExpression": "!!@fields.user_municipality",
-            "matchedExpression": "!@fields.user_municipality",
+            "fullExpression": "!!@fields.user_organisation",
+            "matchedExpression": "!@fields.user_organisation",
             "type": "fields",
-            "fieldName": "user_municipality"
+            "fieldName": "user_organisation"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@fields.user_municipality": [
+        "@fields.user_organisation": [
           "value"
         ],
-        "@data.user_municipality": [
+        "@data.user_organisation": [
           "parameter_list.answer_list"
         ],
-        "@global.placeholder_user_municipality": [
+        "@global.placeholder_user_organisation": [
           "parameter_list.placeholder"
         ],
-        "!@fields.user_municipality": [
+        "!@fields.user_organisation": [
           "condition"
         ]
       }
     },
     {
       "type": "combo_box",
-      "name": "user_municipality_select",
+      "name": "user_organisation_select",
       "parameter_list": {
-        "answer_list": "@data.user_municipality",
-        "placeholder": "@global.placeholder_user_municipality",
+        "answer_list": "@data.user_organisation",
+        "placeholder": "@global.placeholder_user_organisation",
         "variant": "dropdown"
       },
-      "condition": "!@fields.user_municipality",
+      "condition": "!@fields.user_organisation",
       "exclude_from_translation": true,
-      "_nested_name": "user_municipality_select",
+      "_nested_name": "user_organisation_select",
       "_dynamicFields": {
         "parameter_list": {
           "answer_list": [
             {
-              "fullExpression": "@data.user_municipality",
-              "matchedExpression": "@data.user_municipality",
+              "fullExpression": "@data.user_organisation",
+              "matchedExpression": "@data.user_organisation",
               "type": "data",
-              "fieldName": "user_municipality"
+              "fieldName": "user_organisation"
             }
           ],
           "placeholder": [
             {
-              "fullExpression": "@global.placeholder_user_municipality",
-              "matchedExpression": "@global.placeholder_user_municipality",
+              "fullExpression": "@global.placeholder_user_organisation",
+              "matchedExpression": "@global.placeholder_user_organisation",
               "type": "global",
-              "fieldName": "placeholder_user_municipality"
+              "fieldName": "placeholder_user_organisation"
             }
           ]
         },
         "condition": [
           {
-            "fullExpression": "!@fields.user_municipality",
-            "matchedExpression": "!@fields.user_municipality",
+            "fullExpression": "!@fields.user_organisation",
+            "matchedExpression": "!@fields.user_organisation",
             "type": "fields",
-            "fieldName": "user_municipality"
+            "fieldName": "user_organisation"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@data.user_municipality": [
+        "@data.user_organisation": [
           "parameter_list.answer_list"
         ],
-        "@global.placeholder_user_municipality": [
+        "@global.placeholder_user_organisation": [
           "parameter_list.placeholder"
         ],
-        "!@fields.user_municipality": [
+        "!@fields.user_organisation": [
           "condition"
         ]
       }
     },
     {
       "name": "completed_enabled",
-      "value": "!!@local.user_municipality_select",
+      "value": "!!@local.user_organisation_select",
       "_translations": {
         "value": {}
       },
@@ -159,15 +159,15 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "!!@local.user_municipality_select",
-            "matchedExpression": "!@local.user_municipality_select",
+            "fullExpression": "!!@local.user_organisation_select",
+            "matchedExpression": "!@local.user_organisation_select",
             "type": "local",
-            "fieldName": "user_municipality_select"
+            "fieldName": "user_organisation_select"
           }
         ]
       },
       "_dynamicDependencies": {
-        "!@local.user_municipality_select": [
+        "!@local.user_organisation_select": [
           "value"
         ]
       }
@@ -181,6 +181,7 @@
       "style_list": [
         "padding: 12px 24px"
       ],
+      "exclude_from_translation": true,
       "rows": [
         {
           "type": "round_button",
@@ -200,11 +201,12 @@
             "icon_src": "arrow-back",
             "variant": "no-background"
           },
+          "exclude_from_translation": true,
           "_nested_name": "dg_footer.button_back"
         },
         {
           "type": "button",
-          "name": "button_completed",
+          "name": "button_completed_2",
           "value": "@global.continue",
           "_translations": {
             "value": {}
@@ -214,11 +216,11 @@
               "trigger": "click",
               "action_id": "set_field",
               "args": [
-                "user_municipality",
-                "@local.user_municipality_select"
+                "user_organisation",
+                "@local.user_organisation_select"
               ],
-              "_raw": "click | set_field: user_municipality: @local.user_municipality_select",
-              "_cleaned": "click | set_field: user_municipality: @local.user_municipality_select"
+              "_raw": "click | set_field: user_organisation: @local.user_organisation_select",
+              "_cleaned": "click | set_field: user_organisation: @local.user_organisation_select"
             },
             {
               "trigger": "click",
@@ -237,7 +239,8 @@
           "style_list": [
             "flex: 1"
           ],
-          "_nested_name": "dg_footer.button_completed",
+          "exclude_from_translation": true,
+          "_nested_name": "dg_footer.button_completed_2",
           "_dynamicFields": {
             "value": [
               {
@@ -252,27 +255,27 @@
                 "args": {
                   "1": [
                     {
-                      "fullExpression": "@local.user_municipality_select",
-                      "matchedExpression": "@local.user_municipality_select",
+                      "fullExpression": "@local.user_organisation_select",
+                      "matchedExpression": "@local.user_organisation_select",
                       "type": "local",
-                      "fieldName": "user_municipality_select"
+                      "fieldName": "user_organisation_select"
                     }
                   ]
                 },
                 "_raw": [
                   {
-                    "fullExpression": "click | set_field: user_municipality: @local.user_municipality_select",
-                    "matchedExpression": "@local.user_municipality_select",
+                    "fullExpression": "click | set_field: user_organisation: @local.user_organisation_select",
+                    "matchedExpression": "@local.user_organisation_select",
                     "type": "local",
-                    "fieldName": "user_municipality_select"
+                    "fieldName": "user_organisation_select"
                   }
                 ],
                 "_cleaned": [
                   {
-                    "fullExpression": "click | set_field: user_municipality: @local.user_municipality_select",
-                    "matchedExpression": "@local.user_municipality_select",
+                    "fullExpression": "click | set_field: user_organisation: @local.user_organisation_select",
+                    "matchedExpression": "@local.user_organisation_select",
                     "type": "local",
-                    "fieldName": "user_municipality_select"
+                    "fieldName": "user_organisation_select"
                   }
                 ]
               }
@@ -292,7 +295,7 @@
             "@global.continue": [
               "value"
             ],
-            "@local.user_municipality_select": [
+            "@local.user_organisation_select": [
               "action_list.0.args.1",
               "action_list.0._raw",
               "action_list.0._cleaned"

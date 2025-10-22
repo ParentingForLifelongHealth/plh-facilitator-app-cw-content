@@ -84,36 +84,12 @@
     },
     {
       "type": "declare_global_constant",
-      "name": "placeholder_user_type",
-      "value": "Select role",
-      "_translations": {
-        "value": {}
-      }
-    },
-    {
-      "type": "declare_global_constant",
       "name": "question_language",
       "value": "Language",
       "_translations": {
         "value": {
           "cw_pap": true
         }
-      }
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "question_user_municipality",
-      "value": "What is your municipality?",
-      "_translations": {
-        "value": {}
-      }
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "placeholder_user_municipality",
-      "value": "Select municipality",
-      "_translations": {
-        "value": {}
       }
     },
     {

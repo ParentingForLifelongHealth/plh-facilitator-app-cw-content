@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 2 |
-| button | 127 |
+| button | 126 |
 | carousel | 2 |
-| combo_box | 16 |
+| combo_box | 14 |
 | data_items | 67 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 155 |
+| display_group | 154 |
 | google_sign_in_button | 3 |
 | image | 21 |
 | items | 16 |
@@ -25,16 +25,16 @@
 | pdf | 1 |
 | qr_code | 2 |
 | radio_button_grid | 12 |
-| round_button | 28 |
+| round_button | 27 |
 | select_text | 2 |
 | set_field | 6 |
-| set_variable | 847 |
+| set_variable | 848 |
 | simple_checkbox | 5 |
 | task_card | 6 |
 | task_progress_bar | 4 |
-| template | 113 |
+| template | 114 |
 | test | 1 |
-| text | 321 |
+| text | 320 |
 | text_area | 4 |
 | text_box | 32 |
 | title | 60 |
@@ -51,13 +51,13 @@
 | add_data | 11 |
 | app_update | 1 |
 | auth | 4 |
-| emit: completed | 45 |
+| emit: completed | 44 |
 | emit: force_reload | 7 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 20 |
 | emit: set_language | 3 |
-| emit: uncompleted | 78 |
+| emit: uncompleted | 77 |
 | feedback | 24 |
 | go_to | 38 |
 | nav | 1 |
@@ -68,7 +68,7 @@
 | save_to_device | 4 |
 | scroll | 1 |
 | set_data | 21 |
-| set_field | 75 |
+| set_field | 74 |
 | set_item | 13 |
 | set_local | 111 |
 | share | 3 |
@@ -80,7 +80,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 18622 KB | 18.6 MB |
+| total | 23896 KB | 23.9 MB |
 | unused | 178 KB | 0.2 MB |
 </details>
 
@@ -148,6 +148,9 @@ Assets that have references within sheets but do not appear in app-data
 | --- | --- |
 | .png | 1 |
 | @data.pdf | 3 |
+| images/articles/facilitation.png | 1 |
+| images/articles/faq.png | 1 |
+| images/articles/safeguarding.png | 1 |
 | images/logos/KEMAS.png | 1 |
 | images/logos/LPPKN.png | 1 |
 | images/logos/Oxford.png | 1 |
@@ -172,6 +175,9 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | path | size_kb | count |
 | --- | --- | --- |
 | images/articles/about_app_1.png | 109.2 | 1 |
+| images/articles/guide.png | 2321.4 | 1 |
+| images/articles/programme.png | 559.1 | 1 |
+| images/articles/sessions.png | 2394.1 | 1 |
 | images/backgrounds/home_top_left.svg | 2.4 | 1 |
 | images/backgrounds/reports_top_right.svg | 2 | 1 |
 | images/icons/add-outline.svg | 0.2 | 1 |
@@ -242,7 +248,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 11 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 95 |
+| template |  | 94 |
 | template | generated | 61 |
 | template | legal_terms | 4 |
 </details>
