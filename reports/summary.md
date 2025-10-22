@@ -16,7 +16,7 @@
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 156 |
+| display_group | 155 |
 | google_sign_in_button | 3 |
 | image | 21 |
 | items | 16 |
@@ -28,16 +28,16 @@
 | round_button | 28 |
 | select_text | 2 |
 | set_field | 6 |
-| set_variable | 848 |
+| set_variable | 847 |
 | simple_checkbox | 5 |
 | task_card | 6 |
 | task_progress_bar | 4 |
 | template | 113 |
 | test | 1 |
-| text | 323 |
+| text | 321 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 61 |
+| title | 60 |
 | toggle_bar | 8 |
 | update_action_list | 1 |
 | video | 2 |
@@ -71,7 +71,7 @@
 | set_field | 75 |
 | set_item | 13 |
 | set_local | 111 |
-| share | 4 |
+| share | 3 |
 | user | 4 |
 </details>
 
@@ -80,8 +80,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 8535 KB | 8.5 MB |
-| unused | 10265 KB | 10.3 MB |
+| total | 18622 KB | 18.6 MB |
+| unused | 178 KB | 0.2 MB |
 </details>
 
 <details open>
@@ -137,11 +137,6 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/settings.svg | 1.2 |
 | images/icons/unarchive-outline-white.svg | 1.8 |
 | images/icons/world.svg | 6.2 |
-| images/onboarding/splash_1.png | 2484.4 |
-| images/onboarding/splash_2.png | 2220.7 |
-| images/onboarding/splash_3.png | 1760.5 |
-| images/onboarding/splash_4.png | 1425.9 |
-| images/onboarding/splash_5.png | 2195 |
 </details>
 
 <details open>
@@ -165,11 +160,6 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/plh_logomark.png | 1 |
 | images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
-| images/onboarding/splash_1.jpg | 1 |
-| images/onboarding/splash_2.jpg | 1 |
-| images/onboarding/splash_3.jpg | 1 |
-| images/onboarding/splash_4.jpg | 1 |
-| images/onboarding/splash_5.jpg | 1 |
 | lottie/checkmark_blue.json | 3 |
 | pdf/kemas_rct_overview.pdf | 1 |
 </details>
@@ -226,6 +216,11 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/logos/PLH.png | 26.6 | 1 |
 | images/logos/UNICEF.jpg | 27.7 | 1 |
 | images/modules/place_holder.png | 210 | 19 |
+| images/onboarding/splash_1.png | 2484.4 | 1 |
+| images/onboarding/splash_2.png | 2220.7 | 1 |
+| images/onboarding/splash_3.png | 1760.5 | 1 |
+| images/onboarding/splash_4.png | 1425.9 | 1 |
+| images/onboarding/splash_5.png | 2195 | 1 |
 | lottie/cw_profile_complete.json | 13.4 | 1 |
 | pdf/child_development_domain.pdf | 141 | 1 |
 | pdf/child_development_stage.pdf | 508.2 | 1 |

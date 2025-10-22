@@ -55,7 +55,7 @@
       },
       {
         "type": "display_group",
-        "count": 156
+        "count": 155
       },
       {
         "type": "google_sign_in_button",
@@ -103,7 +103,7 @@
       },
       {
         "type": "set_variable",
-        "count": 848
+        "count": 847
       },
       {
         "type": "simple_checkbox",
@@ -127,7 +127,7 @@
       },
       {
         "type": "text",
-        "count": 323
+        "count": 321
       },
       {
         "type": "text_area",
@@ -139,7 +139,7 @@
       },
       {
         "type": "title",
-        "count": 61
+        "count": 60
       },
       {
         "type": "toggle_bar",
@@ -251,7 +251,7 @@
       },
       {
         "type": "share",
-        "count": 4
+        "count": 3
       },
       {
         "type": "user",
@@ -263,13 +263,13 @@
     "data": [
       {
         "assets": "total",
-        "KB": "8535 KB",
-        "MB": "8.5 MB"
+        "KB": "18622 KB",
+        "MB": "18.6 MB"
       },
       {
         "assets": "unused",
-        "KB": "10265 KB",
-        "MB": "10.3 MB"
+        "KB": "178 KB",
+        "MB": "0.2 MB"
       }
     ]
   },
@@ -458,26 +458,6 @@
       {
         "path": "images/icons/world.svg",
         "size_kb": 6.2
-      },
-      {
-        "path": "images/onboarding/splash_1.png",
-        "size_kb": 2484.4
-      },
-      {
-        "path": "images/onboarding/splash_2.png",
-        "size_kb": 2220.7
-      },
-      {
-        "path": "images/onboarding/splash_3.png",
-        "size_kb": 1760.5
-      },
-      {
-        "path": "images/onboarding/splash_4.png",
-        "size_kb": 1425.9
-      },
-      {
-        "path": "images/onboarding/splash_5.png",
-        "size_kb": 2195
       }
     ]
   },
@@ -550,31 +530,6 @@
       },
       {
         "path": "images/no_group_selected.svg",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/onboarding/splash_1.jpg",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/onboarding/splash_2.jpg",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/onboarding/splash_3.jpg",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/onboarding/splash_4.jpg",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/onboarding/splash_5.jpg",
         "count": 1,
         "missing": true
       },
@@ -816,6 +771,31 @@
         "path": "images/modules/place_holder.png",
         "count": 19,
         "size_kb": 210
+      },
+      {
+        "path": "images/onboarding/splash_1.png",
+        "count": 1,
+        "size_kb": 2484.4
+      },
+      {
+        "path": "images/onboarding/splash_2.png",
+        "count": 1,
+        "size_kb": 2220.7
+      },
+      {
+        "path": "images/onboarding/splash_3.png",
+        "count": 1,
+        "size_kb": 1760.5
+      },
+      {
+        "path": "images/onboarding/splash_4.png",
+        "count": 1,
+        "size_kb": 1425.9
+      },
+      {
+        "path": "images/onboarding/splash_5.png",
+        "count": 1,
+        "size_kb": 2195
       },
       {
         "path": "lottie/cw_profile_complete.json",
