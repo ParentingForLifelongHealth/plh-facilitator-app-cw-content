@@ -3,6 +3,7 @@ This package contains data used in the Curaçao PLH facilitator version of the a
 
 ## App Preview
 Testing: https://plh-facilitator-cw-uat.web.app/
+
 Release: https://plh-facilitator-cw.web.app/
 
 ## Syncing data updates
