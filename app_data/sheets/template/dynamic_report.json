@@ -295,7 +295,7 @@
             },
             {
               "type": "toggle_bar",
-              "value": "@item.@fields.current_module_no",
+              "value": "@item.@fields.current_report_id",
               "_translations": {
                 "value": {}
               },
@@ -304,10 +304,10 @@
                   "trigger": "changed",
                   "action_id": "set_item",
                   "args": [],
-                  "_raw": "changed | set_item| @fields.current_module_no: this.value",
-                  "_cleaned": "changed | set_item| @fields.current_module_no: this.value",
+                  "_raw": "changed | set_item| @fields.current_report_id: this.value",
+                  "_cleaned": "changed | set_item| @fields.current_report_id: this.value",
                   "params": {
-                    "@fields.current_module_no": "this.value"
+                    "@fields.current_report_id": "this.value"
                   }
                 }
               ],
@@ -321,28 +321,28 @@
               "_dynamicFields": {
                 "value": [
                   {
-                    "fullExpression": "@item.@fields.current_module_no",
-                    "matchedExpression": "@fields.current_module_no",
+                    "fullExpression": "@item.@fields.current_report_id",
+                    "matchedExpression": "@fields.current_report_id",
                     "type": "fields",
-                    "fieldName": "current_module_no"
+                    "fieldName": "current_report_id"
                   }
                 ],
                 "action_list": {
                   "0": {
                     "_raw": [
                       {
-                        "fullExpression": "changed | set_item| @fields.current_module_no: this.value",
-                        "matchedExpression": "@fields.current_module_no",
+                        "fullExpression": "changed | set_item| @fields.current_report_id: this.value",
+                        "matchedExpression": "@fields.current_report_id",
                         "type": "fields",
-                        "fieldName": "current_module_no"
+                        "fieldName": "current_report_id"
                       }
                     ],
                     "_cleaned": [
                       {
-                        "fullExpression": "changed | set_item| @fields.current_module_no: this.value",
-                        "matchedExpression": "@fields.current_module_no",
+                        "fullExpression": "changed | set_item| @fields.current_report_id: this.value",
+                        "matchedExpression": "@fields.current_report_id",
                         "type": "fields",
-                        "fieldName": "current_module_no"
+                        "fieldName": "current_report_id"
                       }
                     ]
                   }
@@ -357,7 +357,7 @@
                 ]
               },
               "_dynamicDependencies": {
-                "@fields.current_module_no": [
+                "@fields.current_report_id": [
                   "value",
                   "action_list.0._raw",
                   "action_list.0._cleaned"
@@ -447,7 +447,7 @@
     },
     {
       "name": "session_rating_placeholder",
-      "value": "Enter value",
+      "value": "Select how your session went",
       "_translations": {
         "value": {}
       },
@@ -898,8 +898,8 @@
               "trigger": "click",
               "action_id": "set_data",
               "args": [],
-              "_raw": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
-              "_cleaned": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+              "_raw": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+              "_cleaned": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
               "params": {
                 "_list_id": "report_answers",
                 "_id": "@fields.current_report_no",
@@ -938,31 +938,31 @@
               "0": {
                 "_raw": [
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@fields.current_report_no",
                     "type": "fields",
                     "fieldName": "current_report_no"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@local.type",
                     "type": "local",
                     "fieldName": "type"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@local.session_date",
                     "type": "local",
                     "fieldName": "session_date"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@local.session_rating",
                     "type": "local",
                     "fieldName": "session_rating"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@local.challenges",
                     "type": "local",
                     "fieldName": "challenges"
@@ -970,31 +970,31 @@
                 ],
                 "_cleaned": [
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@fields.current_report_no",
                     "type": "fields",
                     "fieldName": "current_report_no"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@local.type",
                     "type": "local",
                     "fieldName": "type"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@local.session_date",
                     "type": "local",
                     "fieldName": "session_date"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@local.session_rating",
                     "type": "local",
                     "fieldName": "session_rating"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: false,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges",
                     "matchedExpression": "@local.challenges",
                     "type": "local",
                     "fieldName": "challenges"

@@ -4,6 +4,132 @@
   "status": "released",
   "rows": [
     {
+      "name": "module_1",
+      "type": "set_variable",
+      "_nested_name": "module_1"
+    },
+    {
+      "name": "module_2",
+      "type": "set_variable",
+      "_nested_name": "module_2"
+    },
+    {
+      "name": "module_3",
+      "type": "set_variable",
+      "_nested_name": "module_3"
+    },
+    {
+      "name": "module_4",
+      "type": "set_variable",
+      "_nested_name": "module_4"
+    },
+    {
+      "name": "module_5",
+      "type": "set_variable",
+      "_nested_name": "module_5"
+    },
+    {
+      "name": "module_6",
+      "type": "set_variable",
+      "_nested_name": "module_6"
+    },
+    {
+      "name": "module_7",
+      "type": "set_variable",
+      "_nested_name": "module_7"
+    },
+    {
+      "name": "module_8",
+      "type": "set_variable",
+      "_nested_name": "module_8"
+    },
+    {
+      "name": "module_9",
+      "type": "set_variable",
+      "_nested_name": "module_9"
+    },
+    {
+      "name": "module_10",
+      "type": "set_variable",
+      "_nested_name": "module_10"
+    },
+    {
+      "name": "module_11",
+      "type": "set_variable",
+      "_nested_name": "module_11"
+    },
+    {
+      "name": "module_12",
+      "type": "set_variable",
+      "_nested_name": "module_12"
+    },
+    {
+      "name": "module_13",
+      "type": "set_variable",
+      "_nested_name": "module_13"
+    },
+    {
+      "name": "module_14",
+      "type": "set_variable",
+      "_nested_name": "module_14"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.modules",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [],
+          "_raw": "data_changed | set_local | module_1 : @items[0].id",
+          "_cleaned": "data_changed | set_local | module_1 : @items[0].id",
+          "params": {
+            "module_1 ": "@items[0].id"
+          }
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [],
+          "_raw": "data_changed | set_local | module_2 : @items[1].id",
+          "_cleaned": "data_changed | set_local | module_2 : @items[1].id",
+          "params": {
+            "module_2 ": "@items[1].id"
+          }
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [],
+          "_raw": "data_changed | set_local | module_3 : @items[3].id",
+          "_cleaned": "data_changed | set_local | module_3 : @items[3].id",
+          "params": {
+            "module_3 ": "@items[3].id"
+          }
+        }
+      ],
+      "name": "data_items_16",
+      "_nested_name": "data_items_16",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.modules",
+            "matchedExpression": "@data.modules",
+            "type": "data",
+            "fieldName": "modules"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.modules": [
+          "value"
+        ]
+      }
+    },
+    {
       "type": "title",
       "name": "title",
       "value": "Actions",

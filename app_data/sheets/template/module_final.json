@@ -467,7 +467,7 @@
         "style": "column"
       },
       "exclude_from_translation": true,
-      "condition": "@fields.user_type != \"facilitator\" && @fields.user_type != \"tester\"",
+      "condition": "(@fields.user_type != \"facilitator\") && (@fields.user_type != \"tester\")",
       "rows": [
         {
           "type": "lottie_animation",
@@ -503,6 +503,7 @@
           "_translations": {
             "value": {}
           },
+          "condition": false,
           "_nested_name": "reviewer.reviewer_image",
           "_dynamicFields": {
             "value": [
@@ -552,13 +553,13 @@
       "_dynamicFields": {
         "condition": [
           {
-            "fullExpression": "@fields.user_type != \"facilitator\" && @fields.user_type != \"tester\"",
+            "fullExpression": "(@fields.user_type != \"facilitator\") && (@fields.user_type != \"tester\")",
             "matchedExpression": "@fields.user_type",
             "type": "fields",
             "fieldName": "user_type"
           },
           {
-            "fullExpression": "@fields.user_type != \"facilitator\" && @fields.user_type != \"tester\"",
+            "fullExpression": "(@fields.user_type != \"facilitator\") && (@fields.user_type != \"tester\")",
             "matchedExpression": "@fields.user_type",
             "type": "fields",
             "fieldName": "user_type"
@@ -578,7 +579,7 @@
       "parameter_list": {
         "style": "column"
       },
-      "condition": "@fields.user_type == \"facilitator\" || @fields.user_type == \"tester\"",
+      "condition": "(@fields.user_type == \"facilitator\") || (@fields.user_type == \"tester\")",
       "rows": [
         {
           "type": "display_group",
@@ -627,6 +628,7 @@
                   "_translations": {
                     "value": {}
                   },
+                  "condition": false,
                   "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.message_not_shared.message_not_shared_image",
                   "_dynamicFields": {
                     "value": [
@@ -723,7 +725,7 @@
               "parameter_list": {
                 "style": "column"
               },
-              "condition": "!!@local.message_shared && @fields.current_report_id == \"empty\"",
+              "condition": "(@local.message_shared) && (@fields.current_report_id == \"empty\")",
               "rows": [
                 {
                   "type": "lottie_animation",
@@ -756,6 +758,7 @@
                   "_translations": {
                     "value": {}
                   },
+                  "condition": false,
                   "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.module_not_complete_no_report.module_not_complete_image",
                   "_dynamicFields": {
                     "value": [
@@ -904,13 +907,13 @@
               "_dynamicFields": {
                 "condition": [
                   {
-                    "fullExpression": "!!@local.message_shared && @fields.current_report_id == \"empty\"",
-                    "matchedExpression": "!@local.message_shared",
+                    "fullExpression": "(@local.message_shared) && (@fields.current_report_id == \"empty\")",
+                    "matchedExpression": "@local.message_shared",
                     "type": "local",
                     "fieldName": "message_shared"
                   },
                   {
-                    "fullExpression": "!!@local.message_shared && @fields.current_report_id == \"empty\"",
+                    "fullExpression": "(@local.message_shared) && (@fields.current_report_id == \"empty\")",
                     "matchedExpression": "@fields.current_report_id",
                     "type": "fields",
                     "fieldName": "current_report_id"
@@ -918,7 +921,7 @@
                 ]
               },
               "_dynamicDependencies": {
-                "!@local.message_shared": [
+                "@local.message_shared": [
                   "condition"
                 ],
                 "@fields.current_report_id": [
@@ -932,7 +935,7 @@
               "parameter_list": {
                 "style": "column"
               },
-              "condition": "!!@local.message_shared && @fields.current_report_id !== \"empty\"",
+              "condition": "(@local.message_shared) && (@fields.current_report_id !== \"empty\")",
               "rows": [
                 {
                   "type": "lottie_animation",
@@ -965,6 +968,7 @@
                   "_translations": {
                     "value": {}
                   },
+                  "condition": false,
                   "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.module_not_complete_report.module_not_complete_report_lottie",
                   "_dynamicFields": {
                     "value": [
@@ -1019,27 +1023,27 @@
                   "action_list": [
                     {
                       "trigger": "click",
-                      "action_id": "add_data",
+                      "action_id": "set_data",
                       "args": [],
-                      "_raw": "click | add_data |\n_list_id: parent_groups,\narchived: TRUE,\nname: _@local.no_of_parent_groups,\ntext:",
-                      "_cleaned": "click | add_data |\n_list_id: parent_groups,\narchived: TRUE,\nname: _@local.no_of_parent_groups,\ntext:",
+                      "_raw": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true",
+                      "_cleaned": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true",
                       "params": {
-                        "_list_id": "parent_groups",
-                        "archived": true,
-                        "name": "_@local.no_of_parent_groups",
-                        "text": ""
+                        "_list_id": "modules",
+                        "_id": "@fields.current_module_no",
+                        "@local.completed_field": true
                       }
                     },
                     {
                       "trigger": "click",
                       "action_id": "add_data",
                       "args": [],
-                      "_raw": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
-                      "_cleaned": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
+                      "_raw": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
+                      "_cleaned": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
                       "params": {
                         "_list_id": "report_answers",
                         "group_id": "@field.current_group_no",
                         "module_id": "@field.current_module_no",
+                        "report_id": "@field.current_report_id",
                         "pending": true,
                         "time_created": "@calc(now())"
                       }
@@ -1079,27 +1083,39 @@
                       "0": {
                         "_raw": [
                           {
-                            "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: TRUE,\nname: _@local.no_of_parent_groups,\ntext:",
-                            "matchedExpression": "@local.no_of_parent_groups",
+                            "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true",
+                            "matchedExpression": "@fields.current_module_no",
+                            "type": "fields",
+                            "fieldName": "current_module_no"
+                          },
+                          {
+                            "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true",
+                            "matchedExpression": "@local.completed_field",
                             "type": "local",
-                            "fieldName": "no_of_parent_groups"
+                            "fieldName": "completed_field"
                           }
                         ],
                         "_cleaned": [
                           {
-                            "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: TRUE,\nname: _@local.no_of_parent_groups,\ntext:",
-                            "matchedExpression": "@local.no_of_parent_groups",
+                            "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true",
+                            "matchedExpression": "@fields.current_module_no",
+                            "type": "fields",
+                            "fieldName": "current_module_no"
+                          },
+                          {
+                            "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true",
+                            "matchedExpression": "@local.completed_field",
                             "type": "local",
-                            "fieldName": "no_of_parent_groups"
+                            "fieldName": "completed_field"
                           }
                         ],
                         "params": {
-                          "name": [
+                          "_id": [
                             {
-                              "fullExpression": "_@local.no_of_parent_groups",
-                              "matchedExpression": "@local.no_of_parent_groups",
-                              "type": "local",
-                              "fieldName": "no_of_parent_groups"
+                              "fullExpression": "@fields.current_module_no",
+                              "matchedExpression": "@fields.current_module_no",
+                              "type": "fields",
+                              "fieldName": "current_module_no"
                             }
                           ]
                         }
@@ -1107,19 +1123,25 @@
                       "1": {
                         "_raw": [
                           {
-                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
+                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
                             "matchedExpression": "@field.current_group_no",
                             "type": "field",
                             "fieldName": "current_group_no"
                           },
                           {
-                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
+                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
                             "matchedExpression": "@field.current_module_no",
                             "type": "field",
                             "fieldName": "current_module_no"
                           },
                           {
-                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
+                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
+                            "matchedExpression": "@field.current_report_id",
+                            "type": "field",
+                            "fieldName": "current_report_id"
+                          },
+                          {
+                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
                             "matchedExpression": "@calc(now())",
                             "type": "calc",
                             "fieldName": "now()"
@@ -1127,19 +1149,25 @@
                         ],
                         "_cleaned": [
                           {
-                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
+                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
                             "matchedExpression": "@field.current_group_no",
                             "type": "field",
                             "fieldName": "current_group_no"
                           },
                           {
-                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
+                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
                             "matchedExpression": "@field.current_module_no",
                             "type": "field",
                             "fieldName": "current_module_no"
                           },
                           {
-                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
+                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
+                            "matchedExpression": "@field.current_report_id",
+                            "type": "field",
+                            "fieldName": "current_report_id"
+                          },
+                          {
+                            "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now())",
                             "matchedExpression": "@calc(now())",
                             "type": "calc",
                             "fieldName": "now()"
@@ -1162,6 +1190,14 @@
                               "fieldName": "current_module_no"
                             }
                           ],
+                          "report_id": [
+                            {
+                              "fullExpression": "@field.current_report_id",
+                              "matchedExpression": "@field.current_report_id",
+                              "type": "field",
+                              "fieldName": "current_report_id"
+                            }
+                          ],
                           "time_created": [
                             {
                               "fullExpression": "@calc(now())",
@@ -1178,10 +1214,14 @@
                     "@global.mark_delivered_report": [
                       "value"
                     ],
-                    "@local.no_of_parent_groups": [
+                    "@fields.current_module_no": [
                       "action_list.0._raw",
                       "action_list.0._cleaned",
-                      "action_list.0.params.name"
+                      "action_list.0.params._id"
+                    ],
+                    "@local.completed_field": [
+                      "action_list.0._raw",
+                      "action_list.0._cleaned"
                     ],
                     "@field.current_group_no": [
                       "action_list.1._raw",
@@ -1192,6 +1232,11 @@
                       "action_list.1._raw",
                       "action_list.1._cleaned",
                       "action_list.1.params.module_id"
+                    ],
+                    "@field.current_report_id": [
+                      "action_list.1._raw",
+                      "action_list.1._cleaned",
+                      "action_list.1.params.report_id"
                     ],
                     "@calc(now())": [
                       "action_list.1._raw",
@@ -1205,13 +1250,13 @@
               "_dynamicFields": {
                 "condition": [
                   {
-                    "fullExpression": "!!@local.message_shared && @fields.current_report_id !== \"empty\"",
-                    "matchedExpression": "!@local.message_shared",
+                    "fullExpression": "(@local.message_shared) && (@fields.current_report_id !== \"empty\")",
+                    "matchedExpression": "@local.message_shared",
                     "type": "local",
                     "fieldName": "message_shared"
                   },
                   {
-                    "fullExpression": "!!@local.message_shared && @fields.current_report_id !== \"empty\"",
+                    "fullExpression": "(@local.message_shared) && (@fields.current_report_id !== \"empty\")",
                     "matchedExpression": "@fields.current_report_id",
                     "type": "fields",
                     "fieldName": "current_report_id"
@@ -1219,7 +1264,7 @@
                 ]
               },
               "_dynamicDependencies": {
-                "!@local.message_shared": [
+                "@local.message_shared": [
                   "condition"
                 ],
                 "@fields.current_report_id": [
@@ -1300,6 +1345,7 @@
                       "_translations": {
                         "value": {}
                       },
+                      "condition": false,
                       "_nested_name": "facilitator_wrapper.module_complete_wrapper.report_wrapper.report_to_do.report_to_do_image",
                       "_dynamicFields": {
                         "value": [
@@ -1356,19 +1402,6 @@
                           "trigger": "click",
                           "action_id": "add_data",
                           "args": [],
-                          "_raw": "click | add_data |\n_list_id: parent_groups,\narchived: TRUE,\nname: _@local.no_of_parent_groups,\ntext:",
-                          "_cleaned": "click | add_data |\n_list_id: parent_groups,\narchived: TRUE,\nname: _@local.no_of_parent_groups,\ntext:",
-                          "params": {
-                            "_list_id": "parent_groups",
-                            "archived": true,
-                            "name": "_@local.no_of_parent_groups",
-                            "text": ""
-                          }
-                        },
-                        {
-                          "trigger": "click",
-                          "action_id": "add_data",
-                          "args": [],
                           "_raw": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
                           "_cleaned": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
                           "params": {
@@ -1415,34 +1448,6 @@
                         ],
                         "action_list": {
                           "0": {
-                            "_raw": [
-                              {
-                                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: TRUE,\nname: _@local.no_of_parent_groups,\ntext:",
-                                "matchedExpression": "@local.no_of_parent_groups",
-                                "type": "local",
-                                "fieldName": "no_of_parent_groups"
-                              }
-                            ],
-                            "_cleaned": [
-                              {
-                                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: TRUE,\nname: _@local.no_of_parent_groups,\ntext:",
-                                "matchedExpression": "@local.no_of_parent_groups",
-                                "type": "local",
-                                "fieldName": "no_of_parent_groups"
-                              }
-                            ],
-                            "params": {
-                              "name": [
-                                {
-                                  "fullExpression": "_@local.no_of_parent_groups",
-                                  "matchedExpression": "@local.no_of_parent_groups",
-                                  "type": "local",
-                                  "fieldName": "no_of_parent_groups"
-                                }
-                              ]
-                            }
-                          },
-                          "1": {
                             "_raw": [
                               {
                                 "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now())",
@@ -1516,25 +1521,20 @@
                         "@global.submit_report": [
                           "value"
                         ],
-                        "@local.no_of_parent_groups": [
+                        "@field.current_group_no": [
                           "action_list.0._raw",
                           "action_list.0._cleaned",
-                          "action_list.0.params.name"
-                        ],
-                        "@field.current_group_no": [
-                          "action_list.1._raw",
-                          "action_list.1._cleaned",
-                          "action_list.1.params.group_id"
+                          "action_list.0.params.group_id"
                         ],
                         "@field.current_module_no": [
-                          "action_list.1._raw",
-                          "action_list.1._cleaned",
-                          "action_list.1.params.module_id"
+                          "action_list.0._raw",
+                          "action_list.0._cleaned",
+                          "action_list.0.params.module_id"
                         ],
                         "@calc(now())": [
-                          "action_list.1._raw",
-                          "action_list.1._cleaned",
-                          "action_list.1.params.time_created"
+                          "action_list.0._raw",
+                          "action_list.0._cleaned",
+                          "action_list.0.params.time_created"
                         ]
                       }
                     }
@@ -1595,6 +1595,7 @@
                       "_translations": {
                         "value": {}
                       },
+                      "condition": false,
                       "_nested_name": "facilitator_wrapper.module_complete_wrapper.report_wrapper.report_complete.report_complete_image",
                       "_dynamicFields": {
                         "value": [
@@ -1808,6 +1809,7 @@
                   "_translations": {
                     "value": {}
                   },
+                  "condition": false,
                   "_nested_name": "facilitator_wrapper.module_complete_wrapper.no_report.no_report_image",
                   "_dynamicFields": {
                     "value": [
@@ -1893,13 +1895,13 @@
       "_dynamicFields": {
         "condition": [
           {
-            "fullExpression": "@fields.user_type == \"facilitator\" || @fields.user_type == \"tester\"",
+            "fullExpression": "(@fields.user_type == \"facilitator\") || (@fields.user_type == \"tester\")",
             "matchedExpression": "@fields.user_type",
             "type": "fields",
             "fieldName": "user_type"
           },
           {
-            "fullExpression": "@fields.user_type == \"facilitator\" || @fields.user_type == \"tester\"",
+            "fullExpression": "(@fields.user_type == \"facilitator\") || (@fields.user_type == \"tester\")",
             "matchedExpression": "@fields.user_type",
             "type": "fields",
             "fieldName": "user_type"

@@ -6,13 +6,11 @@
   "rows": [
     {
       "id": "page_1",
-      "completed": false,
-      "completed_count": 0
+      "completed": false
     },
     {
       "id": "page_2",
-      "completed": false,
-      "completed_count": 1
+      "completed": false
     }
   ],
   "_xlsxPath": "templates/CW onboarding templates.xlsx",
@@ -20,9 +18,6 @@
   "_metadata": {
     "completed": {
       "type": "boolean"
-    },
-    "completed_count": {
-      "type": "number"
     }
   }
 }

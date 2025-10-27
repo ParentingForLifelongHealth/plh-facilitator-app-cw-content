@@ -210,6 +210,9 @@
       "_metadata": {
         "duration_sec": {
           "type": "number"
+        },
+        "completed": {
+          "type": "boolean"
         }
       }
     },
@@ -222,9 +225,6 @@
       "_metadata": {
         "completed": {
           "type": "boolean"
-        },
-        "completed_count": {
-          "type": "number"
         }
       }
     },
@@ -265,6 +265,24 @@
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
       "_metadata": {
         "archived": {
+          "type": "boolean"
+        },
+        "week_1": {
+          "type": "boolean"
+        },
+        "week_2": {
+          "type": "boolean"
+        },
+        "week_3": {
+          "type": "boolean"
+        },
+        "week_4": {
+          "type": "boolean"
+        },
+        "week_5": {
+          "type": "boolean"
+        },
+        "week_6": {
           "type": "boolean"
         }
       }
@@ -853,8 +871,8 @@
     "module_final_global": {
       "flow_type": "global",
       "flow_name": "module_final_global",
-      "_xlsxPath": "data/deployment_data.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "data/deployment_data_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "navigation_global": {
       "flow_type": "global",
@@ -990,7 +1008,7 @@
     "article_loop": {
       "flow_type": "template",
       "flow_name": "article_loop",
-      "_xlsxPath": "templates/Miche Test.xlsx",
+      "_xlsxPath": "templates/module_flow_cw.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "article_message": {
@@ -1155,6 +1173,12 @@
     "follow_up": {
       "flow_type": "template",
       "flow_name": "follow_up",
+      "_xlsxPath": "templates/actions_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
+    "follow_up_group": {
+      "flow_type": "template",
+      "flow_name": "follow_up_group",
       "_xlsxPath": "templates/actions_cw.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
@@ -1660,9 +1684,21 @@
       "_xlsxPath": "templates/CW onboarding templates.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
-    "onboarding_splash": {
+    "onboarding_splash_auto": {
       "flow_type": "template",
-      "flow_name": "onboarding_splash",
+      "flow_name": "onboarding_splash_auto",
+      "_xlsxPath": "PLH onboarding.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1XBq4iGIZHEwzwPk3xbHDAm9WCesjR7kR"
+    },
+    "onboarding_splash_manual": {
+      "flow_type": "template",
+      "flow_name": "onboarding_splash_manual",
+      "_xlsxPath": "PLH onboarding.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1XBq4iGIZHEwzwPk3xbHDAm9WCesjR7kR"
+    },
+    "onboarding_splash_slide": {
+      "flow_type": "template",
+      "flow_name": "onboarding_splash_slide",
       "_xlsxPath": "PLH onboarding.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1XBq4iGIZHEwzwPk3xbHDAm9WCesjR7kR"
     },
@@ -1778,14 +1814,20 @@
     "section_element": {
       "flow_type": "template",
       "flow_name": "section_element",
-      "_xlsxPath": "templates/article_elements.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/module_flow_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "section_header": {
       "flow_type": "template",
       "flow_name": "section_header",
       "_xlsxPath": "templates/navigation.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+    },
+    "single_attendance": {
+      "flow_type": "template",
+      "flow_name": "single_attendance",
+      "_xlsxPath": "templates/actions_cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "user_id": {
       "flow_type": "template",

@@ -357,6 +357,15 @@
       "_translations": {
         "value": {}
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "close_stack_icon",
+      "value": "images/icons/close-circle-navy.svg",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
     }
   ],
   "_xlsxPath": "data/deployment_data_cw.xlsx",
