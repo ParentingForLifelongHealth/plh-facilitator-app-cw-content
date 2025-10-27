@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 2 |
-| button | 126 |
+| button | 129 |
 | carousel | 2 |
 | combo_box | 14 |
-| data_items | 67 |
+| data_items | 77 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 154 |
+| display_group | 156 |
 | google_sign_in_button | 3 |
 | image | 21 |
 | items | 16 |
@@ -25,19 +25,19 @@
 | pdf | 1 |
 | qr_code | 2 |
 | radio_button_grid | 12 |
-| round_button | 27 |
+| round_button | 29 |
 | select_text | 2 |
-| set_field | 6 |
-| set_variable | 848 |
-| simple_checkbox | 5 |
+| set_field | 5 |
+| set_variable | 842 |
+| simple_checkbox | 7 |
 | task_card | 6 |
-| task_progress_bar | 4 |
-| template | 114 |
+| task_progress_bar | 5 |
+| template | 116 |
 | test | 1 |
-| text | 320 |
+| text | 311 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 60 |
+| title | 59 |
 | toggle_bar | 8 |
 | update_action_list | 1 |
 | video | 2 |
@@ -48,30 +48,30 @@
 
 | type | count |
 | --- | --- |
-| add_data | 11 |
+| add_data | 9 |
 | app_update | 1 |
 | auth | 4 |
-| emit: completed | 44 |
+| emit: completed | 47 |
 | emit: force_reload | 7 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 20 |
 | emit: set_language | 3 |
-| emit: uncompleted | 77 |
+| emit: uncompleted | 78 |
 | feedback | 24 |
-| go_to | 38 |
+| go_to | 40 |
 | nav | 1 |
-| nav_stack | 7 |
+| nav_stack | 8 |
 | pop_up | 16 |
 | reset_app | 4 |
 | reset_data | 3 |
 | save_to_device | 4 |
 | scroll | 1 |
-| set_data | 21 |
-| set_field | 74 |
+| set_data | 26 |
+| set_field | 77 |
 | set_item | 13 |
-| set_local | 111 |
-| share | 3 |
+| set_local | 119 |
+| share | 2 |
 | user | 4 |
 </details>
 
@@ -80,7 +80,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 23896 KB | 23.9 MB |
+| total | 23915 KB | 23.9 MB |
 | unused | 178 KB | 0.2 MB |
 </details>
 
@@ -163,7 +163,6 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/plh_logomark.png | 1 |
 | images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
-| lottie/checkmark_blue.json | 3 |
 | pdf/kemas_rct_overview.pdf | 1 |
 </details>
 
@@ -185,9 +184,10 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/arrow_back.svg | 0.2 | 1 |
 | images/icons/arrow_forward.svg | 0.2 | 1 |
 | images/icons/bookmarks-outline.svg | 0.4 | 1 |
-| images/icons/cancel.svg | 0.4 | 2 |
+| images/icons/cancel.svg | 0.4 | 3 |
 | images/icons/check_circle.png | 0.6 | 1 |
 | images/icons/checkmark-outline.svg | 0.2 | 2 |
+| images/icons/close-circle-navy.svg | 1.4 | 1 |
 | images/icons/cog_white.svg | 3.6 | 2 |
 | images/icons/delete.svg | 0.6 | 1 |
 | images/icons/docs.svg | 0.5 | 1 |
@@ -227,6 +227,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/onboarding/splash_3.png | 1760.5 | 1 |
 | images/onboarding/splash_4.png | 1425.9 | 1 |
 | images/onboarding/splash_5.png | 2195 | 1 |
+| lottie/checkmark_blue.json | 17 | 3 |
 | lottie/cw_profile_complete.json | 13.4 | 1 |
 | pdf/child_development_domain.pdf | 141 | 1 |
 | pdf/child_development_stage.pdf | 508.2 | 1 |
@@ -248,7 +249,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 11 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 94 |
+| template |  | 98 |
 | template | generated | 61 |
 | template | legal_terms | 4 |
 </details>
