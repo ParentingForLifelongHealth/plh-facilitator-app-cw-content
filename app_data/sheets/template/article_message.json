@@ -31,6 +31,9 @@
           "name": "message_element",
           "value": "message_element",
           "condition": "@item.foreign_key == @local.article_id",
+          "style_list": [
+            "margin-bottom: 1em"
+          ],
           "rows": [
             {
               "name": "title",
@@ -225,6 +228,9 @@
           "name": "message_element",
           "value": "message_element",
           "condition": "@item.foreign_key == @local.article_id",
+          "style_list": [
+            "margin-bottom: 1em"
+          ],
           "rows": [
             {
               "name": "title",
