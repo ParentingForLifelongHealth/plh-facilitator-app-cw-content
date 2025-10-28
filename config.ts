@@ -20,7 +20,7 @@ config.google_drive.assets_folder_ids = [
 
 config.android = {
   app_id: "international.idems.plh_facilitator_cw",
-  app_name: "",
+  app_name: "Mayor Konektá",
   splash_asset_path: "./app_data/assets/android/splash.png",
   icon_asset_path: "./app_data/assets/android/icon.png",
   icon_asset_foreground_path: "./app_data/assets/android/icon-foreground.png",
@@ -28,11 +28,11 @@ config.android = {
 };
 
 config.ios.app_id = "international.idems.plh-facilitator-cw";
-config.ios.app_name = "";
+config.ios.app_name = "Mayor Konektá";
 
 config.git = {
   content_repo: "https://github.com/ParentingForLifelongHealth/plh-facilitator-app-cw-content.git",
-  content_tag_latest: "1.2.24",
+  content_tag_latest: "1.2.25",
 };
 
 config.firebase = {
@@ -49,11 +49,11 @@ config.api.db_name = "plh_facilitator_cw"
 config.app_data.output_path = "./app_data";
 
 config.app_config.APP_LANGUAGES.default = "cw_pap";
-config.app_config.APP_SIDEMENU_DEFAULTS.title = "";
-config.app_config.APP_HEADER_DEFAULTS.title = "";
+config.app_config.APP_SIDEMENU_DEFAULTS.title = "Mayor Konektá";
+config.app_config.APP_HEADER_DEFAULTS.title = "Mayor Konektá";
 config.app_config.APP_HEADER_DEFAULTS.hidden = true;
-config.app_config.NOTIFICATION_DEFAULTS.title = "New message from APP";
-config.app_config.NOTIFICATION_DEFAULTS.text = "You have a new message from APP";
+config.app_config.NOTIFICATION_DEFAULTS.title = "New message from Mayor Konektá";
+config.app_config.NOTIFICATION_DEFAULTS.text = "You have a new message from Mayor Konektá";
 config.app_config.APP_THEMES.available = ["default", "professional"];
 config.app_config.APP_THEMES.defaultThemeName = "professional";
 config.app_config.APP_UPDATES.enabled = true;
