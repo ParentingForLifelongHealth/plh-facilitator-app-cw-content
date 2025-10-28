@@ -105,7 +105,7 @@
         }
       ],
       "parameter_list": {
-        "filter": "!@item.tag_list || @item.tag_list.includes(@local.content_pacakge)"
+        "filter": "!@item.tag_list || @item.tag_list.includes(@local.content_package)"
       },
       "_nested_name": "get_module_count",
       "_dynamicFields": {
@@ -120,22 +120,22 @@
         "parameter_list": {
           "filter": [
             {
-              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_pacakge)",
+              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_package)",
               "matchedExpression": "!@item.tag_list",
               "type": "item",
               "fieldName": "tag_list"
             },
             {
-              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_pacakge)",
+              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_package)",
               "matchedExpression": "@item.tag_list.includes",
               "type": "item",
               "fieldName": "tag_list"
             },
             {
-              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_pacakge)",
-              "matchedExpression": "@local.content_pacakge",
+              "fullExpression": "!@item.tag_list || @item.tag_list.includes(@local.content_package)",
+              "matchedExpression": "@local.content_package",
               "type": "local",
-              "fieldName": "content_pacakge"
+              "fieldName": "content_package"
             }
           ]
         }
@@ -150,7 +150,7 @@
         "@item.tag_list.includes": [
           "parameter_list.filter"
         ],
-        "@local.content_pacakge": [
+        "@local.content_package": [
           "parameter_list.filter"
         ]
       }

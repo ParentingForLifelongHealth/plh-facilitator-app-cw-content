@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 2 |
-| button | 129 |
+| button | 128 |
 | carousel | 2 |
-| combo_box | 14 |
-| data_items | 77 |
+| combo_box | 16 |
+| data_items | 75 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 157 |
+| display_group | 154 |
 | google_sign_in_button | 3 |
 | image | 21 |
 | items | 16 |
@@ -24,7 +24,7 @@
 | navigation_bar | 1 |
 | pdf | 1 |
 | qr_code | 2 |
-| radio_button_grid | 12 |
+| radio_button_grid | 15 |
 | round_button | 29 |
 | select_text | 2 |
 | set_field | 5 |
@@ -32,13 +32,13 @@
 | simple_checkbox | 7 |
 | task_card | 6 |
 | task_progress_bar | 5 |
-| template | 116 |
+| template | 115 |
 | test | 1 |
-| text | 307 |
+| text | 322 |
 | text_area | 4 |
 | text_box | 32 |
 | title | 59 |
-| toggle_bar | 8 |
+| toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 2 |
 </details>
@@ -59,7 +59,7 @@
 | emit: set_language | 3 |
 | emit: uncompleted | 78 |
 | feedback | 24 |
-| go_to | 40 |
+| go_to | 39 |
 | nav | 1 |
 | nav_stack | 8 |
 | pop_up | 16 |
@@ -68,7 +68,7 @@
 | save_to_device | 4 |
 | scroll | 1 |
 | set_data | 26 |
-| set_field | 77 |
+| set_field | 76 |
 | set_item | 13 |
 | set_local | 119 |
 | share | 2 |
@@ -249,7 +249,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 11 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 98 |
+| template |  | 97 |
 | template | generated | 61 |
 | template | legal_terms | 4 |
 </details>

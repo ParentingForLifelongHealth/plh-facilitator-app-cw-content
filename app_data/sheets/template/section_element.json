@@ -28,73 +28,62 @@
       "_nested_name": "text"
     },
     {
-      "type": "display_group",
-      "name": "separation",
+      "type": "accordion",
+      "name": "accordion",
       "condition": "!!(@local.title)",
-      "style_list": [
-        "margin-bottom:10px"
-      ],
       "exclude_from_translation": true,
       "rows": [
         {
-          "type": "accordion",
-          "name": "accordion",
+          "type": "accordion_section",
+          "name": "first",
+          "value": "@local.title",
           "exclude_from_translation": true,
           "rows": [
             {
-              "type": "accordion_section",
-              "name": "first",
-              "value": "@local.title",
+              "type": "text",
+              "name": "accordion_content",
+              "value": "@local.text",
+              "_translations": {
+                "value": {}
+              },
               "exclude_from_translation": true,
-              "rows": [
-                {
-                  "type": "text",
-                  "name": "accordion_content",
-                  "value": "@local.text",
-                  "_translations": {
-                    "value": {}
-                  },
-                  "exclude_from_translation": true,
-                  "_nested_name": "separation.accordion.first.accordion_content",
-                  "_dynamicFields": {
-                    "value": [
-                      {
-                        "fullExpression": "@local.text",
-                        "matchedExpression": "@local.text",
-                        "type": "local",
-                        "fieldName": "text"
-                      }
-                    ]
-                  },
-                  "_dynamicDependencies": {
-                    "@local.text": [
-                      "value"
-                    ]
-                  }
-                }
-              ],
-              "_nested_name": "separation.accordion.first",
+              "_nested_name": "accordion.first.accordion_content",
               "_dynamicFields": {
                 "value": [
                   {
-                    "fullExpression": "@local.title",
-                    "matchedExpression": "@local.title",
+                    "fullExpression": "@local.text",
+                    "matchedExpression": "@local.text",
                     "type": "local",
-                    "fieldName": "title"
+                    "fieldName": "text"
                   }
                 ]
               },
               "_dynamicDependencies": {
-                "@local.title": [
+                "@local.text": [
                   "value"
                 ]
               }
             }
           ],
-          "_nested_name": "separation.accordion"
+          "_nested_name": "accordion.first",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.title",
+                "matchedExpression": "@local.title",
+                "type": "local",
+                "fieldName": "title"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.title": [
+              "value"
+            ]
+          }
         }
       ],
-      "_nested_name": "separation",
+      "_nested_name": "accordion",
       "_dynamicFields": {
         "condition": [
           {
@@ -112,6 +101,6 @@
       }
     }
   ],
-  "_xlsxPath": "templates/module_flow_cw.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_xlsxPath": "templates/article_elements.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
 }
