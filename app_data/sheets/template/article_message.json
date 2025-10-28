@@ -32,7 +32,7 @@
           "value": "message_element",
           "condition": "@item.foreign_key == @local.article_id",
           "style_list": [
-            "margin-bottom: 1em"
+            "margin-top: 12px"
           ],
           "rows": [
             {
@@ -229,7 +229,7 @@
           "value": "message_element",
           "condition": "@item.foreign_key == @local.article_id",
           "style_list": [
-            "margin-bottom: 1em"
+            "margin-top: 12px"
           ],
           "rows": [
             {
