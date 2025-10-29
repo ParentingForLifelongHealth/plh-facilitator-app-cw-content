@@ -39,7 +39,7 @@
       },
       {
         "type": "data_items",
-        "count": 75
+        "count": 76
       },
       {
         "type": "date_time_picker",
@@ -63,7 +63,7 @@
       },
       {
         "type": "image",
-        "count": 21
+        "count": 20
       },
       {
         "type": "items",
@@ -80,6 +80,10 @@
       {
         "type": "pdf",
         "count": 1
+      },
+      {
+        "type": "plh_module_list_item",
+        "count": 5
       },
       {
         "type": "qr_code",
@@ -103,7 +107,7 @@
       },
       {
         "type": "set_variable",
-        "count": 842
+        "count": 844
       },
       {
         "type": "simple_checkbox",
@@ -111,7 +115,7 @@
       },
       {
         "type": "task_card",
-        "count": 6
+        "count": 1
       },
       {
         "type": "task_progress_bar",
@@ -119,7 +123,7 @@
       },
       {
         "type": "template",
-        "count": 115
+        "count": 116
       },
       {
         "type": "test",
@@ -127,7 +131,7 @@
       },
       {
         "type": "text",
-        "count": 322
+        "count": 330
       },
       {
         "type": "text_area",
@@ -157,6 +161,10 @@
   },
   "template_actions": {
     "data": [
+      {
+        "type": "@items[0].first_name",
+        "count": 1
+      },
       {
         "type": "add_data",
         "count": 9
@@ -191,7 +199,7 @@
       },
       {
         "type": "emit: set_language",
-        "count": 3
+        "count": 4
       },
       {
         "type": "emit: uncompleted",
@@ -239,7 +247,7 @@
       },
       {
         "type": "set_field",
-        "count": 76
+        "count": 78
       },
       {
         "type": "set_item",
@@ -247,7 +255,7 @@
       },
       {
         "type": "set_local",
-        "count": 119
+        "count": 120
       },
       {
         "type": "share",
@@ -268,7 +276,7 @@
       },
       {
         "assets": "unused",
-        "KB": "178 KB",
+        "KB": "180 KB",
         "MB": "0.2 MB"
       }
     ]
@@ -336,6 +344,10 @@
         "size_kb": 1.2
       },
       {
+        "path": "images/icons/close-circle-navy.svg",
+        "size_kb": 1.4
+      },
+      {
         "path": "images/icons/content.svg",
         "size_kb": 7.2
       },
@@ -354,6 +366,10 @@
       {
         "path": "images/icons/group_add.svg",
         "size_kb": 2.2
+      },
+      {
+        "path": "images/icons/group_add_dark.svg",
+        "size_kb": 0.6
       },
       {
         "path": "images/icons/home-outline-white.svg",
@@ -628,7 +644,7 @@
         "size_kb": 0.2
       },
       {
-        "path": "images/icons/close-circle-navy.svg",
+        "path": "images/icons/close-circle-brown.svg",
         "count": 1,
         "size_kb": 1.4
       },
@@ -669,8 +685,13 @@
       },
       {
         "path": "images/icons/edit.svg",
-        "count": 4,
+        "count": 3,
         "size_kb": 0.9
+      },
+      {
+        "path": "images/icons/expand_circle_right.svg",
+        "count": 5,
+        "size_kb": 0.5
       },
       {
         "path": "images/icons/file-tray-full-outline.svg",
@@ -681,11 +702,6 @@
         "path": "images/icons/globe-outline.svg",
         "count": 1,
         "size_kb": 0.8
-      },
-      {
-        "path": "images/icons/group_add_dark.svg",
-        "count": 1,
-        "size_kb": 0.6
       },
       {
         "path": "images/icons/help.svg",
@@ -773,6 +789,11 @@
         "size_kb": 1.1
       },
       {
+        "path": "images/icons/verified.svg",
+        "count": 5,
+        "size_kb": 0.5
+      },
+      {
         "path": "images/icons/visibility.svg",
         "count": 1,
         "size_kb": 0.5
@@ -799,7 +820,7 @@
       },
       {
         "path": "images/modules/place_holder.png",
-        "count": 19,
+        "count": 43,
         "size_kb": 210
       },
       {
@@ -854,7 +875,7 @@
       {
         "type": "data_list",
         "subtype": null,
-        "total": 40
+        "total": 41
       },
       {
         "type": "data_list",
@@ -909,12 +930,12 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 97
+        "total": 98
       },
       {
         "type": "template",
         "subtype": "generated",
-        "total": 61
+        "total": 62
       },
       {
         "type": "template",

@@ -179,6 +179,13 @@
       "_xlsxPath": "templates/article_elements.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
+    "module_groups": {
+      "flow_type": "data_list",
+      "flow_name": "module_groups",
+      "data_list_name": "module_groups",
+      "_xlsxPath": "data/modules_CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
     "modules": {
       "flow_type": "data_list",
       "flow_name": "modules",
@@ -304,7 +311,7 @@
       "flow_name": "profile_section_data",
       "data_list_name": "profile_section",
       "_xlsxPath": "data/profile_data.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "rating_answer": {
       "flow_type": "data_list",
@@ -762,6 +769,11 @@
           "flow_name": "help_groups",
           "flow_subtype": "generated",
           "flow_type": "template"
+        },
+        {
+          "flow_name": "help_profile",
+          "flow_subtype": "generated",
+          "flow_type": "template"
         }
       ]
     },
@@ -1053,6 +1065,12 @@
       "_xlsxPath": "templates/navigation.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
     },
+    "counting_coparents": {
+      "flow_type": "template",
+      "flow_name": "counting_coparents",
+      "_xlsxPath": "templates/Parent Groups CW.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+    },
     "delete_account_warning": {
       "flow_type": "template",
       "flow_name": "delete_account_warning",
@@ -1209,6 +1227,11 @@
     },
     "help_library": {
       "flow_name": "help_library",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "help_profile": {
+      "flow_name": "help_profile",
       "flow_subtype": "generated",
       "flow_type": "template"
     },
@@ -1609,8 +1632,8 @@
     "menu_task_card": {
       "flow_type": "template",
       "flow_name": "menu_task_card",
-      "_xlsxPath": "templates/module menu.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+      "_xlsxPath": "templates/module menu cw.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
     },
     "menu_task_flow": {
       "flow_type": "template",
