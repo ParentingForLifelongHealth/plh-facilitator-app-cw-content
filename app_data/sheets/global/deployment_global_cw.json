@@ -361,11 +361,16 @@
     {
       "type": "declare_global_constant",
       "name": "close_stack_icon",
-      "value": "images/icons/close-circle-navy.svg",
+      "value": "images/icons/close-circle-brown.svg",
       "_translations": {
         "value": {}
       },
       "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "followup_count",
+      "value": 0
     }
   ],
   "_xlsxPath": "data/deployment_data_cw.xlsx",

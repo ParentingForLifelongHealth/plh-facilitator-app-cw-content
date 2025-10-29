@@ -11,6 +11,7 @@
         "mixed_closing",
         "mixed_remote"
       ],
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
@@ -33,6 +34,7 @@
         "yc_remote",
         "yc_closing"
       ],
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
@@ -55,6 +57,7 @@
         "teen_remote",
         "teen_closing"
       ],
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
@@ -77,6 +80,7 @@
         "mixed_welcome",
         "mixed_welcome_closing"
       ],
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
@@ -99,6 +103,7 @@
         "yc_welcome",
         "yc_welcome_closing"
       ],
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
@@ -121,6 +126,7 @@
         "teen_welcome",
         "teen_welcome_closing"
       ],
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
@@ -139,6 +145,7 @@
     {
       "id": "module_1_reminder_1",
       "status": "released",
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
@@ -157,6 +164,7 @@
     {
       "id": "module_1_reminder_2",
       "status": "released",
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
@@ -183,6 +191,7 @@
         "mixed_closing",
         "mixed_remote"
       ],
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "report_id": "week_1",
       "page_count": 8,
@@ -210,6 +219,7 @@
         "mixed_welcome",
         "mixed_welcome_closing"
       ],
+      "module_group": "module_1",
       "image_asset": "images/modules/place_holder.png",
       "report_id": "week_1",
       "page_count": 8,
@@ -235,6 +245,7 @@
         "mixed_welcome_closing",
         "mixed_remote"
       ],
+      "module_group": "module_2",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
@@ -259,6 +270,7 @@
         "yc_welcome_closing",
         "yc_remote"
       ],
+      "module_group": "module_2",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
@@ -283,6 +295,7 @@
         "teen_welcome_closing",
         "teen_remote"
       ],
+      "module_group": "module_2",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
@@ -301,6 +314,7 @@
     {
       "id": "module_2_reminder_1",
       "status": "released",
+      "module_group": "module_2",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
@@ -319,6 +333,7 @@
     {
       "id": "module_2_reminder_2",
       "status": "released",
+      "module_group": "module_2",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
@@ -337,6 +352,7 @@
     {
       "id": "module_2_chat",
       "status": "released",
+      "module_group": "module_2",
       "image_asset": "images/modules/place_holder.png",
       "report_id": "week_2",
       "page_count": 6,
@@ -362,6 +378,7 @@
         "mixed_welcome_closing",
         "mixed_remote"
       ],
+      "module_group": "module_3",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
@@ -386,6 +403,7 @@
         "yc_welcome_closing",
         "yc_remote"
       ],
+      "module_group": "module_3",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
@@ -410,6 +428,7 @@
         "teen_welcome_closing",
         "teen_remote"
       ],
+      "module_group": "module_3",
       "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
@@ -428,6 +447,8 @@
     {
       "id": "module_3_reminder_1",
       "status": "released",
+      "module_group": "module_3",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
       "title": "Keeping it positive: Remember to try",
@@ -445,6 +466,8 @@
     {
       "id": "module_3_reminder_2",
       "status": "released",
+      "module_group": "module_3",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
       "title": "Keeping it positive: Chat coming soon",
@@ -462,6 +485,8 @@
     {
       "id": "module_3_chat",
       "status": "released",
+      "module_group": "module_3",
+      "image_asset": "images/modules/place_holder.png",
       "report_id": "week_3",
       "page_count": 6,
       "completed": false,
@@ -486,6 +511,8 @@
         "mixed_welcome_closing",
         "mixed_remote"
       ],
+      "module_group": "module_4",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
       "title": "Rules & routines: Watch & try",
@@ -509,6 +536,8 @@
         "yc_welcome_closing",
         "yc_remote"
       ],
+      "module_group": "module_4",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
       "title": "Rules & routines: Watch & try",
@@ -532,6 +561,8 @@
         "teen_welcome_closing",
         "teen_remote"
       ],
+      "module_group": "module_4",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
       "title": "Rules & routines: Watch & try",
@@ -549,6 +580,8 @@
     {
       "id": "module_4_reminder_1",
       "status": "released",
+      "module_group": "module_4",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
       "title": "Rules & routines: Remember to try",
@@ -566,6 +599,8 @@
     {
       "id": "module_4_reminder_2",
       "status": "released",
+      "module_group": "module_4",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
       "title": "Rules and routines: Chat coming soon",
@@ -583,6 +618,8 @@
     {
       "id": "module_4_chat",
       "status": "released",
+      "module_group": "module_4",
+      "image_asset": "images/modules/place_holder.png",
       "report_id": "week_4",
       "page_count": 6,
       "completed": false,
@@ -607,6 +644,8 @@
         "mixed_welcome_closing",
         "mixed_remote"
       ],
+      "module_group": "module_5",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
       "title": "Positive Discipline: Watch & try",
@@ -630,6 +669,8 @@
         "yc_welcome_closing",
         "yc_remote"
       ],
+      "module_group": "module_5",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
       "title": "Positive Discipline: Watch & try",
@@ -653,6 +694,8 @@
         "teen_welcome_closing",
         "teen_remote"
       ],
+      "module_group": "module_5",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
       "title": "Positive Discipline: Watch & try",
@@ -670,6 +713,8 @@
     {
       "id": "module_5_reminder_1",
       "status": "released",
+      "module_group": "module_5",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
       "title": "Positive discipline: Remember to try",
@@ -687,6 +732,8 @@
     {
       "id": "module_5_reminder_2",
       "status": "released",
+      "module_group": "module_5",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
       "title": "Positive discipline: Chat coming soon",
@@ -704,6 +751,8 @@
     {
       "id": "module_5_chat",
       "status": "released",
+      "module_group": "module_5",
+      "image_asset": "images/modules/place_holder.png",
       "report_id": "week_5",
       "page_count": 6,
       "completed": false,
@@ -728,6 +777,8 @@
         "mixed_welcome_closing",
         "mixed_remote"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 4,
       "completed": false,
       "title": "Problem solving: Watch & try",
@@ -749,6 +800,8 @@
         "yc_welcome_closing",
         "yc_remote"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
       "title": "Problem solving: Watch & try",
@@ -770,6 +823,8 @@
         "teen_welcome_closing",
         "teen_remote"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
       "title": "Problem solving: Watch & try",
@@ -793,6 +848,8 @@
         "mixed_welcome",
         "mixed_remote"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 3,
       "completed": false,
       "title": "Problem solving & closing: Remember to try",
@@ -818,6 +875,8 @@
         "mixed_welcome",
         "mixed_remote"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
       "title": "Problem solving & closing: Chat coming soon",
@@ -843,6 +902,8 @@
         "mixed_closing",
         "mixed_welcome_closing"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 1,
       "completed": false,
       "title": "Problem solving & closing: In person session",
@@ -866,6 +927,8 @@
         "mixed_welcome",
         "mixed_remote"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "page_count": 7,
       "completed": false,
       "title": "Problem solving & closing: Let’s connect",
@@ -891,6 +954,8 @@
         "mixed_welcome",
         "mixed_remote"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "report_id": "week_6",
       "page_count": 2,
       "completed": false,
@@ -915,6 +980,8 @@
         "mixed_closing",
         "mixed_welcome_closing"
       ],
+      "module_group": "module_6",
+      "image_asset": "images/modules/place_holder.png",
       "report_id": "week_6",
       "page_count": 9,
       "completed": false,
