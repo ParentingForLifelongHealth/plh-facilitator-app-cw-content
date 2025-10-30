@@ -1,0 +1,270 @@
+{
+  "flow_type": "template",
+  "flow_name": "counting_coparents",
+  "status": "released",
+  "rows": [
+    {
+      "name": "co_parent_id_template",
+      "type": "set_variable",
+      "_nested_name": "co_parent_id_template"
+    },
+    {
+      "name": "this_parent_id_template",
+      "type": "set_variable",
+      "_nested_name": "this_parent_id_template"
+    },
+    {
+      "name": "fn",
+      "type": "set_variable",
+      "_nested_name": "fn"
+    },
+    {
+      "name": "ln",
+      "type": "set_variable",
+      "_nested_name": "ln"
+    },
+    {
+      "name": "number_of_coparents",
+      "type": "set_variable",
+      "_nested_name": "number_of_coparents"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "number_of_coparents",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : number_of_coparents: @items.length",
+          "_cleaned": "data_changed | set_local : number_of_coparents: @items.length"
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "fn",
+            "@items[0].first_name"
+          ],
+          "_raw": "data_changed | set_local : fn: @items[0].first_name",
+          "_cleaned": "data_changed | set_local : fn: @items[0].first_name"
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "ln",
+            "@items[0].last_name"
+          ],
+          "_raw": "data_changed | set_local : ln: @items[0].last_name",
+          "_cleaned": "data_changed | set_local : ln: @items[0].last_name"
+        }
+      ],
+      "parameter_list": {
+        "filter": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')"
+      },
+      "name": "data_items_7",
+      "_nested_name": "data_items_7",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parents",
+            "matchedExpression": "@data.parents",
+            "type": "data",
+            "fieldName": "parents"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "matchedExpression": "@item.archived",
+              "type": "item",
+              "fieldName": "archived"
+            },
+            {
+              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "matchedExpression": "@item.co_parent_id",
+              "type": "item",
+              "fieldName": "co_parent_id"
+            },
+            {
+              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "matchedExpression": "@local.co_parent_id_template",
+              "type": "local",
+              "fieldName": "co_parent_id_template"
+            },
+            {
+              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "matchedExpression": "@item.id",
+              "type": "item",
+              "fieldName": "id"
+            },
+            {
+              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "matchedExpression": "@local.this_parent_id_template",
+              "type": "local",
+              "fieldName": "this_parent_id_template"
+            },
+            {
+              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "matchedExpression": "@item.co_parent_id",
+              "type": "item",
+              "fieldName": "co_parent_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.parents": [
+          "value"
+        ],
+        "@item.archived": [
+          "parameter_list.filter"
+        ],
+        "@item.co_parent_id": [
+          "parameter_list.filter",
+          "parameter_list.filter"
+        ],
+        "@local.co_parent_id_template": [
+          "parameter_list.filter"
+        ],
+        "@item.id": [
+          "parameter_list.filter"
+        ],
+        "@local.this_parent_id_template": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "coparenting_with",
+      "value": "Caregiving with @local.fn @local.ln",
+      "_translations": {
+        "value": {}
+      },
+      "style_list": [
+        "color: gray",
+        "margin-top: -10px",
+        "margin-bottom: 12px",
+        "font-size: 14px"
+      ],
+      "condition": "@local.number_of_coparents == 1",
+      "_nested_name": "coparenting_with",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Caregiving with @local.fn @local.ln",
+            "matchedExpression": "@local.fn",
+            "type": "local",
+            "fieldName": "fn"
+          },
+          {
+            "fullExpression": "Caregiving with @local.fn @local.ln",
+            "matchedExpression": "@local.ln",
+            "type": "local",
+            "fieldName": "ln"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.number_of_coparents == 1",
+            "matchedExpression": "@local.number_of_coparents",
+            "type": "local",
+            "fieldName": "number_of_coparents"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.fn": [
+          "value"
+        ],
+        "@local.ln": [
+          "value"
+        ],
+        "@local.number_of_coparents": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "coparenting_with",
+      "value": "Caregiving with @local.number_of_coparents others",
+      "_translations": {
+        "value": {}
+      },
+      "style_list": [
+        "color: gray",
+        "margin-top: -10px",
+        "margin-bottom: 12px",
+        "font-size: 14px"
+      ],
+      "condition": "@local.number_of_coparents > 1",
+      "_nested_name": "coparenting_with",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Caregiving with @local.number_of_coparents others",
+            "matchedExpression": "@local.number_of_coparents",
+            "type": "local",
+            "fieldName": "number_of_coparents"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.number_of_coparents > 1",
+            "matchedExpression": "@local.number_of_coparents",
+            "type": "local",
+            "fieldName": "number_of_coparents"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.number_of_coparents": [
+          "value",
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "spacer2",
+      "value": "",
+      "_translations": {
+        "value": {}
+      },
+      "style_list": [
+        "margin-top: -10px",
+        "margin-bottom: 34px",
+        "font-size: 14px"
+      ],
+      "condition": "(@local.co_parent_id_template == 'empty')",
+      "_nested_name": "spacer2",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "(@local.co_parent_id_template == 'empty')",
+            "matchedExpression": "@local.co_parent_id_template",
+            "type": "local",
+            "fieldName": "co_parent_id_template"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.co_parent_id_template": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/Parent Groups CW.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

@@ -12,11 +12,11 @@
 | button | 128 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 76 |
+| data_items | 79 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 154 |
+| display_group | 156 |
 | google_sign_in_button | 3 |
 | image | 20 |
 | items | 16 |
@@ -26,19 +26,19 @@
 | plh_module_list_item | 5 |
 | qr_code | 2 |
 | radio_button_grid | 15 |
-| round_button | 29 |
+| round_button | 30 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 844 |
+| set_variable | 855 |
 | simple_checkbox | 7 |
 | task_card | 1 |
 | task_progress_bar | 5 |
-| template | 116 |
+| template | 118 |
 | test | 1 |
 | text | 330 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 59 |
+| title | 62 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 2 |
@@ -49,7 +49,6 @@
 
 | type | count |
 | --- | --- |
-| @items[0].first_name | 1 |
 | add_data | 9 |
 | app_update | 1 |
 | auth | 4 |
@@ -61,7 +60,7 @@
 | emit: set_language | 4 |
 | emit: uncompleted | 78 |
 | feedback | 24 |
-| go_to | 39 |
+| go_to | 40 |
 | nav | 1 |
 | nav_stack | 8 |
 | pop_up | 16 |
@@ -69,10 +68,10 @@
 | reset_data | 3 |
 | save_to_device | 4 |
 | scroll | 1 |
-| set_data | 26 |
+| set_data | 27 |
 | set_field | 78 |
 | set_item | 13 |
-| set_local | 120 |
+| set_local | 123 |
 | share | 2 |
 | user | 4 |
 </details>
@@ -82,7 +81,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 23915 KB | 23.9 MB |
+| total | 23917 KB | 23.9 MB |
 | unused | 180 KB | 0.2 MB |
 </details>
 
@@ -202,6 +201,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/edit.svg | 0.9 | 3 |
 | images/icons/expand_circle_right.svg | 0.5 | 5 |
 | images/icons/file-tray-full-outline.svg | 0.5 | 1 |
+| images/icons/follow_up_message.svg | 1.6 | 1 |
 | images/icons/globe-outline.svg | 0.8 | 1 |
 | images/icons/help.svg | 0.5 | 1 |
 | images/icons/home-outline.svg | 0.5 | 1 |
@@ -254,7 +254,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 11 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 98 |
+| template |  | 99 |
 | template | generated | 62 |
 | template | legal_terms | 4 |
 </details>

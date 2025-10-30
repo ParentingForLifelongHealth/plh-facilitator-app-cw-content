@@ -14,7 +14,7 @@
     },
     {
       "type": "text",
-      "value": "Select other caregivers in the family (maximum 4)",
+      "value": "Select other caregivers in the family (maximum @global.maximum_coparents)",
       "_translations": {
         "value": {}
       },
@@ -22,7 +22,22 @@
         "color: gray"
       ],
       "name": "text_3",
-      "_nested_name": "text_3"
+      "_nested_name": "text_3",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Select other caregivers in the family (maximum @global.maximum_coparents)",
+            "matchedExpression": "@global.maximum_coparents",
+            "type": "global",
+            "fieldName": "maximum_coparents"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.maximum_coparents": [
+          "value"
+        ]
+      }
     },
     {
       "name": "first_name",

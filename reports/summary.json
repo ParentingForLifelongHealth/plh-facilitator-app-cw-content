@@ -39,7 +39,7 @@
       },
       {
         "type": "data_items",
-        "count": 76
+        "count": 79
       },
       {
         "type": "date_time_picker",
@@ -55,7 +55,7 @@
       },
       {
         "type": "display_group",
-        "count": 154
+        "count": 156
       },
       {
         "type": "google_sign_in_button",
@@ -95,7 +95,7 @@
       },
       {
         "type": "round_button",
-        "count": 29
+        "count": 30
       },
       {
         "type": "select_text",
@@ -107,7 +107,7 @@
       },
       {
         "type": "set_variable",
-        "count": 844
+        "count": 855
       },
       {
         "type": "simple_checkbox",
@@ -123,7 +123,7 @@
       },
       {
         "type": "template",
-        "count": 116
+        "count": 118
       },
       {
         "type": "test",
@@ -143,7 +143,7 @@
       },
       {
         "type": "title",
-        "count": 59
+        "count": 62
       },
       {
         "type": "toggle_bar",
@@ -161,10 +161,6 @@
   },
   "template_actions": {
     "data": [
-      {
-        "type": "@items[0].first_name",
-        "count": 1
-      },
       {
         "type": "add_data",
         "count": 9
@@ -211,7 +207,7 @@
       },
       {
         "type": "go_to",
-        "count": 39
+        "count": 40
       },
       {
         "type": "nav",
@@ -243,7 +239,7 @@
       },
       {
         "type": "set_data",
-        "count": 26
+        "count": 27
       },
       {
         "type": "set_field",
@@ -255,7 +251,7 @@
       },
       {
         "type": "set_local",
-        "count": 120
+        "count": 123
       },
       {
         "type": "share",
@@ -271,7 +267,7 @@
     "data": [
       {
         "assets": "total",
-        "KB": "23915 KB",
+        "KB": "23917 KB",
         "MB": "23.9 MB"
       },
       {
@@ -699,6 +695,11 @@
         "size_kb": 0.5
       },
       {
+        "path": "images/icons/follow_up_message.svg",
+        "count": 1,
+        "size_kb": 1.6
+      },
+      {
         "path": "images/icons/globe-outline.svg",
         "count": 1,
         "size_kb": 0.8
@@ -930,7 +931,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 98
+        "total": 99
       },
       {
         "type": "template",
