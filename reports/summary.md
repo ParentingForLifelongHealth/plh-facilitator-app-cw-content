@@ -12,7 +12,7 @@
 | button | 128 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 79 |
+| data_items | 80 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -29,11 +29,11 @@
 | round_button | 30 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 855 |
+| set_variable | 860 |
 | simple_checkbox | 7 |
 | task_card | 1 |
 | task_progress_bar | 5 |
-| template | 118 |
+| template | 120 |
 | test | 1 |
 | text | 330 |
 | text_area | 4 |
