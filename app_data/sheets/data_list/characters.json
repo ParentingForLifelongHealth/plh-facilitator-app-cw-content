@@ -5,45 +5,277 @@
   "status": "released",
   "rows": [
     {
-      "id": "f1_father",
-      "caps_id": "F1_FATHER",
-      "name": "Father",
+      "id": "f1_mother",
+      "caps_id": "F1_MOTHER",
+      "family_no": 1,
+      "name": "Angela",
       "_translations": {
         "name": {}
       },
       "_translatedFields": {
         "name": {
-          "eng": "Father"
+          "eng": "Angela"
         }
       }
     },
     {
-      "id": "f1_son_5",
-      "caps_id": "F1_SON_5",
-      "name": "Son 5",
+      "id": "f1_father",
+      "caps_id": "F1_FATHER",
+      "family_no": 1,
+      "name": "Roberto",
       "_translations": {
         "name": {}
       },
       "_translatedFields": {
         "name": {
-          "eng": "Son 5"
+          "eng": "Roberto"
         }
       }
     },
     {
       "id": "f1_son_17",
       "caps_id": "F1_SON_17",
-      "name": "Son 17",
+      "family_no": 1,
+      "name": "Miguel",
       "_translations": {
         "name": {}
       },
       "_translatedFields": {
         "name": {
-          "eng": "Son 17"
+          "eng": "Miguel"
+        }
+      }
+    },
+    {
+      "id": "f1_daughter_16",
+      "caps_id": "F1_DAUGHTER_16",
+      "family_no": 1,
+      "name": "Alina",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Alina"
+        }
+      }
+    },
+    {
+      "id": "f1_daughter_13",
+      "caps_id": "F1_DAUGHTER_13",
+      "family_no": 1,
+      "name": "Kimberly",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Kimberly"
+        }
+      }
+    },
+    {
+      "id": "f1_daughter_6",
+      "caps_id": "F1_DAUGHTER_6",
+      "family_no": 1,
+      "name": "Thalia",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Thalia"
+        }
+      }
+    },
+    {
+      "id": "f1_daughter_2",
+      "caps_id": "F1_DAUGHTER_2",
+      "family_no": 1,
+      "name": "Daisy",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Daisy"
+        }
+      }
+    },
+    {
+      "id": "f1_son_5",
+      "caps_id": "F1_SON_5",
+      "family_no": 1,
+      "name": "Daniel",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Daniel"
+        }
+      }
+    },
+    {
+      "id": "f2_grandmother",
+      "caps_id": "F2_GRANDMOTHER",
+      "family_no": 2,
+      "name": "Oma",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Oma"
+        }
+      }
+    },
+    {
+      "id": "f2_grandfather",
+      "caps_id": "F2_GRANDFATHER",
+      "family_no": 2,
+      "name": "Opa",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Opa"
+        }
+      }
+    },
+    {
+      "id": "f2_daughter_17",
+      "caps_id": "F2_DAUGHTER_17",
+      "family_no": 2,
+      "name": "Tania",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Tania"
+        }
+      }
+    },
+    {
+      "id": "f2_son_15",
+      "caps_id": "F2_SON_15",
+      "family_no": 2,
+      "name": "Kevin",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Kevin"
+        }
+      }
+    },
+    {
+      "id": "f2_son_8",
+      "caps_id": "F2_SON_8",
+      "family_no": 2,
+      "name": "Kendrick",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Kendrick"
+        }
+      }
+    },
+    {
+      "id": "f2_daughter_3",
+      "caps_id": "F2_DAUGHTER_3",
+      "family_no": 2,
+      "name": "Mia",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Mia"
+        }
+      }
+    },
+    {
+      "id": "f3_mother",
+      "caps_id": "F3_MOTHER",
+      "family_no": 3,
+      "name": "Zulayka",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Zulayka"
+        }
+      }
+    },
+    {
+      "id": "f3_uncle",
+      "caps_id": "F3_UNCLE",
+      "family_no": 3,
+      "name": "Bryan",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Bryan"
+        }
+      }
+    },
+    {
+      "id": "f3_daughter_12",
+      "caps_id": "F3_DAUGHTER_12",
+      "family_no": 3,
+      "name": "Amy",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Amy"
+        }
+      }
+    },
+    {
+      "id": "f3_daughter_7",
+      "caps_id": "F3_DAUGHTER_7",
+      "family_no": 3,
+      "name": "Lisa",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Lisa"
+        }
+      }
+    },
+    {
+      "id": "f3_son_4",
+      "caps_id": "F3_SON_4",
+      "family_no": 3,
+      "name": "Shawn",
+      "_translations": {
+        "name": {}
+      },
+      "_translatedFields": {
+        "name": {
+          "eng": "Shawn"
         }
       }
     }
   ],
   "_xlsxPath": "data/characters CW.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+  "_metadata": {
+    "family_no": {
+      "type": "number"
+    }
+  }
 }

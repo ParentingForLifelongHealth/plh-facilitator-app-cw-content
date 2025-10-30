@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 2 |
-| button | 128 |
+| button | 130 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 80 |
+| data_items | 91 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 156 |
+| display_group | 161 |
 | google_sign_in_button | 3 |
 | image | 20 |
 | items | 16 |
@@ -29,16 +29,16 @@
 | round_button | 30 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 860 |
+| set_variable | 896 |
 | simple_checkbox | 7 |
 | task_card | 1 |
-| task_progress_bar | 5 |
-| template | 120 |
+| task_progress_bar | 4 |
+| template | 123 |
 | test | 1 |
-| text | 330 |
+| text | 350 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 62 |
+| title | 67 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 2 |
@@ -53,25 +53,25 @@
 | app_update | 1 |
 | auth | 4 |
 | emit: completed | 47 |
-| emit: force_reload | 7 |
+| emit: force_reload | 8 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
-| emit: server_sync | 20 |
+| emit: server_sync | 21 |
 | emit: set_language | 4 |
 | emit: uncompleted | 78 |
 | feedback | 24 |
-| go_to | 40 |
+| go_to | 42 |
 | nav | 1 |
-| nav_stack | 8 |
+| nav_stack | 9 |
 | pop_up | 16 |
 | reset_app | 4 |
 | reset_data | 3 |
 | save_to_device | 4 |
 | scroll | 1 |
 | set_data | 27 |
-| set_field | 78 |
+| set_field | 86 |
 | set_item | 13 |
-| set_local | 123 |
+| set_local | 132 |
 | share | 2 |
 | user | 4 |
 </details>
@@ -215,7 +215,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/people-outline.svg | 0.9 | 1 |
 | images/icons/people.svg | 1 | 1 |
 | images/icons/person-circle-outline.svg | 0.7 | 1 |
-| images/icons/person_cog.svg | 2.9 | 3 |
+| images/icons/person_cog.svg | 2.9 | 2 |
 | images/icons/qr-code-outline.svg | 1 | 1 |
 | images/icons/settings-outline.svg | 1.2 | 1 |
 | images/icons/share.svg | 2.3 | 2 |
@@ -232,7 +232,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/onboarding/splash_3.png | 1760.5 | 1 |
 | images/onboarding/splash_4.png | 1425.9 | 1 |
 | images/onboarding/splash_5.png | 2195 | 1 |
-| lottie/checkmark_blue.json | 17 | 3 |
+| lottie/checkmark_blue.json | 17 | 6 |
 | lottie/cw_profile_complete.json | 13.4 | 1 |
 | pdf/child_development_domain.pdf | 141 | 1 |
 | pdf/child_development_stage.pdf | 508.2 | 1 |
@@ -251,10 +251,10 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | data_list | onboarding | 1 |
 | data_pipe |  | 1 |
 | generator |  | 6 |
-| global |  | 11 |
+| global |  | 12 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 99 |
+| template |  | 101 |
 | template | generated | 62 |
 | template | legal_terms | 4 |
 </details>

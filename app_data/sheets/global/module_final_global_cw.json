@@ -1,6 +1,6 @@
 {
   "flow_type": "global",
-  "flow_name": "module_final_global",
+  "flow_name": "module_final_global_cw",
   "status": "released",
   "rows": [
     {
@@ -192,10 +192,6 @@
     {
       "type": "declare_global_constant",
       "name": "message_not_sharede_lottie",
-      "value": "lottie/checkmark_blue.json",
-      "_translations": {
-        "value": {}
-      },
       "exclude_from_translation": true
     },
     {
@@ -214,6 +210,6 @@
       }
     }
   ],
-  "_xlsxPath": "data/deployment_data.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_xlsxPath": "data/deployment_data_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

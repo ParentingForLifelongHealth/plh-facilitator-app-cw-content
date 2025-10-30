@@ -82,10 +82,28 @@
       "value": "module_progress",
       "rows": [
         {
-          "name": "calc_module_count",
-          "value": true,
+          "name": "group_id",
+          "value": "@fields.current_group_no",
+          "_translations": {
+            "value": {}
+          },
           "type": "set_variable",
-          "_nested_name": "module_progress.calc_module_count"
+          "_nested_name": "module_progress.group_id",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@fields.current_group_no",
+                "matchedExpression": "@fields.current_group_no",
+                "type": "fields",
+                "fieldName": "current_group_no"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@fields.current_group_no": [
+              "value"
+            ]
+          }
         }
       ],
       "name": "module_progress",
