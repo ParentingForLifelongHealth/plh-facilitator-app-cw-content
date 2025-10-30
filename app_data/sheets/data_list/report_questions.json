@@ -86,7 +86,7 @@
       "condition": "!!@local.answer_3 && (@local.answer_3 <= 3)",
       "condition_field": "answer_3",
       "condition_less": 4,
-      "display_text": "What challenges did you face in delivering @fields.current_module_name Be specific.",
+      "display_text": "What challenges did you face in delivering the session? Be specific.",
       "_translations": {
         "display_text": {},
         "placeholder": {},
@@ -94,7 +94,7 @@
       },
       "_translatedFields": {
         "display_text": {
-          "eng": "What challenges did you face in delivering @fields.current_module_name Be specific."
+          "eng": "What challenges did you face in delivering the session? Be specific."
         },
         "placeholder": {
           "eng": "challenges"

@@ -153,7 +153,14 @@
       "type": "template",
       "name": "follow_up",
       "value": "follow_up",
-      "rows": [],
+      "rows": [
+        {
+          "name": "has_limit",
+          "value": true,
+          "type": "set_variable",
+          "_nested_name": "follow_up.has_limit"
+        }
+      ],
       "_nested_name": "follow_up"
     }
   ],

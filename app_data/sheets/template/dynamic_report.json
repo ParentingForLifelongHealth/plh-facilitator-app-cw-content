@@ -294,7 +294,7 @@
               }
             },
             {
-              "type": "toggle_bar",
+              "type": "simple_checkbox",
               "value": "@item.@fields.current_report_id",
               "_translations": {
                 "value": {}
@@ -316,8 +316,8 @@
                 "variant": "ios"
               },
               "exclude_from_translation": true,
-              "name": "toggle_bar_6",
-              "_nested_name": "data_items_9.display_group_1_@item.id.toggle_bar_6",
+              "name": "simple_checkbox_6",
+              "_nested_name": "data_items_9.display_group_1_@item.id.simple_checkbox_6",
               "_dynamicFields": {
                 "value": [
                   {
@@ -349,8 +349,8 @@
                 },
                 "_nested_name": [
                   {
-                    "fullExpression": "data_items_9.display_group_1_@item.id.toggle_bar_6",
-                    "matchedExpression": "@item.id.toggle_bar_6",
+                    "fullExpression": "data_items_9.display_group_1_@item.id.simple_checkbox_6",
+                    "matchedExpression": "@item.id.simple_checkbox_6",
                     "type": "item",
                     "fieldName": "id"
                   }
@@ -362,7 +362,7 @@
                   "action_list.0._raw",
                   "action_list.0._cleaned"
                 ],
-                "@item.id.toggle_bar_6": [
+                "@item.id.simple_checkbox_6": [
                   "_nested_name"
                 ]
               }
@@ -610,27 +610,12 @@
       "rows": [
         {
           "type": "text",
-          "value": "What challenges did you face in delivering @fields.current_module_name Be specific.",
+          "value": "What challenges did you face in delivering the session? Be specific.",
           "_translations": {
             "value": {}
           },
           "name": "text_1",
-          "_nested_name": "display_group_17.text_1",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "What challenges did you face in delivering @fields.current_module_name Be specific.",
-                "matchedExpression": "@fields.current_module_name",
-                "type": "fields",
-                "fieldName": "current_module_name"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@fields.current_module_name": [
-              "value"
-            ]
-          }
+          "_nested_name": "display_group_17.text_1"
         },
         {
           "type": "text_box",

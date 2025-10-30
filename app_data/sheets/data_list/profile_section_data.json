@@ -95,8 +95,29 @@
         }
       },
       "description": "See and edit the lists of parents attending your groups."
+    },
+    {
+      "id": "profile",
+      "template": "profile",
+      "show": "@global.has_profile_about",
+      "title": "Profile",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Profile"
+        },
+        "description": {
+          "eng": "This is used as the title of the 'Profile' page"
+        }
+      },
+      "description": "This is used as the title of the 'Profile' page"
     }
   ],
   "_xlsxPath": "data/profile_data.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
 }

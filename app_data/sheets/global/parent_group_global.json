@@ -160,7 +160,7 @@
     {
       "type": "declare_global_constant",
       "name": "label_number",
-      "value": "Contact Number*",
+      "value": "Contact Number",
       "_translations": {
         "value": {}
       }
@@ -452,6 +452,11 @@
       "_translations": {
         "value": {}
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "maximum_coparents",
+      "value": 4
     },
     {
       "type": "declare_field_default",
