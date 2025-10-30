@@ -24,30 +24,6 @@
       "_nested_name": "back"
     },
     {
-      "style_list": [
-        "flex:1"
-      ],
-      "condition": "!!@local.title",
-      "type": "set_variable",
-      "name": "set_variable_2",
-      "_nested_name": "set_variable_2",
-      "_dynamicFields": {
-        "condition": [
-          {
-            "fullExpression": "!!@local.title",
-            "matchedExpression": "!@local.title",
-            "type": "local",
-            "fieldName": "title"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "!@local.title": [
-          "condition"
-        ]
-      }
-    },
-    {
       "type": "display_group",
       "name": "dg_header",
       "rows": [
@@ -58,6 +34,9 @@
           "_translations": {
             "value": {}
           },
+          "style_list": [
+            "flex:1"
+          ],
           "_nested_name": "dg_header.group_name",
           "_dynamicFields": {
             "value": [

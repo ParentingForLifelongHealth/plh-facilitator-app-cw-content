@@ -76,19 +76,36 @@
       "_nested_name": "text_6"
     },
     {
-      "type": "text",
-      "value": "TO DO",
-      "_translations": {
-        "value": {}
-      },
-      "parameter_list": {
-        "text_align": "center"
-      },
-      "style_list": [
-        "color: #46607F"
+      "type": "template",
+      "name": "follow_up",
+      "value": "follow_up",
+      "rows": [
+        {
+          "name": "group_limit_id",
+          "value": "@fields.current_group_no",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "follow_up.group_limit_id",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@fields.current_group_no",
+                "matchedExpression": "@fields.current_group_no",
+                "type": "fields",
+                "fieldName": "current_group_no"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@fields.current_group_no": [
+              "value"
+            ]
+          }
+        }
       ],
-      "name": "text_7",
-      "_nested_name": "text_7"
+      "_nested_name": "follow_up"
     }
   ],
   "_xlsxPath": "templates/Parent Groups CW.xlsx",

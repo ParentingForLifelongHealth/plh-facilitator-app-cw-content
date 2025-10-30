@@ -115,6 +115,9 @@
           "parameter_list": {
             "style": "column"
           },
+          "style_list": [
+            "flex: 1"
+          ],
           "rows": [
             {
               "type": "text",
@@ -122,9 +125,6 @@
               "_translations": {
                 "value": {}
               },
-              "style_list": [
-                "flex: 1"
-              ],
               "exclude_from_translation": true,
               "name": "text_1",
               "_nested_name": "display_group_6.display_group_2.text_1",
