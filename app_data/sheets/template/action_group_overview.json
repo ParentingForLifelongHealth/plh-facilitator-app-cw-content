@@ -1,0 +1,2215 @@
+{
+  "flow_type": "template",
+  "flow_name": "action_group_overview",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id",
+      "type": "set_variable",
+      "_nested_name": "group_id"
+    },
+    {
+      "name": "no_pending_reports",
+      "value": 0,
+      "type": "set_variable",
+      "_nested_name": "no_pending_reports"
+    },
+    {
+      "name": "no_of_follow_ups",
+      "value": 0,
+      "type": "set_variable",
+      "_nested_name": "no_of_follow_ups"
+    },
+    {
+      "type": "text",
+      "value": "npr: @local.no_pending_reports",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_5",
+      "_nested_name": "text_5",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "npr: @local.no_pending_reports",
+            "matchedExpression": "@local.no_pending_reports",
+            "type": "local",
+            "fieldName": "no_pending_reports"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.no_pending_reports": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "nfu: @local.no_of_follow_ups",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_6",
+      "_nested_name": "text_6",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "nfu: @local.no_of_follow_ups",
+            "matchedExpression": "@local.no_of_follow_ups",
+            "type": "local",
+            "fieldName": "no_of_follow_ups"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.no_of_follow_ups": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "counting_pending",
+      "value": "@data.report_answers",
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "no_pending_reports",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : no_pending_reports : @items.length",
+          "_cleaned": "data_changed | set_local : no_pending_reports : @items.length"
+        }
+      ],
+      "parameter_list": {
+        "filter": "@item.pending && (@item.group_id == @local.group_id)"
+      },
+      "rows": [],
+      "_nested_name": "counting_pending",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_answers",
+            "matchedExpression": "@data.report_answers",
+            "type": "data",
+            "fieldName": "report_answers"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "@item.pending && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.pending",
+              "type": "item",
+              "fieldName": "pending"
+            },
+            {
+              "fullExpression": "@item.pending && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "@item.pending && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@local.group_id",
+              "type": "local",
+              "fieldName": "group_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_answers": [
+          "value"
+        ],
+        "@item.pending": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@local.group_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "name": "seven_days_ago",
+      "value": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "seven_days_ago",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
+            "matchedExpression": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
+            "type": "calc",
+            "fieldName": "now() - (7 * 24 * 60 * 60 * 1000)"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@calc(now() - (7 * 24 * 60 * 60 * 1000))": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "date: @local.seven_days_ago",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_10",
+      "_nested_name": "text_10",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "date: @local.seven_days_ago",
+            "matchedExpression": "@local.seven_days_ago",
+            "type": "local",
+            "fieldName": "seven_days_ago"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.seven_days_ago": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "check_5_6",
+      "type": "set_variable",
+      "_nested_name": "check_5_6"
+    },
+    {
+      "name": "check_4_5",
+      "type": "set_variable",
+      "_nested_name": "check_4_5"
+    },
+    {
+      "name": "check_3_4",
+      "type": "set_variable",
+      "_nested_name": "check_3_4"
+    },
+    {
+      "name": "check_2_3",
+      "type": "set_variable",
+      "_nested_name": "check_2_3"
+    },
+    {
+      "name": "check_1_2",
+      "type": "set_variable",
+      "_nested_name": "check_1_2"
+    },
+    {
+      "name": "report_1",
+      "type": "set_variable",
+      "_nested_name": "report_1"
+    },
+    {
+      "name": "report_2",
+      "type": "set_variable",
+      "_nested_name": "report_2"
+    },
+    {
+      "name": "report_3",
+      "type": "set_variable",
+      "_nested_name": "report_3"
+    },
+    {
+      "name": "report_4",
+      "type": "set_variable",
+      "_nested_name": "report_4"
+    },
+    {
+      "name": "report_5",
+      "type": "set_variable",
+      "_nested_name": "report_5"
+    },
+    {
+      "name": "report_6",
+      "type": "set_variable",
+      "_nested_name": "report_6"
+    },
+    {
+      "type": "text",
+      "value": "r1: @local.report_1",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_22",
+      "_nested_name": "text_22",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "r1: @local.report_1",
+            "matchedExpression": "@local.report_1",
+            "type": "local",
+            "fieldName": "report_1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "r2: @local.report_2",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_23",
+      "_nested_name": "text_23",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "r2: @local.report_2",
+            "matchedExpression": "@local.report_2",
+            "type": "local",
+            "fieldName": "report_2"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_2": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "r3: @local.report_3",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_24",
+      "_nested_name": "text_24",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "r3: @local.report_3",
+            "matchedExpression": "@local.report_3",
+            "type": "local",
+            "fieldName": "report_3"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_3": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "r4: @local.report_4",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_25",
+      "_nested_name": "text_25",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "r4: @local.report_4",
+            "matchedExpression": "@local.report_4",
+            "type": "local",
+            "fieldName": "report_4"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_4": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "r5: @local.report_5",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_26",
+      "_nested_name": "text_26",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "r5: @local.report_5",
+            "matchedExpression": "@local.report_5",
+            "type": "local",
+            "fieldName": "report_5"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_5": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "r6: @local.report_6",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_27",
+      "_nested_name": "text_27",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "r6: @local.report_6",
+            "matchedExpression": "@local.report_6",
+            "type": "local",
+            "fieldName": "report_6"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_6": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "report_6",
+            "@items.map(item => item.group_id)"
+          ],
+          "_raw": "data_changed | set_local : report_6 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_6 : @items.map(item => item.group_id)"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.pending && @item.report_id == \"week_6\" && (@item.group_id == @local.group_id)"
+      },
+      "name": "data_items_28",
+      "_nested_name": "data_items_28",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_answers",
+            "matchedExpression": "@data.report_answers",
+            "type": "data",
+            "fieldName": "report_answers"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_6\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "!@item.pending",
+              "type": "item",
+              "fieldName": "pending"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_6\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.report_id",
+              "type": "item",
+              "fieldName": "report_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_6\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_6\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@local.group_id",
+              "type": "local",
+              "fieldName": "group_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_answers": [
+          "value"
+        ],
+        "!@item.pending": [
+          "parameter_list.filter"
+        ],
+        "@item.report_id": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@local.group_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "report_5",
+            "@items.map(item => item.group_id)"
+          ],
+          "_raw": "data_changed | set_local : report_5 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_5 : @items.map(item => item.group_id)"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.pending && @item.report_id == \"week_5\" && (@item.group_id == @local.group_id)"
+      },
+      "name": "data_items_29",
+      "_nested_name": "data_items_29",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_answers",
+            "matchedExpression": "@data.report_answers",
+            "type": "data",
+            "fieldName": "report_answers"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_5\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "!@item.pending",
+              "type": "item",
+              "fieldName": "pending"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_5\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.report_id",
+              "type": "item",
+              "fieldName": "report_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_5\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_5\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@local.group_id",
+              "type": "local",
+              "fieldName": "group_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_answers": [
+          "value"
+        ],
+        "!@item.pending": [
+          "parameter_list.filter"
+        ],
+        "@item.report_id": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@local.group_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "report_4",
+            "@items.map(item => item.group_id)"
+          ],
+          "_raw": "data_changed | set_local : report_4 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_4 : @items.map(item => item.group_id)"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.pending && @item.report_id == \"week_4\" && (@item.group_id == @local.group_id)"
+      },
+      "name": "data_items_30",
+      "_nested_name": "data_items_30",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_answers",
+            "matchedExpression": "@data.report_answers",
+            "type": "data",
+            "fieldName": "report_answers"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_4\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "!@item.pending",
+              "type": "item",
+              "fieldName": "pending"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_4\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.report_id",
+              "type": "item",
+              "fieldName": "report_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_4\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_4\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@local.group_id",
+              "type": "local",
+              "fieldName": "group_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_answers": [
+          "value"
+        ],
+        "!@item.pending": [
+          "parameter_list.filter"
+        ],
+        "@item.report_id": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@local.group_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "report_3",
+            "@items.map(item => item.group_id)"
+          ],
+          "_raw": "data_changed | set_local : report_3 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_3 : @items.map(item => item.group_id)"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.pending && @item.report_id == \"week_3\" && (@item.group_id == @local.group_id)"
+      },
+      "name": "data_items_31",
+      "_nested_name": "data_items_31",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_answers",
+            "matchedExpression": "@data.report_answers",
+            "type": "data",
+            "fieldName": "report_answers"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_3\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "!@item.pending",
+              "type": "item",
+              "fieldName": "pending"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_3\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.report_id",
+              "type": "item",
+              "fieldName": "report_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_3\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_3\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@local.group_id",
+              "type": "local",
+              "fieldName": "group_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_answers": [
+          "value"
+        ],
+        "!@item.pending": [
+          "parameter_list.filter"
+        ],
+        "@item.report_id": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@local.group_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "report_2",
+            "@items.map(item => item.group_id)"
+          ],
+          "_raw": "data_changed | set_local : report_2 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_2 : @items.map(item => item.group_id)"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.pending && @item.report_id == \"week_2\" && (@item.group_id == @local.group_id)"
+      },
+      "name": "data_items_32",
+      "_nested_name": "data_items_32",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_answers",
+            "matchedExpression": "@data.report_answers",
+            "type": "data",
+            "fieldName": "report_answers"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_2\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "!@item.pending",
+              "type": "item",
+              "fieldName": "pending"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_2\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.report_id",
+              "type": "item",
+              "fieldName": "report_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_2\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_2\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@local.group_id",
+              "type": "local",
+              "fieldName": "group_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_answers": [
+          "value"
+        ],
+        "!@item.pending": [
+          "parameter_list.filter"
+        ],
+        "@item.report_id": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@local.group_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "report_1",
+            "@items.map(item => item.group_id)"
+          ],
+          "_raw": "data_changed | set_local : report_1 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_1 : @items.map(item => item.group_id)"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.pending && @item.report_id == \"week_1\" && (@item.group_id == @local.group_id)"
+      },
+      "name": "data_items_33",
+      "_nested_name": "data_items_33",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.report_answers",
+            "matchedExpression": "@data.report_answers",
+            "type": "data",
+            "fieldName": "report_answers"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_1\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "!@item.pending",
+              "type": "item",
+              "fieldName": "pending"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_1\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.report_id",
+              "type": "item",
+              "fieldName": "report_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_1\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.pending && @item.report_id == \"week_1\" && (@item.group_id == @local.group_id)",
+              "matchedExpression": "@local.group_id",
+              "type": "local",
+              "fieldName": "group_id"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.report_answers": [
+          "value"
+        ],
+        "!@item.pending": [
+          "parameter_list.filter"
+        ],
+        "@item.report_id": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@local.group_id": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "c12: @local.check_1_2",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_34",
+      "_nested_name": "text_34",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "c12: @local.check_1_2",
+            "matchedExpression": "@local.check_1_2",
+            "type": "local",
+            "fieldName": "check_1_2"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_1_2": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "c23: @local.check_2_3",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_35",
+      "_nested_name": "text_35",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "c23: @local.check_2_3",
+            "matchedExpression": "@local.check_2_3",
+            "type": "local",
+            "fieldName": "check_2_3"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_2_3": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "c34: @local.check_3_4",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_36",
+      "_nested_name": "text_36",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "c34: @local.check_3_4",
+            "matchedExpression": "@local.check_3_4",
+            "type": "local",
+            "fieldName": "check_3_4"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_3_4": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "c45: @local.check_4_5",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_37",
+      "_nested_name": "text_37",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "c45: @local.check_4_5",
+            "matchedExpression": "@local.check_4_5",
+            "type": "local",
+            "fieldName": "check_4_5"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_4_5": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "c56: @local.check_5_6",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_38",
+      "_nested_name": "text_38",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "c56: @local.check_5_6",
+            "matchedExpression": "@local.check_5_6",
+            "type": "local",
+            "fieldName": "check_5_6"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_5_6": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "report_1",
+      "value": "@calc([0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.report_1 == \"\"",
+      "type": "set_variable",
+      "_nested_name": "report_1",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc([0])",
+            "matchedExpression": "@calc([0])",
+            "type": "calc",
+            "fieldName": "[0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.report_1 == \"\"",
+            "matchedExpression": "@local.report_1",
+            "type": "local",
+            "fieldName": "report_1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@calc([0])": [
+          "value"
+        ],
+        "@local.report_1": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "report_2",
+      "value": "@calc([0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.report_2 == \"\"",
+      "type": "set_variable",
+      "_nested_name": "report_2",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc([0])",
+            "matchedExpression": "@calc([0])",
+            "type": "calc",
+            "fieldName": "[0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.report_2 == \"\"",
+            "matchedExpression": "@local.report_2",
+            "type": "local",
+            "fieldName": "report_2"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@calc([0])": [
+          "value"
+        ],
+        "@local.report_2": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "report_3",
+      "value": "@calc([0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.report_3 == \"\"",
+      "type": "set_variable",
+      "_nested_name": "report_3",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc([0])",
+            "matchedExpression": "@calc([0])",
+            "type": "calc",
+            "fieldName": "[0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.report_3 == \"\"",
+            "matchedExpression": "@local.report_3",
+            "type": "local",
+            "fieldName": "report_3"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@calc([0])": [
+          "value"
+        ],
+        "@local.report_3": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "report_4",
+      "value": "@calc([0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.report_4 == \"\"",
+      "type": "set_variable",
+      "_nested_name": "report_4",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc([0])",
+            "matchedExpression": "@calc([0])",
+            "type": "calc",
+            "fieldName": "[0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.report_4 == \"\"",
+            "matchedExpression": "@local.report_4",
+            "type": "local",
+            "fieldName": "report_4"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@calc([0])": [
+          "value"
+        ],
+        "@local.report_4": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "report_5",
+      "value": "@calc([0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.report_5 == \"\"",
+      "type": "set_variable",
+      "_nested_name": "report_5",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc([0])",
+            "matchedExpression": "@calc([0])",
+            "type": "calc",
+            "fieldName": "[0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.report_5 == \"\"",
+            "matchedExpression": "@local.report_5",
+            "type": "local",
+            "fieldName": "report_5"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@calc([0])": [
+          "value"
+        ],
+        "@local.report_5": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "report_6",
+      "value": "@calc([0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.report_6 == \"\"",
+      "type": "set_variable",
+      "_nested_name": "report_6",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc([0])",
+            "matchedExpression": "@calc([0])",
+            "type": "calc",
+            "fieldName": "[0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.report_6 == \"\"",
+            "matchedExpression": "@local.report_6",
+            "type": "local",
+            "fieldName": "report_6"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@calc([0])": [
+          "value"
+        ],
+        "@local.report_6": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "check_5_6",
+      "value": "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "!!@local.report_6 && !!@local.report_5 && @local.report_6 !== \"\" && @local.report_5 !== \"\"",
+      "type": "set_variable",
+      "_nested_name": "check_5_6",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))",
+            "matchedExpression": "@local.report_6.filter",
+            "type": "local",
+            "fieldName": "report_6"
+          },
+          {
+            "fullExpression": "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))",
+            "matchedExpression": "@local.report_5.includes",
+            "type": "local",
+            "fieldName": "report_5"
+          },
+          {
+            "fullExpression": "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))",
+            "matchedExpression": "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))",
+            "type": "calc",
+            "fieldName": "(@local.report_6.filter(x => @local.report_5.includes(x))).concat(0)"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!!@local.report_6 && !!@local.report_5 && @local.report_6 !== \"\" && @local.report_5 !== \"\"",
+            "matchedExpression": "!@local.report_6",
+            "type": "local",
+            "fieldName": "report_6"
+          },
+          {
+            "fullExpression": "!!@local.report_6 && !!@local.report_5 && @local.report_6 !== \"\" && @local.report_5 !== \"\"",
+            "matchedExpression": "!@local.report_5",
+            "type": "local",
+            "fieldName": "report_5"
+          },
+          {
+            "fullExpression": "!!@local.report_6 && !!@local.report_5 && @local.report_6 !== \"\" && @local.report_5 !== \"\"",
+            "matchedExpression": "@local.report_6",
+            "type": "local",
+            "fieldName": "report_6"
+          },
+          {
+            "fullExpression": "!!@local.report_6 && !!@local.report_5 && @local.report_6 !== \"\" && @local.report_5 !== \"\"",
+            "matchedExpression": "@local.report_5",
+            "type": "local",
+            "fieldName": "report_5"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.report_6.filter": [
+          "value"
+        ],
+        "@local.report_5.includes": [
+          "value"
+        ],
+        "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))": [
+          "value"
+        ],
+        "!@local.report_6": [
+          "condition"
+        ],
+        "!@local.report_5": [
+          "condition"
+        ],
+        "@local.report_6": [
+          "condition"
+        ],
+        "@local.report_5": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "check_4_5",
+      "value": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "!!@local.report_5 && !!@local.report_4 && @local.report_5 !== \"\" && @local.report_4 !== \"\"",
+      "type": "set_variable",
+      "_nested_name": "check_4_5",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+            "matchedExpression": "@local.check_5_6",
+            "type": "local",
+            "fieldName": "check_5_6"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+            "matchedExpression": "@local.report_5.filter",
+            "type": "local",
+            "fieldName": "report_5"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+            "matchedExpression": "@local.report_4.includes",
+            "type": "local",
+            "fieldName": "report_4"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+            "matchedExpression": "!@local.check_5_6.includes",
+            "type": "local",
+            "fieldName": "check_5_6"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+            "matchedExpression": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+            "type": "calc",
+            "fieldName": "@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!!@local.report_5 && !!@local.report_4 && @local.report_5 !== \"\" && @local.report_4 !== \"\"",
+            "matchedExpression": "!@local.report_5",
+            "type": "local",
+            "fieldName": "report_5"
+          },
+          {
+            "fullExpression": "!!@local.report_5 && !!@local.report_4 && @local.report_5 !== \"\" && @local.report_4 !== \"\"",
+            "matchedExpression": "!@local.report_4",
+            "type": "local",
+            "fieldName": "report_4"
+          },
+          {
+            "fullExpression": "!!@local.report_5 && !!@local.report_4 && @local.report_5 !== \"\" && @local.report_4 !== \"\"",
+            "matchedExpression": "@local.report_5",
+            "type": "local",
+            "fieldName": "report_5"
+          },
+          {
+            "fullExpression": "!!@local.report_5 && !!@local.report_4 && @local.report_5 !== \"\" && @local.report_4 !== \"\"",
+            "matchedExpression": "@local.report_4",
+            "type": "local",
+            "fieldName": "report_4"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_5_6": [
+          "value"
+        ],
+        "@local.report_5.filter": [
+          "value"
+        ],
+        "@local.report_4.includes": [
+          "value"
+        ],
+        "!@local.check_5_6.includes": [
+          "value"
+        ],
+        "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])": [
+          "value"
+        ],
+        "!@local.report_5": [
+          "condition"
+        ],
+        "!@local.report_4": [
+          "condition"
+        ],
+        "@local.report_5": [
+          "condition"
+        ],
+        "@local.report_4": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "check_3_4",
+      "value": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "!!@local.report_4 && !!@local.report_3 && @local.report_4 !== \"\" && @local.report_3 !== \"\"",
+      "type": "set_variable",
+      "_nested_name": "check_3_4",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.check_5_6",
+            "type": "local",
+            "fieldName": "check_5_6"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.report_4.filter",
+            "type": "local",
+            "fieldName": "report_4"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.report_3.includes",
+            "type": "local",
+            "fieldName": "report_3"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.check_5_6.includes",
+            "type": "local",
+            "fieldName": "check_5_6"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+            "matchedExpression": "!@local.check_4_5.includes",
+            "type": "local",
+            "fieldName": "check_4_5"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+            "type": "calc",
+            "fieldName": "@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!!@local.report_4 && !!@local.report_3 && @local.report_4 !== \"\" && @local.report_3 !== \"\"",
+            "matchedExpression": "!@local.report_4",
+            "type": "local",
+            "fieldName": "report_4"
+          },
+          {
+            "fullExpression": "!!@local.report_4 && !!@local.report_3 && @local.report_4 !== \"\" && @local.report_3 !== \"\"",
+            "matchedExpression": "!@local.report_3",
+            "type": "local",
+            "fieldName": "report_3"
+          },
+          {
+            "fullExpression": "!!@local.report_4 && !!@local.report_3 && @local.report_4 !== \"\" && @local.report_3 !== \"\"",
+            "matchedExpression": "@local.report_4",
+            "type": "local",
+            "fieldName": "report_4"
+          },
+          {
+            "fullExpression": "!!@local.report_4 && !!@local.report_3 && @local.report_4 !== \"\" && @local.report_3 !== \"\"",
+            "matchedExpression": "@local.report_3",
+            "type": "local",
+            "fieldName": "report_3"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_5_6": [
+          "value"
+        ],
+        "@local.report_4.filter": [
+          "value"
+        ],
+        "@local.report_3.includes": [
+          "value"
+        ],
+        "@local.check_5_6.includes": [
+          "value"
+        ],
+        "!@local.check_4_5.includes": [
+          "value"
+        ],
+        "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])": [
+          "value"
+        ],
+        "!@local.report_4": [
+          "condition"
+        ],
+        "!@local.report_3": [
+          "condition"
+        ],
+        "@local.report_4": [
+          "condition"
+        ],
+        "@local.report_3": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "check_2_3",
+      "value": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "!!@local.report_3 && !!@local.report_2 && @local.report_3 !== \"\" && @local.report_2 !== \"\"",
+      "type": "set_variable",
+      "_nested_name": "check_2_3",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.check_5_6",
+            "type": "local",
+            "fieldName": "check_5_6"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.report_3.filter",
+            "type": "local",
+            "fieldName": "report_3"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.report_2.includes",
+            "type": "local",
+            "fieldName": "report_2"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.check_5_6.includes",
+            "type": "local",
+            "fieldName": "check_5_6"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+            "matchedExpression": "!@local.check_4_5.includes",
+            "type": "local",
+            "fieldName": "check_4_5"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+            "matchedExpression": "!@local.check_3_4.includes",
+            "type": "local",
+            "fieldName": "check_3_4"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+            "type": "calc",
+            "fieldName": "@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!!@local.report_3 && !!@local.report_2 && @local.report_3 !== \"\" && @local.report_2 !== \"\"",
+            "matchedExpression": "!@local.report_3",
+            "type": "local",
+            "fieldName": "report_3"
+          },
+          {
+            "fullExpression": "!!@local.report_3 && !!@local.report_2 && @local.report_3 !== \"\" && @local.report_2 !== \"\"",
+            "matchedExpression": "!@local.report_2",
+            "type": "local",
+            "fieldName": "report_2"
+          },
+          {
+            "fullExpression": "!!@local.report_3 && !!@local.report_2 && @local.report_3 !== \"\" && @local.report_2 !== \"\"",
+            "matchedExpression": "@local.report_3",
+            "type": "local",
+            "fieldName": "report_3"
+          },
+          {
+            "fullExpression": "!!@local.report_3 && !!@local.report_2 && @local.report_3 !== \"\" && @local.report_2 !== \"\"",
+            "matchedExpression": "@local.report_2",
+            "type": "local",
+            "fieldName": "report_2"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_5_6": [
+          "value"
+        ],
+        "@local.report_3.filter": [
+          "value"
+        ],
+        "@local.report_2.includes": [
+          "value"
+        ],
+        "@local.check_5_6.includes": [
+          "value"
+        ],
+        "!@local.check_4_5.includes": [
+          "value"
+        ],
+        "!@local.check_3_4.includes": [
+          "value"
+        ],
+        "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])": [
+          "value"
+        ],
+        "!@local.report_3": [
+          "condition"
+        ],
+        "!@local.report_2": [
+          "condition"
+        ],
+        "@local.report_3": [
+          "condition"
+        ],
+        "@local.report_2": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "check_1_2",
+      "value": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
+      "type": "set_variable",
+      "_nested_name": "check_1_2",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.check_5_6",
+            "type": "local",
+            "fieldName": "check_5_6"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.report_2.filter",
+            "type": "local",
+            "fieldName": "report_2"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.report_1.includes",
+            "type": "local",
+            "fieldName": "report_1"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@local.check_5_6.includes",
+            "type": "local",
+            "fieldName": "check_5_6"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "matchedExpression": "!@local.check_4_5.includes",
+            "type": "local",
+            "fieldName": "check_4_5"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "matchedExpression": "!@local.check_3_4.includes",
+            "type": "local",
+            "fieldName": "check_3_4"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "matchedExpression": "!@local.check_2_3.includes",
+            "type": "local",
+            "fieldName": "check_2_3"
+          },
+          {
+            "fullExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "matchedExpression": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+            "type": "calc",
+            "fieldName": "@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0]"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
+            "matchedExpression": "!@local.report_2",
+            "type": "local",
+            "fieldName": "report_2"
+          },
+          {
+            "fullExpression": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
+            "matchedExpression": "!@local.report_1",
+            "type": "local",
+            "fieldName": "report_1"
+          },
+          {
+            "fullExpression": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
+            "matchedExpression": "@local.report_2",
+            "type": "local",
+            "fieldName": "report_2"
+          },
+          {
+            "fullExpression": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
+            "matchedExpression": "@local.report_1",
+            "type": "local",
+            "fieldName": "report_1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.check_5_6": [
+          "value"
+        ],
+        "@local.report_2.filter": [
+          "value"
+        ],
+        "@local.report_1.includes": [
+          "value"
+        ],
+        "@local.check_5_6.includes": [
+          "value"
+        ],
+        "!@local.check_4_5.includes": [
+          "value"
+        ],
+        "!@local.check_3_4.includes": [
+          "value"
+        ],
+        "!@local.check_2_3.includes": [
+          "value"
+        ],
+        "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])": [
+          "value"
+        ],
+        "!@local.report_2": [
+          "condition"
+        ],
+        "!@local.report_1": [
+          "condition"
+        ],
+        "@local.report_2": [
+          "condition"
+        ],
+        "@local.report_1": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "follow_up_count_group",
+      "value": "@data.parents",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "no_of_follow_ups",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : no_of_follow_ups : @items.length",
+          "_cleaned": "data_changed | set_local : no_of_follow_ups : @items.length"
+        }
+      ],
+      "parameter_list": {
+        "filter": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))"
+      },
+      "_nested_name": "follow_up_count_group",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parents",
+            "matchedExpression": "@data.parents",
+            "type": "data",
+            "fieldName": "parents"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.archived",
+              "type": "item",
+              "fieldName": "archived"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@local.group_id",
+              "type": "local",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.last_follow_up",
+              "type": "item",
+              "fieldName": "last_follow_up"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@item.last_follow_up",
+              "type": "item",
+              "fieldName": "last_follow_up"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@local.seven_days_ago",
+              "type": "local",
+              "fieldName": "seven_days_ago"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@local.check_5_6",
+              "type": "local",
+              "fieldName": "check_5_6"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_5",
+              "type": "item",
+              "fieldName": "week_5"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_6",
+              "type": "item",
+              "fieldName": "week_6"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@local.check_4_5",
+              "type": "local",
+              "fieldName": "check_4_5"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_4",
+              "type": "item",
+              "fieldName": "week_4"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_5",
+              "type": "item",
+              "fieldName": "week_5"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@local.check_3_4",
+              "type": "local",
+              "fieldName": "check_3_4"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_3",
+              "type": "item",
+              "fieldName": "week_3"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_4",
+              "type": "item",
+              "fieldName": "week_4"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@local.check_2_3",
+              "type": "local",
+              "fieldName": "check_2_3"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_2",
+              "type": "item",
+              "fieldName": "week_2"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_3",
+              "type": "item",
+              "fieldName": "week_3"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@local.check_1_2",
+              "type": "local",
+              "fieldName": "check_1_2"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_1",
+              "type": "item",
+              "fieldName": "week_1"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "matchedExpression": "!@item.week_2",
+              "type": "item",
+              "fieldName": "week_2"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.parents": [
+          "value"
+        ],
+        "!@item.archived": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter",
+          "parameter_list.filter",
+          "parameter_list.filter",
+          "parameter_list.filter",
+          "parameter_list.filter",
+          "parameter_list.filter"
+        ],
+        "@local.group_id": [
+          "parameter_list.filter"
+        ],
+        "!@item.last_follow_up": [
+          "parameter_list.filter"
+        ],
+        "@item.last_follow_up": [
+          "parameter_list.filter"
+        ],
+        "@local.seven_days_ago": [
+          "parameter_list.filter"
+        ],
+        "@local.check_5_6": [
+          "parameter_list.filter"
+        ],
+        "!@item.week_5": [
+          "parameter_list.filter",
+          "parameter_list.filter"
+        ],
+        "!@item.week_6": [
+          "parameter_list.filter"
+        ],
+        "@local.check_4_5": [
+          "parameter_list.filter"
+        ],
+        "!@item.week_4": [
+          "parameter_list.filter",
+          "parameter_list.filter"
+        ],
+        "@local.check_3_4": [
+          "parameter_list.filter"
+        ],
+        "!@item.week_3": [
+          "parameter_list.filter",
+          "parameter_list.filter"
+        ],
+        "@local.check_2_3": [
+          "parameter_list.filter"
+        ],
+        "!@item.week_2": [
+          "parameter_list.filter",
+          "parameter_list.filter"
+        ],
+        "@local.check_1_2": [
+          "parameter_list.filter"
+        ],
+        "!@item.week_1": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "rows": [
+        {
+          "type": "text",
+          "name": "single_report",
+          "value": "@local.no_pending_reports @global.report_pending",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "background-color: rgba(255, 204, 0, 0.6)",
+            "border-radius: 4px",
+            "padding: 0 2px",
+            "box-decoration-break: clone"
+          ],
+          "condition": "@local.no_pending_reports == 1",
+          "_nested_name": "display_group_51.single_report",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.no_pending_reports @global.report_pending",
+                "matchedExpression": "@local.no_pending_reports",
+                "type": "local",
+                "fieldName": "no_pending_reports"
+              },
+              {
+                "fullExpression": "@local.no_pending_reports @global.report_pending",
+                "matchedExpression": "@global.report_pending",
+                "type": "global",
+                "fieldName": "report_pending"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "@local.no_pending_reports == 1",
+                "matchedExpression": "@local.no_pending_reports",
+                "type": "local",
+                "fieldName": "no_pending_reports"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.no_pending_reports": [
+              "value",
+              "condition"
+            ],
+            "@global.report_pending": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "multiple_reports",
+          "value": "@local.no_pending_reports @global.reports_pending",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "background-color: rgba(255, 204, 0, 0.6)",
+            "border-radius: 4px",
+            "padding: 0 2px",
+            "box-decoration-break: clone"
+          ],
+          "condition": "@local.no_pending_reports > 1",
+          "_nested_name": "display_group_51.multiple_reports",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.no_pending_reports @global.reports_pending",
+                "matchedExpression": "@local.no_pending_reports",
+                "type": "local",
+                "fieldName": "no_pending_reports"
+              },
+              {
+                "fullExpression": "@local.no_pending_reports @global.reports_pending",
+                "matchedExpression": "@global.reports_pending",
+                "type": "global",
+                "fieldName": "reports_pending"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "@local.no_pending_reports > 1",
+                "matchedExpression": "@local.no_pending_reports",
+                "type": "local",
+                "fieldName": "no_pending_reports"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.no_pending_reports": [
+              "value",
+              "condition"
+            ],
+            "@global.reports_pending": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "single_follow_up",
+          "value": "@local.no_of_follow_ups @global.follow_up",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "background-color: rgba(158, 203, 245, 0.6)",
+            "border-radius: 4px",
+            "padding: 0 2px",
+            "box-decoration-break: clone"
+          ],
+          "condition": "@local.no_of_follow_ups == 1",
+          "_nested_name": "display_group_51.single_follow_up",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.no_of_follow_ups @global.follow_up",
+                "matchedExpression": "@local.no_of_follow_ups",
+                "type": "local",
+                "fieldName": "no_of_follow_ups"
+              },
+              {
+                "fullExpression": "@local.no_of_follow_ups @global.follow_up",
+                "matchedExpression": "@global.follow_up",
+                "type": "global",
+                "fieldName": "follow_up"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "@local.no_of_follow_ups == 1",
+                "matchedExpression": "@local.no_of_follow_ups",
+                "type": "local",
+                "fieldName": "no_of_follow_ups"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.no_of_follow_ups": [
+              "value",
+              "condition"
+            ],
+            "@global.follow_up": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "multiple_follow_ups",
+          "value": "@local.no_of_follow_ups @global.follow_ups",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "background-color: rgba(158, 203, 245, 0.6)",
+            "border-radius: 4px",
+            "padding: 0 2px",
+            "box-decoration-break: clone"
+          ],
+          "condition": "@local.no_of_follow_ups > 1",
+          "_nested_name": "display_group_51.multiple_follow_ups",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.no_of_follow_ups @global.follow_ups",
+                "matchedExpression": "@local.no_of_follow_ups",
+                "type": "local",
+                "fieldName": "no_of_follow_ups"
+              },
+              {
+                "fullExpression": "@local.no_of_follow_ups @global.follow_ups",
+                "matchedExpression": "@global.follow_ups",
+                "type": "global",
+                "fieldName": "follow_ups"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "@local.no_of_follow_ups > 1",
+                "matchedExpression": "@local.no_of_follow_ups",
+                "type": "local",
+                "fieldName": "no_of_follow_ups"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.no_of_follow_ups": [
+              "value",
+              "condition"
+            ],
+            "@global.follow_ups": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "spacer",
+          "value": "",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "display_group_51.spacer"
+        }
+      ],
+      "name": "display_group_51",
+      "_nested_name": "display_group_51"
+    }
+  ],
+  "_xlsxPath": "templates/actions_cw.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+}

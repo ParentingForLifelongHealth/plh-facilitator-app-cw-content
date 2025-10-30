@@ -4,10 +4,14 @@
   "status": "released",
   "rows": [
     {
-      "name": "calc_module_count",
-      "value": false,
+      "name": "group_id",
       "type": "set_variable",
-      "_nested_name": "calc_module_count"
+      "_nested_name": "group_id"
+    },
+    {
+      "name": "current_package",
+      "type": "set_variable",
+      "_nested_name": "current_package"
     },
     {
       "name": "module_count",
@@ -41,7 +45,7 @@
     },
     {
       "name": "complete_field",
-      "value": "completed_@fields.current_group_no",
+      "value": "completed_@local.group_id",
       "_translations": {
         "value": {}
       },
@@ -50,15 +54,15 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "completed_@fields.current_group_no",
-            "matchedExpression": "@fields.current_group_no",
-            "type": "fields",
-            "fieldName": "current_group_no"
+            "fullExpression": "completed_@local.group_id",
+            "matchedExpression": "@local.group_id",
+            "type": "local",
+            "fieldName": "group_id"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@fields.current_group_no": [
+        "@local.group_id": [
           "value"
         ]
       }
@@ -82,7 +86,9 @@
           "_cleaned": "data_changed | set_local : module_count: @items.length"
         }
       ],
-      "condition": "!!@local.calc_module_count",
+      "parameter_list": {
+        "filter": "!@item.tag_list || (@item.tag_list).includes(@local.current_package)"
+      },
       "_nested_name": "get_module_count",
       "_dynamicFields": {
         "value": [
@@ -93,21 +99,41 @@
             "fieldName": "modules"
           }
         ],
-        "condition": [
-          {
-            "fullExpression": "!!@local.calc_module_count",
-            "matchedExpression": "!@local.calc_module_count",
-            "type": "local",
-            "fieldName": "calc_module_count"
-          }
-        ]
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.tag_list || (@item.tag_list).includes(@local.current_package)",
+              "matchedExpression": "!@item.tag_list",
+              "type": "item",
+              "fieldName": "tag_list"
+            },
+            {
+              "fullExpression": "!@item.tag_list || (@item.tag_list).includes(@local.current_package)",
+              "matchedExpression": "@item.tag_list",
+              "type": "item",
+              "fieldName": "tag_list"
+            },
+            {
+              "fullExpression": "!@item.tag_list || (@item.tag_list).includes(@local.current_package)",
+              "matchedExpression": "@local.current_package",
+              "type": "local",
+              "fieldName": "current_package"
+            }
+          ]
+        }
       },
       "_dynamicDependencies": {
         "@data.modules": [
           "value"
         ],
-        "!@local.calc_module_count": [
-          "condition"
+        "!@item.tag_list": [
+          "parameter_list.filter"
+        ],
+        "@item.tag_list": [
+          "parameter_list.filter"
+        ],
+        "@local.current_package": [
+          "parameter_list.filter"
         ]
       }
     },
@@ -217,7 +243,7 @@
             "flex: 1"
           ],
           "name": "task_progress_bar_1",
-          "_nested_name": "display_group_11.task_progress_bar_1",
+          "_nested_name": "display_group_12.task_progress_bar_1",
           "_dynamicFields": {
             "parameter_list": {
               "progress_percent": [
@@ -243,7 +269,7 @@
             "value": {}
           },
           "name": "text_2",
-          "_nested_name": "display_group_11.text_2",
+          "_nested_name": "display_group_12.text_2",
           "_dynamicFields": {
             "value": [
               {
@@ -288,8 +314,8 @@
           }
         }
       ],
-      "name": "display_group_11",
-      "_nested_name": "display_group_11"
+      "name": "display_group_12",
+      "_nested_name": "display_group_12"
     }
   ],
   "_xlsxPath": "templates/Parent Groups CW.xlsx",

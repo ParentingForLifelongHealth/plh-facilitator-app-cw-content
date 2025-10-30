@@ -2,8 +2,6 @@
   "flow_type": "global",
   "flow_name": "deployment_global_cw",
   "status": "released",
-  "override_target": "deployment_global",
-  "override_condition": "@fields._deployment_name == \"plh_facilitator_cw\"",
   "rows": [
     {
       "type": "declare_global_constant",
@@ -254,16 +252,6 @@
     },
     {
       "type": "declare_global_constant",
-      "name": "support_button",
-      "value": "Frequently Asked Questions",
-      "_translations": {
-        "value": {
-          "cw_pap": true
-        }
-      }
-    },
-    {
-      "type": "declare_global_constant",
       "name": "guide_text",
       "value": "GUIDE",
       "_translations": {
@@ -286,16 +274,6 @@
       "type": "declare_global_constant",
       "name": "language",
       "value": "Language",
-      "_translations": {
-        "value": {
-          "cw_pap": true
-        }
-      }
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "go_to_start",
-      "value": "View Module from Start",
       "_translations": {
         "value": {
           "cw_pap": true
