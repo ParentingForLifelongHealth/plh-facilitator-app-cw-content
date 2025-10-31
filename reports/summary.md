@@ -216,7 +216,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/people-outline.svg | 0.9 | 1 |
 | images/icons/people.svg | 1 | 2 |
 | images/icons/person-circle-outline.svg | 0.7 | 1 |
-| images/icons/person_cog.svg | 2.9 | 2 |
+| images/icons/person_cog.svg | 2.9 | 3 |
 | images/icons/qr-code-outline.svg | 1 | 1 |
 | images/icons/settings-outline.svg | 1.2 | 2 |
 | images/icons/share.svg | 2.3 | 2 |
@@ -252,7 +252,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | data_list | onboarding | 1 |
 | data_pipe |  | 1 |
 | generator |  | 6 |
-| global |  | 12 |
+| global |  | 13 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
 | template |  | 101 |
