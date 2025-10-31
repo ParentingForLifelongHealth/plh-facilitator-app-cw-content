@@ -14,8 +14,7 @@
           "args": [
             "uncompleted"
           ],
-          "_raw": "uncompleted | emit: uncompleted",
-          "_cleaned": "uncompleted | emit: uncompleted"
+          "_raw": "uncompleted | emit: uncompleted"
         }
       ],
       "rows": [
@@ -935,8 +934,7 @@
                 "show_number_error",
                 true
               ],
-              "_raw": "changed | set_local: show_number_error: TRUE",
-              "_cleaned": "changed | set_local: show_number_error: TRUE"
+              "_raw": "changed | set_local: show_number_error: TRUE"
             }
           ],
           "parameter_list": {
@@ -1048,8 +1046,7 @@
                 "show_age_error",
                 true
               ],
-              "_raw": "changed | set_local: show_age_error: TRUE",
-              "_cleaned": "changed | set_local: show_age_error: TRUE"
+              "_raw": "changed | set_local: show_age_error: TRUE"
             }
           ],
           "parameter_list": {
@@ -1161,8 +1158,7 @@
                 "show_sex_error",
                 true
               ],
-              "_raw": "changed | set_local: show_sex_error: TRUE",
-              "_cleaned": "changed | set_local: show_sex_error: TRUE"
+              "_raw": "changed | set_local: show_sex_error: TRUE"
             }
           ],
           "parameter_list": {
@@ -1324,8 +1320,7 @@
                 "show_child_count_error",
                 true
               ],
-              "_raw": "changed | set_local: show_child_count_error: TRUE",
-              "_cleaned": "changed | set_local: show_child_count_error: TRUE"
+              "_raw": "changed | set_local: show_child_count_error: TRUE"
             }
           ],
           "parameter_list": {
@@ -1517,8 +1512,7 @@
                 "show_child_age_error",
                 true
               ],
-              "_raw": "changed | set_local: show_child_age_error: TRUE",
-              "_cleaned": "changed | set_local: show_child_age_error: TRUE"
+              "_raw": "changed | set_local: show_child_age_error: TRUE"
             }
           ],
           "parameter_list": {
@@ -1630,8 +1624,7 @@
                 "show_child_sex_error",
                 true
               ],
-              "_raw": "changed | set_local: show_child_sex_error: TRUE",
-              "_cleaned": "changed | set_local: show_child_sex_error: TRUE"
+              "_raw": "changed | set_local: show_child_sex_error: TRUE"
             }
           ],
           "parameter_list": {
@@ -1755,8 +1748,7 @@
                 "show_other_home_error",
                 true
               ],
-              "_raw": "changed | set_local: show_other_home_error: TRUE",
-              "_cleaned": "changed | set_local: show_other_home_error: TRUE"
+              "_raw": "changed | set_local: show_other_home_error: TRUE"
             }
           ],
           "parameter_list": {
@@ -1880,8 +1872,7 @@
                 "show_hours_error",
                 true
               ],
-              "_raw": "changed | set_local: show_hours_error: TRUE",
-              "_cleaned": "changed | set_local: show_hours_error: TRUE"
+              "_raw": "changed | set_local: show_hours_error: TRUE"
             }
           ],
           "parameter_list": {
@@ -2097,8 +2088,7 @@
                 "first_name",
                 "@items[0].first_name"
               ],
-              "_raw": "data_changed | set_local : first_name: @items[0].first_name",
-              "_cleaned": "data_changed | set_local : first_name: @items[0].first_name"
+              "_raw": "data_changed | set_local : first_name: @items[0].first_name"
             },
             {
               "trigger": "data_changed",
@@ -2107,8 +2097,7 @@
                 "last_name",
                 "@items[0].last_name"
               ],
-              "_raw": "data_changed | set_local : last_name: @items[0].last_name",
-              "_cleaned": "data_changed | set_local : last_name: @items[0].last_name"
+              "_raw": "data_changed | set_local : last_name: @items[0].last_name"
             },
             {
               "trigger": "data_changed",
@@ -2117,8 +2106,7 @@
                 "number",
                 "@items[0].number"
               ],
-              "_raw": "data_changed | set_local : number: @items[0].number",
-              "_cleaned": "data_changed | set_local : number: @items[0].number"
+              "_raw": "data_changed | set_local : number: @items[0].number"
             },
             {
               "trigger": "data_changed",
@@ -2127,8 +2115,7 @@
                 "age",
                 "@items[0].age"
               ],
-              "_raw": "data_changed | set_local : age: @items[0].age",
-              "_cleaned": "data_changed | set_local : age: @items[0].age"
+              "_raw": "data_changed | set_local : age: @items[0].age"
             },
             {
               "trigger": "data_changed",
@@ -2137,8 +2124,7 @@
                 "sex",
                 "@items[0].sex"
               ],
-              "_raw": "data_changed | set_local : sex: @items[0].sex",
-              "_cleaned": "data_changed | set_local : sex: @items[0].sex"
+              "_raw": "data_changed | set_local : sex: @items[0].sex"
             },
             {
               "trigger": "data_changed",
@@ -2147,8 +2133,7 @@
                 "child_count",
                 "@items[0]?.child_count"
               ],
-              "_raw": "data_changed | set_local : child_count: @items[0]?.child_count",
-              "_cleaned": "data_changed | set_local : child_count: @items[0]?.child_count"
+              "_raw": "data_changed | set_local : child_count: @items[0]?.child_count"
             },
             {
               "trigger": "data_changed",
@@ -2157,8 +2142,7 @@
                 "child_age",
                 "@items[0]?.child_age"
               ],
-              "_raw": "data_changed | set_local : child_age: @items[0]?.child_age",
-              "_cleaned": "data_changed | set_local : child_age: @items[0]?.child_age"
+              "_raw": "data_changed | set_local : child_age: @items[0]?.child_age"
             },
             {
               "trigger": "data_changed",
@@ -2167,8 +2151,7 @@
                 "child_sex",
                 "@items[0].child_sex"
               ],
-              "_raw": "data_changed | set_local : child_sex: @items[0].child_sex",
-              "_cleaned": "data_changed | set_local : child_sex: @items[0].child_sex"
+              "_raw": "data_changed | set_local : child_sex: @items[0].child_sex"
             },
             {
               "trigger": "data_changed",
@@ -2177,8 +2160,7 @@
                 "other_home",
                 "@items[0].other_home"
               ],
-              "_raw": "data_changed | set_local : other_home: @items[0].other_home",
-              "_cleaned": "data_changed | set_local : other_home: @items[0].other_home"
+              "_raw": "data_changed | set_local : other_home: @items[0].other_home"
             },
             {
               "trigger": "data_changed",
@@ -2187,8 +2169,7 @@
                 "hours",
                 "@items[0].hours"
               ],
-              "_raw": "data_changed | set_local : hours: @items[0].hours",
-              "_cleaned": "data_changed | set_local : hours: @items[0].hours"
+              "_raw": "data_changed | set_local : hours: @items[0].hours"
             },
             {
               "trigger": "data_changed",
@@ -2197,8 +2178,7 @@
                 "goal",
                 "@items[0].goal"
               ],
-              "_raw": "data_changed | set_local : goal: @items[0].goal",
-              "_cleaned": "data_changed | set_local : goal: @items[0].goal"
+              "_raw": "data_changed | set_local : goal: @items[0].goal"
             },
             {
               "trigger": "data_changed",
@@ -2207,8 +2187,7 @@
                 "consoltation",
                 "@items[0].consoltation"
               ],
-              "_raw": "data_changed | set_local : consoltation: @items[0].consoltation",
-              "_cleaned": "data_changed | set_local : consoltation: @items[0].consoltation"
+              "_raw": "data_changed | set_local : consoltation: @items[0].consoltation"
             }
           ],
           "parameter_list": {
@@ -2669,8 +2648,7 @@
           "args": [
             "delete_parent"
           ],
-          "_raw": "click | pop_up: delete_parent",
-          "_cleaned": "click | pop_up: delete_parent"
+          "_raw": "click | pop_up: delete_parent"
         }
       ],
       "name": "button_35",
@@ -2703,7 +2681,6 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-              "_cleaned": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
               "params": {
                 "_list_id": "parents",
                 "_id": "@fields.current_parent_no",
@@ -2727,8 +2704,7 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
+              "_raw": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -2736,8 +2712,7 @@
               "args": [
                 "server_sync"
               ],
-              "_raw": "click | emit: server_sync",
-              "_cleaned": "click | emit: server_sync"
+              "_raw": "click | emit: server_sync"
             }
           ],
           "parameter_list": {
@@ -2752,86 +2727,6 @@
             "action_list": {
               "0": {
                 "_raw": [
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@fields.current_parent_no",
-                    "type": "fields",
-                    "fieldName": "current_parent_no"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.first_name",
-                    "type": "local",
-                    "fieldName": "first_name"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.last_name",
-                    "type": "local",
-                    "fieldName": "last_name"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.number",
-                    "type": "local",
-                    "fieldName": "number"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.age",
-                    "type": "local",
-                    "fieldName": "age"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.sex",
-                    "type": "local",
-                    "fieldName": "sex"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.child_count",
-                    "type": "local",
-                    "fieldName": "child_count"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.child_age",
-                    "type": "local",
-                    "fieldName": "child_age"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.child_sex",
-                    "type": "local",
-                    "fieldName": "child_sex"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.other_home",
-                    "type": "local",
-                    "fieldName": "other_home"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.hours",
-                    "type": "local",
-                    "fieldName": "hours"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.goal",
-                    "type": "local",
-                    "fieldName": "goal"
-                  },
-                  {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
-                    "matchedExpression": "@local.consoltation",
-                    "type": "local",
-                    "fieldName": "consoltation"
-                  }
-                ],
-                "_cleaned": [
                   {
                     "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
                     "matchedExpression": "@fields.current_parent_no",
@@ -3033,67 +2928,54 @@
           "_dynamicDependencies": {
             "@fields.current_parent_no": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params._id"
             ],
             "@local.first_name": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.first_name"
             ],
             "@local.last_name": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.last_name"
             ],
             "@local.number": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.number"
             ],
             "@local.age": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.age"
             ],
             "@local.sex": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.sex"
             ],
             "@local.child_count": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.child_count"
             ],
             "@local.child_age": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.child_age"
             ],
             "@local.child_sex": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.child_sex"
             ],
             "@local.other_home": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.other_home"
             ],
             "@local.hours": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.hours"
             ],
             "@local.goal": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.goal"
             ],
             "@local.consoltation": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.consoltation"
             ],
             "!@local.valid": [

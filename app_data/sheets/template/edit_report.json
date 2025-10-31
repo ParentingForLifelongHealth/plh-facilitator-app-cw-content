@@ -57,8 +57,7 @@
             "current_report_no",
             "@items[0]?.id"
           ],
-          "_raw": "data_changed | set_field: current_report_no: @items[0]?.id",
-          "_cleaned": "data_changed | set_field: current_report_no: @items[0]?.id"
+          "_raw": "data_changed | set_field: current_report_no: @items[0]?.id"
         },
         {
           "trigger": "data_changed",
@@ -67,8 +66,7 @@
             "is_new",
             true
           ],
-          "_raw": "data_changed | set_local: is_new: true",
-          "_cleaned": "data_changed | set_local: is_new: true"
+          "_raw": "data_changed | set_local: is_new: true"
         }
       ],
       "parameter_list": {
@@ -183,8 +181,7 @@
                           "args": [
                             "uncompleted"
                           ],
-                          "_raw": "uncompleted | emit: uncompleted",
-                          "_cleaned": "uncompleted | emit: uncompleted"
+                          "_raw": "uncompleted | emit: uncompleted"
                         }
                       ],
                       "style_list": [
@@ -313,8 +310,7 @@
                   "args": [
                     "completed"
                   ],
-                  "_raw": "completed | emit: completed",
-                  "_cleaned": "completed | emit: completed"
+                  "_raw": "completed | emit: completed"
                 }
               ],
               "rows": [
