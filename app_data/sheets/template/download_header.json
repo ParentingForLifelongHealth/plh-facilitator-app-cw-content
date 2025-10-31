@@ -30,8 +30,7 @@
               "args": [
                 "@local.asset"
               ],
-              "_raw": "click | save_to_device: @local.asset",
-              "_cleaned": "click | save_to_device: @local.asset"
+              "_raw": "click | save_to_device: @local.asset"
             }
           ],
           "parameter_list": {
@@ -58,14 +57,6 @@
                     "type": "local",
                     "fieldName": "asset"
                   }
-                ],
-                "_cleaned": [
-                  {
-                    "fullExpression": "click | save_to_device: @local.asset",
-                    "matchedExpression": "@local.asset",
-                    "type": "local",
-                    "fieldName": "asset"
-                  }
                 ]
               }
             }
@@ -73,8 +64,7 @@
           "_dynamicDependencies": {
             "@local.asset": [
               "action_list.0.args.0",
-              "action_list.0._raw",
-              "action_list.0._cleaned"
+              "action_list.0._raw"
             ]
           }
         }

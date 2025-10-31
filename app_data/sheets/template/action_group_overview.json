@@ -111,8 +111,7 @@
             "no_pending_reports",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : no_pending_reports : @items.length",
-          "_cleaned": "data_changed | set_local : no_pending_reports : @items.length"
+          "_raw": "data_changed | set_local : no_pending_reports : @items.length"
         }
       ],
       "parameter_list": {
@@ -551,8 +550,7 @@
             "report_6",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_6 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_6 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_6 : @items.map(item => item.group_id)"
         }
       ],
       "parameter_list": {
@@ -631,8 +629,7 @@
             "report_5",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_5 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_5 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_5 : @items.map(item => item.group_id)"
         }
       ],
       "parameter_list": {
@@ -711,8 +708,7 @@
             "report_4",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_4 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_4 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_4 : @items.map(item => item.group_id)"
         }
       ],
       "parameter_list": {
@@ -791,8 +787,7 @@
             "report_3",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_3 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_3 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_3 : @items.map(item => item.group_id)"
         }
       ],
       "parameter_list": {
@@ -871,8 +866,7 @@
             "report_2",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_2 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_2 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_2 : @items.map(item => item.group_id)"
         }
       ],
       "parameter_list": {
@@ -951,8 +945,7 @@
             "report_1",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_1 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_1 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_1 : @items.map(item => item.group_id)"
         }
       ],
       "parameter_list": {
@@ -1956,8 +1949,7 @@
             "no_of_follow_ups",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : no_of_follow_ups : @items.length",
-          "_cleaned": "data_changed | set_local : no_of_follow_ups : @items.length"
+          "_raw": "data_changed | set_local : no_of_follow_ups : @items.length"
         }
       ],
       "parameter_list": {

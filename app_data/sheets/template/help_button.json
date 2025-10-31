@@ -18,8 +18,7 @@
           "args": [
             "@local.help_template"
           ],
-          "_raw": "click | pop_up: @local.help_template",
-          "_cleaned": "click | pop_up: @local.help_template"
+          "_raw": "click | pop_up: @local.help_template"
         }
       ],
       "parameter_list": {
@@ -46,14 +45,6 @@
                 "type": "local",
                 "fieldName": "help_template"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "click | pop_up: @local.help_template",
-                "matchedExpression": "@local.help_template",
-                "type": "local",
-                "fieldName": "help_template"
-              }
             ]
           }
         }
@@ -61,8 +52,7 @@
       "_dynamicDependencies": {
         "@local.help_template": [
           "action_list.0.args.0",
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ]
       }
     }
