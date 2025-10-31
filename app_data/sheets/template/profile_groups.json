@@ -637,31 +637,56 @@
           }
         },
         {
-          "type": "text",
-          "value": "@global.archived_date_prefix@item.archived_date",
+          "name": "archive_date",
+          "value": "@calc((() => {const d = new Date(@item.archived_date);\n    const month = d.toLocaleString('default', { month: 'short' });\n    const year = d.getFullYear();\n    return `${month} ${year}`;\n  })())",
           "_translations": {
             "value": {}
           },
-          "name": "text_4_@item.id",
-          "_nested_name": "data_items_15.text_4_@item.id",
+          "exclude_from_translation": true,
+          "type": "set_variable",
+          "_nested_name": "data_items_15.archive_date",
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "@global.archived_date_prefix@item.archived_date",
+                "fullExpression": "@calc((() => {const d = new Date(@item.archived_date);\n    const month = d.toLocaleString('default', { month: 'short' });\n    const year = d.getFullYear();\n    return `${month} ${year}`;\n  })())",
+                "matchedExpression": "@item.archived_date",
+                "type": "item",
+                "fieldName": "archived_date"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.archived_date": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "value": "@global.archived_date_prefix @local.archive_date",
+          "_translations": {
+            "value": {}
+          },
+          "name": "text_5_@item.id",
+          "_nested_name": "data_items_15.text_5_@item.id",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.archived_date_prefix @local.archive_date",
                 "matchedExpression": "@global.archived_date_prefix",
                 "type": "global",
                 "fieldName": "archived_date_prefix"
               },
               {
-                "fullExpression": "@global.archived_date_prefix@item.archived_date",
-                "matchedExpression": "@item.archived_date",
-                "type": "item",
-                "fieldName": "archived_date"
+                "fullExpression": "@global.archived_date_prefix @local.archive_date",
+                "matchedExpression": "@local.archive_date",
+                "type": "local",
+                "fieldName": "archive_date"
               }
             ],
             "name": [
               {
-                "fullExpression": "text_4_@item.id",
+                "fullExpression": "text_5_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -669,7 +694,7 @@
             ],
             "_nested_name": [
               {
-                "fullExpression": "data_items_15.text_4_@item.id",
+                "fullExpression": "data_items_15.text_5_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -680,7 +705,7 @@
             "@global.archived_date_prefix": [
               "value"
             ],
-            "@item.archived_date": [
+            "@local.archive_date": [
               "value"
             ],
             "@item.id": [

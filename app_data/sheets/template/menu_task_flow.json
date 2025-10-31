@@ -414,7 +414,7 @@
               "condition": "@item.id == \"module_1_lesson\"",
               "style_list": [
                 "margin-bottom: 10px",
-                "color: #46607F"
+                "color: var(--ion-color-secondary-900)"
               ],
               "_nested_name": "dg_modules.data_items_1.module_week_1",
               "_dynamicFields": {
@@ -456,9 +456,8 @@
               },
               "condition": "@item.id == \"module_2_lesson\"",
               "style_list": [
-                "margin-top: 20px",
                 "margin-bottom: 10px",
-                "color: #46607F"
+                "color: var(--ion-color-secondary-900)"
               ],
               "_nested_name": "dg_modules.data_items_1.module_week_2",
               "_dynamicFields": {
@@ -500,9 +499,8 @@
               },
               "condition": "@item.id == \"module_3_lesson\"",
               "style_list": [
-                "margin-top: 20px",
                 "margin-bottom: 10px",
-                "color: #46607F"
+                "color: var(--ion-color-secondary-900)"
               ],
               "_nested_name": "dg_modules.data_items_1.module_week_3",
               "_dynamicFields": {
@@ -544,9 +542,8 @@
               },
               "condition": "@item.id == \"module_4_lesson\"",
               "style_list": [
-                "margin-top: 20px",
                 "margin-bottom: 10px",
-                "color: #46607F"
+                "color: var(--ion-color-secondary-900)"
               ],
               "_nested_name": "dg_modules.data_items_1.module_week_4",
               "_dynamicFields": {
@@ -588,9 +585,8 @@
               },
               "condition": "@item.id == \"module_5_lesson\"",
               "style_list": [
-                "margin-top: 20px",
                 "margin-bottom: 10px",
-                "color: #46607F"
+                "color: var(--ion-color-secondary-900)"
               ],
               "_nested_name": "dg_modules.data_items_1.module_week_5",
               "_dynamicFields": {
@@ -632,9 +628,8 @@
               },
               "condition": "@item.id == \"module_6_lesson\"",
               "style_list": [
-                "margin-top: 20px",
                 "margin-bottom: 10px",
-                "color: #46607F"
+                "color: var(--ion-color-secondary-900)"
               ],
               "_nested_name": "dg_modules.data_items_1.module_week_6",
               "_dynamicFields": {
@@ -1792,12 +1787,6 @@
       }
     },
     {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_3",
-      "_nested_name": "set_variable_3"
-    },
-    {
       "type": "display_group",
       "parameter_list": {
         "style": "column"
@@ -1805,34 +1794,6 @@
       "condition": "!@local.selected_group || @fields.current_group_no == \"NULL\"",
       "exclude_from_translation": true,
       "rows": [
-        {
-          "type": "image",
-          "name": "logo",
-          "value": "@global.sessions_no_groups_image",
-          "_translations": {
-            "value": {}
-          },
-          "exclude_from_translation": true,
-          "style_list": [
-            "width: 40%"
-          ],
-          "_nested_name": "display_group_16.logo",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@global.sessions_no_groups_image",
-                "matchedExpression": "@global.sessions_no_groups_image",
-                "type": "global",
-                "fieldName": "sessions_no_groups_image"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@global.sessions_no_groups_image": [
-              "value"
-            ]
-          }
-        },
         {
           "type": "text",
           "value": "@global.sessions_no_groups",
@@ -1843,8 +1804,8 @@
             "text_align": "center"
           },
           "exclude_from_translation": true,
-          "name": "text_2",
-          "_nested_name": "display_group_16.text_2",
+          "name": "text_1",
+          "_nested_name": "display_group_16.text_1",
           "_dynamicFields": {
             "value": [
               {
@@ -1858,6 +1819,47 @@
           "_dynamicDependencies": {
             "@global.sessions_no_groups": [
               "value"
+            ]
+          }
+        },
+        {
+          "type": "round_button",
+          "name": "groups_go_to",
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "go_to",
+              "args": [
+                "profile_groups"
+              ],
+              "_raw": "click | go_to: profile_groups",
+              "_cleaned": "click | go_to: profile_groups"
+            }
+          ],
+          "parameter_list": {
+            "variant": "no-background",
+            "icon_src": "@global.add_group_icon"
+          },
+          "exclude_from_translation": true,
+          "style_list": [
+            "max-width: max-content"
+          ],
+          "_nested_name": "display_group_16.groups_go_to",
+          "_dynamicFields": {
+            "parameter_list": {
+              "icon_src": [
+                {
+                  "fullExpression": "@global.add_group_icon",
+                  "matchedExpression": "@global.add_group_icon",
+                  "type": "global",
+                  "fieldName": "add_group_icon"
+                }
+              ]
+            }
+          },
+          "_dynamicDependencies": {
+            "@global.add_group_icon": [
+              "parameter_list.icon_src"
             ]
           }
         }
