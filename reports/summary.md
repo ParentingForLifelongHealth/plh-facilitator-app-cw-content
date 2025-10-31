@@ -23,13 +23,14 @@
 | lottie_animation | 8 |
 | navigation_bar | 1 |
 | pdf | 1 |
+| plh_bottom_nav | 1 |
 | plh_module_list_item | 5 |
 | qr_code | 2 |
 | radio_button_grid | 15 |
 | round_button | 30 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 896 |
+| set_variable | 901 |
 | simple_checkbox | 7 |
 | task_card | 1 |
 | task_progress_bar | 4 |
@@ -182,11 +183,11 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/articles/sessions.png | 2394.1 | 1 |
 | images/backgrounds/home_top_left.svg | 2.4 | 1 |
 | images/backgrounds/reports_top_right.svg | 2 | 1 |
-| images/icons/add-outline.svg | 0.2 | 1 |
+| images/icons/add-outline.svg | 0.2 | 2 |
 | images/icons/add_circle.svg | 0.4 | 1 |
 | images/icons/arrow_back.svg | 0.2 | 1 |
 | images/icons/arrow_forward.svg | 0.2 | 1 |
-| images/icons/bookmarks-outline.svg | 0.4 | 1 |
+| images/icons/bookmarks-outline.svg | 0.4 | 2 |
 | images/icons/cancel.svg | 0.4 | 3 |
 | images/icons/check_circle.png | 0.6 | 1 |
 | images/icons/checkmark-outline.svg | 0.2 | 2 |
@@ -204,7 +205,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/follow_up_message.svg | 1.6 | 1 |
 | images/icons/globe-outline.svg | 0.8 | 1 |
 | images/icons/help.svg | 0.5 | 1 |
-| images/icons/home-outline.svg | 0.5 | 1 |
+| images/icons/home-outline.svg | 0.5 | 2 |
 | images/icons/home_white.svg | 1.7 | 1 |
 | images/icons/information-circle-outline.svg | 0.5 | 1 |
 | images/icons/library.png | 1 | 1 |
@@ -213,11 +214,11 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/log-out-outline.svg | 0.3 | 1 |
 | images/icons/pencil_white.svg | 2 | 1 |
 | images/icons/people-outline.svg | 0.9 | 1 |
-| images/icons/people.svg | 1 | 1 |
+| images/icons/people.svg | 1 | 2 |
 | images/icons/person-circle-outline.svg | 0.7 | 1 |
 | images/icons/person_cog.svg | 2.9 | 2 |
 | images/icons/qr-code-outline.svg | 1 | 1 |
-| images/icons/settings-outline.svg | 1.2 | 1 |
+| images/icons/settings-outline.svg | 1.2 | 2 |
 | images/icons/share.svg | 2.3 | 2 |
 | images/icons/unarchive.svg | 1.1 | 1 |
 | images/icons/verified.svg | 0.5 | 5 |

@@ -104,6 +104,30 @@
               "value"
             ]
           }
+        },
+        {
+          "name": "current_package",
+          "value": "@fields.current_package",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "module_progress.current_package",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@fields.current_package",
+                "matchedExpression": "@fields.current_package",
+                "type": "fields",
+                "fieldName": "current_package"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@fields.current_package": [
+              "value"
+            ]
+          }
         }
       ],
       "name": "module_progress",

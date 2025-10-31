@@ -188,7 +188,7 @@
             },
             {
               "name": "content_package",
-              "value": "@item.package",
+              "value": "@item.content_package",
               "_translations": {
                 "value": {}
               },
@@ -197,15 +197,15 @@
               "_dynamicFields": {
                 "value": [
                   {
-                    "fullExpression": "@item.package",
-                    "matchedExpression": "@item.package",
+                    "fullExpression": "@item.content_package",
+                    "matchedExpression": "@item.content_package",
                     "type": "item",
-                    "fieldName": "package"
+                    "fieldName": "content_package"
                   }
                 ]
               },
               "_dynamicDependencies": {
-                "@item.package": [
+                "@item.content_package": [
                   "value"
                 ]
               }

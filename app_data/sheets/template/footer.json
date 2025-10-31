@@ -184,6 +184,7 @@
         "button_list": "@local.button_list",
         "variant": "text_primary"
       },
+      "condition": false,
       "_nested_name": "navigation_bar",
       "_dynamicFields": {
         "parameter_list": {
@@ -199,6 +200,157 @@
       },
       "_dynamicDependencies": {
         "@local.button_list": [
+          "parameter_list.button_list"
+        ]
+      }
+    },
+    {
+      "name": "button_list_pill",
+      "value": [
+        {
+          "icon": "images/icons/home-outline.svg",
+          "label": "@local.home",
+          "target_template": "@data.app_section.home.template"
+        },
+        {
+          "icon": "images/icons/add-outline.svg",
+          "label": "@local.actions",
+          "target_template": "actions"
+        },
+        {
+          "icon": "images/icons/people.svg",
+          "label": "@local.groups",
+          "target_template": "profile_groups"
+        },
+        {
+          "icon": "images/icons/bookmarks-outline.svg",
+          "label": "@local.library",
+          "target_template": "@data.app_section.library.template"
+        },
+        {
+          "icon": "images/icons/settings-outline.svg",
+          "label": "@local.settings",
+          "target_template": "profile"
+        }
+      ],
+      "type": "set_variable",
+      "_nested_name": "button_list_pill",
+      "_dynamicFields": {
+        "value": {
+          "0": {
+            "label": [
+              {
+                "fullExpression": "@local.home",
+                "matchedExpression": "@local.home",
+                "type": "local",
+                "fieldName": "home"
+              }
+            ],
+            "target_template": [
+              {
+                "fullExpression": "@data.app_section.home.template",
+                "matchedExpression": "@data.app_section.home.template",
+                "type": "data",
+                "fieldName": "app_section"
+              }
+            ]
+          },
+          "1": {
+            "label": [
+              {
+                "fullExpression": "@local.actions",
+                "matchedExpression": "@local.actions",
+                "type": "local",
+                "fieldName": "actions"
+              }
+            ]
+          },
+          "2": {
+            "label": [
+              {
+                "fullExpression": "@local.groups",
+                "matchedExpression": "@local.groups",
+                "type": "local",
+                "fieldName": "groups"
+              }
+            ]
+          },
+          "3": {
+            "label": [
+              {
+                "fullExpression": "@local.library",
+                "matchedExpression": "@local.library",
+                "type": "local",
+                "fieldName": "library"
+              }
+            ],
+            "target_template": [
+              {
+                "fullExpression": "@data.app_section.library.template",
+                "matchedExpression": "@data.app_section.library.template",
+                "type": "data",
+                "fieldName": "app_section"
+              }
+            ]
+          },
+          "4": {
+            "label": [
+              {
+                "fullExpression": "@local.settings",
+                "matchedExpression": "@local.settings",
+                "type": "local",
+                "fieldName": "settings"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.home": [
+          "value.0.label"
+        ],
+        "@data.app_section.home.template": [
+          "value.0.target_template"
+        ],
+        "@local.actions": [
+          "value.1.label"
+        ],
+        "@local.groups": [
+          "value.2.label"
+        ],
+        "@local.library": [
+          "value.3.label"
+        ],
+        "@data.app_section.library.template": [
+          "value.3.target_template"
+        ],
+        "@local.settings": [
+          "value.4.label"
+        ]
+      }
+    },
+    {
+      "type": "plh_bottom_nav",
+      "parameter_list": {
+        "button_list": "@local.button_list_pill",
+        "variant": "pill"
+      },
+      "name": "plh_bottom_nav_10",
+      "_nested_name": "plh_bottom_nav_10",
+      "_dynamicFields": {
+        "parameter_list": {
+          "button_list": [
+            {
+              "fullExpression": "@local.button_list_pill",
+              "matchedExpression": "@local.button_list_pill",
+              "type": "local",
+              "fieldName": "button_list_pill"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.button_list_pill": [
           "parameter_list.button_list"
         ]
       }
