@@ -5,18 +5,33 @@
   "rows": [
     {
       "name": "group_id",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "group_id"
     },
     {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_3",
+      "_nested_name": "set_variable_3"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_4",
+      "_nested_name": "set_variable_4"
+    },
+    {
       "name": "no_pending_reports",
       "value": 0,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "no_pending_reports"
     },
     {
       "name": "no_of_follow_ups",
       "value": 0,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "no_of_follow_ups"
     },
@@ -27,8 +42,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_5",
-      "_nested_name": "text_5",
+      "exclude_from_translation": true,
+      "name": "text_7",
+      "_nested_name": "text_7",
       "_dynamicFields": {
         "value": [
           {
@@ -52,8 +68,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_6",
-      "_nested_name": "text_6",
+      "exclude_from_translation": true,
+      "name": "text_8",
+      "_nested_name": "text_8",
       "_dynamicFields": {
         "value": [
           {
@@ -69,6 +86,18 @@
           "value"
         ]
       }
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_9",
+      "_nested_name": "set_variable_9"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_10",
+      "_nested_name": "set_variable_10"
     },
     {
       "type": "data_items",
@@ -89,6 +118,7 @@
       "parameter_list": {
         "filter": "@item.pending && (@item.group_id == @local.group_id)"
       },
+      "exclude_from_translation": true,
       "rows": [],
       "_nested_name": "counting_pending",
       "_dynamicFields": {
@@ -139,11 +169,72 @@
       }
     },
     {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_13",
+      "_nested_name": "set_variable_13"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_14",
+      "_nested_name": "set_variable_14"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_15",
+      "_nested_name": "set_variable_15"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_16",
+      "_nested_name": "set_variable_16"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_17",
+      "_nested_name": "set_variable_17"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_18",
+      "_nested_name": "set_variable_18"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_19",
+      "_nested_name": "set_variable_19"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_20",
+      "_nested_name": "set_variable_20"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_21",
+      "_nested_name": "set_variable_21"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_22",
+      "_nested_name": "set_variable_22"
+    },
+    {
       "name": "seven_days_ago",
       "value": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
       "_translations": {
         "value": {}
       },
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "seven_days_ago",
       "_dynamicFields": {
@@ -169,8 +260,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_10",
-      "_nested_name": "text_10",
+      "exclude_from_translation": true,
+      "name": "text_24",
+      "_nested_name": "text_24",
       "_dynamicFields": {
         "value": [
           {
@@ -188,59 +280,88 @@
       }
     },
     {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_25",
+      "_nested_name": "set_variable_25"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_26",
+      "_nested_name": "set_variable_26"
+    },
+    {
       "name": "check_5_6",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_5_6"
     },
     {
       "name": "check_4_5",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_4_5"
     },
     {
       "name": "check_3_4",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_3_4"
     },
     {
       "name": "check_2_3",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_2_3"
     },
     {
       "name": "check_1_2",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_1_2"
     },
     {
       "name": "report_1",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_1"
     },
     {
       "name": "report_2",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_2"
     },
     {
       "name": "report_3",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_3"
     },
     {
       "name": "report_4",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_4"
     },
     {
       "name": "report_5",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_5"
     },
     {
       "name": "report_6",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_6"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_38",
+      "_nested_name": "set_variable_38"
     },
     {
       "type": "text",
@@ -249,8 +370,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_22",
-      "_nested_name": "text_22",
+      "exclude_from_translation": true,
+      "name": "text_39",
+      "_nested_name": "text_39",
       "_dynamicFields": {
         "value": [
           {
@@ -274,8 +396,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_23",
-      "_nested_name": "text_23",
+      "exclude_from_translation": true,
+      "name": "text_40",
+      "_nested_name": "text_40",
       "_dynamicFields": {
         "value": [
           {
@@ -299,8 +422,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_24",
-      "_nested_name": "text_24",
+      "exclude_from_translation": true,
+      "name": "text_41",
+      "_nested_name": "text_41",
       "_dynamicFields": {
         "value": [
           {
@@ -324,8 +448,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_25",
-      "_nested_name": "text_25",
+      "exclude_from_translation": true,
+      "name": "text_42",
+      "_nested_name": "text_42",
       "_dynamicFields": {
         "value": [
           {
@@ -349,8 +474,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_26",
-      "_nested_name": "text_26",
+      "exclude_from_translation": true,
+      "name": "text_43",
+      "_nested_name": "text_43",
       "_dynamicFields": {
         "value": [
           {
@@ -374,8 +500,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_27",
-      "_nested_name": "text_27",
+      "exclude_from_translation": true,
+      "name": "text_44",
+      "_nested_name": "text_44",
       "_dynamicFields": {
         "value": [
           {
@@ -391,6 +518,24 @@
           "value"
         ]
       }
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_45",
+      "_nested_name": "set_variable_45"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_46",
+      "_nested_name": "set_variable_46"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_47",
+      "_nested_name": "set_variable_47"
     },
     {
       "type": "data_items",
@@ -413,8 +558,9 @@
       "parameter_list": {
         "filter": "!@item.pending && @item.report_id == \"week_6\" && (@item.group_id == @local.group_id)"
       },
-      "name": "data_items_28",
-      "_nested_name": "data_items_28",
+      "exclude_from_translation": true,
+      "name": "data_items_48",
+      "_nested_name": "data_items_48",
       "_dynamicFields": {
         "value": [
           {
@@ -492,8 +638,9 @@
       "parameter_list": {
         "filter": "!@item.pending && @item.report_id == \"week_5\" && (@item.group_id == @local.group_id)"
       },
-      "name": "data_items_29",
-      "_nested_name": "data_items_29",
+      "exclude_from_translation": true,
+      "name": "data_items_49",
+      "_nested_name": "data_items_49",
       "_dynamicFields": {
         "value": [
           {
@@ -571,8 +718,9 @@
       "parameter_list": {
         "filter": "!@item.pending && @item.report_id == \"week_4\" && (@item.group_id == @local.group_id)"
       },
-      "name": "data_items_30",
-      "_nested_name": "data_items_30",
+      "exclude_from_translation": true,
+      "name": "data_items_50",
+      "_nested_name": "data_items_50",
       "_dynamicFields": {
         "value": [
           {
@@ -650,8 +798,9 @@
       "parameter_list": {
         "filter": "!@item.pending && @item.report_id == \"week_3\" && (@item.group_id == @local.group_id)"
       },
-      "name": "data_items_31",
-      "_nested_name": "data_items_31",
+      "exclude_from_translation": true,
+      "name": "data_items_51",
+      "_nested_name": "data_items_51",
       "_dynamicFields": {
         "value": [
           {
@@ -729,8 +878,9 @@
       "parameter_list": {
         "filter": "!@item.pending && @item.report_id == \"week_2\" && (@item.group_id == @local.group_id)"
       },
-      "name": "data_items_32",
-      "_nested_name": "data_items_32",
+      "exclude_from_translation": true,
+      "name": "data_items_52",
+      "_nested_name": "data_items_52",
       "_dynamicFields": {
         "value": [
           {
@@ -808,8 +958,9 @@
       "parameter_list": {
         "filter": "!@item.pending && @item.report_id == \"week_1\" && (@item.group_id == @local.group_id)"
       },
-      "name": "data_items_33",
-      "_nested_name": "data_items_33",
+      "exclude_from_translation": true,
+      "name": "data_items_53",
+      "_nested_name": "data_items_53",
       "_dynamicFields": {
         "value": [
           {
@@ -867,14 +1018,21 @@
       }
     },
     {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_54",
+      "_nested_name": "set_variable_54"
+    },
+    {
       "type": "text",
       "value": "c12: @local.check_1_2",
       "_translations": {
         "value": {}
       },
       "condition": false,
-      "name": "text_34",
-      "_nested_name": "text_34",
+      "exclude_from_translation": true,
+      "name": "text_55",
+      "_nested_name": "text_55",
       "_dynamicFields": {
         "value": [
           {
@@ -898,8 +1056,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_35",
-      "_nested_name": "text_35",
+      "exclude_from_translation": true,
+      "name": "text_56",
+      "_nested_name": "text_56",
       "_dynamicFields": {
         "value": [
           {
@@ -923,8 +1082,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_36",
-      "_nested_name": "text_36",
+      "exclude_from_translation": true,
+      "name": "text_57",
+      "_nested_name": "text_57",
       "_dynamicFields": {
         "value": [
           {
@@ -948,8 +1108,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_37",
-      "_nested_name": "text_37",
+      "exclude_from_translation": true,
+      "name": "text_58",
+      "_nested_name": "text_58",
       "_dynamicFields": {
         "value": [
           {
@@ -973,8 +1134,9 @@
         "value": {}
       },
       "condition": false,
-      "name": "text_38",
-      "_nested_name": "text_38",
+      "exclude_from_translation": true,
+      "name": "text_59",
+      "_nested_name": "text_59",
       "_dynamicFields": {
         "value": [
           {
@@ -992,12 +1154,19 @@
       }
     },
     {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_60",
+      "_nested_name": "set_variable_60"
+    },
+    {
       "name": "report_1",
       "value": "@calc([0])",
       "_translations": {
         "value": {}
       },
       "condition": "@local.report_1 == \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_1",
       "_dynamicFields": {
@@ -1034,6 +1203,7 @@
         "value": {}
       },
       "condition": "@local.report_2 == \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_2",
       "_dynamicFields": {
@@ -1070,6 +1240,7 @@
         "value": {}
       },
       "condition": "@local.report_3 == \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_3",
       "_dynamicFields": {
@@ -1106,6 +1277,7 @@
         "value": {}
       },
       "condition": "@local.report_4 == \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_4",
       "_dynamicFields": {
@@ -1142,6 +1314,7 @@
         "value": {}
       },
       "condition": "@local.report_5 == \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_5",
       "_dynamicFields": {
@@ -1178,6 +1351,7 @@
         "value": {}
       },
       "condition": "@local.report_6 == \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "report_6",
       "_dynamicFields": {
@@ -1208,12 +1382,19 @@
       }
     },
     {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_67",
+      "_nested_name": "set_variable_67"
+    },
+    {
       "name": "check_5_6",
       "value": "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))",
       "_translations": {
         "value": {}
       },
       "condition": "!!@local.report_6 && !!@local.report_5 && @local.report_6 !== \"\" && @local.report_5 !== \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_5_6",
       "_dynamicFields": {
@@ -1295,6 +1476,7 @@
         "value": {}
       },
       "condition": "!!@local.report_5 && !!@local.report_4 && @local.report_5 !== \"\" && @local.report_4 !== \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_4_5",
       "_dynamicFields": {
@@ -1394,6 +1576,7 @@
         "value": {}
       },
       "condition": "!!@local.report_4 && !!@local.report_3 && @local.report_4 !== \"\" && @local.report_3 !== \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_3_4",
       "_dynamicFields": {
@@ -1502,6 +1685,7 @@
         "value": {}
       },
       "condition": "!!@local.report_3 && !!@local.report_2 && @local.report_3 !== \"\" && @local.report_2 !== \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_2_3",
       "_dynamicFields": {
@@ -1619,6 +1803,7 @@
         "value": {}
       },
       "condition": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "check_1_2",
       "_dynamicFields": {
@@ -1739,6 +1924,24 @@
       }
     },
     {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_73",
+      "_nested_name": "set_variable_73"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_74",
+      "_nested_name": "set_variable_74"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_75",
+      "_nested_name": "set_variable_75"
+    },
+    {
       "type": "data_items",
       "name": "follow_up_count_group",
       "value": "@data.parents",
@@ -1760,6 +1963,7 @@
       "parameter_list": {
         "filter": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))"
       },
+      "exclude_from_translation": true,
       "_nested_name": "follow_up_count_group",
       "_dynamicFields": {
         "value": [
@@ -1998,7 +2202,44 @@
       }
     },
     {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_77",
+      "_nested_name": "set_variable_77"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_78",
+      "_nested_name": "set_variable_78"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_79",
+      "_nested_name": "set_variable_79"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_80",
+      "_nested_name": "set_variable_80"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_1",
+      "_nested_name": "set_variable_1"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_4",
+      "_nested_name": "set_variable_4"
+    },
+    {
       "type": "display_group",
+      "exclude_from_translation": true,
       "rows": [
         {
           "type": "text",
@@ -2014,7 +2255,8 @@
             "box-decoration-break: clone"
           ],
           "condition": "@local.no_pending_reports == 1",
-          "_nested_name": "display_group_51.single_report",
+          "exclude_from_translation": true,
+          "_nested_name": "display_group_81.single_report",
           "_dynamicFields": {
             "value": [
               {
@@ -2063,7 +2305,8 @@
             "box-decoration-break: clone"
           ],
           "condition": "@local.no_pending_reports > 1",
-          "_nested_name": "display_group_51.multiple_reports",
+          "exclude_from_translation": true,
+          "_nested_name": "display_group_81.multiple_reports",
           "_dynamicFields": {
             "value": [
               {
@@ -2112,7 +2355,8 @@
             "box-decoration-break: clone"
           ],
           "condition": "@local.no_of_follow_ups == 1",
-          "_nested_name": "display_group_51.single_follow_up",
+          "exclude_from_translation": true,
+          "_nested_name": "display_group_81.single_follow_up",
           "_dynamicFields": {
             "value": [
               {
@@ -2161,7 +2405,8 @@
             "box-decoration-break: clone"
           ],
           "condition": "@local.no_of_follow_ups > 1",
-          "_nested_name": "display_group_51.multiple_follow_ups",
+          "exclude_from_translation": true,
+          "_nested_name": "display_group_81.multiple_follow_ups",
           "_dynamicFields": {
             "value": [
               {
@@ -2203,11 +2448,12 @@
           "_translations": {
             "value": {}
           },
-          "_nested_name": "display_group_51.spacer"
+          "exclude_from_translation": true,
+          "_nested_name": "display_group_81.spacer"
         }
       ],
-      "name": "display_group_51",
-      "_nested_name": "display_group_51"
+      "name": "display_group_81",
+      "_nested_name": "display_group_81"
     }
   ],
   "_xlsxPath": "templates/actions_cw.xlsx",

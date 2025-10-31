@@ -170,6 +170,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "_nested_name": "test_delivered",
       "_dynamicFields": {
         "value": [
@@ -197,6 +198,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "_nested_name": "test_pending",
       "_dynamicFields": {
         "value": [
