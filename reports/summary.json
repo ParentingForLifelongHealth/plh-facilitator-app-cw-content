@@ -74,10 +74,6 @@
         "count": 8
       },
       {
-        "type": "navigation_bar",
-        "count": 1
-      },
-      {
         "type": "pdf",
         "count": 1
       },
@@ -111,7 +107,7 @@
       },
       {
         "type": "set_variable",
-        "count": 901
+        "count": 900
       },
       {
         "type": "simple_checkbox",
@@ -271,12 +267,12 @@
     "data": [
       {
         "assets": "total",
-        "KB": "23917 KB",
+        "KB": "23922 KB",
         "MB": "23.9 MB"
       },
       {
         "assets": "unused",
-        "KB": "180 KB",
+        "KB": "184 KB",
         "MB": "0.2 MB"
       }
     ]
@@ -328,6 +324,10 @@
         "size_kb": 1.5
       },
       {
+        "path": "images/icons/add-outline.svg",
+        "size_kb": 0.2
+      },
+      {
         "path": "images/icons/archive.svg",
         "size_kb": 0.5
       },
@@ -338,6 +338,10 @@
       {
         "path": "images/icons/book_white.svg",
         "size_kb": 1.5
+      },
+      {
+        "path": "images/icons/bookmarks-outline.svg",
+        "size_kb": 0.4
       },
       {
         "path": "images/icons/check_circle.svg",
@@ -376,6 +380,10 @@
         "size_kb": 1.6
       },
       {
+        "path": "images/icons/home-outline.svg",
+        "size_kb": 0.5
+      },
+      {
         "path": "images/icons/house_white.svg",
         "size_kb": 0.4
       },
@@ -402,6 +410,10 @@
       {
         "path": "images/icons/pencil-outline.svg",
         "size_kb": 0.3
+      },
+      {
+        "path": "images/icons/people.svg",
+        "size_kb": 1
       },
       {
         "path": "images/icons/people_network.svg",
@@ -458,6 +470,10 @@
       {
         "path": "images/icons/settings-outline-white.svg",
         "size_kb": 2.3
+      },
+      {
+        "path": "images/icons/settings-outline.svg",
+        "size_kb": 1.2
       },
       {
         "path": "images/icons/settings.png",
@@ -604,9 +620,9 @@
         "size_kb": 2
       },
       {
-        "path": "images/icons/add-outline.svg",
-        "count": 2,
-        "size_kb": 0.2
+        "path": "images/icons/add-outline-brown.svg",
+        "count": 1,
+        "size_kb": 1.2
       },
       {
         "path": "images/icons/add_circle.svg",
@@ -624,9 +640,9 @@
         "size_kb": 0.2
       },
       {
-        "path": "images/icons/bookmarks-outline.svg",
-        "count": 2,
-        "size_kb": 0.4
+        "path": "images/icons/bookmarks-outline-brown.svg",
+        "count": 1,
+        "size_kb": 1.5
       },
       {
         "path": "images/icons/cancel.svg",
@@ -714,9 +730,9 @@
         "size_kb": 0.5
       },
       {
-        "path": "images/icons/home-outline.svg",
-        "count": 2,
-        "size_kb": 0.5
+        "path": "images/icons/home-outline-brown.svg",
+        "count": 1,
+        "size_kb": 1.6
       },
       {
         "path": "images/icons/home_white.svg",
@@ -754,14 +770,14 @@
         "size_kb": 2
       },
       {
+        "path": "images/icons/people-brown.svg",
+        "count": 1,
+        "size_kb": 2.1
+      },
+      {
         "path": "images/icons/people-outline.svg",
         "count": 1,
         "size_kb": 0.9
-      },
-      {
-        "path": "images/icons/people.svg",
-        "count": 2,
-        "size_kb": 1
       },
       {
         "path": "images/icons/person-circle-outline.svg",
@@ -779,9 +795,9 @@
         "size_kb": 1
       },
       {
-        "path": "images/icons/settings-outline.svg",
-        "count": 2,
-        "size_kb": 1.2
+        "path": "images/icons/settings-outline-brown.svg",
+        "count": 1,
+        "size_kb": 2.3
       },
       {
         "path": "images/icons/share.svg",

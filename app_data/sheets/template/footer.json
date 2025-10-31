@@ -53,182 +53,30 @@
       "_nested_name": "settings"
     },
     {
-      "name": "button_list",
-      "value": [
-        {
-          "image": "images/icons/home-outline.svg",
-          "text": "@local.home",
-          "target_template": "@data.app_section.home.template"
-        },
-        {
-          "image": "images/icons/add-outline.svg",
-          "text": "@local.actions",
-          "target_template": "actions"
-        },
-        {
-          "image": "images/icons/people.svg",
-          "text": "@local.groups",
-          "target_template": "profile_groups"
-        },
-        {
-          "image": "images/icons/bookmarks-outline.svg",
-          "text": "@local.library",
-          "target_template": "@data.app_section.library.template"
-        },
-        {
-          "image": "images/icons/settings-outline.svg",
-          "text": "@local.settings",
-          "target_template": "profile"
-        }
-      ],
-      "type": "set_variable",
-      "_nested_name": "button_list",
-      "_dynamicFields": {
-        "value": {
-          "0": {
-            "text": [
-              {
-                "fullExpression": "@local.home",
-                "matchedExpression": "@local.home",
-                "type": "local",
-                "fieldName": "home"
-              }
-            ],
-            "target_template": [
-              {
-                "fullExpression": "@data.app_section.home.template",
-                "matchedExpression": "@data.app_section.home.template",
-                "type": "data",
-                "fieldName": "app_section"
-              }
-            ]
-          },
-          "1": {
-            "text": [
-              {
-                "fullExpression": "@local.actions",
-                "matchedExpression": "@local.actions",
-                "type": "local",
-                "fieldName": "actions"
-              }
-            ]
-          },
-          "2": {
-            "text": [
-              {
-                "fullExpression": "@local.groups",
-                "matchedExpression": "@local.groups",
-                "type": "local",
-                "fieldName": "groups"
-              }
-            ]
-          },
-          "3": {
-            "text": [
-              {
-                "fullExpression": "@local.library",
-                "matchedExpression": "@local.library",
-                "type": "local",
-                "fieldName": "library"
-              }
-            ],
-            "target_template": [
-              {
-                "fullExpression": "@data.app_section.library.template",
-                "matchedExpression": "@data.app_section.library.template",
-                "type": "data",
-                "fieldName": "app_section"
-              }
-            ]
-          },
-          "4": {
-            "text": [
-              {
-                "fullExpression": "@local.settings",
-                "matchedExpression": "@local.settings",
-                "type": "local",
-                "fieldName": "settings"
-              }
-            ]
-          }
-        }
-      },
-      "_dynamicDependencies": {
-        "@local.home": [
-          "value.0.text"
-        ],
-        "@data.app_section.home.template": [
-          "value.0.target_template"
-        ],
-        "@local.actions": [
-          "value.1.text"
-        ],
-        "@local.groups": [
-          "value.2.text"
-        ],
-        "@local.library": [
-          "value.3.text"
-        ],
-        "@data.app_section.library.template": [
-          "value.3.target_template"
-        ],
-        "@local.settings": [
-          "value.4.text"
-        ]
-      }
-    },
-    {
-      "type": "navigation_bar",
-      "name": "navigation_bar",
-      "parameter_list": {
-        "button_list": "@local.button_list",
-        "variant": "text_primary"
-      },
-      "condition": false,
-      "_nested_name": "navigation_bar",
-      "_dynamicFields": {
-        "parameter_list": {
-          "button_list": [
-            {
-              "fullExpression": "@local.button_list",
-              "matchedExpression": "@local.button_list",
-              "type": "local",
-              "fieldName": "button_list"
-            }
-          ]
-        }
-      },
-      "_dynamicDependencies": {
-        "@local.button_list": [
-          "parameter_list.button_list"
-        ]
-      }
-    },
-    {
       "name": "button_list_pill",
       "value": [
         {
-          "icon": "images/icons/home-outline.svg",
+          "icon": "images/icons/home-outline-brown.svg",
           "label": "@local.home",
           "target_template": "@data.app_section.home.template"
         },
         {
-          "icon": "images/icons/add-outline.svg",
+          "icon": "images/icons/add-outline-brown.svg",
           "label": "@local.actions",
           "target_template": "actions"
         },
         {
-          "icon": "images/icons/people.svg",
+          "icon": "images/icons/people-brown.svg",
           "label": "@local.groups",
           "target_template": "profile_groups"
         },
         {
-          "icon": "images/icons/bookmarks-outline.svg",
+          "icon": "images/icons/bookmarks-outline-brown.svg",
           "label": "@local.library",
           "target_template": "@data.app_section.library.template"
         },
         {
-          "icon": "images/icons/settings-outline.svg",
+          "icon": "images/icons/settings-outline-brown.svg",
           "label": "@local.settings",
           "target_template": "profile"
         }
@@ -335,8 +183,8 @@
         "button_list": "@local.button_list_pill",
         "variant": "pill"
       },
-      "name": "plh_bottom_nav_10",
-      "_nested_name": "plh_bottom_nav_10",
+      "name": "plh_bottom_nav_8",
+      "_nested_name": "plh_bottom_nav_8",
       "_dynamicFields": {
         "parameter_list": {
           "button_list": [
