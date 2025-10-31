@@ -22,7 +22,9 @@
       "type": "text",
       "value": "Date of session",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "name": "text_4",
       "_nested_name": "text_4"
@@ -88,7 +90,9 @@
       "type": "text",
       "value": "Parent's Attendance",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "name": "text_8",
       "_nested_name": "text_8"
@@ -458,7 +462,9 @@
       "type": "text",
       "value": "How did your session go?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "name": "text_12",
       "_nested_name": "text_12"
@@ -698,7 +704,9 @@
       "name": "challenges_valid",
       "value": "!(!!@local.session_rating && (@local.session_rating<= 3) && !@local.challenges)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "challenges_valid",
@@ -822,7 +830,9 @@
       "name": "valid",
       "value": "@local.session_date_valid && @local.session_rating_valid && @local.challenges_valid",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "valid",

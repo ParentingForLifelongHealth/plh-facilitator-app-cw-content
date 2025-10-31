@@ -13,8 +13,12 @@
       "condition": true,
       "display_text": "Date of session",
       "_translations": {
-        "display_text": {},
-        "validation_text": {}
+        "display_text": {
+          "cw_pap": true
+        },
+        "validation_text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "display_text": {
@@ -36,7 +40,9 @@
       "condition": true,
       "display_text": "Parent's Attendance",
       "_translations": {
-        "display_text": {}
+        "display_text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "display_text": {
@@ -57,9 +63,15 @@
       "condition": true,
       "display_text": "How did your session go?",
       "_translations": {
-        "display_text": {},
-        "placeholder": {},
-        "validation_text": {}
+        "display_text": {
+          "cw_pap": true
+        },
+        "placeholder": {
+          "cw_pap": true
+        },
+        "validation_text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "display_text": {
@@ -89,8 +101,12 @@
       "display_text": "What challenges did you face in delivering the session? Be specific.",
       "_translations": {
         "display_text": {},
-        "placeholder": {},
-        "validation_text": {}
+        "placeholder": {
+          "cw_pap": true
+        },
+        "validation_text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "display_text": {

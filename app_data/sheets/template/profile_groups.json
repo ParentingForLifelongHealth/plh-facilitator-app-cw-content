@@ -7,7 +7,9 @@
       "name": "create_new_group",
       "value": "Create New Group",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": false,
       "type": "set_variable",
@@ -17,7 +19,9 @@
       "type": "title",
       "value": "Groups",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "parameter_list": {
         "variant": "page_banner"
@@ -75,7 +79,7 @@
       }
     },
     {
-      "type": "text",
+      "type": "title",
       "name": "group_desc",
       "value": "@global.active_group_title",
       "_translations": {
@@ -294,15 +298,15 @@
       "exclude_from_translation": true,
       "rows": [
         {
-          "type": "text",
+          "type": "title",
           "value": "@global.archived_group_title",
           "_translations": {
             "value": {}
           },
           "condition": "@item._first",
           "exclude_from_translation": false,
-          "name": "text_1_@item.id",
-          "_nested_name": "data_items_15.text_1_@item.id",
+          "name": "title_1_@item.id",
+          "_nested_name": "data_items_15.title_1_@item.id",
           "_dynamicFields": {
             "value": [
               {
@@ -322,7 +326,7 @@
             ],
             "name": [
               {
-                "fullExpression": "text_1_@item.id",
+                "fullExpression": "title_1_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -330,7 +334,7 @@
             ],
             "_nested_name": [
               {
-                "fullExpression": "data_items_15.text_1_@item.id",
+                "fullExpression": "data_items_15.title_1_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -531,13 +535,115 @@
           }
         },
         {
+          "type": "template",
+          "value": "module_progress",
+          "rows": [
+            {
+              "name": "group_id",
+              "value": "@item.name",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "data_items_15.module_progress_@item.id.group_id",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.name",
+                    "matchedExpression": "@item.name",
+                    "type": "item",
+                    "fieldName": "name"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_15.module_progress_@item.id.group_id",
+                    "matchedExpression": "@item.id.group_id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.name": [
+                  "value"
+                ],
+                "@item.id.group_id": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "current_package",
+              "value": "@item.content_package",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "data_items_15.module_progress_@item.id.current_package",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.content_package",
+                    "matchedExpression": "@item.content_package",
+                    "type": "item",
+                    "fieldName": "content_package"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "data_items_15.module_progress_@item.id.current_package",
+                    "matchedExpression": "@item.id.current_package",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.content_package": [
+                  "value"
+                ],
+                "@item.id.current_package": [
+                  "_nested_name"
+                ]
+              }
+            }
+          ],
+          "name": "module_progress_@item.id",
+          "_nested_name": "data_items_15.module_progress_@item.id",
+          "_dynamicFields": {
+            "name": [
+              {
+                "fullExpression": "module_progress_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "data_items_15.module_progress_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.id": [
+              "name",
+              "_nested_name"
+            ]
+          }
+        },
+        {
           "type": "text",
           "value": "@global.archived_date_prefix@item.archived_date",
           "_translations": {
             "value": {}
           },
-          "name": "text_3_@item.id",
-          "_nested_name": "data_items_15.text_3_@item.id",
+          "name": "text_4_@item.id",
+          "_nested_name": "data_items_15.text_4_@item.id",
           "_dynamicFields": {
             "value": [
               {
@@ -555,7 +661,7 @@
             ],
             "name": [
               {
-                "fullExpression": "text_3_@item.id",
+                "fullExpression": "text_4_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"
@@ -563,7 +669,7 @@
             ],
             "_nested_name": [
               {
-                "fullExpression": "data_items_15.text_3_@item.id",
+                "fullExpression": "data_items_15.text_4_@item.id",
                 "matchedExpression": "@item.id",
                 "type": "item",
                 "fieldName": "id"

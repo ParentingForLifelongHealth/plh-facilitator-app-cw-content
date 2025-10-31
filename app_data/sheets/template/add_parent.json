@@ -23,7 +23,9 @@
           "name": "title",
           "value": "Add Parent",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "exclude_from_translation": false,
           "type": "set_variable",

@@ -23,7 +23,9 @@
           "name": "title",
           "value": "Edit Parent",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "exclude_from_translation": false,
           "type": "set_variable",
@@ -2619,7 +2621,9 @@
       "type": "text",
       "value": "to do",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "name": "text_32",
       "_nested_name": "text_32"
@@ -2628,7 +2632,9 @@
       "type": "text",
       "value": "Danger Zone",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "parameter_list": {
         "style": "emphasised"
@@ -2641,7 +2647,9 @@
       "type": "text",
       "value": "Delete parent to permanently delete all their data. This action cannot be undone.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "name": "text_34",
       "_nested_name": "text_34"
@@ -2650,7 +2658,9 @@
       "type": "button",
       "value": "Delete Parent",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "action_list": [
         {

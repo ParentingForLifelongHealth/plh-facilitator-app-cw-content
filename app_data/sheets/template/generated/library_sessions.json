@@ -24,7 +24,9 @@
           "name": "library_id",
           "value": "sessions",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "exclude_from_translation": true,
           "type": "set_variable",
@@ -34,7 +36,9 @@
           "name": "display_title",
           "value": "Session preparation",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "exclude_from_translation": true,
           "type": "set_variable",

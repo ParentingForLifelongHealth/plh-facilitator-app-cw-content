@@ -77,7 +77,9 @@
       "name": "settings_intro",
       "value": "Let's set up your profile:",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -85,7 +87,9 @@
       "name": "question_user_type",
       "value": "What is your role in @global.programme_name?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -103,7 +107,9 @@
       "name": "question_user_organisation",
       "value": "What is your organisation?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -111,7 +117,9 @@
       "name": "placeholder_user_organisation",
       "value": "Select organisation",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {

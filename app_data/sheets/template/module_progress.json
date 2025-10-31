@@ -29,7 +29,9 @@
       "name": "divide",
       "value": "/",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "divide"
@@ -38,7 +40,9 @@
       "name": "sessions",
       "value": "sessions",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "sessions"

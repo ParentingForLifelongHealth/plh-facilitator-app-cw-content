@@ -18,7 +18,9 @@
       "name": "actions",
       "value": "Actions",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "actions"
@@ -27,7 +29,9 @@
       "name": "groups",
       "value": "Groups",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "groups"
@@ -36,7 +40,9 @@
       "name": "library",
       "value": "Resources",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "library"

@@ -29,16 +29,16 @@
 | round_button | 30 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 900 |
+| set_variable | 903 |
 | simple_checkbox | 7 |
 | task_card | 1 |
 | task_progress_bar | 4 |
-| template | 123 |
+| template | 124 |
 | test | 1 |
-| text | 350 |
+| text | 348 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 67 |
+| title | 69 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 2 |
@@ -61,7 +61,7 @@
 | emit: uncompleted | 78 |
 | feedback | 24 |
 | go_to | 42 |
-| nav | 1 |
+| nav | 5 |
 | nav_stack | 9 |
 | pop_up | 16 |
 | reset_app | 4 |
@@ -69,7 +69,7 @@
 | save_to_device | 4 |
 | scroll | 1 |
 | set_data | 27 |
-| set_field | 86 |
+| set_field | 87 |
 | set_item | 13 |
 | set_local | 132 |
 | share | 2 |

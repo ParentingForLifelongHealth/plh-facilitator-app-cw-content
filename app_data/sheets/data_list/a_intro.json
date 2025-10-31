@@ -9,7 +9,9 @@
       "foreign_key": "about_prog",
       "text_1": "Welcome to the @global.prog_name programme!\n\nThank you for your commitment and dedication to supporting children and families in your community.\n\n@global.prog_name is a group-based family strengthening programme for families with children and teens ages 2 to 17. \nIt has been designed specifically with the goal of promoting positive parent-child relationships to reduce the risk of physical and emotional child abuse and neglect in the communities.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -24,8 +26,12 @@
       "media_asset": "images/articles/about_app_1.png",
       "text_1": "The @global.app_name is your digital companion for delivering the @global.prog_name programme with confidence. \n\nIt is designed to support you as a facilitator, offering practical tools, guidance, and ready-to-use resources so you can focus on what matters most - building positive connections with parents.\n**With this app, you can**:\n- 📘Access step-by-step instructions for delivering each module.\n- 💬Find guidance on introducing caregivers to the programme and providing ongoing support.\n- 📂Explore detailed content, structure, and delivery plans for the programme.\n- ▶️Use practical tools such as pre-drafted messages, audios, and videos to share with parent groups.\n- 👥Manage parent groups with ease -  add and update parent information, track attendance, and generate reports.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -42,7 +48,9 @@
       "foreign_key": "prog_develop",
       "text_1": "@global.prog_name was developed by the Ministry of Social Development, Labour, and Welfare, UNICEF the Netherlands, Parenting for Lifelong Health, in partnership with the Parenting Commission in Curaçao.\n\nBased on the original programme by Jenny Doubt, Jamie M. Lachman, Sussie Mjwara, Marija Raleva, and Jennel Reyes, with Yuanling Chen and Stephanie Eagling-Peche, licensed under CC BY-SA 4.0. \n\nAdapted by Judiska Cijntje, Peggy Grootens, Yanieck Abdoelrahman - de Wolff, Ytske van Winden, Deepali Barapatre, Jenny Doubt, and Jamie M. Lachman under the same license.\n\n@global.prog_name is part of a larger initiative called Parenting for Lifelong Health (PLH).",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -55,7 +63,9 @@
       "foreign_key": "prog_goals",
       "text_1": "The overall goal of @global.prog_name is to provide parents with the skills to promote healthy child development, learning, and wellbeing. We achieve this goal by improving the following: \n\n- **Parent sense of responsibility and commitment**: Recognise and embrace their essential role in raising children.\n\n- **Parenting knowledge, skill, and sense of competence**: Gaining practical skills and confidence in parenting\n\n- **Parent knowledge in child development**: Understanding key stages of child development and age-appropriate needs.\n\n- **Positive parenting behaviour**: Encouraging nurturing, respectful, and supportive interactions.\n\n- **Positive, consistent discipline strategies**: Using calm, constructive, and consistent discipline.\n\n- **Parental supervision of children**: Ensuring safe, attentive, and appropriate supervision.\n\n- **Child behaviour and wellbeing**: Promoting healthy emotional and social development.\n\n- **Caregiver mental health and social support**: Enhancing wellbeing through community support and self-care.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -68,8 +78,12 @@
       "foreign_key": "prog_delivery",
       "text_1": "As a facilitator, your role is to guide small groups of caregivers (usually 12–15 people) through the programme.\n\nThe @global.prog_name is designed to be flexible so that you can deliver it in a way that best fits your parent group.\nThe programme is delivered mainly through a **WhatsApp group**. You will set up and manage the group, share the curriculum with caregivers, and lead group discussions.\nWhen you create a parent group in the app, you will choose the age group focus: Caregivers of young children (2-9), Caregivers of teens (10-17), Caregivers of young children and teens (2-17)\nThe programme has **six sessions**. These can be a mix of in-person and remote (WhatsApp-based) sessions.\nYou and your organisation can decide which format is best for your group:\n- **Onboarding only (Session 1 in person)**: Meet parents face-to-face to build trust, explain how the programme works, and practice the first skills together.\n\n- **Closing only (Session 6 in person)**: Meet parents face-to-face at the end to reflect, celebrate progress, and encourage continued practice.\n- **Both onboarding and closing (Sessions 1 & 6 in person)**: Start strong with group connection and finish with a meaningful celebration.\n- **Fully remote (all sessions on WhatsApp)**: Run everything online if in-person meetings are not possible.\nThe core of the programme always happens in the WhatsApp group, whether or not you have in-person sessions.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -120,7 +134,9 @@
       "foreign_key": "in_person_session",
       "text_1": "_Only if you are delivering in-person session for your parent group_\n\n- Make sure all materials and venues are prepared in advance of the session.\n\n- Greet caregivers when they arrive at the session.\n\n- Create a safe, comfortable and empathetic space, make them feel welcome with a smile and eye contact.\n\n- Understand the relationship between the parent and their children. Remember that each relationship will be different.\n\n- Remember that every child develops at different speeds and stages. \n\n- Respect what participants share and be aware of different ages, genders, values, and circumstances. \n\n- Encourage caregivers to share and respond to each other - and praise them when they do it!\n\n- Remind caregivers of group rules when needed.\n\n- Notice when a parent is quiet or struggles with something and provides support. \n\n- Model the behaviour you want to see among the mothers, fathers, and caregivers. \n\n- Use energisers to keep live interactions engaging and fun.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -133,7 +149,9 @@
       "foreign_key": "prepare",
       "text_1": "It’s important to be **well prepared**. This shows respect for the parents and will help ensure that they get as much out of the module as they can. \n\nEach module begins with ways you can prepare to deliver a session.\n\nBefore the day begins:\n\n1️⃣ Ensure you know what needs to take place. \n\n2️⃣ On Learn with a Story, Home Practice Reminder and Chat Coming Soon that means thinking through when you will send messages.\n\n3️⃣ On Let’s Connect that means re-reading the module you will be giving, scrolling through messages that parents have sent about home practice (if any) and making sure that you are absolutely clear on what needs to take place. \n\n4️⃣ Go through any notes you have to personalise or direct message parents as necessary. This will also help you to remember what took place and prepare you for the next module.\n\n5️⃣ Ensure that any technology that you need is prepared: Phones charged, videos, recordings and illustration files have been tested and are ready to upload, internet connection secure. Make a back-up plan for any tech failures – including alternative ways to communicate with parents and re-scheduling group sessions if needed.\n\n6️⃣ If you’re creating audio or video files of yourself to upload, make sure that the audio or video message is as clear as possible – they don’t need to be professional, but they do need to communicate clearly! Make sure there’s enough light and that you are clearly visible, don’t change the direction of the video you are shooting (for video), avoid background sounds and speak clearly.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -146,7 +164,9 @@
       "foreign_key": "lesson_content",
       "text_1": "You’ll help parents learn one new parenting skill each week by sharing lesson content across the week.\n\n📹 **What You’ll Share**\n\nEach week, you’ll send videos with parenting tips. These tips are the main part of the module.\n\nMost videos include two short stories:\n👶 One for children aged 2–9\n🧑‍🎓 One for teens aged 10–17\n\n👉 If your group includes only young children or only teens, you’ll send one story video.\n👉 If your group includes both, you’ll send both videos.\n\n\n📖 **What’s in the videos?**\n\nEach story uses illustrations to show real-life situations.\nA short explainer at the end helps parents reflect and understand the parenting tips.\n\nThese stories make it easier for parents to relate to the skill and think about how to use it at home.\n\n\n🏡 **Home Practice**\n\nEach week, parents are encouraged to try the tips at home.\n\nThis is a key part of the programme!\nIt helps parents practice new skills in real life.\n\nYou can support them by helping them plan:\n🕓 When to try the tip\n📍 Where they can do it\n📝 How they might do it with their child",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -159,7 +179,9 @@
       "foreign_key": "reminders",
       "text_1": "Encourage parents to practice their parenting tips at home by reminding them that the key to changing behaviours and attitudes is to practice them in their own lives. \n\nYou will send two reminders during the week:",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -172,8 +194,12 @@
       "foreign_key": "live_chat_session",
       "text_1": "**Welcome and Check-in** \n\nBegin each session with a message that welcomes the parents to the session chat. \n\nCheck-in to make sure that everyone is ready to begin the session. This is easier said than done when you are online! You may want to ask if that everybody’s connection is steady and that they are comfortable and sitting somewhere where they can ‘chat’. \n\nPraise parents for making the effort to join the session and let them know you are excited to get going!\n\nTake responsibility for ensuring that everybody’s contribution is heard. This means making sure you understand the language needs and abilities of participants before you begin – will everybody be typing? Or will there be a mix of audio and text from parents?\n\nFraming the session: It’s important to let parents know what to expect from each session. Start each session by letting them know what home activity are we discussing.\n\nAsk parents how they are feeling today. You can model this process by sending a message that shares about how you are feeling today and describing where you are feeling it in your body, for example: “Today I am tired! I was up at night with my child. I can feel it in my sore, heavy feet, which don’t seem to want to walk anywhere very fast!”\n\n\n**Checking in on home activity**\nStart by reminding parents what last week’s parenting tip was. Ask a simple question to see who tried it — like a 👍 or “Yes/Not yet.” Keep it light and supportive. Praise parents who gave it a try, even if it was just a little. Encourage those who didn’t — remind them it’s okay to try again this week.\n\n**Voting on a challenge to discuss** \nAfter checking in on the home activity, give parents a chance to vote on a common challenge they may have faced. Share 3–4 relatable options. This helps parents feel seen and makes it easy to respond.\n\nLet them know it’s normal to face challenges — voting creates a safe space to talk about what was hard.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -190,7 +216,9 @@
       "foreign_key": "report",
       "text_1": "At the end of every Let’s Connect session, you will be asked to complete a short report in the app. This includes recording parent attendance, reflecting on how the session went, and noting any challenges you faced and what you might try differently next time.\n\nThese reports are not just about record-keeping—they are a chance for you to pause, reflect, and learn from your own experience. Each session brings something new, and taking a few minutes to capture your thoughts can help you build confidence, celebrate what went well, and identify small changes that can make the next session even smoother.\n\nBased on the attendance you record, the Actions tab will highlight parents who have missed two sessions in a row. This makes it easier for you to notice families who might need some extra encouragement. By reaching out early, you can help them feel supported and keep them engaged in the programme.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -203,7 +231,9 @@
       "foreign_key": "handover_group_admin",
       "text_1": "Once you have selected a volunteer to be group admin, schedule a WhatsApp call with them.\n\nWhen you’re done with the call, you can send the guidelines as messages to remind them what you discussed.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -216,7 +246,9 @@
       "foreign_key": "faq_h_after_group_ended",
       "text_1": "If parents or group admins reach out to you after the group has ended, it means that you have been helpful to them, which is amazing! \n\nParents may see you as a source of support outside of @global.prog_name, but it is important to keep things balanced. \n\nShare this message to gently guide the parents to other places for support.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -229,7 +261,9 @@
       "foreign_key": "faq_h_prompts",
       "text_1": "After your call with the new group admin, you can share these prompts to support them with leading the chat sessions.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -242,7 +276,9 @@
       "foreign_key": "faq_h_no_volunteers",
       "text_1": "It may be difficult to find volunteers to become group admin. If no one volunteers to lead the group, you can send the message below to close the group. \n\nWait a couple days before closing because someone might still volunteer!",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -255,8 +291,12 @@
       "foreign_key": "facilitation_overview",
       "text_1": "This app will guide you on what to do each week. It describes the activities in detail. It provides possible questions that you can ask for discussions and parenting stories.\n \nHowever, the content of the programme is only a small part of what it takes to deliver @global.prog_name. \nMuch of the benefit that your parents will receive comes from the way that you deliver it. \n\n**There are 8 core Principles to facilitating @global.prog_name in the best possible way**:",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -273,7 +313,9 @@
       "foreign_key": "facilitation_1",
       "text_1": "In some programmes, facilitators tell participants what to do and why it is important. Participants are used to this because many education systems are delivered in a didactic, teacher-knows-best manner. \n\nIn the @global.prog_name, we do things differently. We like to think of this as a collaborative approach to learning. As facilitators, we are **collaborators or partners** working with parents to identify plans and practice solutions that will help them to improve life at home.\n**It is helpful to think of the participants as the experts.**\n \nMany of the parents will already be practicing lots of positive ways of parenting with their children. Others will be able to identify ways of improving their parenting on their own with guidance. **Our job is to help parents learn for themselves how to achieve their goals.**\nThis sometimes means we have to work harder to ask the right sort of open-ended questions that will help participants work out the benefits of positive parenting and relationship building. **When participants are able to teach themselves on how to relate and behave, they learn a skill that will help them for a long time after the programme ends.**",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -286,7 +328,9 @@
       "foreign_key": "facilitation_2",
       "text_1": "The modelling principle is at the foundation of how we deliver the @global.prog_name. \nIf we lead sessions in a collaborative approach, praise parents often, practice active listening (by acknowledging messages), and use positive instructions, parents will do the same with their children. Likewise, if we tell parents what to do, criticize them, ignore their needs or concerns, or only say what we do not want them to do, they will do the same.\n\nFacilitators need to model all the different Core Principles in this programme. \n\nFor example, when you praise your participants, do not add any buts, ifs, or any other criticisms! Use transition warnings. Give positive, specific instructions that say the behaviour you want to see in the participants. Some behaviours may need to be addressed directly such as participants being offensive to an individual or the group.\n\nUse praise to encourage participants to arrive on time for sessions, to complete their home activities, and when they accomplish something very challenging. Practice Taking a Pause to help reduce your own stress.\n\nThe participants will learn from your example and begin to mirror your behaviour, too.\n\n**It really works!**",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -344,7 +388,9 @@
       "foreign_key": "facilitation_6",
       "text_1": "The more you prepare for each session, the easier time you will have in delivering the material. You will feel more relaxed and be more receptive to how participants are feeling and to their experiences. Read through the manual the night before each session. Write down any notes or reminders that might be helpful for particular activities. Sometimes, the participants will not initially understand what you are asking them if you say the exact words in the manual. It can be helpful to write different ways of asking the discussion questions.\n \nIf you don’t understand something or forget how to do an activity, ask! You can also message or call another facilitator or your supervisor prior to the module. Look through your participant profiles to review each person’s progress in the programme and to remember any special needs or concerns. This is particularly important for the goals that participants set themselves at the end of the session and the discussion on home activities. Start preparing before the next module. You want to be relaxed and ready to go!\n\nRemember that this app is just a guide. While it is very important that you deliver the programme content as it was designed, it is also important that you find ways to make it your own.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -357,7 +403,9 @@
       "foreign_key": "facilitation_7",
       "text_1": "Participants will want to engage in each module and participate in the activities if you create a group that is welcoming, open, and respectful. Everyone likes a place that is warm and inviting. It can be helpful to think of @global.prog_name as a family itself. \n\n**Ways in which facilitators can make @global.prog_name group sessions a happy place to learn:**\n\nRespect whatever a participant talks about. Facilitators should be aware and respectful of different ages, genders, values, and circumstances.\n\nModel the behaviour you want from the participants. The group space should be a judgement-free space in which participants feel comfortable sharing sensitive material.\n\nNotice and reflect the ways that participants communicate, help each other, and participate in the sessions.\n\nInvite participation: If you feel a participant is holding back or quiet, ask if he or she wishes to share an opinion or experience.\n\nMake sure that everyone in the group is communicating clearly.\n\nCreate a comfortable and welcoming place to meet. Make sure everyone knows how to log-into and interact with the group through the messaging platform you are using.\n\nEstablish the communication needs of the participants – are participants using audio? Video?\n\nNotice if participants have challenges that may require adjusting the way they participate in activities.\n\nPraise participants for their effort and dedication.\n\nModel the behaviour you want from the parents in the way that you treat them. \n\nPraise, respect, and reflect on participants’ contributions.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -430,7 +478,9 @@
       "foreign_key": "how_to_report_abuse",
       "text_1": "✅ Follow your organisation’s protocol.\n\n📝 If your organisation needs assistance in developing or improving its policies and procedures, please refer to the following resources:\n\n**Curaçao resources**\n1️⃣ Ministry of Social Development, Labour and Welfare, sector Family and Youth \nThe Five Steps of the Kódigo di Protekshon\nThe Kódigo di Protekshon is relevant for all professionals in Curaçao working in social work, education, health, and safety. It sets out agreements on how professionals can identify child abuse and domestic violence, and what steps they should take to prevent or stop unsafe situations. \n[https://kodigodiprotekshon.com](https://kodigodiprotekshon.com)\n\n2️⃣ Ministry of Justice, UOJZ - Protehami. [Five steps of the Kóigo di Protekshon](https://kodigodiprotekshon.com/5-stappen/)\n\n**International resources**\n\n1️⃣ [World Health Organization Guidelines Responding to Girls, Boys, and Adolescents who have Been Sexually Abused](https://iris.paho.org/handle/10665.2/52043) \n\n2️⃣ [Keeping Girls and Boys Safe](https://www.keepingchildrensafe.global/)\n\n3️⃣ [Caring for Child Survivors of Sexual Abuse](https://www.unicef.org/documents/caring-child-survivors-sexual-abuse) \n\n4️⃣ [Strengthening Linkages between Clinical and Social Services for Girls, Boys, and Adolescents who have Experienced Sexual Violence: A Companion Guide](https://www.togetherforgirls.org/en/resources/strengthening-linkages-between-clinical-and-social-community-services-for-children-and-adolescents-who-have-experienced-sexual-violence-a-companion-guide) \n\n5️⃣ [Together for Girls: Every Hour Matters](https://www.togetherforgirls.org/en/campaigns/every-hour-matters)",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -458,7 +508,9 @@
       "foreign_key": "module_1_prepare",
       "text_1": "The first step to building healthier and happier relationships is to spend dedicated time together. When parents spend one-on-one time with their children away from work and household duties and other people, they create space to be available to their child, to get more involved in their lives, and to build trust and communication skills. A strong parent-child relationship requires spending time together in this way.\n\n**Key building blocks for one-on-one time**\n\nThe key building blocks for One-on-One time are Day, Play, and Stay:\n\n**DAY**’- Try to do it every day\nSpend 5 minutes (or more!) One-on-One time with your child each day.\n\n**PLAY** - Let them choose the activity\nTell your child or teen that you would like to spend some time with them and that they can choose what to do or talk about. They might think this is weird at first but will come to enjoy this time with you!\n\n**STAY** - Focus on your child or teen\nSwitch off TV and put aside phones. Look at your child or teen. Nod or say “I see” to show you are really paying attention. Accept what they say without judging them.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -471,8 +523,12 @@
       "foreign_key": "module_2_prepare",
       "text_1": "Happiness, sadness, anger, disgust, surprise, and fear: We all experience emotions. Because emotions are connected to our thoughts and behaviour, they play an important role in how we make decisions. If we don’t handle emotions well, we risk making bad decisions that can affect our well-being. And when we learn how to handle our emotions, we are more likely to be able to make clear decisions and act in a responsive and nurturing way towards our children, other adults, and ourselves.\n\nYoung people who don’t manage their emotions can resort to risky behaviours that can be dangerous for them. It is important for parents to learn to help their children to recognise and manage their strong emotions. \n\nTalking about difficult emotions is especially important. Difficult emotions like anger can become stressful thoughts and uncontrolled behaviours. Before we can talk about the emotions we are experiencing, just being aware of them can help us to stay present in a moment, which will allow the feelings to run their course and pass. This is also true for children.\n\nWhen parents name their children’s feelings, or comment on them, it helps children to develop a sense of emotional control. Parents can accept their children’s emotions and communicate with them about what they are experiencing in a calm and supportive way. This will reduce other more potentially risky ways children might turn to in order to escape the feeling.\n\nDuring Module Two, parents learn about the importance of accepting, naming, and exploring a range of emotions with their children. They learn techniques that will help them to do this effectively. \n\n**The primary objectives for this week are parents learning and practicing how to talk about their own and their children’s feelings.**",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -489,8 +545,12 @@
       "foreign_key": "module_3_prepare",
       "text_1": "The objective of this week is to learn how parents can be more effective at getting their children to follow their instructions. They do this in two ways: \n\n1️⃣ Giving specific, positive, and realistic instructions\n2️⃣ Praising their children for following instructions and at other times\n\nWhen parents give specific, positive, and realistic instructions, children know exactly what behaviour is expected from them. \n\nFor example, “Please put your toys away in the box.” This tells the child exactly what to do by describing the behaviour that is expected. It also considers the capabilities of the child so that the instruction is realistic. \n\nCompare this to, “Don’t make a mess,” which does not describe the behaviour that a parent would want to see, is not specific, and might not be realistic if the child is not capable of keeping tidy. \n\nChildren also have challenges following many instructions at one time – especially younger children. They are much better at following instructions if they are given one at a time.  Parents can pause for a bit to give children time to follow each instruction before moving to the next one. It may take more time, but this supports children to follow instructions and to remember the task.  \n\nEach child has their own unique characteristics and capabilities. It is important that parents know what is realistic for their children to do when giving them instructions. For instance, it is very hard for children to keep quiet for a whole day but maybe they can keep quiet for 15 minutes while their parents take a call.  \n\nChildren also hear better and understand the instructions clearly when parents speak in a calm voice. Yelling at children only increases the tension for everyone. Children are also more likely to follow instructions in a calm way.\n\nPraise is an expression of approval or appreciation. When parents praise their children for following instructions, they are encouraging that behaviour to happen more often. The same works for praising other behaviours. Also, behaviour that is ignored is less likely to happen again. \n\nWith the example above, a parent could say, “Thank you for putting your toys in the box, Joseph,” after he follows the instruction. This will encourage Joseph to continue cleaning up his toys in the future. It also maintains a positive feeling between the parent and Joseph.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -507,8 +567,12 @@
       "foreign_key": "module_4_prepare",
       "text_1": "Parents sometimes get frustrated at their children for being noisy or not tidying up after they have played, throwing their food on the ground, or staying out way too late. Often children don’t understand why these things are important. Establishing and explaining household rules helps children understand what is expected of them and why. Rules also establish clear boundaries that help children to feel safe and secure.\n\nRoutines also help children to feel safe and secure. Routines such as mealtimes and bedtimes can help create a stable environment for children. This is especially important for those who are living in hectic or unsafe environments and communities. \n\n**In this module, parents focus on the importance of involving their children when establishing household rules and routines to help keep their children safe and healthy.**",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -525,8 +589,12 @@
       "foreign_key": "module_5_prepare",
       "text_1": "There are lots of different ways for parents to encourage their children to behave well. In this programme we have already looked at one of these ways: praising the behaviour we would like to see more of. \n\nIn this module we look at two other strategies for managing child behaviours: Redirecting and consequences. \n\nRedirecting is a strategy that is especially effective with younger children. When parents redirect their children from a negative behaviour to a positive behaviour at the beginning of the behaviour, they reduce the chance that the negative behaviour happens or grows into something more difficult to manage. This works especially well if parents then praise their children for the positive behaviour they end up doing. \n\nConsequences are the results of actions or behaviours. For example, not cleaning the dishes will result in not having a clean plate to eat from. Parents can use planned consequences with their children and teens when they forget or do not follow household rules. For example, if there is a household rule to come home before sunset and a child comes home late when out playing with friends, then an appropriate consequence could be that they cannot play with friends the next day.\n\nParents can involve their children and teens in planning consequences for certain behaviours. For example, they could discuss with their children what a consequence could be if they do not follow a certain household rule when they are creating it with them. \n\nConsequences can also be used when a child refuses to follow an instruction. Parents should first give a child a choice, for example, “Either you clear the table, or you will not be able to watch your favourite T.V. show.” This gives them a chance to comply and avoid receiving the consequence.\nIt is also important that parents make sure their consequences are reasonable and that they can follow through with them. Banning T.V. for the rest of the year or threatening to sell it is not something that parents can realistically do. It is also unfair!\n\nWe call strategies like redirect and consequences ‘positive discipline’ because they reinforce the positive relationship that parents are actively trying to build with their children by spending time together, praising and setting clear boundaries with rules.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -543,8 +611,12 @@
       "foreign_key": "module_6_prepare",
       "text_1": "The last module of the @global.app_name programme is about reflection and sharing. This final module is a bit longer than normal as you will help parents to reflect on their experiences during the programme and make specific plans on how they want to go forward without your facilitation.\n\nThe module starts with an opportunity to learn one final parenting skill – involving your children in solving problems. Throughout the entire programme, you have been modelling the key steps of solving problems with the parents.\n\nThere are 5 key steps in problem solving:\n1️⃣ Identify the problem\n2️⃣ Jointly come up with solutions\n3️⃣ Choose a solution\n4️⃣ Try the solution out\n5️⃣ Reflect on whether the solution worked\n\nEach week during the discussion on home activities and illustrated stories, the parents have used the same steps in problem solving to help identify and practice solutions to challenges experienced.\n\nTeaching children how to solve their own problems is a skill that children will take with them for the rest of their lives. What a gift!\n\nIn the second part of the module, parents have the opportunity to reflect on the changes they have seen in their families and the experiences that they have had during the programme. They can share how they have changed and what they have noticed about how their children’s behaviours may have changed.\n\nThis is also an opportunity to discuss how parents can continue using the skills and building blocks they have practiced over the course of the programme. Weekly chats have enabled parents to get to know each other and to support each other. That support doesn’t need to end! With a new administrator of the group, the chat group can be used whenever anybody needs to reach out or check-in. \n\nThis week’s programme objectives are therefore to reflect and identify how to keep the programme going in a parent-lead group. We cover these topics for just one day this week: today!",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -561,7 +633,9 @@
       "foreign_key": "faq_h_still_struggling",
       "text_1": "Every family is different, and some parents may need more help than others.\n\nIf a parent is still struggling or needs more support, consider sending the message below.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -574,7 +648,9 @@
       "foreign_key": "faq_h_sad_to_end",
       "text_1": "It is normal for parents to feel sad or emotional when the programme ends and you leave the group. This means that parents found the chat sessions helpful and enjoyed participating. What a gift you have given them! Congratulations! \n\nTo support them with this transition, consider sending the message below.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -587,7 +663,9 @@
       "foreign_key": "faq_ground_rules",
       "text_1": "Ground rules make your WhatsApp Support Group a safe space for everyone. \n\nIf someone forgets the ground rules, send the message below to gently remind them of their importance. \n\nIf necessary, share a group reminder about the importance of maintaining a positive and respectful space. \n\nIf, despite reminders, the parent continues not to follow the rules, notify your supervisor. \n\nYou can remove the parent from the group as the last option, done only when you feel it is necessary. For example, if a member repeatedly shares unrelated content, uses inappropriate language or is disrespectful to another member. \n\nIf you do remove someone from the group, it should be handled with sensitivity and respect. Make sure you talk privately with the parent, remind the group about ground rules, and notify your supervisor.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -600,7 +678,9 @@
       "foreign_key": "faq_misbehaviour",
       "text_1": "Parents may see you as someone they can turn to for help beyond school and @global.prog_name, especially when they need advice on their child’s behaviour. \n\nEven though you want to help, it is important to find a balance for your well-being. \n\nShare the following message to gently remind the parents about your role in @global.prog_name. \n\nIf the parents continue to persist, notify @global.supervisor_name.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -613,7 +693,9 @@
       "foreign_key": "faq_small_group_active",
       "text_1": "Getting everyone to join in the chat sessions can be a bit challenging. Some parents might be busy, shy, or just prefer to read about other’s experiences. \n\nHere are some helpful tips to encourage participation: \n\n1. Directly ask a question to someone by typing @parent name on WhatsApp. \n\n2. Share one of the messages below with the entire group. \n\n3. Consider sending a private message to a parent (see the message below).",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -626,7 +708,9 @@
       "foreign_key": "faq_no_participation_general",
       "text_1": "Engaging parents in the group chat can sometimes be hard. Some parents may need a nudge to share their experiences or they might be busy with their schedules. \n\nIf your chat goes silent after the prompt, consider sharing these ideas or suggestions:",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
