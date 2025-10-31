@@ -1713,6 +1713,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "name": "set_variable_54",
       "_nested_name": "set_variable_54"
@@ -1726,6 +1727,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "T"
     },
@@ -1733,6 +1735,7 @@
       "name": "F",
       "value": 1,
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "F"
     },
@@ -1745,11 +1748,13 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "U"
     },
     {
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "name": "set_variable_58",
       "_nested_name": "set_variable_58"
@@ -1761,6 +1766,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "s1",
       "_dynamicFields": {
@@ -1786,6 +1792,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "s2",
       "_dynamicFields": {
@@ -1811,6 +1818,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "s3",
       "_dynamicFields": {
@@ -1836,6 +1844,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "s4",
       "_dynamicFields": {
@@ -1861,6 +1870,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "s5",
       "_dynamicFields": {
@@ -1886,6 +1896,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "s6",
       "_dynamicFields": {
@@ -1906,6 +1917,7 @@
     },
     {
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "name": "set_variable_65",
       "_nested_name": "set_variable_65"
@@ -1920,6 +1932,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "_nested_name": "test_attendance_view",
       "_dynamicFields": {
         "value": [
@@ -1989,6 +2002,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "attendance",
       "_dynamicFields": {
@@ -2071,6 +2085,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "_nested_name": "attendance_text",
       "_dynamicFields": {
         "value": [
@@ -2090,6 +2105,7 @@
     },
     {
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "name": "set_variable_69",
       "_nested_name": "set_variable_69"
@@ -2103,6 +2119,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "test_calc",
       "_dynamicFields": {
@@ -2129,6 +2146,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "_nested_name": "test_calc_text",
       "_dynamicFields": {
         "value": [

@@ -235,6 +235,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "name": "text_13",
       "_nested_name": "text_13",
       "_dynamicFields": {
@@ -262,6 +263,7 @@
         }
       },
       "condition": false,
+      "exclude_from_translation": true,
       "name": "text_14",
       "_nested_name": "text_14",
       "_dynamicFields": {
@@ -288,6 +290,7 @@
         "value": {}
       },
       "condition": false,
+      "exclude_from_translation": true,
       "_nested_name": "test2",
       "_dynamicFields": {
         "value": [
@@ -502,6 +505,7 @@
             }
           },
           "condition": "@item.co_parent_id !== \"test\"",
+          "exclude_from_translation": true,
           "type": "set_variable",
           "_nested_name": "data_items_18.new_co_parent_id",
           "_dynamicFields": {
@@ -528,6 +532,7 @@
             "value": {}
           },
           "condition": false,
+          "exclude_from_translation": true,
           "_nested_name": "data_items_18.test1",
           "_dynamicFields": {
             "value": [
@@ -553,6 +558,7 @@
             "value": {}
           },
           "condition": false,
+          "exclude_from_translation": true,
           "_nested_name": "data_items_18.test_disable_checkbox",
           "_dynamicFields": {
             "value": [
@@ -1067,6 +1073,7 @@
             "value": {}
           },
           "condition": false,
+          "exclude_from_translation": true,
           "_nested_name": "data_items_18.test_not_selected"
         },
         {
@@ -1077,6 +1084,7 @@
             "value": {}
           },
           "condition": false,
+          "exclude_from_translation": true,
           "_nested_name": "data_items_18.test_last_selected"
         },
         {
@@ -1087,6 +1095,7 @@
             "value": {}
           },
           "condition": false,
+          "exclude_from_translation": true,
           "_nested_name": "data_items_18.test_selected"
         },
         {
@@ -1097,6 +1106,7 @@
             "value": {}
           },
           "condition": false,
+          "exclude_from_translation": true,
           "_nested_name": "data_items_18.test_not_selected"
         }
       ],
