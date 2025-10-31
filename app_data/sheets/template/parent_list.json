@@ -687,7 +687,9 @@
                   "type": "text",
                   "value": "co_parent_id: @local.co_parent_id",
                   "_translations": {
-                    "value": {}
+                    "value": {
+                      "cw_pap": true
+                    }
                   },
                   "condition": false,
                   "name": "text_8",

@@ -56,7 +56,9 @@
       "type": "title",
       "value": "Next Session",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "name": "title_4",
       "_nested_name": "title_4"
@@ -437,7 +439,9 @@
       "type": "text",
       "value": "Pending Reports",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "parameter_list": {
         "style": "emphasised"
@@ -483,7 +487,9 @@
       "type": "text",
       "value": "Follow ups",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "parameter_list": {
         "style": "emphasised"

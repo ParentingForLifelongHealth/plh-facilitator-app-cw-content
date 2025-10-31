@@ -17,7 +17,9 @@
       "name": "programme_name",
       "value": "Mayor Konektá",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -25,7 +27,9 @@
       "name": "prog_name",
       "value": "Mayor Konektá",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -144,8 +148,14 @@
       "name": "sessions_no_groups",
       "value": "No parent groups found. To create a parent group, click on groups",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "sessions_no_groups_image"
     },
     {
       "type": "declare_global_constant",

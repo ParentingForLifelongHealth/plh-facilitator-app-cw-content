@@ -9,8 +9,12 @@
       "foreign_key": "handover_group_admin",
       "title": "Send this message after your WhatsApp Call",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -27,9 +31,15 @@
       "foreign_key": "handover_group_admin",
       "title": "When should the group admin respond to messages?",
       "_translations": {
-        "title": {},
-        "text": {},
-        "guidance": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
+        "guidance": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -50,7 +60,9 @@
       "foreign_key": "faq_h_after_group_ended",
       "text": "Hi!😃Thank you for your message. \n\nMy role with @global.prog_name was limited. I unfortunately will not be further involved with the programme. \n\nIf your WhatsApp Support group is still active, feel free to post your questions in the group. Other parents may be able to support you with helpful suggestions. 💡",
       "_translations": {
-        "text": {}
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text": {
@@ -63,7 +75,9 @@
       "foreign_key": "faq_h_prompts",
       "text": "Here are some prompts you can use with the parent group: \n\n🎉Let us celebrate our successes! What was something positive you experienced when you tried one of the @global.prog_name skills with your child?\n\n🌱Trying out new skills can be hard at first. What was something *difficult* that you experienced when you tried a @global.prog_name skill with your child at home?\n\n💙You are welcome to use this WhatsApp space to share any questions or experiences you have on your @global.prog_name journey. Remember, I may not always be able to respond, but this is our group – *together we can find all the answers we need*!",
       "_translations": {
-        "text": {}
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text": {
@@ -76,8 +90,12 @@
       "foreign_key": "faq_h_no_volunteers",
       "title": "Alternate Closing Message",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -94,8 +112,12 @@
       "foreign_key": "faq_h_still_struggling",
       "title": "Message of Support",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -112,8 +134,12 @@
       "foreign_key": "faq_h_sad_to_end",
       "title": "Message of Support",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -130,8 +156,12 @@
       "foreign_key": "faq_ground_rules",
       "title": "Send this reminder message to the group",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -148,8 +178,12 @@
       "foreign_key": "faq_ground_rules",
       "title": "Send this reminder message to the parent who broke the ground rule",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -166,9 +200,15 @@
       "foreign_key": "faq_ground_rules",
       "title": "Send this message to the parent after removing them from the WhatsApp Group",
       "_translations": {
-        "title": {},
-        "text": {},
-        "guidance": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
+        "guidance": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -189,8 +229,12 @@
       "foreign_key": "faq_ground_rules",
       "title": "Send this message to the group after removing the parent who broke the ground rule",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -207,8 +251,12 @@
       "foreign_key": "faq_misbehaviour",
       "title": "Send This Message to the Parent",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -225,8 +273,12 @@
       "foreign_key": "faq_small_group_active",
       "title": "Reminder for Participation",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -243,8 +295,12 @@
       "foreign_key": "faq_small_group_active",
       "title": "Praising active parents",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -261,8 +317,12 @@
       "foreign_key": "faq_small_group_active",
       "title": "Setting expectations for the group",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -279,8 +339,12 @@
       "foreign_key": "faq_small_group_active",
       "title": "Privately messaging the parent",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -297,9 +361,15 @@
       "foreign_key": "faq_no_participation_general",
       "title": "Directly ask a specific parent to share",
       "_translations": {
-        "title": {},
-        "text": {},
-        "guidance": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
+        "guidance": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {
@@ -320,8 +390,12 @@
       "foreign_key": "faq_no_participation_general",
       "title": "Check if it is a good time for WhatsApp Chat",
       "_translations": {
-        "title": {},
-        "text": {}
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "title": {

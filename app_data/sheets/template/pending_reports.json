@@ -123,7 +123,9 @@
       "name": "test_delivered",
       "value": "delivered = @local.number_delivered_sessions",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_delivered",
@@ -148,7 +150,9 @@
       "name": "test_pending",
       "value": "pending = @local.number_pending_reports",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_pending",
@@ -173,7 +177,9 @@
       "name": "text_initial",
       "value": "🚀 Your parents are waiting! Once you deliver your first session, your reports will appear here.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.number_delivered_sessions == 0",
       "_nested_name": "text_initial",
@@ -202,7 +208,9 @@
           "name": "text_pending_reports",
           "value": "@local.number_pending_reports Pending Reports",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "style_list": [
             "flex:1"
@@ -241,7 +249,9 @@
           "name": "text_pending_reports",
           "value": "@local.number_pending_reports Pending Report",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "style_list": [
             "flex:1"
@@ -280,7 +290,9 @@
           "name": "show_all_button",
           "value": "Show All",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
@@ -370,7 +382,9 @@
           "name": "show_all_button",
           "value": "Show Less",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
@@ -1070,7 +1084,9 @@
           "name": "text_no_pending_reports_2",
           "value": "Great job! You’ve completed all reports!",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "parameter_list": {
             "style": "contextual"

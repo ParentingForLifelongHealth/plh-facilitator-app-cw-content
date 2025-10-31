@@ -163,7 +163,9 @@
       "name": "attendance_1",
       "value": "@calc(0 *0)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s1 == \"T\"",
       "type": "set_variable",
@@ -199,7 +201,9 @@
       "name": "attendance_1",
       "value": "@calc(0 +1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s1 == \"F\"",
       "type": "set_variable",
@@ -235,7 +239,9 @@
       "name": "attendance_1",
       "value": "@calc(0 *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s1 == \"U\"",
       "type": "set_variable",
@@ -272,7 +278,9 @@
       "name": "test_attendance_1",
       "value": "attendance_1 = @local.attendance_1",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_1",
@@ -296,7 +304,9 @@
       "name": "attendance_2",
       "value": "@calc(@local.attendance_1 *0)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s2 == \"T\"",
       "type": "set_variable",
@@ -341,7 +351,9 @@
       "name": "attendance_2",
       "value": "@calc(@local.attendance_1 +1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s2 == \"F\"",
       "type": "set_variable",
@@ -386,7 +398,9 @@
       "name": "attendance_2",
       "value": "@calc(@local.attendance_1 *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s2 == \"U\"",
       "type": "set_variable",
@@ -432,7 +446,9 @@
       "name": "test_attendance_2",
       "value": "attendance_2 = @local.attendance_2",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_2",
@@ -456,7 +472,9 @@
       "name": "attendance_3",
       "value": "@calc(@local.attendance_2 *0)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s3 == \"T\"",
       "type": "set_variable",
@@ -501,7 +519,9 @@
       "name": "attendance_3",
       "value": "@calc(@local.attendance_2 +1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s3 == \"F\"",
       "type": "set_variable",
@@ -546,7 +566,9 @@
       "name": "attendance_3",
       "value": "@calc(@local.attendance_2 *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s3 == \"U\"",
       "type": "set_variable",
@@ -592,7 +614,9 @@
       "name": "test_attendance_3",
       "value": "attendance_3 = @local.attendance_3",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_3",
@@ -616,7 +640,9 @@
       "name": "attendance_4",
       "value": "@calc(@local.attendance_3 *0)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s4 == \"T\"",
       "type": "set_variable",
@@ -661,7 +687,9 @@
       "name": "attendance_4",
       "value": "@calc(@local.attendance_3 +1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s4 == \"F\"",
       "type": "set_variable",
@@ -706,7 +734,9 @@
       "name": "attendance_4",
       "value": "@calc(@local.attendance_3 *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s4 == \"U\"",
       "type": "set_variable",
@@ -752,7 +782,9 @@
       "name": "test_attendance_4",
       "value": "attendance_4 = @local.attendance_4",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_4",
@@ -776,7 +808,9 @@
       "name": "attendance_5",
       "value": "@calc(@local.attendance_4 *0)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s5 == \"T\"",
       "type": "set_variable",
@@ -821,7 +855,9 @@
       "name": "attendance_5",
       "value": "@calc(@local.attendance_4 +1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s5 == \"F\"",
       "type": "set_variable",
@@ -866,7 +902,9 @@
       "name": "attendance_5",
       "value": "@calc(@local.attendance_4 *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s5 == \"U\"",
       "type": "set_variable",
@@ -912,7 +950,9 @@
       "name": "test_attendance_5",
       "value": "attendance_5 = @local.attendance_5",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_5",
@@ -936,7 +976,9 @@
       "name": "attendance_6",
       "value": "@calc(@local.attendance_5 *0)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s6 == \"T\"",
       "type": "set_variable",
@@ -981,7 +1023,9 @@
       "name": "attendance_6",
       "value": "@calc(@local.attendance_5 +1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s6 == \"F\"",
       "type": "set_variable",
@@ -1026,7 +1070,9 @@
       "name": "attendance_6",
       "value": "@calc(@local.attendance_5 *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s6 == \"U\"",
       "type": "set_variable",
@@ -1072,7 +1118,9 @@
       "name": "test_attendance_6",
       "value": "attendance_6 = @local.attendance_6",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_6",
@@ -1096,7 +1144,9 @@
       "name": "attendance_7",
       "value": "@calc(@local.attendance_6 *0)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s7 == \"T\"",
       "type": "set_variable",
@@ -1141,7 +1191,9 @@
       "name": "attendance_7",
       "value": "@calc(@local.attendance_6 +1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s7 == \"F\"",
       "type": "set_variable",
@@ -1186,7 +1238,9 @@
       "name": "attendance_7",
       "value": "@calc(@local.attendance_6 *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s7 == \"U\"",
       "type": "set_variable",
@@ -1232,7 +1286,9 @@
       "name": "test_attendance_7",
       "value": "attendance_7 = @local.attendance_7",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_7",
@@ -1256,7 +1312,9 @@
       "name": "attendance_8",
       "value": "@calc(@local.attendance_7 *0)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s8 == \"T\"",
       "type": "set_variable",
@@ -1301,7 +1359,9 @@
       "name": "attendance_8",
       "value": "@calc(@local.attendance_7 +1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s8 == \"F\"",
       "type": "set_variable",
@@ -1346,7 +1406,9 @@
       "name": "attendance_8",
       "value": "@calc(@local.attendance_7 *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.s8 == \"U\"",
       "type": "set_variable",
@@ -1392,7 +1454,9 @@
       "name": "test_attendance_8",
       "value": "attendance_8 = @local.attendance_8",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_8",
@@ -1568,7 +1632,9 @@
               "name": "follow_up_button",
               "value": "Follow Up",
               "_translations": {
-                "value": {}
+                "value": {
+                  "cw_pap": true
+                }
               },
               "parameter_list": {
                 "style": "information short"
@@ -1584,7 +1650,9 @@
           "name": "total_attendance_text",
           "value": "Missed the last @local.total_attendance sessions",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "style_list": [
             "font-size: 16px",
@@ -1640,7 +1708,9 @@
     {
       "value": "SHOULD HAVE BEEN LIKE THIS:",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "type": "set_variable",
@@ -1651,7 +1721,9 @@
       "name": "T",
       "value": "*0",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "type": "set_variable",
@@ -1668,7 +1740,9 @@
       "name": "U",
       "value": "*1",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "type": "set_variable",
@@ -1841,7 +1915,9 @@
       "name": "test_attendance_view",
       "value": "attendance_view = (((((0 @local.s1) @local.s2) @local.s3) @local.s4) @local.s5) @local.s6",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "test_attendance_view",
@@ -1990,7 +2066,9 @@
       "name": "attendance_text",
       "value": "attendance = @local.attendance",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "_nested_name": "attendance_text",
@@ -2020,7 +2098,9 @@
       "name": "test_calc",
       "value": "@calc((((((0 *0) *0) +1) +1) *1) *1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "type": "set_variable",
