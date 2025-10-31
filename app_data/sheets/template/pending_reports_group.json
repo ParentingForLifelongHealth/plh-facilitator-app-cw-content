@@ -165,9 +165,7 @@
       "name": "test_delivered",
       "value": "delivered = @local.number_delivered_sessions",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
@@ -193,9 +191,7 @@
       "name": "test_pending",
       "value": "pending = @local.number_pending_reports",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,

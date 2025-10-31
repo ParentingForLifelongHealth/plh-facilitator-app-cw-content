@@ -1708,9 +1708,7 @@
     {
       "value": "SHOULD HAVE BEEN LIKE THIS:",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
@@ -1722,9 +1720,7 @@
       "name": "T",
       "value": "*0",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
@@ -1743,9 +1739,7 @@
       "name": "U",
       "value": "*1",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
@@ -1927,9 +1921,7 @@
       "name": "test_attendance_view",
       "value": "attendance_view = (((((0 @local.s1) @local.s2) @local.s3) @local.s4) @local.s5) @local.s6",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
@@ -2080,9 +2072,7 @@
       "name": "attendance_text",
       "value": "attendance = @local.attendance",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
@@ -2114,9 +2104,7 @@
       "name": "test_calc",
       "value": "@calc((((((0 *0) *0) +1) +1) *1) *1)",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
