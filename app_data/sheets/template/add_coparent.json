@@ -230,9 +230,7 @@
       "type": "text",
       "value": "test: @local.group_count",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
@@ -258,9 +256,7 @@
       "type": "text",
       "value": "co_parent: @local.co_parent_id",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
