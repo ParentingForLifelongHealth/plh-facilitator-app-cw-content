@@ -1163,6 +1163,30 @@
                           "value"
                         ]
                       }
+                    },
+                    {
+                      "name": "report_id",
+                      "value": "@item.report_id",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "type": "set_variable",
+                      "_nested_name": "dg_modules.data_items_1.no_packages.menu_task_card.report_id",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.report_id",
+                            "matchedExpression": "@item.report_id",
+                            "type": "item",
+                            "fieldName": "report_id"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.report_id": [
+                          "value"
+                        ]
+                      }
                     }
                   ],
                   "_nested_name": "dg_modules.data_items_1.no_packages.menu_task_card"
@@ -1353,6 +1377,30 @@
                               "value"
                             ],
                             "@local.selected_group": [
+                              "value"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "report_id",
+                          "value": "@item.report_id",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "dg_modules.data_items_1.has_packages.no_tag.menu_task_card.report_id",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@item.report_id",
+                                "matchedExpression": "@item.report_id",
+                                "type": "item",
+                                "fieldName": "report_id"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.report_id": [
                               "value"
                             ]
                           }
@@ -1547,6 +1595,30 @@
                               "value"
                             ],
                             "@local.selected_group": [
+                              "value"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "report_id",
+                          "value": "@item.report_id",
+                          "_translations": {
+                            "value": {}
+                          },
+                          "type": "set_variable",
+                          "_nested_name": "dg_modules.data_items_1.has_packages.has_tag.menu_task_card.report_id",
+                          "_dynamicFields": {
+                            "value": [
+                              {
+                                "fullExpression": "@item.report_id",
+                                "matchedExpression": "@item.report_id",
+                                "type": "item",
+                                "fieldName": "report_id"
+                              }
+                            ]
+                          },
+                          "_dynamicDependencies": {
+                            "@item.report_id": [
                               "value"
                             ]
                           }

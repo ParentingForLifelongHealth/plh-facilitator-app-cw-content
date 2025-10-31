@@ -112,27 +112,12 @@
     },
     {
       "name": "report_id",
-      "value": "@local.module_row.report_id",
+      "value": "empty",
       "_translations": {
         "value": {}
       },
       "type": "set_variable",
-      "_nested_name": "report_id",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@local.module_row.report_id",
-            "matchedExpression": "@local.module_row.report_id",
-            "type": "local",
-            "fieldName": "module_row"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@local.module_row.report_id": [
-          "value"
-        ]
-      }
+      "_nested_name": "report_id"
     },
     {
       "name": "page_count",

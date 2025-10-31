@@ -2308,7 +2308,7 @@
         "filter": "!@item.archived && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
         "limit": "2"
       },
-      "condition": "@local.has_limit && @local.group_limit_id = \"empty\"",
+      "condition": "@local.has_limit && @local.group_limit_id == \"empty\"",
       "rows": [
         {
           "type": "template",
@@ -2643,13 +2643,13 @@
         },
         "condition": [
           {
-            "fullExpression": "@local.has_limit && @local.group_limit_id = \"empty\"",
+            "fullExpression": "@local.has_limit && @local.group_limit_id == \"empty\"",
             "matchedExpression": "@local.has_limit",
             "type": "local",
             "fieldName": "has_limit"
           },
           {
-            "fullExpression": "@local.has_limit && @local.group_limit_id = \"empty\"",
+            "fullExpression": "@local.has_limit && @local.group_limit_id == \"empty\"",
             "matchedExpression": "@local.group_limit_id",
             "type": "local",
             "fieldName": "group_limit_id"

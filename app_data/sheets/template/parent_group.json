@@ -293,13 +293,13 @@
               }
             },
             {
-              "name": "content_package",
+              "name": "current_package",
               "value": "@local.content_package",
               "_translations": {
                 "value": {}
               },
               "type": "set_variable",
-              "_nested_name": "dg_parent_@item.parent_no.module_progress.content_package",
+              "_nested_name": "dg_parent_@item.parent_no.module_progress.current_package",
               "_dynamicFields": {
                 "value": [
                   {
@@ -311,8 +311,8 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "dg_parent_@item.parent_no.module_progress.content_package",
-                    "matchedExpression": "@item.parent_no.module_progress.content_package",
+                    "fullExpression": "dg_parent_@item.parent_no.module_progress.current_package",
+                    "matchedExpression": "@item.parent_no.module_progress.current_package",
                     "type": "item",
                     "fieldName": "parent_no"
                   }
@@ -322,7 +322,7 @@
                 "@local.content_package": [
                   "value"
                 ],
-                "@item.parent_no.module_progress.content_package": [
+                "@item.parent_no.module_progress.current_package": [
                   "_nested_name"
                 ]
               }
