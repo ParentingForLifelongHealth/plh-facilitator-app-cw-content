@@ -63,7 +63,7 @@
       },
       {
         "type": "image",
-        "count": 20
+        "count": 19
       },
       {
         "type": "items",
@@ -95,7 +95,7 @@
       },
       {
         "type": "round_button",
-        "count": 30
+        "count": 31
       },
       {
         "type": "select_text",
@@ -207,7 +207,7 @@
       },
       {
         "type": "go_to",
-        "count": 42
+        "count": 43
       },
       {
         "type": "nav",
@@ -267,12 +267,12 @@
     "data": [
       {
         "assets": "total",
-        "KB": "23922 KB",
+        "KB": "23923 KB",
         "MB": "23.9 MB"
       },
       {
         "assets": "unused",
-        "KB": "184 KB",
+        "KB": "183 KB",
         "MB": "0.2 MB"
       }
     ]
@@ -410,10 +410,6 @@
       {
         "path": "images/icons/pencil-outline.svg",
         "size_kb": 0.3
-      },
-      {
-        "path": "images/icons/people.svg",
-        "size_kb": 1
       },
       {
         "path": "images/icons/people_network.svg",
@@ -780,13 +776,18 @@
         "size_kb": 0.9
       },
       {
+        "path": "images/icons/people.svg",
+        "count": 1,
+        "size_kb": 1
+      },
+      {
         "path": "images/icons/person-circle-outline.svg",
         "count": 1,
         "size_kb": 0.7
       },
       {
         "path": "images/icons/person_cog.svg",
-        "count": 3,
+        "count": 1,
         "size_kb": 2.9
       },
       {

@@ -18,7 +18,7 @@
 | display_grid | 2 |
 | display_group | 161 |
 | google_sign_in_button | 3 |
-| image | 20 |
+| image | 19 |
 | items | 16 |
 | lottie_animation | 8 |
 | pdf | 1 |
@@ -26,7 +26,7 @@
 | plh_module_list_item | 5 |
 | qr_code | 2 |
 | radio_button_grid | 15 |
-| round_button | 30 |
+| round_button | 31 |
 | select_text | 2 |
 | set_field | 5 |
 | set_variable | 943 |
@@ -60,7 +60,7 @@
 | emit: set_language | 4 |
 | emit: uncompleted | 78 |
 | feedback | 24 |
-| go_to | 42 |
+| go_to | 43 |
 | nav | 5 |
 | nav_stack | 9 |
 | pop_up | 16 |
@@ -81,8 +81,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 23922 KB | 23.9 MB |
-| unused | 184 KB | 0.2 MB |
+| total | 23923 KB | 23.9 MB |
+| unused | 183 KB | 0.2 MB |
 </details>
 
 <details open>
@@ -125,7 +125,6 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/paper_plane_white.svg | 1.4 |
 | images/icons/pencil-outline-white.svg | 1.4 |
 | images/icons/pencil-outline.svg | 0.3 |
-| images/icons/people.svg | 1 |
 | images/icons/people_network.svg | 6.9 |
 | images/icons/person-add-outline.svg | 0.6 |
 | images/icons/person-remove-outline.svg | 0.6 |
@@ -219,8 +218,9 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/pencil_white.svg | 2 | 1 |
 | images/icons/people-brown.svg | 2.1 | 1 |
 | images/icons/people-outline.svg | 0.9 | 1 |
+| images/icons/people.svg | 1 | 1 |
 | images/icons/person-circle-outline.svg | 0.7 | 1 |
-| images/icons/person_cog.svg | 2.9 | 3 |
+| images/icons/person_cog.svg | 2.9 | 1 |
 | images/icons/qr-code-outline.svg | 1 | 1 |
 | images/icons/settings-outline-brown.svg | 2.3 | 1 |
 | images/icons/share.svg | 2.3 | 2 |

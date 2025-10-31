@@ -146,11 +146,9 @@
     {
       "type": "declare_global_constant",
       "name": "sessions_no_groups",
-      "value": "No parent groups found. To create a parent group, click on groups",
+      "value": "No parent groups found. To create a parent group, click on:",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       }
     },
     {
@@ -210,15 +208,6 @@
           "cw_pap": true
         }
       }
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "add_group_icon",
-      "value": "images/icons/person_cog.svg",
-      "_translations": {
-        "value": {}
-      },
-      "exclude_from_translation": true
     },
     {
       "type": "declare_global_constant",
