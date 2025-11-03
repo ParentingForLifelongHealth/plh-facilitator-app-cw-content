@@ -5,6 +5,12 @@
   "data_list_name": "a_resources",
   "rows": [
     {
+      "id": "facilitation_40",
+      "foreign_key": "facilitation_4",
+      "media_type": "pdf",
+      "media_asset": "aecp_pap"
+    },
+    {
       "id": "facilitation_50",
       "foreign_key": "facilitation_5",
       "media_type": "pdf",
@@ -37,6 +43,12 @@
           "eng": "Stages of Child Development"
         }
       }
+    },
+    {
+      "id": "facilitation_52",
+      "foreign_key": "facilitation_5",
+      "media_type": "pdf",
+      "media_asset": "pdf/children_with_disabilities.pdf"
     }
   ],
   "_xlsxPath": "data/articles_CW.xlsx",

@@ -93,13 +93,15 @@
                     "current_group_no",
                     "this.value"
                   ],
-                  "_raw": "changed | set_field: current_group_no: this.value"
+                  "_raw": "changed | set_field: current_group_no: this.value",
+                  "_cleaned": "changed | set_field: current_group_no: this.value"
                 },
                 {
                   "trigger": "changed",
                   "action_id": "set_data",
                   "args": [],
                   "_raw": "changed | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value}",
+                  "_cleaned": "changed | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value}",
                   "params": {
                     "_list_id": "sub_items",
                     "completed": "@item.@local.completed_prefix{this.value}"
@@ -162,6 +164,14 @@
                         "fieldName": "completed_prefix"
                       }
                     ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "changed | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value}",
+                        "matchedExpression": "@local.completed_prefix",
+                        "type": "local",
+                        "fieldName": "completed_prefix"
+                      }
+                    ],
                     "params": {
                       "completed": [
                         {
@@ -199,6 +209,7 @@
                 ],
                 "@local.completed_prefix": [
                   "action_list.1._raw",
+                  "action_list.1._cleaned",
                   "action_list.1.params.completed"
                 ],
                 "@global.select_group": [
@@ -229,7 +240,8 @@
             "current_package",
             "@items[0].content_package"
           ],
-          "_raw": "data_changed | set_field : current_package: @items[0].content_package"
+          "_raw": "data_changed | set_field : current_package: @items[0].content_package",
+          "_cleaned": "data_changed | set_field : current_package: @items[0].content_package"
         }
       ],
       "parameter_list": {
@@ -1820,7 +1832,8 @@
               "args": [
                 "profile_groups"
               ],
-              "_raw": "click | go_to: profile_groups"
+              "_raw": "click | go_to: profile_groups",
+              "_cleaned": "click | go_to: profile_groups"
             }
           ],
           "parameter_list": {
@@ -1829,7 +1842,8 @@
           },
           "exclude_from_translation": true,
           "style_list": [
-            "max-width: max-content"
+            "max-width: max-content",
+            "margin-top: -10px"
           ],
           "_nested_name": "display_group_16.groups_go_to",
           "_dynamicFields": {

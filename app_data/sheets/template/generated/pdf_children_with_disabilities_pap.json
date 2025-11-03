@@ -1,5 +1,5 @@
 {
-  "flow_name": "pdf_child_development_domain",
+  "flow_name": "pdf_children_with_disabilities_pap",
   "flow_subtype": "generated",
   "flow_type": "template",
   "rows": [
@@ -14,7 +14,8 @@
           "args": [
             "completed"
           ],
-          "_raw": "completed | emit: completed"
+          "_raw": "completed | emit: completed",
+          "_cleaned": "completed | emit: completed"
         },
         {
           "trigger": "uncompleted",
@@ -22,7 +23,8 @@
           "args": [
             "uncompleted"
           ],
-          "_raw": "uncompleted | emit: uncompleted"
+          "_raw": "uncompleted | emit: uncompleted",
+          "_cleaned": "uncompleted | emit: uncompleted"
         }
       ],
       "exclude_from_translation": true,
@@ -39,7 +41,7 @@
         },
         {
           "name": "pdf_id",
-          "value": "child_development_domain",
+          "value": "children_with_disabilities_pap",
           "_translations": {
             "value": {}
           },

@@ -2123,7 +2123,8 @@
             "attendance_data",
             "@local.attendance_data_string"
           ],
-          "_raw": "completed | set_field: attendance_data: @local.attendance_data_string"
+          "_raw": "completed | set_field: attendance_data: @local.attendance_data_string",
+          "_cleaned": "completed | set_field: attendance_data: @local.attendance_data_string"
         },
         {
           "trigger": "completed",
@@ -2131,7 +2132,8 @@
           "args": [
             "completed"
           ],
-          "_raw": "completed | emit: completed"
+          "_raw": "completed | emit: completed",
+          "_cleaned": "completed | emit: completed"
         },
         {
           "trigger": "completed",
@@ -2139,7 +2141,8 @@
           "args": [
             "server_sync"
           ],
-          "_raw": "completed | emit: server_sync"
+          "_raw": "completed | emit: server_sync",
+          "_cleaned": "completed | emit: server_sync"
         }
       ],
       "rows": [],
@@ -2164,6 +2167,14 @@
                 "type": "local",
                 "fieldName": "attendance_data_string"
               }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "completed | set_field: attendance_data: @local.attendance_data_string",
+                "matchedExpression": "@local.attendance_data_string",
+                "type": "local",
+                "fieldName": "attendance_data_string"
+              }
             ]
           }
         }
@@ -2171,7 +2182,8 @@
       "_dynamicDependencies": {
         "@local.attendance_data_string": [
           "action_list.0.args.1",
-          "action_list.0._raw"
+          "action_list.0._raw",
+          "action_list.0._cleaned"
         ]
       }
     }

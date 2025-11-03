@@ -53,7 +53,8 @@
             "current_package",
             "this.value"
           ],
-          "_raw": "changed | set_field: current_package: this.value"
+          "_raw": "changed | set_field: current_package: this.value",
+          "_cleaned": "changed | set_field: current_package: this.value"
         }
       ],
       "parameter_list": {
@@ -105,7 +106,8 @@
           "args": [
             "completed"
           ],
-          "_raw": "click | emit: completed"
+          "_raw": "click | emit: completed",
+          "_cleaned": "click | emit: completed"
         },
         {
           "trigger": "click",
@@ -114,7 +116,8 @@
             "package_selected",
             true
           ],
-          "_raw": "click | set_field: package_selected: TRUE"
+          "_raw": "click | set_field: package_selected: TRUE",
+          "_cleaned": "click | set_field: package_selected: TRUE"
         }
       ],
       "parameter_list": {

@@ -63,7 +63,8 @@
           "args": [
             "uncompleted"
           ],
-          "_raw": "uncompleted | emit: uncompleted"
+          "_raw": "uncompleted | emit: uncompleted",
+          "_cleaned": "uncompleted | emit: uncompleted"
         }
       ],
       "exclude_from_translation": true,
@@ -236,7 +237,8 @@
           "args": [
             "archive_group"
           ],
-          "_raw": "click | pop_up: archive_group"
+          "_raw": "click | pop_up: archive_group",
+          "_cleaned": "click | pop_up: archive_group"
         }
       ],
       "parameter_list": {
@@ -330,7 +332,8 @@
           "args": [
             "delete_group"
           ],
-          "_raw": "click | pop_up: delete_group"
+          "_raw": "click | pop_up: delete_group",
+          "_cleaned": "click | pop_up: delete_group"
         }
       ],
       "parameter_list": {
@@ -381,6 +384,7 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name",
+              "_cleaned": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name",
               "params": {
                 "_list_id": "parent_groups",
                 "_id": "@fields.current_group_id",
@@ -392,6 +396,7 @@
               "action_id": "set_field",
               "args": [],
               "_raw": "click | set_field | current_group_name : @local.group_name",
+              "_cleaned": "click | set_field | current_group_name : @local.group_name",
               "params": {
                 "current_group_name ": "@local.group_name"
               }
@@ -402,7 +407,8 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed"
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -410,7 +416,8 @@
               "args": [
                 "server_sync"
               ],
-              "_raw": "click | emit: server_sync"
+              "_raw": "click | emit: server_sync",
+              "_cleaned": "click | emit: server_sync"
             }
           ],
           "parameter_list": {
@@ -421,6 +428,20 @@
             "action_list": {
               "0": {
                 "_raw": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name",
+                    "matchedExpression": "@fields.current_group_id",
+                    "type": "fields",
+                    "fieldName": "current_group_id"
+                  },
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name",
+                    "matchedExpression": "@local.group_name",
+                    "type": "local",
+                    "fieldName": "group_name"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name",
                     "matchedExpression": "@fields.current_group_id",
@@ -462,6 +483,14 @@
                     "fieldName": "group_name"
                   }
                 ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_field | current_group_name : @local.group_name",
+                    "matchedExpression": "@local.group_name",
+                    "type": "local",
+                    "fieldName": "group_name"
+                  }
+                ],
                 "params": {
                   "current_group_name ": [
                     {
@@ -478,12 +507,15 @@
           "_dynamicDependencies": {
             "@fields.current_group_id": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params._id"
             ],
             "@local.group_name": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params.text",
               "action_list.1._raw",
+              "action_list.1._cleaned",
               "action_list.1.params.current_group_name "
             ]
           }

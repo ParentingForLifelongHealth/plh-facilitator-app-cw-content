@@ -42,7 +42,8 @@
             "number_of_coparents",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : number_of_coparents: @items.length"
+          "_raw": "data_changed | set_local : number_of_coparents: @items.length",
+          "_cleaned": "data_changed | set_local : number_of_coparents: @items.length"
         },
         {
           "trigger": "data_changed",
@@ -51,7 +52,8 @@
             "fn",
             "@items[0].first_name"
           ],
-          "_raw": "data_changed | set_local : fn: @items[0].first_name"
+          "_raw": "data_changed | set_local : fn: @items[0].first_name",
+          "_cleaned": "data_changed | set_local : fn: @items[0].first_name"
         },
         {
           "trigger": "data_changed",
@@ -60,7 +62,8 @@
             "ln",
             "@items[0].last_name"
           ],
-          "_raw": "data_changed | set_local : ln: @items[0].last_name"
+          "_raw": "data_changed | set_local : ln: @items[0].last_name",
+          "_cleaned": "data_changed | set_local : ln: @items[0].last_name"
         }
       ],
       "parameter_list": {

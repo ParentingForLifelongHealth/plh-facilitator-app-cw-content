@@ -363,7 +363,8 @@
             "report_6",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_6 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_6 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_6 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -424,7 +425,8 @@
             "report_5",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_5 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_5 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_5 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -485,7 +487,8 @@
             "report_4",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_4 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_4 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_4 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -546,7 +549,8 @@
             "report_3",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_3 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_3 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_3 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -607,7 +611,8 @@
             "report_2",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_2 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_2 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_2 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -668,7 +673,8 @@
             "report_1",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_1 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_1 : @items.map(item => item.group_id)",
+          "_cleaned": "data_changed | set_local : report_1 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -1739,7 +1745,8 @@
             "no_of_parents",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : no_of_parents : @items.length"
+          "_raw": "data_changed | set_local : no_of_parents : @items.length",
+          "_cleaned": "data_changed | set_local : no_of_parents : @items.length"
         }
       ],
       "exclude_from_translation": true,
@@ -1994,7 +2001,8 @@
             "no_of_parents",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : no_of_parents : @items.length"
+          "_raw": "data_changed | set_local : no_of_parents : @items.length",
+          "_cleaned": "data_changed | set_local : no_of_parents : @items.length"
         }
       ],
       "exclude_from_translation": true,
@@ -2334,7 +2342,8 @@
               "args": [
                 "follow_up"
               ],
-              "_raw": "click | go_to: follow_up"
+              "_raw": "click | go_to: follow_up",
+              "_cleaned": "click | go_to: follow_up"
             }
           ],
           "parameter_list": {

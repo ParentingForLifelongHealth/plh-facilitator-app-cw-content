@@ -107,7 +107,8 @@
           "args": [
             "library_article_@local.article_id"
           ],
-          "_raw": "click | go_to: library_article_@local.article_id"
+          "_raw": "click | go_to: library_article_@local.article_id",
+          "_cleaned": "click | go_to: library_article_@local.article_id"
         }
       ],
       "exclude_from_translation": true,
@@ -141,6 +142,14 @@
                 "type": "local",
                 "fieldName": "article_id"
               }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "click | go_to: library_article_@local.article_id",
+                "matchedExpression": "@local.article_id",
+                "type": "local",
+                "fieldName": "article_id"
+              }
             ]
           }
         }
@@ -151,7 +160,8 @@
         ],
         "@local.article_id": [
           "action_list.0.args.0",
-          "action_list.0._raw"
+          "action_list.0._raw",
+          "action_list.0._cleaned"
         ]
       }
     },

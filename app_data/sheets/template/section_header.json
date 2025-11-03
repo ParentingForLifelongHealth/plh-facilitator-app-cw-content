@@ -165,7 +165,8 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
             }
           ],
           "parameter_list": {
@@ -209,7 +210,8 @@
               "args": [
                 "confirm_exit"
               ],
-              "_raw": "click | pop_up: confirm_exit"
+              "_raw": "click | pop_up: confirm_exit",
+              "_cleaned": "click | pop_up: confirm_exit"
             }
           ],
           "parameter_list": {

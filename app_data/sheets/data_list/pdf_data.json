@@ -5,27 +5,59 @@
   "data_list_name": "pdf",
   "rows": [
     {
-      "id": "child_development_domain",
-      "pdf_asset": "pdf/kemas_rct_overview.pdf",
+      "id": "individual_consultation",
+      "pdf_asset": "pdf/individual_consultation_pap.pdf",
       "library_asset": false,
-      "title": "Programme Overview",
+      "title": "Individual consultation guide",
       "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "description": {
-          "cw_pap": true
-        }
+        "title": {},
+        "description": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Programme Overview"
+          "eng": "Individual consultation guide"
         },
         "description": {
-          "eng": "Overview of the Naungan Kasih programme."
+          "eng": "Individual consultation guide"
         }
       },
-      "description": "Overview of the Naungan Kasih programme."
+      "description": "Individual consultation guide"
+    },
+    {
+      "id": "aecp_pap",
+      "pdf_asset": "pdf/aecp_pap.pdf",
+      "title": "A-E-C-P: Accept, Explore, Connect & Practise",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "A-E-C-P: Accept, Explore, Connect & Practise"
+        },
+        "description": {
+          "eng": "A-E-C-P: Accept, Explore, Connect & Practise"
+        }
+      },
+      "description": "A-E-C-P: Accept, Explore, Connect & Practise"
+    },
+    {
+      "id": "children_with_disabilities_pap",
+      "pdf_asset": "pdf/children_with_disabilities_pap.pdf",
+      "title": "Supporting children with disabilities",
+      "_translations": {
+        "title": {},
+        "description": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Supporting children with disabilities"
+        },
+        "description": {
+          "eng": "Supporting children with disabilities"
+        }
+      },
+      "description": "Supporting children with disabilities"
     }
   ],
   "_xlsxPath": "data/media_data CW.xlsx",

@@ -59,7 +59,8 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
             }
           ],
           "exclude_from_translation": false,
@@ -87,7 +88,8 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed"
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -95,7 +97,8 @@
               "args": [
                 "back"
               ],
-              "_raw": "click | nav: back"
+              "_raw": "click | nav: back",
+              "_cleaned": "click | nav: back"
             }
           ],
           "exclude_from_translation": false,

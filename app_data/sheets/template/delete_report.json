@@ -59,7 +59,8 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
             }
           ],
           "parameter_list": {
@@ -86,6 +87,7 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true",
+              "_cleaned": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true",
               "params": {
                 "_list_id": "report_answers",
                 "_id": "@fields.current_report_no",
@@ -98,7 +100,8 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed"
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             }
           ],
           "parameter_list": {
@@ -113,6 +116,14 @@
             "action_list": {
               "0": {
                 "_raw": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true",
+                    "matchedExpression": "@fields.current_report_no",
+                    "type": "fields",
+                    "fieldName": "current_report_no"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true",
                     "matchedExpression": "@fields.current_report_no",
@@ -136,6 +147,7 @@
           "_dynamicDependencies": {
             "@fields.current_report_no": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params._id"
             ]
           }

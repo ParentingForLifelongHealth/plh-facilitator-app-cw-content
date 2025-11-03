@@ -312,7 +312,8 @@
             "sync_status",
             "\"syncing...\""
           ],
-          "_raw": "click | set_local: sync_status: \"syncing...\""
+          "_raw": "click | set_local: sync_status: \"syncing...\"",
+          "_cleaned": "click | set_local: sync_status: \"syncing...\""
         },
         {
           "trigger": "click",
@@ -321,7 +322,8 @@
             "sync_status",
             "\"syncing...\""
           ],
-          "_raw": "click | set_local: sync_status: \"syncing...\""
+          "_raw": "click | set_local: sync_status: \"syncing...\"",
+          "_cleaned": "click | set_local: sync_status: \"syncing...\""
         },
         {
           "trigger": "click",
@@ -329,7 +331,8 @@
           "args": [
             "force_reprocess"
           ],
-          "_raw": "click | emit: force_reprocess"
+          "_raw": "click | emit: force_reprocess",
+          "_cleaned": "click | emit: force_reprocess"
         },
         {
           "trigger": "click",
@@ -337,7 +340,8 @@
           "args": [
             "server_sync"
           ],
-          "_raw": "click | emit: server_sync"
+          "_raw": "click | emit: server_sync",
+          "_cleaned": "click | emit: server_sync"
         },
         {
           "trigger": "click",
@@ -346,7 +350,8 @@
             "sync_status",
             ""
           ],
-          "_raw": "click | set_local: sync_status:"
+          "_raw": "click | set_local: sync_status:",
+          "_cleaned": "click | set_local: sync_status:"
         },
         {
           "trigger": "click",
@@ -355,7 +360,8 @@
             "sync_button_clicked",
             true
           ],
-          "_raw": "click | set_local: sync_button_clicked: true"
+          "_raw": "click | set_local: sync_button_clicked: true",
+          "_cleaned": "click | set_local: sync_button_clicked: true"
         },
         {
           "trigger": "click",
@@ -363,7 +369,8 @@
           "args": [
             "force_reprocess"
           ],
-          "_raw": "click | emit: force_reprocess"
+          "_raw": "click | emit: force_reprocess",
+          "_cleaned": "click | emit: force_reprocess"
         }
       ],
       "condition": "!@local.sync_status",

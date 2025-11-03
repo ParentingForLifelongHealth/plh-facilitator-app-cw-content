@@ -89,7 +89,8 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
             }
           ],
           "parameter_list": {
@@ -116,6 +117,7 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true",
+              "_cleaned": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true",
               "params": {
                 "_list_id": "parents",
                 "_id": "@fields.current_parent_no",
@@ -128,13 +130,15 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed"
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             },
             {
               "trigger": "click",
               "action_id": "set_data",
               "args": [],
               "_raw": "click | set_data |\n_list_id: parents,\n_id: @fields.current_coparent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+              "_cleaned": "click | set_data |\n_list_id: parents,\n_id: @fields.current_coparent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
               "params": {
                 "_list_id": "parents",
                 "_id": "@fields.current_coparent_id",
@@ -162,6 +166,14 @@
                     "fieldName": "current_parent_no"
                   }
                 ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true",
+                    "matchedExpression": "@fields.current_parent_no",
+                    "type": "fields",
+                    "fieldName": "current_parent_no"
+                  }
+                ],
                 "params": {
                   "_id": [
                     {
@@ -175,6 +187,14 @@
               },
               "2": {
                 "_raw": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_coparent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
+                    "matchedExpression": "@fields.current_coparent_id",
+                    "type": "fields",
+                    "fieldName": "current_coparent_id"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_coparent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
                     "matchedExpression": "@fields.current_coparent_id",
@@ -198,10 +218,12 @@
           "_dynamicDependencies": {
             "@fields.current_parent_no": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params._id"
             ],
             "@fields.current_coparent_id": [
               "action_list.2._raw",
+              "action_list.2._cleaned",
               "action_list.2.params._id"
             ]
           }
