@@ -1,13 +1,22 @@
 {
-  "flow_name": "library_faq",
+  "flow_name": "pdf_aecp_pap",
   "flow_subtype": "generated",
   "flow_type": "template",
   "rows": [
     {
       "type": "template",
-      "name": "library_list",
-      "value": "library_list",
+      "name": "pdf",
+      "value": "pdf",
       "action_list": [
+        {
+          "trigger": "completed",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "completed | emit: completed",
+          "_cleaned": "completed | emit: completed"
+        },
         {
           "trigger": "uncompleted",
           "action_id": "emit",
@@ -21,29 +30,27 @@
       "exclude_from_translation": true,
       "rows": [
         {
-          "name": "library_id",
-          "value": "faq",
+          "name": "data",
+          "value": "pdf",
           "_translations": {
             "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",
-          "_nested_name": "library_list.library_id"
+          "_nested_name": "pdf.data"
         },
         {
-          "name": "display_title",
-          "value": "Frequently asked questions",
+          "name": "pdf_id",
+          "value": "aecp_pap",
           "_translations": {
-            "value": {
-              "cw_pap": true
-            }
+            "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",
-          "_nested_name": "library_list.display_title"
+          "_nested_name": "pdf.pdf_id"
         }
       ],
-      "_nested_name": "library_list"
+      "_nested_name": "pdf"
     }
   ]
 }

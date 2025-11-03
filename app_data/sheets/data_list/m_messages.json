@@ -734,210 +734,6 @@
       }
     },
     {
-      "id": "message156",
-      "foreign_key": "sub_item171",
-      "title": "Message 1: Welcome",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "text": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Message 1: Welcome"
-        },
-        "text": {
-          "eng": "Hello and thanks for being part of the @global.prog_name chat! I am thrilled to be able to chat together about how we can best support our children to grow up healthy and happy. Today, we are going to chat about spending One-on-One time with your children."
-        }
-      },
-      "text": "Hello and thanks for being part of the @global.prog_name chat! I am thrilled to be able to chat together about how we can best support our children to grow up healthy and happy. Today, we are going to chat about spending One-on-One time with your children."
-    },
-    {
-      "id": "message157",
-      "foreign_key": "sub_item172",
-      "title": "Message 2: Introductions",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "text": {
-          "cw_pap": true
-        },
-        "guidance": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Message 2: Introductions"
-        },
-        "text": {
-          "eng": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is [INSERT NAME] and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message."
-        },
-        "guidance": {
-          "eng": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, [Insert Name]!” or “Great goal, [Insert Name]!”"
-        }
-      },
-      "text": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is [INSERT NAME] and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message.",
-      "guidance": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, [Insert Name]!” or “Great goal, [Insert Name]!”"
-    },
-    {
-      "id": "message158",
-      "foreign_key": "sub_item173",
-      "title": "Message 3: Ground rules",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "text": {
-          "cw_pap": true
-        },
-        "guidance": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Message 3: Ground rules"
-        },
-        "text": {
-          "eng": "Thanks so much for sharing! To make this a safe space to communicate openly let’s make some ground rules for this chat group. Our first rule is that what is said in the group stays in the group. You need to know that this group is private.\nHere are some other examples to start us off:\n📱 Let me know if you need to miss a chat session.\n🩵 Accept each other. Everyone is different and has different experiences.\n💬 Share only what you feel comfortable sharing.\n❓ Feel free to ask questions!\n🔏 Respect the privacy of personal pictures and videos that are sent to the chat group. \n\nDoes anyone have any additional rules that they want to suggest?"
-        },
-        "guidance": {
-          "eng": "Allow a couple minutes for parents to share. Praise suggestions and contributions. Make sure that everyone agrees on the ground rules."
-        }
-      },
-      "text": "Thanks so much for sharing! To make this a safe space to communicate openly let’s make some ground rules for this chat group. Our first rule is that what is said in the group stays in the group. You need to know that this group is private.\nHere are some other examples to start us off:\n📱 Let me know if you need to miss a chat session.\n🩵 Accept each other. Everyone is different and has different experiences.\n💬 Share only what you feel comfortable sharing.\n❓ Feel free to ask questions!\n🔏 Respect the privacy of personal pictures and videos that are sent to the chat group. \n\nDoes anyone have any additional rules that they want to suggest?",
-      "guidance": "Allow a couple minutes for parents to share. Praise suggestions and contributions. Make sure that everyone agrees on the ground rules."
-    },
-    {
-      "id": "message159",
-      "foreign_key": "sub_item174",
-      "title": "Message 4: Checking in on home activity",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "text": {
-          "cw_pap": true
-        },
-        "guidance": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Message 4: Checking in on home activity"
-        },
-        "text": {
-          "eng": "Have you had a chance to try spending One-on-One Time with your child?\nIf you did, give me a thumbs up! 👍🏽"
-        },
-        "guidance": {
-          "eng": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
-        }
-      },
-      "text": "Have you had a chance to try spending One-on-One Time with your child?\nIf you did, give me a thumbs up! 👍🏽",
-      "guidance": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
-    },
-    {
-      "id": "message160",
-      "foreign_key": "sub_item175",
-      "title": "Message 5: Voting on a challenge to discuss",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "text": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Message 5: Voting on a challenge to discuss"
-        },
-        "text": {
-          "eng": "If you gave a thumbs up — amazing! 🎉If you face some challenges during one-on-one time, that's completely normal. You’re not alone! Here are some common challenges caregivers have experienced. Vote for the one you’d like us to talk about together:\n\n1️⃣ I didn’t have enough time\n2️⃣ My child did not want to spend time with me\n3️⃣ All my child wanted to do was watch TV or play with a gadget\n4️⃣ My child wanted to do things I felt uncomfortable about"
-        }
-      },
-      "text": "If you gave a thumbs up — amazing! 🎉If you face some challenges during one-on-one time, that's completely normal. You’re not alone! Here are some common challenges caregivers have experienced. Vote for the one you’d like us to talk about together:\n\n1️⃣ I didn’t have enough time\n2️⃣ My child did not want to spend time with me\n3️⃣ All my child wanted to do was watch TV or play with a gadget\n4️⃣ My child wanted to do things I felt uncomfortable about"
-    },
-    {
-      "id": "message161",
-      "foreign_key": "sub_item176",
-      "title": "Message 6: Discussing solution",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "text": {
-          "cw_pap": true
-        },
-        "guidance": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Message 6: Discussing solution"
-        },
-        "text": {
-          "eng": "Can we work together to think of a positive solution to [name challenge]?"
-        },
-        "guidance": {
-          "eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
-        }
-      },
-      "text": "Can we work together to think of a positive solution to [name challenge]?",
-      "guidance": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
-    },
-    {
-      "id": "message162",
-      "foreign_key": "sub_item177",
-      "title": "Message 7: Open Feedback",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "text": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Message 7: Open Feedback"
-        },
-        "text": {
-          "eng": "Thanks for discussing that challenge with me! Does anyone have any other challenges you’d like us to troubleshoot together? Feel free to share — we’re here to support each other!"
-        }
-      },
-      "text": "Thanks for discussing that challenge with me! Does anyone have any other challenges you’d like us to troubleshoot together? Feel free to share — we’re here to support each other!"
-    },
-    {
-      "id": "message163",
-      "foreign_key": "sub_item178",
-      "title": "Message 8: Take a Pause",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        },
-        "text": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Message 8: Take a Pause"
-        },
-        "text": {
-          "eng": "Before we end today’s session let’s take a pause together. This is something you can do whenever you are feeling stressed or overwhelmed. I really appreciate everyone’s contribution today. I’ll be in touch throughout the week with reminders about what’s coming next. Until then, have a peaceful and happy day!"
-        }
-      },
-      "text": "Before we end today’s session let’s take a pause together. This is something you can do whenever you are feeling stressed or overwhelmed. I really appreciate everyone’s contribution today. I’ll be in touch throughout the week with reminders about what’s coming next. Until then, have a peaceful and happy day!"
-    },
-    {
       "id": "message164",
       "foreign_key": "sub_item179",
       "title": "Message 1: Welcome",
@@ -2739,6 +2535,210 @@
           "eng": "Now let’s move on to the final parenting tip on problem solving with your children. We have been doing this throughout the programme. Now it is time to learn how we can involve our children in the process! Here are the 4 basic steps for problem solving:"
         }
       }
+    },
+    {
+      "id": "module_1_chat0",
+      "foreign_key": "module_1_chat",
+      "title": "Message 1: Welcome",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Message 1: Welcome"
+        },
+        "text": {
+          "eng": "Hello and thanks for being part of the @global.prog_name chat! I am thrilled to be able to chat together about how we can best support our children to grow up healthy and happy. Today, we are going to chat about spending One-on-One time with your children."
+        }
+      },
+      "text": "Hello and thanks for being part of the @global.prog_name chat! I am thrilled to be able to chat together about how we can best support our children to grow up healthy and happy. Today, we are going to chat about spending One-on-One time with your children."
+    },
+    {
+      "id": "module_1_chat1",
+      "foreign_key": "module_1_chat",
+      "title": "Message 2: Introductions",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
+        "guidance": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Message 2: Introductions"
+        },
+        "text": {
+          "eng": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is [INSERT NAME] and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message."
+        },
+        "guidance": {
+          "eng": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, [Insert Name]!” or “Great goal, [Insert Name]!”"
+        }
+      },
+      "text": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is [INSERT NAME] and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message.",
+      "guidance": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, [Insert Name]!” or “Great goal, [Insert Name]!”"
+    },
+    {
+      "id": "module_1_chat2",
+      "foreign_key": "module_1_chat",
+      "title": "Message 3: Ground rules",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
+        "guidance": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Message 3: Ground rules"
+        },
+        "text": {
+          "eng": "Thanks so much for sharing! To make this a safe space to communicate openly let’s make some ground rules for this chat group. Our first rule is that what is said in the group stays in the group. You need to know that this group is private.\nHere are some other examples to start us off:\n📱 Let me know if you need to miss a chat session.\n🩵 Accept each other. Everyone is different and has different experiences.\n💬 Share only what you feel comfortable sharing.\n❓ Feel free to ask questions!\n🔏 Respect the privacy of personal pictures and videos that are sent to the chat group. \n\nDoes anyone have any additional rules that they want to suggest?"
+        },
+        "guidance": {
+          "eng": "Allow a couple minutes for parents to share. Praise suggestions and contributions. Make sure that everyone agrees on the ground rules."
+        }
+      },
+      "text": "Thanks so much for sharing! To make this a safe space to communicate openly let’s make some ground rules for this chat group. Our first rule is that what is said in the group stays in the group. You need to know that this group is private.\nHere are some other examples to start us off:\n📱 Let me know if you need to miss a chat session.\n🩵 Accept each other. Everyone is different and has different experiences.\n💬 Share only what you feel comfortable sharing.\n❓ Feel free to ask questions!\n🔏 Respect the privacy of personal pictures and videos that are sent to the chat group. \n\nDoes anyone have any additional rules that they want to suggest?",
+      "guidance": "Allow a couple minutes for parents to share. Praise suggestions and contributions. Make sure that everyone agrees on the ground rules."
+    },
+    {
+      "id": "module_1_chat3",
+      "foreign_key": "module_1_chat",
+      "title": "Message 4: Checking in on home activity",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
+        "guidance": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Message 4: Checking in on home activity"
+        },
+        "text": {
+          "eng": "Have you had a chance to try spending One-on-One Time with your child?\nIf you did, give me a thumbs up! 👍🏽"
+        },
+        "guidance": {
+          "eng": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
+        }
+      },
+      "text": "Have you had a chance to try spending One-on-One Time with your child?\nIf you did, give me a thumbs up! 👍🏽",
+      "guidance": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
+    },
+    {
+      "id": "module_1_chat4",
+      "foreign_key": "module_1_chat",
+      "title": "Message 5: Voting on a challenge to discuss",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Message 5: Voting on a challenge to discuss"
+        },
+        "text": {
+          "eng": "If you gave a thumbs up — amazing! 🎉If you face some challenges during one-on-one time, that's completely normal. You’re not alone! Here are some common challenges caregivers have experienced. Vote for the one you’d like us to talk about together:\n\n1️⃣ I didn’t have enough time\n2️⃣ My child did not want to spend time with me\n3️⃣ All my child wanted to do was watch TV or play with a gadget\n4️⃣ My child wanted to do things I felt uncomfortable about"
+        }
+      },
+      "text": "If you gave a thumbs up — amazing! 🎉If you face some challenges during one-on-one time, that's completely normal. You’re not alone! Here are some common challenges caregivers have experienced. Vote for the one you’d like us to talk about together:\n\n1️⃣ I didn’t have enough time\n2️⃣ My child did not want to spend time with me\n3️⃣ All my child wanted to do was watch TV or play with a gadget\n4️⃣ My child wanted to do things I felt uncomfortable about"
+    },
+    {
+      "id": "module_1_chat5",
+      "foreign_key": "module_1_chat",
+      "title": "Message 6: Discussing solution",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
+        "guidance": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Message 6: Discussing solution"
+        },
+        "text": {
+          "eng": "Can we work together to think of a positive solution to [name challenge]?"
+        },
+        "guidance": {
+          "eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
+        }
+      },
+      "text": "Can we work together to think of a positive solution to [name challenge]?",
+      "guidance": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
+    },
+    {
+      "id": "module_1_chat6",
+      "foreign_key": "module_1_chat",
+      "title": "Message 7: Open Feedback",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Message 7: Open Feedback"
+        },
+        "text": {
+          "eng": "Thanks for discussing that challenge with me! Does anyone have any other challenges you’d like us to troubleshoot together? Feel free to share — we’re here to support each other!"
+        }
+      },
+      "text": "Thanks for discussing that challenge with me! Does anyone have any other challenges you’d like us to troubleshoot together? Feel free to share — we’re here to support each other!"
+    },
+    {
+      "id": "module_1_chat7",
+      "foreign_key": "module_1_chat",
+      "title": "Message 8: Take a Pause",
+      "_translations": {
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Message 8: Take a Pause"
+        },
+        "text": {
+          "eng": "Before we end today’s session let’s take a pause together. This is something you can do whenever you are feeling stressed or overwhelmed. I really appreciate everyone’s contribution today. I’ll be in touch throughout the week with reminders about what’s coming next. Until then, have a peaceful and happy day!"
+        }
+      },
+      "text": "Before we end today’s session let’s take a pause together. This is something you can do whenever you are feeling stressed or overwhelmed. I really appreciate everyone’s contribution today. I’ll be in touch throughout the week with reminders about what’s coming next. Until then, have a peaceful and happy day!"
     }
   ],
   "_xlsxPath": "data/modules_CW.xlsx",

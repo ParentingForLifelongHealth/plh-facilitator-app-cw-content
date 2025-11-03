@@ -107,7 +107,7 @@
       },
       {
         "type": "set_variable",
-        "count": 943
+        "count": 947
       },
       {
         "type": "simple_checkbox",
@@ -123,7 +123,7 @@
       },
       {
         "type": "template",
-        "count": 124
+        "count": 126
       },
       {
         "type": "test",
@@ -175,7 +175,7 @@
       },
       {
         "type": "emit: completed",
-        "count": 47
+        "count": 49
       },
       {
         "type": "emit: force_reload",
@@ -199,7 +199,7 @@
       },
       {
         "type": "emit: uncompleted",
-        "count": 78
+        "count": 80
       },
       {
         "type": "feedback",
@@ -267,18 +267,22 @@
     "data": [
       {
         "assets": "total",
-        "KB": "23923 KB",
-        "MB": "23.9 MB"
+        "KB": "25901 KB",
+        "MB": "25.9 MB"
       },
       {
         "assets": "unused",
-        "KB": "183 KB",
-        "MB": "0.2 MB"
+        "KB": "292 KB",
+        "MB": "0.3 MB"
       }
     ]
   },
   "assets_unused": {
     "data": [
+      {
+        "path": "images/articles/about_app_1.png",
+        "size_kb": 109.2
+      },
       {
         "path": "images/backgrounds/home_bottom_right.svg",
         "size_kb": 2.3
@@ -577,7 +581,7 @@
         "missing": true
       },
       {
-        "path": "pdf/kemas_rct_overview.pdf",
+        "path": "pdf/children_with_disabilities.pdf",
         "count": 1,
         "missing": true
       }
@@ -585,11 +589,6 @@
   },
   "asset_summary": {
     "data": [
-      {
-        "path": "images/articles/about_app_1.png",
-        "count": 1,
-        "size_kb": 109.2
-      },
       {
         "path": "images/articles/guide.png",
         "count": 1,
@@ -881,6 +880,11 @@
         "size_kb": 13.4
       },
       {
+        "path": "pdf/aecp_pap.pdf",
+        "count": 1,
+        "size_kb": 673.9
+      },
+      {
         "path": "pdf/child_development_domain.pdf",
         "count": 1,
         "size_kb": 141
@@ -889,6 +893,16 @@
         "path": "pdf/child_development_stage.pdf",
         "count": 1,
         "size_kb": 508.2
+      },
+      {
+        "path": "pdf/children_with_disabilities_pap.pdf",
+        "count": 1,
+        "size_kb": 686.8
+      },
+      {
+        "path": "pdf/individual_consultation_pap.pdf",
+        "count": 1,
+        "size_kb": 726.5
       }
     ]
   },
@@ -957,7 +971,7 @@
       {
         "type": "template",
         "subtype": "generated",
-        "total": 62
+        "total": 64
       },
       {
         "type": "template",

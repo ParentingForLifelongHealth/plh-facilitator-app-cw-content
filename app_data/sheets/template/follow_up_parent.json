@@ -35,6 +35,7 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "changed | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now())",
+              "_cleaned": "changed | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now())",
               "params": {
                 "_list_id": "parents",
                 "_id": "@local.parent_id",
@@ -48,6 +49,20 @@
             "action_list": {
               "0": {
                 "_raw": [
+                  {
+                    "fullExpression": "changed | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now())",
+                    "matchedExpression": "@local.parent_id",
+                    "type": "local",
+                    "fieldName": "parent_id"
+                  },
+                  {
+                    "fullExpression": "changed | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now())",
+                    "matchedExpression": "@calc(now())",
+                    "type": "calc",
+                    "fieldName": "now()"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "changed | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now())",
                     "matchedExpression": "@local.parent_id",
@@ -85,10 +100,12 @@
           "_dynamicDependencies": {
             "@local.parent_id": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params._id"
             ],
             "@calc(now())": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params.last_follow_up"
             ]
           }
@@ -260,7 +277,8 @@
               "args": [
                 "library_article_faq_small_group_active"
               ],
-              "_raw": "click | go_to: library_article_faq_small_group_active"
+              "_raw": "click | go_to: library_article_faq_small_group_active",
+              "_cleaned": "click | go_to: library_article_faq_small_group_active"
             }
           ],
           "parameter_list": {

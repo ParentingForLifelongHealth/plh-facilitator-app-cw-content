@@ -43,7 +43,8 @@
               "args": [
                 "cancel"
               ],
-              "_raw": "click | feedback:cancel"
+              "_raw": "click | feedback:cancel",
+              "_cleaned": "click | feedback:cancel"
             }
           ],
           "exclude_from_translation": true,
@@ -66,7 +67,8 @@
                 "submit",
                 "@local.feedback"
               ],
-              "_raw": "click | feedback:submit:@local.feedback"
+              "_raw": "click | feedback:submit:@local.feedback",
+              "_cleaned": "click | feedback:submit:@local.feedback"
             }
           ],
           "exclude_from_translation": true,
@@ -91,6 +93,14 @@
                     "type": "local",
                     "fieldName": "feedback"
                   }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | feedback:submit:@local.feedback",
+                    "matchedExpression": "@local.feedback",
+                    "type": "local",
+                    "fieldName": "feedback"
+                  }
                 ]
               }
             }
@@ -98,7 +108,8 @@
           "_dynamicDependencies": {
             "@local.feedback": [
               "action_list.0.args.1",
-              "action_list.0._raw"
+              "action_list.0._raw",
+              "action_list.0._cleaned"
             ]
           }
         }

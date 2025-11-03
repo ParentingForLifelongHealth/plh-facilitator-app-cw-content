@@ -152,7 +152,8 @@
             "group_count",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : group_count: @items.length"
+          "_raw": "data_changed | set_local : group_count: @items.length",
+          "_cleaned": "data_changed | set_local : group_count: @items.length"
         }
       ],
       "parameter_list": {
@@ -581,6 +582,7 @@
               "action_id": "set_item",
               "args": [],
               "_raw": "changed | set_item| co_parent_id: @local.co_parent_id",
+              "_cleaned": "changed | set_item| co_parent_id: @local.co_parent_id",
               "params": {
                 "co_parent_id": "@local.co_parent_id"
               }
@@ -590,6 +592,7 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: @local.co_parent_id",
+              "_cleaned": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: @local.co_parent_id",
               "params": {
                 "_list_id": "parents",
                 "_id": "@fields.current_parent_no",
@@ -616,6 +619,14 @@
                     "fieldName": "co_parent_id"
                   }
                 ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "changed | set_item| co_parent_id: @local.co_parent_id",
+                    "matchedExpression": "@local.co_parent_id",
+                    "type": "local",
+                    "fieldName": "co_parent_id"
+                  }
+                ],
                 "params": {
                   "co_parent_id": [
                     {
@@ -629,6 +640,20 @@
               },
               "1": {
                 "_raw": [
+                  {
+                    "fullExpression": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: @local.co_parent_id",
+                    "matchedExpression": "@fields.current_parent_no",
+                    "type": "fields",
+                    "fieldName": "current_parent_no"
+                  },
+                  {
+                    "fullExpression": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: @local.co_parent_id",
+                    "matchedExpression": "@local.co_parent_id",
+                    "type": "local",
+                    "fieldName": "co_parent_id"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: @local.co_parent_id",
                     "matchedExpression": "@fields.current_parent_no",
@@ -704,12 +729,15 @@
           "_dynamicDependencies": {
             "@local.co_parent_id": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params.co_parent_id",
               "action_list.1._raw",
+              "action_list.1._cleaned",
               "action_list.1.params.co_parent_id"
             ],
             "@fields.current_parent_no": [
               "action_list.1._raw",
+              "action_list.1._cleaned",
               "action_list.1.params._id"
             ],
             "@item.co_parent_id": [
@@ -739,6 +767,7 @@
               "action_id": "set_item",
               "args": [],
               "_raw": "changed | set_item| co_parent_id: empty",
+              "_cleaned": "changed | set_item| co_parent_id: empty",
               "params": {
                 "co_parent_id": "empty"
               }
@@ -748,6 +777,7 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: empty",
+              "_cleaned": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: empty",
               "params": {
                 "_list_id": "parents",
                 "_id": "@fields.current_parent_no",
@@ -766,6 +796,14 @@
             "action_list": {
               "1": {
                 "_raw": [
+                  {
+                    "fullExpression": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: empty",
+                    "matchedExpression": "@fields.current_parent_no",
+                    "type": "fields",
+                    "fieldName": "current_parent_no"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "changed | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: empty",
                     "matchedExpression": "@fields.current_parent_no",
@@ -819,6 +857,7 @@
           "_dynamicDependencies": {
             "@fields.current_parent_no": [
               "action_list.1._raw",
+              "action_list.1._cleaned",
               "action_list.1.params._id"
             ],
             "@item.co_parent_id": [
@@ -845,6 +884,7 @@
               "action_id": "set_item",
               "args": [],
               "_raw": "changed | set_item| co_parent_id: empty",
+              "_cleaned": "changed | set_item| co_parent_id: empty",
               "params": {
                 "co_parent_id": "empty"
               }
@@ -914,6 +954,7 @@
               "action_id": "set_item",
               "args": [],
               "_raw": "changed | set_item| co_parent_id: @local.co_parent_id",
+              "_cleaned": "changed | set_item| co_parent_id: @local.co_parent_id",
               "params": {
                 "co_parent_id": "@local.co_parent_id"
               }
@@ -931,6 +972,14 @@
             "action_list": {
               "0": {
                 "_raw": [
+                  {
+                    "fullExpression": "changed | set_item| co_parent_id: @local.co_parent_id",
+                    "matchedExpression": "@local.co_parent_id",
+                    "type": "local",
+                    "fieldName": "co_parent_id"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "changed | set_item| co_parent_id: @local.co_parent_id",
                     "matchedExpression": "@local.co_parent_id",
@@ -992,6 +1041,7 @@
           "_dynamicDependencies": {
             "@local.co_parent_id": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params.co_parent_id"
             ],
             "@item.co_parent_id": [

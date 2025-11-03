@@ -119,7 +119,8 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted",
+              "_cleaned": "click | emit: uncompleted"
             }
           ],
           "parameter_list": {
@@ -145,6 +146,7 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
+              "_cleaned": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
               "params": {
                 "_list_id": "parent_groups",
                 "_id": "@fields.current_group_id",
@@ -160,7 +162,8 @@
                 "current_group_no",
                 "NULL"
               ],
-              "_raw": "click | set_field: current_group_no: NULL"
+              "_raw": "click | set_field: current_group_no: NULL",
+              "_cleaned": "click | set_field: current_group_no: NULL"
             },
             {
               "trigger": "click",
@@ -168,7 +171,8 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed"
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -176,7 +180,8 @@
               "args": [
                 "back"
               ],
-              "_raw": "click | nav: back"
+              "_raw": "click | nav: back",
+              "_cleaned": "click | nav: back"
             },
             {
               "trigger": "click",
@@ -184,7 +189,8 @@
               "args": [
                 "back"
               ],
-              "_raw": "click | nav: back"
+              "_raw": "click | nav: back",
+              "_cleaned": "click | nav: back"
             }
           ],
           "parameter_list": {
@@ -198,6 +204,20 @@
             "action_list": {
               "0": {
                 "_raw": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
+                    "matchedExpression": "@fields.current_group_id",
+                    "type": "fields",
+                    "fieldName": "current_group_id"
+                  },
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
+                    "matchedExpression": "@local.now",
+                    "type": "local",
+                    "fieldName": "now"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
                     "matchedExpression": "@fields.current_group_id",
@@ -235,10 +255,12 @@
           "_dynamicDependencies": {
             "@fields.current_group_id": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params._id"
             ],
             "@local.now": [
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "action_list.0.params.archived_date"
             ]
           }

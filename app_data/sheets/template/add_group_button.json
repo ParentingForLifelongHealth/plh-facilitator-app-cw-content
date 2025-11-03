@@ -141,13 +141,15 @@
           "args": [
             "completed"
           ],
-          "_raw": "click | emit: completed"
+          "_raw": "click | emit: completed",
+          "_cleaned": "click | emit: completed"
         },
         {
           "trigger": "click",
           "action_id": "add_data",
           "args": [],
           "_raw": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+          "_cleaned": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
           "params": {
             "_list_id": "parent_groups",
             "archived": false,
@@ -163,6 +165,7 @@
           "action_id": "set_data",
           "args": [],
           "_raw": "click | set_data |\n_list_id: sub_items,\n@local.completed_field: FALSE",
+          "_cleaned": "click | set_data |\n_list_id: sub_items,\n@local.completed_field: FALSE",
           "params": {
             "_list_id": "sub_items",
             "@local.completed_field": false
@@ -173,6 +176,7 @@
           "action_id": "set_data",
           "args": [],
           "_raw": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+          "_cleaned": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
           "params": {
             "_list_id": "modules",
             "@local.completed_field": false,
@@ -185,7 +189,8 @@
           "args": [
             "server_sync"
           ],
-          "_raw": "click | emit: server_sync"
+          "_raw": "click | emit: server_sync",
+          "_cleaned": "click | emit: server_sync"
         }
       ],
       "parameter_list": {
@@ -197,6 +202,38 @@
         "action_list": {
           "1": {
             "_raw": [
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.name",
+                "type": "local",
+                "fieldName": "name"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.text",
+                "type": "local",
+                "fieldName": "text"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.delivery_type",
+                "type": "local",
+                "fieldName": "delivery_type"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.age_group",
+                "type": "local",
+                "fieldName": "age_group"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "matchedExpression": "@local.content_package",
+                "type": "local",
+                "fieldName": "content_package"
+              }
+            ],
+            "_cleaned": [
               {
                 "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
                 "matchedExpression": "@local.name",
@@ -279,10 +316,32 @@
                 "type": "local",
                 "fieldName": "completed_field"
               }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "click | set_data |\n_list_id: sub_items,\n@local.completed_field: FALSE",
+                "matchedExpression": "@local.completed_field",
+                "type": "local",
+                "fieldName": "completed_field"
+              }
             ]
           },
           "3": {
             "_raw": [
+              {
+                "fullExpression": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+                "matchedExpression": "@local.completed_field",
+                "type": "local",
+                "fieldName": "completed_field"
+              },
+              {
+                "fullExpression": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
+                "matchedExpression": "@local.pages_field",
+                "type": "local",
+                "fieldName": "pages_field"
+              }
+            ],
+            "_cleaned": [
               {
                 "fullExpression": "click | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE",
                 "matchedExpression": "@local.completed_field",
@@ -312,30 +371,38 @@
       "_dynamicDependencies": {
         "@local.name": [
           "action_list.1._raw",
+          "action_list.1._cleaned",
           "action_list.1.params.name"
         ],
         "@local.text": [
           "action_list.1._raw",
+          "action_list.1._cleaned",
           "action_list.1.params.text"
         ],
         "@local.delivery_type": [
           "action_list.1._raw",
+          "action_list.1._cleaned",
           "action_list.1.params.delivery_type"
         ],
         "@local.age_group": [
           "action_list.1._raw",
+          "action_list.1._cleaned",
           "action_list.1.params.age_group"
         ],
         "@local.content_package": [
           "action_list.1._raw",
+          "action_list.1._cleaned",
           "action_list.1.params.content_package"
         ],
         "@local.completed_field": [
           "action_list.2._raw",
-          "action_list.3._raw"
+          "action_list.2._cleaned",
+          "action_list.3._raw",
+          "action_list.3._cleaned"
         ],
         "@local.pages_field": [
-          "action_list.3._raw"
+          "action_list.3._raw",
+          "action_list.3._cleaned"
         ],
         "!@local.valid": [
           "parameter_list.disabled"

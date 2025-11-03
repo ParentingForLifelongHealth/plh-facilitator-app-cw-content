@@ -316,7 +316,8 @@
                 "user_type",
                 "@local.user_type_select"
               ],
-              "_raw": "click | set_field: user_type: @local.user_type_select"
+              "_raw": "click | set_field: user_type: @local.user_type_select",
+              "_cleaned": "click | set_field: user_type: @local.user_type_select"
             },
             {
               "trigger": "click",
@@ -324,7 +325,8 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed"
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             }
           ],
           "parameter_list": {
@@ -364,6 +366,14 @@
                     "type": "local",
                     "fieldName": "user_type_select"
                   }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
+                    "matchedExpression": "@local.user_type_select",
+                    "type": "local",
+                    "fieldName": "user_type_select"
+                  }
                 ]
               }
             },
@@ -393,6 +403,7 @@
             "@local.user_type_select": [
               "action_list.0.args.1",
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "condition"
             ],
             "!@local.completed_enabled": [
@@ -415,7 +426,8 @@
                 "user_type",
                 "@local.user_type_select"
               ],
-              "_raw": "click | set_field: user_type: @local.user_type_select"
+              "_raw": "click | set_field: user_type: @local.user_type_select",
+              "_cleaned": "click | set_field: user_type: @local.user_type_select"
             },
             {
               "trigger": "click",
@@ -424,7 +436,8 @@
                 "set_language",
                 "@local.language_grid"
               ],
-              "_raw": "click | emit: set_language: @local.language_grid"
+              "_raw": "click | emit: set_language: @local.language_grid",
+              "_cleaned": "click | emit: set_language: @local.language_grid"
             },
             {
               "trigger": "click",
@@ -432,7 +445,8 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed"
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             }
           ],
           "parameter_list": {
@@ -472,6 +486,14 @@
                     "type": "local",
                     "fieldName": "user_type_select"
                   }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
+                    "matchedExpression": "@local.user_type_select",
+                    "type": "local",
+                    "fieldName": "user_type_select"
+                  }
                 ]
               },
               "1": {
@@ -486,6 +508,14 @@
                   ]
                 },
                 "_raw": [
+                  {
+                    "fullExpression": "click | emit: set_language: @local.language_grid",
+                    "matchedExpression": "@local.language_grid",
+                    "type": "local",
+                    "fieldName": "language_grid"
+                  }
+                ],
+                "_cleaned": [
                   {
                     "fullExpression": "click | emit: set_language: @local.language_grid",
                     "matchedExpression": "@local.language_grid",
@@ -521,11 +551,13 @@
             "@local.user_type_select": [
               "action_list.0.args.1",
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "condition"
             ],
             "@local.language_grid": [
               "action_list.1.args.1",
-              "action_list.1._raw"
+              "action_list.1._raw",
+              "action_list.1._cleaned"
             ],
             "!@local.completed_enabled": [
               "parameter_list.disabled"

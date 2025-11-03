@@ -29,11 +29,11 @@
 | round_button | 31 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 943 |
+| set_variable | 947 |
 | simple_checkbox | 7 |
 | task_card | 1 |
 | task_progress_bar | 4 |
-| template | 124 |
+| template | 126 |
 | test | 1 |
 | text | 348 |
 | text_area | 4 |
@@ -52,13 +52,13 @@
 | add_data | 9 |
 | app_update | 1 |
 | auth | 4 |
-| emit: completed | 47 |
+| emit: completed | 49 |
 | emit: force_reload | 8 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 21 |
 | emit: set_language | 4 |
-| emit: uncompleted | 78 |
+| emit: uncompleted | 80 |
 | feedback | 24 |
 | go_to | 43 |
 | nav | 5 |
@@ -81,8 +81,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 23923 KB | 23.9 MB |
-| unused | 183 KB | 0.2 MB |
+| total | 25901 KB | 25.9 MB |
+| unused | 292 KB | 0.3 MB |
 </details>
 
 <details open>
@@ -92,6 +92,7 @@ Assets that appear in app-data but do not have references within sheets
 
 | path | size_kb |
 | --- | --- |
+| images/articles/about_app_1.png | 109.2 |
 | images/backgrounds/home_bottom_right.svg | 2.3 |
 | images/backgrounds/library_bottom_left.svg | 2.3 |
 | images/backgrounds/library_top_right.svg | 0.3 |
@@ -170,7 +171,7 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/plh_logomark.png | 1 |
 | images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
-| pdf/kemas_rct_overview.pdf | 1 |
+| pdf/children_with_disabilities.pdf | 1 |
 </details>
 
 <details >
@@ -180,7 +181,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | path | size_kb | count |
 | --- | --- | --- |
-| images/articles/about_app_1.png | 109.2 | 1 |
 | images/articles/guide.png | 2321.4 | 1 |
 | images/articles/programme.png | 559.1 | 1 |
 | images/articles/sessions.png | 2394.1 | 1 |
@@ -239,8 +239,11 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/onboarding/splash_5.png | 2195 | 1 |
 | lottie/checkmark_blue.json | 17 | 6 |
 | lottie/cw_profile_complete.json | 13.4 | 1 |
+| pdf/aecp_pap.pdf | 673.9 | 1 |
 | pdf/child_development_domain.pdf | 141 | 1 |
 | pdf/child_development_stage.pdf | 508.2 | 1 |
+| pdf/children_with_disabilities_pap.pdf | 686.8 | 1 |
+| pdf/individual_consultation_pap.pdf | 726.5 | 1 |
 </details>
 
 <details >
@@ -260,6 +263,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
 | template |  | 101 |
-| template | generated | 62 |
+| template | generated | 64 |
 | template | legal_terms | 4 |
 </details>

@@ -85,6 +85,7 @@
           "action_id": "set_local",
           "args": [],
           "_raw": "data_changed | set_local | module_1 : @items[0].id",
+          "_cleaned": "data_changed | set_local | module_1 : @items[0].id",
           "params": {
             "module_1 ": "@items[0].id"
           }
@@ -94,6 +95,7 @@
           "action_id": "set_local",
           "args": [],
           "_raw": "data_changed | set_local | module_2 : @items[1].id",
+          "_cleaned": "data_changed | set_local | module_2 : @items[1].id",
           "params": {
             "module_2 ": "@items[1].id"
           }
@@ -103,6 +105,7 @@
           "action_id": "set_local",
           "args": [],
           "_raw": "data_changed | set_local | module_3 : @items[3].id",
+          "_cleaned": "data_changed | set_local | module_3 : @items[3].id",
           "params": {
             "module_3 ": "@items[3].id"
           }

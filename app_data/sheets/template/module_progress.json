@@ -86,7 +86,8 @@
             "module_count",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : module_count: @items.length"
+          "_raw": "data_changed | set_local : module_count: @items.length",
+          "_cleaned": "data_changed | set_local : module_count: @items.length"
         }
       ],
       "parameter_list": {
@@ -155,7 +156,8 @@
             "complete_count",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : complete_count: @items.length"
+          "_raw": "data_changed | set_local : complete_count: @items.length",
+          "_cleaned": "data_changed | set_local : complete_count: @items.length"
         }
       ],
       "parameter_list": {

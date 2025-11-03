@@ -106,7 +106,8 @@
                       "args": [
                         "pdf_@local.resource_id"
                       ],
-                      "_raw": "click | go_to: pdf_@local.resource_id"
+                      "_raw": "click | go_to: pdf_@local.resource_id",
+                      "_cleaned": "click | go_to: pdf_@local.resource_id"
                     }
                   ],
                   "parameter_list": {
@@ -135,6 +136,14 @@
                             "type": "local",
                             "fieldName": "resource_id"
                           }
+                        ],
+                        "_cleaned": [
+                          {
+                            "fullExpression": "click | go_to: pdf_@local.resource_id",
+                            "matchedExpression": "@local.resource_id",
+                            "type": "local",
+                            "fieldName": "resource_id"
+                          }
                         ]
                       }
                     },
@@ -150,7 +159,8 @@
                   "_dynamicDependencies": {
                     "@local.resource_id": [
                       "action_list.0.args.0",
-                      "action_list.0._raw"
+                      "action_list.0._raw",
+                      "action_list.0._cleaned"
                     ],
                     "@item.id.main_view": [
                       "_nested_name"
@@ -206,7 +216,8 @@
                       "args": [
                         "pdf_@local.resource_id"
                       ],
-                      "_raw": "click | go_to: pdf_@local.resource_id"
+                      "_raw": "click | go_to: pdf_@local.resource_id",
+                      "_cleaned": "click | go_to: pdf_@local.resource_id"
                     }
                   ],
                   "parameter_list": {
@@ -235,6 +246,14 @@
                             "type": "local",
                             "fieldName": "resource_id"
                           }
+                        ],
+                        "_cleaned": [
+                          {
+                            "fullExpression": "click | go_to: pdf_@local.resource_id",
+                            "matchedExpression": "@local.resource_id",
+                            "type": "local",
+                            "fieldName": "resource_id"
+                          }
                         ]
                       }
                     },
@@ -250,7 +269,8 @@
                   "_dynamicDependencies": {
                     "@local.resource_id": [
                       "action_list.0.args.0",
-                      "action_list.0._raw"
+                      "action_list.0._raw",
+                      "action_list.0._cleaned"
                     ],
                     "@item.id.view": [
                       "_nested_name"
@@ -267,7 +287,8 @@
                       "args": [
                         "@item.pdf_asset"
                       ],
-                      "_raw": "click | save_to_device: @item.pdf_asset"
+                      "_raw": "click | save_to_device: @item.pdf_asset",
+                      "_cleaned": "click | save_to_device: @item.pdf_asset"
                     }
                   ],
                   "parameter_list": {
@@ -296,6 +317,14 @@
                             "type": "item",
                             "fieldName": "pdf_asset"
                           }
+                        ],
+                        "_cleaned": [
+                          {
+                            "fullExpression": "click | save_to_device: @item.pdf_asset",
+                            "matchedExpression": "@item.pdf_asset",
+                            "type": "item",
+                            "fieldName": "pdf_asset"
+                          }
                         ]
                       }
                     },
@@ -311,7 +340,8 @@
                   "_dynamicDependencies": {
                     "@item.pdf_asset": [
                       "action_list.0.args.0",
-                      "action_list.0._raw"
+                      "action_list.0._raw",
+                      "action_list.0._cleaned"
                     ],
                     "@item.id.download": [
                       "_nested_name"
@@ -545,7 +575,8 @@
                           "args": [
                             "@item.media_asset"
                           ],
-                          "_raw": "click | save_to_device: @item.media_asset"
+                          "_raw": "click | save_to_device: @item.media_asset",
+                          "_cleaned": "click | save_to_device: @item.media_asset"
                         }
                       ],
                       "style_list": [
@@ -577,6 +608,14 @@
                                 "type": "item",
                                 "fieldName": "media_asset"
                               }
+                            ],
+                            "_cleaned": [
+                              {
+                                "fullExpression": "click | save_to_device: @item.media_asset",
+                                "matchedExpression": "@item.media_asset",
+                                "type": "item",
+                                "fieldName": "media_asset"
+                              }
                             ]
                           }
                         },
@@ -592,7 +631,8 @@
                       "_dynamicDependencies": {
                         "@item.media_asset": [
                           "action_list.0.args.0",
-                          "action_list.0._raw"
+                          "action_list.0._raw",
+                          "action_list.0._cleaned"
                         ],
                         "@item.id.display_group_3.download": [
                           "_nested_name"

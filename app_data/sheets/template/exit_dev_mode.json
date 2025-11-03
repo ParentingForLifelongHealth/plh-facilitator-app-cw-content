@@ -40,7 +40,8 @@
             "user_mode",
             true
           ],
-          "_raw": "click | set_field: user_mode:true"
+          "_raw": "click | set_field: user_mode:true",
+          "_cleaned": "click | set_field: user_mode:true"
         },
         {
           "trigger": "click",
@@ -48,7 +49,8 @@
           "args": [
             "force_restart"
           ],
-          "_raw": "click | emit:force_restart"
+          "_raw": "click | emit:force_restart",
+          "_cleaned": "click | emit:force_restart"
         }
       ],
       "exclude_from_translation": true,

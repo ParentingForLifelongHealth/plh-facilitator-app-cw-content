@@ -43,7 +43,8 @@
                   "args": [
                     "pdf_@item.id"
                   ],
-                  "_raw": "click | go_to: pdf_@item.id"
+                  "_raw": "click | go_to: pdf_@item.id",
+                  "_cleaned": "click | go_to: pdf_@item.id"
                 }
               ],
               "parameter_list": {
@@ -152,6 +153,14 @@
                         "type": "item",
                         "fieldName": "id"
                       }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | go_to: pdf_@item.id",
+                        "matchedExpression": "@item.id",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
                     ]
                   }
                 },
@@ -176,6 +185,7 @@
                 "@item.id": [
                   "action_list.0.args.0",
                   "action_list.0._raw",
+                  "action_list.0._cleaned",
                   "name",
                   "_nested_name"
                 ]
@@ -231,7 +241,8 @@
               "args": [
                 "library_@item.id"
               ],
-              "_raw": "click | go_to: library_@item.id"
+              "_raw": "click | go_to: library_@item.id",
+              "_cleaned": "click | go_to: library_@item.id"
             }
           ],
           "style_list": [
@@ -383,6 +394,14 @@
                     "type": "item",
                     "fieldName": "id"
                   }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | go_to: library_@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
                 ]
               }
             },
@@ -400,6 +419,7 @@
               "name",
               "action_list.0.args.0",
               "action_list.0._raw",
+              "action_list.0._cleaned",
               "_nested_name"
             ]
           }

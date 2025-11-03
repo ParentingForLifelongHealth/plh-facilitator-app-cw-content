@@ -196,7 +196,8 @@
               "args": [
                 "force_reprocess"
               ],
-              "_raw": "click | emit: force_reprocess"
+              "_raw": "click | emit: force_reprocess",
+              "_cleaned": "click | emit: force_reprocess"
             }
           ],
           "condition": "@fields._platform === \"ios\" || @fields._operating_system === \"ios\" || @fields._operating_system === \"mac\"",
@@ -258,7 +259,8 @@
               "args": [
                 "force_reprocess"
               ],
-              "_raw": "click | emit: force_reprocess"
+              "_raw": "click | emit: force_reprocess",
+              "_cleaned": "click | emit: force_reprocess"
             }
           ],
           "_nested_name": "before_login.button_google_sign_in",
@@ -292,7 +294,8 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed"
+              "_raw": "click | emit: completed",
+              "_cleaned": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -301,7 +304,8 @@
                 "onboarding_terms_login_completed",
                 true
               ],
-              "_raw": "click | set_field: onboarding_terms_login_completed: true"
+              "_raw": "click | set_field: onboarding_terms_login_completed: true",
+              "_cleaned": "click | set_field: onboarding_terms_login_completed: true"
             }
           ],
           "condition": "!@global.login_is_mandatory",
@@ -385,6 +389,7 @@
                     "app_menu_terms"
                   ],
                   "_raw": "click | pop_up: app_menu_terms | fullscreen: true",
+                  "_cleaned": "click | pop_up: app_menu_terms | fullscreen: true",
                   "params": {
                     "fullscreen": true
                   }
@@ -427,6 +432,7 @@
                     "app_menu_privacy_policy"
                   ],
                   "_raw": "click | pop_up: app_menu_privacy_policy | fullscreen: true",
+                  "_cleaned": "click | pop_up: app_menu_privacy_policy | fullscreen: true",
                   "params": {
                     "fullscreen": true
                   }
@@ -509,7 +515,8 @@
                 "no_previous_auth_id",
                 "@items.length === 0"
               ],
-              "_raw": "data_changed | set_field : no_previous_auth_id : @items.length === 0"
+              "_raw": "data_changed | set_field : no_previous_auth_id : @items.length === 0",
+              "_cleaned": "data_changed | set_field : no_previous_auth_id : @items.length === 0"
             }
           ],
           "name": "data_items_1",
@@ -671,7 +678,8 @@
                         "import",
                         "@item.id"
                       ],
-                      "_raw": "click | user: import: @item.id"
+                      "_raw": "click | user: import: @item.id",
+                      "_cleaned": "click | user: import: @item.id"
                     },
                     {
                       "trigger": "click",
@@ -680,7 +688,8 @@
                         "onboarding_terms_login_completed",
                         true
                       ],
-                      "_raw": "click | set_field: onboarding_terms_login_completed: true"
+                      "_raw": "click | set_field: onboarding_terms_login_completed: true",
+                      "_cleaned": "click | set_field: onboarding_terms_login_completed: true"
                     }
                   ],
                   "parameter_list": {
@@ -715,6 +724,14 @@
                             "type": "item",
                             "fieldName": "id"
                           }
+                        ],
+                        "_cleaned": [
+                          {
+                            "fullExpression": "click | user: import: @item.id",
+                            "matchedExpression": "@item.id",
+                            "type": "item",
+                            "fieldName": "id"
+                          }
                         ]
                       }
                     }
@@ -725,7 +742,8 @@
                     ],
                     "@item.id": [
                       "action_list.0.args.1",
-                      "action_list.0._raw"
+                      "action_list.0._raw",
+                      "action_list.0._cleaned"
                     ]
                   }
                 }
@@ -881,7 +899,8 @@
                   "args": [
                     "completed"
                   ],
-                  "_raw": "click | emit: completed"
+                  "_raw": "click | emit: completed",
+                  "_cleaned": "click | emit: completed"
                 },
                 {
                   "trigger": "click",
@@ -890,7 +909,8 @@
                     "onboarding_terms_login_completed",
                     true
                   ],
-                  "_raw": "click | set_field: onboarding_terms_login_completed: true"
+                  "_raw": "click | set_field: onboarding_terms_login_completed: true",
+                  "_cleaned": "click | set_field: onboarding_terms_login_completed: true"
                 }
               ],
               "parameter_list": {
@@ -943,13 +963,15 @@
               "trigger": "click",
               "action_id": "reset_data",
               "args": [],
-              "_raw": "click | reset_data"
+              "_raw": "click | reset_data",
+              "_cleaned": "click | reset_data"
             },
             {
               "trigger": "click",
               "action_id": "reset_app",
               "args": [],
-              "_raw": "click | reset_app"
+              "_raw": "click | reset_app",
+              "_cleaned": "click | reset_app"
             }
           ],
           "parameter_list": {
