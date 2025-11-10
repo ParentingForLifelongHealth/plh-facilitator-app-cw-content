@@ -57,8 +57,7 @@
             "module_count",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : module_count: @items.length",
-          "_cleaned": "data_changed | set_local : module_count: @items.length"
+          "_raw": "data_changed | set_local : module_count: @items.length"
         }
       ],
       "_nested_name": "get_module_count",
@@ -424,7 +423,6 @@
                   "action_id": "set_data",
                   "args": [],
                   "_raw": "click | set_data |\n_list_id: parent_groups,\n_id: @item.id,\narchived: FALSE,\nhidden: FALSE",
-                  "_cleaned": "click | set_data |\n_list_id: parent_groups,\n_id: @item.id,\narchived: FALSE,\nhidden: FALSE",
                   "params": {
                     "_list_id": "parent_groups",
                     "_id": "@item.id",
@@ -451,14 +449,6 @@
                 "action_list": {
                   "0": {
                     "_raw": [
-                      {
-                        "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @item.id,\narchived: FALSE,\nhidden: FALSE",
-                        "matchedExpression": "@item.id",
-                        "type": "item",
-                        "fieldName": "id"
-                      }
-                    ],
-                    "_cleaned": [
                       {
                         "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @item.id,\narchived: FALSE,\nhidden: FALSE",
                         "matchedExpression": "@item.id",
@@ -497,7 +487,6 @@
                 "@item.id": [
                   "name",
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params._id",
                   "_nested_name"
                 ],
@@ -796,8 +785,7 @@
                 "no_of_parent_groups",
                 "@local.no_of_parent_groups + 1"
               ],
-              "_raw": "click | set_field: no_of_parent_groups: @local.no_of_parent_groups + 1",
-              "_cleaned": "click | set_field: no_of_parent_groups: @local.no_of_parent_groups + 1"
+              "_raw": "click | set_field: no_of_parent_groups: @local.no_of_parent_groups + 1"
             },
             {
               "trigger": "click",
@@ -806,8 +794,7 @@
                 "no_of_parent_groups",
                 "@local.no_of_parent_groups + 1"
               ],
-              "_raw": "click | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1",
-              "_cleaned": "click | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1"
+              "_raw": "click | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1"
             },
             {
               "trigger": "click",
@@ -816,8 +803,7 @@
                 "current_group_no",
                 "@local.no_of_parent_groups"
               ],
-              "_raw": "click | set_field: current_group_no: @local.no_of_parent_groups",
-              "_cleaned": "click | set_field: current_group_no: @local.no_of_parent_groups"
+              "_raw": "click | set_field: current_group_no: @local.no_of_parent_groups"
             },
             {
               "trigger": "click",
@@ -826,8 +812,7 @@
                 "current_group_name",
                 ""
               ],
-              "_raw": "click | set_field: current_group_name:",
-              "_cleaned": "click | set_field: current_group_name:"
+              "_raw": "click | set_field: current_group_name:"
             },
             {
               "trigger": "click",
@@ -835,8 +820,7 @@
               "args": [
                 "add_parent_group"
               ],
-              "_raw": "click | go_to: add_parent_group",
-              "_cleaned": "click | go_to: add_parent_group"
+              "_raw": "click | go_to: add_parent_group"
             }
           ],
           "parameter_list": {
@@ -872,14 +856,6 @@
                     "type": "local",
                     "fieldName": "no_of_parent_groups"
                   }
-                ],
-                "_cleaned": [
-                  {
-                    "fullExpression": "click | set_field: no_of_parent_groups: @local.no_of_parent_groups + 1",
-                    "matchedExpression": "@local.no_of_parent_groups",
-                    "type": "local",
-                    "fieldName": "no_of_parent_groups"
-                  }
                 ]
               },
               "1": {
@@ -894,14 +870,6 @@
                   ]
                 },
                 "_raw": [
-                  {
-                    "fullExpression": "click | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1",
-                    "matchedExpression": "@local.no_of_parent_groups",
-                    "type": "local",
-                    "fieldName": "no_of_parent_groups"
-                  }
-                ],
-                "_cleaned": [
                   {
                     "fullExpression": "click | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1",
                     "matchedExpression": "@local.no_of_parent_groups",
@@ -928,14 +896,6 @@
                     "type": "local",
                     "fieldName": "no_of_parent_groups"
                   }
-                ],
-                "_cleaned": [
-                  {
-                    "fullExpression": "click | set_field: current_group_no: @local.no_of_parent_groups",
-                    "matchedExpression": "@local.no_of_parent_groups",
-                    "type": "local",
-                    "fieldName": "no_of_parent_groups"
-                  }
                 ]
               }
             }
@@ -947,13 +907,10 @@
             "@local.no_of_parent_groups": [
               "action_list.0.args.1",
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.1.args.1",
               "action_list.1._raw",
-              "action_list.1._cleaned",
               "action_list.2.args.1",
-              "action_list.2._raw",
-              "action_list.2._cleaned"
+              "action_list.2._raw"
             ]
           }
         }
@@ -962,6 +919,9 @@
       "_nested_name": "display_group_17"
     }
   ],
-  "_xlsxPath": "templates/Parent Groups CW.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/Parent Groups CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
+  }
 }

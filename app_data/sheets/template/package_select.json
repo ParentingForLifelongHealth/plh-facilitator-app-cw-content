@@ -53,8 +53,7 @@
             "current_package",
             "this.value"
           ],
-          "_raw": "changed | set_field: current_package: this.value",
-          "_cleaned": "changed | set_field: current_package: this.value"
+          "_raw": "changed | set_field: current_package: this.value"
         }
       ],
       "parameter_list": {
@@ -106,8 +105,7 @@
           "args": [
             "completed"
           ],
-          "_raw": "click | emit: completed",
-          "_cleaned": "click | emit: completed"
+          "_raw": "click | emit: completed"
         },
         {
           "trigger": "click",
@@ -116,8 +114,7 @@
             "package_selected",
             true
           ],
-          "_raw": "click | set_field: package_selected: TRUE",
-          "_cleaned": "click | set_field: package_selected: TRUE"
+          "_raw": "click | set_field: package_selected: TRUE"
         }
       ],
       "parameter_list": {
@@ -126,6 +123,9 @@
       "_nested_name": "button_completed"
     }
   ],
-  "_xlsxPath": "templates/app_launch.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/app_launch.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ZG0zCdOzwTYFQTwESmirVQBSJSDFM-1PM7aqDzLJvr4"
+  }
 }

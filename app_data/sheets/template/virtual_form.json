@@ -2123,8 +2123,7 @@
             "attendance_data",
             "@local.attendance_data_string"
           ],
-          "_raw": "completed | set_field: attendance_data: @local.attendance_data_string",
-          "_cleaned": "completed | set_field: attendance_data: @local.attendance_data_string"
+          "_raw": "completed | set_field: attendance_data: @local.attendance_data_string"
         },
         {
           "trigger": "completed",
@@ -2132,8 +2131,7 @@
           "args": [
             "completed"
           ],
-          "_raw": "completed | emit: completed",
-          "_cleaned": "completed | emit: completed"
+          "_raw": "completed | emit: completed"
         },
         {
           "trigger": "completed",
@@ -2141,8 +2139,7 @@
           "args": [
             "server_sync"
           ],
-          "_raw": "completed | emit: server_sync",
-          "_cleaned": "completed | emit: server_sync"
+          "_raw": "completed | emit: server_sync"
         }
       ],
       "rows": [],
@@ -2167,14 +2164,6 @@
                 "type": "local",
                 "fieldName": "attendance_data_string"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "completed | set_field: attendance_data: @local.attendance_data_string",
-                "matchedExpression": "@local.attendance_data_string",
-                "type": "local",
-                "fieldName": "attendance_data_string"
-              }
             ]
           }
         }
@@ -2182,12 +2171,14 @@
       "_dynamicDependencies": {
         "@local.attendance_data_string": [
           "action_list.0.args.1",
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ]
       }
     }
   ],
-  "_xlsxPath": "templates/data_collection.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/data_collection.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1P9qBr_ijRDYknqvNxBPt9SwQCD2zCvPDVldfrX9gufc"
+  }
 }

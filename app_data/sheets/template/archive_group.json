@@ -65,17 +65,15 @@
     {
       "type": "title",
       "name": "title",
-      "value": "Are you sure you want to archive @fields.current_group_name?",
+      "value": "Are you sure you want to close @fields.current_group_name?",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "_nested_name": "title",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "Are you sure you want to archive @fields.current_group_name?",
+            "fullExpression": "Are you sure you want to close @fields.current_group_name?",
             "matchedExpression": "@fields.current_group_name",
             "type": "fields",
             "fieldName": "current_group_name"
@@ -91,11 +89,9 @@
     {
       "type": "text",
       "name": "text_warning",
-      "value": "Archiving this group will remove it from your active list.\nYou can still view its data later if needed.",
+      "value": "Closing this group will remove it from your active list.\nYou can still view its data later if needed.",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "_nested_name": "text_warning"
     },
@@ -119,8 +115,7 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted",
-              "_cleaned": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted"
             }
           ],
           "parameter_list": {
@@ -134,11 +129,9 @@
         {
           "type": "button",
           "name": "button_delete",
-          "value": "Archive",
+          "value": "Close",
           "_translations": {
-            "value": {
-              "cw_pap": true
-            }
+            "value": {}
           },
           "action_list": [
             {
@@ -146,7 +139,6 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
-              "_cleaned": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
               "params": {
                 "_list_id": "parent_groups",
                 "_id": "@fields.current_group_id",
@@ -162,8 +154,7 @@
                 "current_group_no",
                 "NULL"
               ],
-              "_raw": "click | set_field: current_group_no: NULL",
-              "_cleaned": "click | set_field: current_group_no: NULL"
+              "_raw": "click | set_field: current_group_no: NULL"
             },
             {
               "trigger": "click",
@@ -171,8 +162,7 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
+              "_raw": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -180,8 +170,7 @@
               "args": [
                 "back"
               ],
-              "_raw": "click | nav: back",
-              "_cleaned": "click | nav: back"
+              "_raw": "click | nav: back"
             },
             {
               "trigger": "click",
@@ -189,8 +178,7 @@
               "args": [
                 "back"
               ],
-              "_raw": "click | nav: back",
-              "_cleaned": "click | nav: back"
+              "_raw": "click | nav: back"
             }
           ],
           "parameter_list": {
@@ -204,20 +192,6 @@
             "action_list": {
               "0": {
                 "_raw": [
-                  {
-                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
-                    "matchedExpression": "@fields.current_group_id",
-                    "type": "fields",
-                    "fieldName": "current_group_id"
-                  },
-                  {
-                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
-                    "matchedExpression": "@local.now",
-                    "type": "local",
-                    "fieldName": "now"
-                  }
-                ],
-                "_cleaned": [
                   {
                     "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived_date: @local.now,\narchived: TRUE,\nhidden: TRUE",
                     "matchedExpression": "@fields.current_group_id",
@@ -255,12 +229,10 @@
           "_dynamicDependencies": {
             "@fields.current_group_id": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params._id"
             ],
             "@local.now": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.archived_date"
             ]
           }
@@ -269,6 +241,9 @@
       "_nested_name": "buttons"
     }
   ],
-  "_xlsxPath": "templates/Parent Groups CW.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/Parent Groups CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
+  }
 }

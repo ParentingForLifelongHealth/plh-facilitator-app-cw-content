@@ -27,7 +27,7 @@
       },
       {
         "type": "button",
-        "count": 130
+        "count": 131
       },
       {
         "type": "carousel",
@@ -39,7 +39,7 @@
       },
       {
         "type": "data_items",
-        "count": 91
+        "count": 95
       },
       {
         "type": "date_time_picker",
@@ -55,7 +55,7 @@
       },
       {
         "type": "display_group",
-        "count": 161
+        "count": 163
       },
       {
         "type": "google_sign_in_button",
@@ -107,7 +107,7 @@
       },
       {
         "type": "set_variable",
-        "count": 947
+        "count": 984
       },
       {
         "type": "simple_checkbox",
@@ -123,7 +123,7 @@
       },
       {
         "type": "template",
-        "count": 126
+        "count": 139
       },
       {
         "type": "test",
@@ -131,7 +131,7 @@
       },
       {
         "type": "text",
-        "count": 348
+        "count": 352
       },
       {
         "type": "text_area",
@@ -143,7 +143,7 @@
       },
       {
         "type": "title",
-        "count": 69
+        "count": 71
       },
       {
         "type": "toggle_bar",
@@ -175,11 +175,11 @@
       },
       {
         "type": "emit: completed",
-        "count": 49
+        "count": 62
       },
       {
         "type": "emit: force_reload",
-        "count": 8
+        "count": 9
       },
       {
         "type": "emit: force_reprocess",
@@ -199,7 +199,7 @@
       },
       {
         "type": "emit: uncompleted",
-        "count": 80
+        "count": 92
       },
       {
         "type": "feedback",
@@ -207,11 +207,11 @@
       },
       {
         "type": "go_to",
-        "count": 43
+        "count": 41
       },
       {
         "type": "nav",
-        "count": 5
+        "count": 7
       },
       {
         "type": "nav_stack",
@@ -219,7 +219,7 @@
       },
       {
         "type": "pop_up",
-        "count": 16
+        "count": 18
       },
       {
         "type": "reset_app",
@@ -234,16 +234,12 @@
         "count": 4
       },
       {
-        "type": "scroll",
-        "count": 1
-      },
-      {
         "type": "set_data",
-        "count": 27
+        "count": 28
       },
       {
         "type": "set_field",
-        "count": 87
+        "count": 88
       },
       {
         "type": "set_item",
@@ -251,7 +247,7 @@
       },
       {
         "type": "set_local",
-        "count": 132
+        "count": 118
       },
       {
         "type": "share",
@@ -267,13 +263,13 @@
     "data": [
       {
         "assets": "total",
-        "KB": "25901 KB",
-        "MB": "25.9 MB"
+        "KB": "33937 KB",
+        "MB": "33.9 MB"
       },
       {
         "assets": "unused",
-        "KB": "292 KB",
-        "MB": "0.3 MB"
+        "KB": "8726 KB",
+        "MB": "8.7 MB"
       }
     ]
   },
@@ -490,6 +486,14 @@
       {
         "path": "images/icons/world.svg",
         "size_kb": 6.2
+      },
+      {
+        "path": "images/logos/MK_transparent.png",
+        "size_kb": 7196.8
+      },
+      {
+        "path": "images/logos/MK_whitebg.png",
+        "size_kb": 1237.1
       }
     ]
   },
@@ -577,6 +581,16 @@
       },
       {
         "path": "images/no_group_selected.svg",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "pdf/child_development_domain.pdf",
+        "count": 1,
+        "missing": true
+      },
+      {
+        "path": "pdf/child_development_stage.pdf",
         "count": 1,
         "missing": true
       },
@@ -871,12 +885,12 @@
       },
       {
         "path": "lottie/checkmark_blue.json",
-        "count": 6,
+        "count": 3,
         "size_kb": 17
       },
       {
         "path": "lottie/cw_profile_complete.json",
-        "count": 1,
+        "count": 4,
         "size_kb": 13.4
       },
       {
@@ -885,14 +899,14 @@
         "size_kb": 673.9
       },
       {
-        "path": "pdf/child_development_domain.pdf",
+        "path": "pdf/child_development_domain_pap.pdf",
         "count": 1,
-        "size_kb": 141
+        "size_kb": 650.9
       },
       {
-        "path": "pdf/child_development_stage.pdf",
+        "path": "pdf/child_development_stages_pap.pdf",
         "count": 1,
-        "size_kb": 508.2
+        "size_kb": 676.9
       },
       {
         "path": "pdf/children_with_disabilities_pap.pdf",
@@ -903,6 +917,51 @@
         "path": "pdf/individual_consultation_pap.pdf",
         "count": 1,
         "size_kb": 726.5
+      },
+      {
+        "path": "pdf/module_1_core_lesson_pap.pdf",
+        "count": 1,
+        "size_kb": 435.2
+      },
+      {
+        "path": "pdf/module_1_home_activity_pap.pdf",
+        "count": 1,
+        "size_kb": 353.5
+      },
+      {
+        "path": "pdf/module_1_overview_pap.pdf",
+        "count": 1,
+        "size_kb": 363.2
+      },
+      {
+        "path": "pdf/module_1_welcome_pap.pdf",
+        "count": 1,
+        "size_kb": 2236.9
+      },
+      {
+        "path": "pdf/module_6_closing_pap.pdf",
+        "count": 1,
+        "size_kb": 353.6
+      },
+      {
+        "path": "pdf/module_6_core_lesson_1_pap.pdf",
+        "count": 1,
+        "size_kb": 330.5
+      },
+      {
+        "path": "pdf/module_6_core_lesson_2_pap.pdf",
+        "count": 1,
+        "size_kb": 355.6
+      },
+      {
+        "path": "pdf/module_6_welcome_pap.pdf",
+        "count": 1,
+        "size_kb": 2217.7
+      },
+      {
+        "path": "pdf/one_on_one_time_development_stages_pap.pdf",
+        "count": 1,
+        "size_kb": 711.7
       }
     ]
   },
@@ -971,7 +1030,7 @@
       {
         "type": "template",
         "subtype": "generated",
-        "total": 64
+        "total": 75
       },
       {
         "type": "template",

@@ -47,8 +47,7 @@
             "current_answer_1",
             "@items[0].question_1"
           ],
-          "_raw": "data_changed | set_local : current_answer_1: @items[0].question_1",
-          "_cleaned": "data_changed | set_local : current_answer_1: @items[0].question_1"
+          "_raw": "data_changed | set_local : current_answer_1: @items[0].question_1"
         },
         {
           "trigger": "data_changed",
@@ -57,8 +56,7 @@
             "current_answer_2",
             "@items[0].question_2"
           ],
-          "_raw": "data_changed | set_local : current_answer_2: @items[0].question_2",
-          "_cleaned": "data_changed | set_local : current_answer_2: @items[0].question_2"
+          "_raw": "data_changed | set_local : current_answer_2: @items[0].question_2"
         },
         {
           "trigger": "data_changed",
@@ -67,8 +65,7 @@
             "current_answer_3",
             "@items[0].question_3"
           ],
-          "_raw": "data_changed | set_local : current_answer_3: @items[0].question_3",
-          "_cleaned": "data_changed | set_local : current_answer_3: @items[0].question_3"
+          "_raw": "data_changed | set_local : current_answer_3: @items[0].question_3"
         }
       ],
       "parameter_list": {
@@ -764,7 +761,6 @@
                   "action_id": "set_item",
                   "args": [],
                   "_raw": "changed | set_item| @fields.current_module_no: this.value",
-                  "_cleaned": "changed | set_item| @fields.current_module_no: this.value",
                   "params": {
                     "@fields.current_module_no": "this.value"
                   }
@@ -794,14 +790,6 @@
                         "type": "fields",
                         "fieldName": "current_module_no"
                       }
-                    ],
-                    "_cleaned": [
-                      {
-                        "fullExpression": "changed | set_item| @fields.current_module_no: this.value",
-                        "matchedExpression": "@fields.current_module_no",
-                        "type": "fields",
-                        "fieldName": "current_module_no"
-                      }
                     ]
                   }
                 },
@@ -817,8 +805,7 @@
               "_dynamicDependencies": {
                 "@fields.current_module_no": [
                   "value",
-                  "action_list.0._raw",
-                  "action_list.0._cleaned"
+                  "action_list.0._raw"
                 ],
                 "@item.id.toggle_bar_6": [
                   "_nested_name"
@@ -916,7 +903,6 @@
               "action_id": "set_data",
               "args": [],
               "_raw": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-              "_cleaned": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
               "params": {
                 "_list_id": "report_answers",
                 "_id": "@fields.current_report_no",
@@ -931,8 +917,7 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
+              "_raw": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -940,8 +925,7 @@
               "args": [
                 "server_sync"
               ],
-              "_raw": "click | emit: server_sync",
-              "_cleaned": "click | emit: server_sync"
+              "_raw": "click | emit: server_sync"
             }
           ],
           "_nested_name": "display_group_28.save",
@@ -949,32 +933,6 @@
             "action_list": {
               "0": {
                 "_raw": [
-                  {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@fields.current_report_no",
-                    "type": "fields",
-                    "fieldName": "current_report_no"
-                  },
-                  {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@local.answer_1",
-                    "type": "local",
-                    "fieldName": "answer_1"
-                  },
-                  {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@local.answer_2",
-                    "type": "local",
-                    "fieldName": "answer_2"
-                  },
-                  {
-                    "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@local.answer_3",
-                    "type": "local",
-                    "fieldName": "answer_3"
-                  }
-                ],
-                "_cleaned": [
                   {
                     "fullExpression": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
                     "matchedExpression": "@fields.current_report_no",
@@ -1040,22 +998,18 @@
           "_dynamicDependencies": {
             "@fields.current_report_no": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params._id"
             ],
             "@local.answer_1": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.question_1"
             ],
             "@local.answer_2": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.question_2"
             ],
             "@local.answer_3": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.question_3"
             ]
           }
@@ -1065,6 +1019,9 @@
       "_nested_name": "display_group_28"
     }
   ],
-  "_xlsxPath": "templates/reports.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/reports.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1pqNDT__R83Co4cyz-E-Y5wiw0i020Bg7HnQ5t_wHqrA"
+  }
 }

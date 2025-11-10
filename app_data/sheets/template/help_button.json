@@ -18,8 +18,7 @@
           "args": [
             "@local.help_template"
           ],
-          "_raw": "click | pop_up: @local.help_template",
-          "_cleaned": "click | pop_up: @local.help_template"
+          "_raw": "click | pop_up: @local.help_template"
         }
       ],
       "parameter_list": {
@@ -46,14 +45,6 @@
                 "type": "local",
                 "fieldName": "help_template"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "click | pop_up: @local.help_template",
-                "matchedExpression": "@local.help_template",
-                "type": "local",
-                "fieldName": "help_template"
-              }
             ]
           }
         }
@@ -61,12 +52,14 @@
       "_dynamicDependencies": {
         "@local.help_template": [
           "action_list.0.args.0",
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ]
       }
     }
   ],
-  "_xlsxPath": "templates/help.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/help.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ebZf46YGU2GwfNmOHd_tMbSXPFYoSJO9kIbyhCkp9CE"
+  }
 }

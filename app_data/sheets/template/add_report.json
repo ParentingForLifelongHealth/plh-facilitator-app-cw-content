@@ -60,8 +60,7 @@
             "report_name",
             "@items[0].name"
           ],
-          "_raw": "data_changed | set_local : report_name: @items[0].name",
-          "_cleaned": "data_changed | set_local : report_name: @items[0].name"
+          "_raw": "data_changed | set_local : report_name: @items[0].name"
         },
         {
           "trigger": "data_changed",
@@ -70,8 +69,7 @@
             "report_type",
             "@items[0].type"
           ],
-          "_raw": "data_changed | set_local : report_type: @items[0].type",
-          "_cleaned": "data_changed | set_local : report_type: @items[0].type"
+          "_raw": "data_changed | set_local : report_type: @items[0].type"
         }
       ],
       "parameter_list": {
@@ -148,8 +146,7 @@
                   "args": [
                     "uncompleted"
                   ],
-                  "_raw": "uncompleted | emit: uncompleted",
-                  "_cleaned": "uncompleted | emit: uncompleted"
+                  "_raw": "uncompleted | emit: uncompleted"
                 }
               ],
               "style_list": [
@@ -208,8 +205,7 @@
           "args": [
             "completed"
           ],
-          "_raw": "completed | emit: completed",
-          "_cleaned": "completed | emit: completed"
+          "_raw": "completed | emit: completed"
         }
       ],
       "condition": "@local.report_type == \"in_person\"",
@@ -245,8 +241,7 @@
           "args": [
             "completed"
           ],
-          "_raw": "completed | emit: completed",
-          "_cleaned": "completed | emit: completed"
+          "_raw": "completed | emit: completed"
         }
       ],
       "condition": "@local.report_type == \"virtual\"",
@@ -272,6 +267,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/reports.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/reports.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1pqNDT__R83Co4cyz-E-Y5wiw0i020Bg7HnQ5t_wHqrA"
+  }
 }

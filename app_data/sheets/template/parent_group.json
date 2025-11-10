@@ -45,8 +45,7 @@
             "current_group_id",
             "@local.group_id"
           ],
-          "_raw": "click | set_field: current_group_id: @local.group_id",
-          "_cleaned": "click | set_field: current_group_id: @local.group_id"
+          "_raw": "click | set_field: current_group_id: @local.group_id"
         },
         {
           "trigger": "click",
@@ -55,8 +54,7 @@
             "current_group_no",
             "@local.group_no"
           ],
-          "_raw": "click | set_field: current_group_no: @local.group_no",
-          "_cleaned": "click | set_field: current_group_no: @local.group_no"
+          "_raw": "click | set_field: current_group_no: @local.group_no"
         },
         {
           "trigger": "click",
@@ -65,8 +63,7 @@
             "current_group_name",
             "@local.group_name"
           ],
-          "_raw": "click | set_field: current_group_name: @local.group_name",
-          "_cleaned": "click | set_field: current_group_name: @local.group_name"
+          "_raw": "click | set_field: current_group_name: @local.group_name"
         },
         {
           "trigger": "click",
@@ -75,8 +72,7 @@
             "current_package",
             "@local.content_package"
           ],
-          "_raw": "click | set_field: current_package: @local.content_package",
-          "_cleaned": "click | set_field: current_package: @local.content_package"
+          "_raw": "click | set_field: current_package: @local.content_package"
         },
         {
           "trigger": "click",
@@ -84,8 +80,7 @@
           "args": [
             "view_parent_group"
           ],
-          "_raw": "click | go_to: view_parent_group",
-          "_cleaned": "click | go_to: view_parent_group"
+          "_raw": "click | go_to: view_parent_group"
         }
       ],
       "parameter_list": {
@@ -126,14 +121,6 @@
                 "type": "local",
                 "fieldName": "group_id"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "click | set_field: current_group_id: @local.group_id",
-                "matchedExpression": "@local.group_id",
-                "type": "local",
-                "fieldName": "group_id"
-              }
             ]
           },
           "1": {
@@ -148,14 +135,6 @@
               ]
             },
             "_raw": [
-              {
-                "fullExpression": "click | set_field: current_group_no: @local.group_no",
-                "matchedExpression": "@local.group_no",
-                "type": "local",
-                "fieldName": "group_no"
-              }
-            ],
-            "_cleaned": [
               {
                 "fullExpression": "click | set_field: current_group_no: @local.group_no",
                 "matchedExpression": "@local.group_no",
@@ -182,14 +161,6 @@
                 "type": "local",
                 "fieldName": "group_name"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "click | set_field: current_group_name: @local.group_name",
-                "matchedExpression": "@local.group_name",
-                "type": "local",
-                "fieldName": "group_name"
-              }
             ]
           },
           "3": {
@@ -210,14 +181,6 @@
                 "type": "local",
                 "fieldName": "content_package"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "click | set_field: current_package: @local.content_package",
-                "matchedExpression": "@local.content_package",
-                "type": "local",
-                "fieldName": "content_package"
-              }
             ]
           }
         }
@@ -226,23 +189,19 @@
         "@local.group_name": [
           "value",
           "action_list.2.args.1",
-          "action_list.2._raw",
-          "action_list.2._cleaned"
+          "action_list.2._raw"
         ],
         "@local.group_id": [
           "action_list.0.args.1",
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ],
         "@local.group_no": [
           "action_list.1.args.1",
-          "action_list.1._raw",
-          "action_list.1._cleaned"
+          "action_list.1._raw"
         ],
         "@local.content_package": [
           "action_list.3.args.1",
-          "action_list.3._raw",
-          "action_list.3._cleaned"
+          "action_list.3._raw"
         ]
       }
     },
@@ -432,6 +391,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/Parent Groups CW.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/Parent Groups CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
+  }
 }

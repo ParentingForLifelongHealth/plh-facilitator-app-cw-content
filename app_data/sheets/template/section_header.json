@@ -165,8 +165,7 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted",
-              "_cleaned": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted"
             }
           ],
           "parameter_list": {
@@ -210,8 +209,7 @@
               "args": [
                 "confirm_exit"
               ],
-              "_raw": "click | pop_up: confirm_exit",
-              "_cleaned": "click | pop_up: confirm_exit"
+              "_raw": "click | pop_up: confirm_exit"
             }
           ],
           "parameter_list": {
@@ -288,6 +286,9 @@
       "_nested_name": "dg_header"
     }
   ],
-  "_xlsxPath": "templates/navigation.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/navigation.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/15eLW60hvhMB4AeBmbWm1S9dpNDYrOhFHndJTveLRtjQ"
+  }
 }

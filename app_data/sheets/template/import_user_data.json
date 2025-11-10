@@ -73,8 +73,7 @@
             "import",
             "@local.user_id_input"
           ],
-          "_raw": "click | user: import: @local.user_id_input",
-          "_cleaned": "click | user: import: @local.user_id_input"
+          "_raw": "click | user: import: @local.user_id_input"
         },
         {
           "trigger": "click",
@@ -82,8 +81,7 @@
           "args": [
             "force_reprocess"
           ],
-          "_raw": "click | emit: force_reprocess",
-          "_cleaned": "click | emit: force_reprocess"
+          "_raw": "click | emit: force_reprocess"
         }
       ],
       "_nested_name": "button_import",
@@ -107,14 +105,6 @@
                 "type": "local",
                 "fieldName": "user_id_input"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "click | user: import: @local.user_id_input",
-                "matchedExpression": "@local.user_id_input",
-                "type": "local",
-                "fieldName": "user_id_input"
-              }
             ]
           }
         }
@@ -122,8 +112,7 @@
       "_dynamicDependencies": {
         "@local.user_id_input": [
           "action_list.0.args.1",
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ]
       }
     },
@@ -225,8 +214,7 @@
             "user_name",
             ""
           ],
-          "_raw": "click | set_field: user_name:",
-          "_cleaned": "click | set_field: user_name:"
+          "_raw": "click | set_field: user_name:"
         },
         {
           "trigger": "click",
@@ -234,8 +222,7 @@
           "args": [
             "force_reprocess"
           ],
-          "_raw": "click | emit: force_reprocess",
-          "_cleaned": "click | emit: force_reprocess"
+          "_raw": "click | emit: force_reprocess"
         }
       ],
       "_nested_name": "button"
@@ -252,6 +239,9 @@
       "_nested_name": "text"
     }
   ],
-  "_xlsxPath": "templates/app_menu.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/app_menu.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1IFDQ-SWxUfoEXwQ96C_FymTM2g3vyDzk6IRsna-pnWg"
+  }
 }

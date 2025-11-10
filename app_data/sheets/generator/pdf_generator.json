@@ -20,8 +20,7 @@
           "args": [
             "completed"
           ],
-          "_raw": "completed | emit: completed",
-          "_cleaned": "completed | emit: completed"
+          "_raw": "completed | emit: completed"
         },
         {
           "trigger": "uncompleted",
@@ -29,8 +28,7 @@
           "args": [
             "uncompleted"
           ],
-          "_raw": "uncompleted | emit: uncompleted",
-          "_cleaned": "uncompleted | emit: uncompleted"
+          "_raw": "uncompleted | emit: uncompleted"
         }
       ],
       "exclude_from_translation": true,
@@ -48,8 +46,11 @@
       ]
     }
   ],
-  "_xlsxPath": "templates/media.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/media.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1sSfCRjKSDd7ZW2ILStLMbC2WjkJmUyosLnyoR62Jaf0"
+  },
   "_output_flows": [
     {
       "flow_name": "pdf_individual_consultation",
@@ -63,6 +64,61 @@
     },
     {
       "flow_name": "pdf_children_with_disabilities_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_child_development_domain_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_child_development_stages_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_one_on_one_time_development_stages_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_module_1_welcome_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_module_1_overview_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_module_1_core_lesson_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_module_1_home_activity_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_module_6_welcome_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_module_6_core_lesson_1_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_module_6_core_lesson_2_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "pdf_module_6_closing_pap",
       "flow_subtype": "generated",
       "flow_type": "template"
     }

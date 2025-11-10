@@ -66,8 +66,7 @@
             "set_language",
             "this.value"
           ],
-          "_raw": "changed | emit: set_language:@local.language_select",
-          "_cleaned": "changed | emit: set_language:@local.language_select"
+          "_raw": "changed | emit: set_language:@local.language_select"
         },
         {
           "trigger": "changed",
@@ -75,8 +74,7 @@
           "args": [
             "force_reload"
           ],
-          "_raw": "changed | emit: force_reload",
-          "_cleaned": "changed | emit: force_reload"
+          "_raw": "changed | emit: force_reload"
         }
       ],
       "parameter_list": {
@@ -102,14 +100,6 @@
                 "type": "local",
                 "fieldName": "language_select"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "changed | emit: set_language:@local.language_select",
-                "matchedExpression": "@local.language_select",
-                "type": "local",
-                "fieldName": "language_select"
-              }
             ]
           }
         },
@@ -129,8 +119,7 @@
           "value"
         ],
         "@local.language_select": [
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ],
         "@local.language_select_options": [
           "parameter_list.answer_list"
@@ -153,8 +142,7 @@
           "args": [
             "completed"
           ],
-          "_raw": "click | emit: completed",
-          "_cleaned": "click | emit: completed"
+          "_raw": "click | emit: completed"
         },
         {
           "trigger": "click",
@@ -163,8 +151,7 @@
             "language_selected",
             true
           ],
-          "_raw": "click | set_field: language_selected: TRUE",
-          "_cleaned": "click | set_field: language_selected: TRUE"
+          "_raw": "click | set_field: language_selected: TRUE"
         }
       ],
       "parameter_list": {
@@ -173,6 +160,9 @@
       "_nested_name": "button_completed"
     }
   ],
-  "_xlsxPath": "templates/app_launch.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/app_launch.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ZG0zCdOzwTYFQTwESmirVQBSJSDFM-1PM7aqDzLJvr4"
+  }
 }

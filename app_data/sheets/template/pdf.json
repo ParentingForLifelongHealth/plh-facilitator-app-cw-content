@@ -40,8 +40,7 @@
             "pdf_asset",
             "@items[0].pdf_asset"
           ],
-          "_raw": "data_changed | set_local : pdf_asset: @items[0].pdf_asset",
-          "_cleaned": "data_changed | set_local : pdf_asset: @items[0].pdf_asset"
+          "_raw": "data_changed | set_local : pdf_asset: @items[0].pdf_asset"
         },
         {
           "trigger": "data_changed",
@@ -50,8 +49,7 @@
             "pdf_title",
             "@items[0].title"
           ],
-          "_raw": "data_changed | set_local : pdf_title: @items[0].title",
-          "_cleaned": "data_changed | set_local : pdf_title: @items[0].title"
+          "_raw": "data_changed | set_local : pdf_title: @items[0].title"
         }
       ],
       "exclude_from_translation": true,
@@ -95,8 +93,15 @@
           "args": [
             "uncompleted"
           ],
-          "_raw": "uncompleted | emit: uncompleted",
-          "_cleaned": "uncompleted | emit: uncompleted"
+          "_raw": "uncompleted | emit: uncompleted"
+        },
+        {
+          "trigger": "completed",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "completed | emit: completed"
         }
       ],
       "rows": [
@@ -123,6 +128,12 @@
               "value"
             ]
           }
+        },
+        {
+          "name": "show_back",
+          "value": false,
+          "type": "set_variable",
+          "_nested_name": "header.show_back"
         }
       ],
       "_nested_name": "header"
@@ -156,8 +167,7 @@
               "args": [
                 "@local.pdf_asset"
               ],
-              "_raw": "click | save_to_device: @local.pdf_asset",
-              "_cleaned": "click | save_to_device: @local.pdf_asset"
+              "_raw": "click | save_to_device: @local.pdf_asset"
             }
           ],
           "_nested_name": "display_group_8.download",
@@ -181,14 +191,6 @@
                     "type": "local",
                     "fieldName": "pdf_asset"
                   }
-                ],
-                "_cleaned": [
-                  {
-                    "fullExpression": "click | save_to_device: @local.pdf_asset",
-                    "matchedExpression": "@local.pdf_asset",
-                    "type": "local",
-                    "fieldName": "pdf_asset"
-                  }
                 ]
               }
             }
@@ -196,8 +198,7 @@
           "_dynamicDependencies": {
             "@local.pdf_asset": [
               "action_list.0.args.0",
-              "action_list.0._raw",
-              "action_list.0._cleaned"
+              "action_list.0._raw"
             ]
           }
         }
@@ -259,6 +260,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/media.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/media.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1sSfCRjKSDd7ZW2ILStLMbC2WjkJmUyosLnyoR62Jaf0"
+  }
 }

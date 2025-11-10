@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 2 |
-| button | 130 |
+| button | 131 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 91 |
+| data_items | 95 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 161 |
+| display_group | 163 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
@@ -29,16 +29,16 @@
 | round_button | 31 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 947 |
+| set_variable | 984 |
 | simple_checkbox | 7 |
 | task_card | 1 |
 | task_progress_bar | 4 |
-| template | 126 |
+| template | 139 |
 | test | 1 |
-| text | 348 |
+| text | 352 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 69 |
+| title | 71 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 2 |
@@ -52,26 +52,25 @@
 | add_data | 9 |
 | app_update | 1 |
 | auth | 4 |
-| emit: completed | 49 |
-| emit: force_reload | 8 |
+| emit: completed | 62 |
+| emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 21 |
 | emit: set_language | 4 |
-| emit: uncompleted | 80 |
+| emit: uncompleted | 92 |
 | feedback | 24 |
-| go_to | 43 |
-| nav | 5 |
+| go_to | 41 |
+| nav | 7 |
 | nav_stack | 9 |
-| pop_up | 16 |
+| pop_up | 18 |
 | reset_app | 4 |
 | reset_data | 3 |
 | save_to_device | 4 |
-| scroll | 1 |
-| set_data | 27 |
-| set_field | 87 |
+| set_data | 28 |
+| set_field | 88 |
 | set_item | 13 |
-| set_local | 132 |
+| set_local | 118 |
 | share | 2 |
 | user | 4 |
 </details>
@@ -81,8 +80,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 25901 KB | 25.9 MB |
-| unused | 292 KB | 0.3 MB |
+| total | 33937 KB | 33.9 MB |
+| unused | 8726 KB | 8.7 MB |
 </details>
 
 <details open>
@@ -145,6 +144,8 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/settings.svg | 1.2 |
 | images/icons/unarchive-outline-white.svg | 1.8 |
 | images/icons/world.svg | 6.2 |
+| images/logos/MK_transparent.png | 7196.8 |
+| images/logos/MK_whitebg.png | 1237.1 |
 </details>
 
 <details open>
@@ -171,6 +172,8 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/plh_logomark.png | 1 |
 | images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
+| pdf/child_development_domain.pdf | 1 |
+| pdf/child_development_stage.pdf | 1 |
 | pdf/children_with_disabilities.pdf | 1 |
 </details>
 
@@ -237,13 +240,22 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/onboarding/splash_3.png | 1760.5 | 1 |
 | images/onboarding/splash_4.png | 1425.9 | 1 |
 | images/onboarding/splash_5.png | 2195 | 1 |
-| lottie/checkmark_blue.json | 17 | 6 |
-| lottie/cw_profile_complete.json | 13.4 | 1 |
+| lottie/checkmark_blue.json | 17 | 3 |
+| lottie/cw_profile_complete.json | 13.4 | 4 |
 | pdf/aecp_pap.pdf | 673.9 | 1 |
-| pdf/child_development_domain.pdf | 141 | 1 |
-| pdf/child_development_stage.pdf | 508.2 | 1 |
+| pdf/child_development_domain_pap.pdf | 650.9 | 1 |
+| pdf/child_development_stages_pap.pdf | 676.9 | 1 |
 | pdf/children_with_disabilities_pap.pdf | 686.8 | 1 |
 | pdf/individual_consultation_pap.pdf | 726.5 | 1 |
+| pdf/module_1_core_lesson_pap.pdf | 435.2 | 1 |
+| pdf/module_1_home_activity_pap.pdf | 353.5 | 1 |
+| pdf/module_1_overview_pap.pdf | 363.2 | 1 |
+| pdf/module_1_welcome_pap.pdf | 2236.9 | 1 |
+| pdf/module_6_closing_pap.pdf | 353.6 | 1 |
+| pdf/module_6_core_lesson_1_pap.pdf | 330.5 | 1 |
+| pdf/module_6_core_lesson_2_pap.pdf | 355.6 | 1 |
+| pdf/module_6_welcome_pap.pdf | 2217.7 | 1 |
+| pdf/one_on_one_time_development_stages_pap.pdf | 711.7 | 1 |
 </details>
 
 <details >
@@ -263,6 +275,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
 | template |  | 101 |
-| template | generated | 64 |
+| template | generated | 75 |
 | template | legal_terms | 4 |
 </details>
