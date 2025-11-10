@@ -59,8 +59,7 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted",
-              "_cleaned": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted"
             }
           ],
           "exclude_from_translation": false,
@@ -88,8 +87,7 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
+              "_raw": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -97,8 +95,7 @@
               "args": [
                 "back"
               ],
-              "_raw": "click | nav: back",
-              "_cleaned": "click | nav: back"
+              "_raw": "click | nav: back"
             }
           ],
           "exclude_from_translation": false,
@@ -114,6 +111,9 @@
       "_nested_name": "buttons"
     }
   ],
-  "_xlsxPath": "templates/navigation.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/navigation.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/15eLW60hvhMB4AeBmbWm1S9dpNDYrOhFHndJTveLRtjQ"
+  }
 }

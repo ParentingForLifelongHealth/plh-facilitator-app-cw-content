@@ -210,7 +210,6 @@
                   "action_id": "add_data",
                   "args": [],
                   "_raw": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                  "_cleaned": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
                   "params": {
                     "_list_id": "message_log",
                     "group_id": "@fields.current_group_no",
@@ -224,7 +223,6 @@
                   "action_id": "share",
                   "args": [],
                   "_raw": "click | share | text: @local.message_text",
-                  "_cleaned": "click | share | text: @local.message_text",
                   "params": {
                     "text": "@local.message_text"
                   }
@@ -239,32 +237,6 @@
                 "action_list": {
                   "0": {
                     "_raw": [
-                      {
-                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                        "matchedExpression": "@fields.current_group_no",
-                        "type": "fields",
-                        "fieldName": "current_group_no"
-                      },
-                      {
-                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                        "matchedExpression": "@fields.current_module_no",
-                        "type": "fields",
-                        "fieldName": "current_module_no"
-                      },
-                      {
-                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                        "matchedExpression": "@local.title",
-                        "type": "local",
-                        "fieldName": "title"
-                      },
-                      {
-                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                        "matchedExpression": "@calc(now())",
-                        "type": "calc",
-                        "fieldName": "now()"
-                      }
-                    ],
-                    "_cleaned": [
                       {
                         "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
                         "matchedExpression": "@fields.current_group_no",
@@ -334,14 +306,6 @@
                         "fieldName": "message_text"
                       }
                     ],
-                    "_cleaned": [
-                      {
-                        "fullExpression": "click | share | text: @local.message_text",
-                        "matchedExpression": "@local.message_text",
-                        "type": "local",
-                        "fieldName": "message_text"
-                      }
-                    ],
                     "params": {
                       "text": [
                         {
@@ -366,27 +330,22 @@
               "_dynamicDependencies": {
                 "@fields.current_group_no": [
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params.group_id"
                 ],
                 "@fields.current_module_no": [
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params.module"
                 ],
                 "@local.title": [
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params.message"
                 ],
                 "@calc(now())": [
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params.date"
                 ],
                 "@local.message_text": [
                   "action_list.1._raw",
-                  "action_list.1._cleaned",
                   "action_list.1.params.text"
                 ],
                 "!@local.asset": [
@@ -409,7 +368,6 @@
                   "action_id": "add_data",
                   "args": [],
                   "_raw": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                  "_cleaned": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
                   "params": {
                     "_list_id": "message_log",
                     "group_id": "@fields.current_group_no",
@@ -423,7 +381,6 @@
                   "action_id": "share",
                   "args": [],
                   "_raw": "click | share |\ntext: @local.message_text,\nfile: @local.asset",
-                  "_cleaned": "click | share |\ntext: @local.message_text,\nfile: @local.asset",
                   "params": {
                     "text": "@local.message_text",
                     "file": "@local.asset"
@@ -464,32 +421,6 @@
                         "fieldName": "now()"
                       }
                     ],
-                    "_cleaned": [
-                      {
-                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                        "matchedExpression": "@fields.current_group_no",
-                        "type": "fields",
-                        "fieldName": "current_group_no"
-                      },
-                      {
-                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                        "matchedExpression": "@fields.current_module_no",
-                        "type": "fields",
-                        "fieldName": "current_module_no"
-                      },
-                      {
-                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                        "matchedExpression": "@local.title",
-                        "type": "local",
-                        "fieldName": "title"
-                      },
-                      {
-                        "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
-                        "matchedExpression": "@calc(now())",
-                        "type": "calc",
-                        "fieldName": "now()"
-                      }
-                    ],
                     "params": {
                       "group_id": [
                         {
@@ -527,20 +458,6 @@
                   },
                   "1": {
                     "_raw": [
-                      {
-                        "fullExpression": "click | share |\ntext: @local.message_text,\nfile: @local.asset",
-                        "matchedExpression": "@local.message_text",
-                        "type": "local",
-                        "fieldName": "message_text"
-                      },
-                      {
-                        "fullExpression": "click | share |\ntext: @local.message_text,\nfile: @local.asset",
-                        "matchedExpression": "@local.asset",
-                        "type": "local",
-                        "fieldName": "asset"
-                      }
-                    ],
-                    "_cleaned": [
                       {
                         "fullExpression": "click | share |\ntext: @local.message_text,\nfile: @local.asset",
                         "matchedExpression": "@local.message_text",
@@ -586,32 +503,26 @@
               "_dynamicDependencies": {
                 "@fields.current_group_no": [
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params.group_id"
                 ],
                 "@fields.current_module_no": [
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params.module"
                 ],
                 "@local.title": [
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params.message"
                 ],
                 "@calc(now())": [
                   "action_list.0._raw",
-                  "action_list.0._cleaned",
                   "action_list.0.params.date"
                 ],
                 "@local.message_text": [
                   "action_list.1._raw",
-                  "action_list.1._cleaned",
                   "action_list.1.params.text"
                 ],
                 "@local.asset": [
                   "action_list.1._raw",
-                  "action_list.1._cleaned",
                   "action_list.1.params.file"
                 ],
                 "!@local.asset": [
@@ -626,6 +537,9 @@
       "_nested_name": "dg_box"
     }
   ],
-  "_xlsxPath": "templates/article_elements.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/article_elements.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1xoJQVGFuWx9EwRsSTIRYa_b-8655dQNzjGKr5gfarE4"
+  }
 }

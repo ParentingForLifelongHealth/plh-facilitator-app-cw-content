@@ -692,8 +692,7 @@
                           "args": [
                             "article_@item.id"
                           ],
-                          "_raw": "click | go_to: article_@item.id",
-                          "_cleaned": "click | go_to: article_@item.id"
+                          "_raw": "click | go_to: article_@item.id"
                         }
                       ],
                       "parameter_list": {
@@ -724,14 +723,6 @@
                               ]
                             },
                             "_raw": [
-                              {
-                                "fullExpression": "click | go_to: article_@item.id",
-                                "matchedExpression": "@item.id",
-                                "type": "item",
-                                "fieldName": "id"
-                              }
-                            ],
-                            "_cleaned": [
                               {
                                 "fullExpression": "click | go_to: article_@item.id",
                                 "matchedExpression": "@item.id",
@@ -772,8 +763,7 @@
                         ],
                         "@item.id": [
                           "action_list.0.args.0",
-                          "action_list.0._raw",
-                          "action_list.0._cleaned"
+                          "action_list.0._raw"
                         ],
                         "@item.icon_asset": [
                           "parameter_list.image_asset"
@@ -993,6 +983,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/navigation.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/navigation.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/15eLW60hvhMB4AeBmbWm1S9dpNDYrOhFHndJTveLRtjQ"
+  }
 }

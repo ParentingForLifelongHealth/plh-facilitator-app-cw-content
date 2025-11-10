@@ -136,8 +136,7 @@
                 "user_type",
                 "@local.user_type_select"
               ],
-              "_raw": "click | set_field: user_type: @local.user_type_select",
-              "_cleaned": "click | set_field: user_type: @local.user_type_select"
+              "_raw": "click | set_field: user_type: @local.user_type_select"
             },
             {
               "trigger": "click",
@@ -145,8 +144,7 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
+              "_raw": "click | emit: completed"
             }
           ],
           "parameter_list": {
@@ -177,14 +175,6 @@
                     "type": "local",
                     "fieldName": "user_type_select"
                   }
-                ],
-                "_cleaned": [
-                  {
-                    "fullExpression": "click | set_field: user_type: @local.user_type_select",
-                    "matchedExpression": "@local.user_type_select",
-                    "type": "local",
-                    "fieldName": "user_type_select"
-                  }
                 ]
               }
             },
@@ -202,8 +192,7 @@
           "_dynamicDependencies": {
             "@local.user_type_select": [
               "action_list.0.args.1",
-              "action_list.0._raw",
-              "action_list.0._cleaned"
+              "action_list.0._raw"
             ],
             "!@local.completed_enabled": [
               "parameter_list.disabled"
@@ -214,6 +203,9 @@
       "_nested_name": "dg_footer"
     }
   ],
-  "_xlsxPath": "templates/app_launch.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/app_launch.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ZG0zCdOzwTYFQTwESmirVQBSJSDFM-1PM7aqDzLJvr4"
+  }
 }

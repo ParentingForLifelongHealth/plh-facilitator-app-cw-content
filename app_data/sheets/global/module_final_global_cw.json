@@ -124,7 +124,7 @@
     {
       "type": "declare_global_constant",
       "name": "report_complete_lottie",
-      "value": "lottie/checkmark_blue.json",
+      "value": "lottie/cw_profile_complete.json",
       "_translations": {
         "value": {}
       },
@@ -158,7 +158,7 @@
     {
       "type": "declare_global_constant",
       "name": "no_report_lottie",
-      "value": "lottie/checkmark_blue.json",
+      "value": "lottie/cw_profile_complete.json",
       "_translations": {
         "value": {}
       },
@@ -182,11 +182,9 @@
     {
       "type": "declare_global_constant",
       "name": "mark_delivered_report",
-      "value": "Mark Session as Delivered and add report",
+      "value": "Mark Session as Delivered and Submit Report",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       }
     },
     {
@@ -210,6 +208,9 @@
       }
     }
   ],
-  "_xlsxPath": "data/deployment_data_cw.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "data/deployment_data_cw.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
+  }
 }

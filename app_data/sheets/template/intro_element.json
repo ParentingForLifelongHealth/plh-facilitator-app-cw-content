@@ -16,7 +16,20 @@
       "_nested_name": "image"
     },
     {
+      "name": "media_type",
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "media_type"
+    },
+    {
+      "name": "media_asset",
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "media_asset"
+    },
+    {
       "name": "text_2",
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "text_2"
     },
@@ -113,6 +126,85 @@
           }
         },
         {
+          "type": "template",
+          "value": "resource_element",
+          "condition": "@local.media_asset && @local.media_asset !== \"\"",
+          "rows": [
+            {
+              "name": "resource_type",
+              "value": "@local.media_type",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "dg_box.resource_element.resource_type",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.media_type",
+                    "matchedExpression": "@local.media_type",
+                    "type": "local",
+                    "fieldName": "media_type"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.media_type": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "resource_id",
+              "value": "@local.media_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "dg_box.resource_element.resource_id",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.media_asset",
+                    "matchedExpression": "@local.media_asset",
+                    "type": "local",
+                    "fieldName": "media_asset"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.media_asset": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "name": "resource_element",
+          "_nested_name": "dg_box.resource_element",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@local.media_asset && @local.media_asset !== \"\"",
+                "matchedExpression": "@local.media_asset",
+                "type": "local",
+                "fieldName": "media_asset"
+              },
+              {
+                "fullExpression": "@local.media_asset && @local.media_asset !== \"\"",
+                "matchedExpression": "@local.media_asset",
+                "type": "local",
+                "fieldName": "media_asset"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.media_asset": [
+              "condition",
+              "condition"
+            ]
+          }
+        },
+        {
           "type": "text",
           "name": "text_2",
           "value": "@local.text_2",
@@ -158,6 +250,9 @@
       "_nested_name": "dg_box"
     }
   ],
-  "_xlsxPath": "templates/article_elements.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/article_elements.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1xoJQVGFuWx9EwRsSTIRYa_b-8655dQNzjGKr5gfarE4"
+  }
 }

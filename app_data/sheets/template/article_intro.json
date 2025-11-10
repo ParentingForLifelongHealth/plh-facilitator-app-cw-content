@@ -57,6 +57,54 @@
               }
             },
             {
+              "name": "media_type",
+              "value": "@item.media_type",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.media_type",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.media_type",
+                    "matchedExpression": "@item.media_type",
+                    "type": "item",
+                    "fieldName": "media_type"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_type": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "media_asset",
+              "value": "@item.media_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.media_asset",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.media_asset",
+                    "matchedExpression": "@item.media_asset",
+                    "type": "item",
+                    "fieldName": "media_asset"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_asset": [
+                  "value"
+                ]
+              }
+            },
+            {
               "name": "text",
               "value": "@item.text_1",
               "_translations": {
@@ -197,6 +245,54 @@
               }
             },
             {
+              "name": "media_type",
+              "value": "@item.media_type",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.media_type",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.media_type",
+                    "matchedExpression": "@item.media_type",
+                    "type": "item",
+                    "fieldName": "media_type"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_type": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "media_asset",
+              "value": "@item.media_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "loop_intros.intro_element.media_asset",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.media_asset",
+                    "matchedExpression": "@item.media_asset",
+                    "type": "item",
+                    "fieldName": "media_asset"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_asset": [
+                  "value"
+                ]
+              }
+            },
+            {
               "name": "text",
               "value": "@item.text_1",
               "_translations": {
@@ -301,6 +397,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/module_flow.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/module_flow.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1a_caZOGQfuJ6UEXGwdh78q4WBWXAUO0Uz3w391DaDeo"
+  }
 }

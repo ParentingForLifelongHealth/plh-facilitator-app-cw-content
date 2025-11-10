@@ -4,6 +4,41 @@
   "status": "released",
   "rows": [
     {
+      "type": "template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": [
+        {
+          "trigger": "uncompleted",
+          "action_id": "emit",
+          "args": [
+            "uncompleted"
+          ],
+          "_raw": "uncompleted | emit: uncompleted"
+        }
+      ],
+      "rows": [
+        {
+          "name": "title",
+          "value": "Group Overview",
+          "_translations": {
+            "value": {}
+          },
+          "exclude_from_translation": false,
+          "type": "set_variable",
+          "_nested_name": "header.title"
+        },
+        {
+          "name": "confirm_exit",
+          "value": true,
+          "exclude_from_translation": true,
+          "type": "set_variable",
+          "_nested_name": "header.confirm_exit"
+        }
+      ],
+      "_nested_name": "header"
+    },
+    {
       "type": "round_button",
       "name": "back",
       "action_list": [
@@ -13,14 +48,14 @@
           "args": [
             "uncompleted"
           ],
-          "_raw": "click | emit: uncompleted",
-          "_cleaned": "click | emit: uncompleted"
+          "_raw": "click | emit: uncompleted"
         }
       ],
       "parameter_list": {
         "icon_src": "chevron-back",
         "variant": "navigation"
       },
+      "condition": false,
       "_nested_name": "back"
     },
     {
@@ -64,8 +99,7 @@
               "args": [
                 "edit_parent_group"
               ],
-              "_raw": "click | go_to: edit_parent_group",
-              "_cleaned": "click | go_to: edit_parent_group"
+              "_raw": "click | go_to: edit_parent_group"
             }
           ],
           "parameter_list": {
@@ -158,8 +192,7 @@
                 "display_actions",
                 true
               ],
-              "_raw": "click | set_local: display_actions : TRUE",
-              "_cleaned": "click | set_local: display_actions : TRUE"
+              "_raw": "click | set_local: display_actions : TRUE"
             }
           ],
           "parameter_list": {
@@ -169,7 +202,7 @@
             "flex:1"
           ],
           "name": "button_1",
-          "_nested_name": "display_group_8.button_1"
+          "_nested_name": "display_group_10.button_1"
         },
         {
           "type": "button",
@@ -187,8 +220,7 @@
                 "display_actions",
                 false
               ],
-              "_raw": "click | set_local: display_actions : FALSE",
-              "_cleaned": "click | set_local: display_actions : FALSE"
+              "_raw": "click | set_local: display_actions : FALSE"
             }
           ],
           "parameter_list": {
@@ -198,11 +230,11 @@
             "flex:1"
           ],
           "name": "button_2",
-          "_nested_name": "display_group_8.button_2"
+          "_nested_name": "display_group_10.button_2"
         }
       ],
-      "name": "display_group_8",
-      "_nested_name": "display_group_8"
+      "name": "display_group_10",
+      "_nested_name": "display_group_10"
     },
     {
       "type": "template",
@@ -251,6 +283,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/Parent Groups CW.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/Parent Groups CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
+  }
 }

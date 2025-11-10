@@ -668,7 +668,6 @@
                   "action_id": "set_item",
                   "args": [],
                   "_raw": "changed | set_item| @fields.current_module_no: this.value",
-                  "_cleaned": "changed | set_item| @fields.current_module_no: this.value",
                   "params": {
                     "@fields.current_module_no": "this.value"
                   }
@@ -698,14 +697,6 @@
                         "type": "fields",
                         "fieldName": "current_module_no"
                       }
-                    ],
-                    "_cleaned": [
-                      {
-                        "fullExpression": "changed | set_item| @fields.current_module_no: this.value",
-                        "matchedExpression": "@fields.current_module_no",
-                        "type": "fields",
-                        "fieldName": "current_module_no"
-                      }
                     ]
                   }
                 },
@@ -721,8 +712,7 @@
               "_dynamicDependencies": {
                 "@fields.current_module_no": [
                   "value",
-                  "action_list.0._raw",
-                  "action_list.0._cleaned"
+                  "action_list.0._raw"
                 ],
                 "@item.id.toggle_bar_6": [
                   "_nested_name"
@@ -820,7 +810,6 @@
               "action_id": "add_data",
               "args": [],
               "_raw": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-              "_cleaned": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
               "params": {
                 "_list_id": "report_answers",
                 "group_id": "@field.current_group_no",
@@ -838,8 +827,7 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
+              "_raw": "click | emit: completed"
             },
             {
               "trigger": "click",
@@ -847,8 +835,7 @@
               "args": [
                 "server_sync"
               ],
-              "_raw": "click | emit: server_sync",
-              "_cleaned": "click | emit: server_sync"
+              "_raw": "click | emit: server_sync"
             }
           ],
           "_nested_name": "display_group_25.save",
@@ -856,38 +843,6 @@
             "action_list": {
               "0": {
                 "_raw": [
-                  {
-                    "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@field.current_group_no",
-                    "type": "field",
-                    "fieldName": "current_group_no"
-                  },
-                  {
-                    "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@field.current_module_no",
-                    "type": "field",
-                    "fieldName": "current_module_no"
-                  },
-                  {
-                    "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@local.answer_1",
-                    "type": "local",
-                    "fieldName": "answer_1"
-                  },
-                  {
-                    "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@local.answer_2",
-                    "type": "local",
-                    "fieldName": "answer_2"
-                  },
-                  {
-                    "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
-                    "matchedExpression": "@local.answer_3",
-                    "type": "local",
-                    "fieldName": "answer_3"
-                  }
-                ],
-                "_cleaned": [
                   {
                     "fullExpression": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3",
                     "matchedExpression": "@field.current_group_no",
@@ -967,27 +922,22 @@
           "_dynamicDependencies": {
             "@field.current_group_no": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.group_id"
             ],
             "@field.current_module_no": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.module_id"
             ],
             "@local.answer_1": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.question_1"
             ],
             "@local.answer_2": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.question_2"
             ],
             "@local.answer_3": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params.question_3"
             ]
           }
@@ -997,6 +947,9 @@
       "_nested_name": "display_group_25"
     }
   ],
-  "_xlsxPath": "templates/reports.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "path": "templates/reports.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1pqNDT__R83Co4cyz-E-Y5wiw0i020Bg7HnQ5t_wHqrA"
+  }
 }

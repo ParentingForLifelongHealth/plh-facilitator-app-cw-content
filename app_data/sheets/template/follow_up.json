@@ -363,8 +363,7 @@
             "report_6",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_6 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_6 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_6 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -425,8 +424,7 @@
             "report_5",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_5 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_5 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_5 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -487,8 +485,7 @@
             "report_4",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_4 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_4 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_4 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -549,8 +546,7 @@
             "report_3",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_3 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_3 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_3 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -611,8 +607,7 @@
             "report_2",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_2 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_2 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_2 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -673,8 +668,7 @@
             "report_1",
             "@items.map(item => item.group_id)"
           ],
-          "_raw": "data_changed | set_local : report_1 : @items.map(item => item.group_id)",
-          "_cleaned": "data_changed | set_local : report_1 : @items.map(item => item.group_id)"
+          "_raw": "data_changed | set_local : report_1 : @items.map(item => item.group_id)"
         }
       ],
       "exclude_from_translation": true,
@@ -1628,11 +1622,272 @@
       }
     },
     {
+      "name": "total_parents",
+      "type": "set_variable",
+      "_nested_name": "total_parents"
+    },
+    {
+      "type": "data_items",
+      "name": "total_number_of_parents",
+      "value": "@data.parents",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "total_parents",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : total_parents : @items.length"
+        }
+      ],
+      "exclude_from_translation": true,
+      "parameter_list": {
+        "filter": "!@item.archived"
+      },
+      "condition": "@local.group_limit_id ==\"empty\"",
+      "_nested_name": "total_number_of_parents",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parents",
+            "matchedExpression": "@data.parents",
+            "type": "data",
+            "fieldName": "parents"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.archived",
+              "matchedExpression": "!@item.archived",
+              "type": "item",
+              "fieldName": "archived"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "fullExpression": "@local.group_limit_id ==\"empty\"",
+            "matchedExpression": "@local.group_limit_id",
+            "type": "local",
+            "fieldName": "group_limit_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.parents": [
+          "value"
+        ],
+        "!@item.archived": [
+          "parameter_list.filter"
+        ],
+        "@local.group_limit_id": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "name": "total_number_of_parents",
+      "value": "@data.parents",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "total_parents",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local : total_parents : @items.length"
+        }
+      ],
+      "exclude_from_translation": true,
+      "parameter_list": {
+        "filter": "!@item.archived && (@item.group_id==@local.group_limit_id)"
+      },
+      "condition": "!(@local.group_limit_id ==\"empty\")",
+      "_nested_name": "total_number_of_parents",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parents",
+            "matchedExpression": "@data.parents",
+            "type": "data",
+            "fieldName": "parents"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "!@item.archived && (@item.group_id==@local.group_limit_id)",
+              "matchedExpression": "!@item.archived",
+              "type": "item",
+              "fieldName": "archived"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id==@local.group_limit_id)",
+              "matchedExpression": "@item.group_id",
+              "type": "item",
+              "fieldName": "group_id"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id==@local.group_limit_id)",
+              "matchedExpression": "@local.group_limit_id",
+              "type": "local",
+              "fieldName": "group_limit_id"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "fullExpression": "!(@local.group_limit_id ==\"empty\")",
+            "matchedExpression": "@local.group_limit_id",
+            "type": "local",
+            "fieldName": "group_limit_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.parents": [
+          "value"
+        ],
+        "!@item.archived": [
+          "parameter_list.filter"
+        ],
+        "@item.group_id": [
+          "parameter_list.filter"
+        ],
+        "@local.group_limit_id": [
+          "parameter_list.filter",
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "parameter_list": {
+        "style": "column"
+      },
+      "condition": "(@local.total_parents == 0) && (@local.group_limit_id ==\"empty\")",
+      "rows": [
+        {
+          "type": "title",
+          "name": "text_no_follow_up",
+          "value": "👏 No Follow ups",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "display_group_57.text_no_follow_up"
+        },
+        {
+          "type": "text",
+          "name": "text_first_time",
+          "value": "This is where you’ll see parents who need follow-up.",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "style": "contextual"
+          },
+          "_nested_name": "display_group_57.text_first_time"
+        }
+      ],
+      "name": "display_group_57",
+      "_nested_name": "display_group_57",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "(@local.total_parents == 0) && (@local.group_limit_id ==\"empty\")",
+            "matchedExpression": "@local.total_parents",
+            "type": "local",
+            "fieldName": "total_parents"
+          },
+          {
+            "fullExpression": "(@local.total_parents == 0) && (@local.group_limit_id ==\"empty\")",
+            "matchedExpression": "@local.group_limit_id",
+            "type": "local",
+            "fieldName": "group_limit_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.total_parents": [
+          "condition"
+        ],
+        "@local.group_limit_id": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "parameter_list": {
+        "style": "column"
+      },
+      "condition": "(@local.total_parents == 0) && !(@local.group_limit_id ==\"empty\")",
+      "rows": [
+        {
+          "type": "title",
+          "name": "text_no_follow_up",
+          "value": "👏 No Follow ups",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "display_group_59.text_no_follow_up"
+        },
+        {
+          "type": "text",
+          "name": "text_first_time",
+          "value": "This is where you’ll see parents who need follow-up.",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "style": "contextual"
+          },
+          "_nested_name": "display_group_59.text_first_time"
+        }
+      ],
+      "name": "display_group_59",
+      "_nested_name": "display_group_59",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "(@local.total_parents == 0) && !(@local.group_limit_id ==\"empty\")",
+            "matchedExpression": "@local.total_parents",
+            "type": "local",
+            "fieldName": "total_parents"
+          },
+          {
+            "fullExpression": "(@local.total_parents == 0) && !(@local.group_limit_id ==\"empty\")",
+            "matchedExpression": "@local.group_limit_id",
+            "type": "local",
+            "fieldName": "group_limit_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.total_parents": [
+          "condition"
+        ],
+        "@local.group_limit_id": [
+          "condition"
+        ]
+      }
+    },
+    {
       "exclude_from_translation": true,
       "condition": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
       "type": "set_variable",
-      "name": "set_variable_54",
-      "_nested_name": "set_variable_54",
+      "name": "set_variable_61",
+      "_nested_name": "set_variable_61",
       "_dynamicFields": {
         "condition": [
           {
@@ -1688,7 +1943,7 @@
       "parameter_list": {
         "style": "column"
       },
-      "condition": "(@local.no_of_parents == 0)",
+      "condition": "(@local.no_of_parents == 0) && !(@local.total_parents == 0)",
       "rows": [
         {
           "type": "title",
@@ -1697,7 +1952,7 @@
           "_translations": {
             "value": {}
           },
-          "_nested_name": "display_group_56.text_no_follow_up"
+          "_nested_name": "display_group_63.text_no_follow_up"
         },
         {
           "type": "text",
@@ -1709,23 +1964,32 @@
           "parameter_list": {
             "style": "contextual"
           },
-          "_nested_name": "display_group_56.text_first_time"
+          "_nested_name": "display_group_63.text_first_time"
         }
       ],
-      "name": "display_group_56",
-      "_nested_name": "display_group_56",
+      "name": "display_group_63",
+      "_nested_name": "display_group_63",
       "_dynamicFields": {
         "condition": [
           {
-            "fullExpression": "(@local.no_of_parents == 0)",
+            "fullExpression": "(@local.no_of_parents == 0) && !(@local.total_parents == 0)",
             "matchedExpression": "@local.no_of_parents",
             "type": "local",
             "fieldName": "no_of_parents"
+          },
+          {
+            "fullExpression": "(@local.no_of_parents == 0) && !(@local.total_parents == 0)",
+            "matchedExpression": "@local.total_parents",
+            "type": "local",
+            "fieldName": "total_parents"
           }
         ]
       },
       "_dynamicDependencies": {
         "@local.no_of_parents": [
+          "condition"
+        ],
+        "@local.total_parents": [
           "condition"
         ]
       }
@@ -1745,8 +2009,7 @@
             "no_of_parents",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : no_of_parents : @items.length",
-          "_cleaned": "data_changed | set_local : no_of_parents : @items.length"
+          "_raw": "data_changed | set_local : no_of_parents : @items.length"
         }
       ],
       "exclude_from_translation": true,
@@ -2001,8 +2264,7 @@
             "no_of_parents",
             "@items.length"
           ],
-          "_raw": "data_changed | set_local : no_of_parents : @items.length",
-          "_cleaned": "data_changed | set_local : no_of_parents : @items.length"
+          "_raw": "data_changed | set_local : no_of_parents : @items.length"
         }
       ],
       "exclude_from_translation": true,
@@ -2268,7 +2530,7 @@
             "value": {}
           },
           "condition": "@local.no_of_parents == 1",
-          "_nested_name": "display_group_60.text_follow_up_one",
+          "_nested_name": "display_group_67.text_follow_up_one",
           "_dynamicFields": {
             "value": [
               {
@@ -2302,7 +2564,7 @@
             "value": {}
           },
           "condition": "@local.no_of_parents > 1",
-          "_nested_name": "display_group_60.text_follow_up_multiple",
+          "_nested_name": "display_group_67.text_follow_up_multiple",
           "_dynamicFields": {
             "value": [
               {
@@ -2342,8 +2604,7 @@
               "args": [
                 "follow_up"
               ],
-              "_raw": "click | go_to: follow_up",
-              "_cleaned": "click | go_to: follow_up"
+              "_raw": "click | go_to: follow_up"
             }
           ],
           "parameter_list": {
@@ -2351,7 +2612,7 @@
             "style": "no-background short"
           },
           "condition": "@local.has_limit && @local.no_of_parents > 2",
-          "_nested_name": "display_group_60.show_all",
+          "_nested_name": "display_group_67.show_all",
           "_dynamicFields": {
             "condition": [
               {
@@ -2378,8 +2639,8 @@
           }
         }
       ],
-      "name": "display_group_60",
-      "_nested_name": "display_group_60",
+      "name": "display_group_67",
+      "_nested_name": "display_group_67",
       "_dynamicFields": {
         "condition": [
           {
@@ -3659,6 +3920,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/actions_cw.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/actions_cw.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1K5Xmj_oCVcV_OTuDwYawORDk0P45JD2nlonvcIoMSrE"
+  }
 }

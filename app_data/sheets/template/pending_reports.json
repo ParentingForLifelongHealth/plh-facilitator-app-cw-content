@@ -46,8 +46,7 @@
             "number_delivered_sessions",
             "@items.length -1"
           ],
-          "_raw": "data_changed | set_local : number_delivered_sessions : @items.length -1",
-          "_cleaned": "data_changed | set_local : number_delivered_sessions : @items.length -1"
+          "_raw": "data_changed | set_local : number_delivered_sessions : @items.length -1"
         }
       ],
       "rows": [],
@@ -80,8 +79,7 @@
             "number_pending_reports",
             "@items.length -1"
           ],
-          "_raw": "data_changed | set_local : number_pending_reports : @items.length -1",
-          "_cleaned": "data_changed | set_local : number_pending_reports : @items.length -1"
+          "_raw": "data_changed | set_local : number_pending_reports : @items.length -1"
         }
       ],
       "parameter_list": {
@@ -300,12 +298,10 @@
                 "show_limit",
                 "@local.number_pending_reports"
               ],
-              "_raw": "click | set_local: show_limit: @local.number_pending_reports",
-              "_cleaned": "click | set_local: show_limit: @local.number_pending_reports"
+              "_raw": "click | set_local: show_limit: @local.number_pending_reports"
             }
           ],
           "parameter_list": {
-            "style": "no-background",
             "variant": "card"
           },
           "condition": "@local.number_pending_reports > 2 && @local.show_limit !== @local.number_pending_reports",
@@ -324,14 +320,6 @@
                   ]
                 },
                 "_raw": [
-                  {
-                    "fullExpression": "click | set_local: show_limit: @local.number_pending_reports",
-                    "matchedExpression": "@local.number_pending_reports",
-                    "type": "local",
-                    "fieldName": "number_pending_reports"
-                  }
-                ],
-                "_cleaned": [
                   {
                     "fullExpression": "click | set_local: show_limit: @local.number_pending_reports",
                     "matchedExpression": "@local.number_pending_reports",
@@ -366,7 +354,6 @@
             "@local.number_pending_reports": [
               "action_list.0.args.1",
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "condition",
               "condition"
             ],
@@ -392,12 +379,10 @@
                 "show_limit",
                 "2"
               ],
-              "_raw": "click | set_local: show_limit: 2",
-              "_cleaned": "click | set_local: show_limit: 2"
+              "_raw": "click | set_local: show_limit: 2"
             }
           ],
           "parameter_list": {
-            "style": "no-background",
             "variant": "card"
           },
           "condition": "@local.number_pending_reports > 2 && @local.show_limit == @local.number_pending_reports",
@@ -650,8 +635,7 @@
                         "current_report_no",
                         "@item.id"
                       ],
-                      "_raw": "click | set_field: current_report_no: @item.id",
-                      "_cleaned": "click | set_field: current_report_no: @item.id"
+                      "_raw": "click | set_field: current_report_no: @item.id"
                     },
                     {
                       "trigger": "click",
@@ -660,8 +644,7 @@
                         "current_group_no",
                         "@item.group_id"
                       ],
-                      "_raw": "click | set_field: current_group_no: @item.group_id",
-                      "_cleaned": "click | set_field: current_group_no: @item.group_id"
+                      "_raw": "click | set_field: current_group_no: @item.group_id"
                     },
                     {
                       "trigger": "click",
@@ -670,8 +653,7 @@
                         "current_module",
                         "@local.module_title"
                       ],
-                      "_raw": "click | set_field: current_module: @local.module_title",
-                      "_cleaned": "click | set_field: current_module: @local.module_title"
+                      "_raw": "click | set_field: current_module: @local.module_title"
                     },
                     {
                       "trigger": "click",
@@ -680,8 +662,7 @@
                         "current_report_id",
                         "@local.modules_report_id"
                       ],
-                      "_raw": "click | set_field: current_report_id: @local.modules_report_id",
-                      "_cleaned": "click | set_field: current_report_id: @local.modules_report_id"
+                      "_raw": "click | set_field: current_report_id: @local.modules_report_id"
                     },
                     {
                       "trigger": "click",
@@ -689,8 +670,7 @@
                       "args": [
                         "edit_report"
                       ],
-                      "_raw": "click | go_to: edit_report",
-                      "_cleaned": "click | go_to: edit_report"
+                      "_raw": "click | go_to: edit_report"
                     }
                   ],
                   "parameter_list": {
@@ -718,14 +698,6 @@
                             "type": "item",
                             "fieldName": "id"
                           }
-                        ],
-                        "_cleaned": [
-                          {
-                            "fullExpression": "click | set_field: current_report_no: @item.id",
-                            "matchedExpression": "@item.id",
-                            "type": "item",
-                            "fieldName": "id"
-                          }
                         ]
                       },
                       "1": {
@@ -740,14 +712,6 @@
                           ]
                         },
                         "_raw": [
-                          {
-                            "fullExpression": "click | set_field: current_group_no: @item.group_id",
-                            "matchedExpression": "@item.group_id",
-                            "type": "item",
-                            "fieldName": "group_id"
-                          }
-                        ],
-                        "_cleaned": [
                           {
                             "fullExpression": "click | set_field: current_group_no: @item.group_id",
                             "matchedExpression": "@item.group_id",
@@ -774,14 +738,6 @@
                             "type": "local",
                             "fieldName": "module_title"
                           }
-                        ],
-                        "_cleaned": [
-                          {
-                            "fullExpression": "click | set_field: current_module: @local.module_title",
-                            "matchedExpression": "@local.module_title",
-                            "type": "local",
-                            "fieldName": "module_title"
-                          }
                         ]
                       },
                       "3": {
@@ -796,14 +752,6 @@
                           ]
                         },
                         "_raw": [
-                          {
-                            "fullExpression": "click | set_field: current_report_id: @local.modules_report_id",
-                            "matchedExpression": "@local.modules_report_id",
-                            "type": "local",
-                            "fieldName": "modules_report_id"
-                          }
-                        ],
-                        "_cleaned": [
                           {
                             "fullExpression": "click | set_field: current_report_id: @local.modules_report_id",
                             "matchedExpression": "@local.modules_report_id",
@@ -825,23 +773,19 @@
                   "_dynamicDependencies": {
                     "@item.id": [
                       "action_list.0.args.1",
-                      "action_list.0._raw",
-                      "action_list.0._cleaned"
+                      "action_list.0._raw"
                     ],
                     "@item.group_id": [
                       "action_list.1.args.1",
-                      "action_list.1._raw",
-                      "action_list.1._cleaned"
+                      "action_list.1._raw"
                     ],
                     "@local.module_title": [
                       "action_list.2.args.1",
-                      "action_list.2._raw",
-                      "action_list.2._cleaned"
+                      "action_list.2._raw"
                     ],
                     "@local.modules_report_id": [
                       "action_list.3.args.1",
-                      "action_list.3._raw",
-                      "action_list.3._cleaned"
+                      "action_list.3._raw"
                     ],
                     "@item.id.submit_button": [
                       "_nested_name"
@@ -1120,6 +1064,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/actions_cw.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/actions_cw.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1K5Xmj_oCVcV_OTuDwYawORDk0P45JD2nlonvcIoMSrE"
+  }
 }

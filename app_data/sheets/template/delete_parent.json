@@ -70,6 +70,112 @@
       }
     },
     {
+      "name": "count",
+      "type": "set_variable",
+      "_nested_name": "count"
+    },
+    {
+      "name": "other_id",
+      "type": "set_variable",
+      "_nested_name": "other_id"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "count",
+            "@items.length"
+          ],
+          "_raw": "data_changed | set_local: count: @items.length"
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "other_id",
+            "@items[0].id"
+          ],
+          "_raw": "data_changed | set_local: other_id: @items[0].id"
+        }
+      ],
+      "parameter_list": {
+        "filter": "(@item.co_parent_id == @fields.current_co_parent_id) && (@item.id !== @fields.current_parent_no) && !(@item.archived)"
+      },
+      "name": "data_items_8",
+      "_nested_name": "data_items_8",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parents",
+            "matchedExpression": "@data.parents",
+            "type": "data",
+            "fieldName": "parents"
+          }
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "(@item.co_parent_id == @fields.current_co_parent_id) && (@item.id !== @fields.current_parent_no) && !(@item.archived)",
+              "matchedExpression": "@item.co_parent_id",
+              "type": "item",
+              "fieldName": "co_parent_id"
+            },
+            {
+              "fullExpression": "(@item.co_parent_id == @fields.current_co_parent_id) && (@item.id !== @fields.current_parent_no) && !(@item.archived)",
+              "matchedExpression": "@fields.current_co_parent_id",
+              "type": "fields",
+              "fieldName": "current_co_parent_id"
+            },
+            {
+              "fullExpression": "(@item.co_parent_id == @fields.current_co_parent_id) && (@item.id !== @fields.current_parent_no) && !(@item.archived)",
+              "matchedExpression": "@item.id",
+              "type": "item",
+              "fieldName": "id"
+            },
+            {
+              "fullExpression": "(@item.co_parent_id == @fields.current_co_parent_id) && (@item.id !== @fields.current_parent_no) && !(@item.archived)",
+              "matchedExpression": "@fields.current_parent_no",
+              "type": "fields",
+              "fieldName": "current_parent_no"
+            },
+            {
+              "fullExpression": "(@item.co_parent_id == @fields.current_co_parent_id) && (@item.id !== @fields.current_parent_no) && !(@item.archived)",
+              "matchedExpression": "@item.archived",
+              "type": "item",
+              "fieldName": "archived"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.parents": [
+          "value"
+        ],
+        "@item.co_parent_id": [
+          "parameter_list.filter"
+        ],
+        "@fields.current_co_parent_id": [
+          "parameter_list.filter"
+        ],
+        "@item.id": [
+          "parameter_list.filter"
+        ],
+        "@fields.current_parent_no": [
+          "parameter_list.filter"
+        ],
+        "@item.archived": [
+          "parameter_list.filter"
+        ]
+      }
+    },
+    {
       "type": "display_group",
       "name": "buttons",
       "rows": [
@@ -89,8 +195,7 @@
               "args": [
                 "uncompleted"
               ],
-              "_raw": "click | emit: uncompleted",
-              "_cleaned": "click | emit: uncompleted"
+              "_raw": "click | emit: uncompleted"
             }
           ],
           "parameter_list": {
@@ -116,12 +221,12 @@
               "trigger": "click",
               "action_id": "set_data",
               "args": [],
-              "_raw": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true",
-              "_cleaned": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true",
+              "_raw": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true,\nco_parent_id: \"empty\"",
               "params": {
                 "_list_id": "parents",
                 "_id": "@fields.current_parent_no",
-                "archived": true
+                "archived": true,
+                "co_parent_id": "empty"
               }
             },
             {
@@ -130,26 +235,21 @@
               "args": [
                 "completed"
               ],
-              "_raw": "click | emit: completed",
-              "_cleaned": "click | emit: completed"
+              "_raw": "click | emit: completed"
             },
             {
               "trigger": "click",
-              "action_id": "set_data",
-              "args": [],
-              "_raw": "click | set_data |\n_list_id: parents,\n_id: @fields.current_coparent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
-              "_cleaned": "click | set_data |\n_list_id: parents,\n_id: @fields.current_coparent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
-              "params": {
-                "_list_id": "parents",
-                "_id": "@fields.current_coparent_id",
-                "co_parent_id": "",
-                "co_parent_name": ""
-              }
+              "action_id": "nav",
+              "args": [
+                "back"
+              ],
+              "_raw": "click | nav: back"
             }
           ],
           "parameter_list": {
             "style": "card"
           },
+          "condition": "@local.count !==1",
           "style_list": [
             "flex:1"
           ],
@@ -160,15 +260,108 @@
               "0": {
                 "_raw": [
                   {
-                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true",
+                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true,\nco_parent_id: \"empty\"",
                     "matchedExpression": "@fields.current_parent_no",
                     "type": "fields",
                     "fieldName": "current_parent_no"
                   }
                 ],
-                "_cleaned": [
+                "params": {
+                  "_id": [
+                    {
+                      "fullExpression": "@fields.current_parent_no",
+                      "matchedExpression": "@fields.current_parent_no",
+                      "type": "fields",
+                      "fieldName": "current_parent_no"
+                    }
+                  ]
+                }
+              }
+            },
+            "condition": [
+              {
+                "fullExpression": "@local.count !==1",
+                "matchedExpression": "@local.count",
+                "type": "local",
+                "fieldName": "count"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@fields.current_parent_no": [
+              "action_list.0._raw",
+              "action_list.0.params._id"
+            ],
+            "@local.count": [
+              "condition"
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "name": "button_delete_on_co_parent",
+          "value": "Delete",
+          "_translations": {
+            "value": {
+              "cw_pap": true
+            }
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_data",
+              "args": [],
+              "_raw": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true,\nco_parent_id: \"empty\"",
+              "params": {
+                "_list_id": "parents",
+                "_id": "@fields.current_parent_no",
+                "archived": true,
+                "co_parent_id": "empty"
+              }
+            },
+            {
+              "trigger": "click",
+              "action_id": "set_data",
+              "args": [],
+              "_raw": "click | set_data |\n_list_id: parents,\n_id: @local.other_id,\nco_parent_id: \"empty\"",
+              "params": {
+                "_list_id": "parents",
+                "_id": "@local.other_id",
+                "co_parent_id": "empty"
+              }
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed"
+            },
+            {
+              "trigger": "click",
+              "action_id": "nav",
+              "args": [
+                "back"
+              ],
+              "_raw": "click | nav: back"
+            }
+          ],
+          "parameter_list": {
+            "style": "card"
+          },
+          "condition": "@local.count == 1",
+          "style_list": [
+            "flex:1"
+          ],
+          "exclude_from_translation": false,
+          "_nested_name": "buttons.button_delete_on_co_parent",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "_raw": [
                   {
-                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true",
+                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true,\nco_parent_id: \"empty\"",
                     "matchedExpression": "@fields.current_parent_no",
                     "type": "fields",
                     "fieldName": "current_parent_no"
@@ -185,46 +378,47 @@
                   ]
                 }
               },
-              "2": {
+              "1": {
                 "_raw": [
                   {
-                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_coparent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
-                    "matchedExpression": "@fields.current_coparent_id",
-                    "type": "fields",
-                    "fieldName": "current_coparent_id"
-                  }
-                ],
-                "_cleaned": [
-                  {
-                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @fields.current_coparent_id,\nco_parent_id: \"\",\nco_parent_name: \"\"",
-                    "matchedExpression": "@fields.current_coparent_id",
-                    "type": "fields",
-                    "fieldName": "current_coparent_id"
+                    "fullExpression": "click | set_data |\n_list_id: parents,\n_id: @local.other_id,\nco_parent_id: \"empty\"",
+                    "matchedExpression": "@local.other_id",
+                    "type": "local",
+                    "fieldName": "other_id"
                   }
                 ],
                 "params": {
                   "_id": [
                     {
-                      "fullExpression": "@fields.current_coparent_id",
-                      "matchedExpression": "@fields.current_coparent_id",
-                      "type": "fields",
-                      "fieldName": "current_coparent_id"
+                      "fullExpression": "@local.other_id",
+                      "matchedExpression": "@local.other_id",
+                      "type": "local",
+                      "fieldName": "other_id"
                     }
                   ]
                 }
               }
-            }
+            },
+            "condition": [
+              {
+                "fullExpression": "@local.count == 1",
+                "matchedExpression": "@local.count",
+                "type": "local",
+                "fieldName": "count"
+              }
+            ]
           },
           "_dynamicDependencies": {
             "@fields.current_parent_no": [
               "action_list.0._raw",
-              "action_list.0._cleaned",
               "action_list.0.params._id"
             ],
-            "@fields.current_coparent_id": [
-              "action_list.2._raw",
-              "action_list.2._cleaned",
-              "action_list.2.params._id"
+            "@local.other_id": [
+              "action_list.1._raw",
+              "action_list.1.params._id"
+            ],
+            "@local.count": [
+              "condition"
             ]
           }
         }
@@ -232,6 +426,9 @@
       "_nested_name": "buttons"
     }
   ],
-  "_xlsxPath": "templates/parent groups.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/Parent Groups CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
+  }
 }

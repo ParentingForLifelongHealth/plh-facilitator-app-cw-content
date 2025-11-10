@@ -93,15 +93,13 @@
                     "current_group_no",
                     "this.value"
                   ],
-                  "_raw": "changed | set_field: current_group_no: this.value",
-                  "_cleaned": "changed | set_field: current_group_no: this.value"
+                  "_raw": "changed | set_field: current_group_no: this.value"
                 },
                 {
                   "trigger": "changed",
                   "action_id": "set_data",
                   "args": [],
                   "_raw": "changed | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value}",
-                  "_cleaned": "changed | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value}",
                   "params": {
                     "_list_id": "sub_items",
                     "completed": "@item.@local.completed_prefix{this.value}"
@@ -164,14 +162,6 @@
                         "fieldName": "completed_prefix"
                       }
                     ],
-                    "_cleaned": [
-                      {
-                        "fullExpression": "changed | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value}",
-                        "matchedExpression": "@local.completed_prefix",
-                        "type": "local",
-                        "fieldName": "completed_prefix"
-                      }
-                    ],
                     "params": {
                       "completed": [
                         {
@@ -209,7 +199,6 @@
                 ],
                 "@local.completed_prefix": [
                   "action_list.1._raw",
-                  "action_list.1._cleaned",
                   "action_list.1.params.completed"
                 ],
                 "@global.select_group": [
@@ -240,8 +229,7 @@
             "current_package",
             "@items[0].content_package"
           ],
-          "_raw": "data_changed | set_field : current_package: @items[0].content_package",
-          "_cleaned": "data_changed | set_field : current_package: @items[0].content_package"
+          "_raw": "data_changed | set_field : current_package: @items[0].content_package"
         }
       ],
       "parameter_list": {
@@ -1832,8 +1820,7 @@
               "args": [
                 "profile_groups"
               ],
-              "_raw": "click | go_to: profile_groups",
-              "_cleaned": "click | go_to: profile_groups"
+              "_raw": "click | go_to: profile_groups"
             }
           ],
           "parameter_list": {
@@ -1893,6 +1880,9 @@
       }
     }
   ],
-  "_xlsxPath": "templates/module menu cw.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/module menu cw.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1XpXyd90iCu2N7swaDhv9nV8-8y_bIhVERP-iKYiitVc"
+  }
 }
