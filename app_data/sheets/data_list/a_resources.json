@@ -14,41 +14,25 @@
       "id": "facilitation_50",
       "foreign_key": "facilitation_5",
       "media_type": "pdf",
-      "media_asset": "pdf/child_development_domain.pdf",
-      "media_title": "Domains of child development",
-      "_translations": {
-        "media_title": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "media_title": {
-          "eng": "Domains of child development"
-        }
-      }
+      "media_asset": "child_development_domain_pap"
     },
     {
       "id": "facilitation_51",
       "foreign_key": "facilitation_5",
       "media_type": "pdf",
-      "media_asset": "pdf/child_development_stage.pdf",
-      "media_title": "Stages of Child Development",
-      "_translations": {
-        "media_title": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "media_title": {
-          "eng": "Stages of Child Development"
-        }
-      }
+      "media_asset": "child_development_stages_pap"
     },
     {
       "id": "facilitation_52",
       "foreign_key": "facilitation_5",
       "media_type": "pdf",
-      "media_asset": "pdf/children_with_disabilities.pdf"
+      "media_asset": "children_with_disabilities_pap"
+    },
+    {
+      "id": "module_1_prepare0",
+      "foreign_key": "module_1_prepare",
+      "media_type": "pdf",
+      "media_asset": "one_on_one_time_development_stages_pap"
     }
   ],
   "_source": {

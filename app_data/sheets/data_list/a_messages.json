@@ -406,6 +406,56 @@
         }
       },
       "text": "Hello Parents, 👋\n\n⏱️I value your time and want to ensure our chat is convenient for everyone. \n\n⭐Does this time work well for our conversations? \n\n🔔Is there another time that works for you? \n\nYour input matters!"
+    },
+    {
+      "id": "follow_up_10",
+      "foreign_key": "follow_up_1",
+      "title": "Send a direct message",
+      "_translations": {
+        "title": {},
+        "text": {},
+        "guidance": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Send a direct message"
+        },
+        "text": {
+          "eng": "Hi, [Parent Name], \n\nWe missed you in the last chat session. Hope you and your family are doing well. We’d love to see you in the next chat session! 💛"
+        },
+        "guidance": {
+          "eng": "Before hitting send, please make sure to tag a specific parent by typing @Parent’s Name"
+        }
+      },
+      "text": "Hi, [Parent Name], \n\nWe missed you in the last chat session. Hope you and your family are doing well. We’d love to see you in the next chat session! 💛",
+      "guidance": "Before hitting send, please make sure to tag a specific parent by typing @Parent’s Name"
+    },
+    {
+      "id": "follow_up_30",
+      "foreign_key": "follow_up_3",
+      "title": "Send a final reminder message",
+      "_translations": {
+        "title": {},
+        "text": {},
+        "guidance": {
+          "cw_pap": true
+        }
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "Send a final reminder message"
+        },
+        "text": {
+          "eng": "Hi, [Parent Name], \n\nHi! We just wanted to check in one last time to see how you and your family are doing. We’ve missed having you in the chat sessions. You’re always welcome to join again whenever you’re ready. 💛"
+        },
+        "guidance": {
+          "eng": "Before hitting send, please make sure to tag a specific parent by typing @Parent’s Name"
+        }
+      },
+      "text": "Hi, [Parent Name], \n\nHi! We just wanted to check in one last time to see how you and your family are doing. We’ve missed having you in the chat sessions. You’re always welcome to join again whenever you’re ready. 💛",
+      "guidance": "Before hitting send, please make sure to tag a specific parent by typing @Parent’s Name"
     }
   ],
   "_source": {

@@ -106,7 +106,10 @@
                       "args": [
                         "pdf_@local.resource_id"
                       ],
-                      "_raw": "click | pop_up: pdf_@local.resource_id"
+                      "_raw": "click | pop_up : pdf_@local.resource_id | fullscreen: true",
+                      "params": {
+                        "fullscreen": true
+                      }
                     }
                   ],
                   "parameter_list": {
@@ -130,7 +133,7 @@
                         },
                         "_raw": [
                           {
-                            "fullExpression": "click | pop_up: pdf_@local.resource_id",
+                            "fullExpression": "click | pop_up : pdf_@local.resource_id | fullscreen: true",
                             "matchedExpression": "@local.resource_id",
                             "type": "local",
                             "fieldName": "resource_id"
@@ -206,7 +209,10 @@
                       "args": [
                         "pdf_@local.resource_id"
                       ],
-                      "_raw": "click | pop_up: pdf_@local.resource_id"
+                      "_raw": "click | pop_up : pdf_@local.resource_id | fullscreen: true",
+                      "params": {
+                        "fullscreen": true
+                      }
                     }
                   ],
                   "parameter_list": {
@@ -230,7 +236,7 @@
                         },
                         "_raw": [
                           {
-                            "fullExpression": "click | pop_up: pdf_@local.resource_id",
+                            "fullExpression": "click | pop_up : pdf_@local.resource_id | fullscreen: true",
                             "matchedExpression": "@local.resource_id",
                             "type": "local",
                             "fieldName": "resource_id"

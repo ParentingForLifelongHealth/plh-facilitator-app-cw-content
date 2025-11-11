@@ -12,11 +12,11 @@
 | button | 131 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 95 |
+| data_items | 100 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 163 |
+| display_group | 164 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
@@ -29,16 +29,16 @@
 | round_button | 31 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 984 |
+| set_variable | 999 |
 | simple_checkbox | 7 |
 | task_card | 1 |
 | task_progress_bar | 4 |
-| template | 139 |
+| template | 144 |
 | test | 1 |
-| text | 352 |
+| text | 358 |
 | text_area | 4 |
 | text_box | 32 |
-| title | 71 |
+| title | 72 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 2 |
@@ -52,13 +52,13 @@
 | add_data | 9 |
 | app_update | 1 |
 | auth | 4 |
-| emit: completed | 62 |
+| emit: completed | 64 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 21 |
 | emit: set_language | 4 |
-| emit: uncompleted | 92 |
+| emit: uncompleted | 97 |
 | feedback | 24 |
 | go_to | 41 |
 | nav | 7 |
@@ -70,7 +70,7 @@
 | set_data | 28 |
 | set_field | 88 |
 | set_item | 13 |
-| set_local | 118 |
+| set_local | 123 |
 | share | 2 |
 | user | 4 |
 </details>
@@ -80,8 +80,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 33937 KB | 33.9 MB |
-| unused | 8726 KB | 8.7 MB |
+| total | 34320 KB | 34.3 MB |
+| unused | 9119 KB | 9.1 MB |
 </details>
 
 <details open>
@@ -146,6 +146,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/world.svg | 6.2 |
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
+| pdf/module_1_core_lesson_teen_pap.pdf | 393.1 |
 </details>
 
 <details open>
@@ -172,9 +173,7 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/plh_logomark.png | 1 |
 | images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
-| pdf/child_development_domain.pdf | 1 |
-| pdf/child_development_stage.pdf | 1 |
-| pdf/children_with_disabilities.pdf | 1 |
+| pdf/modile_1_core_lesson_teen_pap.pdf | 1 |
 </details>
 
 <details >
@@ -248,6 +247,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | pdf/children_with_disabilities_pap.pdf | 686.8 | 1 |
 | pdf/individual_consultation_pap.pdf | 726.5 | 1 |
 | pdf/module_1_core_lesson_pap.pdf | 435.2 | 1 |
+| pdf/module_1_core_lesson_yc_pap.pdf | 383 | 1 |
 | pdf/module_1_home_activity_pap.pdf | 353.5 | 1 |
 | pdf/module_1_overview_pap.pdf | 363.2 | 1 |
 | pdf/module_1_welcome_pap.pdf | 2236.9 | 1 |
@@ -275,6 +275,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
 | template |  | 101 |
-| template | generated | 75 |
+| template | generated | 80 |
 | template | legal_terms | 4 |
 </details>

@@ -170,6 +170,31 @@
     },
     {
       "type": "title",
+      "name": "text_no_pending_reports_1",
+      "value": "🎊 No Pending Reports",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.number_delivered_sessions == 0",
+      "_nested_name": "text_no_pending_reports_1",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.number_delivered_sessions == 0",
+            "matchedExpression": "@local.number_delivered_sessions",
+            "type": "local",
+            "fieldName": "number_delivered_sessions"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.number_delivered_sessions": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "title",
       "name": "text_initial",
       "value": "🚀 Your parents are waiting! Once you deliver your first session, your reports will appear here.",
       "_translations": {
@@ -212,7 +237,7 @@
             "flex:1"
           ],
           "condition": "@local.number_delivered_sessions > 1",
-          "_nested_name": "display_group_17.text_pending_reports",
+          "_nested_name": "display_group_18.text_pending_reports",
           "_dynamicFields": {
             "value": [
               {
@@ -253,7 +278,7 @@
             "flex:1"
           ],
           "condition": "@local.number_delivered_sessions == 1",
-          "_nested_name": "display_group_17.text_pending_reports",
+          "_nested_name": "display_group_18.text_pending_reports",
           "_dynamicFields": {
             "value": [
               {
@@ -305,7 +330,7 @@
             "variant": "card"
           },
           "condition": "@local.number_pending_reports > 2 && @local.show_limit !== @local.number_pending_reports",
-          "_nested_name": "display_group_17.show_all_button",
+          "_nested_name": "display_group_18.show_all_button",
           "_dynamicFields": {
             "action_list": {
               "0": {
@@ -386,7 +411,7 @@
             "variant": "card"
           },
           "condition": "@local.number_pending_reports > 2 && @local.show_limit == @local.number_pending_reports",
-          "_nested_name": "display_group_17.show_all_button",
+          "_nested_name": "display_group_18.show_all_button",
           "_dynamicFields": {
             "condition": [
               {
@@ -420,8 +445,8 @@
           }
         }
       ],
-      "name": "display_group_17",
-      "_nested_name": "display_group_17",
+      "name": "display_group_18",
+      "_nested_name": "display_group_18",
       "_dynamicFields": {
         "condition": [
           {
@@ -469,7 +494,7 @@
                 "value": {}
               },
               "type": "set_variable",
-              "_nested_name": "display_group_19.data_items_1.module_id",
+              "_nested_name": "display_group_20.data_items_1.module_id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -493,7 +518,7 @@
                 "value": {}
               },
               "type": "set_variable",
-              "_nested_name": "display_group_19.data_items_1.group_id",
+              "_nested_name": "display_group_20.data_items_1.group_id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -517,7 +542,7 @@
                 "value": {}
               },
               "type": "set_variable",
-              "_nested_name": "display_group_19.data_items_1.module_name",
+              "_nested_name": "display_group_20.data_items_1.module_name",
               "_dynamicFields": {
                 "value": [
                   {
@@ -550,7 +575,7 @@
                 "value": {}
               },
               "type": "set_variable",
-              "_nested_name": "display_group_19.data_items_1.modules_report_id",
+              "_nested_name": "display_group_20.data_items_1.modules_report_id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -590,7 +615,7 @@
                     "flex:1",
                     "margin-bottom: 12px"
                   ],
-                  "_nested_name": "display_group_19.data_items_1.display_group_5_@item.id.module_title_text",
+                  "_nested_name": "display_group_20.data_items_1.display_group_5_@item.id.module_title_text",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -602,7 +627,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "display_group_19.data_items_1.display_group_5_@item.id.module_title_text",
+                        "fullExpression": "display_group_20.data_items_1.display_group_5_@item.id.module_title_text",
                         "matchedExpression": "@item.id.module_title_text",
                         "type": "item",
                         "fieldName": "id"
@@ -677,7 +702,7 @@
                     "variant": "card",
                     "style": "no-background short"
                   },
-                  "_nested_name": "display_group_19.data_items_1.display_group_5_@item.id.submit_button",
+                  "_nested_name": "display_group_20.data_items_1.display_group_5_@item.id.submit_button",
                   "_dynamicFields": {
                     "action_list": {
                       "0": {
@@ -763,7 +788,7 @@
                     },
                     "_nested_name": [
                       {
-                        "fullExpression": "display_group_19.data_items_1.display_group_5_@item.id.submit_button",
+                        "fullExpression": "display_group_20.data_items_1.display_group_5_@item.id.submit_button",
                         "matchedExpression": "@item.id.submit_button",
                         "type": "item",
                         "fieldName": "id"
@@ -794,7 +819,7 @@
                 }
               ],
               "name": "display_group_5_@item.id",
-              "_nested_name": "display_group_19.data_items_1.display_group_5_@item.id",
+              "_nested_name": "display_group_20.data_items_1.display_group_5_@item.id",
               "_dynamicFields": {
                 "name": [
                   {
@@ -806,7 +831,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_19.data_items_1.display_group_5_@item.id",
+                    "fullExpression": "display_group_20.data_items_1.display_group_5_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -838,7 +863,7 @@
                     "margin-bottom: 12px"
                   ],
                   "condition": "@local.group_id == @item.name",
-                  "_nested_name": "display_group_19.data_items_1.data_items_6_@item.id.group_name",
+                  "_nested_name": "display_group_20.data_items_1.data_items_6_@item.id.group_name",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -864,7 +889,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "display_group_19.data_items_1.data_items_6_@item.id.group_name",
+                        "fullExpression": "display_group_20.data_items_1.data_items_6_@item.id.group_name",
                         "matchedExpression": "@item.id.group_name",
                         "type": "item",
                         "fieldName": "id"
@@ -888,7 +913,7 @@
                 }
               ],
               "name": "data_items_6_@item.id",
-              "_nested_name": "display_group_19.data_items_1.data_items_6_@item.id",
+              "_nested_name": "display_group_20.data_items_1.data_items_6_@item.id",
               "_dynamicFields": {
                 "value": [
                   {
@@ -908,7 +933,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_19.data_items_1.data_items_6_@item.id",
+                    "fullExpression": "display_group_20.data_items_1.data_items_6_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -927,7 +952,7 @@
             }
           ],
           "name": "data_items_1",
-          "_nested_name": "display_group_19.data_items_1",
+          "_nested_name": "display_group_20.data_items_1",
           "_dynamicFields": {
             "value": [
               {
@@ -978,8 +1003,8 @@
           }
         }
       ],
-      "name": "display_group_19",
-      "_nested_name": "display_group_19",
+      "name": "display_group_20",
+      "_nested_name": "display_group_20",
       "_dynamicFields": {
         "condition": [
           {
@@ -1019,7 +1044,7 @@
           "_translations": {
             "value": {}
           },
-          "_nested_name": "display_group_22.text_no_pending_reports_1"
+          "_nested_name": "display_group_23.text_no_pending_reports_1"
         },
         {
           "type": "text",
@@ -1033,11 +1058,11 @@
           "parameter_list": {
             "style": "contextual"
           },
-          "_nested_name": "display_group_22.text_no_pending_reports_2"
+          "_nested_name": "display_group_23.text_no_pending_reports_2"
         }
       ],
-      "name": "display_group_22",
-      "_nested_name": "display_group_22",
+      "name": "display_group_23",
+      "_nested_name": "display_group_23",
       "_dynamicFields": {
         "condition": [
           {
