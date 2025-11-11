@@ -488,15 +488,13 @@
     {
       "id": "module_1_prepare0",
       "foreign_key": "module_1_prepare",
-      "text_1": "The first step to building healthier and happier relationships is to spend dedicated time together. When parents spend one-on-one time with their children away from work and household duties and other people, they create space to be available to their child, to get more involved in their lives, and to build trust and communication skills. A strong parent-child relationship requires spending time together in this way.\n\n**Key building blocks for one-on-one time**\n\nThe key building blocks for One-on-One time are Day, Play, and Stay:\n\n**DAY**’- Try to do it every day\nSpend 5 minutes (or more!) One-on-One time with your child each day.\n\n**PLAY** - Let them choose the activity\nTell your child or teen that you would like to spend some time with them and that they can choose what to do or talk about. They might think this is weird at first but will come to enjoy this time with you!\n\n**STAY** - Focus on your child or teen\nSwitch off TV and put aside phones. Look at your child or teen. Nod or say “I see” to show you are really paying attention. Accept what they say without judging them.",
+      "text_1": "The first step to building healthier and happier relationships is to spend dedicated time together. When parents spend one-on-one time with their children away from work and household duties and other people, they create space to be available to their child, to get more involved in their lives, and to build trust and communication skills. A strong parent-child relationship requires spending time together in this way.\n\n**Key building blocks for one-on-one time**\n\nThe key building blocks for One-on-One time are Day, Play, and Stay:\n\n**DAY**- Try to do it every day\nSpend 5 minutes (or more!) One-on-One time with your child each day.\n\n**PLAY** - Let them choose the activity\nTell your child or teen that you would like to spend some time with them and that they can choose what to do or talk about. They might think this is weird at first but will come to enjoy this time with you!\n\n**STAY** - Focus on your child or teen\nSwitch off TV and put aside phones. Look at your child or teen. Nod or say “I see” to show you are really paying attention. Accept what they say without judging them.",
       "_translations": {
-        "text_1": {
-          "cw_pap": true
-        }
+        "text_1": {}
       },
       "_translatedFields": {
         "text_1": {
-          "eng": "The first step to building healthier and happier relationships is to spend dedicated time together. When parents spend one-on-one time with their children away from work and household duties and other people, they create space to be available to their child, to get more involved in their lives, and to build trust and communication skills. A strong parent-child relationship requires spending time together in this way.\n\n**Key building blocks for one-on-one time**\n\nThe key building blocks for One-on-One time are Day, Play, and Stay:\n\n**DAY**’- Try to do it every day\nSpend 5 minutes (or more!) One-on-One time with your child each day.\n\n**PLAY** - Let them choose the activity\nTell your child or teen that you would like to spend some time with them and that they can choose what to do or talk about. They might think this is weird at first but will come to enjoy this time with you!\n\n**STAY** - Focus on your child or teen\nSwitch off TV and put aside phones. Look at your child or teen. Nod or say “I see” to show you are really paying attention. Accept what they say without judging them."
+          "eng": "The first step to building healthier and happier relationships is to spend dedicated time together. When parents spend one-on-one time with their children away from work and household duties and other people, they create space to be available to their child, to get more involved in their lives, and to build trust and communication skills. A strong parent-child relationship requires spending time together in this way.\n\n**Key building blocks for one-on-one time**\n\nThe key building blocks for One-on-One time are Day, Play, and Stay:\n\n**DAY**- Try to do it every day\nSpend 5 minutes (or more!) One-on-One time with your child each day.\n\n**PLAY** - Let them choose the activity\nTell your child or teen that you would like to spend some time with them and that they can choose what to do or talk about. They might think this is weird at first but will come to enjoy this time with you!\n\n**STAY** - Focus on your child or teen\nSwitch off TV and put aside phones. Look at your child or teen. Nod or say “I see” to show you are really paying attention. Accept what they say without judging them."
         }
       }
     },
@@ -699,6 +697,60 @@
           "eng": "Engaging parents in the group chat can sometimes be hard. Some parents may need a nudge to share their experiences or they might be busy with their schedules. \n\nIf your chat goes silent after the prompt, consider sharing these ideas or suggestions:"
         }
       }
+    },
+    {
+      "id": "follow_up_10",
+      "foreign_key": "follow_up_1",
+      "text_1": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nAfter the third follow-up, if the parent still does not rejoin, they will no longer appear in your list.",
+      "_translations": {
+        "text_1": {},
+        "text_2": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nAfter the third follow-up, if the parent still does not rejoin, they will no longer appear in your list."
+        },
+        "text_2": {
+          "eng": "Your parent has missed the last 2 consecutive chat sessions for the **first time**. Send a short, friendly message to remind them and invite them back.\n\nPlease click on “I followed up” once you have sent the message."
+        }
+      },
+      "text_2": "Your parent has missed the last 2 consecutive chat sessions for the **first time**. Send a short, friendly message to remind them and invite them back.\n\nPlease click on “I followed up” once you have sent the message."
+    },
+    {
+      "id": "follow_up_20",
+      "foreign_key": "follow_up_2",
+      "text_1": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nAfter the third follow-up, if the parent still does not rejoin, they will no longer appear in your list.",
+      "_translations": {
+        "text_1": {},
+        "text_2": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nAfter the third follow-up, if the parent still does not rejoin, they will no longer appear in your list."
+        },
+        "text_2": {
+          "eng": "Your parent has missed the last 2 consecutive chat sessions for the **second time**. Give them a call to check in and encourage them to return.\n\nUse the call to:\nAsk how they and their child are doing.\nFind out why they missed the last sessions.\nDiscuss any challenges and help find solutions using A–E–C–P (Accept, Connect, Explore, Practice).\nAsk about the last home activity they tried.\nShare a short summary of what was covered in the missed sessions.\nEncourage them to join the next session.\nThank them for their time.\n\nPlease click on “I followed up” once you have sent the message."
+        }
+      },
+      "text_2": "Your parent has missed the last 2 consecutive chat sessions for the **second time**. Give them a call to check in and encourage them to return.\n\nUse the call to:\nAsk how they and their child are doing.\nFind out why they missed the last sessions.\nDiscuss any challenges and help find solutions using A–E–C–P (Accept, Connect, Explore, Practice).\nAsk about the last home activity they tried.\nShare a short summary of what was covered in the missed sessions.\nEncourage them to join the next session.\nThank them for their time.\n\nPlease click on “I followed up” once you have sent the message."
+    },
+    {
+      "id": "follow_up_30",
+      "foreign_key": "follow_up_3",
+      "text_1": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nThis is the third follow-up. If the parent still does not rejoin, they will no longer appear in your list.",
+      "_translations": {
+        "text_1": {},
+        "text_2": {}
+      },
+      "_translatedFields": {
+        "text_1": {
+          "eng": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nThis is the third follow-up. If the parent still does not rejoin, they will no longer appear in your list."
+        },
+        "text_2": {
+          "eng": "Please click on “I followed up” once you have called the parent."
+        }
+      },
+      "text_2": "Please click on “I followed up” once you have called the parent."
     }
   ],
   "_source": {

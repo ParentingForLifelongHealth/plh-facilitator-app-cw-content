@@ -806,6 +806,21 @@
           "flow_name": "library_article_faq_no_participation_general",
           "flow_subtype": "generated",
           "flow_type": "template"
+        },
+        {
+          "flow_name": "library_article_follow_up_1",
+          "flow_subtype": "generated",
+          "flow_type": "template"
+        },
+        {
+          "flow_name": "library_article_follow_up_2",
+          "flow_subtype": "generated",
+          "flow_type": "template"
+        },
+        {
+          "flow_name": "library_article_follow_up_3",
+          "flow_subtype": "generated",
+          "flow_type": "template"
         }
       ]
     },
@@ -1019,6 +1034,16 @@
         },
         {
           "flow_name": "pdf_module_1_core_lesson_pap",
+          "flow_subtype": "generated",
+          "flow_type": "template"
+        },
+        {
+          "flow_name": "pdf_module_1_core_lesson_yc_pap",
+          "flow_subtype": "generated",
+          "flow_type": "template"
+        },
+        {
+          "flow_name": "pdf_modile_1_core_lesson_teen_pap",
           "flow_subtype": "generated",
           "flow_type": "template"
         },
@@ -1806,6 +1831,21 @@
       "flow_subtype": "generated",
       "flow_type": "template"
     },
+    "library_article_follow_up_1": {
+      "flow_name": "library_article_follow_up_1",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "library_article_follow_up_2": {
+      "flow_name": "library_article_follow_up_2",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "library_article_follow_up_3": {
+      "flow_name": "library_article_follow_up_3",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
     "library_article_handover_group_admin": {
       "flow_name": "library_article_handover_group_admin",
       "flow_subtype": "generated",
@@ -1976,8 +2016,18 @@
       "flow_subtype": "generated",
       "flow_type": "template"
     },
+    "pdf_modile_1_core_lesson_teen_pap": {
+      "flow_name": "pdf_modile_1_core_lesson_teen_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
     "pdf_module_1_core_lesson_pap": {
       "flow_name": "pdf_module_1_core_lesson_pap",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "pdf_module_1_core_lesson_yc_pap": {
+      "flow_name": "pdf_module_1_core_lesson_yc_pap",
       "flow_subtype": "generated",
       "flow_type": "template"
     },

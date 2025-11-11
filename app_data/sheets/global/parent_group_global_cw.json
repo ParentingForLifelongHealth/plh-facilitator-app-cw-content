@@ -462,11 +462,9 @@
     {
       "type": "declare_global_constant",
       "name": "error_number",
-      "value": "Please enter a valid 11-digit phone number that starts with 09.",
+      "value": "Please enter a valid 7-digit phone number.",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       }
     },
     {
@@ -502,11 +500,9 @@
     {
       "type": "declare_global_constant",
       "name": "error_child_age",
-      "value": "Please enter an age between 2 and 17.",
+      "value": "Please enter an age between in the proper age group.",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       }
     },
     {

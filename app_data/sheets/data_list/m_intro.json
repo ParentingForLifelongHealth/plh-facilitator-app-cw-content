@@ -154,6 +154,8 @@
     {
       "id": "module_1_in_person_yc2",
       "foreign_key": "module_1_in_person_yc2",
+      "media_type": "pdf",
+      "media_asset": "module_1_welcome_pap",
       "text_1": "**WELCOME (20 minutes)**",
       "_translations": {
         "text_1": {
@@ -169,6 +171,8 @@
     {
       "id": "module_1_in_person_yc3",
       "foreign_key": "module_1_in_person_yc2",
+      "media_type": "pdf",
+      "media_asset": "module_1_overview_pap",
       "text_1": "**OVERVIEW (30 min)**",
       "_translations": {
         "text_1": {
@@ -184,6 +188,8 @@
     {
       "id": "module_1_in_person_yc4",
       "foreign_key": "module_1_in_person_yc2",
+      "media_type": "pdf",
+      "media_asset": "module_1_core_lesson_yc_pap",
       "text_1": "**CORE LESSON: Parenting Skill – One-on-One Time (50 minutes)**",
       "_translations": {
         "text_1": {
@@ -199,6 +205,8 @@
     {
       "id": "module_1_in_person_yc5",
       "foreign_key": "module_1_in_person_yc2",
+      "media_type": "pdf",
+      "media_asset": "module_1_home_activity_pap",
       "text_1": "**HOME ACTIVITIES & CLOSING (10 minutes)**",
       "_translations": {
         "text_1": {
@@ -214,24 +222,15 @@
     {
       "id": "module_1_in_person_teen0",
       "foreign_key": "module_1_in_person_teen0",
-      "text_1": "**Preparation**",
+      "text_1": "**Preparation**\n\n1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video stories.",
       "_translations": {
-        "text_1": {
-          "cw_pap": true
-        },
-        "text_2": {
-          "cw_pap": true
-        }
+        "text_1": {}
       },
       "_translatedFields": {
         "text_1": {
-          "eng": "**Preparation**"
-        },
-        "text_2": {
-          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video stories."
+          "eng": "**Preparation**\n\n1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video stories."
         }
-      },
-      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, markers, toys and props, stickers, and refreshments for the break are ready. \n2️⃣ Set up the room with chairs in a circle. \n\n3️⃣ List all participant goals on flipchart paper ahead of time.\n\n4️⃣ Prepare the laptop, LCD projector, and screen for showing the video stories."
+      }
     },
     {
       "id": "module_1_in_person_teen1",
@@ -258,6 +257,8 @@
     {
       "id": "module_1_in_person_teen2",
       "foreign_key": "module_1_in_person_teen2",
+      "media_type": "pdf",
+      "media_asset": "module_1_welcome_pap",
       "text_1": "**WELCOME (20 minutes)**",
       "_translations": {
         "text_1": {
@@ -273,6 +274,8 @@
     {
       "id": "module_1_in_person_teen3",
       "foreign_key": "module_1_in_person_teen2",
+      "media_type": "pdf",
+      "media_asset": "module_1_overview_pap",
       "text_1": "**OVERVIEW (30 min)**",
       "_translations": {
         "text_1": {
@@ -288,6 +291,8 @@
     {
       "id": "module_1_in_person_teen4",
       "foreign_key": "module_1_in_person_teen2",
+      "media_type": "pdf",
+      "media_asset": "module_1_core_lesson_teen_pap",
       "text_1": "**CORE LESSON: Parenting Skill – One-on-One Time (50 minutes)**",
       "_translations": {
         "text_1": {
@@ -303,6 +308,8 @@
     {
       "id": "module_1_in_person_teen5",
       "foreign_key": "module_1_in_person_teen2",
+      "media_type": "pdf",
+      "media_asset": "module_1_home_activity_pap",
       "text_1": "**HOME ACTIVITIES & CLOSING (10 minutes)**",
       "_translations": {
         "text_1": {
@@ -375,24 +382,15 @@
     {
       "id": "module_6_in_person0",
       "foreign_key": "module_6_in_person0",
-      "text_1": "**Preparation**",
+      "text_1": "**Preparation**\n\n1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, toys, refreshments for the break (if relevant) are ready.\n2️⃣ You need paper and crayons for the art activity!\n3️⃣ Ensure you have access to music (for the dance party).\n4️⃣ Don’t forget the completion certificates!\n\n5️⃣ Set up the room with chairs in a circle.",
       "_translations": {
-        "text_1": {
-          "cw_pap": true
-        },
-        "text_2": {
-          "cw_pap": true
-        }
+        "text_1": {}
       },
       "_translatedFields": {
         "text_1": {
-          "eng": "**Preparation**"
-        },
-        "text_2": {
-          "eng": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, toys, refreshments for the break (if relevant) are ready.\n2️⃣ You need paper and crayons for the art activity!\n3️⃣ Ensure you have access to music (for the dance party).\n4️⃣ Don’t forget the completion certificates!\n\n5️⃣ Set up the room with chairs in a circle."
+          "eng": "**Preparation**\n\n1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, toys, refreshments for the break (if relevant) are ready.\n2️⃣ You need paper and crayons for the art activity!\n3️⃣ Ensure you have access to music (for the dance party).\n4️⃣ Don’t forget the completion certificates!\n\n5️⃣ Set up the room with chairs in a circle."
         }
-      },
-      "text_2": "1️⃣ Ensure attendance register, name tags, temporary adhesive, pens, paper, flipchart, toys, refreshments for the break (if relevant) are ready.\n2️⃣ You need paper and crayons for the art activity!\n3️⃣ Ensure you have access to music (for the dance party).\n4️⃣ Don’t forget the completion certificates!\n\n5️⃣ Set up the room with chairs in a circle."
+      }
     },
     {
       "id": "module_6_in_person1",
@@ -473,15 +471,13 @@
       "foreign_key": "module_6_in_person3",
       "media_type": "pdf",
       "media_asset": "module_6_core_lesson_2_pap",
-      "text_1": "***CORE LESSON: MOVING ON (20 minutes)**",
+      "text_1": "**CORE LESSON: MOVING ON (20 minutes)**",
       "_translations": {
-        "text_1": {
-          "cw_pap": true
-        }
+        "text_1": {}
       },
       "_translatedFields": {
         "text_1": {
-          "eng": "***CORE LESSON: MOVING ON (20 minutes)**"
+          "eng": "**CORE LESSON: MOVING ON (20 minutes)**"
         }
       }
     },
@@ -490,13 +486,13 @@
       "foreign_key": "module_6_in_person3",
       "media_type": "pdf",
       "media_asset": "module_6_closing_pap",
-      "text_1": "** CLOSING AND CELEBRATION (45 minute)**",
+      "text_1": "**CLOSING AND CELEBRATION (45 minute)**",
       "_translations": {
         "text_1": {}
       },
       "_translatedFields": {
         "text_1": {
-          "eng": "** CLOSING AND CELEBRATION (45 minute)**"
+          "eng": "**CLOSING AND CELEBRATION (45 minute)**"
         }
       }
     }
