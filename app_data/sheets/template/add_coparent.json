@@ -8,7 +8,9 @@
       "name": "title",
       "value": "Caregiving with",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "_nested_name": "title"
     },
@@ -488,7 +490,9 @@
       "type": "text",
       "value": "Select other caregivers in the family (maximum @global.maximum_coparents)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.remaining_count > 0",
       "style_list": [

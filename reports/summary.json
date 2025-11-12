@@ -23,11 +23,11 @@
       },
       {
         "type": "audio",
-        "count": 2
+        "count": 3
       },
       {
         "type": "button",
-        "count": 131
+        "count": 129
       },
       {
         "type": "carousel",
@@ -39,7 +39,7 @@
       },
       {
         "type": "data_items",
-        "count": 100
+        "count": 102
       },
       {
         "type": "date_time_picker",
@@ -55,7 +55,7 @@
       },
       {
         "type": "display_group",
-        "count": 164
+        "count": 167
       },
       {
         "type": "google_sign_in_button",
@@ -95,7 +95,7 @@
       },
       {
         "type": "round_button",
-        "count": 31
+        "count": 37
       },
       {
         "type": "select_text",
@@ -107,7 +107,7 @@
       },
       {
         "type": "set_variable",
-        "count": 999
+        "count": 1015
       },
       {
         "type": "simple_checkbox",
@@ -131,7 +131,7 @@
       },
       {
         "type": "text",
-        "count": 358
+        "count": 361
       },
       {
         "type": "text_area",
@@ -155,7 +155,11 @@
       },
       {
         "type": "video",
-        "count": 2
+        "count": 3
+      },
+      {
+        "type": "youtube",
+        "count": 1
       }
     ]
   },
@@ -163,7 +167,7 @@
     "data": [
       {
         "type": "add_data",
-        "count": 9
+        "count": 10
       },
       {
         "type": "app_update",
@@ -172,6 +176,10 @@
       {
         "type": "auth",
         "count": 4
+      },
+      {
+        "type": "copy",
+        "count": 2
       },
       {
         "type": "emit: completed",
@@ -247,11 +255,11 @@
       },
       {
         "type": "set_local",
-        "count": 123
+        "count": 127
       },
       {
         "type": "share",
-        "count": 2
+        "count": 4
       },
       {
         "type": "user",
@@ -263,13 +271,13 @@
     "data": [
       {
         "assets": "total",
-        "KB": "34320 KB",
-        "MB": "34.3 MB"
+        "KB": "36505 KB",
+        "MB": "36.5 MB"
       },
       {
         "assets": "unused",
-        "KB": "9119 KB",
-        "MB": "9.1 MB"
+        "KB": "76040 KB",
+        "MB": "76 MB"
       }
     ]
   },
@@ -354,10 +362,6 @@
       {
         "path": "images/icons/content.svg",
         "size_kb": 7.2
-      },
-      {
-        "path": "images/icons/copy-outline.svg",
-        "size_kb": 0.4
       },
       {
         "path": "images/icons/create-outline.svg",
@@ -496,6 +500,58 @@
         "size_kb": 1237.1
       },
       {
+        "path": "images/modules/module_1_teen.png",
+        "size_kb": 4666.2
+      },
+      {
+        "path": "images/modules/module_1_yc.png",
+        "size_kb": 5450.7
+      },
+      {
+        "path": "images/modules/module_2_teen.png",
+        "size_kb": 5054.3
+      },
+      {
+        "path": "images/modules/module_2_yc.png",
+        "size_kb": 5900.3
+      },
+      {
+        "path": "images/modules/module_3_teen.png",
+        "size_kb": 6036.5
+      },
+      {
+        "path": "images/modules/module_3_yc.png",
+        "size_kb": 5872.9
+      },
+      {
+        "path": "images/modules/module_4_teen.png",
+        "size_kb": 5464.4
+      },
+      {
+        "path": "images/modules/module_4_yc.png",
+        "size_kb": 5163.3
+      },
+      {
+        "path": "images/modules/module_5_teen.png",
+        "size_kb": 4781.3
+      },
+      {
+        "path": "images/modules/module_5_yc.png",
+        "size_kb": 4936.1
+      },
+      {
+        "path": "images/modules/module_6_teen.png",
+        "size_kb": 5771
+      },
+      {
+        "path": "images/modules/module_6_yc.png",
+        "size_kb": 7653.2
+      },
+      {
+        "path": "images/modules/reminder.png",
+        "size_kb": 171.7
+      },
+      {
         "path": "pdf/module_1_core_lesson_teen_pap.pdf",
         "size_kb": 393.1
       }
@@ -511,21 +567,6 @@
       {
         "path": "@data.pdf",
         "count": 3,
-        "missing": true
-      },
-      {
-        "path": "images/articles/facilitation.png",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/articles/faq.png",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/articles/safeguarding.png",
-        "count": 1,
         "missing": true
       },
       {
@@ -584,6 +625,11 @@
         "missing": true
       },
       {
+        "path": "images/modules/place_holder.png",
+        "count": 43,
+        "missing": true
+      },
+      {
         "path": "images/no_group_selected.svg",
         "count": 1,
         "missing": true
@@ -598,19 +644,34 @@
   "asset_summary": {
     "data": [
       {
+        "path": "images/articles/facilitation.png",
+        "count": 1,
+        "size_kb": 1706
+      },
+      {
+        "path": "images/articles/faq.png",
+        "count": 1,
+        "size_kb": 1840.9
+      },
+      {
         "path": "images/articles/guide.png",
         "count": 1,
-        "size_kb": 2321.4
+        "size_kb": 282.4
       },
       {
         "path": "images/articles/programme.png",
         "count": 1,
-        "size_kb": 559.1
+        "size_kb": 617.5
+      },
+      {
+        "path": "images/articles/safeguarding.png",
+        "count": 1,
+        "size_kb": 2462.6
       },
       {
         "path": "images/articles/sessions.png",
         "count": 1,
-        "size_kb": 2394.1
+        "size_kb": 759.8
       },
       {
         "path": "images/backgrounds/home_top_left.svg",
@@ -671,6 +732,11 @@
         "path": "images/icons/cog_white.svg",
         "count": 2,
         "size_kb": 3.6
+      },
+      {
+        "path": "images/icons/copy-outline.svg",
+        "count": 2,
+        "size_kb": 0.4
       },
       {
         "path": "images/icons/delete.svg",
@@ -809,7 +875,7 @@
       },
       {
         "path": "images/icons/share.svg",
-        "count": 2,
+        "count": 4,
         "size_kb": 2.3
       },
       {
@@ -846,11 +912,6 @@
         "path": "images/logos/UNICEF.jpg",
         "count": 1,
         "size_kb": 27.7
-      },
-      {
-        "path": "images/modules/place_holder.png",
-        "count": 43,
-        "size_kb": 210
       },
       {
         "path": "images/onboarding/splash_1.png",

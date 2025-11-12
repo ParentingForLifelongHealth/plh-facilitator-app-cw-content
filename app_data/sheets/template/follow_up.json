@@ -1782,7 +1782,9 @@
           "name": "text_no_follow_up",
           "value": "👏 No Follow ups",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "_nested_name": "display_group_57.text_no_follow_up"
         },
@@ -1838,7 +1840,9 @@
           "name": "text_no_follow_up",
           "value": "👏 No Follow ups",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "_nested_name": "display_group_59.text_no_follow_up"
         },
@@ -1950,7 +1954,9 @@
           "name": "text_no_follow_up",
           "value": "👏 No Follow ups",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "_nested_name": "display_group_63.text_no_follow_up"
         },
@@ -1959,7 +1965,9 @@
           "name": "text_first_time",
           "value": "All your parents are engaged - keep it up!",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "parameter_list": {
             "style": "contextual"
@@ -2527,7 +2535,9 @@
           "name": "text_follow_up_one",
           "value": "@local.no_of_parents Follow up",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "condition": "@local.no_of_parents == 1",
           "_nested_name": "display_group_67.text_follow_up_one",
@@ -2561,7 +2571,9 @@
           "name": "text_follow_up_multiple",
           "value": "@local.no_of_parents Follow ups",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "condition": "@local.no_of_parents > 1",
           "_nested_name": "display_group_67.text_follow_up_multiple",
@@ -2595,7 +2607,9 @@
           "name": "show_all",
           "value": "Show all",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {

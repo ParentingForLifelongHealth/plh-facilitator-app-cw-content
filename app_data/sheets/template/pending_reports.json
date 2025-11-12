@@ -173,7 +173,9 @@
       "name": "text_no_pending_reports_1",
       "value": "🎊 No Pending Reports",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.number_delivered_sessions == 0",
       "_nested_name": "text_no_pending_reports_1",
@@ -1042,7 +1044,9 @@
           "name": "text_no_pending_reports_1",
           "value": "🎊 No Pending Reports",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "_nested_name": "display_group_23.text_no_pending_reports_1"
         },
