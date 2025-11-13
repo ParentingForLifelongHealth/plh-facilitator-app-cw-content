@@ -241,66 +241,6 @@
       }
     },
     {
-      "name": "age_group_test",
-      "value": "@local.current_age_group_text",
-      "_translations": {
-        "value": {}
-      },
-      "style_list": [
-        "color: gray",
-        "margin-top: -5px",
-        "margin-bottom: 12px",
-        "font-size: 14px"
-      ],
-      "type": "set_variable",
-      "_nested_name": "age_group_test",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@local.current_age_group_text",
-            "matchedExpression": "@local.current_age_group_text",
-            "type": "local",
-            "fieldName": "current_age_group_text"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@local.current_age_group_text": [
-          "value"
-        ]
-      }
-    },
-    {
-      "name": "delivery_type_test",
-      "value": "@local.current_content_package_text",
-      "_translations": {
-        "value": {}
-      },
-      "style_list": [
-        "color: gray",
-        "margin-top: -5px",
-        "margin-bottom: 12px",
-        "font-size: 14px"
-      ],
-      "type": "set_variable",
-      "_nested_name": "delivery_type_test",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@local.current_content_package_text",
-            "matchedExpression": "@local.current_content_package_text",
-            "type": "local",
-            "fieldName": "current_content_package_text"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@local.current_content_package_text": [
-          "value"
-        ]
-      }
-    },
-    {
       "type": "round_button",
       "name": "back",
       "action_list": [
@@ -524,7 +464,7 @@
             "flex:1"
           ],
           "name": "button_1",
-          "_nested_name": "display_group_22.button_1"
+          "_nested_name": "display_group_20.button_1"
         },
         {
           "type": "button",
@@ -552,11 +492,11 @@
             "flex:1"
           ],
           "name": "button_2",
-          "_nested_name": "display_group_22.button_2"
+          "_nested_name": "display_group_20.button_2"
         }
       ],
-      "name": "display_group_22",
-      "_nested_name": "display_group_22"
+      "name": "display_group_20",
+      "_nested_name": "display_group_20"
     },
     {
       "type": "template",

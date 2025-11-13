@@ -1137,6 +1137,9 @@
           },
           "condition": "@local.page_count > 1",
           "exclude_from_translation": true,
+          "style_list": [
+            "filter: grayscale(1)"
+          ],
           "_nested_name": "complete_wrapper.complete_more_than_one_page",
           "_dynamicFields": {
             "value": [
@@ -1345,6 +1348,9 @@
           },
           "condition": "@local.page_count == 1",
           "exclude_from_translation": true,
+          "style_list": [
+            "filter: grayscale(1)"
+          ],
           "_nested_name": "complete_wrapper.complete_one_page",
           "_dynamicFields": {
             "value": [

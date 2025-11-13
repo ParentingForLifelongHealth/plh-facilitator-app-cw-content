@@ -2824,6 +2824,41 @@
                   "_nested_name"
                 ]
               }
+            },
+            {
+              "name": "no_follow_up",
+              "value": "@item.no_follow_up",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "first_two_follow_ups.follow_up_parent_@item.id.no_follow_up",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.no_follow_up",
+                    "matchedExpression": "@item.no_follow_up",
+                    "type": "item",
+                    "fieldName": "no_follow_up"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "first_two_follow_ups.follow_up_parent_@item.id.no_follow_up",
+                    "matchedExpression": "@item.id.no_follow_up",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.no_follow_up": [
+                  "value"
+                ],
+                "@item.id.no_follow_up": [
+                  "_nested_name"
+                ]
+              }
             }
           ],
           "name": "follow_up_parent_@item.id",
@@ -3247,6 +3282,41 @@
                   "_nested_name"
                 ]
               }
+            },
+            {
+              "name": "no_follow_up",
+              "value": "@item.no_follow_up",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "all_follow_ups.follow_up_parent_@item.id.no_follow_up",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.no_follow_up",
+                    "matchedExpression": "@item.no_follow_up",
+                    "type": "item",
+                    "fieldName": "no_follow_up"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "all_follow_ups.follow_up_parent_@item.id.no_follow_up",
+                    "matchedExpression": "@item.id.no_follow_up",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.no_follow_up": [
+                  "value"
+                ],
+                "@item.id.no_follow_up": [
+                  "_nested_name"
+                ]
+              }
             }
           ],
           "name": "follow_up_parent_@item.id",
@@ -3654,6 +3724,41 @@
                   "value"
                 ],
                 "@item.id.parent_id": [
+                  "_nested_name"
+                ]
+              }
+            },
+            {
+              "name": "no_follow_up",
+              "value": "@item.no_follow_up",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "group_follow_ups.follow_up_parent_@item.id.no_follow_up",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.no_follow_up",
+                    "matchedExpression": "@item.no_follow_up",
+                    "type": "item",
+                    "fieldName": "no_follow_up"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "group_follow_ups.follow_up_parent_@item.id.no_follow_up",
+                    "matchedExpression": "@item.id.no_follow_up",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.no_follow_up": [
+                  "value"
+                ],
+                "@item.id.no_follow_up": [
                   "_nested_name"
                 ]
               }

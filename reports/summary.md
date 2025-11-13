@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 3 |
-| button | 129 |
+| button | 133 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 102 |
+| data_items | 109 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 167 |
+| display_group | 172 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
@@ -29,13 +29,13 @@
 | round_button | 37 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1015 |
-| simple_checkbox | 7 |
+| set_variable | 1043 |
+| simple_checkbox | 6 |
 | task_card | 1 |
 | task_progress_bar | 4 |
 | template | 144 |
 | test | 1 |
-| text | 361 |
+| text | 370 |
 | text_area | 4 |
 | text_box | 32 |
 | title | 72 |
@@ -62,17 +62,17 @@
 | emit: set_language | 4 |
 | emit: uncompleted | 97 |
 | feedback | 24 |
-| go_to | 41 |
+| go_to | 43 |
 | nav | 7 |
 | nav_stack | 9 |
-| pop_up | 18 |
+| pop_up | 19 |
 | reset_app | 4 |
 | reset_data | 3 |
 | save_to_device | 4 |
 | set_data | 28 |
-| set_field | 88 |
+| set_field | 90 |
 | set_item | 13 |
-| set_local | 127 |
+| set_local | 135 |
 | share | 4 |
 | user | 4 |
 </details>
@@ -82,8 +82,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 36505 KB | 36.5 MB |
-| unused | 76040 KB | 76 MB |
+| total | 103426 KB | 103.4 MB |
+| unused | 9120 KB | 9.1 MB |
 </details>
 
 <details open>
@@ -114,6 +114,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/close-circle-navy.svg | 1.4 |
 | images/icons/content.svg | 7.2 |
 | images/icons/create-outline.svg | 0.6 |
+| images/icons/follow_up_message.svg | 1.6 |
 | images/icons/globe_blue.svg | 3.9 |
 | images/icons/group_add.svg | 2.2 |
 | images/icons/group_add_dark.svg | 0.6 |
@@ -147,19 +148,6 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/world.svg | 6.2 |
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
-| images/modules/module_1_teen.png | 4666.2 |
-| images/modules/module_1_yc.png | 5450.7 |
-| images/modules/module_2_teen.png | 5054.3 |
-| images/modules/module_2_yc.png | 5900.3 |
-| images/modules/module_3_teen.png | 6036.5 |
-| images/modules/module_3_yc.png | 5872.9 |
-| images/modules/module_4_teen.png | 5464.4 |
-| images/modules/module_4_yc.png | 5163.3 |
-| images/modules/module_5_teen.png | 4781.3 |
-| images/modules/module_5_yc.png | 4936.1 |
-| images/modules/module_6_teen.png | 5771 |
-| images/modules/module_6_yc.png | 7653.2 |
-| images/modules/reminder.png | 171.7 |
 | pdf/module_1_core_lesson_teen_pap.pdf | 393.1 |
 </details>
 
@@ -183,7 +171,6 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/masw.png | 1 |
 | images/logos/plh_logomark.png | 1 |
 | images/logos/thsn.png | 1 |
-| images/modules/place_holder.png | 43 |
 | images/no_group_selected.svg | 1 |
 | pdf/modile_1_core_lesson_teen_pap.pdf | 1 |
 </details>
@@ -195,7 +182,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | path | size_kb | count |
 | --- | --- | --- |
-| images/articles/facilitation.png | 1706 | 1 |
+| images/articles/facilitation.png | 1706 | 10 |
 | images/articles/faq.png | 1840.9 | 1 |
 | images/articles/guide.png | 282.4 | 1 |
 | images/articles/programme.png | 617.5 | 1 |
@@ -223,7 +210,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/edit.svg | 0.9 | 3 |
 | images/icons/expand_circle_right.svg | 0.5 | 5 |
 | images/icons/file-tray-full-outline.svg | 0.5 | 1 |
-| images/icons/follow_up_message.svg | 1.6 | 1 |
 | images/icons/globe-outline.svg | 0.8 | 1 |
 | images/icons/help.svg | 0.5 | 1 |
 | images/icons/home-outline-brown.svg | 1.6 | 1 |
@@ -249,6 +235,19 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/logos/MK_whitewithcolor.png | 7376.2 | 1 |
 | images/logos/PLH.png | 26.6 | 1 |
 | images/logos/UNICEF.jpg | 27.7 | 1 |
+| images/modules/module_1_teen.png | 4666.2 | 4 |
+| images/modules/module_1_yc.png | 5450.7 | 2 |
+| images/modules/module_2_teen.png | 5054.3 | 1 |
+| images/modules/module_2_yc.png | 5900.3 | 2 |
+| images/modules/module_3_teen.png | 6036.5 | 2 |
+| images/modules/module_3_yc.png | 5872.9 | 1 |
+| images/modules/module_4_teen.png | 5464.4 | 1 |
+| images/modules/module_4_yc.png | 5163.3 | 2 |
+| images/modules/module_5_teen.png | 4781.3 | 2 |
+| images/modules/module_5_yc.png | 4936.1 | 1 |
+| images/modules/module_6_teen.png | 5771 | 1 |
+| images/modules/module_6_yc.png | 7653.2 | 2 |
+| images/modules/reminder.png | 171.7 | 13 |
 | images/onboarding/splash_1.png | 2484.4 | 1 |
 | images/onboarding/splash_2.png | 2220.7 | 1 |
 | images/onboarding/splash_3.png | 1760.5 | 1 |
@@ -289,7 +288,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 13 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 101 |
+| template |  | 102 |
 | template | generated | 80 |
 | template | legal_terms | 4 |
 </details>

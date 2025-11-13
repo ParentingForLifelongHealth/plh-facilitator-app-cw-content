@@ -64,11 +64,9 @@
     {
       "type": "declare_global_constant",
       "name": "new_parent_group",
-      "value": "Create Parent Group",
+      "value": "Create Caregiver Group",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       }
     },
     {
@@ -84,11 +82,17 @@
     {
       "type": "declare_global_constant",
       "name": "add_parent",
-      "value": "Add Parent",
+      "value": "Caregiver Profile",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_parent",
+      "value": "Caregiver Profile",
+      "_translations": {
+        "value": {}
       }
     },
     {

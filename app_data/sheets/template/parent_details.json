@@ -1,0 +1,164 @@
+{
+  "flow_type": "template",
+  "flow_name": "parent_details",
+  "status": "released",
+  "rows": [
+    {
+      "name": "no_of_co_groups",
+      "value": "+@fields.no_of_co_groups",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "no_of_co_groups",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "+@fields.no_of_co_groups",
+            "matchedExpression": "@fields.no_of_co_groups",
+            "type": "fields",
+            "fieldName": "no_of_co_groups"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.no_of_co_groups": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "gender_select_options",
+      "value": "@data.gender",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "gender_select_options",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.gender",
+            "matchedExpression": "@data.gender",
+            "type": "data",
+            "fieldName": "gender"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.gender": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "child_gender_select_options",
+      "value": "@data.child_gender",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "child_gender_select_options",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.child_gender",
+            "matchedExpression": "@data.child_gender",
+            "type": "data",
+            "fieldName": "child_gender"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.child_gender": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "other_home_options",
+      "value": "@data.yes_no",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "other_home_options",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.yes_no",
+            "matchedExpression": "@data.yes_no",
+            "type": "data",
+            "fieldName": "yes_no"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@data.yes_no": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "show_number_error",
+      "value": false,
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "show_number_error"
+    },
+    {
+      "name": "show_age_error",
+      "value": false,
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "show_age_error"
+    },
+    {
+      "name": "show_sex_error",
+      "value": false,
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "show_sex_error"
+    },
+    {
+      "name": "show_child_age_error",
+      "value": false,
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "show_child_age_error"
+    },
+    {
+      "name": "show_child_sex_error",
+      "value": false,
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "show_child_sex_error"
+    },
+    {
+      "name": "show_child_count_error",
+      "value": false,
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "show_child_count_error"
+    },
+    {
+      "name": "show_hours_error",
+      "value": false,
+      "type": "set_variable",
+      "_nested_name": "show_hours_error"
+    },
+    {
+      "name": "show_other_home_error",
+      "value": false,
+      "type": "set_variable",
+      "_nested_name": "show_other_home_error"
+    }
+  ],
+  "_source": {
+    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "path": "templates/Parent Groups CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
+  }
+}

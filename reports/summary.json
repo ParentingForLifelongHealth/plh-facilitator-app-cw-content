@@ -27,7 +27,7 @@
       },
       {
         "type": "button",
-        "count": 129
+        "count": 133
       },
       {
         "type": "carousel",
@@ -39,7 +39,7 @@
       },
       {
         "type": "data_items",
-        "count": 102
+        "count": 109
       },
       {
         "type": "date_time_picker",
@@ -55,7 +55,7 @@
       },
       {
         "type": "display_group",
-        "count": 167
+        "count": 172
       },
       {
         "type": "google_sign_in_button",
@@ -107,11 +107,11 @@
       },
       {
         "type": "set_variable",
-        "count": 1015
+        "count": 1043
       },
       {
         "type": "simple_checkbox",
-        "count": 7
+        "count": 6
       },
       {
         "type": "task_card",
@@ -131,7 +131,7 @@
       },
       {
         "type": "text",
-        "count": 361
+        "count": 370
       },
       {
         "type": "text_area",
@@ -215,7 +215,7 @@
       },
       {
         "type": "go_to",
-        "count": 41
+        "count": 43
       },
       {
         "type": "nav",
@@ -227,7 +227,7 @@
       },
       {
         "type": "pop_up",
-        "count": 18
+        "count": 19
       },
       {
         "type": "reset_app",
@@ -247,7 +247,7 @@
       },
       {
         "type": "set_field",
-        "count": 88
+        "count": 90
       },
       {
         "type": "set_item",
@@ -255,7 +255,7 @@
       },
       {
         "type": "set_local",
-        "count": 127
+        "count": 135
       },
       {
         "type": "share",
@@ -271,13 +271,13 @@
     "data": [
       {
         "assets": "total",
-        "KB": "36505 KB",
-        "MB": "36.5 MB"
+        "KB": "103426 KB",
+        "MB": "103.4 MB"
       },
       {
         "assets": "unused",
-        "KB": "76040 KB",
-        "MB": "76 MB"
+        "KB": "9120 KB",
+        "MB": "9.1 MB"
       }
     ]
   },
@@ -366,6 +366,10 @@
       {
         "path": "images/icons/create-outline.svg",
         "size_kb": 0.6
+      },
+      {
+        "path": "images/icons/follow_up_message.svg",
+        "size_kb": 1.6
       },
       {
         "path": "images/icons/globe_blue.svg",
@@ -500,58 +504,6 @@
         "size_kb": 1237.1
       },
       {
-        "path": "images/modules/module_1_teen.png",
-        "size_kb": 4666.2
-      },
-      {
-        "path": "images/modules/module_1_yc.png",
-        "size_kb": 5450.7
-      },
-      {
-        "path": "images/modules/module_2_teen.png",
-        "size_kb": 5054.3
-      },
-      {
-        "path": "images/modules/module_2_yc.png",
-        "size_kb": 5900.3
-      },
-      {
-        "path": "images/modules/module_3_teen.png",
-        "size_kb": 6036.5
-      },
-      {
-        "path": "images/modules/module_3_yc.png",
-        "size_kb": 5872.9
-      },
-      {
-        "path": "images/modules/module_4_teen.png",
-        "size_kb": 5464.4
-      },
-      {
-        "path": "images/modules/module_4_yc.png",
-        "size_kb": 5163.3
-      },
-      {
-        "path": "images/modules/module_5_teen.png",
-        "size_kb": 4781.3
-      },
-      {
-        "path": "images/modules/module_5_yc.png",
-        "size_kb": 4936.1
-      },
-      {
-        "path": "images/modules/module_6_teen.png",
-        "size_kb": 5771
-      },
-      {
-        "path": "images/modules/module_6_yc.png",
-        "size_kb": 7653.2
-      },
-      {
-        "path": "images/modules/reminder.png",
-        "size_kb": 171.7
-      },
-      {
         "path": "pdf/module_1_core_lesson_teen_pap.pdf",
         "size_kb": 393.1
       }
@@ -625,11 +577,6 @@
         "missing": true
       },
       {
-        "path": "images/modules/place_holder.png",
-        "count": 43,
-        "missing": true
-      },
-      {
         "path": "images/no_group_selected.svg",
         "count": 1,
         "missing": true
@@ -645,7 +592,7 @@
     "data": [
       {
         "path": "images/articles/facilitation.png",
-        "count": 1,
+        "count": 10,
         "size_kb": 1706
       },
       {
@@ -784,11 +731,6 @@
         "size_kb": 0.5
       },
       {
-        "path": "images/icons/follow_up_message.svg",
-        "count": 1,
-        "size_kb": 1.6
-      },
-      {
         "path": "images/icons/globe-outline.svg",
         "count": 1,
         "size_kb": 0.8
@@ -912,6 +854,71 @@
         "path": "images/logos/UNICEF.jpg",
         "count": 1,
         "size_kb": 27.7
+      },
+      {
+        "path": "images/modules/module_1_teen.png",
+        "count": 4,
+        "size_kb": 4666.2
+      },
+      {
+        "path": "images/modules/module_1_yc.png",
+        "count": 2,
+        "size_kb": 5450.7
+      },
+      {
+        "path": "images/modules/module_2_teen.png",
+        "count": 1,
+        "size_kb": 5054.3
+      },
+      {
+        "path": "images/modules/module_2_yc.png",
+        "count": 2,
+        "size_kb": 5900.3
+      },
+      {
+        "path": "images/modules/module_3_teen.png",
+        "count": 2,
+        "size_kb": 6036.5
+      },
+      {
+        "path": "images/modules/module_3_yc.png",
+        "count": 1,
+        "size_kb": 5872.9
+      },
+      {
+        "path": "images/modules/module_4_teen.png",
+        "count": 1,
+        "size_kb": 5464.4
+      },
+      {
+        "path": "images/modules/module_4_yc.png",
+        "count": 2,
+        "size_kb": 5163.3
+      },
+      {
+        "path": "images/modules/module_5_teen.png",
+        "count": 2,
+        "size_kb": 4781.3
+      },
+      {
+        "path": "images/modules/module_5_yc.png",
+        "count": 1,
+        "size_kb": 4936.1
+      },
+      {
+        "path": "images/modules/module_6_teen.png",
+        "count": 1,
+        "size_kb": 5771
+      },
+      {
+        "path": "images/modules/module_6_yc.png",
+        "count": 2,
+        "size_kb": 7653.2
+      },
+      {
+        "path": "images/modules/reminder.png",
+        "count": 13,
+        "size_kb": 171.7
       },
       {
         "path": "images/onboarding/splash_1.png",
@@ -1085,7 +1092,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 101
+        "total": 102
       },
       {
         "type": "template",
