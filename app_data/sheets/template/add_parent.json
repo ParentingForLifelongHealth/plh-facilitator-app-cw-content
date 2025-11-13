@@ -20,15 +20,28 @@
       "rows": [
         {
           "name": "title",
-          "value": "Add Parent",
+          "value": "@global.add_parent",
           "_translations": {
-            "value": {
-              "cw_pap": true
-            }
+            "value": {}
           },
           "exclude_from_translation": false,
           "type": "set_variable",
-          "_nested_name": "header.title"
+          "_nested_name": "header.title",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.add_parent",
+                "matchedExpression": "@global.add_parent",
+                "type": "global",
+                "fieldName": "add_parent"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@global.add_parent": [
+              "value"
+            ]
+          }
         },
         {
           "name": "confirm_exit",

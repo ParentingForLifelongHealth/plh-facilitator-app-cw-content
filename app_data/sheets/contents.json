@@ -395,6 +395,9 @@
         },
         "week_6": {
           "type": "boolean"
+        },
+        "no_follow_up": {
+          "type": "number"
         }
       }
     },
@@ -1456,9 +1459,9 @@
       "flow_type": "template",
       "flow_name": "confirm_exit",
       "_source": {
-        "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
-        "path": "templates/navigation.xlsx",
-        "url": "https://docs.google.com/spreadsheets/d/15eLW60hvhMB4AeBmbWm1S9dpNDYrOhFHndJTveLRtjQ"
+        "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+        "path": "templates/navigation_cw.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1V_yaJDr0JmBPB3i3y_0qcpvs5U5_9hTyT92OM-03KAA"
       }
     },
     "counting_coparents": {
@@ -2395,6 +2398,15 @@
         "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
         "path": "templates/app_launch.xlsx",
         "url": "https://docs.google.com/spreadsheets/d/1ZG0zCdOzwTYFQTwESmirVQBSJSDFM-1PM7aqDzLJvr4"
+      }
+    },
+    "parent_details": {
+      "flow_type": "template",
+      "flow_name": "parent_details",
+      "_source": {
+        "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+        "path": "templates/Parent Groups CW.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
       }
     },
     "parent_group": {
