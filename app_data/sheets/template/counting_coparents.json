@@ -145,7 +145,9 @@
       "name": "coparenting_with",
       "value": "Caregiving with @local.fn @local.ln",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "style_list": [
         "color: gray",
@@ -196,7 +198,9 @@
       "name": "coparenting_with",
       "value": "Caregiving with @local.number_of_coparents others",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "style_list": [
         "color: gray",

@@ -357,6 +357,12 @@
                   "value"
                 ]
               }
+            },
+            {
+              "name": "log_time",
+              "value": false,
+              "type": "set_variable",
+              "_nested_name": "loop_messages.message_element.log_time"
             }
           ],
           "_nested_name": "loop_messages.message_element",

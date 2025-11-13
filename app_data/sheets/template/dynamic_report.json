@@ -443,7 +443,9 @@
       "name": "session_rating_placeholder",
       "value": "Select how your session went",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "session_rating_placeholder"
@@ -598,7 +600,9 @@
           "type": "text",
           "value": "What challenges did you face in delivering the session? Be specific.",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "name": "text_1",
           "_nested_name": "display_group_17.text_1"
