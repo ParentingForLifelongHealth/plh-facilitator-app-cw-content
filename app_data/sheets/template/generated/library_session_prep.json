@@ -1,5 +1,5 @@
 {
-  "flow_name": "library_sessions",
+  "flow_name": "library_session_prep",
   "flow_subtype": "generated",
   "flow_type": "template",
   "rows": [
@@ -21,11 +21,9 @@
       "rows": [
         {
           "name": "library_id",
-          "value": "sessions",
+          "value": "session_prep",
           "_translations": {
-            "value": {
-              "cw_pap": true
-            }
+            "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",

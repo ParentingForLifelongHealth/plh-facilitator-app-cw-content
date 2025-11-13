@@ -11,6 +11,7 @@
           "cw_pap": true
         }
       },
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "library_id"
     },
@@ -22,6 +23,7 @@
           "cw_pap": true
         }
       },
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "display_title"
     },
@@ -39,6 +41,7 @@
           "_raw": "uncompleted | emit: uncompleted"
         }
       ],
+      "exclude_from_translation": true,
       "rows": [
         {
           "name": "title",
@@ -71,6 +74,9 @@
     {
       "type": "items",
       "value": "@data.article_data",
+      "parameter_list": {
+        "filter": "@item.section == @local.library_id"
+      },
       "rows": [
         {
           "name": "packages",
@@ -265,7 +271,7 @@
           "parameter_list": {
             "variant": "faq"
           },
-          "condition": "@item.section == @local.library_id && @local.condition_package",
+          "condition": "@local.condition_package",
           "name": "button_5_@item.id",
           "_nested_name": "items_6.button_5_@item.id",
           "_dynamicFields": {
@@ -301,19 +307,7 @@
             },
             "condition": [
               {
-                "fullExpression": "@item.section == @local.library_id && @local.condition_package",
-                "matchedExpression": "@item.section",
-                "type": "item",
-                "fieldName": "section"
-              },
-              {
-                "fullExpression": "@item.section == @local.library_id && @local.condition_package",
-                "matchedExpression": "@local.library_id",
-                "type": "local",
-                "fieldName": "library_id"
-              },
-              {
-                "fullExpression": "@item.section == @local.library_id && @local.condition_package",
+                "fullExpression": "@local.condition_package",
                 "matchedExpression": "@local.condition_package",
                 "type": "local",
                 "fieldName": "condition_package"
@@ -346,12 +340,6 @@
               "name",
               "_nested_name"
             ],
-            "@item.section": [
-              "condition"
-            ],
-            "@local.library_id": [
-              "condition"
-            ],
             "@local.condition_package": [
               "condition"
             ]
@@ -368,11 +356,33 @@
             "type": "data",
             "fieldName": "article_data"
           }
-        ]
+        ],
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "@item.section == @local.library_id",
+              "matchedExpression": "@item.section",
+              "type": "item",
+              "fieldName": "section"
+            },
+            {
+              "fullExpression": "@item.section == @local.library_id",
+              "matchedExpression": "@local.library_id",
+              "type": "local",
+              "fieldName": "library_id"
+            }
+          ]
+        }
       },
       "_dynamicDependencies": {
         "@data.article_data": [
           "value"
+        ],
+        "@item.section": [
+          "parameter_list.filter"
+        ],
+        "@local.library_id": [
+          "parameter_list.filter"
         ]
       }
     }
