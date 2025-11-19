@@ -1,0 +1,80 @@
+{
+  "flow_type": "template",
+  "flow_name": "library",
+  "status": "released",
+  "parameter_list": {
+    "app_config": {
+      "APP_FOOTER_DEFAULTS": {
+        "template": "footer"
+      }
+    }
+  },
+  "rows": [
+    {
+      "type": "title",
+      "value": "Library",
+      "parameter_list": "variant: page_banner"
+    },
+    {
+      "type": "begin_carousel"
+    },
+    {
+      "type": "begin_items",
+      "value": "@data.pdf",
+      "parameter_list": "filter: @item.library_asset == true;"
+    },
+    {
+      "type": "begin_display_group",
+      "action_list": "click | go_to: pdf_@item.id",
+      "parameter_list": "variant: box_secondary_alt;\nstyle: column;"
+    },
+    {
+      "type": "text",
+      "value": "@global.guide_text",
+      "style_list": "font-size: 0.8rem;\ncolor: white;"
+    },
+    {
+      "type": "text",
+      "value": "@item.description",
+      "style_list": "margin-top: -6px;\ncolor: white;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_items"
+    },
+    {
+      "type": "end_carousel"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.home_screen_section_data"
+    },
+    {
+      "type": "begin_task_card",
+      "name": "card_@item.id",
+      "action_list": "click | go_to: library_@item.id",
+      "style_list": "margin-bottom: 12px"
+    },
+    {
+      "type": "image",
+      "name": "image_@item.id",
+      "value": "@item.image",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "text",
+      "name": "text_@item.id",
+      "value": "@item.title",
+      "parameter_list": "style: emphasised",
+      "style_list": "flex: 3"
+    },
+    {
+      "type": "end_task_card"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

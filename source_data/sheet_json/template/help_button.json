@@ -1,0 +1,16 @@
+{
+  "flow_type": "template",
+  "flow_name": "help_button",
+  "status": "released",
+  "rows": [
+    {
+      "name": "help_template"
+    },
+    {
+      "type": "round_button",
+      "name": "help_button",
+      "action_list": "click | pop_up: @local.help_template",
+      "parameter_list": "icon_src: help"
+    }
+  ]
+}

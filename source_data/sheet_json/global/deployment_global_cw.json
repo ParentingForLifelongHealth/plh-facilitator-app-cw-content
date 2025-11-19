@@ -1,0 +1,210 @@
+{
+  "flow_type": "global",
+  "flow_name": "deployment_global_cw",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "app_name",
+      "value": "Mayor Konektá App",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "programme_name",
+      "value": "Mayor Konektá"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "prog_name",
+      "value": "Mayor Konektá"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "home_icon_asset",
+      "value": " ",
+      "exclude_from_translation": true,
+      "comments": "Created footer_mx template instead because this override in the footer didn't work (potentially due to processing order)"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "share_medium",
+      "value": "WhatsApp",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "virtual_session_platform",
+      "value": "WhatsApp"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_parent_groups",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "allow_multiple_parent_groups",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_multiple_content_packages",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_profile_about",
+      "value": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_multiple_languages",
+      "value": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_optional_login",
+      "value": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "deployment_terms_field",
+      "value": "terms_v20231214_accepted"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "deployment_terms_text",
+      "value": "14 December 2023"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "main_menu_title",
+      "value": "Parent Group"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "select_group",
+      "value": "Select Parent Group"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_groups",
+      "value": "No Parent Groups"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "sessions_no_groups",
+      "value": "No parent groups found. To create a parent group, click on:"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "sessions_no_groups_image"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_first_name",
+      "value": "Parent's first name"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_last_name",
+      "value": "Parent's last name"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_text_id",
+      "value": "Parent Text ID"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "main_logo",
+      "value": "images/logos/favicon.png"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "use_module_image",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "minutes",
+      "value": "minutes"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_complete",
+      "value": "You successfully completed this session!"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_rep_complete",
+      "value": "You successfully completed the report for this session!"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "review_report",
+      "value": "Review Report"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "submit_report",
+      "value": "Submit Report"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "guide_text",
+      "value": "GUIDE"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "mark_delivered",
+      "value": "Mark Session as Delivered"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "language",
+      "value": "Language"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "copied_message",
+      "value": "Copied to clipboard"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_final_title",
+      "value": "You've reached the end of this session. What would you like to do next?"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "end_module_animation",
+      "value": "lottie/cw_profile_complete.json"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "incomplete_parent",
+      "value": "This profile is incomplete. Open to complete the missing details."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "choose_role",
+      "value": "Select Role"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "supervisor_name",
+      "value": "your supervisor"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "close_stack_icon",
+      "value": "images/icons/close-circle-brown.svg",
+      "exclude_from_translation": true
+    }
+  ]
+}

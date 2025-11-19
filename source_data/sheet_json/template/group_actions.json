@@ -1,0 +1,89 @@
+{
+  "flow_type": "template",
+  "flow_name": "group_actions",
+  "status": "released",
+  "rows": [
+    {
+      "name": "complete_field",
+      "value": "completed_@fields.current_group_no",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "comp : @local.complete_field",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "title",
+      "value": "Next Session"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.modules",
+      "parameter_list": "filter: ((!this.item[@local.complete_field]) && (!@item.tag_list || (@item.tag_list).includes(@fields.current_package)));\nlimit: 1;"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "text",
+      "value": "@item.title",
+      "style_list": "flex:1;"
+    },
+    {
+      "name": "report_id",
+      "value": "@item.report_id"
+    },
+    {
+      "type": "button",
+      "name": "goto_module",
+      "value": "Deliver",
+      "action_list": "click | set_field: current_module_no: @item.id;\nclick | set_field: current_module: @item.title;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: home_screen;\nclick | nav_stack: open | template: article_loop, header: false;\ncompleted | emit: force_reload;\ncompleted | emit: server_sync;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "text",
+      "value": "Pending Reports",
+      "parameter_list": "style: emphasised; ",
+      "condition": false,
+      "exclude_from_translation": false
+    },
+    {
+      "type": "begin_template",
+      "name": "pending_reports_group",
+      "value": "pending_reports_group"
+    },
+    {
+      "name": "group_id",
+      "value": "@fields.current_group_no "
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "text",
+      "value": "Follow ups",
+      "parameter_list": "style: emphasised; ",
+      "condition": false,
+      "exclude_from_translation": false
+    },
+    {
+      "type": "begin_template",
+      "name": "follow_up",
+      "value": "follow_up"
+    },
+    {
+      "name": "group_limit_id",
+      "value": "@fields.current_group_no "
+    },
+    {
+      "type": "end_template"
+    }
+  ]
+}

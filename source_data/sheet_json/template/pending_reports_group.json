@@ -1,0 +1,167 @@
+{
+  "flow_type": "template",
+  "flow_name": "pending_reports_group",
+  "status": "released",
+  "rows": [
+    {
+      "name": "number_delivered_sessions",
+      "comments": "Initializing variables"
+    },
+    {
+      "name": "number_pending_reports"
+    },
+    {
+      "name": "module_id"
+    },
+    {
+      "name": "module_title"
+    },
+    {
+      "name": "modules_report_id"
+    },
+    {
+      "name": "group_id"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "counting_delivered",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : number_delivered_sessions : @items.length;",
+      "parameter_list": "filter: (@item.group_id == @local.group_id);",
+      "comments": "Counts all sessions delivered"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "counting_pending",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : number_pending_reports : @items.length;",
+      "parameter_list": "filter: @item.pending && (@item.group_id == @local.group_id);",
+      "comments": "Counts pending reports "
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "text",
+      "name": "test_delivered",
+      "value": "delivered = @local.number_delivered_sessions",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "test_pending",
+      "value": "pending = @local.number_pending_reports",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "comments": "If no sessions have been completed"
+    },
+    {
+      "type": "title",
+      "name": "text_initial",
+      "value": "🚀 Your parents are waiting! Once you deliver your first session, your reports will appear here.",
+      "condition": "@local.number_delivered_sessions == 0"
+    },
+    {
+      "comments": "If reports are missing"
+    },
+    {
+      "type": "begin_display_group",
+      "condition": "@local.number_delivered_sessions > 0 && @local.number_pending_reports > 0",
+      "comments": "Title with number of pending reports and show all button in case there are more than 2 pending reports"
+    },
+    {
+      "type": "title",
+      "name": "text_pending_reports",
+      "value": "@local.number_pending_reports Pending Reports",
+      "style_list": "flex:1;",
+      "condition": "@local.number_delivered_sessions > 1"
+    },
+    {
+      "type": "title",
+      "name": "text_pending_reports",
+      "value": "@local.number_pending_reports Pending Report",
+      "style_list": "flex:1;",
+      "condition": "@local.number_delivered_sessions == 1"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "@local.number_delivered_sessions > 0 && @local.number_pending_reports > 0",
+      "comments": "List of pending reports"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.report_answers",
+      "parameter_list": "filter: @item.pending && !(@item.id=='text') && (@item.group_id == @local.group_id);"
+    },
+    {
+      "name": "module_id",
+      "value": "@item.module_id"
+    },
+    {
+      "name": "module_name",
+      "value": "@data.modules.@local.module_id.title"
+    },
+    {
+      "name": "modules_report_id",
+      "value": "@data.modules.@local.module_id.report_id"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "text",
+      "name": "module_title_text",
+      "value": "@local.module_name",
+      "style_list": "flex:1;\nmargin-bottom: 12px;"
+    },
+    {
+      "type": "button",
+      "name": "submit_button",
+      "value": "Submit",
+      "action_list": "click | set_field: current_report_no: @item.id;\nclick | set_field: current_group_no: @item.group_id;\nclick | set_field: current_module: @local.module_title;\nclick | set_field: current_report_id: @local.modules_report_id;\nclick | go_to: edit_report;",
+      "parameter_list": "variant: card; style: no-background short;",
+      "comments": "taken from here, modified appropriately?: \n\n \n         \nclick | set_field: current_report_no: @local.answer_id;\nclick | set_field: current_group_no: @local.group_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: edit_report;\n"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "comments": "If no reports are missing"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "@local.number_delivered_sessions > 0 && @local.number_pending_reports == 0 "
+    },
+    {
+      "type": "title",
+      "name": "text_no_pending_reports_1",
+      "value": "🎊 No Pending Reports"
+    },
+    {
+      "type": "text",
+      "name": "text_no_pending_reports_2",
+      "value": "Great job! You’ve completed all reports!",
+      "parameter_list": "style: contextual"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

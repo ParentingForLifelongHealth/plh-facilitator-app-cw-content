@@ -1,0 +1,177 @@
+{
+  "flow_type": "template",
+  "flow_name": "parent_list",
+  "status": "released",
+  "rows": [
+    {
+      "name": "parent_count",
+      "value": 0
+    },
+    {
+      "name": "co_parent_id"
+    },
+    {
+      "name": "number_of_coparents"
+    },
+    {
+      "name": "no_of_co_groups",
+      "value": "+@fields.no_of_co_groups"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : parent_count: @items.length;",
+      "parameter_list": "filter: @item.group_id == @fields.current_group_no && !@item.archived"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "text",
+      "value": "@local.parent_count @global.parent_count_text"
+    },
+    {
+      "type": "button",
+      "value": "@global.add_parent",
+      "action_list": "click | go_to: add_parent;",
+      "parameter_list": "style: alternative"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "name": "first_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_data_items",
+      "value": "parents",
+      "parameter_list": "filter: @item.group_id == @fields.current_group_no && !@item.archived"
+    },
+    {
+      "type": "text",
+      "value": "current: @fields.current_group_no ",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@item.group_id",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "style_list": "margin-bottom: 12px;",
+      "condition": "@item.group_id == @fields.current_group_no && !@item.archived",
+      "comments": "@item.group_id == @fields.current_group_no && !@item.archived && (@item.co_parent_id== \"\" | @item.co_parent_name!= \"\")"
+    },
+    {
+      "name": "parent_name",
+      "value": "@item.first_name @item.last_name"
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "style_list": "flex: 1;"
+    },
+    {
+      "name": "first_name",
+      "value": " ",
+      "comments": "This makes sure undefined isnt listed",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_name",
+      "value": "@item.first_name",
+      "condition": "@item.first_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name",
+      "value": "@item.last_name",
+      "condition": "@item.last_name",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "text_@item.parent_no",
+      "value": "@local.first_name @local.last_name",
+      "style_list": "color: #46607F;\n",
+      "condition": true,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "co_parent_id",
+      "value": "@item.id",
+      "action_list": " "
+    },
+    {
+      "name": "co_parent_id",
+      "value": "@item.co_parent_id",
+      "condition": "!!@item.co_parent_id"
+    },
+    {
+      "type": "text",
+      "value": "co_parent_id: @local.co_parent_id",
+      "condition": false
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "name": "this_parent_id",
+      "value": "@item.id"
+    },
+    {
+      "type": "round_button",
+      "name": "button_co_add_@item.id",
+      "action_list": "click | set_field: no_of_co_groups: @local.no_of_co_groups + 1; \nclick | set_local: no_of_co_groups: @local.no_of_co_groups+ 1;\nclick | set_field: current_parent_no: @item.id; \nclick | set_field: current_co_parent_id: @local.co_parent_id;\nclick | pop_up: add_coparent;",
+      "parameter_list": "icon_src: people-outline; style: no-background;\n",
+      "comments": "variant: primary_light;"
+    },
+    {
+      "type": "round_button",
+      "name": "button_edit_@item.id",
+      "action_list": "click | set_field: current_parent_no: @item.id; \nclick | set_field: current_parent_first_name: @local.first_name;\nclick | set_field: current_parent_last_name: @local.last_name;\nclick | set_field: current_parent_text_id: @item.text_id;\nclick | set_field: current_co_parent_id: @item.co_parent_id;\nclick | go_to: edit_parent;",
+      "parameter_list": "icon_src: create-outline; style: no-background;",
+      "condition": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_template",
+      "name": "counting_coparents",
+      "value": "counting_coparents"
+    },
+    {
+      "name": "co_parent_id_template",
+      "value": "@local.co_parent_id"
+    },
+    {
+      "name": "this_parent_id_template",
+      "value": "@local.this_parent_id"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

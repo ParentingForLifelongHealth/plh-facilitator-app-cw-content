@@ -1,0 +1,401 @@
+{
+  "flow_type": "template",
+  "flow_name": "menu_task_flow",
+  "status": "released",
+  "rows": [
+    {
+      "name": "completed_prefix",
+      "value": "completed_",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "click_prefix",
+      "value": "sub_item_",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "pages_completed_prefix",
+      "value": "pages_",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_top",
+      "parameter_list": "sticky: top;\nstyle: background_solid;",
+      "exclude_from_translation": true,
+      "style_list": "align-items: flex-start; \npadding: 24px"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_top_column",
+      "parameter_list": "style: column"
+    },
+    {
+      "type": "title",
+      "name": "label_group",
+      "value": "@global.main_menu_title",
+      "parameter_list": "variant: page_banner",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_combo_box",
+      "name": "selected_group",
+      "value": "@fields.current_group_no",
+      "action_list": "changed | set_field: current_group_no: this.value;\nchanged | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value};\n",
+      "parameter_list": "placeholder: @global.select_group;\ndisabled_text: @global.no_groups;\nvariant: dropdown;\n",
+      "exclude_from_translation": true,
+      "comments": "This syntax feels very wrong and against the templating system Johnny McQuade let's find a time to discuss.\n\nchanged | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix@local.selected_group;"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "parent_groups",
+      "parameter_list": "filter: !@item.archived",
+      "exclude_from_translation": true,
+      "comments": "Data list should include columns for name and text"
+    },
+    {
+      "type": "end_data_items",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_combo_box",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_field : current_package: @items[0].content_package;",
+      "parameter_list": "filter: @item.name == @local.selected_group;"
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "t_group_data",
+      "value": "sub_items",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "image_prefix",
+      "value": "images/icons/task_",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "image_postfix",
+      "value": ".png",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "debug_complete",
+      "value": "@local.completed_prefix@local.selected_group",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "debug_current",
+      "value": "currentgroup: @fields.current_group_no",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_modules",
+      "parameter_list": "style: column",
+      "condition": "@local.selected_group && @fields.current_group_no !== \"NULL\"",
+      "exclude_from_translation": true,
+      "style_list": "margin-top: -24px"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.modules",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "module_week_1",
+      "value": "@data.module_groups.module_1.text",
+      "parameter_list": "text_align: center",
+      "condition": "@item.id == \"module_1_lesson\"\t",
+      "style_list": "margin-bottom: 10px; \ncolor: var(--ion-color-secondary-900);"
+    },
+    {
+      "type": "text",
+      "name": "module_week_2",
+      "value": "@data.module_groups.module_2.text",
+      "parameter_list": "text_align: center",
+      "condition": "@item.id == \"module_2_lesson\"",
+      "style_list": "margin-bottom: 10px; \ncolor: var(--ion-color-secondary-900);"
+    },
+    {
+      "type": "text",
+      "name": "module_week_3",
+      "value": "@data.module_groups.module_3.text",
+      "parameter_list": "text_align: center",
+      "condition": "@item.id == \"module_3_lesson\"",
+      "style_list": "margin-bottom: 10px; \ncolor: var(--ion-color-secondary-900);"
+    },
+    {
+      "type": "text",
+      "name": "module_week_4",
+      "value": "@data.module_groups.module_4.text",
+      "parameter_list": "text_align: center",
+      "condition": "@item.id == \"module_4_lesson\" ",
+      "style_list": "margin-bottom: 10px; \ncolor: var(--ion-color-secondary-900);"
+    },
+    {
+      "type": "text",
+      "name": "module_week_5",
+      "value": "@data.module_groups.module_5.text",
+      "parameter_list": "text_align: center",
+      "condition": "@item.id == \"module_5_lesson\"",
+      "style_list": "margin-bottom: 10px; \ncolor: var(--ion-color-secondary-900);"
+    },
+    {
+      "type": "text",
+      "name": "module_week_6",
+      "value": "@data.module_groups.module_6.text",
+      "parameter_list": "text_align: center",
+      "condition": "@item.id == \"module_6_lesson\"",
+      "style_list": "margin-bottom: 10px; \ncolor: var(--ion-color-secondary-900);"
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "image_count",
+      "value": 0,
+      "condition": "@item._first",
+      "exclude_from_translation": true
+    },
+    {
+      "value": "@local.image_prefix@local.image_count@local.image_postfix",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "field: @local.pages_completed_prefix@local.selected_group",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "item: @item.@local.pages_completed_prefix@local.selected_group",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "field2: @local.completed_prefix@local.selected_group",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "item2: @item.@local.completed_prefix@local.selected_group",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "no_packages",
+      "parameter_list": "style: column",
+      "condition": "!@global.has_multiple_content_packages",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "menu_task_card",
+      "value": "menu_task_card",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_id",
+      "value": "@item.id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "image",
+      "value": "@local.image_prefix@local.image_count@local.image_postfix",
+      "condition": "!@global.use_module_image",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "completed",
+      "value": "@item.@local.completed_prefix@local.selected_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "all_pages_complete",
+      "value": "@item.@local.pages_completed_prefix@local.selected_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_id",
+      "value": "@item.report_id"
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "has_packages",
+      "parameter_list": "style: column",
+      "condition": "@global.has_multiple_content_packages",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "no_tag",
+      "parameter_list": "style: column",
+      "condition": "@item.tag_list == \"ALL\" || !@item.tag_list",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "menu_task_card",
+      "value": "menu_task_card",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_id",
+      "value": "@item.id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "image",
+      "value": "@local.image_prefix@local.image_count@local.image_postfix",
+      "condition": "!@global.use_module_image",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "completed",
+      "value": "@item.@local.completed_prefix@local.selected_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "all_pages_complete",
+      "value": "@item.@local.pages_completed_prefix@local.selected_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_id",
+      "value": "@item.report_id"
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "has_tag",
+      "parameter_list": "style: column",
+      "condition": "@item.tag_list !== \"ALL\" && @item.tag_list",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "menu_task_card",
+      "value": "menu_task_card",
+      "condition": "@item.tag_list.includes(@fields.current_package)",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_id",
+      "value": "@item.id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "image",
+      "value": "@local.image_prefix@local.image_count@local.image_postfix",
+      "condition": "!@global.use_module_image",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "completed",
+      "value": "@item.@local.completed_prefix@local.selected_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "all_pages_complete",
+      "value": "@item.@local.pages_completed_prefix@local.selected_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_id",
+      "value": "@item.report_id"
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "image_count",
+      "value": "@calc(@local.image_count +1)",
+      "condition": "@local.condition_package",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_data_items",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "!@local.selected_group || @fields.current_group_no == \"NULL\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@global.sessions_no_groups",
+      "parameter_list": "text_align:center",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "round_button",
+      "name": "groups_go_to",
+      "action_list": "click | go_to: profile_groups",
+      "parameter_list": "variant: no-background;\nicon_src: @global.add_group_icon;",
+      "exclude_from_translation": true,
+      "style_list": "max-width: max-content;\nmargin-top: -10px;"
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    }
+  ]
+}

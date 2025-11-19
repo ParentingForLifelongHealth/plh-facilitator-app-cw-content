@@ -1,0 +1,27 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "gender",
+  "status": "released",
+  "rows": [
+    {
+      "id": "woman",
+      "name": "woman",
+      "text::eng": "Woman"
+    },
+    {
+      "id": "man",
+      "name": "man",
+      "text::eng": "Man"
+    },
+    {
+      "id": "opt_out",
+      "name": "opt_out",
+      "text::eng": "Prefer not to say"
+    },
+    {
+      "id": "other",
+      "name": "other",
+      "text::eng": "Other"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "flow_type": "template",
+  "flow_name": "add_remote",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id",
+      "value": "@field.current_group_no",
+      "comments": "Couldn't use fields in add data"
+    },
+    {
+      "name": "module_id",
+      "value": "@field:current_module_no"
+    },
+    {
+      "name": "first_name",
+      "value": " "
+    },
+    {
+      "name": "last_name",
+      "value": " "
+    },
+    {
+      "type": "text",
+      "name": "question_1",
+      "value": "How many minutes did you spend facilitating your parent @global.share_medium group over the last week?"
+    },
+    {
+      "type": "text_box",
+      "name": "answer_1",
+      "parameter_list": "number_input: true; \nplaceholder: @global.minutes; \nmax_length: 3"
+    },
+    {
+      "type": "text",
+      "name": "question_2",
+      "value": "I was able to send..."
+    },
+    {
+      "name": "all",
+      "value": "All of the messages"
+    },
+    {
+      "name": "some",
+      "value": "Some of the messages"
+    },
+    {
+      "name": "none",
+      "value": "None of the messages"
+    },
+    {
+      "name": "answer_list_2",
+      "value": "name: all | text: @local.all; name: some | text: @local.some; name: none | text: @local.none"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "answer_2",
+      "parameter_list": "item_width: 100%; answer_list: @local.answer_list_2"
+    },
+    {
+      "type": "text",
+      "name": "question_3",
+      "value": "How do you feel the session went?"
+    },
+    {
+      "name": "very_well",
+      "value": "Very well"
+    },
+    {
+      "name": "well",
+      "value": "Well"
+    },
+    {
+      "name": "ok",
+      "value": "Acceptable / Okay"
+    },
+    {
+      "name": "poorly",
+      "value": "Poorly"
+    },
+    {
+      "name": "very_poorly",
+      "value": "Very Poorly"
+    },
+    {
+      "name": "answer_list_3",
+      "value": "name: very_well | text: @local.very_well; name: well | text: @local.well; name: ok | text: @local.ok; name: poorly| text: @local.poorly; name: very_poorly| text: @local.very_poorly;"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "answer_3",
+      "parameter_list": "item_width: 100%; answer_list: @local.answer_list_3"
+    },
+    {
+      "type": "text",
+      "name": "question_4",
+      "value": "Which of the parents in this group attended your @global.virtual_session_platform group session?"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "parents",
+      "parameter_list": "filter: @item.group_id == @field.current_group_no && @item.archived == false"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "name": "first_name",
+      "value": " ",
+      "exclude_from_translation": true,
+      "comments": "This makes sure undefined isnt listed"
+    },
+    {
+      "name": "last_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_name",
+      "value": "@item.first_name",
+      "condition": "@item.first_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name",
+      "value": "@item.last_name",
+      "condition": "@item.last_name",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@local.first_name @local.last_name",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "toggle_bar",
+      "value": "@item.@fields.current_module_no",
+      "action_list": "changed | set_item| @fields.current_module_no: this.value;",
+      "parameter_list": "show_icons: false; variant: ios;",
+      "comments": "Need to reset this to false"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "sticky: bottom",
+      "style_list": "padding: 12px 24px"
+    },
+    {
+      "type": "button",
+      "name": "save",
+      "value": "Save",
+      "action_list": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\narchived: false,\ntype: \"virtual\",\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3;\nclick | emit: completed;\nclick | emit: server_sync;"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "flow_type": "template",
+  "flow_name": "footer",
+  "status": "released",
+  "rows": [
+    {
+      "name": "home",
+      "value": "Sessions"
+    },
+    {
+      "name": "actions",
+      "value": "Actions"
+    },
+    {
+      "name": "groups",
+      "value": "Groups"
+    },
+    {
+      "name": "library",
+      "value": "Resources"
+    },
+    {
+      "name": "settings",
+      "value": "Settings"
+    },
+    {
+      "name": "button_list_pill",
+      "value": "icon: images/icons/home-outline-brown.svg | label: @local.home | target_template: @data.app_section.home.template;\nicon: images/icons/add-outline-brown.svg | label: @local.actions | target_template: actions;\nicon: images/icons/people-brown.svg | label: @local.groups | target_template: profile_groups;\nicon: images/icons/bookmarks-outline-brown.svg | label: @local.library | target_template: @data.app_section.library.template;\nicon: images/icons/settings-outline-brown.svg | label: @local.settings | target_template: profile;",
+      "comments": "Alternative footer, depends on PR to look right: https://github.com/IDEMSInternational/open-app-builder/pull/3192"
+    },
+    {
+      "type": "plh_bottom_nav",
+      "parameter_list": "button_list: @local.button_list_pill;\nvariant: pill"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_resource",
+  "status": "released",
+  "rows": [
+    {
+      "name": "article_id",
+      "value": "test"
+    },
+    {
+      "name": "is_module",
+      "value": false,
+      "comments": "Define which datalist to use"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_resources",
+      "value": "@data.m_resources",
+      "condition": "!!@local.is_module"
+    },
+    {
+      "type": "begin_template",
+      "name": "resource_element",
+      "value": "resource_element",
+      "condition": "@item.foreign_key == @local.article_id"
+    },
+    {
+      "name": "resource_type",
+      "value": "@item.media_type"
+    },
+    {
+      "name": "resource_id",
+      "value": "@item.media_asset"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_resources",
+      "value": "@data.a_resources",
+      "condition": "!@local.is_module"
+    },
+    {
+      "type": "begin_template",
+      "name": "resource_element",
+      "value": "resource_element",
+      "condition": "@item.foreign_key == @local.article_id"
+    },
+    {
+      "name": "resource_type",
+      "value": "@item.media_type"
+    },
+    {
+      "name": "resource_id",
+      "value": "@item.media_asset"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

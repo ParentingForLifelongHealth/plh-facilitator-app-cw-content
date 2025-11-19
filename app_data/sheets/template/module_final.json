@@ -263,7 +263,7 @@
         }
       ],
       "parameter_list": {
-        "filter": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no"
+        "filter": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no && !@item.pending"
       },
       "exclude_from_translation": true,
       "_nested_name": "get_reports",
@@ -279,28 +279,34 @@
         "parameter_list": {
           "filter": [
             {
-              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no",
+              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no && !@item.pending",
               "matchedExpression": "@fields.current_module_no",
               "type": "fields",
               "fieldName": "current_module_no"
             },
             {
-              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no",
+              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no && !@item.pending",
               "matchedExpression": "@item.module_id",
               "type": "item",
               "fieldName": "module_id"
             },
             {
-              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no",
+              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no && !@item.pending",
               "matchedExpression": "@item.group_id",
               "type": "item",
               "fieldName": "group_id"
             },
             {
-              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no",
+              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no && !@item.pending",
               "matchedExpression": "@field.current_group_no",
               "type": "field",
               "fieldName": "current_group_no"
+            },
+            {
+              "fullExpression": "@fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no && !@item.pending",
+              "matchedExpression": "!@item.pending",
+              "type": "item",
+              "fieldName": "pending"
             }
           ]
         }
@@ -319,6 +325,9 @@
           "parameter_list.filter"
         ],
         "@field.current_group_no": [
+          "parameter_list.filter"
+        ],
+        "!@item.pending": [
           "parameter_list.filter"
         ]
       }
@@ -485,6 +494,16 @@
           }
         },
         {
+          "type": "text",
+          "name": "test_lottie_1",
+          "value": "test 1",
+          "_translations": {
+            "value": {}
+          },
+          "condition": false,
+          "_nested_name": "reviewer.test_lottie_1"
+        },
+        {
           "type": "image",
           "name": "reviewer_image",
           "value": "@global.reviewer_image",
@@ -608,6 +627,16 @@
                       "value"
                     ]
                   }
+                },
+                {
+                  "type": "text",
+                  "name": "test_lottie_2",
+                  "value": "test 2",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "condition": false,
+                  "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.message_not_shared.test_lottie_2"
                 },
                 {
                   "type": "image",
@@ -740,6 +769,16 @@
                   }
                 },
                 {
+                  "type": "text",
+                  "name": "test_lottie_3",
+                  "value": "test 3",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "condition": false,
+                  "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.module_not_complete_no_report.test_lottie_3"
+                },
+                {
                   "type": "image",
                   "name": "module_not_complete_image",
                   "value": "@global.module_not_complete_image",
@@ -774,6 +813,7 @@
                   "parameter_list": {
                     "text_align": "center"
                   },
+                  "condition": false,
                   "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.module_not_complete_no_report.module_not_complete_text",
                   "_dynamicFields": {
                     "value": [
@@ -809,14 +849,6 @@
                         "_id": "@fields.current_module_no",
                         "@local.completed_field": true
                       }
-                    },
-                    {
-                      "trigger": "click",
-                      "action_id": "go_to",
-                      "args": [
-                        "home_screen"
-                      ],
-                      "_raw": "click | go_to: home_screen"
                     }
                   ],
                   "exclude_from_translation": true,
@@ -930,6 +962,16 @@
                       "value"
                     ]
                   }
+                },
+                {
+                  "type": "text",
+                  "name": "test_lottie_4",
+                  "value": "test 4",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "condition": false,
+                  "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.module_not_complete_report.test_lottie_4"
                 },
                 {
                   "type": "image",
@@ -1259,6 +1301,16 @@
                       }
                     },
                     {
+                      "type": "text",
+                      "name": "test_lottie_5",
+                      "value": "test 5",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "condition": false,
+                      "_nested_name": "facilitator_wrapper.module_complete_wrapper.report_wrapper.report_to_do.test_lottie_5"
+                    },
+                    {
                       "type": "image",
                       "name": "report_to_do_image",
                       "value": "@global.report_to_do_image",
@@ -1483,6 +1535,16 @@
                       }
                     },
                     {
+                      "type": "text",
+                      "name": "test_lottie_6",
+                      "value": "test 6",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "condition": false,
+                      "_nested_name": "facilitator_wrapper.module_complete_wrapper.report_wrapper.report_complete.test_lottie_6"
+                    },
+                    {
                       "type": "image",
                       "name": "report_complete_image",
                       "value": "@global.report_complete_image",
@@ -1684,6 +1746,16 @@
                       "value"
                     ]
                   }
+                },
+                {
+                  "type": "text",
+                  "name": "test_lottie_7",
+                  "value": "test 7",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "condition": false,
+                  "_nested_name": "facilitator_wrapper.module_complete_wrapper.no_report.test_lottie_7"
                 },
                 {
                   "type": "image",

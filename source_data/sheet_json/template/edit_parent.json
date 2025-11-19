@@ -1,0 +1,397 @@
+{
+  "flow_type": "template",
+  "flow_name": "edit_parent",
+  "status": "released",
+  "rows": [
+    {
+      "type": "begin_template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": "uncompleted | emit: uncompleted; "
+    },
+    {
+      "name": "title",
+      "value": "@global.edit_parent",
+      "exclude_from_translation": false
+    },
+    {
+      "name": "confirm_exit",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "current_parent_group"
+    },
+    {
+      "name": "co_parent_id"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local: current_parent_group: @items[0].group_id;\ndata_changed | set_local: co_parent_id: @items[0].co_parent_id;",
+      "parameter_list": "filter: (@item.id == @fields.current_parent_no)"
+    },
+    {
+      "name": "current_age_group"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local: current_age_group: @items[0].age_group;",
+      "parameter_list": "filter: (@item.name == @local.current_parent_group)"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : first_name: @items[0].first_name;\ndata_changed | set_local : last_name: @items[0].last_name;\n",
+      "parameter_list": "filter: @item.id == @fields.current_parent_no;\nlimit: 1;\n",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "no_of_co_groups",
+      "value": "+@fields.no_of_co_groups"
+    },
+    {
+      "name": "gender_select_options",
+      "value": "@data.gender",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "child_gender_select_options",
+      "value": "@data.child_gender",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "other_home_options",
+      "value": "@data.yes_no"
+    },
+    {
+      "name": "show_number_error",
+      "value": false,
+      "comments": "Making sure errors are only there once data is entered",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "show_age_error",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "show_sex_error",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "show_child_age_error",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "show_child_sex_error",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "show_child_count_error",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "show_hours_error",
+      "value": false
+    },
+    {
+      "name": "show_other_home_error",
+      "value": false
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@global.label_about_parent",
+      "parameter_list": "style: emphasised",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "Required_fiels",
+      "value": "@global.required_label",
+      "parameter_list": "style: contextual",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text_box",
+      "name": "first_name",
+      "value": "@local.first_name",
+      "parameter_list": "placeholder: @global.edit_first_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_name_valid",
+      "value": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.first_name))",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@global.error_first_name",
+      "style_list": "color: #FF0000;\nfont-size: 14px; ",
+      "condition": "!@local.first_name_valid",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@global.label_last_name",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text_box",
+      "name": "last_name",
+      "parameter_list": "placeholder: @global.edit_last_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name_valid",
+      "value": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.last_name))",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@global.error_last_name",
+      "style_list": "color: #FF0000;\nfont-size: 14px; ",
+      "condition": "!@local.last_name_valid",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "name": "fn"
+    },
+    {
+      "name": "ln"
+    },
+    {
+      "name": "number_of_coparents"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : number_of_coparents: @items.length;\n",
+      "parameter_list": "filter: (@item.archived == false) && (@item.co_parent_id == @local.co_parent_id) && !(@item.id == @fields.current_parent_no) && !(@item.co_parent_id == 'empty') \n"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "text",
+      "name": "coparenting_with",
+      "value": "Caregiving with @local.number_of_coparents other:",
+      "style_list": "flex:1",
+      "condition": "@local.number_of_coparents == 1"
+    },
+    {
+      "type": "text",
+      "name": "coparenting_with",
+      "value": "Caregiving with @local.number_of_coparents others:",
+      "style_list": "flex:1",
+      "condition": "@local.number_of_coparents > 1"
+    },
+    {
+      "type": "text",
+      "name": "coparenting_with",
+      "value": "No other current caregiver",
+      "style_list": "flex:1",
+      "condition": "@local.number_of_coparents == 0"
+    },
+    {
+      "type": "round_button",
+      "name": "button_co_add_@item.id",
+      "action_list": "click | set_field: no_of_co_groups: @local.no_of_co_groups + 1; \nclick | set_local: no_of_co_groups: @local.no_of_co_groups+ 1;\nclick | set_field: current_co_parent_id: @local.co_parent_id;\nclick | pop_up: add_coparent;",
+      "parameter_list": "icon_src: people-outline; style: no-background;\n",
+      "comments": "variant: primary_light;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.parents",
+      "parameter_list": "filter: (@item.archived == false) && (@item.co_parent_id == @local.co_parent_id) && !(@item.id == @fields.current_parent_no) && !(@item.co_parent_id == 'empty') \n",
+      "condition": "@local.number_of_coparents > 0"
+    },
+    {
+      "type": "text",
+      "name": "coparent_name",
+      "value": "@item.first_name @item.last_name",
+      "condition": "@item.first_name && @item.last_name"
+    },
+    {
+      "type": "text",
+      "name": "coparent_name",
+      "value": "@item.first_name",
+      "condition": "!@item.last_name"
+    },
+    {
+      "type": "text",
+      "name": "coparent_name",
+      "value": "@item.last_name",
+      "condition": "!@item.first_name "
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "text",
+      "value": "Engagement",
+      "parameter_list": "style: emphasised",
+      "exclude_from_translation": "FASLE"
+    },
+    {
+      "name": "number_reported_sessions"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : number_reported_sessions: @items.length;\n",
+      "parameter_list": "filter: (@item.group_id == @local.current_parent_group) && !@item.pending"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.parents",
+      "parameter_list": "filter: (@item.id == @fields.current_parent_no) \n"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "name": "attended_1",
+      "value": 1,
+      "condition": "@item.week_1"
+    },
+    {
+      "name": "attended_1",
+      "value": 0,
+      "condition": "!@item.week_1"
+    },
+    {
+      "name": "attended_2",
+      "value": "@local.attended_1 +1",
+      "condition": "@item.week_2"
+    },
+    {
+      "name": "attended_2",
+      "value": "@local.attended_1",
+      "condition": "!@item.week_2"
+    },
+    {
+      "name": "attended_3",
+      "value": "@local.attended_2 +1",
+      "condition": "@item.week_3"
+    },
+    {
+      "name": "attended_3",
+      "value": "@local.attended_2",
+      "condition": "!@item.week_3"
+    },
+    {
+      "name": "attended_4",
+      "value": "@local.attended_3 +1",
+      "condition": "@item.week_4"
+    },
+    {
+      "name": "attended_4",
+      "value": "@local.attended_3",
+      "condition": "!@item.week_4"
+    },
+    {
+      "name": "attended_5",
+      "value": "@local.attended_4 +1",
+      "condition": "@item.week_5"
+    },
+    {
+      "name": "attended_5",
+      "value": "@local.attended_4",
+      "condition": "!@item.week_5"
+    },
+    {
+      "name": "attended_6",
+      "value": "@local.attended_5 +1",
+      "condition": "@item.week_6"
+    },
+    {
+      "name": "attended_6",
+      "value": "@local.attended_5",
+      "condition": "!@item.week_6"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "name": "attendance",
+      "value": "Attended @local.attended_6 / @local.number_reported_sessions reported sessions"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "plh_module_list_item",
+      "name": "details_button",
+      "value": "Details from Individual Consultation",
+      "action_list": "click | go_to: parent_details;",
+      "parameter_list": "nav_image_asset: images/icons/expand_circle_right.svg;"
+    },
+    {
+      "name": "valid",
+      "value": "!!@local.first_name && !!@local.last_name && @local.first_name_valid && @local.last_name_valid",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "Danger Zone",
+      "parameter_list": "style: emphasised",
+      "exclude_from_translation": "FASLE"
+    },
+    {
+      "type": "text",
+      "value": "Delete parent to permanently delete all their data. This action cannot be undone."
+    },
+    {
+      "type": "button",
+      "value": "Delete Parent",
+      "action_list": "click | pop_up: delete_parent;"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "sticky: bottom;",
+      "style_list": "width: 100%;\npadding: 12px 24px;\nbackground-color: white;",
+      "condition": "@item._last"
+    },
+    {
+      "type": "button",
+      "name": "save",
+      "value": "Save Profile",
+      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name;\nclick | emit: completed;\nclick | emit: server_sync;",
+      "parameter_list": "variant: card;\ndisabled: !@local.valid;",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

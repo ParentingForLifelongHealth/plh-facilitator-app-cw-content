@@ -1,0 +1,183 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile",
+  "status": "released",
+  "parameter_list": {
+    "app_config": {
+      "LAYOUT": {
+        "page_padding": "24px 0"
+      }
+    }
+  },
+  "rows": [
+    {
+      "type": "update_action_list",
+      "name": "update_login_button",
+      "action_list": "nav_resume | emit: force_reload"
+    },
+    {
+      "name": "next_icon_asset",
+      "value": "chevron-forward",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "login_icon",
+      "value": "images/icons/log-in-outline.svg"
+    },
+    {
+      "name": "logout_icon",
+      "value": "images/icons/log-out-outline.svg"
+    },
+    {
+      "name": "profile_icon",
+      "value": "images/icons/person-circle-outline.svg"
+    },
+    {
+      "name": "language_icon",
+      "value": "images/icons/globe-outline.svg"
+    },
+    {
+      "name": "user_id_icon",
+      "value": "images/icons/qr-code-outline.svg"
+    },
+    {
+      "name": "content_icon",
+      "value": "images/icons/file-tray-full-outline.svg"
+    },
+    {
+      "name": "parent_icon",
+      "value": "images/icons/people-outline.svg"
+    },
+    {
+      "name": "about_icon",
+      "value": "images/icons/information-circle-outline.svg"
+    },
+    {
+      "name": "terms_icon",
+      "value": "images/icons/document-text-outline.svg"
+    },
+    {
+      "name": "privacy_icon",
+      "value": "images/icons/document-lock-outline.svg"
+    },
+    {
+      "type": "title",
+      "name": "settings",
+      "value": "Settings",
+      "parameter_list": "variant: page_banner",
+      "style_list": "padding-inline: 24px;"
+    },
+    {
+      "type": "title",
+      "name": "account",
+      "value": "Profile",
+      "parameter_list": "variant: section_banner"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_account",
+      "parameter_list": "variant: inline_padding; style: column"
+    },
+    {
+      "type": "button",
+      "name": "button_account",
+      "value": "@global.account",
+      "parameter_list": "variant: card;\nicon: @local.login_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | go_to: profile_login"
+    },
+    {
+      "type": "button",
+      "name": "button_profile",
+      "value": "Profile",
+      "parameter_list": "variant: card;\nicon: @local.profile_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | go_to: profile_about"
+    },
+    {
+      "type": "button",
+      "name": "button_language",
+      "value": "Switch language",
+      "parameter_list": "variant: card;\nicon: @local.language_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | go_to: language_select",
+      "condition": false
+    },
+    {
+      "type": "button",
+      "name": "button_user_id",
+      "value": "Your Facilitator Code",
+      "parameter_list": "variant: card;\nicon: @local.user_id_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | go_to: profile_id"
+    },
+    {
+      "type": "button",
+      "name": "button_content",
+      "value": "Your Content Package",
+      "parameter_list": "variant: card;\nicon: @local.content_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | go_to: package_select",
+      "condition": false
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "title",
+      "name": "parent",
+      "value": "Parent Actions",
+      "parameter_list": "variant: section_banner",
+      "condition": false
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_parent",
+      "parameter_list": "variant: inline_padding; style: column",
+      "condition": false
+    },
+    {
+      "type": "button",
+      "name": "button_parents",
+      "value": "Your Parent Groups",
+      "parameter_list": "variant: card;\nicon: @local.parent_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | go_to: profile_groups;",
+      "condition": false,
+      "comments": "click | go_to : @local.final_page;"
+    },
+    {
+      "type": "end_display_group",
+      "condition": false
+    },
+    {
+      "type": "title",
+      "name": "terms",
+      "value": "App Details & Terms",
+      "parameter_list": "variant: section_banner"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_account",
+      "parameter_list": "variant: inline_padding; style: column"
+    },
+    {
+      "type": "button",
+      "name": "button_about",
+      "value": "@global.about_this_app",
+      "parameter_list": "variant: card;\nicon: @local.about_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | pop_up: app_about | fullscreen: true"
+    },
+    {
+      "type": "button",
+      "name": "button_terms",
+      "value": "@global.terms_and_conditions",
+      "parameter_list": "variant: card;\nicon: @local.terms_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | pop_up: app_menu_terms | fullscreen: true"
+    },
+    {
+      "type": "button",
+      "name": "button_privacy",
+      "value": "@global.privacy_policy",
+      "parameter_list": "variant: card;\nicon: @local.privacy_icon;\nicon_secondary_asset: @local.next_icon_asset;\nstyle: no-background;\ntext_align: left;",
+      "action_list": "click | pop_up: app_menu_privacy_policy | fullscreen: true"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

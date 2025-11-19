@@ -1,0 +1,82 @@
+{
+  "flow_type": "template",
+  "flow_name": "onboarding_settings_page_1",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "settings_intro",
+      "value": "@global.settings_intro"
+    },
+    {
+      "type": "text",
+      "name": "question_user_type",
+      "value": "@global.question_user_type",
+      "parameter_list": "style: emphasised;"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "user_type_select",
+      "value": "@fields.user_type",
+      "parameter_list": "answer_list: @data.user_type;\nitem_width: 100%",
+      "condition": "!!@fields.user_type",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "user_type_select",
+      "parameter_list": "answer_list: @data.user_type;\nitem_width: 100%",
+      "condition": "!@fields.user_type",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "language_select_options",
+      "value": "@data.language"
+    },
+    {
+      "type": "text",
+      "name": "question_language",
+      "value": "@global.question_language",
+      "parameter_list": "style: emphasised;",
+      "condition": "@local.user_type_select == \"tester\""
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "language_grid",
+      "parameter_list": "answer_list: @local.language_select_options; \nitem_width: 200px;",
+      "condition": "@local.user_type_select == \"tester\""
+    },
+    {
+      "name": "completed_enabled",
+      "value": "!!@local.user_type_select && (@local.user_type_select != \"tester\" || !!@local.language_grid)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_footer",
+      "parameter_list": "sticky: bottom;",
+      "style_list": "padding: 12px 24px;"
+    },
+    {
+      "type": "button",
+      "name": "button_completed_1",
+      "value": "@global.continue",
+      "action_list": "click | set_field: user_type: @local.user_type_select;\nclick | emit: completed;",
+      "parameter_list": "style: navigation;\ndisabled: !@local.completed_enabled",
+      "condition": "@local.user_type_select != \"tester\"",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "button",
+      "name": "button_completed_2",
+      "value": "@global.continue",
+      "action_list": "click | set_field: user_type: @local.user_type_select;\nclick | emit: set_language: @local.language_grid;\nclick | emit: completed;",
+      "parameter_list": "style: navigation;\ndisabled: !@local.completed_enabled",
+      "condition": "@local.user_type_select == \"tester\"",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "flow_type": "data_list",
+  "flow_subtype": "onboarding",
+  "flow_name": "onboarding_splash_slides",
+  "status": "released",
+  "rows": [
+    {
+      "id": "slide_1",
+      "image_asset": "images/onboarding/splash_1.png",
+      "text::eng": "**Welcome**\n\nWe are so glad you are here!\n\nThis app is your partner every step of the way as you deliver the @global.programme_name programme.",
+      "duration_sec": 6,
+      "completed": false
+    },
+    {
+      "id": "slide_2",
+      "image_asset": "images/onboarding/splash_2.png",
+      "text::eng": "**Create & manage parent groups**\n\nEasily create parent groups and keep everything organized.\n\nYou can run the programme with one group—or many!",
+      "duration_sec": 6,
+      "completed": false
+    },
+    {
+      "id": "slide_3",
+      "image_asset": "images/onboarding/splash_3.png",
+      "text::eng": "**Share pre-drafted messages**\n\nDeliver chat sessions through pre-drafted  messages that guide meaningful conversations.\n\nEverything you need is built right in.",
+      "duration_sec": 6,
+      "completed": false
+    },
+    {
+      "id": "slide_4",
+      "image_asset": "images/onboarding/splash_4.png",
+      "text::eng": "**Share reports & follow up**\n\nTrack sessions, share reports, and follow up—quickly and easily.\n\nSee how each group is doing and support those who need it, all in just a few taps.",
+      "duration_sec": 6,
+      "completed": false
+    },
+    {
+      "id": "slide_5",
+      "image_asset": "images/onboarding/splash_5.png",
+      "text::eng": "**Explore helpful resources**\n\nAccess a growing library of tips, tools, and activities to help you feel confident and ready for any session.",
+      "duration_sec": 6,
+      "completed": false
+    }
+  ]
+}

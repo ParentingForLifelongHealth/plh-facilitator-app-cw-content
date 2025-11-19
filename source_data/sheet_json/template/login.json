@@ -1,0 +1,116 @@
+{
+  "flow_type": "template",
+  "flow_name": "login",
+  "status": "released",
+  "rows": [
+    {
+      "name": "show_title",
+      "value": true
+    },
+    {
+      "name": "is_user_signed_in",
+      "value": "!!@fields._auth_user_id"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "login",
+      "condition": "!@local.is_user_signed_in",
+      "parameter_list": "style: column;"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "@global.login",
+      "condition": "!!(@local.show_title)"
+    },
+    {
+      "type": "text",
+      "name": "text_login",
+      "value": "@global.create_account_question"
+    },
+    {
+      "type": "google_sign_in_button",
+      "name": "button_google_sign_in",
+      "value": "@global.login_google",
+      "action_list": "click | emit: force_reprocess;"
+    },
+    {
+      "type": "button",
+      "name": "button_skip",
+      "value": "@global.skip_login",
+      "action_list": "click | set_field: login_passed: true;\nclick | emit: completed;",
+      "parameter_list": "style:navigation;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "logged_in",
+      "condition": "@local.is_user_signed_in",
+      "parameter_list": "style: column;"
+    },
+    {
+      "type": "title",
+      "name": "welcome_title",
+      "value": "@global.welcome",
+      "condition": "!!(@local.show_title)"
+    },
+    {
+      "type": "text",
+      "name": "welcome_text",
+      "value": "@global.logged_in_splash_user",
+      "condition": "!!@fields._auth_user_given_name"
+    },
+    {
+      "type": "text",
+      "name": "welcome_text",
+      "value": "@global.logged_in_splash",
+      "condition": "!@fields._auth_user_given_name"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "_auth_profiles",
+      "action_list": "data_changed | set_field : exists_previous_auth_id : !(@items.length === 0)"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "find_last_synced_id",
+      "value": "_auth_profiles",
+      "parameter_list": "sort: updatedAt;\nreverse;\nlimit: 1"
+    },
+    {
+      "type": "button",
+      "name": "button_import",
+      "value": "@global.continue",
+      "action_list": "click | user: import: @item.id;\nclick | set_field: login_passed: true;\nclick | emit: force_reprocess;\nclick | emit: completed;\n",
+      "parameter_list": "style:navigation;",
+      "comments": "click | user: import: @item.id;\nclick | set_field: login_passed: true;\nclick | emit: force_restart;"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "button",
+      "name": "button_completed",
+      "value": "@global.continue",
+      "action_list": "click | set_field: login_passed: true;\nclick | emit: completed;",
+      "condition": "!@fields.exists_previous_auth_id",
+      "parameter_list": "style:navigation;"
+    },
+    {
+      "type": "button",
+      "name": "button_logout",
+      "value": "<u>@global.logout</u>",
+      "action_list": "click | auth: sign_out;\nclick | emit: force_reprocess;",
+      "parameter_list": "variant: card;\nstyle: no-background;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

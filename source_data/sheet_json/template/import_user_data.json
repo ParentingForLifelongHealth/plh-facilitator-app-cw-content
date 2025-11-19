@@ -1,0 +1,62 @@
+{
+  "flow_type": "template",
+  "flow_name": "import_user_data",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Import user"
+    },
+    {
+      "name": "user_id_name",
+      "value": "Facilitator ID"
+    },
+    {
+      "type": "text",
+      "name": "text_instruction",
+      "value": "Paste the @local.facilitator_id of a user to import their account data."
+    },
+    {
+      "type": "text_box",
+      "name": "user_id_input"
+    },
+    {
+      "type": "button",
+      "name": "button_import",
+      "value": "Import data",
+      "action_list": "click | user: import: @local.user_id_input;\nclick | emit: force_reprocess;"
+    },
+    {
+      "name": "validation",
+      "value": "Validation"
+    },
+    {
+      "name": "user_name",
+      "value": "User name (on the current account)"
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "value": "**@local.validation**",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "value": "@local.user_name: @fields.user_name",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "button",
+      "name": "button",
+      "value": "Clear user name",
+      "action_list": "click | set_field: user_name: ;\nclick | emit: force_reprocess;"
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "value": "If you had set a user name on your old account and the data was imported succesfully, the user name above should update."
+    }
+  ]
+}

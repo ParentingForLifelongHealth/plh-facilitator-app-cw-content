@@ -1,0 +1,88 @@
+{
+  "flow_type": "template",
+  "flow_name": "module_progress",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id"
+    },
+    {
+      "name": "current_package"
+    },
+    {
+      "name": "use_reports",
+      "value": true
+    },
+    {
+      "name": "module_count",
+      "value": 0
+    },
+    {
+      "name": "complete_count",
+      "value": 0
+    },
+    {
+      "name": "divide",
+      "value": "/"
+    },
+    {
+      "name": "sessions",
+      "value": "sessions"
+    },
+    {
+      "name": "complete_field",
+      "value": "completed_@local.group_id"
+    },
+    {
+      "type": "data_items",
+      "name": "get_module_count",
+      "value": "@data.modules",
+      "action_list": "data_changed | set_local : module_count: @items.length;",
+      "condition": "!@local.use_reports",
+      "parameter_list": "filter: !@item.tag_list || (@item.tag_list).includes(@local.current_package);"
+    },
+    {
+      "type": "data_items",
+      "name": "get_complete_count",
+      "value": "@data.modules",
+      "action_list": "data_changed | set_local : complete_count: @items.length;",
+      "condition": "!@local.use_reports",
+      "parameter_list": "filter: !!@item.@local.complete_field;"
+    },
+    {
+      "type": "data_items",
+      "name": "get_module_with_reports_count",
+      "value": "@data.modules",
+      "action_list": "data_changed | set_local : module_count: @items.length;",
+      "condition": "!!@local.use_reports",
+      "parameter_list": "filter: (!@item.tag_list || (@item.tag_list).includes(@local.current_package)) && @item.report_id;"
+    },
+    {
+      "type": "data_items",
+      "name": "get_complete_reports_count",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : complete_count: @items.length;",
+      "condition": "!!@local.use_reports",
+      "parameter_list": "filter:  (!@item.pending) && (@item.group_id == @local.group_id);"
+    },
+    {
+      "name": "progress",
+      "value": "@calc(((@local.complete_count)/(@local.module_count))*100)"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "task_progress_bar",
+      "parameter_list": "progress_percent: @local.progress;",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "text",
+      "value": "@local.complete_count@local.divide@local.module_count @local.sessions"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

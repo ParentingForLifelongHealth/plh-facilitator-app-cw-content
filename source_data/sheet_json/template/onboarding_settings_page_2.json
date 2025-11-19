@@ -1,0 +1,59 @@
+{
+  "flow_type": "template",
+  "flow_name": "onboarding_settings_page_2",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "question_user_organisation",
+      "value": "@global.question_user_organisation",
+      "parameter_list": "style: emphasised;"
+    },
+    {
+      "type": "combo_box",
+      "name": "user_organisation_select",
+      "value": "@fields.user_organisation",
+      "parameter_list": "answer_list: @data.user_organisation;\nplaceholder: @global.placeholder_user_organisation;\nvariant: dropdown;",
+      "condition": "!!@fields.user_organisation",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "combo_box",
+      "name": "user_organisation_select",
+      "parameter_list": "answer_list: @data.user_organisation;\nplaceholder: @global.placeholder_user_organisation;\nvariant: dropdown;",
+      "condition": "!@fields.user_organisation",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "completed_enabled",
+      "value": "!!@local.user_organisation_select",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_footer",
+      "parameter_list": "sticky: bottom;",
+      "style_list": "padding: 12px 24px;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "round_button",
+      "name": "button_back",
+      "action_list": "click | emit: uncompleted",
+      "parameter_list": "icon_src: arrow-back;\nvariant: no-background;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "button",
+      "name": "button_completed_2",
+      "value": "@global.continue",
+      "action_list": "click | set_field: user_organisation: @local.user_organisation_select;\nclick | emit: completed;",
+      "parameter_list": "style: navigation;\ndisabled: !@local.completed_enabled",
+      "style_list": "flex: 1",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}
