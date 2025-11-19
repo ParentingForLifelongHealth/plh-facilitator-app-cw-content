@@ -1,0 +1,33 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "parents",
+  "status": "released",
+  "data_list_name": "parents",
+  "rows": [
+    {
+      "id": "text_field",
+      "group_id": "text_field",
+      "first_name": "text_field",
+      "last_name": "text_field",
+      "number": "text_field",
+      "age": "text_field",
+      "sex": "text_field",
+      "child_count": "text_field",
+      "child_age": "text_field",
+      "child_sex": "text_field",
+      "other_home": "text_field",
+      "hours": "text_field",
+      "goal": "text_field",
+      "consoltation": "text_field",
+      "archived": true,
+      "week_1": false,
+      "week_2": false,
+      "week_3": false,
+      "week_4": false,
+      "week_5": false,
+      "week_6": false,
+      "no_follow_up": 0,
+      "last_follow_up": "text_field"
+    }
+  ]
+}

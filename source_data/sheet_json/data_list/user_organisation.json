@@ -1,0 +1,33 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "user_organisation",
+  "status": "released",
+  "data_list_name": "user_organisation",
+  "rows": [
+    {
+      "id": "soaw",
+      "name": "soaw",
+      "text": "Ministry of Social Development, Labour and Welfare"
+    },
+    {
+      "id": "plh",
+      "name": "plh",
+      "text": "Parenting for Lifelong Health"
+    },
+    {
+      "id": "unicef",
+      "name": "unicef",
+      "text": "UNICEF"
+    },
+    {
+      "id": "none",
+      "name": "none",
+      "text": "None/Independent"
+    },
+    {
+      "id": "other",
+      "name": "other",
+      "text": "Other"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "flow_type": "generator",
+  "flow_name": "pdf_generator",
+  "status": "released",
+  "parameter_list": {
+    "input_data_list": "pdf_data",
+    "output_flow_name": "pdf_@gen.id",
+    "output_flow_type": "template"
+  },
+  "rows": [
+    {
+      "type": "begin_template",
+      "name": "pdf",
+      "value": "pdf",
+      "action_list": "completed | emit: completed;\nuncompleted | emit: uncompleted;",
+      "exclude_from_translation": true,
+      "comments": "completed | emit: completed;\nuncompleted | emit: uncompleted;"
+    },
+    {
+      "name": "data",
+      "value": "pdf",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "pdf_id",
+      "value": "@gen.id",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template"
+    }
+  ]
+}

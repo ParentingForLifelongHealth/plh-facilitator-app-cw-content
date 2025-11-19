@@ -1,0 +1,159 @@
+{
+  "flow_type": "template",
+  "flow_name": "edit_parent_group",
+  "status": "released",
+  "rows": [
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "title_label",
+      "value": "Edit Caregiver Group"
+    },
+    {
+      "type": "text",
+      "value": "group number: @fields.current_group_no",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": "uncompleted | emit: uncompleted; ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "title",
+      "value": "@local.title_label",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "confirm_exit",
+      "value": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "text_group_name",
+      "value": "@global.group_name",
+      "parameter_list": "style: emphasised; text_align:center"
+    },
+    {
+      "type": "text_box",
+      "name": "group_name",
+      "value": "@fields.current_group_name",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "current_delivery_type"
+    },
+    {
+      "name": "current_age_group"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local: current_age_group: @items[0].age_group;\ndata_changed | set_local: current_delivery_type: @items[0].delivery_type;",
+      "parameter_list": "filter: (@item.id == @fields.current_group_id)"
+    },
+    {
+      "name": "text_postfix",
+      "value": ".text"
+    },
+    {
+      "name": "temp_1",
+      "value": "tag_data.@local.current_age_group@local.text_postfix"
+    },
+    {
+      "name": "temp_2",
+      "value": "delivery_data.@local.current_delivery_type@local.text_postfix"
+    },
+    {
+      "name": "current_age_group_text",
+      "value": "@data.@local.temp_1"
+    },
+    {
+      "name": "current_content_package_text",
+      "value": "@data.@local.temp_2"
+    },
+    {
+      "type": "text",
+      "name": "age_group",
+      "value": "Age group: @local.current_age_group_text",
+      "style_list": "color: gray;margin-top: -5px; margin-bottom: 12px; font-size: 14px;"
+    },
+    {
+      "type": "text",
+      "name": "delivery_type",
+      "value": "Delivery type: @local.current_content_package_text ",
+      "style_list": "color: gray;margin-top: -20px; margin-bottom: 12px; font-size: 14px;"
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "text_group_name",
+      "value": "@global.group_status",
+      "parameter_list": "style: emphasised; text_align:center"
+    },
+    {
+      "type": "text",
+      "value": "@global.group_status_text",
+      "parameter_list": "text_align:center",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "button",
+      "value": "@global.close_button",
+      "action_list": "click | pop_up: archive_group;",
+      "parameter_list": "button_align: center; style: alternative flexible"
+    },
+    {
+      "type": "text",
+      "name": "text_group_name",
+      "value": "@global.group_delete",
+      "parameter_list": "style: emphasised; text_align:center"
+    },
+    {
+      "type": "text",
+      "value": "@global.group_delete_text",
+      "parameter_list": "text_align:center",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "button",
+      "value": "@global.delete_group_button",
+      "action_list": "click | pop_up: delete_group;",
+      "parameter_list": "button_align: center; style: alternative flexible"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "sticky: bottom;",
+      "style_list": "padding: 12px 24px;",
+      "condition": "@fields.current_group_no <> \"new\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "button",
+      "name": "save",
+      "value": "Save",
+      "action_list": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name;\nclick | set_field | current_group_name : @local.group_name;\nclick | emit: completed;\nclick | emit: server_sync;",
+      "parameter_list": "variant: card; "
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    }
+  ]
+}

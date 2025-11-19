@@ -1,0 +1,118 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile_id",
+  "status": "released",
+  "rows": [
+    {
+      "type": "begin_template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": "uncompleted | emit: uncompleted; "
+    },
+    {
+      "name": "section_id",
+      "value": "id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "section_data",
+      "value": "profile_section"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "name": "user_id",
+      "value": "@fields._app_user_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "sync_latest",
+      "value": "@fields._server_sync_latest",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "sync_status",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "syncing",
+      "value": "Syncing..."
+    },
+    {
+      "name": "sync_button_clicked",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "copy",
+      "value": "Copy code"
+    },
+    {
+      "name": "copied",
+      "value": "Copied!"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "has_ever_been_synced",
+      "condition": "@local.sync_latest",
+      "parameter_list": "style: column"
+    },
+    {
+      "type": "qr_code",
+      "value": "@local.user_id"
+    },
+    {
+      "type": "select_text",
+      "name": "user_code",
+      "value": "@local.user_id",
+      "parameter_list": "copy_text: @local.copy;\ncopied_text: @local.copied"
+    },
+    {
+      "type": "text",
+      "name": "last_sync_text",
+      "value": "Last sync at: @local.sync_latest"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "has_never_been_synced",
+      "condition": "!@local.sync_latest",
+      "parameter_list": "style: column"
+    },
+    {
+      "type": "text",
+      "name": "not_synced_text",
+      "value": "This device has never been synced. Sync to reveal your code."
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_bottom",
+      "parameter_list": "sticky: bottom",
+      "style_list": "padding: 12px 24px;"
+    },
+    {
+      "type": "button",
+      "name": "sync_button",
+      "value": "Sync now",
+      "action_list": "click | set_local: sync_status: @local.syncing;\nclick | set_local: sync_status: @local.syncing;\nclick | emit: force_reprocess;\nclick | emit: server_sync;\nclick | set_local: sync_status: ;\nclick | set_local: sync_button_clicked: true;\nclick | emit: force_reprocess;",
+      "condition": "!@local.sync_status",
+      "parameter_list": "variant: card"
+    },
+    {
+      "type": "button",
+      "name": "sync_button_disabled",
+      "value": "@local.syncing",
+      "condition": "@local.sync_status",
+      "parameter_list": "variant: card; \ndisabled:true"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

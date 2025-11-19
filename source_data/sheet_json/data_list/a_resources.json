@@ -1,0 +1,38 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "a_resources",
+  "status": "released",
+  "data_list_name": "a_resources",
+  "rows": [
+    {
+      "id": "facilitation_40",
+      "foreign_key": "facilitation_4",
+      "media_type": "pdf",
+      "media_asset": "aecp_pap"
+    },
+    {
+      "id": "facilitation_50",
+      "foreign_key": "facilitation_5",
+      "media_type": "pdf",
+      "media_asset": "child_development_domain_pap"
+    },
+    {
+      "id": "facilitation_51",
+      "foreign_key": "facilitation_5",
+      "media_type": "pdf",
+      "media_asset": "child_development_stages_pap"
+    },
+    {
+      "id": "facilitation_52",
+      "foreign_key": "facilitation_5",
+      "media_type": "pdf",
+      "media_asset": "children_with_disabilities_pap"
+    },
+    {
+      "id": "module_1_prepare0",
+      "foreign_key": "module_1_prepare",
+      "media_type": "pdf",
+      "media_asset": "one_on_one_time_development_stages_pap"
+    }
+  ]
+}

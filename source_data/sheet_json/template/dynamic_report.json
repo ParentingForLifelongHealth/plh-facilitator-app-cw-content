@@ -1,0 +1,166 @@
+{
+  "flow_type": "template",
+  "flow_name": "dynamic_report",
+  "status": "released",
+  "rows": [
+    {
+      "name": "read_only",
+      "value": false
+    },
+    {
+      "name": "type",
+      "value": " "
+    },
+    {
+      "type": "text",
+      "value": "Date of session"
+    },
+    {
+      "type": "date_time_picker",
+      "name": "session_date",
+      "parameter_list": "type: date"
+    },
+    {
+      "name": "session_date_valid",
+      "value": "!!@local.session_date"
+    },
+    {
+      "type": "text",
+      "name": "validation_text",
+      "condition": "!@local.session_date_valid",
+      "style_list": "color: #FF0000;\nfont-size: 14px; "
+    },
+    {
+      "type": "text",
+      "value": "Parent's Attendance"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.parents",
+      "parameter_list": "filter: @item.group_id == @field.current_group_no && @item.archived == false"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "name": "first_name",
+      "value": " ",
+      "exclude_from_translation": true,
+      "comments": "This makes sure undefined isnt listed"
+    },
+    {
+      "name": "last_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_name",
+      "value": "@item.first_name",
+      "condition": "@item.first_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name",
+      "value": "@item.last_name",
+      "condition": "@item.last_name",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@local.first_name @local.last_name",
+      "exclude_from_translation": true,
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "simple_checkbox  ",
+      "value": "@item.@fields.current_report_id",
+      "action_list": "changed | set_item| @fields.current_report_id: this.value;",
+      "parameter_list": "show_icons: false; variant: ios;",
+      "exclude_from_translation": true,
+      "comments": "Need to reset this to false"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "name": "session_rating_placeholder",
+      "value": "Select how your session went"
+    },
+    {
+      "type": "text",
+      "value": "How did your session go?"
+    },
+    {
+      "type": "combo_box",
+      "name": "session_rating",
+      "action_list": "changed | set_local : @item.name: this.value;",
+      "parameter_list": "placeholder:@local.session_rating_placeholder; \nanswer_list: @data.rating_answer;"
+    },
+    {
+      "name": "session_rating_valid",
+      "value": "!!@local.session_rating"
+    },
+    {
+      "type": "text",
+      "condition": "!@local.session_rating_valid",
+      "style_list": "color: #FF0000;\nfont-size: 14px; "
+    },
+    {
+      "name": "set_challenges"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "!!@local.session_rating && (@local.session_rating<= 3)"
+    },
+    {
+      "type": "text",
+      "value": "What challenges did you face in delivering the session? Be specific."
+    },
+    {
+      "type": "text_box",
+      "name": "challenges",
+      "value": "@local.set_challenges"
+    },
+    {
+      "type": "text",
+      "condition": "!@local.challenges_valid",
+      "style_list": "color: #FF0000;\nfont-size: 14px; "
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "name": "challenges_valid",
+      "value": "!(!!@local.session_rating && (@local.session_rating<= 3) && !@local.challenges)"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : session_date: @items[0].session_date;\ndata_changed | set_local : session_rating: @items[0].session_rating;\ndata_changed | set_local : set_challenges: @items[0].challenges;",
+      "parameter_list": "filter: @item.id == @fields.current_report_no;\nlimit: 1;\n"
+    },
+    {
+      "name": "valid",
+      "value": "@local.session_date_valid && @local.session_rating_valid && @local.challenges_valid"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "sticky: bottom",
+      "style_list": "padding: 12px 24px"
+    },
+    {
+      "type": "button",
+      "name": "save",
+      "value": "Submit",
+      "action_list": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\ntype: @local.type,\npending: FALSE,\nsession_date: @local.session_date,\nsession_rating: @local.session_rating,\nchallenges: @local.challenges;\nclick | emit: completed;\nclick | emit: server_sync;",
+      "parameter_list": "disabled: !@local.valid;"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

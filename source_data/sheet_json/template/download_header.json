@@ -1,0 +1,28 @@
+{
+  "flow_type": "template",
+  "flow_name": "download_header",
+  "status": "released",
+  "rows": [
+    {
+      "type": "begin_display_group",
+      "name": "dg_header"
+    },
+    {
+      "name": "asset"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "style_list": "flex:1"
+    },
+    {
+      "type": "round_button",
+      "name": "download_button",
+      "action_list": "click | save_to_device: @local.asset",
+      "parameter_list": "icon_src: download"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

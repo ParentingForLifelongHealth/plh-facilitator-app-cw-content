@@ -1,0 +1,17 @@
+{
+  "flow_type": "global",
+  "flow_name": "misc_global_cw",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "welcome",
+      "value": "Welcome"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "continue",
+      "value": "Continue"
+    }
+  ]
+}

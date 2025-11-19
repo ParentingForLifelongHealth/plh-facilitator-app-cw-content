@@ -1,0 +1,92 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_intro",
+  "status": "released",
+  "rows": [
+    {
+      "name": "article_id",
+      "value": "test"
+    },
+    {
+      "name": "is_module",
+      "value": false,
+      "comments": "Define which datalist to use"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_intros",
+      "value": "@data.m_intro",
+      "condition": "!!@local.is_module"
+    },
+    {
+      "type": "begin_template",
+      "name": "intro_element",
+      "value": "intro_element",
+      "condition": "@item.foreign_key == @local.article_id"
+    },
+    {
+      "name": "image",
+      "value": "@item.image_asset"
+    },
+    {
+      "name": "media_type",
+      "value": "@item.media_type"
+    },
+    {
+      "name": "media_asset",
+      "value": "@item.media_asset"
+    },
+    {
+      "name": "text",
+      "value": "@item.text_1"
+    },
+    {
+      "name": "text_2",
+      "value": "@item.text_2"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_intros",
+      "value": "@data.a_intro",
+      "condition": "!@local.is_module"
+    },
+    {
+      "type": "begin_template",
+      "name": "intro_element",
+      "value": "intro_element",
+      "condition": "@item.foreign_key == @local.article_id"
+    },
+    {
+      "name": "image",
+      "value": "@item.image_asset"
+    },
+    {
+      "name": "media_type",
+      "value": "@item.media_type"
+    },
+    {
+      "name": "media_asset",
+      "value": "@item.media_asset"
+    },
+    {
+      "name": "text",
+      "value": "@item.text_1"
+    },
+    {
+      "name": "text_2",
+      "value": "@item.text_2"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

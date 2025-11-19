@@ -1,0 +1,203 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile_groups",
+  "status": "released",
+  "rows": [
+    {
+      "name": "create_new_group",
+      "value": "Create a Caregiver Group",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "title",
+      "value": "Groups",
+      "parameter_list": "variant: page_banner",
+      "exclude_from_translation": false
+    },
+    {
+      "name": "module_count",
+      "value": 0
+    },
+    {
+      "name": "groups_count",
+      "value": 0
+    },
+    {
+      "type": "data_items",
+      "name": "get_module_count",
+      "value": "@data.modules",
+      "action_list": "data_changed | set_local : module_count: @items.length;"
+    },
+    {
+      "type": "data_items",
+      "name": "get_groups_count",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local : groups_count: @items.length;",
+      "parameter_list": "filter: !@item.archived"
+    },
+    {
+      "type": "text",
+      "value": "🚀 Once you create a parent group, it will appear here.",
+      "condition": "@local.groups_count == 0"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "@local.groups_count !== 0"
+    },
+    {
+      "type": "title",
+      "name": "group_desc",
+      "value": "@global.active_group_title",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.parent_groups",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "parent_group",
+      "value": "parent_group",
+      "condition": "!@item.archived",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "group_id",
+      "value": "@item.id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "group_name",
+      "value": "@item.text",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "group_no",
+      "value": "@item.name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "content_package",
+      "value": "@item.content_package"
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_data_items",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "spacer_1",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "test",
+      "name": "spacer_2",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.parent_groups",
+      "parameter_list": "filter: @item.hidden == true;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "title",
+      "value": "@global.archived_group_title",
+      "condition": "@item._first",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "begin_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "text_@item.id",
+      "value": "@item.text",
+      "exclude_from_translation": true,
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "round_button",
+      "name": "button_unarchive_@item.id",
+      "action_list": "click | set_data |\n_list_id: parent_groups,\n_id: @item.id,\narchived: FALSE,\nhidden: FALSE;",
+      "parameter_list": "variant: no-background; \nicon_src: images/icons/unarchive.svg;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "value": "module_progress"
+    },
+    {
+      "name": "group_id",
+      "value": "@item.name"
+    },
+    {
+      "name": "current_package",
+      "value": "@item.content_package"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "name": "archive_date",
+      "value": "@calc((() => {const d = new Date(@item.archived_date);\n    const month = d.toLocaleString('default', { month: 'short' });\n    const year = d.getFullYear();\n    return `${month} ${year}`;\n  })())",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@global.archived_date_prefix @local.archive_date"
+    },
+    {
+      "type": "end_data_items",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "sticky: bottom;",
+      "exclude_from_translation": true,
+      "style_list": "padding: 12px 24px;"
+    },
+    {
+      "name": "no_of_parent_groups",
+      "value": "+@fields.no_of_parent_groups",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "button",
+      "name": "add_group",
+      "value": "@local.create_new_group",
+      "action_list": "click | set_field: no_of_parent_groups: @local.no_of_parent_groups + 1; \nclick | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1;\nclick | set_field: current_group_no: @local.no_of_parent_groups;\nclick | set_field: current_group_name:  ;\nclick | go_to: add_parent_group;",
+      "parameter_list": "button_align: centre;",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    }
+  ]
+}

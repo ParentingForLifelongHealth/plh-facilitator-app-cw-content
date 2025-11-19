@@ -1,0 +1,55 @@
+{
+  "flow_type": "template",
+  "flow_name": "add_one",
+  "status": "released",
+  "rows": [
+    {
+      "name": "show_count",
+      "value": true
+    },
+    {
+      "type": "set_field",
+      "name": "current_follow_ups_number",
+      "value": "@calc(Number(@field.current_follow_ups_number) +1)"
+    },
+    {
+      "type": "begin_display_group",
+      "condition": "@local.show_count"
+    },
+    {
+      "type": "title",
+      "name": "text_no_follow_up",
+      "value": "No Follow ups",
+      "condition": "@field.current_follow_ups_number == 0"
+    },
+    {
+      "type": "text",
+      "name": "text_first_time",
+      "value": "All your parents are engaged–keep it up!",
+      "parameter_list": "style: contextual",
+      "condition": "@field.current_follow_ups_number == 0"
+    },
+    {
+      "type": "title",
+      "name": "title_follow_up_2",
+      "value": "@field.current_follow_ups_number Follow up",
+      "condition": "(@field.current_follow_ups_number ==1)"
+    },
+    {
+      "type": "title",
+      "name": "title_follow_up_3",
+      "value": "@field.current_follow_ups_number Follow ups",
+      "condition": "(@field.current_follow_ups_number > 1)"
+    },
+    {
+      "type": "button",
+      "name": "show more",
+      "value": "Show More",
+      "parameter_list": "variant: card",
+      "condition": "(@field.current_follow_ups_number > 2)"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

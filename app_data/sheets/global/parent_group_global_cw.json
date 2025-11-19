@@ -72,17 +72,23 @@
     {
       "type": "declare_global_constant",
       "name": "parent_count_text",
-      "value": "Parents",
+      "value": "Caregivers",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "parent_details",
+      "value": "Caregiver Details",
+      "_translations": {
+        "value": {}
       }
     },
     {
       "type": "declare_global_constant",
       "name": "add_parent",
-      "value": "Caregiver Profile",
+      "value": "Add Caregiver",
       "_translations": {
         "value": {}
       }

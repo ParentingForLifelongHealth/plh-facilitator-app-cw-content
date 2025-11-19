@@ -1,0 +1,33 @@
+{
+  "flow_type": "generator",
+  "flow_name": "gen_library_list",
+  "status": "released",
+  "parameter_list": {
+    "input_data_list": "home_screen_section_data",
+    "output_flow_name": "library_{@gen.id}",
+    "output_flow_type": "template"
+  },
+  "rows": [
+    {
+      "type": "begin_template",
+      "name": "library_list",
+      "value": "library_list",
+      "action_list": "uncompleted | emit: uncompleted",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "library_id",
+      "value": "@gen.id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "display_title",
+      "value": "@gen.title",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    }
+  ]
+}

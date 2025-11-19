@@ -1,0 +1,127 @@
+{
+  "flow_type": "template",
+  "flow_name": "home_screen_carousel",
+  "status": "released",
+  "rows": [
+    {
+      "type": "begin_items",
+      "value": "@data.home_screen_section"
+    },
+    {
+      "name": "section_packages",
+      "value": "ALL",
+      "condition": "!@item.tag_list || !@global.has_multiple_content_packages",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "condition_header",
+      "value": true,
+      "condition": "!@item.tag_list || !@global.has_multiple_content_packages"
+    },
+    {
+      "name": "section_packages",
+      "value": "@item.tag_list",
+      "condition": "!!@item.tag_list && @global.has_multiple_content_packages"
+    },
+    {
+      "name": "condition_header",
+      "value": "@calc(@local.section_packages.includes(@fields.current_package))",
+      "condition": "!!@item.tag_list && @global.has_multiple_content_packages"
+    },
+    {
+      "type": "title",
+      "name": "title_@item.id",
+      "value": "@item.title",
+      "condition": "@local.condition_header",
+      "comments": "Only show the header if this home_screen_section is relevant to this package"
+    },
+    {
+      "name": "this_section",
+      "value": "@item.id"
+    },
+    {
+      "type": "begin_carousel",
+      "parameter_list": "centred_slides: false"
+    },
+    {
+      "type": "begin_items",
+      "value": "@data.article_data"
+    },
+    {
+      "name": "sections",
+      "value": "NONE",
+      "condition": "!@item.home_screen_section_list",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "condition_section",
+      "value": false,
+      "condition": "!@item.home_screen_section_list",
+      "comments": "If no home_screen_section is provided, this will not appear on the homescreen"
+    },
+    {
+      "name": "sections",
+      "value": "@item.home_screen_section_list",
+      "condition": "!!@item.home_screen_section_list"
+    },
+    {
+      "name": "condition_section",
+      "value": "@calc(@local.sections.includes(@local.this_section))",
+      "condition": "!!@item.home_screen_section_list"
+    },
+    {
+      "name": "packages",
+      "value": "ALL",
+      "condition": "!@item.tag_list || !@global.has_multiple_content_packages",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "condition_package",
+      "value": true,
+      "condition": "!@item.tag_list || !@global.has_multiple_content_packages",
+      "comments": "Content without a tag is assumed to apply to all tags"
+    },
+    {
+      "name": "packages",
+      "value": "@item.tag_list",
+      "condition": "!!@item.tag_list && @global.has_multiple_content_packages"
+    },
+    {
+      "name": "condition_package",
+      "value": "@calc(@local.packages.includes(@fields.current_package))",
+      "condition": "!!@item.tag_list && @global.has_multiple_content_packages"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_@item.id",
+      "parameter_list": "style:column",
+      "condition": "@local.condition_section && @local.condition_package"
+    },
+    {
+      "type": "button",
+      "value": "@item.title",
+      "action_list": "click | go_to: article_@item.id",
+      "parameter_list": "variant: card-portrait;\nimage_asset: @item.icon_asset;"
+    },
+    {
+      "type": "text",
+      "name": "debug_condition",
+      "value": "Sections: @local.sections\nSection condition: @local.condition_section\nPackages: @local.packages\nPackages condition: @local.condition_package",
+      "condition": false,
+      "exclude_from_translation": true,
+      "comments": "Use for debugging"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_items"
+    },
+    {
+      "type": "end_carousel"
+    },
+    {
+      "type": "end_items"
+    }
+  ]
+}

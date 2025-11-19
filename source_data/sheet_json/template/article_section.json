@@ -1,0 +1,84 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_section",
+  "status": "released",
+  "rows": [
+    {
+      "name": "article_id",
+      "value": "test",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "is_module",
+      "value": false,
+      "exclude_from_translation": true,
+      "comments": "Define which datalist to use"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_sections",
+      "value": "@data.m_sections",
+      "condition": "!!@local.is_module",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "section_element",
+      "value": "section_element",
+      "condition": "@item.foreign_key == @local.article_id",
+      "style_list": "margin-top: 12px",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "title",
+      "value": "@item.title",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "text",
+      "value": "@item.text",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_data_items",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_sections",
+      "value": "@data.a_sections",
+      "condition": "!@local.is_module",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "section_element",
+      "value": "section_element",
+      "condition": "@item.foreign_key == @local.article_id",
+      "style_list": "margin-top: 12px",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "title",
+      "value": "@item.title",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "text",
+      "value": "@item.text",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_data_items",
+      "exclude_from_translation": true
+    }
+  ]
+}

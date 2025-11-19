@@ -1,0 +1,790 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "m_messages",
+  "status": "released",
+  "data_list_name": "m_messages",
+  "rows": [
+    {
+      "id": "module_1_lesson0",
+      "foreign_key": "module_1_lesson0",
+      "text::eng": "👋 Hi there! Ready for your first parenting story? Spending quality time with your children makes them feel secure and loved. "
+    },
+    {
+      "id": "module_1_lesson1",
+      "foreign_key": "module_1_lesson1",
+      "text::eng": "Let’s see how @data.characters.f1_father.name spends one-on-one time with @data.characters.f1_son_5.name. "
+    },
+    {
+      "id": "module_1_lesson2",
+      "foreign_key": "module_1_lesson2",
+      "text::eng": "Let’s see how @data.characters.f1_father.name spends one-on-one time with his teen son, @data.characters.f1_son_17.name. "
+    },
+    {
+      "id": "module_1_lesson3",
+      "foreign_key": "module_1_lesson3",
+      "text::eng": "💡Here are 3 things to try when you are spending one-on-one time with your children and your home activity for the week! "
+    },
+    {
+      "id": "module_1_lesson_yc0",
+      "foreign_key": "module_1_lesson_yc0",
+      "text::eng": "👋 Hi there! Ready for your first parenting story? Spending quality time with your children makes them feel secure and loved. "
+    },
+    {
+      "id": "module_1_lesson_yc1",
+      "foreign_key": "module_1_lesson_yc1",
+      "text::eng": "Let’s see how @data.characters.f1_father.name spends one-on-one time with @data.characters.f1_son_5.name. "
+    },
+    {
+      "id": "module_1_lesson_yc2",
+      "foreign_key": "module_1_lesson_yc2",
+      "text::eng": "💡Here are 3 things to try when you are spending one-on-one time with your children and your home activity for the week! "
+    },
+    {
+      "id": "module_1_lesson_teen0",
+      "foreign_key": "module_1_lesson_teen0",
+      "text::eng": "👋 Hi there! Ready for your first parenting story? Spending quality time with your children makes them feel secure and loved. "
+    },
+    {
+      "id": "module_1_lesson_teen1",
+      "foreign_key": "module_1_lesson_teen1",
+      "text::eng": "Let’s see how @data.characters.f1_father.name spends one-on-one time with his teen son, @data.characters.f1_son_17.name. "
+    },
+    {
+      "id": "module_1_lesson_teen2",
+      "foreign_key": "module_1_lesson_teen2",
+      "text::eng": "💡Here are 3 things to try when you are spending one-on-one time with your children and your home activity for the week! "
+    },
+    {
+      "id": "module_1_in_person0",
+      "foreign_key": "module_1_in_person3",
+      "title::eng": "Send this message after your in-person session",
+      "text::eng": "Thank you so much for being part of today’s session 🤗🌸\nIt was wonderful to learn and share together.\n\nHere are the resources we went through, in case you’d like to revisit them at home:"
+    },
+    {
+      "id": "module_1_in_person1",
+      "foreign_key": "module_1_in_person3",
+      "title::eng": "Video Story 1 (2-9) "
+    },
+    {
+      "id": "module_1_in_person2",
+      "foreign_key": "module_1_in_person3",
+      "title::eng": "Video Story 2 (10-17) "
+    },
+    {
+      "id": "module_1_in_person3",
+      "foreign_key": "module_1_in_person3",
+      "title::eng": "Summary of tips"
+    },
+    {
+      "id": "module_1_in_person_yc0",
+      "foreign_key": "module_1_in_person_yc3",
+      "title::eng": "Send this message after your in-person session",
+      "text::eng": "Thank you so much for being part of today’s session 🤗🌸\nIt was wonderful to learn and share together.\n\nHere are the resources we went through, in case you’d like to revisit them at home:"
+    },
+    {
+      "id": "module_1_in_person_yc1",
+      "foreign_key": "module_1_in_person_yc3",
+      "title::eng": "Video Story 1 (2-9) "
+    },
+    {
+      "id": "module_1_in_person_yc2",
+      "foreign_key": "module_1_in_person_yc3",
+      "title::eng": "Summary of tips"
+    },
+    {
+      "id": "module_1_in_person_teen0",
+      "foreign_key": "module_1_in_person_teen3",
+      "title::eng": "Send this message after your in-person session",
+      "text::eng": "Thank you so much for being part of today’s session 🤗🌸\nIt was wonderful to learn and share together.\n\nHere are the resources we went through, in case you’d like to revisit them at home:"
+    },
+    {
+      "id": "module_1_in_person_teen1",
+      "foreign_key": "module_1_in_person_teen3",
+      "title::eng": "Video Story 1 (10-17) "
+    },
+    {
+      "id": "module_1_in_person_teen2",
+      "foreign_key": "module_1_in_person_teen3",
+      "title::eng": "Summary of tips"
+    },
+    {
+      "id": "module_1_reminder_1 0",
+      "foreign_key": "module_1_reminder_1 0",
+      "title::eng": "Home practise reminder",
+      "text::eng": "Hey there! 👋 Just checking in with a friendly reminder to try this week’s home activity:\n\nSpend a few minutes of One-on-One Time with your child –no distractions, just the two of you!\n\nHere’s something to keep in mind:\nEven short moments of focused attention help your child feel truly seen and loved. It strengthens your bond and reminds them that what they do is important. 💖\n\nYou’re doing great! Keep it up!"
+    },
+    {
+      "id": "module_1_reminder_2 0",
+      "foreign_key": "module_1_reminder_2 0",
+      "title::eng": "Chat session reminder",
+      "text::eng": "Hello! I look forward to hearing how the rest of your week goes when we next meet on [ENTER DATE HERE]. Chat then!",
+      "guidance::eng": "Replace [ENTER DATE HERE] with the date of the chat session"
+    },
+    {
+      "id": "module_1_chat0",
+      "foreign_key": "module_1_chat0",
+      "title::eng": "Message 1: Welcome",
+      "text::eng": "Hello and thanks for being part of the @global.prog_name chat! I am thrilled to be able to chat together about how we can best support our children to grow up healthy and happy. Today, we are going to chat about spending One-on-One time with your children."
+    },
+    {
+      "id": "module_1_chat1",
+      "foreign_key": "module_1_chat1",
+      "title::eng": "Message 2: Introductions",
+      "text::eng": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is [INSERT NAME] and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message.",
+      "guidance::eng": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, [Insert Name]!” or “Great goal, [Insert Name]!”"
+    },
+    {
+      "id": "module_1_chat2",
+      "foreign_key": "module_1_chat2",
+      "title::eng": "Message 3: Ground rules",
+      "text::eng": "Thanks so much for sharing! To make this a safe space to communicate openly let’s make some ground rules for this chat group. Our first rule is that what is said in the group stays in the group. You need to know that this group is private.\nHere are some other examples to start us off:\n📱 Let me know if you need to miss a chat session.\n🩵 Accept each other. Everyone is different and has different experiences.\n💬 Share only what you feel comfortable sharing.\n❓ Feel free to ask questions!\n🔏 Respect the privacy of personal pictures and videos that are sent to the chat group. \n\nDoes anyone have any additional rules that they want to suggest?",
+      "guidance::eng": "Allow a couple minutes for parents to share. Praise suggestions and contributions. Make sure that everyone agrees on the ground rules."
+    },
+    {
+      "id": "module_1_chat3",
+      "foreign_key": "module_1_chat3",
+      "title::eng": "Message 4: Checking in on home activity",
+      "text::eng": "Have you had a chance to try spending One-on-One Time with your child?\nIf you did, give me a thumbs up! 👍🏽",
+      "guidance::eng": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
+    },
+    {
+      "id": "module_1_chat4",
+      "foreign_key": "module_1_chat4",
+      "title::eng": "Message 5: Voting on a challenge to discuss",
+      "text::eng": "If you gave a thumbs up — amazing! 🎉If you face some challenges during one-on-one time, that's completely normal. You’re not alone! Here are some common challenges caregivers have experienced. Vote for the one you’d like us to talk about together:\n\n1️⃣ I didn’t have enough time\n2️⃣ My child did not want to spend time with me\n3️⃣ All my child wanted to do was watch TV or play with a gadget\n4️⃣ My child wanted to do things I felt uncomfortable about"
+    },
+    {
+      "id": "module_1_chat5",
+      "foreign_key": "module_1_chat5",
+      "title::eng": "Message 6: Discussing solution",
+      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "guidance::eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges. "
+    },
+    {
+      "id": "module_1_chat6",
+      "foreign_key": "module_1_chat6",
+      "title::eng": "Message 7: Open Feedback",
+      "text::eng": "Thanks for discussing that challenge with me! Does anyone have any other challenges you’d like us to troubleshoot together? Feel free to share — we’re here to support each other!"
+    },
+    {
+      "id": "module_1_chat7",
+      "foreign_key": "module_1_chat7",
+      "title::eng": "Message 8: Take a Pause ",
+      "text::eng": "Before we end today’s session let’s take a pause together. This is something you can do whenever you are feeling stressed or overwhelmed. I really appreciate everyone’s contribution today. I’ll be in touch throughout the week with reminders about what’s coming next. Until then, have a peaceful and happy day!"
+    },
+    {
+      "id": "module_1_chat_inperson0",
+      "foreign_key": "module_1_chat_inperson0",
+      "title::eng": "Message 1: Welcome",
+      "text::eng": "Hello and thanks for being part of the@global.prog_name chat! I am thrilled to be able to chat together about how we can best support our children to grow up healthy and happy. Today, we are going to chat about spending One-on-One time with your children."
+    },
+    {
+      "id": "module_1_chat_inperson1",
+      "foreign_key": "module_1_chat_inperson1",
+      "title::eng": "Message 2: Introductions",
+      "text::eng": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is [INSERT NAME] and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message.",
+      "guidance::eng": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, [Insert Name]!” or “Great goal, [Insert Name]!”"
+    },
+    {
+      "id": "module_1_chat_inperson2",
+      "foreign_key": "module_1_chat_inperson2",
+      "title::eng": "Message 3: Ground rules",
+      "text::eng": "Thanks so much for sharing! To make this a safe space to communicate openly let’s look at the ground rules for this chat group again. ",
+      "guidance::eng": "Send the image of ground rules from your in-person session."
+    },
+    {
+      "id": "module_1_chat_inperson3",
+      "foreign_key": "module_1_chat_inperson3",
+      "title::eng": "Message 4: Checking in on home activity",
+      "text::eng": "Have you had a chance to try spending One-on-One Time with your child?\nIf you did, give me a thumbs up! 👍🏽",
+      "guidance::eng": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
+    },
+    {
+      "id": "module_1_chat_inperson4",
+      "foreign_key": "module_1_chat_inperson4",
+      "title::eng": "Message 5: Voting on a challenge to discuss",
+      "text::eng": "If you gave a thumbs up — amazing! 🎉If you face some challenges during one-on-one time, that's completely normal. You’re not alone! Here are some common challenges caregivers have experienced. Vote for the one you’d like us to talk about together:\n\n1️⃣ I didn’t have enough time\n2️⃣ My child did not want to spend time with me\n3️⃣ All my child wanted to do was watch TV or play with a gadget\n4️⃣ My child wanted to do things I felt uncomfortable about"
+    },
+    {
+      "id": "module_1_chat_inperson5",
+      "foreign_key": "module_1_chat_inperson5",
+      "title::eng": "Message 6: Discussing solution",
+      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "guidance::eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
+    },
+    {
+      "id": "module_1_chat_inperson6",
+      "foreign_key": "module_1_chat_inperson6",
+      "title::eng": "Message 7: Open Feedback",
+      "text::eng": "Thanks for discussing that challenge with me! Does anyone have any other challenges you’d like us to troubleshoot together? Feel free to share — we’re here to support each other!"
+    },
+    {
+      "id": "module_1_chat_inperson7",
+      "foreign_key": "module_1_chat_inperson7",
+      "title::eng": "Message 8: Take a Pause ",
+      "text::eng": "Before we end today’s session let’s take a pause together. This is something you can do whenever you are feeling stressed or overwhelmed. I really appreciate everyone’s contribution today. I’ll be in touch throughout the week with reminders about what’s coming next. Until then, have a peaceful and happy day!"
+    },
+    {
+      "id": "module_2_lesson0",
+      "foreign_key": "module_2_lesson0",
+      "text::eng": "👋 Hey there! It’s time for another parenting story. Today’s story is about helping your children to manage their feelings. "
+    },
+    {
+      "id": "module_2_lesson1",
+      "foreign_key": "module_2_lesson1",
+      "text::eng": "Let’s look at a story that shows a child talking about emotions while they are spending one-on-one time with their parent"
+    },
+    {
+      "id": "module_2_lesson2",
+      "foreign_key": "module_2_lesson2",
+      "text::eng": "Let’s see a story of parents talking about a difficult emotion with their teen"
+    },
+    {
+      "id": "module_2_lesson3",
+      "foreign_key": "module_2_lesson3",
+      "text::eng": "💡Here are 5 things about how to talk about emotions with your children & your home activity for the week. "
+    },
+    {
+      "id": "module_2_lesson_yc0",
+      "foreign_key": "module_2_lesson_yc0",
+      "text::eng": "👋 Hey there! It’s time for another parenting story. Today’s story is about helping your children to manage their feelings. "
+    },
+    {
+      "id": "module_2_lesson_yc1",
+      "foreign_key": "module_2_lesson_yc1",
+      "text::eng": "Let’s look at a story that shows a child talking about emotions while they are spending one-on-one time with their parent"
+    },
+    {
+      "id": "module_2_lesson_yc2",
+      "foreign_key": "module_2_lesson_yc2",
+      "text::eng": "💡Here are 5 things about how to talk about emotions with your children & your home activity for the week. "
+    },
+    {
+      "id": "module_2_lesson_teen0",
+      "foreign_key": "module_2_lesson_teen0",
+      "text::eng": "👋 Hey there! It’s time for another parenting story. Today’s story is about helping your children to manage their feelings. "
+    },
+    {
+      "id": "module_2_lesson_teen1",
+      "foreign_key": "module_2_lesson_teen1",
+      "text::eng": "Let’s see a story of parents talking about a difficult emotion with their teen."
+    },
+    {
+      "id": "module_2_lesson_teen2",
+      "foreign_key": "module_2_lesson_teen2",
+      "text::eng": "💡Here are 5 things about how to talk about emotions with your children & your home activity for the week. "
+    },
+    {
+      "id": "module_2_reminder_1 0",
+      "foreign_key": "module_2_reminder_1 0",
+      "title::eng": "Home practise reminder",
+      "text::eng": "Hello! Remember this week’s home practice is to try to talk about emotions with your children during one-on-one time and other times during the week. \n\nTalking about emotions helps children learn that all feelings are okay—even the big or tricky ones. This makes it easier for them to understand themselves and talk to you about what they’re going through. 😊💬"
+    },
+    {
+      "id": "module_2_reminder_2 0",
+      "foreign_key": "module_2_reminder_2 0",
+      "title::eng": "Chat session reminder",
+      "text::eng": "Can you believe that a whole week has gone by? Our next chat session will be later at [INSERT DATE & TIME]. We will continue learning about the benefits of talking about emotions with our children. Chat soon! ",
+      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session"
+    },
+    {
+      "id": "module_2_chat0",
+      "foreign_key": "module_2_chat0",
+      "title::eng": "Message 1: Welcome",
+      "text::eng": "Welcome to Module 2 of @global.prog_name! How is everybody doing? Happy? Stressed? Angry? Annoyed? Peaceful? Whatever emotion you feel…it’s okay! Please feel free to share how you are feeling today.",
+      "guidance::eng": "Allow time for parents to share how they are feeling. You should also share how you are feeling. For example, “I am happy to be part of the chat today.”"
+    },
+    {
+      "id": "module_2_chat1",
+      "foreign_key": "module_2_chat1",
+      "title::eng": "Message 2: Checking in on home activity",
+      "text::eng": "Last time, we focused on helping children talk about their feelings.\nIf you found a moment to talk about emotions, whether during one-on-one time or another time in the week, give me a thumbs up! 👍🏽",
+      "guidance::eng": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
+    },
+    {
+      "id": "module_2_chat2",
+      "foreign_key": "module_2_chat2",
+      "title::eng": "Message 3: Voting on a challenge to discuss",
+      "text::eng": "Great job if you were able to give it a try! 🙌🏾 If starting conversations about emotions felt a bit tough, that’s totally understandable. Many parents and caregivers go through the same thing. Take a look at the challenges below and choose the one you’d like us to explore together:\n\n1️⃣ My child did not want to share their feelings \n2️⃣ I felt uncomfortable talking about my feelings\n3️⃣ I was afraid my child might think I am weak for sharing my own emotions\n4️⃣ I was too stressed or angry to share my emotions, I prefer to be alone when I feel like that. "
+    },
+    {
+      "id": "module_2_chat3",
+      "foreign_key": "module_2_chat3",
+      "title::eng": "Message 4: Discussing solution",
+      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "guidance::eng": "Replace [name challenge] with the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
+    },
+    {
+      "id": "module_2_chat4",
+      "foreign_key": "module_2_chat4",
+      "title::eng": "Message 5: Open Feedback",
+      "text::eng": "I appreciate you opening up about that! Are there any other challenging moments you’ve run into? You’re welcome to bring them up, this is a space where we can help each other out."
+    },
+    {
+      "id": "module_2_chat5",
+      "foreign_key": "module_2_chat5",
+      "title::eng": "Message 6: Take a Pause ",
+      "text::eng": "Before we end today’s chat session, let's take a pause together. Remember that this is something you can do whenever you are feeling stressed, or your children are annoying you. \n\nThank you. The work you have done today is hard work – but it’s also very valuable work. It will help you to manage your own stress and give your children the tools they need to manage theirs. Have a peaceful and happy day!"
+    },
+    {
+      "id": "module_3_lesson0",
+      "foreign_key": "module_3_lesson0",
+      "text::eng": "👋 Hey there! Welcome to Module 3 of @global.prog_name. Well done for making the time today. We will be chatting about how to help our children follow instructions. "
+    },
+    {
+      "id": "module_3_lesson1",
+      "foreign_key": "module_3_lesson1",
+      "text::eng": "Let’s look at a story that shows a parent giving specific and positive instructions to their teen: "
+    },
+    {
+      "id": "module_3_lesson2",
+      "foreign_key": "module_3_lesson2",
+      "text::eng": "Let’s see a story of parents giving praise to their child for following instructions: "
+    },
+    {
+      "id": "module_3_lesson3",
+      "foreign_key": "module_3_lesson3",
+      "text::eng": "Now let’s move on to the parenting tip. Here are 3 steps to help you to get your children to follow your instructions more often:  "
+    },
+    {
+      "id": "module_3_lesson_yc0",
+      "foreign_key": "module_3_lesson_yc0",
+      "text::eng": "👋 Hey there! Welcome to Module 3 of @global.prog_name. Well done for making the time today. We will be chatting about how to help our children follow instructions. "
+    },
+    {
+      "id": "module_3_lesson_yc1",
+      "foreign_key": "module_3_lesson_yc1",
+      "text::eng": "Let’s see a story of parents giving praise to their child for following instructions: "
+    },
+    {
+      "id": "module_3_lesson_yc2",
+      "foreign_key": "module_3_lesson_yc2",
+      "text::eng": "Now let’s move on to the parenting tip. Here are 3 steps to help you to get your children to follow your instructions more often:  "
+    },
+    {
+      "id": "module_3_lesson_teen0",
+      "foreign_key": "module_3_lesson_teen0",
+      "text::eng": "👋 Hey there! Welcome to Module 3 of @global.prog_name. Well done for making the time today. We will be chatting about how to help our children follow instructions. "
+    },
+    {
+      "id": "module_3_lesson_teen1",
+      "foreign_key": "module_3_lesson_teen1",
+      "text::eng": "Let’s look at a story that shows a parent giving specific and positive instructions to their teen: "
+    },
+    {
+      "id": "module_3_lesson_teen2",
+      "foreign_key": "module_3_lesson_teen2",
+      "text::eng": "Now let’s move on to the parenting tip. Here are 3 steps to help you to get your children to follow your instructions more often:  "
+    },
+    {
+      "id": "module_3_reminder_1 0",
+      "foreign_key": "module_3_reminder_1 0",
+      "title::eng": "Home practise reminder",
+      "text::eng": "Hello! Keep spending 5 minutes of one-on-one time with your child every day. Remember to practice keeping your instructions positive, realistic, and specific and to praise your children for following instructions. \n\nSome of things you can praise your child for are playing quietly, talking respectfully to others, and helping with chores around the house. \n\nThank you for your commitment and dedication to your children!"
+    },
+    {
+      "id": "module_3_reminder_2 0",
+      "foreign_key": "module_3_reminder_2 0",
+      "title::eng": "Chat session reminder",
+      "text::eng": "Hello! Can you believe that another week has gone by? Our next chat session will be later at [INSERT DATE & TIME]. We will continue chatting about how to get your children to follow instructions. Chat soon!",
+      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session"
+    },
+    {
+      "id": "module_3_chat0",
+      "foreign_key": "module_3_chat0",
+      "title::eng": "Message 1: Welcome",
+      "text::eng": "Welcome to Module 3 of @global.prog_name! Well done for making the time today. How is everybody doing? I am feeling [INSERT EMOTION]. Anyone else want to share?",
+      "guidance::eng": "Replace [INSERT EMOTION] with what you are feeling.Allow time for parents to share how they are feeling. "
+    },
+    {
+      "id": "module_3_chat1",
+      "foreign_key": "module_3_chat1",
+      "title::eng": "Message 2: Checking in on home activity",
+      "text::eng": "How did your home practice go this week? As a reminder, for home practice you were going to practice giving specific, realistic, and positive instructions and praise your children when they followed an instruction. Give me a 👍🏽if you were able to give it a try!",
+      "guidance::eng": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
+    },
+    {
+      "id": "module_3_chat2",
+      "foreign_key": "module_3_chat2",
+      "title::eng": "Message 3: Voting on a challenge to discuss",
+      "text::eng": "Awesome if you had a chance to try it out! 🙌🏾 If giving clear instructions or remembering to praise your child feels a bit challenging, you’re not alone. Many caregivers find this takes practice. Check out the challenges below and pick the one you’d like us to talk through together:\n\n1️⃣ My child did not follow my instructions, even when I used the tips. \n2️⃣ I forgot to praise my child. \n3️⃣ I shouted at my child when they behaved negatively instead of giving them a positive instruction for what they should do.\n4️⃣ It is hard to remember to use positive words when giving instructions."
+    },
+    {
+      "id": "module_3_chat3",
+      "foreign_key": "module_3_chat3",
+      "title::eng": "Message 4: Discussing solution",
+      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "guidance::eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible challenges and solutions."
+    },
+    {
+      "id": "module_3_chat4",
+      "foreign_key": "module_3_chat4",
+      "title::eng": "Message 5: Open Feedback",
+      "text::eng": "Thanks for sharing that! Have you come across any other difficult situations lately? Feel free to share, this is a space where we can support one another."
+    },
+    {
+      "id": "module_3_chat5",
+      "foreign_key": "module_3_chat5",
+      "title::eng": "Message 6: Take a Pause ",
+      "text::eng": "Before we end today’s module, let's take a pause together. Remember that this is something you can do whenever you are feeling stressed, or your children are annoying you.\n\nThank you for working as hard as you do as parents. The commitment you are showing to improving the lives of your children just by being here is worth the final note of praise in our module today: Truly well done.",
+      "asset_type": "audio"
+    },
+    {
+      "id": "module_4_lesson0",
+      "foreign_key": "module_4_lesson0",
+      "text::eng": "👋 Welcome to Module 4 of @global.prog_name! Can you believe it that we are already more than halfway through the programme? Well done for making it this far! Today we will be chatting about how to keep our children safe by creating household rules and daily routines."
+    },
+    {
+      "id": "module_4_lesson1",
+      "foreign_key": "module_4_lesson1",
+      "text::eng": "Let’s look at a story about parents making a rule about tablet use with their teen: "
+    },
+    {
+      "id": "module_4_lesson2",
+      "foreign_key": "module_4_lesson2",
+      "text::eng": "Let’s see a story of parents setting routines for bedtime: "
+    },
+    {
+      "id": "module_4_lesson3",
+      "foreign_key": "module_4_lesson3",
+      "text::eng": "Now let’s move on to today’s parent tip. Here are 4 steps you can take to help your children follow household rules and routines:  "
+    },
+    {
+      "id": "module_4_lesson_yc0",
+      "foreign_key": "module_4_lesson_yc0",
+      "text::eng": "👋 Welcome to Module 4 of @global.prog_name! Can you believe it that we are already more than halfway through the programme? Well done for making it this far! Today we will be chatting about how to keep our children safe by creating household rules and daily routines."
+    },
+    {
+      "id": "module_4_lesson_yc1",
+      "foreign_key": "module_4_lesson_yc1",
+      "text::eng": "Let’s look at a story about parents making a rule about playing soccerball use with their child: "
+    },
+    {
+      "id": "module_4_lesson_yc2",
+      "foreign_key": "module_4_lesson_yc2",
+      "text::eng": "Let’s see a story of parents setting routines for bedtime: "
+    },
+    {
+      "id": "module_4_lesson_yc3",
+      "foreign_key": "module_4_lesson_yc3",
+      "text::eng": "Now let’s move on to today’s parent tip. Here are 4 steps you can take to help your children follow household rules and routines:  "
+    },
+    {
+      "id": "module_4_lesson_teen0",
+      "foreign_key": "module_4_lesson_teen0",
+      "text::eng": "👋 Welcome to Module 4 of @global.prog_name! Can you believe it that we are already more than halfway through the programme? Well done for making it this far! Today we will be chatting about how to keep our children safe by creating household rules and daily routines."
+    },
+    {
+      "id": "module_4_lesson_teen1",
+      "foreign_key": "module_4_lesson_teen1",
+      "text::eng": "Let’s look at a story about parents making a rule about tablet use with their teen: "
+    },
+    {
+      "id": "module_4_lesson_teen2",
+      "foreign_key": "module_4_lesson_teen2",
+      "text::eng": "Now let’s move on to today’s parent tip. Here are 4 steps you can take to help your children follow household rules and routines:  "
+    },
+    {
+      "id": "module_4_reminder_1 0",
+      "foreign_key": "module_4_reminder_1 0",
+      "title::eng": "Home practise reminder",
+      "text::eng": "Hello! You should try to involve your children and other members of your household when making new rules and routines. These can be around bedtime, schoolwork or chores. \n\nIt is perfectly normal for children to test out rules before making them a normal part of the routine. Soon these rules and routines will just feel like a normal part of your household and day. Daily routines can help create a sense of security in the household. \n\nThank you!"
+    },
+    {
+      "id": "module_4_reminder_2 0",
+      "foreign_key": "module_4_reminder_2 0",
+      "title::eng": "Chat session reminder",
+      "text::eng": "Hello! It is the time of the week again! Our next session will be later at [INSERT DATE & TIME]. We will be learning about how to make rules and routines with our children. Chat soon! ",
+      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session"
+    },
+    {
+      "id": "module_4_chat0",
+      "foreign_key": "module_4_chat0",
+      "title::eng": "Message 1: Welcome",
+      "text::eng": "Welcome to Module 4 of @global.prog_name! How is everybody doing? Describe what you are feeling today, where you feel it in your body and what thoughts you associate with the feeling.",
+      "guidance::eng": "Allow time for parents to share how they are feeling. "
+    },
+    {
+      "id": "module_4_chat1",
+      "foreign_key": "module_4_chat1",
+      "title::eng": "Message 2: Checking in on home activity",
+      "text::eng": "Last week we looked at making rules and routines with your children. Please send a thumbs up 👍🏽if you were able to try to create one household rule and one routine with your children.  ",
+      "guidance::eng": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
+    },
+    {
+      "id": "module_4_chat2",
+      "foreign_key": "module_4_chat2",
+      "title::eng": "Message 3: Voting on a challenge to discuss",
+      "text::eng": "Great if you were able to give it a go! 🙌🏾 If coming up with a household rule or setting a routine felt a little tough, you’re definitely not the only one. Lots of caregivers are figuring it out too. Take a look at the challenges below and choose the one you’d like us to chat about together:\n\n1️⃣ We were not able to stick to the rule\n2️⃣ My child and I could not agree on a rule\n3️⃣ I felt uncomfortable, because I feel parents should be the one establishing the rule not my child\n4️⃣ Another caregiver at home didn’t agree with the rule"
+    },
+    {
+      "id": "module_4_chat3",
+      "foreign_key": "module_4_chat3",
+      "title::eng": "Message 4: Discussing solution",
+      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "guidance::eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible challenges and solutions."
+    },
+    {
+      "id": "module_4_chat4",
+      "foreign_key": "module_4_chat4",
+      "title::eng": "Message 5: Open Feedback",
+      "text::eng": "Thanks for opening up! Have there been any other moments that felt challenging recently? Don’t hesitate to share, this is a space where we’re all here to help each other."
+    },
+    {
+      "id": "module_4_chat5",
+      "foreign_key": "module_4_chat5",
+      "title::eng": "Message 6: Take a Pause ",
+      "text::eng": "Before we end today’s module let’s take a pause together. Remember that this is something you can do whenever you are feeling stressed, or your children are annoying you.\n\nThank you so much for a wonderful session. I hope the rules and routines you introduce into your homes help make your household more manageable. Have a peaceful and happy day!",
+      "asset_type": "audio"
+    },
+    {
+      "id": "module_5_lesson0",
+      "foreign_key": "module_5_lesson0",
+      "text::eng": "👋 Welcome to Module 5 of @global.prog_name! This week, we’ll talk about positive discipline – calm, practical and positive ways to respond when our children misbehave. It’s not about letting children do whatever they want. Positive discipline helps us guide our children while building a stronger relationship."
+    },
+    {
+      "id": "module_5_lesson1",
+      "foreign_key": "module_5_lesson1",
+      "text::eng": "Let’s look at a story that shows how you can redirect your children from negative to positive behaviours before they get worse."
+    },
+    {
+      "id": "module_5_lesson2",
+      "foreign_key": "module_5_lesson2",
+      "text::eng": "Let’s look at how parents can use consequences with their children and teens:  "
+    },
+    {
+      "id": "module_5_lesson3",
+      "foreign_key": "module_5_lesson3",
+      "text::eng": "Now let’s chat about today’s parent tip - how to respond with positive discipline when children misbehave. Here are 3 steps you can follow: "
+    },
+    {
+      "id": "module_5_lesson_yc0",
+      "foreign_key": "module_5_lesson_yc0",
+      "text::eng": "👋 Welcome to Module 5 of @global.prog_name! This week, we’ll talk about positive discipline – calm, practical and positive ways to respond when our children misbehave. It’s not about letting children do whatever they want. Positive discipline helps us guide our children while building a stronger relationship."
+    },
+    {
+      "id": "module_5_lesson_yc1",
+      "foreign_key": "module_5_lesson_yc1",
+      "text::eng": "Let’s look at a story that shows how you can redirect your children from negative to positive behaviours before they get worse."
+    },
+    {
+      "id": "module_5_lesson_yc2",
+      "foreign_key": "module_5_lesson_yc2",
+      "text::eng": "Let’s look at how parents can use consequences with their children:  "
+    },
+    {
+      "id": "module_5_lesson_yc3",
+      "foreign_key": "module_5_lesson_yc3",
+      "text::eng": "Now let’s chat about today’s parent tip - how to respond with positive discipline when children misbehave. Here are 3 steps you can follow: "
+    },
+    {
+      "id": "module_5_lesson_teen0",
+      "foreign_key": "module_5_lesson_teen0",
+      "text::eng": "👋 Welcome to Module 5 of @global.prog_name! This week, we’ll talk about positive discipline – calm, practical and positive ways to respond when our children misbehave. It’s not about letting children do whatever they want. Positive discipline helps us guide our children while building a stronger relationship."
+    },
+    {
+      "id": "module_5_lesson_teen1",
+      "foreign_key": "module_5_lesson_teen1",
+      "text::eng": "Let’s look at how parents can use consequences with their children:  "
+    },
+    {
+      "id": "module_5_lesson_teen2",
+      "foreign_key": "module_5_lesson_teen2",
+      "text::eng": "Now let’s chat about today’s parent tip - how to respond with positive discipline when children misbehave. Here are 3 steps you can follow: "
+    },
+    {
+      "id": "module_5_reminder_1 0",
+      "foreign_key": "module_5_reminder_1 0",
+      "title::eng": "Home practise reminder",
+      "text::eng": "Hello! Remember that using new ways to discipline your children takes practice! Try to make sure that consequences should be fair and realistic. They are best used when your child forgets a household rule or refuses to follow an instruction. "
+    },
+    {
+      "id": "module_5_reminder_1 1",
+      "foreign_key": "module_5_reminder_1 1",
+      "title::eng": "Home practise reminder",
+      "text::eng": "It is really important to remember to Keep It Positive! Continue to spend quality time with your children, use positive instructions, and praise them when they are behaving well. The more positive attention they receive for good behaviour, the less you will have to discipline them!"
+    },
+    {
+      "id": "module_5_reminder_1 2",
+      "foreign_key": "module_5_reminder_1 2",
+      "title::eng": "Prompt for new admin",
+      "text::eng": "As we start thinking ahead beyond the end of the programme, would anyone like to consider taking on the administrator role for our chat group? DM if you are interested! Thank you!"
+    },
+    {
+      "id": "module_5_reminder_2 0",
+      "foreign_key": "module_5_reminder_2 0",
+      "title::eng": "Chat session reminder",
+      "text::eng": "Hello! It is the time of the week again! Our next session will be later at [INSERT DATE & TIME]. We will be learning about how to make rules and routines with our children. Chat soon! ",
+      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session"
+    },
+    {
+      "id": "module_5_chat0",
+      "foreign_key": "module_5_chat0",
+      "title::eng": "Message 1: Welcome",
+      "text::eng": "Welcome to Module 5 of @global.prog_name! How is everybody doing? Describe what you are feeling today, where you feel it in your body and what thoughts you associate with the feeling.",
+      "guidance::eng": "Allow time for parents to share. You should also share how you are feeling. For example, “I am excited to be part of the chat today, and I feel that excitement in my heart.”"
+    },
+    {
+      "id": "module_5_chat1",
+      "foreign_key": "module_5_chat1",
+      "title::eng": "Message 2: Checking in on home activity",
+      "text::eng": "Last week we looked at how to use positive discipline with our children. Please send a thumbs up 👍🏽if you were able to try to think of one behaviour and consequence that you might need to use.",
+      "guidance::eng": "Acknowledge the thumbs up with thumbs up, emojis, or quick words of praise."
+    },
+    {
+      "id": "module_5_chat2",
+      "foreign_key": "module_5_chat2",
+      "title::eng": "Message 3: Voting on a challenge to discuss",
+      "text::eng": "Well done if you tried it out! 🙌🏾 If coming up with a behaviour and consequence felt challenging, you’re not alone. Many caregivers are still practicing this skill too. Have a look at the challenges below and pick the one you’d like us to explore together:\n\n1️⃣ I am too angry to find anything positive to say to my child after they have misbehaved.\n2️⃣ I got very angry with my child and shouted at them.\n3️⃣ I forgot to give my child a chance to do what I asked before giving the consequence.\n4️⃣ My child got very angry with me after I gave the consequence for their misbehaviour."
+    },
+    {
+      "id": "module_5_chat3",
+      "foreign_key": "module_5_chat3",
+      "title::eng": "Message 4: Discussing solution",
+      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "guidance::eng": "Replace [name challenge] with the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible challenges and solutions."
+    },
+    {
+      "id": "module_5_chat4",
+      "foreign_key": "module_5_chat4",
+      "title::eng": "Message 5: Open Feedback",
+      "text::eng": "Thanks for opening up! Have there been any other moments that felt challenging recently? Don’t hesitate to share, this is a space where we’re all here to help each other."
+    },
+    {
+      "id": "module_5_chat5",
+      "foreign_key": "module_5_chat5",
+      "title::eng": "Message 6: Take a Pause ",
+      "text::eng": "Before we end today’s module let’s take a short pause together. Remember that this is something you can do whenever you are feeling stressed or overwhelmed. You can also do it to appreciate a positive moment, too! \n\nWhat a wonderful session! Have a peaceful and happy day!",
+      "asset_type": "audio"
+    },
+    {
+      "id": "module_6_lesson0",
+      "foreign_key": "module_6_lesson0",
+      "text::eng": "👋Welcome to our last week of @global.prog_name! Today we are going to learn about how to solve problems with our children and reflect on what we have learned in the programme."
+    },
+    {
+      "id": "module_6_lesson1",
+      "foreign_key": "module_6_lesson1",
+      "text::eng": "Let’s look at a story about how you can work with your children to find a solution to a problem instead of having to use consequences: "
+    },
+    {
+      "id": "module_6_lesson2",
+      "foreign_key": "module_6_lesson2",
+      "text::eng": "Let's look at how a situation when our children get bullied by others online: "
+    },
+    {
+      "id": "module_6_lesson3",
+      "foreign_key": "module_6_lesson3",
+      "text::eng": "Now let’s move on to the final parenting tip on problem solving with your children. We have been doing this throughout the programme. Now it is time to learn how we can involve our children in the process! Here are the 4 basic steps for problem solving:"
+    },
+    {
+      "id": "module_6_lesson_yc0",
+      "foreign_key": "module_6_lesson_yc0",
+      "text::eng": "👋Welcome to our last week of @global.prog_name! Today we are going to learn about how to solve problems with our children and reflect on what we have learned in the programme."
+    },
+    {
+      "id": "module_6_lesson_yc1",
+      "foreign_key": "module_6_lesson_yc1",
+      "text::eng": "Let’s look at a story about how you can work with your children to find a solution to a problem instead of having to use consequences: "
+    },
+    {
+      "id": "module_6_lesson_yc2",
+      "foreign_key": "module_6_lesson_yc2",
+      "text::eng": "Now let’s move on to the final parenting tip on problem solving with your children. We have been doing this throughout the programme. Now it is time to learn how we can involve our children in the process! Here are the 4 basic steps for problem solving:"
+    },
+    {
+      "id": "module_6_lesson_teen0",
+      "foreign_key": "module_6_lesson_teen0",
+      "text::eng": "👋Welcome to our last week of @global.prog_name! Today we are going to learn about how to solve problems with our children and reflect on what we have learned in the programme."
+    },
+    {
+      "id": "module_6_lesson_teen1",
+      "foreign_key": "module_6_lesson_teen1",
+      "text::eng": "Let's look at how a situation when our children get bullied by others online: "
+    },
+    {
+      "id": "module_6_lesson_teen2",
+      "foreign_key": "module_6_lesson_teen2",
+      "text::eng": "Now let’s move on to the final parenting tip on problem solving with your children. We have been doing this throughout the programme. Now it is time to learn how we can involve our children in the process! Here are the 4 basic steps for problem solving:"
+    },
+    {
+      "id": "module_6_reminder_1 0",
+      "foreign_key": "module_6_reminder_1 1",
+      "title::eng": "Reminder of skills",
+      "text::eng": "Congratulations! I wanted to share an audio message that might help you reflect on all of the things we explored in the @global.programme_name. ",
+      "guidance::eng": "Send this message with the audio recording"
+    },
+    {
+      "id": "module_6_reminder_1 1",
+      "foreign_key": "module_6_reminder_1 2",
+      "title::eng": "Reminder of home activities",
+      "text::eng": "Even though the programme is ending soon, our parenting work continues! Remember to continue practising all of the skills that we have learned together. The main ones are:\n\n1️⃣ Spend one-on-one time with your children. Just 5 minutes a day can make a difference\n\n2️⃣ Praise your children when they are behaving well\n\n3️⃣ Keep it positive with positive instructions\n\n4️⃣ Have consistent household rules and daily routines (including time for play!)\n\n5️⃣ Practice positive discipline with redirect and consequences\n\n6️⃣ Involve  your child in solving problems together.\n\n7️⃣ Take 5 deep breaths or a Pause when you are feeling stressed or angry.\n"
+    },
+    {
+      "id": "module_6_reminder_2 0",
+      "foreign_key": "module_6_reminder_2 0",
+      "title::eng": "Chat session reminder",
+      "text::eng": "Hello! I hope everybody had a good week! Our final session will be later at [INSERT DATE & TIME]. ",
+      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session. If a new group leader has not yet volunteered to administrate the group, send an additional message asking once again if anybody would like to volunteer after the programme ends next week."
+    },
+    {
+      "id": "module_6_reminder_2_inperson 0",
+      "foreign_key": "module_6_reminder_2_inperson 0",
+      "title::eng": "Chat session reminder",
+      "text::eng": "Hello! I hope everybody had a good week! Our final session will be later at [INSERT DATE & TIME]. We will be meeting in person at [VENUE]. See you all soon!",
+      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session. \nReplace [VENUE] with the venue of the session. \n\nIf a new group leader has not yet volunteered to administrate the group, send an additional message asking once again if anybody would like to volunteer after the programme ends next week."
+    },
+    {
+      "id": "module_6_chat0",
+      "foreign_key": "module_6_chat1",
+      "title::eng": "Message 1: Welcome",
+      "text::eng": "Welcome to Module 6 of @global.prog_name! How is everybody doing? Describe what you are feeling today, where you feel it in your body and what thoughts you associate with the feeling.",
+      "guidance::eng": "Allow time for parents to share. You should also share how you are feeling. For example, “I am excited to be part of the chat today, and I feel that excitement in my heart.” "
+    },
+    {
+      "id": "module_6_chat1",
+      "foreign_key": "module_6_chat2",
+      "title::eng": "Message 2: Reflection",
+      "text::eng": "Since we are having our last chat session, let’s take a few moments to reflect on our experience during the programme. Let’s share some of the things that we learned from the programme or ways that we and our children have changed.",
+      "guidance::eng": "Give parents time to reflect and respond. You can encourage everyone to have a chance to write something in the chat. Remember to thank each parent for their contribution. If no parents respond, you can prompt by asking parents to share something they are proud of, or something that surprised them."
+    },
+    {
+      "id": "module_6_chat2",
+      "foreign_key": "module_6_chat3",
+      "title::eng": "Message 3: Stone Soup",
+      "text::eng": "Thank you for sharing. Now you can sit back and enjoy a story that we have shared at the end of all of our parenting programmes."
+    },
+    {
+      "id": "module_6_chat3",
+      "foreign_key": "module_6_chat4",
+      "title::eng": "Message 4: Discussion about the stone soup",
+      "text::eng": "What are some of the ingredients that we have in our group to continue supporting us as parents? In what ways can we continue to support each other after the end of the programme?",
+      "guidance::eng": "Remember to give parents a chance to respond before moving on to the reflection"
+    },
+    {
+      "id": "module_6_chat4",
+      "foreign_key": "module_6_chat5",
+      "title::eng": "Message 5: Offer for Questions about ongoing support through the group",
+      "text::eng": "Thank you to [Insert Name of New Group Administrator] who will be taking over as the group administrator. Do any of you have any questions about how you can continue to use the group going forward?",
+      "guidance::eng": "Allow a few minutes for parents to raise any questions. Remember to thank parents for their questions and let them take the lead in the ongoing planning for the group."
+    },
+    {
+      "id": "module_6_chat5",
+      "foreign_key": "module_6_chat6",
+      "title::eng": "Message 6: Thank you & closing",
+      "text::eng": "Let’s close with an activity that is similar to Taking a Pause. Since it is the last module of the programme, we take this opportunity to reconnect with ourselves and our families through a sense of love and support.\n\nThank you and well done for completing the ParentChat programme! You have shown great love and commitment to your families by being here. It has been a pleasure to be on this journey with you."
+    },
+    {
+      "id": "module_6_certificate0",
+      "foreign_key": "module_6_certificate0",
+      "title::eng": "Send this message along with the certificates",
+      "text::eng": "Congratulations on completing the @global.prog_name! 🎉\nHere’s your certificate to celebrate your dedication and commitment as a parent. We’re so proud of the love, effort, and learning you’ve put into this journey. Keep going, you’re making a real difference for your family!"
+    },
+    {
+      "id": "module_6_in_person0",
+      "foreign_key": "module_6_in_person4",
+      "title::eng": "Send this message to the group after the closing session",
+      "text::eng": "Thank you and well done for completing the @global.prog_name! You have shown great love and commitment to your families by being here. It has been a pleasure to be on this journey with you. I wish you all well going forward! "
+    }
+  ]
+}

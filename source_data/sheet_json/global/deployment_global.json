@@ -1,0 +1,180 @@
+{
+  "flow_type": "global",
+  "flow_name": "deployment_global",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "app_name",
+      "value": "FacilitatorApp",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "home_icon_asset",
+      "value": "images/icons/home_white.svg",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "share_medium",
+      "value": "WhatsApp",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "virtual_session_platform",
+      "value": "WhatsApp",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_parent_groups",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "allow_multiple_parent_groups",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_multiple_content_packages",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_profile_about",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_multiple_languages",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_optional_login",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "deployment_terms_field",
+      "value": "terms_v20231214_accepted"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "deployment_terms_text",
+      "value": "14 December 2023"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "main_menu_title",
+      "value": "Parent Group"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "select_group",
+      "value": "Select Parent Group"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_groups",
+      "value": "No Parent Groups"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "sessions_no_groups",
+      "value": "Chat Sessions will load after you select a parent group"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "sessions_no_groups_image",
+      "value": "images/no_group_selected.svg"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_first_name",
+      "value": "Parent's first name"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_last_name",
+      "value": "Parent's last name"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_text_id",
+      "value": "Parent Text ID"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "main_logo",
+      "value": "images/logos/app_logo.png"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "use_module_image",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "minutes",
+      "value": "minutes"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "add_group_icon",
+      "value": "images/icons/person_cog.svg",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "close_stack_icon",
+      "value": "images/icons/cancel.svg",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "active_group_title",
+      "value": "Your Active Groups"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "archived_group_title",
+      "value": "Your Archived Groups"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "language",
+      "value": "Language"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "copied_message",
+      "value": "Copied to clipboard"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "incomplete_parent",
+      "value": "This profile is incomplete. Open to complete the missing details."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "pdf_compatibility_error_message",
+      "value": "Embedded PDFs are not supported in this browser, please use an up-to-date version of Google Chrome to view or open in external app"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "pdf_open_external_text",
+      "value": "Open with..."
+    }
+  ]
+}

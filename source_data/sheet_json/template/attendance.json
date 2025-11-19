@@ -1,0 +1,395 @@
+{
+  "flow_type": "template",
+  "flow_name": "attendance",
+  "status": "released",
+  "rows": [
+    {
+      "name": "parent_id"
+    },
+    {
+      "name": "m_s_l"
+    },
+    {
+      "name": "parent_group_id"
+    },
+    {
+      "name": "s1",
+      "value": "@item.module_1_reminder_1"
+    },
+    {
+      "name": "s2",
+      "value": "module_1_reminder_2"
+    },
+    {
+      "name": "s3",
+      "value": "module_2_reminder_1"
+    },
+    {
+      "name": "s4",
+      "value": "module_2_reminder_2"
+    },
+    {
+      "name": "s5",
+      "value": "module_2_chat"
+    },
+    {
+      "name": "s6",
+      "value": "module_3_reminder_1"
+    },
+    {
+      "name": "s7",
+      "value": "module_3_reminder_2"
+    },
+    {
+      "name": "s8",
+      "value": "module_3_chat"
+    },
+    {
+      "name": "s9",
+      "value": "module_4_reminder_1"
+    },
+    {
+      "name": "s10",
+      "value": "module_4_reminder_2"
+    },
+    {
+      "name": "s11",
+      "value": "module_4_chat"
+    },
+    {
+      "name": "s12",
+      "value": "module_5_reminder_1"
+    },
+    {
+      "name": "s13",
+      "value": "module_5_reminder_2"
+    },
+    {
+      "name": "s14",
+      "value": "module_5_chat"
+    },
+    {
+      "name": "attendance_1",
+      "value": "@calc(0 *0)",
+      "condition": "@local.s1 == \"T\""
+    },
+    {
+      "name": "attendance_1",
+      "value": "@calc(0 +1)",
+      "condition": "@local.s1 == \"F\""
+    },
+    {
+      "name": "attendance_1",
+      "value": "@calc(0 *1)",
+      "condition": "@local.s1 == \"U\""
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_1",
+      "value": "attendance_1 = @local.attendance_1",
+      "condition": false
+    },
+    {
+      "name": "attendance_2",
+      "value": "@calc(@local.attendance_1 *0)",
+      "condition": "@local.s2 == \"T\""
+    },
+    {
+      "name": "attendance_2",
+      "value": "@calc(@local.attendance_1 +1)",
+      "condition": "@local.s2 == \"F\""
+    },
+    {
+      "name": "attendance_2",
+      "value": "@calc(@local.attendance_1 *1)",
+      "condition": "@local.s2 == \"U\""
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_2",
+      "value": "attendance_2 = @local.attendance_2",
+      "condition": false
+    },
+    {
+      "name": "attendance_3",
+      "value": "@calc(@local.attendance_2 *0)",
+      "condition": "@local.s3 == \"T\""
+    },
+    {
+      "name": "attendance_3",
+      "value": "@calc(@local.attendance_2 +1)",
+      "condition": "@local.s3 == \"F\""
+    },
+    {
+      "name": "attendance_3",
+      "value": "@calc(@local.attendance_2 *1)",
+      "condition": "@local.s3 == \"U\""
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_3",
+      "value": "attendance_3 = @local.attendance_3",
+      "condition": false
+    },
+    {
+      "name": "attendance_4",
+      "value": "@calc(@local.attendance_3 *0)",
+      "condition": "@local.s4 == \"T\""
+    },
+    {
+      "name": "attendance_4",
+      "value": "@calc(@local.attendance_3 +1)",
+      "condition": "@local.s4 == \"F\""
+    },
+    {
+      "name": "attendance_4",
+      "value": "@calc(@local.attendance_3 *1)",
+      "condition": "@local.s4 == \"U\""
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_4",
+      "value": "attendance_4 = @local.attendance_4",
+      "condition": false
+    },
+    {
+      "name": "attendance_5",
+      "value": "@calc(@local.attendance_4 *0)",
+      "condition": "@local.s5 == \"T\""
+    },
+    {
+      "name": "attendance_5",
+      "value": "@calc(@local.attendance_4 +1)",
+      "condition": "@local.s5 == \"F\""
+    },
+    {
+      "name": "attendance_5",
+      "value": "@calc(@local.attendance_4 *1)",
+      "condition": "@local.s5 == \"U\""
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_5",
+      "value": "attendance_5 = @local.attendance_5",
+      "condition": false
+    },
+    {
+      "name": "attendance_6",
+      "value": "@calc(@local.attendance_5 *0)",
+      "condition": "@local.s6 == \"T\""
+    },
+    {
+      "name": "attendance_6",
+      "value": "@calc(@local.attendance_5 +1)",
+      "condition": "@local.s6 == \"F\""
+    },
+    {
+      "name": "attendance_6",
+      "value": "@calc(@local.attendance_5 *1)",
+      "condition": "@local.s6 == \"U\""
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_6",
+      "value": "attendance_6 = @local.attendance_6",
+      "condition": false
+    },
+    {
+      "name": "attendance_7",
+      "value": "@calc(@local.attendance_6 *0)",
+      "condition": "@local.s7 == \"T\""
+    },
+    {
+      "name": "attendance_7",
+      "value": "@calc(@local.attendance_6 +1)",
+      "condition": "@local.s7 == \"F\""
+    },
+    {
+      "name": "attendance_7",
+      "value": "@calc(@local.attendance_6 *1)",
+      "condition": "@local.s7 == \"U\""
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_7",
+      "value": "attendance_7 = @local.attendance_7",
+      "condition": false
+    },
+    {
+      "name": "attendance_8",
+      "value": "@calc(@local.attendance_7 *0)",
+      "condition": "@local.s8 == \"T\""
+    },
+    {
+      "name": "attendance_8",
+      "value": "@calc(@local.attendance_7 +1)",
+      "condition": "@local.s8 == \"F\""
+    },
+    {
+      "name": "attendance_8",
+      "value": "@calc(@local.attendance_7 *1)",
+      "condition": "@local.s8 == \"U\""
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_8",
+      "value": "attendance_8 = @local.attendance_8",
+      "condition": false
+    },
+    {
+      "name": "total_attendance",
+      "value": "@local.attendance_8"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "@local.total_attendance >= @local.m_s_l"
+    },
+    {
+      "type": "begin_display_group",
+      "style_list": "justify-content: space-between"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "parent_name",
+      "value": "@data.parents",
+      "parameter_list": "filter: !@item.archived",
+      "comments": "prints the name of the parent"
+    },
+    {
+      "type": "text",
+      "value": "@item.first_name @item.last_name",
+      "style_list": "margin-bottom: 12px;",
+      "condition": "@item.id == @local.parent_id"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "button",
+      "name": "follow_up_button",
+      "value": "Follow Up",
+      "parameter_list": "style: information short"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "name": "total_attendance_text",
+      "value": "Missed the last @local.total_attendance sessions",
+      "style_list": "font-size: 16px; \ncolor: #46607F;\nmargin-top: -10px;\nmargin-bottom: 12px;\n"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "value": "SHOULD HAVE BEEN LIKE THIS:",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "T",
+      "value": "*0",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "F",
+      "value": 1,
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "U",
+      "value": "*1",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "s1",
+      "value": "@local.T",
+      "condition": false,
+      "comments": "these are just for testing: they should depend on actual attendance",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "s2",
+      "value": "@local.T",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "s3",
+      "value": "@local.F",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "s4",
+      "value": "@local.F",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "s5",
+      "value": "@local.U",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "s6",
+      "value": "@local.U",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "test_attendance_view",
+      "value": "attendance_view = (((((0 @local.s1) @local.s2) @local.s3) @local.s4) @local.s5) @local.s6",
+      "condition": false,
+      "comments": "view is correct",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "attendance",
+      "value": "@calc((((((0 @local.s1) @local.s2) @local.s3) @local.s4) @local.s5) @local.s6)",
+      "condition": false,
+      "comments": "this is the formula, but it brakes",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "attendance_text",
+      "value": "attendance = @local.attendance",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "test_calc",
+      "value": "@calc((((((0 *0) *0) +1) +1) *1) *1)",
+      "condition": false,
+      "comments": "this works fine",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "test_calc_text",
+      "value": "@local.test_calc",
+      "condition": false,
+      "exclude_from_translation": true
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "flow_type": "template",
+  "flow_name": "view_parent_group",
+  "status": "released",
+  "rows": [
+    {
+      "type": "begin_template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": "uncompleted | emit: uncompleted; "
+    },
+    {
+      "name": "title",
+      "value": "Group Overview",
+      "exclude_from_translation": false
+    },
+    {
+      "name": "confirm_exit",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "current_delivery_type"
+    },
+    {
+      "name": "current_age_group"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local: current_age_group: @items[0].age_group;\ndata_changed | set_local: current_delivery_type: @items[0].delivery_type;",
+      "parameter_list": "filter: (@item.id == @fields.current_group_id)"
+    },
+    {
+      "name": "text_postfix",
+      "value": ".text"
+    },
+    {
+      "name": "temp_1",
+      "value": "tag_data.@local.current_age_group@local.text_postfix"
+    },
+    {
+      "name": "temp_2",
+      "value": "delivery_data.@local.current_delivery_type@local.text_postfix"
+    },
+    {
+      "name": "current_age_group_text",
+      "value": "@data.@local.temp_1"
+    },
+    {
+      "name": "current_content_package_text",
+      "value": "@data.@local.temp_2"
+    },
+    {
+      "type": "round_button",
+      "name": "back",
+      "action_list": "click | emit: uncompleted",
+      "parameter_list": "icon_src: chevron-back;\nvariant: navigation",
+      "condition": false
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_header"
+    },
+    {
+      "type": "title",
+      "name": "group_name",
+      "value": "@fields.current_group_name",
+      "style_list": "flex:1"
+    },
+    {
+      "type": "round_button",
+      "name": "edit_icon",
+      "action_list": "click | go_to: edit_parent_group;",
+      "parameter_list": "variant: no-background;\nicon_src: create-outline;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "name": "age_group",
+      "value": "Age group: @local.current_age_group_text",
+      "style_list": "color: gray;margin-top: -10px; margin-bottom: 12px; font-size: 14px;"
+    },
+    {
+      "type": "text",
+      "name": "delivery_type",
+      "value": "Delivery type: @local.current_content_package_text ",
+      "style_list": "color: gray;margin-top: -20px; margin-bottom: 12px; font-size: 14px;"
+    },
+    {
+      "type": "begin_template",
+      "value": "module_progress"
+    },
+    {
+      "name": "group_id",
+      "value": "@fields.current_group_no"
+    },
+    {
+      "name": "current_package",
+      "value": "@fields.current_package"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "name": "display_actions",
+      "value": true
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "button",
+      "value": "Actions",
+      "action_list": "click | set_local: display_actions : TRUE;",
+      "parameter_list": "style: alternative flexible",
+      "style_list": "flex:1"
+    },
+    {
+      "type": "button",
+      "value": "Parents",
+      "action_list": "click | set_local: display_actions : FALSE;",
+      "parameter_list": "style: alternative flexible",
+      "style_list": "flex:1"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_template",
+      "value": "group_actions",
+      "condition": "!!@local.display_actions"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "begin_template",
+      "value": "parent_list",
+      "condition": "!@local.display_actions"
+    },
+    {
+      "type": "end_template"
+    }
+  ]
+}

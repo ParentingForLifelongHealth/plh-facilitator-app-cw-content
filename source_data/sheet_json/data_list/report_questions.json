@@ -1,0 +1,56 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "report_questions",
+  "status": "released",
+  "rows": [
+    {
+      "id": "Q1",
+      "name": "answer_1",
+      "validation_name": "valid_1",
+      "required_name": "required_1",
+      "display_text::eng": "Date of session",
+      "type": "date",
+      "validation_text::eng": "Please enter a date",
+      "required": true,
+      "condition": true
+    },
+    {
+      "id": "Q2",
+      "name": "answer_2",
+      "validation_name": "valid_2",
+      "required_name": "required_2",
+      "display_text::eng": "Parent's Attendance",
+      "type": "parent_check",
+      "required": false,
+      "condition": true
+    },
+    {
+      "id": "Q3",
+      "name": "answer_3",
+      "validation_name": "valid_3",
+      "required_name": "required_3",
+      "display_text::eng": "How did your session go?",
+      "placeholder::eng": "enter value",
+      "type": "combo_box",
+      "validation_text::eng": "Please select a value",
+      "required": true,
+      "answer_list": "rating_answer",
+      "condition": true
+    },
+    {
+      "id": "Q4",
+      "name": "answer_4",
+      "validation_name": "valid_4",
+      "required_name": "required_4",
+      "display_text::eng": "What challenges did you face in delivering the session? Be specific.",
+      "placeholder::eng": "challenges",
+      "type": "text",
+      "validation_text::eng": "Please enter a description",
+      "validation_min": 10,
+      "required": true,
+      "condition": "!!@local.answer_3 && (@local.answer_3 <= 3)",
+      "condition_field": "answer_3",
+      "condition_less": 4
+    }
+  ]
+}

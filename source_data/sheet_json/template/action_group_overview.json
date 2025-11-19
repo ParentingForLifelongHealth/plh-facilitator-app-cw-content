@@ -1,0 +1,423 @@
+{
+  "flow_type": "template",
+  "flow_name": "action_group_overview",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "no_pending_reports",
+      "value": 0,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "no_of_follow_ups",
+      "value": 0,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "npr: @local.no_pending_reports",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "nfu: @local.no_of_follow_ups",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_data_items",
+      "name": "counting_pending",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : no_pending_reports : @items.length;",
+      "parameter_list": "filter: @item.pending && (@item.group_id == @local.group_id);",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_data_items",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "seven_days_ago",
+      "value": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "date: @local.seven_days_ago",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_5_6",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_4_5",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_3_4",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_2_3",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_1_2",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_1",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_2",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_3",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_4",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_5",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_6",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "r1: @local.report_1",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "r2: @local.report_2",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "r3: @local.report_3",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "r4: @local.report_4",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "r5: @local.report_5",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "r6: @local.report_6",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_6 : @items.map(item => item.group_id);",
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_6\" && (@item.group_id == @local.group_id);",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_5 : @items.map(item => item.group_id);",
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_5\" && (@item.group_id == @local.group_id);",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_4 : @items.map(item => item.group_id);",
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_4\" && (@item.group_id == @local.group_id);",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_3 : @items.map(item => item.group_id);",
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_3\" && (@item.group_id == @local.group_id);",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_2 : @items.map(item => item.group_id);",
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_2\" && (@item.group_id == @local.group_id);",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_1 : @items.map(item => item.group_id);",
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_1\" && (@item.group_id == @local.group_id);",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "c12: @local.check_1_2",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "c23: @local.check_2_3",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "c34: @local.check_3_4",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "c45: @local.check_4_5",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "c56: @local.check_5_6",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_1",
+      "value": "@calc([0])",
+      "condition": "@local.report_1 == \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_2",
+      "value": "@calc([0])",
+      "condition": "@local.report_2 == \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_3",
+      "value": "@calc([0])",
+      "condition": "@local.report_3 == \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_4",
+      "value": "@calc([0])",
+      "condition": "@local.report_4 == \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_5",
+      "value": "@calc([0])",
+      "condition": "@local.report_5 == \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_6",
+      "value": "@calc([0])",
+      "condition": "@local.report_6 == \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_5_6",
+      "value": "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))",
+      "condition": "!!@local.report_6 && !!@local.report_5 && @local.report_6 !== \"\" && @local.report_5 !== \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_4_5",
+      "value": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+      "condition": "!!@local.report_5 && !!@local.report_4 && @local.report_5 !== \"\" && @local.report_4 !== \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_3_4",
+      "value": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+      "condition": "!!@local.report_4 && !!@local.report_3 && @local.report_4 !== \"\" && @local.report_3 !== \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_2_3",
+      "value": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+      "condition": "!!@local.report_3 && !!@local.report_2 && @local.report_3 !== \"\" && @local.report_2 !== \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_1_2",
+      "value": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+      "condition": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "name": "follow_up_count_group",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : no_of_follow_ups : @items.length;",
+      "parameter_list": "filter: !@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2));",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "single_report",
+      "value": "@local.no_pending_reports @global.report_pending",
+      "style_list": "background-color: rgba(255, 204, 0, 0.6);\nborder-radius: 4px;\npadding: 0 2px;\nbox-decoration-break: clone;  ",
+      "condition": "@local.no_pending_reports == 1",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "multiple_reports",
+      "value": "@local.no_pending_reports @global.reports_pending",
+      "style_list": "background-color: rgba(255, 204, 0, 0.6);\nborder-radius: 4px;\npadding: 0 2px;\nbox-decoration-break: clone;  ",
+      "condition": "@local.no_pending_reports > 1",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "single_follow_up",
+      "value": "@local.no_of_follow_ups @global.follow_up",
+      "style_list": "background-color: rgba(158, 203, 245, 0.6);\nborder-radius: 4px;\npadding: 0 2px;\nbox-decoration-break: clone;  ",
+      "condition": "@local.no_of_follow_ups == 1",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "multiple_follow_ups",
+      "value": "@local.no_of_follow_ups @global.follow_ups",
+      "style_list": "background-color: rgba(158, 203, 245, 0.6);\nborder-radius: 4px;\npadding: 0 2px;\nbox-decoration-break: clone;  ",
+      "condition": "@local.no_of_follow_ups > 1",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "spacer",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "flow_type": "template",
+  "flow_name": "edit_in_person",
+  "status": "released",
+  "rows": [
+    {
+      "name": "read_only",
+      "value": false
+    },
+    {
+      "name": "first_name",
+      "value": " "
+    },
+    {
+      "name": "last_name",
+      "value": " "
+    },
+    {
+      "name": "current_answer_1"
+    },
+    {
+      "name": "current_answer_2"
+    },
+    {
+      "name": "current_answer_3"
+    },
+    {
+      "name": "current_dynamic"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "report_answers",
+      "action_list": "data_changed | set_local : current_answer_1: @items[0].question_1;\ndata_changed | set_local : current_answer_2: @items[0].question_2;\ndata_changed | set_local : current_answer_3: @items[0].question_3;\ndata_changed | set_local : current_dynamic: @items[0].dynamic_question;",
+      "parameter_list": "filter: @item.id == @fields.current_report_no"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "text",
+      "name": "question_1",
+      "value": "How many minutes did it take you to prepare for this session?"
+    },
+    {
+      "type": "text_box",
+      "name": "answer_1",
+      "value": "@local.current_answer_1",
+      "parameter_list": "number_input: true; \nplaceholder: @global.minutes; \nmax_length: 3;"
+    },
+    {
+      "type": "text",
+      "name": "question_2",
+      "value": "How many minutes did it take you to travel to the location where the session was delivered?"
+    },
+    {
+      "type": "text_box",
+      "name": "answer_2",
+      "value": "@local.current_answer_2",
+      "parameter_list": "number_input: true; \nplaceholder: @global.minutes; \nmax_length: 3"
+    },
+    {
+      "type": "text",
+      "name": "question_3",
+      "value": "How many minutes did it take you to deliver the sessions?"
+    },
+    {
+      "type": "text_box",
+      "name": "answer_3",
+      "value": "@local.current_answer_3",
+      "parameter_list": "number_input: true; \nplaceholder: @global.minutes; \nmax_length: 3"
+    },
+    {
+      "type": "text",
+      "name": "question_4",
+      "value": "Which of the parents in this group attended your in-person session?"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "parents",
+      "parameter_list": "filter: @item.group_id == @field.current_group_no && @item.archived == false"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "name": "first_name",
+      "value": " ",
+      "exclude_from_translation": true,
+      "comments": "This makes sure undefined isnt listed"
+    },
+    {
+      "name": "last_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_name",
+      "value": "@item.first_name",
+      "condition": "@item.first_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name",
+      "value": "@item.last_name",
+      "condition": "@item.last_name",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "@local.first_name @local.last_name",
+      "exclude_from_translation": true,
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "toggle_bar",
+      "value": "@item.@fields.current_module_no",
+      "action_list": "changed | set_item| @fields.current_module_no: this.value;",
+      "parameter_list": "show_icons: false; variant: ios;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "name": "dynamic_string",
+      "value": " "
+    },
+    {
+      "name": "dynamic_json",
+      "value": " "
+    },
+    {
+      "name": "dynamic_json",
+      "value": "@calc(JSON.parse(@local.current_dynamic))",
+      "condition": "@local.current_dynamic"
+    },
+    {
+      "type": "text",
+      "name": "text_instruction",
+      "value": "Please check all the activities you completed during this session:"
+    },
+    {
+      "type": "begin_items",
+      "value": "@data.report_in_person",
+      "condition": "@local.current_dynamic",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "question_type",
+      "value": "@item.type",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "question_text",
+      "value": "@item.text",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "title",
+      "value": "@item.text",
+      "parameter_list": "style: contextual",
+      "condition": "@item.type == \"title\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_toggle_bar",
+      "condition": "@item.type != \"title\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "value": "@item.text",
+      "condition": "@item.type == \"toggle\"",
+      "exclude_from_translation": true,
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "toggle_bar",
+      "name": "toggle_@item.id",
+      "value": "@local.dynamic_json[@item.id]",
+      "parameter_list": "show_icons: false; variant: ios;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "condition_string",
+      "value": "toggle_@item.id"
+    },
+    {
+      "name": "set_reply",
+      "value": "@calc(@local.dynamic_json[@item.id] = new Boolean(true))",
+      "condition": "@local.@local.condition_string",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "set_reply",
+      "value": "@calc(@local.dynamic_json[@item.id] = new Boolean(false))",
+      "condition": "!(@local.@local.condition_string)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_items"
+    },
+    {
+      "name": "dynamic_string",
+      "value": "@calc(JSON.stringify(@local.dynamic_json))",
+      "condition": "@local.current_dynamic"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "sticky: bottom",
+      "style_list": "padding: 12px 24px"
+    },
+    {
+      "type": "button",
+      "name": "save",
+      "value": "Save",
+      "action_list": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\nquestion_1: @local.answer_1,\nquestion_2: @local.answer_2,\nquestion_3: @local.answer_3,\ndynamic_question: @local.dynamic_string;\nclick | emit: completed;\nclick | emit: server_sync;"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "flow_type": "template",
+  "flow_name": "pdf",
+  "status": "released",
+  "rows": [
+    {
+      "name": "pdf_id",
+      "value": "pdf_1"
+    },
+    {
+      "name": "pdf_asset"
+    },
+    {
+      "name": "pdf_title"
+    },
+    {
+      "type": "data_items",
+      "value": "pdf",
+      "parameter_list": "filter: @item.id == @local.pdf_id;\nlimit: 1;",
+      "action_list": "data_changed | set_local : pdf_asset: @items[0].pdf_asset;\ndata_changed | set_local : pdf_title: @items[0].title;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": "uncompleted | emit: uncompleted; \ncompleted | emit: completed; "
+    },
+    {
+      "name": "title",
+      "value": "@local.pdf_title"
+    },
+    {
+      "name": "show_back",
+      "value": false
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "text",
+      "name": "spacer",
+      "value": "  ",
+      "style_list": "flex: 1;"
+    },
+    {
+      "type": "round_button",
+      "name": "download",
+      "parameter_list": "variant: no-background; \nicon_src: images/icons/download.svg;",
+      "action_list": "click | save_to_device: @local.pdf_asset"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "pdf",
+      "name": "pdf",
+      "value": "@local.pdf_asset",
+      "parameter_list": "starting_page: 1;\ncompatibility_error_message: @global.pdf_compatibility_error_message;\nopen_external_text: @global.pdf_open_external_text;"
+    }
+  ]
+}
