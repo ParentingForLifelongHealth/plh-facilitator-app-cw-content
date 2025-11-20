@@ -313,7 +313,7 @@
     },
     {
       "name": "first_name_valid",
-      "value": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.first_name))",
+      "value": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.first_name))",
       "_translations": {
         "value": {}
       },
@@ -323,16 +323,16 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.first_name))",
+            "fullExpression": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.first_name))",
             "matchedExpression": "@local.first_name",
             "type": "local",
             "fieldName": "first_name"
           },
           {
-            "fullExpression": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.first_name))",
-            "matchedExpression": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.first_name))",
+            "fullExpression": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.first_name))",
+            "matchedExpression": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.first_name))",
             "type": "calc",
-            "fieldName": "/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.first_name)"
+            "fieldName": "/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.first_name)"
           }
         ]
       },
@@ -340,7 +340,7 @@
         "@local.first_name": [
           "value"
         ],
-        "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.first_name))": [
+        "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.first_name))": [
           "value"
         ]
       }
@@ -353,7 +353,7 @@
     },
     {
       "name": "last_name_valid",
-      "value": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.last_name))",
+      "value": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.last_name))",
       "_translations": {
         "value": {}
       },
@@ -363,16 +363,16 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.last_name))",
+            "fullExpression": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.last_name))",
             "matchedExpression": "@local.last_name",
             "type": "local",
             "fieldName": "last_name"
           },
           {
-            "fullExpression": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.last_name))",
-            "matchedExpression": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.last_name))",
+            "fullExpression": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.last_name))",
+            "matchedExpression": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.last_name))",
             "type": "calc",
-            "fieldName": "/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.last_name)"
+            "fieldName": "/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.last_name)"
           }
         ]
       },
@@ -380,7 +380,7 @@
         "@local.last_name": [
           "value"
         ],
-        "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.last_name))": [
+        "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.last_name))": [
           "value"
         ]
       }
@@ -1219,7 +1219,8 @@
             }
           ],
           "parameter_list": {
-            "placeholder": "@global.edit_number"
+            "placeholder": "@global.edit_number",
+            "number_input": "true"
           },
           "exclude_from_translation": true,
           "_nested_name": "display_group_19.number",
@@ -1331,7 +1332,8 @@
             }
           ],
           "parameter_list": {
-            "placeholder": "@global.edit_age"
+            "placeholder": "@global.edit_age",
+            "number_input": "true"
           },
           "exclude_from_translation": true,
           "_nested_name": "display_group_19.age",
@@ -1605,7 +1607,8 @@
             }
           ],
           "parameter_list": {
-            "placeholder": "@global.edit_child_count"
+            "placeholder": "@global.edit_child_count",
+            "number_input": "true"
           },
           "exclude_from_translation": true,
           "_nested_name": "display_group_19.child_count",
@@ -1797,7 +1800,8 @@
             }
           ],
           "parameter_list": {
-            "placeholder": "@global.edit_child_age"
+            "placeholder": "@global.edit_child_age",
+            "number_input": "true"
           },
           "exclude_from_translation": true,
           "_nested_name": "display_group_19.child_age",
@@ -2284,7 +2288,8 @@
             }
           ],
           "parameter_list": {
-            "placeholder": "@global.edit_hours"
+            "placeholder": "@global.edit_hours",
+            "number_input": "true"
           },
           "exclude_from_translation": true,
           "_nested_name": "display_group_19.hours",

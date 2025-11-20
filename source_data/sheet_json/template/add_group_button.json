@@ -1,0 +1,43 @@
+{
+  "flow_type": "template",
+  "flow_name": "add_group_button",
+  "status": "released",
+  "rows": [
+    {
+      "name": "name",
+      "value": "test"
+    },
+    {
+      "name": "text"
+    },
+    {
+      "name": "delivery_type"
+    },
+    {
+      "name": "age_group"
+    },
+    {
+      "name": "content_package"
+    },
+    {
+      "name": "completed_field",
+      "value": "completed_@local.name"
+    },
+    {
+      "name": "pages_field",
+      "value": "pages_@local.name"
+    },
+    {
+      "name": "valid",
+      "value": "!!@local.text && !!@local.delivery_type && !!@local.content_package",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "button",
+      "name": "save",
+      "value": "Save",
+      "action_list": "click | emit: completed;\nclick | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package;\nclick | set_data |\n_list_id: sub_items,\n@local.completed_field: FALSE;\nclick | set_data |\n_list_id: modules,\n@local.completed_field: FALSE,\n@local.pages_field: FALSE;\nclick | emit: server_sync;",
+      "parameter_list": "variant: card; \ndisabled: !@local.valid;"
+    }
+  ]
+}

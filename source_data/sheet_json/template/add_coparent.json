@@ -1,0 +1,234 @@
+{
+  "flow_type": "template",
+  "flow_name": "add_coparent",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Caregiving with"
+    },
+    {
+      "name": "first_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "checked"
+    },
+    {
+      "name": "new_co_parent_id"
+    },
+    {
+      "name": "co_parent_id",
+      "value": "@fields.no_of_co_groups"
+    },
+    {
+      "name": "co_parent_id",
+      "value": "@fields.current_co_parent_id",
+      "condition": "@fields.current_co_parent_id !== \"empty\""
+    },
+    {
+      "name": "count",
+      "value": 0
+    },
+    {
+      "name": "group_count"
+    },
+    {
+      "name": "remaining_count"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : group_count: @items.length;",
+      "parameter_list": "filter: (@item.archived == false) && (@item.co_parent_id == @local.co_parent_id) && (@item.id !== @fields.current_parent_no);\n"
+    },
+    {
+      "type": "text",
+      "value": "test: @local.group_count",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "co_parent: @local.co_parent_id",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "test2",
+      "value": "group_count = @local.group_count",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "disable_checkbox",
+      "value": false,
+      "condition": "@local.group_count < @global.maximum_coparents"
+    },
+    {
+      "name": "disable_checkbox",
+      "value": true,
+      "condition": "(@local.group_count > (@global.maximum_coparents -1))"
+    },
+    {
+      "type": "data_items",
+      "value": "parents",
+      "action_list": "data_changed | set_local : remaining_count: @items.length;",
+      "parameter_list": "filter: (@item.archived == false) && (@item.co_parent_id == \"empty\") && (@item.id !== @fields.current_parent_no) && (@item.group_id == @fields.current_group_no)\n",
+      "exclude_from_translation": true,
+      "comments": "!(@item.id == @fields.current_parent_no) && (@item.group_id == @fields.current_group_no) && (@item.co_parent_id == \"\")"
+    },
+    {
+      "type": "text",
+      "value": "remaining count =@local.remaining_count",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "No other parents to choose. Add more parents or go back to the other caregivers to add this parent.",
+      "condition": "@local.remaining_count == 0",
+      "style_list": "color: gray;"
+    },
+    {
+      "type": "text",
+      "value": "Select other caregivers in the family (maximum @global.maximum_coparents)",
+      "condition": "@local.remaining_count > 0",
+      "style_list": "color: gray;"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "parents",
+      "parameter_list": "filter: (@item.archived == false) && ((@item.co_parent_id == @local.co_parent_id) || (@item.co_parent_id == \"empty\")) && (@item.id !== @fields.current_parent_no) && (@item.group_id == @fields.current_group_no)\n",
+      "exclude_from_translation": true,
+      "comments": "!(@item.id == @fields.current_parent_no) && (@item.group_id == @fields.current_group_no) && (@item.co_parent_id == \"\")"
+    },
+    {
+      "type": "text",
+      "name": "spacer"
+    },
+    {
+      "name": "first_name",
+      "value": " ",
+      "comments": "This makes sure undefined isnt listed"
+    },
+    {
+      "name": "last_name",
+      "value": " ",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_name",
+      "value": "@item.first_name",
+      "condition": "@item.first_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last_name",
+      "value": "@item.last_name",
+      "condition": "@item.last_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "new_co_parent_id",
+      "value": "@fields.current_co_parent_id",
+      "comments": "This part is for testing"
+    },
+    {
+      "name": "new_co_parent_id",
+      "value": "test",
+      "condition": "@item.co_parent_id !== \"test\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "test1",
+      "value": "new_co_parent_id = @local.new_co_parent_id",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "test_disable_checkbox",
+      "value": "disable_checkbox = @local.disable_checkbox;",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "simple_checkbox",
+      "name": "first_not_selected",
+      "value": false,
+      "action_list": "changed | set_item| co_parent_id: @local.co_parent_id;\nchanged | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: @local.co_parent_id; ",
+      "condition": "(@item.co_parent_id == \"empty\") && (@local.group_count < 1) ",
+      "parameter_list": "align: left; reverse: false; label_text: @local.first_name @local.last_name; disabled: @local.disable_checkbox"
+    },
+    {
+      "type": "simple_checkbox",
+      "name": "last_selected",
+      "value": true,
+      "action_list": "changed | set_item| co_parent_id: empty;\nchanged | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\nco_parent_id: empty; ",
+      "condition": "@item.co_parent_id !== \"empty\" && (@local.group_count < 2)",
+      "parameter_list": "align: left; reverse: false; label_text: @local.first_name @local.last_name; "
+    },
+    {
+      "type": "simple_checkbox",
+      "name": "selected",
+      "value": true,
+      "action_list": "changed | set_item| co_parent_id: empty;",
+      "condition": "@item.co_parent_id !== \"empty\" && (@local.group_count >1)",
+      "parameter_list": "align: left; reverse: false; label_text: @local.first_name @local.last_name;",
+      "comments": "changed | set_data |\n_list_id: parents,\n_id: @item.id,\nco_parent_id: @fields.current_co_parent_id; "
+    },
+    {
+      "type": "simple_checkbox",
+      "name": "not_selected",
+      "value": false,
+      "action_list": "changed | set_item| co_parent_id: @local.co_parent_id;",
+      "condition": "@item.co_parent_id == \"empty\" && (@local.group_count > 0)",
+      "parameter_list": "align: left; reverse: false; label_text: @local.first_name @local.last_name; disabled: @local.disable_checkbox",
+      "comments": "changed | set_data |\n_list_id: parents,\n_id: @item.id,\nco_parent_id: test; "
+    },
+    {
+      "type": "text",
+      "name": "test_not_selected",
+      "value": "test_not_selected",
+      "condition": false,
+      "exclude_from_translation": true,
+      "comments": "(@item.co_parent_id == \"empty\") && (@local.group_count < 1)"
+    },
+    {
+      "type": "text",
+      "name": "test_last_selected",
+      "value": "test_last_selected",
+      "condition": false,
+      "exclude_from_translation": true,
+      "comments": "@item.co_parent_id !== \"empty\" && (@local.group_count < 2)"
+    },
+    {
+      "type": "text",
+      "name": "test_selected",
+      "value": "test_selected",
+      "condition": false,
+      "exclude_from_translation": true,
+      "comments": "@item.co_parent_id !== \"empty\" && (@local.group_count >1)"
+    },
+    {
+      "type": "text",
+      "name": "test_not_selected",
+      "value": "test_not_selected",
+      "condition": false,
+      "exclude_from_translation": true,
+      "comments": "@item.co_parent_id == \"empty\" && (@local.group_count > 0)"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

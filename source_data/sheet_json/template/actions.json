@@ -1,0 +1,81 @@
+{
+  "flow_type": "template",
+  "flow_name": "actions",
+  "status": "released",
+  "rows": [
+    {
+      "name": "module_1"
+    },
+    {
+      "name": "module_2"
+    },
+    {
+      "name": "module_3"
+    },
+    {
+      "name": "module_4"
+    },
+    {
+      "name": "module_5"
+    },
+    {
+      "name": "module_6"
+    },
+    {
+      "name": "module_7"
+    },
+    {
+      "name": "module_8"
+    },
+    {
+      "name": "module_9"
+    },
+    {
+      "name": "module_10"
+    },
+    {
+      "name": "module_11"
+    },
+    {
+      "name": "module_12"
+    },
+    {
+      "name": "module_13"
+    },
+    {
+      "name": "module_14"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.modules",
+      "action_list": "data_changed | set_local | module_1 : @items[0].id;\ndata_changed | set_local | module_2 : @items[1].id;\ndata_changed | set_local | module_3 : @items[3].id;"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Actions",
+      "parameter_list": "variant: page_banner",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "pending_reports",
+      "value": "pending_reports"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "begin_template",
+      "name": "follow_up",
+      "value": "follow_up"
+    },
+    {
+      "name": "has_limit",
+      "value": true
+    },
+    {
+      "type": "end_template"
+    }
+  ]
+}

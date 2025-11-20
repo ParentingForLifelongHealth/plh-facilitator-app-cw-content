@@ -1,0 +1,324 @@
+{
+  "flow_type": "template",
+  "flow_name": "virtual_form",
+  "status": "released",
+  "rows": [
+    {
+      "name": "report_id",
+      "value": "@fields.current_report_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_concat",
+      "value": "report.@local.report_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_data",
+      "value": "@data.@local.report_concat",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_name",
+      "value": "@local.report_data.name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_type_name",
+      "value": "@global.share_medium",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "@local.report_name (@local.report_type_name)",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "now",
+      "value": "@calc(timestamp())",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "attendance_data_json",
+      "value": "@calc(JSON.parse(@fields.attendance_data))",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "previous_report_id_array",
+      "value": "@calc(Object.keys(@local.attendance_data_json))",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "new_report",
+      "value": "@calc(!(@local.previous_report_id_array.includes(@local.report_id)))",
+      "exclude_from_translation": true,
+      "comments": "Boolean - is this a new report?"
+    },
+    {
+      "name": "add_new_report",
+      "value": "@calc(@local.attendance_data_json[@local.report_id] = {})",
+      "condition": "@local.new_report",
+      "exclude_from_translation": true,
+      "comments": "If this is a new parent report:\nAdd an entry to the json for this report and..."
+    },
+    {
+      "name": "set_new_report_id",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].report_id = @local.report_id)",
+      "condition": "@local.new_report",
+      "exclude_from_translation": true,
+      "comments": "... set their report id and"
+    },
+    {
+      "name": "set_new_parent_group_no",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].parent_group_no = @fields.current_parent_group_no)",
+      "condition": "@local.new_report",
+      "exclude_from_translation": true,
+      "comments": "... set their parent group number"
+    },
+    {
+      "name": "create_present",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].present = [])",
+      "condition": "@local.new_report",
+      "exclude_from_translation": true,
+      "comments": "... add attendance entry"
+    },
+    {
+      "name": "create_edited",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].edited = [])",
+      "condition": "@local.new_report",
+      "exclude_from_translation": true,
+      "comments": "... add timestamps entry"
+    },
+    {
+      "name": "edited_set",
+      "value": "@calc(new Set(@local.attendance_data_json[@local.report_id].edited))",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "add_now",
+      "value": "@calc(@local.edited_set.add(@local.now))",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "edited_array",
+      "value": "@calc(Array.from(@local.edited_set))",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "update_edited",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].edited = @local.edited_array)",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "placeholder",
+      "value": "minutes"
+    },
+    {
+      "type": "text",
+      "name": "question_session_time",
+      "value": "How many minutes did you spend facilitating your parent @global.share_medium group over the last week?",
+      "parameter_list": "style: emphasised"
+    },
+    {
+      "type": "text_box",
+      "name": "text_box_session_time",
+      "value": "@local.attendance_data_json[@local.report_id].session_time",
+      "parameter_list": "number_input: true; \nplaceholder: @local.placeholder; \nmax_length: 3",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "set_session_time",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].session_time = @local.text_box_session_time)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "question_participants",
+      "value": "**Which of the parents in your group participated?**\n*Participation is defined as any parent who posts a comment, question, reply or reaction (such as a thumbs up) within the chat since you shared the first message from the weekly discussion.*"
+    },
+    {
+      "name": "parent",
+      "value": "Parent"
+    },
+    {
+      "name": "parent_data_json",
+      "value": "@calc(JSON.parse(@fields.parent_data))"
+    },
+    {
+      "name": "present_parent_set",
+      "value": "@calc(new Set(@local.attendance_data_json[@local.report_id].present))"
+    },
+    {
+      "type": "begin_items",
+      "value": "@local.parent_data_json",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_parents",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "parent_no",
+      "value": "@item.parent_no",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "parent_id",
+      "value": "parent_@local.parent_no",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "toggle_initial_state",
+      "value": "@calc(@local.present_parent_set.has(@local.parent_id))",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "toggle_bar",
+      "name": "parent_@item.parent_no",
+      "value": "@local.toggle_initial_state",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "parent_first_name",
+      "value": "@local.parent_data_json[@local.parent_id].first_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "parent_last_name",
+      "value": "@local.parent_data_json[@local.parent_id].last_name",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "parent_name",
+      "value": "@calc((@local.parent_first_name || @local.parent_last_name) ? `${@local.parent_first_name || ''} ${@local.parent_last_name || ''}`.trim() : `${@local.parent} ${@local.parent_no}`)",
+      "exclude_from_translation": true,
+      "comments": "Javascript syntax reference"
+    },
+    {
+      "type": "text",
+      "name": "text_name_@item.parent_no",
+      "value": "@local.parent_name",
+      "exclude_from_translation": true,
+      "style_list": "flex: 1"
+    },
+    {
+      "name": "add_parent_@item.parent_no",
+      "value": "@calc(@local.present_parent_set.add(@local.parent_id))",
+      "condition": "@local.@local.parent_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "delete_parent_@item.parent_no",
+      "value": "@calc(@local.present_parent_set.delete(@local.parent_id))",
+      "condition": "!(@local.@local.parent_id)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_items"
+    },
+    {
+      "name": "present_parent_array",
+      "value": "@calc(Array.from(@local.present_parent_set))",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "update_present_parents",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].present = @local.present_parent_array)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "question_sent_messages",
+      "value": "I was able to send...",
+      "parameter_list": "style: emphasised"
+    },
+    {
+      "name": "all",
+      "value": "All of the messages"
+    },
+    {
+      "name": "some",
+      "value": "Some of the messages"
+    },
+    {
+      "name": "none",
+      "value": "None of the messages"
+    },
+    {
+      "name": "answer_list",
+      "value": "name: all | text: @local.all; name: some | text: @local.some; name: none | text: @local.none"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "radio_button_grid_sent_messages",
+      "value": "@local.attendance_data_json[@local.report_id].sent_messages",
+      "parameter_list": "item_width: 100%; answer_list: @local.answer_list"
+    },
+    {
+      "name": "set_messages",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].sent_messages = @local.radio_button_grid_sent_messages)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "question_how_session_went",
+      "value": "How do you feel the session went? ",
+      "parameter_list": "style: emphasised",
+      "comments": "This is specific to plh_facilitator_mx"
+    },
+    {
+      "name": "very_well",
+      "value": "Very well"
+    },
+    {
+      "name": "well",
+      "value": "Well"
+    },
+    {
+      "name": "okay",
+      "value": "Acceptable / Okay"
+    },
+    {
+      "name": "poorly",
+      "value": "Poorly"
+    },
+    {
+      "name": "very_poorly",
+      "value": "Very poorly"
+    },
+    {
+      "name": "answer_list_2",
+      "value": "name: very_well | text: @local.very_well; name: well | text: @local.well; name: okay | text: @local.okay; name: poorly | text: @local.poorly; name: very_poorly | text: @local.very_poorly; "
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "radio_button_grid_how_session_went",
+      "value": "@local.attendance_data_json[@local.report_id].how_session_went",
+      "parameter_list": "item_width: 100%; answer_list: @local.answer_list_2"
+    },
+    {
+      "name": "set_messages_2",
+      "value": "@calc(@local.attendance_data_json[@local.report_id].how_session_went = @local.radio_button_grid_how_session_went)",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "attendance_data_string",
+      "value": "@calc(JSON.stringify(@local.attendance_data_json))",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "nav_buttons",
+      "value": "nav_buttons",
+      "action_list": "completed | set_field: attendance_data: @local.attendance_data_string; \ncompleted | emit: completed; \ncompleted | emit: server_sync"
+    },
+    {
+      "type": "end_template"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "profile_section_data",
+  "status": "released",
+  "data_list_name": "profile_section",
+  "rows": [
+    {
+      "id": "about",
+      "title::eng": "About you",
+      "template": "about",
+      "description::eng": "We will use this to personalise the messages for sharing with your @global.share_groups.",
+      "show": "@global.has_profile_about"
+    },
+    {
+      "id": "id",
+      "title::eng": "Your Facilitator ID",
+      "template": "id",
+      "description::eng": "Here you can find your unique code. You may be asked to share this code with people who will support your @global.app_name journey.",
+      "show": true
+    },
+    {
+      "id": "group",
+      "title::eng": "Your Parent Group",
+      "template": "group",
+      "description::eng": "See and edit the list of parents attending your groups. ",
+      "show": "!@global.allow_multiple_parent_groups && @global.has_parent_groups"
+    },
+    {
+      "id": "groups",
+      "title::eng": "Your Parent Groups",
+      "template": "groups",
+      "description::eng": "See and edit the lists of parents attending your groups. ",
+      "show": "@global.allow_multiple_parent_groups && @global.has_parent_groups"
+    },
+    {
+      "id": "profile",
+      "title::eng": "Profile",
+      "template": "profile",
+      "description::eng": "This is used as the title of the 'Profile' page",
+      "show": "@global.has_profile_about"
+    }
+  ]
+}

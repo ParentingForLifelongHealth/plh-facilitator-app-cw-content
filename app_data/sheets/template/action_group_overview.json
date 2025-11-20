@@ -2240,11 +2240,12 @@
           "_translations": {
             "value": {}
           },
+          "parameter_list": {
+            "text_align": "center"
+          },
           "style_list": [
-            "background-color: rgba(255, 204, 0, 0.6)",
-            "border-radius: 4px",
-            "padding: 0 2px",
-            "box-decoration-break: clone"
+            "background-color: rgba(255, 204, 0, 0.1)",
+            "flex:1"
           ],
           "condition": "@local.no_pending_reports == 1",
           "exclude_from_translation": true,
@@ -2290,11 +2291,12 @@
           "_translations": {
             "value": {}
           },
+          "parameter_list": {
+            "text_align": "center"
+          },
           "style_list": [
-            "background-color: rgba(255, 204, 0, 0.6)",
-            "border-radius: 4px",
-            "padding: 0 2px",
-            "box-decoration-break: clone"
+            "background-color: rgba(255, 204, 0, 0.1)",
+            "flex:1"
           ],
           "condition": "@local.no_pending_reports > 1",
           "exclude_from_translation": true,
@@ -2340,11 +2342,12 @@
           "_translations": {
             "value": {}
           },
+          "parameter_list": {
+            "text_align": "center"
+          },
           "style_list": [
-            "background-color: rgba(158, 203, 245, 0.6)",
-            "border-radius: 4px",
-            "padding: 0 2px",
-            "box-decoration-break: clone"
+            "background-color: rgba(158, 203, 245, 0.1)",
+            "flex:1"
           ],
           "condition": "@local.no_of_follow_ups == 1",
           "exclude_from_translation": true,
@@ -2390,11 +2393,12 @@
           "_translations": {
             "value": {}
           },
+          "parameter_list": {
+            "text_align": "center"
+          },
           "style_list": [
-            "background-color: rgba(158, 203, 245, 0.6)",
-            "border-radius: 4px",
-            "padding: 0 2px",
-            "box-decoration-break: clone"
+            "background-color: rgba(158, 203, 245, 0.1)",
+            "flex:1"
           ],
           "condition": "@local.no_of_follow_ups > 1",
           "exclude_from_translation": true,

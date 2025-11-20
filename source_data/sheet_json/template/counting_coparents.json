@@ -1,0 +1,49 @@
+{
+  "flow_type": "template",
+  "flow_name": "counting_coparents",
+  "status": "released",
+  "rows": [
+    {
+      "name": "co_parent_id_template"
+    },
+    {
+      "name": "this_parent_id_template"
+    },
+    {
+      "name": "fn"
+    },
+    {
+      "name": "ln"
+    },
+    {
+      "name": "number_of_coparents"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : number_of_coparents: @items.length; \ndata_changed | set_local : fn: @items[0].first_name;\ndata_changed | set_local : ln: @items[0].last_name;\n",
+      "parameter_list": "filter: (@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty') \n"
+    },
+    {
+      "type": "text",
+      "name": "coparenting_with",
+      "value": "Caregiving with @local.fn @local.ln",
+      "style_list": "color: gray;margin-top: -10px; margin-bottom: 12px; font-size: 14px;",
+      "condition": "@local.number_of_coparents == 1"
+    },
+    {
+      "type": "text",
+      "name": "coparenting_with",
+      "value": "Caregiving with @local.number_of_coparents others",
+      "style_list": "color: gray;margin-top: -10px; margin-bottom: 12px; font-size: 14px;",
+      "condition": "@local.number_of_coparents > 1"
+    },
+    {
+      "type": "text",
+      "name": "spacer2",
+      "value": " ",
+      "style_list": "margin-top: -10px; margin-bottom: 34px; font-size: 14px;",
+      "condition": "(@local.co_parent_id_template == 'empty')"
+    }
+  ]
+}

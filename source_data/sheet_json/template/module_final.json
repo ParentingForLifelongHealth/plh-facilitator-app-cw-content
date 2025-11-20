@@ -1,0 +1,415 @@
+{
+  "flow_type": "template",
+  "flow_name": "module_final",
+  "status": "released",
+  "rows": [
+    {
+      "name": "module_id",
+      "value": "@fields.current_module_no",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "group_id",
+      "value": "@fields.current_group_no",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "completed_field",
+      "value": "completed_@fields.current_group_no",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "group",
+      "value": "_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_notification_id",
+      "value": "module_@local.module_id@local.group@local.group_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_complete",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "name": "get_module_complete",
+      "value": "@data.modules",
+      "action_list": "data_changed | set_local : module_complete : @items[0]?.@local.completed_field;",
+      "parameter_list": "filter: @item.id == @fields.current_module_no;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_count"
+    },
+    {
+      "name": "report_id"
+    },
+    {
+      "type": "data_items",
+      "name": "get_reports",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_id : @items[0]?.id;\ndata_changed | set_local : report_count : @items.length;",
+      "parameter_list": "filter: @fields.current_module_no == @item.module_id && @item.group_id == @field.current_group_no && !@item.pending;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "message_shared"
+    },
+    {
+      "type": "data_items",
+      "name": "get_message_share",
+      "value": "message_log",
+      "action_list": "data_changed | set_local : message_shared : (@items.length > 0);",
+      "parameter_list": "filter: @item.group_id == @fields.current_group_no && @item.module == @fields.current_module_no;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_top",
+      "parameter_list": "sticky: top;\nbackground_image_asset: images/backgrounds/home_top_left.svg;\nbackground_image_position: top left;",
+      "condition": false,
+      "style_list": "width: 105%;\nalign-items: flex-start;\npadding: 24px;\nmin-height: 192px;"
+    },
+    {
+      "type": "image",
+      "name": "logo",
+      "value": "@global.main_logo",
+      "style_list": "max-width: 72px;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "reviewer",
+      "parameter_list": "style: column",
+      "exclude_from_translation": true,
+      "condition": "(@fields.user_type != \"facilitator\") && (@fields.user_type != \"tester\")"
+    },
+    {
+      "type": "lottie_animation",
+      "name": "reviewer_lottie",
+      "value": "@global.reviewer_lottie",
+      "style_list": "margin-block: -48px"
+    },
+    {
+      "type": "text",
+      "name": "test_lottie_1",
+      "value": "test 1",
+      "condition": false
+    },
+    {
+      "type": "image",
+      "name": "reviewer_image",
+      "value": "@global.reviewer_image",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "name": "reviewer_text",
+      "value": "@global.reviewer_text",
+      "parameter_list": "text_align: center"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "facilitator_wrapper",
+      "parameter_list": "style: column",
+      "condition": "(@fields.user_type == \"facilitator\") || (@fields.user_type == \"tester\")"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "module_not_complete_wrapper",
+      "parameter_list": "style: column",
+      "condition": "!@local.module_complete"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "message_not_shared",
+      "parameter_list": "style: column",
+      "condition": "!@local.message_shared"
+    },
+    {
+      "type": "lottie_animation",
+      "name": "message_not_shared_lottie",
+      "value": "@global.message_not_sharede_lottie"
+    },
+    {
+      "type": "text",
+      "name": "test_lottie_2",
+      "value": "test 2",
+      "condition": false
+    },
+    {
+      "type": "image",
+      "name": "message_not_shared_image",
+      "value": "@global.message_not_shared_image",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "name": "message_not_shared_text",
+      "value": "@global.message_not_shared_text",
+      "parameter_list": "text_align: center"
+    },
+    {
+      "type": "button",
+      "name": "complete_module",
+      "value": "@global.mark_delivered",
+      "parameter_list": "disabled: true",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "module_not_complete_no_report",
+      "parameter_list": "style: column",
+      "condition": "(@local.message_shared) && (@fields.current_report_id == \"empty\")"
+    },
+    {
+      "type": "lottie_animation",
+      "name": "module_not_complete_lottie",
+      "value": "@global.module_not_complete_lottie"
+    },
+    {
+      "type": "text",
+      "name": "test_lottie_3",
+      "value": "test 3",
+      "condition": false
+    },
+    {
+      "type": "image",
+      "name": "module_not_complete_image",
+      "value": "@global.module_not_complete_image",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "name": "module_not_complete_text",
+      "value": "@global.module_not_complete_text",
+      "parameter_list": "text_align: center",
+      "condition": false
+    },
+    {
+      "type": "button",
+      "name": "complete_module",
+      "value": "@global.mark_delivered",
+      "action_list": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true;\n",
+      "exclude_from_translation": true,
+      "comment": "click | go_to: home_screen;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "module_not_complete_report",
+      "parameter_list": "style: column",
+      "condition": "(@local.message_shared) && (@fields.current_report_id !== \"empty\")"
+    },
+    {
+      "type": "lottie_animation",
+      "name": "module_not_complete_report_lottie",
+      "value": "@global.module_not_complete_report_lottie"
+    },
+    {
+      "type": "text",
+      "name": "test_lottie_4",
+      "value": "test 4",
+      "condition": false
+    },
+    {
+      "type": "image",
+      "name": "module_not_complete_report_lottie",
+      "value": "@global.module_not_complete_report_image",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "name": "module_not_complete_report_lottie",
+      "value": "@global.module_not_complete_report_text",
+      "parameter_list": "text_align: center"
+    },
+    {
+      "type": "button",
+      "name": "complete_module",
+      "value": "@global.mark_delivered_report",
+      "action_list": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true;\nclick | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\nreport_id: @field.current_report_id,\npending: true,\ntime_created: @calc(now());\nclick | set_field: current_report_no: new;\nclick | go_to: edit_report;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "module_complete_wrapper",
+      "parameter_list": "style: column",
+      "condition": "!!@local.module_complete"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "report_wrapper",
+      "parameter_list": "style: column",
+      "condition": "@fields.current_report_id !== \"empty\""
+    },
+    {
+      "type": "begin_display_group",
+      "name": "report_to_do",
+      "parameter_list": "style: column",
+      "condition": "@local.report_count == 0"
+    },
+    {
+      "type": "lottie_animation",
+      "name": "report_to_do_lottie",
+      "value": "@global.report_to_do_lottie"
+    },
+    {
+      "type": "text",
+      "name": "test_lottie_5",
+      "value": "test 5",
+      "condition": false
+    },
+    {
+      "type": "image",
+      "name": "report_to_do_image",
+      "value": "@global.report_to_do_image",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "name": "report_to_do_text",
+      "value": "@global.report_to_do_text",
+      "parameter_list": "text_align: center"
+    },
+    {
+      "type": "button",
+      "name": "new_report",
+      "value": "@global.submit_report",
+      "action_list": "click | add_data | \n_list_id: report_answers,\ngroup_id: @field.current_group_no ,\nmodule_id: @field.current_module_no ,\npending: true,\ntime_created: @calc(now());\nclick | set_field: current_report_no: new;\nclick | go_to: edit_report;",
+      "parameter_list": "icon_src: images/icons/edit.svg;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "report_complete",
+      "parameter_list": "style: column",
+      "condition": "@local.report_count > 0"
+    },
+    {
+      "type": "lottie_animation",
+      "name": "report_complete_lottie",
+      "value": "@global.report_complete_lottie"
+    },
+    {
+      "type": "text",
+      "name": "test_lottie_6",
+      "value": "test 6",
+      "condition": false
+    },
+    {
+      "type": "image",
+      "name": "report_complete_image",
+      "value": "@global.report_complete_image",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "name": "report_complete_text",
+      "value": "@global.report_complete_text",
+      "parameter_list": "text_align: center"
+    },
+    {
+      "type": "button",
+      "name": "existing_report",
+      "value": "@global.review_report",
+      "action_list": "click | set_field: current_report_no: @local.report_id;\nclick | go_to: edit_report;",
+      "parameter_list": "icon_src: images/icons/edit.svg;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "report_started",
+      "parameter_list": "style: column",
+      "condition": false,
+      "comment": "Will need to expand this is currently we dont have an option for this"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "no_report",
+      "parameter_list": "style: column",
+      "condition": "@fields.current_report_id == \"empty\""
+    },
+    {
+      "type": "lottie_animation",
+      "name": "no_report_lottie",
+      "value": "@global.no_report_lottie"
+    },
+    {
+      "type": "text",
+      "name": "test_lottie_7",
+      "value": "test 7",
+      "condition": false
+    },
+    {
+      "type": "image",
+      "name": "no_report_image",
+      "value": "@global.no_report_image",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "name": "no_report_text",
+      "value": "@global.no_report_text",
+      "parameter_list": "text_align: center"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "button",
+      "name": "goto_start",
+      "value": "@global.go_to_start",
+      "action_list": "click | go_to: home_screen;\nclick | nav_stack: open | template: article_loop, header: false;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "button",
+      "name": "support",
+      "value": "@global.support_button",
+      "action_list": "click | go_to: library_faq;",
+      "parameter_list": "icon_src: images/icons/help.svg;",
+      "exclude_from_translation": true
+    }
+  ]
+}

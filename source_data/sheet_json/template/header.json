@@ -1,0 +1,35 @@
+{
+  "flow_type": "template",
+  "flow_name": "header",
+  "status": "released",
+  "rows": [
+    {
+      "name": "icon_asset"
+    },
+    {
+      "name": "title"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_header"
+    },
+    {
+      "type": "title",
+      "name": "print_title",
+      "value": "@local.title",
+      "condition": "!!@local.title",
+      "style_list": "flex:3"
+    },
+    {
+      "type": "image",
+      "name": "image",
+      "value": "@local.icon_asset",
+      "parameter_list": "style: rounded_corners;",
+      "condition": "!!@local.icon_asset",
+      "style_list": "flex:2"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

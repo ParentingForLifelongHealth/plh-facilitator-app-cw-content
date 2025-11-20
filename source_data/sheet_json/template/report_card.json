@@ -1,0 +1,120 @@
+{
+  "flow_type": "template",
+  "flow_name": "report_card",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id"
+    },
+    {
+      "name": "module_id"
+    },
+    {
+      "name": "module_name"
+    },
+    {
+      "name": "report_id"
+    },
+    {
+      "name": "found",
+      "value": false
+    },
+    {
+      "type": "text",
+      "value": "@local.module_name",
+      "condition": false
+    },
+    {
+      "name": "report_count"
+    },
+    {
+      "name": "answer_id"
+    },
+    {
+      "name": "pending"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_count : @items.length;\ndata_changed | set_local : pending : @items[0]?.pending;\ndata_changed | set_local : answer_id: @items[0]?.id;",
+      "parameter_list": "filter: @item.module_id == @local.module_id  && @item.group_id == @local.group_id;",
+      "condition": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "module_complete",
+      "condition": "@local.report_count > 0"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "existing_report",
+      "condition": "!@local.pending"
+    },
+    {
+      "type": "begin_display_group",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "image",
+      "value": "images/icons/check_circle.png",
+      "style_list": "width: 38px;\nmin-width: 38px;"
+    },
+    {
+      "type": "text",
+      "value": "@local.module_name"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "round_button",
+      "name": "edit_report",
+      "action_list": "click | set_field: current_report_no: @local.answer_id;\nclick | set_field: current_group_no: @local.group_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: edit_report;",
+      "parameter_list": "icon_src: images/icons/edit.svg;"
+    },
+    {
+      "type": "round_button",
+      "name": "delete_report",
+      "action_list": "click | set_field: current_report_no: @local.answer_id; \nclick | pop_up: delete_report;",
+      "parameter_list": "variant: no-background; \nicon_src: images/icons/delete.svg;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "empty_report",
+      "condition": "!!@local.pending"
+    },
+    {
+      "type": "text",
+      "value": "@local.module_name",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "round_button",
+      "action_list": "click | set_field: current_report_no: @local.answer_id;\nclick | set_field: current_group_no: @local.group_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: edit_report;",
+      "parameter_list": "variant: no-background; \nicon_src: images/icons/add_circle.svg;",
+      "comments": "click | set_data |\n_list_id: parents,\n_id: text_field,\n@local.module_id: false;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "module_not_complete",
+      "condition": "@local.report_count == 0"
+    },
+    {
+      "type": "text",
+      "value": "@local.module_name",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

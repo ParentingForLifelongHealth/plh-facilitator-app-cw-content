@@ -1,0 +1,40 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "app_section_data",
+  "status": "released",
+  "data_list_name": "app_section",
+  "rows": [
+    {
+      "id": "home",
+      "title::eng": "Sessions",
+      "icon_asset": "images/logos/bird_white.svg",
+      "template": "home_screen",
+      "description::eng": "Welcome to the @global.app_name. Each week you should select your weekly topic, share the message to your @global.share_groups, and report attendance. ",
+      "image": "@global.home_icon_asset",
+      "target_template": "home_screen"
+    },
+    {
+      "id": "reports",
+      "title::eng": "Report",
+      "icon_asset": "images/icons/pencil_white.svg",
+      "template": "reports"
+    },
+    {
+      "id": "library",
+      "title::eng": "Library",
+      "icon_asset": "images/icons/library_white.svg",
+      "template": "library",
+      "image": "images/icons/library.png",
+      "target_template": "library"
+    },
+    {
+      "id": "settings",
+      "title::eng": "Settings",
+      "icon_asset": "images/icons/cog_white.svg",
+      "template": "profile",
+      "description::eng": "Your profile provides your facilitator ID and is also where you can edit the list of parents attending your groups. ",
+      "image": "images/icons/cog_white.svg",
+      "target_template": "profile"
+    }
+  ]
+}

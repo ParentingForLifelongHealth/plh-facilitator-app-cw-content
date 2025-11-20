@@ -12,30 +12,30 @@
 | button | 133 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 109 |
+| data_items | 110 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 172 |
+| display_group | 173 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
 | lottie_animation | 8 |
 | pdf | 1 |
 | plh_bottom_nav | 1 |
-| plh_module_list_item | 5 |
+| plh_module_list_item | 6 |
 | qr_code | 2 |
 | radio_button_grid | 15 |
 | round_button | 37 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1043 |
+| set_variable | 1058 |
 | simple_checkbox | 6 |
 | task_card | 1 |
 | task_progress_bar | 4 |
-| template | 144 |
+| template | 145 |
 | test | 1 |
-| text | 370 |
+| text | 382 |
 | text_area | 4 |
 | text_box | 32 |
 | title | 72 |
@@ -54,13 +54,13 @@
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
-| emit: completed | 64 |
+| emit: completed | 65 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
-| emit: server_sync | 21 |
+| emit: server_sync | 22 |
 | emit: set_language | 4 |
-| emit: uncompleted | 97 |
+| emit: uncompleted | 98 |
 | feedback | 24 |
 | go_to | 43 |
 | nav | 7 |
@@ -69,7 +69,7 @@
 | reset_app | 4 |
 | reset_data | 3 |
 | save_to_device | 4 |
-| set_data | 28 |
+| set_data | 29 |
 | set_field | 90 |
 | set_item | 13 |
 | set_local | 135 |
@@ -82,8 +82,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 103426 KB | 103.4 MB |
-| unused | 9120 KB | 9.1 MB |
+| total | 99703 KB | 99.7 MB |
+| unused | 10791 KB | 10.8 MB |
 </details>
 
 <details open>
@@ -127,6 +127,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/paper_plane_white.svg | 1.4 |
 | images/icons/pencil-outline-white.svg | 1.4 |
 | images/icons/pencil-outline.svg | 0.3 |
+| images/icons/people-brown.svg | 2.1 |
 | images/icons/people_network.svg | 6.9 |
 | images/icons/person-add-outline.svg | 0.6 |
 | images/icons/person-remove-outline.svg | 0.6 |
@@ -148,6 +149,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/world.svg | 6.2 |
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
+| images/modules/chat.png | 1669 |
 | pdf/module_1_core_lesson_teen_pap.pdf | 393.1 |
 </details>
 
@@ -208,7 +210,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/download.svg | 0.4 | 2 |
 | images/icons/download_white.svg | 0.7 | 1 |
 | images/icons/edit.svg | 0.9 | 3 |
-| images/icons/expand_circle_right.svg | 0.5 | 5 |
+| images/icons/expand_circle_right.svg | 0.5 | 6 |
 | images/icons/file-tray-full-outline.svg | 0.5 | 1 |
 | images/icons/globe-outline.svg | 0.8 | 1 |
 | images/icons/help.svg | 0.5 | 1 |
@@ -220,7 +222,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/log-in-outline.svg | 0.4 | 1 |
 | images/icons/log-out-outline.svg | 0.3 | 1 |
 | images/icons/pencil_white.svg | 2 | 1 |
-| images/icons/people-brown.svg | 2.1 | 1 |
+| images/icons/people-outline-brown.svg | 1.1 | 1 |
 | images/icons/people-outline.svg | 0.9 | 1 |
 | images/icons/people.svg | 1 | 1 |
 | images/icons/person-circle-outline.svg | 0.7 | 1 |
@@ -247,12 +249,12 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/modules/module_5_yc.png | 4936.1 | 1 |
 | images/modules/module_6_teen.png | 5771 | 1 |
 | images/modules/module_6_yc.png | 7653.2 | 2 |
-| images/modules/reminder.png | 171.7 | 13 |
-| images/onboarding/splash_1.png | 2484.4 | 1 |
-| images/onboarding/splash_2.png | 2220.7 | 1 |
-| images/onboarding/splash_3.png | 1760.5 | 1 |
-| images/onboarding/splash_4.png | 1425.9 | 1 |
-| images/onboarding/splash_5.png | 2195 | 1 |
+| images/modules/reminder.png | 116.6 | 13 |
+| images/onboarding/splash_1.png | 1248 | 1 |
+| images/onboarding/splash_2.png | 1474.4 | 1 |
+| images/onboarding/splash_3.png | 1577.8 | 1 |
+| images/onboarding/splash_4.png | 805.7 | 1 |
+| images/onboarding/splash_5.png | 1314.2 | 1 |
 | lottie/checkmark_blue.json | 17 | 3 |
 | lottie/cw_profile_complete.json | 13.4 | 4 |
 | pdf/aecp_pap.pdf | 673.9 | 1 |

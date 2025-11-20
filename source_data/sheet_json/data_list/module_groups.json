@@ -1,0 +1,38 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "module_groups",
+  "status": "released",
+  "data_list_name": "module_groups",
+  "rows": [
+    {
+      "id": "module_1",
+      "text::eng": "Week 1",
+      "background_colour": "var(--plh-module-list-item-background-1)"
+    },
+    {
+      "id": "module_2",
+      "text::eng": "Week 2",
+      "background_colour": "var(--plh-module-list-item-background-2)"
+    },
+    {
+      "id": "module_3",
+      "text::eng": "Week 3",
+      "background_colour": "var(--plh-module-list-item-background-3)"
+    },
+    {
+      "id": "module_4",
+      "text::eng": "Week 4",
+      "background_colour": "var(--plh-module-list-item-background-1)"
+    },
+    {
+      "id": "module_5",
+      "text::eng": "Week 5",
+      "background_colour": "var(--plh-module-list-item-background-2)"
+    },
+    {
+      "id": "module_6",
+      "text::eng": "Week 6",
+      "background_colour": "var(--plh-module-list-item-background-3)"
+    }
+  ]
+}

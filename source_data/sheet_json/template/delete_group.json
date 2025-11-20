@@ -1,0 +1,50 @@
+{
+  "flow_type": "template",
+  "flow_name": "delete_group",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id",
+      "value": "@fields.current_group_no",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "group_name",
+      "value": "[name]",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Are you sure you want to delete @fields.current_group_name?"
+    },
+    {
+      "type": "text",
+      "name": "text_warning",
+      "value": "This will delete all of @fields.current_group_name group data. The action cannot be undone."
+    },
+    {
+      "type": "begin_display_group",
+      "name": "buttons"
+    },
+    {
+      "type": "button",
+      "name": "button_no",
+      "value": "Cancel",
+      "action_list": "click | emit: uncompleted",
+      "parameter_list": "style: card",
+      "style_list": "flex:1"
+    },
+    {
+      "type": "button",
+      "name": "button_delete",
+      "value": "Delete",
+      "action_list": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived: TRUE; \nclick | set_field: current_group_no: NULL;\nclick | emit: completed;\nclick | nav: back;\nclick | nav: back;",
+      "parameter_list": "style: card",
+      "style_list": "flex:1"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

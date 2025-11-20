@@ -1,0 +1,28 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "delivery_data",
+  "status": "released",
+  "data_list_name": "delivery",
+  "rows": [
+    {
+      "id": "welcome",
+      "name": "welcome",
+      "text::eng": "Welcome session in-person"
+    },
+    {
+      "id": "closing",
+      "name": "closing",
+      "text::eng": "Closing session in-person"
+    },
+    {
+      "id": "welcome_closing",
+      "name": "welcome_closing",
+      "text::eng": "Welcome & closing session in-person"
+    },
+    {
+      "id": "remote",
+      "name": "remote",
+      "text::eng": "No in-person session"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile_user_type",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "choose_role",
+      "value": "@global.choose_role",
+      "parameter_list": "style: emphasised;"
+    },
+    {
+      "type": "combo_box",
+      "name": "user_type_select",
+      "value": "@fields.user_type",
+      "parameter_list": "answer_list: @data.user_type;\nplaceholder: @global.select_response;\nvariant: dropdown;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "completed_enabled",
+      "value": "!!@local.user_type_select",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_footer",
+      "parameter_list": "sticky: bottom;",
+      "style_list": "padding: 12px 24px;"
+    },
+    {
+      "type": "button",
+      "name": "button_completed",
+      "value": "Continue",
+      "action_list": "click | set_field: user_type: @local.user_type_select;\nclick | emit: completed;",
+      "parameter_list": "style:navigation;\ndisabled: !@local.completed_enabled",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

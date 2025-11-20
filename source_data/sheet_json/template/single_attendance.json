@@ -1,0 +1,39 @@
+{
+  "flow_type": "template",
+  "flow_name": "single_attendance",
+  "status": "released",
+  "rows": [
+    {
+      "name": "parents_group"
+    },
+    {
+      "name": "parent_attendance_1"
+    },
+    {
+      "name": "module"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "calculating_attendance",
+      "value": "@data.modules"
+    },
+    {
+      "name": "s1",
+      "condition": "@item.completed_@local.parents_group"
+    },
+    {
+      "name": "s1",
+      "condition": "@item.completed_@local.parents_group"
+    },
+    {
+      "name": "s1",
+      "condition": "@item.completed_@local.parents_group"
+    },
+    {
+      "value": "@item.module"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

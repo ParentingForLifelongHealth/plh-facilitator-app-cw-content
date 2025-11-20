@@ -1,0 +1,30 @@
+{
+  "flow_type": "generator",
+  "flow_name": "media_generator",
+  "status": "released",
+  "parameter_list": {
+    "input_data_list": "media_data",
+    "output_flow_name": "media_@gen.id",
+    "output_flow_type": "template"
+  },
+  "rows": [
+    {
+      "type": "begin_template",
+      "name": "media",
+      "value": "media",
+      "action_list": "completed | emit: completed;\nuncompleted | emit: uncompleted;"
+    },
+    {
+      "name": "data",
+      "value": "media",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "media_id",
+      "value": "@gen.id"
+    },
+    {
+      "type": "end_template"
+    }
+  ]
+}

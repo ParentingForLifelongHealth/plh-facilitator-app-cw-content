@@ -1,0 +1,136 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_story",
+  "status": "released",
+  "rows": [
+    {
+      "name": "article_id",
+      "value": "test",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "stack_navigation",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "article_story - article_id: @local.article_id",
+      "condition": false,
+      "exclude_from_translation": true,
+      "__EMPTY": "begin_template",
+      "__EMPTY_1": "article_resource",
+      "__EMPTY_2": "article_resource"
+    },
+    {
+      "exclude_from_translation": true,
+      "__EMPTY_1": "article_id",
+      "__EMPTY_2": "@local.article_id"
+    },
+    {
+      "type": "begin_template",
+      "name": "article_intro",
+      "value": "article_intro",
+      "exclude_from_translation": true,
+      "__EMPTY": "end_template"
+    },
+    {
+      "name": "article_id",
+      "value": "@local.article_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "is_module",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "article_resource",
+      "value": "article_resource",
+      "style_list": "margin-top: 0;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "article_id",
+      "value": "@local.article_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "is_module",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "article_message",
+      "value": "article_message",
+      "style_list": "margin-top: 0;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "article_id",
+      "value": "@local.article_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "is_module",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "a_article_section",
+      "value": "article_section",
+      "style_list": "margin-top: 0;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "article_id",
+      "value": "@local.article_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "is_module",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "article_related",
+      "value": "article_related",
+      "style_list": "margin-top: 0;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "article_id",
+      "value": "@local.article_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "is_module",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    }
+  ]
+}

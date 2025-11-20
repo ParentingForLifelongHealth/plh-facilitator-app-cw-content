@@ -1,0 +1,75 @@
+{
+  "flow_type": "template",
+  "flow_name": "parent_group",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id",
+      "value": 1
+    },
+    {
+      "name": "group_name",
+      "value": "test"
+    },
+    {
+      "name": "group_no",
+      "value": 1
+    },
+    {
+      "name": "content_package"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "value": "@local.group_name",
+      "parameter_list": "text_align:center; style:emphasised",
+      "exclude_from_translation": true,
+      "comments": "button_align: centre; style: flexible;' are doing nothing when 'style: alternative' is added"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_parent_@item.parent_no",
+      "parameter_list": "style: column"
+    },
+    {
+      "type": "begin_template",
+      "value": "module_progress"
+    },
+    {
+      "name": "group_id",
+      "value": "@local.group_no"
+    },
+    {
+      "name": "current_package",
+      "value": "@local.content_package"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "begin_template",
+      "value": "action_group_overview"
+    },
+    {
+      "name": "group_id",
+      "value": "@local.group_no"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

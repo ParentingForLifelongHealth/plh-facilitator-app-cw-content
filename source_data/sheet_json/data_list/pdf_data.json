@@ -1,0 +1,95 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "pdf_data",
+  "status": "released",
+  "data_list_name": "pdf",
+  "rows": [
+    {
+      "id": "individual_consultation",
+      "title::eng": "Individual consultation guide",
+      "pdf_asset": "pdf/individual_consultation_pap.pdf",
+      "library_asset": false,
+      "description::eng": "Individual consultation guide"
+    },
+    {
+      "id": "aecp_pap",
+      "title::eng": "A-E-C-P: Accept, Explore, Connect & Practise",
+      "pdf_asset": "pdf/aecp_pap.pdf",
+      "description::eng": "A-E-C-P: Accept, Explore, Connect & Practise"
+    },
+    {
+      "id": "children_with_disabilities_pap",
+      "title::eng": "Supporting children with disabilities",
+      "pdf_asset": "pdf/children_with_disabilities_pap.pdf",
+      "description::eng": "Supporting children with disabilities"
+    },
+    {
+      "id": "child_development_domain_pap",
+      "title::eng": "Domains of child development",
+      "pdf_asset": "pdf/child_development_domain_pap.pdf",
+      "description::eng": "Domains of child development"
+    },
+    {
+      "id": "child_development_stages_pap",
+      "title::eng": "Stages of child development",
+      "pdf_asset": "pdf/child_development_stages_pap.pdf",
+      "description::eng": "Stages of child development"
+    },
+    {
+      "id": "one_on_one_time_development_stages_pap",
+      "title::eng": "One-on-one time for parents by stages of child development",
+      "pdf_asset": "pdf/one_on_one_time_development_stages_pap.pdf",
+      "description::eng": "One-on-one time for parents by stages of child development"
+    },
+    {
+      "id": "module_1_welcome_pap",
+      "title::eng": "Module 1: Welcome",
+      "pdf_asset": "pdf/module_1_welcome_pap.pdf"
+    },
+    {
+      "id": "module_1_overview_pap",
+      "title::eng": "Module 1: Overview",
+      "pdf_asset": "pdf/module_1_overview_pap.pdf"
+    },
+    {
+      "id": "module_1_core_lesson_pap",
+      "title::eng": "Module 1: Core Lesson (2-17)",
+      "pdf_asset": "pdf/module_1_core_lesson_pap.pdf"
+    },
+    {
+      "id": "module_1_core_lesson_yc_pap",
+      "title::eng": "Module 1: Core Lesson (2-9)",
+      "pdf_asset": "pdf/module_1_core_lesson_yc_pap.pdf"
+    },
+    {
+      "id": "modile_1_core_lesson_teen_pap",
+      "title::eng": "Module 1: Core Lesson (10-17)",
+      "pdf_asset": "pdf/modile_1_core_lesson_teen_pap.pdf"
+    },
+    {
+      "id": "module_1_home_activity_pap",
+      "title::eng": "Module 1: Home Activity",
+      "pdf_asset": "pdf/module_1_home_activity_pap.pdf"
+    },
+    {
+      "id": "module_6_welcome_pap",
+      "title::eng": "Module 6: Welcome",
+      "pdf_asset": "pdf/module_6_welcome_pap.pdf"
+    },
+    {
+      "id": "module_6_core_lesson_1_pap",
+      "title::eng": "Module 6: Core Lesson - Programme Reflection",
+      "pdf_asset": "pdf/module_6_core_lesson_1_pap.pdf"
+    },
+    {
+      "id": "module_6_core_lesson_2_pap",
+      "title::eng": "Module 6: Core Lesson - Moving on",
+      "pdf_asset": "pdf/module_6_core_lesson_2_pap.pdf"
+    },
+    {
+      "id": "module_6_closing_pap",
+      "title::eng": "Module 6: Closing and Celebration",
+      "pdf_asset": "pdf/module_6_closing_pap.pdf"
+    }
+  ]
+}

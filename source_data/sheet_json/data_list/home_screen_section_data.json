@@ -1,0 +1,38 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "home_screen_section_data",
+  "status": "released",
+  "data_list_name": "home_screen_section",
+  "rows": [
+    {
+      "id": "programme",
+      "title::eng": "About @global.prog_name",
+      "image": "images/articles/programme.png"
+    },
+    {
+      "id": "guide",
+      "title::eng": "Guide for delivering @global.prog_name",
+      "image": "images/articles/guide.png"
+    },
+    {
+      "id": "facilitation",
+      "title::eng": "Facilitation skills",
+      "image": "images/articles/facilitation.png"
+    },
+    {
+      "id": "session_prep",
+      "title::eng": "Session preparation",
+      "image": "images/articles/sessions.png"
+    },
+    {
+      "id": "faq",
+      "title::eng": "Frequently asked questions",
+      "image": "images/articles/faq.png"
+    },
+    {
+      "id": "safeguarding",
+      "title::eng": "Safeguarding",
+      "image": "images/articles/safeguarding.png"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_related",
+  "status": "released",
+  "rows": [
+    {
+      "name": "article_id",
+      "value": "test"
+    },
+    {
+      "name": "is_module",
+      "value": false,
+      "comments": "Define which datalist to use"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_related",
+      "value": "@data.m_related",
+      "condition": "!!@local.is_module"
+    },
+    {
+      "type": "begin_template",
+      "name": "related_element",
+      "value": "related_element",
+      "condition": "@item.foreign_key == @local.article_id",
+      "style_list": "margin-top: 12px"
+    },
+    {
+      "name": "article_id",
+      "value": "@item.related_article_id"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_related",
+      "value": "@data.a_related",
+      "condition": "!@local.is_module"
+    },
+    {
+      "type": "begin_template",
+      "name": "related_element",
+      "value": "related_element",
+      "condition": "@item.foreign_key == @local.article_id",
+      "style_list": "margin-top: 12px"
+    },
+    {
+      "name": "article_id",
+      "value": "@item.article_id"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

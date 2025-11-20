@@ -1,0 +1,122 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile_about",
+  "status": "released",
+  "rows": [
+    {
+      "type": "begin_template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": "uncompleted | emit: uncompleted; "
+    },
+    {
+      "name": "section_id",
+      "value": "profile",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "section_data",
+      "value": "profile_section"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "text",
+      "name": "text_user_name",
+      "value": "@global.user_name_question"
+    },
+    {
+      "name": "user_name",
+      "value": "@fields.user_name"
+    },
+    {
+      "type": "text_box",
+      "name": "text_box",
+      "value": "@local.user_name",
+      "parameter_list": "placeholder: @global.type_prompt",
+      "condition": "@local.user_name != @global.user_name_default"
+    },
+    {
+      "type": "text_box",
+      "name": "text_box",
+      "parameter_list": "placeholder: @global.type_prompt",
+      "condition": "@local.user_name == @global.user_name_default"
+    },
+    {
+      "type": "text",
+      "name": "question_user_type",
+      "value": "@global.question_user_type",
+      "parameter_list": "style: emphasised;",
+      "style_list": "margin-top: 20px;"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "user_type_select",
+      "value": "@fields.user_type",
+      "parameter_list": "answer_list: @data.user_type;\nitem_width: 100%",
+      "condition": "!!@fields.user_type",
+      "style_list": true
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "user_type_select",
+      "parameter_list": "answer_list: @data.user_type;\nitem_width: 100%",
+      "condition": "!@fields.user_type",
+      "style_list": true
+    },
+    {
+      "name": "language_select_options",
+      "value": "@data.language"
+    },
+    {
+      "type": "text",
+      "name": "question_language",
+      "value": "@global.question_language",
+      "parameter_list": "style: emphasised;",
+      "condition": "@local.user_type_select == \"tester\""
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "language_grid",
+      "value": "@fields._app_language",
+      "parameter_list": "answer_list: @local.language_select_options; \nitem_width: 200px;",
+      "condition": "@local.user_type_select == \"tester\""
+    },
+    {
+      "type": "text",
+      "name": "question_user_organisation",
+      "value": "@global.question_user_organisation",
+      "parameter_list": "style: emphasised;",
+      "style_list": "margin-top: 20px;"
+    },
+    {
+      "type": "combo_box",
+      "name": "user_organisation_select",
+      "value": "@fields.user_organisation",
+      "parameter_list": "answer_list: @data.user_organisation;\nplaceholder: @global.placeholder_user_organisation;\nvariant: dropdown;",
+      "condition": "!!@fields.user_organisation"
+    },
+    {
+      "type": "combo_box",
+      "name": "user_organisation_select",
+      "parameter_list": "answer_list: @data.user_organisation;\nplaceholder: @global.placeholder_user_organisation;\nvariant: dropdown;",
+      "condition": "!@fields.user_organisation"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_bottom",
+      "condition": "sticky: bottom;",
+      "style_list": "padding: 12px 24px;"
+    },
+    {
+      "type": "button",
+      "name": "save",
+      "value": "Save",
+      "action_list": "click | set_field: user_name: @local.text_box;\nclick | set_field: user_state: @local.user_state;\nclick | set_field: user_organisation: @local.user_organisation_select;\nclick | set_field: user_type: @local.user_type_select;\nclick | emit: set_language: @local.language_grid;\nclick | emit:completed;"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}
