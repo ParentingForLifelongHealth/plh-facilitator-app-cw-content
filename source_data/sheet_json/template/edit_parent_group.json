@@ -43,7 +43,8 @@
       "type": "text",
       "name": "text_group_name",
       "value": "@global.group_name",
-      "parameter_list": "style: emphasised; text_align:center"
+      "parameter_list": "style: emphasised; ",
+      "comments": "text_align:center"
     },
     {
       "type": "text_box",
@@ -105,12 +106,11 @@
       "type": "text",
       "name": "text_group_name",
       "value": "@global.group_status",
-      "parameter_list": "style: emphasised; text_align:center"
+      "parameter_list": "style: emphasised; "
     },
     {
       "type": "text",
       "value": "@global.group_status_text",
-      "parameter_list": "text_align:center",
       "exclude_from_translation": true
     },
     {
@@ -123,19 +123,18 @@
       "type": "text",
       "name": "text_group_name",
       "value": "@global.group_delete",
-      "parameter_list": "style: emphasised; text_align:center"
+      "parameter_list": "style: emphasised;"
     },
     {
       "type": "text",
       "value": "@global.group_delete_text",
-      "parameter_list": "text_align:center",
       "exclude_from_translation": true
     },
     {
       "type": "button",
       "value": "@global.delete_group_button",
       "action_list": "click | pop_up: delete_group;",
-      "parameter_list": "button_align: center; style: alternative flexible"
+      "parameter_list": " style: alternative flexible"
     },
     {
       "type": "begin_display_group",

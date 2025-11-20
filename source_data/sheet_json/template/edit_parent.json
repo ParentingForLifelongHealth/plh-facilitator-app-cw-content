@@ -140,7 +140,7 @@
     },
     {
       "name": "first_name_valid",
-      "value": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.first_name))",
+      "value": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.first_name))",
       "exclude_from_translation": true
     },
     {
@@ -166,7 +166,7 @@
     },
     {
       "name": "last_name_valid",
-      "value": "@calc(/^[a-zA-Z]+(?:[ -][a-zA-Z]+)*$/.test(@local.last_name))",
+      "value": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.last_name))",
       "exclude_from_translation": true
     },
     {

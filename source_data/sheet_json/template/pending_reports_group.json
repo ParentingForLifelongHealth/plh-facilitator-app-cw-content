@@ -129,8 +129,8 @@
       "name": "submit_button",
       "value": "Submit",
       "action_list": "click | set_field: current_report_no: @item.id;\nclick | set_field: current_group_no: @item.group_id;\nclick | set_field: current_module: @local.module_title;\nclick | set_field: current_report_id: @local.modules_report_id;\nclick | go_to: edit_report;",
-      "parameter_list": "variant: card; style: no-background short;",
-      "comments": "taken from here, modified appropriately?: \n\n \n         \nclick | set_field: current_report_no: @local.answer_id;\nclick | set_field: current_group_no: @local.group_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: edit_report;\n"
+      "parameter_list": "variant: card; ",
+      "comments": "taken from here, modified appropriately?: \n\n \n         \nclick | set_field: current_report_no: @local.answer_id;\nclick | set_field: current_group_no: @local.group_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: edit_report;\n\n\nstyle: no-background short;\n"
     },
     {
       "type": "end_display_group"
