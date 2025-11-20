@@ -454,11 +454,9 @@
     {
       "type": "declare_global_constant",
       "name": "error_first_name",
-      "value": "Please enter a valid name using only letters. It must be at least 2 characters long.",
+      "value": "Please enter a valid name. It must be at least 2 characters long.",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       }
     },
     {

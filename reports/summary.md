@@ -16,7 +16,7 @@
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 172 |
+| display_group | 173 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
@@ -35,7 +35,7 @@
 | task_progress_bar | 4 |
 | template | 145 |
 | test | 1 |
-| text | 377 |
+| text | 382 |
 | text_area | 4 |
 | text_box | 32 |
 | title | 72 |
@@ -82,7 +82,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 103370 KB | 103.4 MB |
+| total | 99703 KB | 99.7 MB |
 | unused | 10791 KB | 10.8 MB |
 </details>
 
@@ -250,11 +250,11 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/modules/module_6_teen.png | 5771 | 1 |
 | images/modules/module_6_yc.png | 7653.2 | 2 |
 | images/modules/reminder.png | 116.6 | 13 |
-| images/onboarding/splash_1.png | 2484.4 | 1 |
-| images/onboarding/splash_2.png | 2220.7 | 1 |
-| images/onboarding/splash_3.png | 1760.5 | 1 |
-| images/onboarding/splash_4.png | 1425.9 | 1 |
-| images/onboarding/splash_5.png | 2195 | 1 |
+| images/onboarding/splash_1.png | 1248 | 1 |
+| images/onboarding/splash_2.png | 1474.4 | 1 |
+| images/onboarding/splash_3.png | 1577.8 | 1 |
+| images/onboarding/splash_4.png | 805.7 | 1 |
+| images/onboarding/splash_5.png | 1314.2 | 1 |
 | lottie/checkmark_blue.json | 17 | 3 |
 | lottie/cw_profile_complete.json | 13.4 | 4 |
 | pdf/aecp_pap.pdf | 673.9 | 1 |
