@@ -1,0 +1,219 @@
+{
+  "flow_type": "template",
+  "flow_name": "reports",
+  "status": "released",
+  "rows": [
+    {
+      "type": "begin_display_group",
+      "name": "dg_top",
+      "parameter_list": "sticky: top;\nbackground_image_asset: images/backgrounds/reports_top_right.svg;\nbackground_image_position: top right;\nstyle: background_solid;",
+      "style_list": "width: 100%;\npadding: 24px;\nmin-height: 192px;"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_top_column",
+      "parameter_list": "style: column",
+      "style_list": "align-items: flex-start;\nwidth: 100%;"
+    },
+    {
+      "type": "title",
+      "value": "Your Reports",
+      "parameter_list": "variant: page_banner",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "text",
+      "name": "label_group",
+      "value": "Parent Group",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_top_row"
+    },
+    {
+      "type": "begin_combo_box",
+      "name": "report_group",
+      "value": "@fields.current_group_no",
+      "action_list": "changed | set_field: current_group_no: this.value",
+      "parameter_list": "placeholder: @global.select_group;\ndisabled_text: @global.no_groups;\nvariant: dropdown;",
+      "style_list": "flex: 4",
+      "comments": "changed | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix@local.selected_group;"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "parent_groups",
+      "parameter_list": "filter: !@item.archived",
+      "comments": "Data list should include columns for name and text"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "end_combo_box"
+    },
+    {
+      "type": "round_button",
+      "name": "groups_go_to",
+      "action_list": "click | go_to: profile_groups",
+      "parameter_list": "variant: no-background; \nicon_src: @global.add_group_icon;",
+      "style_list": "flex: 1",
+      "comments": "variant: no-background; "
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "value": "report group: @local.report_group",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "@local.report_group"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.modules",
+      "parameter_list": "filter: !!@item.report_id",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "no_packages",
+      "parameter_list": "style: column",
+      "condition": "!@global.has_multiple_content_packages",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "report_card",
+      "value": "report_card",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "group_id",
+      "value": "@local.report_group",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_id",
+      "value": "@item.id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_name",
+      "value": "@item.title",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_id",
+      "value": "@item.report_id",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "has_packages",
+      "parameter_list": "style: column",
+      "condition": "@global.has_multiple_content_packages",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "no_tag",
+      "parameter_list": "style: column",
+      "condition": "@item.tag_list == \"ALL\" || !@item.tag_list",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "report_card",
+      "value": "report_card"
+    },
+    {
+      "name": "group_id",
+      "value": "@local.report_group"
+    },
+    {
+      "name": "module_id",
+      "value": "@item.id"
+    },
+    {
+      "name": "module_name",
+      "value": "@item.title"
+    },
+    {
+      "name": "report_id",
+      "value": "@item.report_id"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "has_tag",
+      "parameter_list": "style: column",
+      "condition": "@item.tag_list !== \"ALL\" && @item.tag_list",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "report_card",
+      "value": "report_card",
+      "condition": "@item.tag_list.includes(@fields.current_package)"
+    },
+    {
+      "name": "group_id",
+      "value": "@local.report_group"
+    },
+    {
+      "name": "module_id",
+      "value": "@item.id"
+    },
+    {
+      "name": "module_name",
+      "value": "@item.title"
+    },
+    {
+      "name": "report_id",
+      "value": "@item.report_id"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

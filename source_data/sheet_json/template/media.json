@@ -1,0 +1,65 @@
+{
+  "flow_type": "template",
+  "flow_name": "media",
+  "status": "released",
+  "rows": [
+    {
+      "name": "media_id",
+      "value": "media_1"
+    },
+    {
+      "name": "data",
+      "value": "media",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "concat_media_id",
+      "value": "@local.data.@local.media_id"
+    },
+    {
+      "name": "media_data",
+      "value": "@data.@local.concat_media_id"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "top",
+      "parameter_list": "style: column"
+    },
+    {
+      "type": "begin_template",
+      "name": "header",
+      "value": "download_header"
+    },
+    {
+      "name": "title",
+      "value": "@local.media_data.title"
+    },
+    {
+      "name": "asset",
+      "value": "@local.media_data.media_asset"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "name": "introduction",
+      "value": "@local.article_media.introduction"
+    },
+    {
+      "type": "video",
+      "name": "video",
+      "value": "@local.media_data.media_asset",
+      "condition": "@local.media_data.type == \"video\""
+    },
+    {
+      "type": "audio",
+      "name": "audio",
+      "value": "@local.media_data.media_asset",
+      "condition": "@local.media_data.type == \"audio\""
+    }
+  ]
+}

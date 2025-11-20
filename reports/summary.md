@@ -9,7 +9,7 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 3 |
-| button | 133 |
+| button | 134 |
 | carousel | 2 |
 | combo_box | 16 |
 | data_items | 110 |

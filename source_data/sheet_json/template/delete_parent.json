@@ -1,0 +1,75 @@
+{
+  "flow_type": "template",
+  "flow_name": "delete_parent",
+  "status": "released",
+  "rows": [
+    {
+      "exclude_from_translation": true,
+      "comments": "@fields.current_parent_no"
+    },
+    {
+      "exclude_from_translation": true,
+      "comments": "@fields.current_parent_name"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Are you sure you want to delete @fields.current_parent_name?",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "text",
+      "name": "text_warning",
+      "value": "This will delete all of @fields.current_parent_name parent data. The action cannot be undone.",
+      "exclude_from_translation": false
+    },
+    {
+      "name": "count"
+    },
+    {
+      "name": "other_id"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local: count: @items.length;\ndata_changed | set_local: other_id: @items[0].id;",
+      "parameter_list": "filter: (@item.co_parent_id == @fields.current_co_parent_id) && (@item.id !== @fields.current_parent_no) && !(@item.archived)"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "buttons"
+    },
+    {
+      "type": "button",
+      "name": "button_no",
+      "value": "Cancel",
+      "action_list": "click | emit: uncompleted",
+      "parameter_list": "style: card",
+      "style_list": "flex:1",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "button",
+      "name": "button_delete",
+      "value": "Delete",
+      "action_list": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true,\nco_parent_id: \"empty\";\nclick | emit: completed;\nclick | nav: back;",
+      "parameter_list": "style: card",
+      "condition": "@local.count !==1",
+      "style_list": "flex:1",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "button",
+      "name": "button_delete_on_co_parent",
+      "value": "Delete",
+      "action_list": "click | set_data |\n_list_id: parents,\n_id: @fields.current_parent_no,\narchived: true,\nco_parent_id: \"empty\";\nclick | set_data |\n_list_id: parents,\n_id: @local.other_id,\nco_parent_id: \"empty\";\nclick | emit: completed;\nclick | nav: back;",
+      "parameter_list": "style: card",
+      "condition": "@local.count == 1",
+      "style_list": "flex:1",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

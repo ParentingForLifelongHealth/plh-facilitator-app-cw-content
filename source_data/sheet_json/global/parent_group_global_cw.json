@@ -1,0 +1,313 @@
+{
+  "flow_type": "global",
+  "flow_name": "parent_group_global_cw",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "add_group_icon",
+      "value": "images/icons/people.svg"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "active_group_title",
+      "value": "Active"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "archived_group_title",
+      "value": "Closed"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "archived_date_prefix",
+      "value": "Closed "
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "age_group",
+      "value": "Age Group"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "delivery_mode",
+      "value": "Mode of Delivery"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "new_parent_group",
+      "value": "Create Caregiver Group"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "parent_count_text",
+      "value": "Caregivers"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "parent_details",
+      "value": "Caregiver Details"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "add_parent",
+      "value": "Add Caregiver"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_parent",
+      "value": "Caregiver Profile"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "group_name",
+      "value": "Group Name"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "group_status",
+      "value": "Group Status"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "group_status_text",
+      "value": "Mark groups as closed when you have completed all its sessions"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "close_button",
+      "value": "Mark as Closed"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "group_delete",
+      "value": "Danger Zone"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "group_delete_text",
+      "value": "Delete group to permanently delete all its data. This action cannot be undone."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "delete_group_button",
+      "value": "Delete Group"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "required_label",
+      "value": "Required field*"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_first_name",
+      "value": "Caregiver's First Name*"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_last_name",
+      "value": "Caregiver's Last Name*"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_number",
+      "value": "Contact Number"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_age",
+      "value": "Caregiver's Age"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_sex",
+      "value": "Caregiver's Sex"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_about_family",
+      "value": "About the family"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_child_count",
+      "value": "Number of children caregiver cares for at home"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_about_child_many",
+      "value": "About the child the caregiver will focus on"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_about_child_one",
+      "value": "About the child"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_child_age",
+      "value": "Child's Age"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_child_sex",
+      "value": "Child's Sex"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_other_home",
+      "value": "Is the child living in more than one home?"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_hours",
+      "value": "Hours caregiver usually spend with the child each day"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_goal",
+      "value": "Caregiver's goal"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "label_consoltation",
+      "value": "Date of Consultation"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_first_name",
+      "value": "Enter caregiver's first name"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_last_name",
+      "value": "Enter caregiver's last name"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_number",
+      "value": "Enter caregiver's contact number"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_age",
+      "value": "Enter caregiver's age"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_sex",
+      "value": "Enter caregiver's sex"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_child_count",
+      "value": "How many childern"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_child_age",
+      "value": "Enter child's age"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_child_sex",
+      "value": "Enter child's sex"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_other_home",
+      "value": "Enter value"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_hours",
+      "value": "Enter hours"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_goal",
+      "value": "Enter parent's goal"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "edit_consoltation",
+      "value": "Enter date of consultation"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_first_name",
+      "value": "Please enter a valid name using only letters. It must be at least 2 characters long."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_last_name",
+      "value": "Please enter a valid name using only letters. It must be at least 2 characters long."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_number",
+      "value": "Please enter a valid 7-digit phone number."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_age",
+      "value": "Please enter a valid age between 16 and 99."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_sex",
+      "value": "Please select a gender"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_child_count",
+      "value": "Please enter a valid number to indicate the total childern ."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_child_age",
+      "value": "Please enter an consistent with the range of this group."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_child_sex",
+      "value": "Please select a gender"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_other_home",
+      "value": "Please select an answer"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_hours",
+      "value": "Please enter a valid number of hours between 0 to 24."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_goal",
+      "value": "Please enter a specific and realistic goal."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "error_consoltation",
+      "value": "Please enter a date."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "maximum_coparents",
+      "value": 3,
+      "comments": "this means 'maximum coparents of a given parent', so the group of parents may be as large as this number +1. "
+    },
+    {
+      "type": "declare_field_default",
+      "name": "no_of_co_groups",
+      "value": 0
+    },
+    {
+      "type": "declare_field_default",
+      "name": "current_follow_ups_number",
+      "value": 0
+    }
+  ]
+}

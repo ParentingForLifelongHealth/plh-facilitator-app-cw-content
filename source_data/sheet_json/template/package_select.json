@@ -1,0 +1,31 @@
+{
+  "flow_type": "template",
+  "flow_name": "package_select",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "title",
+      "value": "@global.your_package"
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "value": "Choose which content you want to see."
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "radio_button_grid",
+      "value": "@fields.current_package",
+      "action_list": "changed | set_field: current_package: this.value",
+      "parameter_list": "answer_list: @data.package"
+    },
+    {
+      "type": "button",
+      "name": "button_completed",
+      "value": "Continue",
+      "action_list": "click | emit: completed;  \nclick | set_field: package_selected: TRUE",
+      "parameter_list": "style:navigation;"
+    }
+  ]
+}

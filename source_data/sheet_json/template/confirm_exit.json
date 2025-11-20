@@ -1,0 +1,50 @@
+{
+  "flow_type": "template",
+  "flow_name": "confirm_exit",
+  "status": "released",
+  "rows": [
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Before you go",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "text",
+      "name": "text_warning",
+      "value": "If you leave now, your changes will not be saved.",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "begin_display_group",
+      "name": "buttons"
+    },
+    {
+      "type": "button",
+      "name": "button_no",
+      "value": "Cancel",
+      "action_list": "click | emit: uncompleted",
+      "exclude_from_translation": false,
+      "parameter_list": "style: card",
+      "style_list": "flex:1"
+    },
+    {
+      "type": "button",
+      "name": "button_delete",
+      "value": "Leave without saving",
+      "action_list": "click | emit: completed;\nclick | nav: back;",
+      "exclude_from_translation": false,
+      "parameter_list": "style: card",
+      "style_list": "flex:1"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

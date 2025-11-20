@@ -1,0 +1,50 @@
+{
+  "flow_type": "template",
+  "flow_name": "delete_report",
+  "status": "released",
+  "rows": [
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Are you sure you want to delete this report?",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "text",
+      "name": "text_warning",
+      "value": "This will delete all of your report data and entries. The action cannot be undone!",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "begin_display_group",
+      "name": "buttons"
+    },
+    {
+      "type": "button",
+      "name": "button_no",
+      "value": "Cancel",
+      "action_list": "click | emit: uncompleted",
+      "parameter_list": "style: card",
+      "style_list": "flex:1",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "button",
+      "name": "button_delete",
+      "value": "Delete",
+      "action_list": "click | set_data |\n_list_id: report_answers,\n_id: @fields.current_report_no,\narchived: true; \nclick | emit: completed;",
+      "parameter_list": "style: card",
+      "style_list": "flex:1",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

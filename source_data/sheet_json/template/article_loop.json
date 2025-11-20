@@ -1,0 +1,329 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_loop",
+  "status": "released",
+  "rows": [
+    {
+      "name": "active_index",
+      "value": -1,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "article_id",
+      "value": "test",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "foreign_key",
+      "value": "@fields.current_module_no",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "article_template_prefix",
+      "value": "articles_",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "completed_field",
+      "value": "completed_@fields.current_group_no",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_title",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_row_index",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_not_complete_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first_not_complete_index",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "active_id",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "count",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "close_stack_icon",
+      "value": "@global.close_stack_icon",
+      "exclude_from_translation": true,
+      "condition": "!!@global.close_stack_icon"
+    },
+    {
+      "name": "close_stack_icon",
+      "value": "images/icons/cancel.svg",
+      "condition": "!@global.close_stack_icon"
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "name": "get_title_from_module",
+      "value": "@data.modules",
+      "action_list": "data_changed | set_local : module_title: @items[0]?.title;",
+      "parameter_list": "filter:@item.id == @local.foreign_key;\nlimit: 1;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "name": "get_count_and_first",
+      "value": "@data.sub_items",
+      "action_list": "data_changed | set_local : first_id: @items[0]?.id;\ndata_changed | set_local : count: @items.length;\ndata_changed | set_local : first_row_index: @items[0]?.row_index;",
+      "parameter_list": "filter: @item.foreign_key == @local.foreign_key;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "name": "get_active",
+      "value": "@data.sub_items",
+      "action_list": "data_changed | set_local : active_id: @items[0]?.id;",
+      "parameter_list": "filter: @item.foreign_key == @local.foreign_key && @item.row_index == @local.active_index;",
+      "exclude_from_translation": true,
+      "condition": "@local.active_index > -1"
+    },
+    {
+      "type": "data_items",
+      "name": "get_first_uncomplete",
+      "value": "@data.sub_items",
+      "action_list": "data_changed | set_local : first_not_complete_id: @items[0]?.id;\ndata_changed | set_local : first_not_complete_index: @items[0]?.row_index;",
+      "parameter_list": "filter: !@item.completed && @item.foreign_key == @local.foreign_key;",
+      "exclude_from_translation": true,
+      "condition": "@local.active_index == -1"
+    },
+    {
+      "type": "text",
+      "value": "first_id: @local.first_id",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "first_row_index: @local.first_row_index",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "count: @local.count",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "first_not_complete_id: @local.first_not_complete_id",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "first_not_complete_index: @local.first_not_complete_index",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "active_id: @local.active_id",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "first: @local.first",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "last: @local.last",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "current_id",
+      "value": "@local.active_id",
+      "exclude_from_translation": true,
+      "condition": "@local.active_index > -1"
+    },
+    {
+      "name": "current_index",
+      "value": "@local.active_index",
+      "exclude_from_translation": true,
+      "condition": "@local.active_index > -1"
+    },
+    {
+      "name": "current_id",
+      "value": "@local.first_not_complete_id",
+      "exclude_from_translation": true,
+      "condition": "!!@local.first_not_complete_id && @local.active_index == -1"
+    },
+    {
+      "name": "current_index",
+      "value": "@local.first_not_complete_index",
+      "exclude_from_translation": true,
+      "condition": "!!@local.first_not_complete_id && @local.active_index == -1"
+    },
+    {
+      "name": "current_id",
+      "value": "@local.first_id",
+      "exclude_from_translation": true,
+      "condition": "!@local.first_not_complete_id && @local.active_index == -1"
+    },
+    {
+      "name": "current_index",
+      "value": "@local.first_row_index",
+      "exclude_from_translation": true,
+      "condition": "!@local.first_not_complete_id && @local.active_index == -1"
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "first",
+      "value": "@calc(@local.current_index== @local.first_row_index)",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "last",
+      "value": "@calc(@local.current_index == (@local.first_row_index + @local.count - 1))",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "progress",
+      "value": "@calc(((@local.current_index-@local.first_row_index)/@local.count)*100)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "progress: @local.progress",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "current id: @local.current_id",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "header",
+      "parameter_list": "sticky: top; \nstyle: background_solid;\nvariant: inline_padding;",
+      "exclude_from_translation": true,
+      "style_list": "align: center;\nalign-items: center;"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column;",
+      "style_list": "padding: 5px;"
+    },
+    {
+      "type": "task_progress_bar",
+      "parameter_list": "progress_percent: @local.progress;",
+      "condition": "!!@local.current_id && !(@local.first && @local.last)",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "title",
+      "value": "@local.module_title",
+      "exclude_from_translation": true,
+      "style_list": "flex: 1;"
+    },
+    {
+      "type": "round_button",
+      "name": "close_all",
+      "action_list": "nav_stack: close_all;",
+      "parameter_list": "variant: no-background; \nicon_src: @local.close_stack_icon;",
+      "exclude_from_translation": true,
+      "style_list": "margin-inline-end: -10px;"
+    },
+    {
+      "type": "round_button",
+      "name": "close_all_2",
+      "action_list": "nav_stack: close_all;",
+      "parameter_list": "variant: no-background; \nicon_src: images/icons/cancel.svg;",
+      "exclude_from_translation": true,
+      "condition": false,
+      "style_list": "width: 96px;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "inner_template",
+      "value": "article_story",
+      "exclude_from_translation": true,
+      "condition": "!!@local.current_id",
+      "comment": "@local.article_template_prefix@local.current_id"
+    },
+    {
+      "name": "article_id",
+      "value": "@local.current_id"
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.sub_items",
+      "parameter_list": "filter: @item.id == @local.current_id;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_template",
+      "name": "popup_nav",
+      "value": "popup_nav",
+      "action_list": "completed | set_item | completed: true;\ncompleted | set_item | @local.completed_field: true;\ncompleted | set_local: active_index: @local.current_index + 1;\nuncompleted | set_item | completed: false;\nuncompleted | set_item | @local.completed_field: false;\nuncompleted | set_local: active_index: @local.current_index - 1;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "show_previous",
+      "value": "!@local.first"
+    },
+    {
+      "name": "show_next",
+      "value": "!@local.last"
+    },
+    {
+      "type": "end_template",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

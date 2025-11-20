@@ -1,0 +1,27 @@
+{
+  "flow_type": "global",
+  "flow_name": "action_global_cw",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "report_pending",
+      "value": "report pending"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "reports_pending",
+      "value": "reports pending"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "follow_up",
+      "value": "follow up"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "follow_ups",
+      "value": "follow ups"
+    }
+  ]
+}

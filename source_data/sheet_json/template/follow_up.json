@@ -1,0 +1,530 @@
+{
+  "flow_type": "template",
+  "flow_name": "follow_up",
+  "status": "released",
+  "rows": [
+    {
+      "name": "has_limit",
+      "value": false,
+      "exclude_from_translation": true,
+      "comments": "is a blank space"
+    },
+    {
+      "name": "group_limit_id",
+      "value": "empty",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "seven_days_ago",
+      "value": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "date: @local.seven_days_ago",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "group: @local.group_limit_id",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_5_6",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_4_5",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_3_4",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_2_3",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_1_2",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_1",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_2",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_3",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_4",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_5",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_6",
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "r1: @local.report_1",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "r2: @local.report_2",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "r3: @local.report_3",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "r4: @local.report_4",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "r5: @local.report_5",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "r6: @local.report_6",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_6 : @items.map(item => item.group_id);",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_6\";"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_5 : @items.map(item => item.group_id);",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_5\";"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_4 : @items.map(item => item.group_id);",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_4\";"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_3 : @items.map(item => item.group_id);",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_3\";"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_2 : @items.map(item => item.group_id);",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_2\";"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_answers",
+      "action_list": "data_changed | set_local : report_1 : @items.map(item => item.group_id);",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_1\";"
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "c12: @local.check_1_2",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "c23: @local.check_2_3",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "c34: @local.check_3_4",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "c45: @local.check_4_5",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "c56: @local.check_5_6",
+      "exclude_from_translation": true,
+      "condition": false
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_1",
+      "value": "@calc([0])",
+      "exclude_from_translation": true,
+      "condition": "@local.report_1 == \"\""
+    },
+    {
+      "name": "report_2",
+      "value": "@calc([0])",
+      "exclude_from_translation": true,
+      "condition": "@local.report_2 == \"\""
+    },
+    {
+      "name": "report_3",
+      "value": "@calc([0])",
+      "exclude_from_translation": true,
+      "condition": "@local.report_3 == \"\""
+    },
+    {
+      "name": "report_4",
+      "value": "@calc([0])",
+      "exclude_from_translation": true,
+      "condition": "@local.report_4 == \"\""
+    },
+    {
+      "name": "report_5",
+      "value": "@calc([0])",
+      "exclude_from_translation": true,
+      "condition": "@local.report_5 == \"\""
+    },
+    {
+      "name": "report_6",
+      "value": "@calc([0])",
+      "exclude_from_translation": true,
+      "condition": "@local.report_6 == \"\""
+    },
+    {
+      "exclude_from_translation": true
+    },
+    {
+      "name": "check_5_6",
+      "value": "@calc((@local.report_6.filter(x => @local.report_5.includes(x))).concat(0))",
+      "exclude_from_translation": true,
+      "condition": "!!@local.report_6 && !!@local.report_5 && @local.report_6 !== \"\" && @local.report_5 !== \"\"",
+      "comments": "@local.report_1 !== \"\" && @local.report_2 !== \"\" && @local.report_3 !== \"\" && @local.report_4 !== \"\" && @local.report_5 !== \"\" && @local.report_6 !== \"\""
+    },
+    {
+      "name": "check_4_5",
+      "value": "@calc(@local.check_5_6 ? @local.report_5.filter(x => @local.report_4.includes(x)).filter(x => !@local.check_5_6.includes(x)).concat(0) : [0])",
+      "exclude_from_translation": true,
+      "condition": "!!@local.report_5 && !!@local.report_4 && @local.report_5 !== \"\" && @local.report_4 !== \"\"",
+      "comments": "@local.report_1 !== \"\" && @local.report_2 !== \"\" && @local.report_3 !== \"\" && @local.report_4 !== \"\" && @local.report_5 !== \"\" && @local.report_6 !== \"\""
+    },
+    {
+      "name": "check_3_4",
+      "value": "@calc(@local.check_5_6 ? (@local.report_4.filter(x => @local.report_3.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x))).concat(0) : [0])",
+      "exclude_from_translation": true,
+      "condition": "!!@local.report_4 && !!@local.report_3 && @local.report_4 !== \"\" && @local.report_3 !== \"\"",
+      "comments": "@local.report_1 !== \"\" && @local.report_2 !== \"\" && @local.report_3 !== \"\" && @local.report_4 !== \"\" && @local.report_5 !== \"\" && @local.report_6 !== \"\""
+    },
+    {
+      "name": "check_2_3",
+      "value": "@calc(@local.check_5_6 ? (@local.report_3.filter(x => @local.report_2.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x))).concat(0) : [0])",
+      "exclude_from_translation": true,
+      "condition": "!!@local.report_3 && !!@local.report_2 && @local.report_3 !== \"\" && @local.report_2 !== \"\"",
+      "comments": "@local.report_1 !== \"\" && @local.report_2 !== \"\" && @local.report_3 !== \"\" && @local.report_4 !== \"\" && @local.report_5 !== \"\" && @local.report_6 !== \"\""
+    },
+    {
+      "name": "check_1_2",
+      "value": "@calc(@local.check_5_6 ? (@local.report_2.filter(x => @local.report_1.includes(x)).filter(x => !(@local.check_5_6.includes(x))).filter(x => !@local.check_4_5.includes(x)).filter(x => !@local.check_3_4.includes(x)).filter(x => !@local.check_2_3.includes(x))).concat(0) : [0])",
+      "exclude_from_translation": true,
+      "condition": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\"",
+      "comments": "@local.report_1 !== \"\" && @local.report_2 !== \"\" && @local.report_3 !== \"\" && @local.report_4 !== \"\" && @local.report_5 !== \"\" && @local.report_6 !== \"\""
+    },
+    {
+      "name": "total_parents"
+    },
+    {
+      "type": "data_items",
+      "name": "total_number_of_parents",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : total_parents : @items.length;",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.archived",
+      "condition": "@local.group_limit_id ==\"empty\""
+    },
+    {
+      "type": "data_items",
+      "name": "total_number_of_parents",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : total_parents : @items.length;",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.archived && (@item.group_id==@local.group_limit_id)",
+      "condition": "!(@local.group_limit_id ==\"empty\")"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "(@local.total_parents == 0) && (@local.group_limit_id ==\"empty\")",
+      "comments": "No parents or parent groups or sessions delivered:\n\n"
+    },
+    {
+      "type": "title",
+      "name": "text_no_follow_up",
+      "value": "👏 No Follow ups"
+    },
+    {
+      "type": "text",
+      "name": "text_first_time",
+      "value": "This is where you’ll see parents who need follow-up.",
+      "parameter_list": "style: contextual"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "(@local.total_parents == 0) && !(@local.group_limit_id ==\"empty\")",
+      "comments": "No parents or parent groups or sessions delivered:\n\n"
+    },
+    {
+      "type": "title",
+      "name": "text_no_follow_up",
+      "value": "👏 No Follow ups"
+    },
+    {
+      "type": "text",
+      "name": "text_first_time",
+      "value": "This is where you’ll see parents who need follow-up.",
+      "parameter_list": "style: contextual"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "exclude_from_translation": true,
+      "condition": "!!@local.report_2 && !!@local.report_1 && @local.report_2 !== \"\" && @local.report_1 !== \"\""
+    },
+    {
+      "name": "no_of_parents",
+      "value": 0,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "condition": "(@local.no_of_parents == 0) && !(@local.total_parents == 0)",
+      "comments": "No parents or parent groups or sessions delivered:\n\n"
+    },
+    {
+      "type": "title",
+      "name": "text_no_follow_up",
+      "value": "👏 No Follow ups"
+    },
+    {
+      "type": "text",
+      "name": "text_first_time",
+      "value": "All your parents are engaged - keep it up!",
+      "parameter_list": "style: contextual"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "data_items",
+      "name": "follow_up_count",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : no_of_parents : @items.length;",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.archived && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2));",
+      "condition": "@local.group_limit_id ==\"empty\""
+    },
+    {
+      "type": "data_items",
+      "name": "follow_up_count_group",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : no_of_parents : @items.length;",
+      "exclude_from_translation": true,
+      "parameter_list": "filter: !@item.archived && (@item.group_id == @local.group_limit_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2));",
+      "condition": "@local.group_limit_id !==\"empty\""
+    },
+    {
+      "type": "begin_display_group",
+      "condition": "(@local.no_of_parents > 0) "
+    },
+    {
+      "type": "title",
+      "name": "text_follow_up_one",
+      "value": "@local.no_of_parents Follow up",
+      "condition": "@local.no_of_parents == 1"
+    },
+    {
+      "type": "title",
+      "name": "text_follow_up_multiple",
+      "value": "@local.no_of_parents Follow ups",
+      "condition": "@local.no_of_parents > 1"
+    },
+    {
+      "type": "button",
+      "name": "show_all",
+      "value": "Show all",
+      "action_list": "click | go_to: follow_up;",
+      "parameter_list": "variant: card; style: no-background short;",
+      "condition": "@local.has_limit && @local.no_of_parents > 2"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "first_two_follow_ups",
+      "value": "@data.parents",
+      "parameter_list": "filter: !@item.archived && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2));\nlimit: 2;",
+      "condition": "@local.has_limit && @local.group_limit_id == \"empty\"",
+      "comments": "filter: !@item.archived && ((@local.check_5_6).includes(@item.group_id) && !@item.week_5 && !@item.week_6) || ((@local.check_4_5).includes(@item.group_id) && !@item.week_4 && !@item.week_5) || ((@local.check_3_4).includes(@item.group_id) && !@item.week_3 && !@item.week_4) || ((@local.check_2_3).includes(@item.group_id) && !@item.week_2 && !@item.week_3) || ((@local.check_1_2).includes(@item.group_id) && !@item.week_1 && !@item.week_2)"
+    },
+    {
+      "type": "begin_template",
+      "value": "follow_up_parent"
+    },
+    {
+      "name": "group_id",
+      "value": "@item.group_id"
+    },
+    {
+      "name": "first_name",
+      "value": "@item.first_name"
+    },
+    {
+      "name": "last_name",
+      "value": "@item.last_name"
+    },
+    {
+      "name": "parent_id",
+      "value": "@item.id"
+    },
+    {
+      "name": "no_follow_up",
+      "value": "@item.no_follow_up"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "all_follow_ups",
+      "value": "@data.parents",
+      "parameter_list": "filter: !@item.archived && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2));",
+      "condition": "!@local.has_limit && @local.group_limit_id == \"empty\""
+    },
+    {
+      "type": "begin_template",
+      "value": "follow_up_parent"
+    },
+    {
+      "name": "group_id",
+      "value": "@item.group_id"
+    },
+    {
+      "name": "first_name",
+      "value": "@item.first_name"
+    },
+    {
+      "name": "last_name",
+      "value": "@item.last_name"
+    },
+    {
+      "name": "parent_id",
+      "value": "@item.id"
+    },
+    {
+      "name": "no_follow_up",
+      "value": "@item.no_follow_up"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "group_follow_ups",
+      "value": "@data.parents",
+      "parameter_list": "filter: !@item.archived && (@item.group_id == @local.group_limit_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2));\nlimit: 2;",
+      "condition": "@local.group_limit_id !== \"empty\""
+    },
+    {
+      "type": "begin_template",
+      "value": "follow_up_parent"
+    },
+    {
+      "name": "group_id",
+      "value": 0,
+      "comments": "set to 0 so it doesn't show"
+    },
+    {
+      "name": "first_name",
+      "value": "@item.first_name"
+    },
+    {
+      "name": "last_name",
+      "value": "@item.last_name"
+    },
+    {
+      "name": "parent_id",
+      "value": "@item.id"
+    },
+    {
+      "name": "no_follow_up",
+      "value": "@item.no_follow_up"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

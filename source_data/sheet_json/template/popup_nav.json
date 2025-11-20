@@ -1,0 +1,62 @@
+{
+  "flow_type": "template",
+  "flow_name": "popup_nav",
+  "status": "released",
+  "rows": [
+    {
+      "name": "show_previous"
+    },
+    {
+      "name": "show_next"
+    },
+    {
+      "name": "pages_complete_field",
+      "value": "pages_@fields.current_group_no"
+    },
+    {
+      "name": "completed_field",
+      "value": "completed_@fields.current_group_no"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "sticky: bottom;\nstyle: background_solid;",
+      "style_list": "padding: 12px 24px;"
+    },
+    {
+      "type": "round_button",
+      "name": "previous_article",
+      "action_list": "click | emit:uncompleted;",
+      "parameter_list": "variant: no-background; \nicon_src: images/icons/arrow_back.svg;",
+      "condition": "@local.show_previous"
+    },
+    {
+      "type": "text",
+      "name": "spacer",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "round_button",
+      "name": "next_article",
+      "action_list": "click | emit:completed;",
+      "parameter_list": "icon_src: images/icons/arrow_forward.svg;",
+      "condition": "@local.show_next"
+    },
+    {
+      "type": "round_button",
+      "name": "go_module_final",
+      "action_list": "click | nav_stack: close_all;\nclick | go_to : module_final;\nclick | emit:completed; \nclick | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.pages_complete_field: true;",
+      "parameter_list": "icon_src: images/icons/checkmark-outline.svg;",
+      "condition": "!@local.show_next && @local.show_previous"
+    },
+    {
+      "type": "round_button",
+      "name": "go_modules_and_complete",
+      "action_list": "click | nav_stack: close_all;\nclick | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true;\nclick | emit:completed; ",
+      "parameter_list": "icon_src: images/icons/checkmark-outline.svg;",
+      "condition": "!@local.show_next && !@local.show_previous"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

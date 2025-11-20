@@ -1,0 +1,149 @@
+{
+  "flow_type": "global",
+  "flow_name": "module_final_global",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "module_final_title",
+      "__EMPTY": "This is curently not used"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "support_button",
+      "value": "Frequently Asked Questions"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "go_to_start",
+      "value": "View Module from Start"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "reviewer_lottie",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "reviewer_image",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "reviewer_text"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_lottie",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_image",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_text",
+      "value": "Please make sure messages have been shared before completing session"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_report_lottie",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_report_image",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_report_text",
+      "value": "Please make sure messages have been shared before completing session"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "mark_delivered",
+      "value": "Mark Session as Delivered"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_to_do_lottie",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_to_do_image",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_to_do_text",
+      "value": "You successfully completed this session! Please complete the report"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "submit_report",
+      "value": "Add Report"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_complete_lottie",
+      "value": "lottie/checkmark_blue.json",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_complete_image",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_complete_text",
+      "value": "You successfully completed the report for this session!"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "review_report",
+      "value": "Review Report"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_report_lottie",
+      "value": "lottie/checkmark_blue.json",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_report_image",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_report_text",
+      "value": "You successfully completed this session!"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "mark_delivered_report",
+      "value": "Mark Session as Delivered and add report"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_sharede_lottie",
+      "value": "lottie/checkmark_blue.json",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_shared_image",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_shared_text",
+      "value": "Please share your message with the parent group before marking this module as delivered."
+    }
+  ]
+}

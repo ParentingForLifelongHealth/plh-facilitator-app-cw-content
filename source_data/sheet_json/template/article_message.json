@@ -1,0 +1,106 @@
+{
+  "flow_type": "template",
+  "flow_name": "article_message",
+  "status": "released",
+  "rows": [
+    {
+      "name": "article_id",
+      "value": "test"
+    },
+    {
+      "name": "is_module",
+      "value": false,
+      "comments": "Define which datalist to use"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_messages",
+      "value": "@data.m_messages",
+      "condition": "!!@local.is_module"
+    },
+    {
+      "type": "begin_template",
+      "name": "message_element",
+      "value": "message_element",
+      "condition": "@item.foreign_key == @local.article_id",
+      "style_list": "margin-top: 12px"
+    },
+    {
+      "name": "title",
+      "value": "@item.title"
+    },
+    {
+      "name": "has_disclaimer",
+      "value": false
+    },
+    {
+      "name": "message_text",
+      "value": "@item.text"
+    },
+    {
+      "name": "message_guidance",
+      "value": "@item.guidance"
+    },
+    {
+      "name": "asset",
+      "value": "@item.asset"
+    },
+    {
+      "name": "asset_type",
+      "value": "@item.asset_type"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "begin_data_items",
+      "name": "loop_messages",
+      "value": "@data.a_messages",
+      "condition": "!@local.is_module"
+    },
+    {
+      "type": "begin_template",
+      "name": "message_element",
+      "value": "message_element",
+      "condition": "@item.foreign_key == @local.article_id",
+      "style_list": "margin-top: 12px"
+    },
+    {
+      "name": "title",
+      "value": "@item.title"
+    },
+    {
+      "name": "has_disclaimer",
+      "value": false
+    },
+    {
+      "name": "message_text",
+      "value": "@item.text"
+    },
+    {
+      "name": "message_guidance",
+      "value": "@item.guidance"
+    },
+    {
+      "name": "asset",
+      "value": "@item.asset"
+    },
+    {
+      "name": "asset_type",
+      "value": "@item.asset_type"
+    },
+    {
+      "name": "log_time",
+      "value": false
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_data_items"
+    }
+  ]
+}

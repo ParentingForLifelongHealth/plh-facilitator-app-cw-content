@@ -1,0 +1,162 @@
+{
+  "flow_type": "template",
+  "flow_name": "menu_task_card",
+  "status": "released",
+  "rows": [
+    {
+      "name": "module_id",
+      "value": "module_1_lesson",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "module_data",
+      "value": "modules.@local.module_id"
+    },
+    {
+      "name": "module_row",
+      "value": "@data.@local.module_data"
+    },
+    {
+      "name": "module_name",
+      "value": "@local.module_row.title"
+    },
+    {
+      "name": "image",
+      "value": "@local.module_row.image_asset",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "report_id",
+      "value": "empty",
+      "exclude_from_translation": true,
+      "comments": "This needs to be passed in otherwise all modules look like they need a report"
+    },
+    {
+      "name": "page_count",
+      "value": "@local.module_row.page_count"
+    },
+    {
+      "name": "module_group_id",
+      "value": "@local.module_row.module_group"
+    },
+    {
+      "name": "module_group_data",
+      "value": "module_groups.@local.module_group_id"
+    },
+    {
+      "name": "module_group_row",
+      "value": "@data.@local.module_group_data"
+    },
+    {
+      "name": "background",
+      "value": "@local.module_group_row.background_colour"
+    },
+    {
+      "name": "click_template",
+      "value": "article_loop",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "completed",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "all_pages_complete",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "comp: @local.completed",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "pagecomp: @local.all_pages_complete",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "count: @local.page_count",
+      "condition": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "uncomplete_wrapper",
+      "condition": "!@local.completed"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "one_page_wrapper",
+      "condition": "@local.page_count == 1"
+    },
+    {
+      "type": "plh_module_list_item",
+      "name": "not_complete",
+      "value": "@local.module_name",
+      "action_list": "click | set_field: current_module_no: @local.module_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | nav_stack: open | template: @local.click_template, header: false;\ncompleted | emit: force_reload;\ncompleted | emit: server_sync;",
+      "parameter_list": "module_image_asset: @local.image;\nnav_image_asset: images/icons/expand_circle_right.svg;\ncompleted_image_asset: images/icons/verified.svg;\ncompleted: @local.completed;\nbackground: @local.background;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "more_than_one_page_wrapper",
+      "condition": "@local.page_count > 1"
+    },
+    {
+      "type": "plh_module_list_item",
+      "name": "not_complete_but_end",
+      "value": "@local.module_name",
+      "action_list": "click | set_field: current_module_no: @local.module_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: module_final;\ncompleted | emit: force_reload;\ncompleted | emit: server_sync;",
+      "parameter_list": "module_image_asset: @local.image;\nnav_image_asset: images/icons/expand_circle_right.svg;\ncompleted_image_asset: images/icons/verified.svg;\ncompleted: @local.completed;\nbackground: @local.background;",
+      "condition": "!!@local.all_pages_complete"
+    },
+    {
+      "type": "plh_module_list_item",
+      "name": "not_complete",
+      "value": "@local.module_name",
+      "action_list": "click | set_field: current_module_no: @local.module_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | nav_stack: open | template: @local.click_template, header: false;\ncompleted | emit: force_reload;\ncompleted | emit: server_sync;",
+      "parameter_list": "module_image_asset: @local.image;\nnav_image_asset: images/icons/expand_circle_right.svg;\ncompleted_image_asset: images/icons/verified.svg;\ncompleted: @local.completed;\nbackground: @local.background;",
+      "condition": "!@local.all_pages_complete"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "complete_wrapper",
+      "condition": "!!@local.completed"
+    },
+    {
+      "type": "plh_module_list_item",
+      "name": "complete_more_than_one_page",
+      "value": "@local.module_name",
+      "action_list": "click | set_field: current_module_no: @local.module_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: module_final;\ncompleted | emit: force_reload;\ncompleted | emit: server_sync;",
+      "parameter_list": "module_image_asset: @local.image;\nnav_image_asset: images/icons/expand_circle_right.svg;\ncompleted_image_asset: images/icons/verified.svg;\ncompleted: @local.completed;\nbackground: @local.background;",
+      "condition": "@local.page_count > 1 ",
+      "exclude_from_translation": true,
+      "style_list": "filter: grayscale(1);"
+    },
+    {
+      "type": "plh_module_list_item",
+      "name": "complete_one_page",
+      "value": "@local.module_name",
+      "action_list": "click | set_field: current_module_no: @local.module_id;\nclick | set_field: current_module: @local.module_name;\nclick | set_field: current_report_id: @local.report_id;\nclick | nav_stack: open | template: @local.click_template, header: false;\ncompleted | emit: force_reload;\ncompleted | emit: server_sync;",
+      "parameter_list": "module_image_asset: @local.image;\nnav_image_asset: images/icons/expand_circle_right.svg;\ncompleted_image_asset: images/icons/verified.svg;\ncompleted: @local.completed;\nbackground: @local.background;",
+      "condition": "@local.page_count == 1 ",
+      "exclude_from_translation": true,
+      "style_list": "filter: grayscale(1);"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

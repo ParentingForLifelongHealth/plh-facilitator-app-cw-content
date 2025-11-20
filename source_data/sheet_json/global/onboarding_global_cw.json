@@ -1,0 +1,98 @@
+{
+  "flow_type": "global",
+  "flow_subtype": "onboarding",
+  "flow_name": "onboarding_global_cw",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "has_onboarding_language_select",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_onboarding_splash",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "onboarding_splash_manual_advance",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_onboarding_terms_login",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "login_is_mandatory",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "has_onboarding_settings",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "onboarding_header_background_colour",
+      "value": "#3D1700",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "onboarding_header_image_asset",
+      "value": "images/logos/MK_whitewithcolor.png",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "onboarding_footer_image_asset",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "onboarding_completed_lottie_asset",
+      "value": "lottie/cw_profile_complete.json",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "settings_intro",
+      "value": "Let's set up your profile:"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "question_user_type",
+      "value": "What is your role in @global.programme_name?"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "question_language",
+      "value": "Language"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "question_user_organisation",
+      "value": "What is your organisation?"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "placeholder_user_organisation",
+      "value": "Select organisation"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "welcome_message_subtext",
+      "value": "Your partner in delivering @global.programme_name",
+      "comment": "This overrides a constant set on the global FacilitatorApp"
+    }
+  ]
+}

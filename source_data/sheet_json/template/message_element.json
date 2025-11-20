@@ -1,0 +1,217 @@
+{
+  "flow_type": "template",
+  "flow_name": "message_element",
+  "status": "released",
+  "rows": [
+    {
+      "name": "title",
+      "exclude_from_translation": true,
+      "comments": "need to sort disclaimer"
+    },
+    {
+      "name": "has_disclaimer",
+      "value": false,
+      "exclude_from_translation": true
+    },
+    {
+      "name": "message_text",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "message_guidance",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "asset",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "asset_type",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "log_time",
+      "value": true,
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_box",
+      "style_list": "background-color: var(--ion-color-gray-100);\npadding: 12px;",
+      "parameter_list": "style: column;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "message_title",
+      "value": "@local.title",
+      "parameter_list": "style: emphasised",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column;\nvariant: box_white;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "condition": "@local.asset_type == \"media\"",
+      "parameter_list": "style: column",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "media_asset"
+    },
+    {
+      "name": "media_type"
+    },
+    {
+      "type": "data_items",
+      "action_list": "data_changed | set_local : media_asset: @items[0].media_asset;\ndata_changed | set_local : media_type: @items[0].type;",
+      "parameter_list": "filter: @item.id == @local.asset;\nlimit: 1;"
+    },
+    {
+      "type": "video",
+      "name": "message_video",
+      "value": "@local.media_asset",
+      "condition": "@local.media_type == \"video\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "audio",
+      "name": "message_audio",
+      "value": "@local.media_asset",
+      "condition": "@local.media_type == \"audio\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "image",
+      "name": "message_image",
+      "value": "@local.asset",
+      "condition": "@local.asset_type == \"image\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "youtube",
+      "name": "message_youtube",
+      "value": "@local.asset",
+      "condition": "@local.asset_type == \"youtube\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "name": "message_text",
+      "value": "@local.message_text",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_bottom",
+      "parameter_list": "style: column;\n"
+    },
+    {
+      "type": "text",
+      "name": "message_guidance",
+      "value": "@local.message_guidance",
+      "parameter_list": "flex: 1;\nstyle: contextual;",
+      "comments": "needs to be bullet point"
+    },
+    {
+      "name": "share_message",
+      "value": "@local.message_text"
+    },
+    {
+      "name": "share_message",
+      "value": "@local.message_text @local.asset",
+      "condition": "@local.asset_type == \"youtube\""
+    },
+    {
+      "type": "begin_display_group",
+      "name": "log_buttons",
+      "condition": "@local.log_time"
+    },
+    {
+      "type": "text",
+      "name": "spacer",
+      "value": " ",
+      "style_list": "flex: 1;"
+    },
+    {
+      "type": "round_button",
+      "name": "copy",
+      "action_list": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now());\nclick | copy | text:@local.share_message, message: @global.copied_message\n",
+      "condition": "@local.asset_type !== \"image\"",
+      "parameter_list": "icon_src: images/icons/copy-outline.svg;"
+    },
+    {
+      "type": "round_button",
+      "name": "button",
+      "value": "Share",
+      "action_list": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now());\nclick | share | text: @local.share_message;\n",
+      "condition": false,
+      "parameter_list": "icon_src: images/icons/share.svg;",
+      "comments": "icon: images/icons/share.svg;\nicon_position: right;"
+    },
+    {
+      "type": "round_button",
+      "name": "button",
+      "value": "Share",
+      "action_list": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now());\nclick | share |\ntext: @local.message_text,\nfile: @local.asset;",
+      "parameter_list": "icon_src: images/icons/share.svg;",
+      "comments": "icon: images/icons/share.svg;\nicon_position: right;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "no_log_buttons",
+      "condition": "!@local.log_time"
+    },
+    {
+      "type": "text",
+      "name": "spacer",
+      "value": " ",
+      "style_list": "flex: 1;"
+    },
+    {
+      "type": "round_button",
+      "name": "copy",
+      "action_list": "click | copy | text:@local.share_message",
+      "parameter_list": "icon_src: images/icons/copy-outline.svg;"
+    },
+    {
+      "type": "round_button",
+      "name": "button",
+      "value": "Share",
+      "action_list": "click | share | text: @local.share_message\n",
+      "condition": "@local.asset_type !== \"image\"",
+      "parameter_list": "icon_src: images/icons/share.svg;"
+    },
+    {
+      "type": "round_button",
+      "name": "button",
+      "value": "Share",
+      "action_list": "click | share |\ntext: @local.message_text,\nfile: @local.asset",
+      "condition": "@local.asset_type == \"image\"",
+      "parameter_list": "icon_src: images/icons/share.svg;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

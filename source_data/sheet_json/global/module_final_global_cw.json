@@ -1,0 +1,175 @@
+{
+  "flow_type": "global",
+  "flow_name": "module_final_global_cw",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "module_final_title",
+      "comments": "This is curently not used",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "support_button",
+      "value": "Frequently Asked Questions",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "go_to_start",
+      "value": "View Module from Start"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "reviewer_lottie",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "reviewer_image",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "reviewer_text",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_lottie",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_image",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_text",
+      "value": "Please make sure messages have been shared before completing session",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_report_lottie",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_report_image",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "module_not_complete_report_text",
+      "value": "Please make sure messages have been shared before completing session",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "mark_delivered",
+      "value": "Mark Session as Delivered",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_to_do_lottie",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_to_do_image",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_to_do_text",
+      "value": "You successfully completed this session! Please complete the report",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "submit_report",
+      "value": "Add Report",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_complete_lottie",
+      "value": "lottie/cw_profile_complete.json",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_complete_image",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "report_complete_text",
+      "value": "You successfully completed the report for this session!",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "review_report",
+      "value": "Review Report",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_report_lottie",
+      "value": "lottie/cw_profile_complete.json",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_report_image",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_report_text",
+      "value": "You successfully completed this session!",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "mark_delivered_report",
+      "value": "Mark Session as Delivered and Submit Report",
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_sharede_lottie",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_shared_image",
+      "exclude_from_translation": true,
+      "__EMPTY_1": ""
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "message_not_shared_text",
+      "value": "Please share your message with the parent group before marking this module as delivered.",
+      "__EMPTY_1": ""
+    }
+  ]
+}

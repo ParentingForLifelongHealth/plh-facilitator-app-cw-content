@@ -1,0 +1,86 @@
+{
+  "flow_type": "template",
+  "flow_name": "add_report",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id",
+      "value": "@field.current_group_no",
+      "comments": "Couldn't use fields in add data"
+    },
+    {
+      "name": "module_id",
+      "value": "@field:current_module_no"
+    },
+    {
+      "name": "report_name"
+    },
+    {
+      "name": "report_type"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.report_data",
+      "action_list": "data_changed | set_local : report_name: @items[0].name;\ndata_changed | set_local : report_type: @items[0].type;",
+      "parameter_list": "filter: @item.id == @fields.current_report_id;\nlimit: 1;"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg_top",
+      "parameter_list": "sticky: top;\nvariant: inline_padding;",
+      "exclude_from_translation": true,
+      "style_list": "background-color: var(--ion-color-primary-100);\nmargin-block: -24px;"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column"
+    },
+    {
+      "type": "begin_template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": "uncompleted | emit: uncompleted; ",
+      "style_list": "margin-top: 48px;\nmargin-bottom: 24px;"
+    },
+    {
+      "name": "title",
+      "value": "@local.report_name"
+    },
+    {
+      "name": "confirm_exit",
+      "value": true
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_display_group",
+      "value": " "
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_template",
+      "name": "add_in_person",
+      "value": "add_in_person",
+      "action_list": "completed | emit: completed; ",
+      "condition": "@local.report_type == \"in_person\"",
+      "style_list": "margin-top: 48px"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "begin_template",
+      "name": "add_remote",
+      "value": "add_remote",
+      "action_list": "completed | emit: completed; ",
+      "condition": "@local.report_type == \"virtual\"",
+      "style_list": "margin-top: 48px"
+    },
+    {
+      "type": "end_template"
+    }
+  ]
+}

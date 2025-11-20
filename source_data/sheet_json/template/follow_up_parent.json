@@ -1,0 +1,117 @@
+{
+  "flow_type": "template",
+  "flow_name": "follow_up_parent",
+  "status": "released",
+  "rows": [
+    {
+      "name": "group_id"
+    },
+    {
+      "name": "first_name"
+    },
+    {
+      "name": "last_name"
+    },
+    {
+      "name": "parent_id"
+    },
+    {
+      "name": "no_follow_up",
+      "value": 0
+    },
+    {
+      "name": "new_followup_count",
+      "value": "@calc(@local.no_follow_up + 1)"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "begin_display_group",
+      "parameter_list": "style: column",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "text",
+      "value": "@local.first_name @local.last_name",
+      "style_list": "margin: 0px;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_data_items",
+      "value": "@data.parent_groups",
+      "parameter_list": "filter: @local.group_id == @item.name",
+      "comments": "Looks for the name of the parent group"
+    },
+    {
+      "type": "text",
+      "name": "group_name",
+      "value": "@item.text",
+      "style_list": "font-size: 12px; \ncolor: #46607F;\nmargin-top: -15px;\n",
+      "condition": "@local.group_id == @item.name"
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "text",
+      "value": "Missed the last 2 group sessions",
+      "style_list": "color: #FF0000;\nfont-size: 14px; \nmargin-top: -10px;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "button",
+      "name": "submit_button",
+      "value": "Followed up",
+      "action_list": "click | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now()),\nno_follow_up: @local.new_followup_count;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "begin_display_group"
+    },
+    {
+      "type": "button",
+      "value": "<u>How to follow up</u>",
+      "action_list": "click | go_to: library_article_follow_up_1;",
+      "parameter_list": "variant: card; style: no-background short;",
+      "style_list": "margin-top: -25px;",
+      "condition": "@local.new_followup_count == 1"
+    },
+    {
+      "type": "button",
+      "value": "<u>How to follow up</u>",
+      "action_list": "click | go_to: library_article_follow_up_2;",
+      "parameter_list": "variant: card; style: no-background short;",
+      "style_list": "margin-top: -25px;",
+      "condition": "@local.new_followup_count == 2"
+    },
+    {
+      "type": "button",
+      "value": "<u>How to follow up</u>",
+      "action_list": "click | go_to: library_article_follow_up_3;",
+      "parameter_list": "variant: card; style: no-background short;",
+      "style_list": "margin-top: -25px;",
+      "condition": "@local.new_followup_count == 3"
+    },
+    {
+      "type": "text",
+      "name": "spacer",
+      "value": " ",
+      "style_list": "flex: 1"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

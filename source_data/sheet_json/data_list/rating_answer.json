@@ -1,0 +1,32 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "rating_answer",
+  "status": "released",
+  "rows": [
+    {
+      "id": "rating_1",
+      "name": 5,
+      "text::eng": "Excellent"
+    },
+    {
+      "id": "rating_2",
+      "name": 4,
+      "text::eng": "Good"
+    },
+    {
+      "id": "rating_3",
+      "name": 3,
+      "text::eng": "Okay"
+    },
+    {
+      "id": "rating_4",
+      "name": 2,
+      "text::eng": "Could be better"
+    },
+    {
+      "id": "rating_5",
+      "name": 1,
+      "text::eng": "Difficult"
+    }
+  ]
+}
