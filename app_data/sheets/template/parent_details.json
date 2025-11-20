@@ -245,7 +245,8 @@
         }
       ],
       "parameter_list": {
-        "placeholder": "@global.edit_number"
+        "placeholder": "@global.edit_number",
+        "number_input": "true"
       },
       "exclude_from_translation": true,
       "_nested_name": "number",
@@ -413,7 +414,8 @@
         }
       ],
       "parameter_list": {
-        "placeholder": "@global.edit_age"
+        "placeholder": "@global.edit_age",
+        "number_input": "true"
       },
       "exclude_from_translation": true,
       "_nested_name": "age",
@@ -776,7 +778,8 @@
         }
       ],
       "parameter_list": {
-        "placeholder": "@global.edit_child_count"
+        "placeholder": "@global.edit_child_count",
+        "number_input": "true"
       },
       "exclude_from_translation": true,
       "_nested_name": "child_count",
@@ -1037,7 +1040,8 @@
         }
       ],
       "parameter_list": {
-        "placeholder": "@global.edit_child_age"
+        "placeholder": "@global.edit_child_age",
+        "number_input": "true"
       },
       "exclude_from_translation": true,
       "_nested_name": "child_age",
@@ -1766,7 +1770,8 @@
         }
       ],
       "parameter_list": {
-        "placeholder": "@global.edit_hours"
+        "placeholder": "@global.edit_hours",
+        "number_input": "true"
       },
       "exclude_from_translation": true,
       "_nested_name": "hours",

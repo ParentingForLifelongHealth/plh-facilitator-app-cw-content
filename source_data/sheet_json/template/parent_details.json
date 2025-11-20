@@ -89,7 +89,7 @@
       "type": "text_box",
       "name": "number",
       "action_list": "changed | set_local: show_number_error: TRUE",
-      "parameter_list": "placeholder: @global.edit_number",
+      "parameter_list": "placeholder: @global.edit_number; number_input: true",
       "exclude_from_translation": true
     },
     {
@@ -116,7 +116,7 @@
       "type": "text_box",
       "name": "age",
       "action_list": "changed | set_local: show_age_error: TRUE",
-      "parameter_list": "placeholder: @global.edit_age",
+      "parameter_list": "placeholder: @global.edit_age; number_input: true",
       "exclude_from_translation": true
     },
     {
@@ -180,7 +180,7 @@
       "type": "text_box",
       "name": "child_count",
       "action_list": "changed | set_local: show_child_count_error: TRUE",
-      "parameter_list": "placeholder:@global.edit_child_count",
+      "parameter_list": "placeholder:@global.edit_child_count; number_input: true",
       "exclude_from_translation": true
     },
     {
@@ -224,7 +224,7 @@
       "type": "text_box",
       "name": "child_age",
       "action_list": "changed | set_local: show_child_age_error: TRUE",
-      "parameter_list": "placeholder:@global.edit_child_age",
+      "parameter_list": "placeholder:@global.edit_child_age; number_input: true",
       "exclude_from_translation": true
     },
     {
@@ -329,7 +329,7 @@
       "type": "text_box",
       "name": "hours",
       "action_list": "changed | set_local: show_hours_error: TRUE",
-      "parameter_list": "placeholder:@global.edit_hours",
+      "parameter_list": "placeholder:@global.edit_hours; number_input: true",
       "exclude_from_translation": true
     },
     {
