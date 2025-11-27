@@ -27,7 +27,7 @@
       },
       {
         "type": "button",
-        "count": 134
+        "count": 133
       },
       {
         "type": "carousel",
@@ -107,7 +107,7 @@
       },
       {
         "type": "set_variable",
-        "count": 1058
+        "count": 1060
       },
       {
         "type": "simple_checkbox",
@@ -123,7 +123,7 @@
       },
       {
         "type": "template",
-        "count": 145
+        "count": 146
       },
       {
         "type": "test",
@@ -131,7 +131,7 @@
       },
       {
         "type": "text",
-        "count": 382
+        "count": 383
       },
       {
         "type": "text_area",
@@ -183,7 +183,7 @@
       },
       {
         "type": "emit: completed",
-        "count": 65
+        "count": 66
       },
       {
         "type": "emit: force_reload",
@@ -207,7 +207,7 @@
       },
       {
         "type": "emit: uncompleted",
-        "count": 98
+        "count": 99
       },
       {
         "type": "feedback",
@@ -271,13 +271,13 @@
     "data": [
       {
         "assets": "total",
-        "KB": "99703 KB",
-        "MB": "99.7 MB"
+        "KB": "99857 KB",
+        "MB": "99.9 MB"
       },
       {
         "assets": "unused",
-        "KB": "10791 KB",
-        "MB": "10.8 MB"
+        "KB": "11076 KB",
+        "MB": "11.1 MB"
       }
     ]
   },
@@ -500,12 +500,24 @@
         "size_kb": 6.2
       },
       {
+        "path": "images/logos/IDEMS.png",
+        "size_kb": 84.6
+      },
+      {
         "path": "images/logos/MK_transparent.png",
         "size_kb": 7196.8
       },
       {
         "path": "images/logos/MK_whitebg.png",
         "size_kb": 1237.1
+      },
+      {
+        "path": "images/logos/SOAW_PAP.JPG",
+        "size_kb": 172.7
+      },
+      {
+        "path": "images/logos/UNICEF.jpg",
+        "size_kb": 27.7
       },
       {
         "path": "images/modules/chat.png",
@@ -530,22 +542,7 @@
         "missing": true
       },
       {
-        "path": "images/logos/KEMAS.png",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/logos/LPPKN.png",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/logos/Oxford.png",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/logos/UPM.png",
+        "path": "images/logos/SOAW_PAP.jpg",
         "count": 1,
         "missing": true
       },
@@ -565,22 +562,7 @@
         "missing": true
       },
       {
-        "path": "images/logos/lego.png",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/logos/masw.png",
-        "count": 1,
-        "missing": true
-      },
-      {
         "path": "images/logos/plh_logomark.png",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "images/logos/thsn.png",
         "count": 1,
         "missing": true
       },
@@ -844,11 +826,6 @@
         "size_kb": 0.5
       },
       {
-        "path": "images/logos/IDEMS.png",
-        "count": 1,
-        "size_kb": 84.6
-      },
-      {
         "path": "images/logos/MK_whitewithcolor.png",
         "count": 1,
         "size_kb": 7376.2
@@ -856,12 +833,12 @@
       {
         "path": "images/logos/PLH.png",
         "count": 1,
-        "size_kb": 26.6
+        "size_kb": 40.3
       },
       {
-        "path": "images/logos/UNICEF.jpg",
+        "path": "images/logos/UNICEF_Netherlands_PAP.png",
         "count": 1,
-        "size_kb": 27.7
+        "size_kb": 252.8
       },
       {
         "path": "images/modules/module_1_teen.png",
@@ -1105,7 +1082,7 @@
       {
         "type": "template",
         "subtype": "generated",
-        "total": 80
+        "total": 81
       },
       {
         "type": "template",

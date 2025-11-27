@@ -238,7 +238,8 @@
       "type": "text",
       "name": "module_not_complete_report_lottie",
       "value": "@global.module_not_complete_report_text",
-      "parameter_list": "text_align: center"
+      "parameter_list": "text_align: center",
+      "condition": false
     },
     {
       "type": "button",

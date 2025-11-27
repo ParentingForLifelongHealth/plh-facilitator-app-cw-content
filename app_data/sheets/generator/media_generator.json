@@ -45,7 +45,7 @@
     }
   ],
   "_source": {
-    "name": "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",
+    "name": "Global",
     "path": "templates/media.xlsx",
     "url": "https://docs.google.com/spreadsheets/d/1sSfCRjKSDd7ZW2ILStLMbC2WjkJmUyosLnyoR62Jaf0"
   },
@@ -57,6 +57,11 @@
     },
     {
       "flow_name": "media_about_app_1",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    {
+      "flow_name": "media_example",
       "flow_subtype": "generated",
       "flow_type": "template"
     }

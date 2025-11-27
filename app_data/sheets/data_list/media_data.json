@@ -29,10 +29,25 @@
     },
     {
       "id": "about_app_1"
+    },
+    {
+      "id": "example",
+      "type": "youtube",
+      "media_asset": "https://www.youtube.com/watch?v=PCHaqxUnQdk&t=3s",
+      "media_asset_cw": "https://www.youtube.com/watch?v=-S59XqXpFAQ",
+      "title": "This is an example",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "This is an example"
+        }
+      }
     }
   ],
   "_source": {
-    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "name": "CW Sheets",
     "path": "data/media_data CW.xlsx",
     "url": "https://docs.google.com/spreadsheets/d/1s_CD8uRdXtAf6aVD7CpeGHI0mclyzEcg7whKxKsxt7k"
   }

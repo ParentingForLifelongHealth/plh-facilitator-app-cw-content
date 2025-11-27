@@ -2241,10 +2241,11 @@
             "value": {}
           },
           "parameter_list": {
-            "text_align": "center"
+            "text_align": "center",
+            "style": "emphasised"
           },
           "style_list": [
-            "background-color: rgba(255, 204, 0, 0.1)",
+            "color: var(--ion-color-secondary-700)",
             "flex:1"
           ],
           "condition": "@local.no_pending_reports == 1",
@@ -2292,10 +2293,11 @@
             "value": {}
           },
           "parameter_list": {
-            "text_align": "center"
+            "text_align": "center",
+            "style": "emphasised"
           },
           "style_list": [
-            "background-color: rgba(255, 204, 0, 0.1)",
+            "color: var(--ion-color-secondary-700)",
             "flex:1"
           ],
           "condition": "@local.no_pending_reports > 1",
@@ -2343,10 +2345,11 @@
             "value": {}
           },
           "parameter_list": {
-            "text_align": "center"
+            "text_align": "center",
+            "style": "emphasised"
           },
           "style_list": [
-            "background-color: rgba(158, 203, 245, 0.1)",
+            "color: var(--ion-color-primary-700)",
             "flex:1"
           ],
           "condition": "@local.no_of_follow_ups == 1",
@@ -2394,10 +2397,11 @@
             "value": {}
           },
           "parameter_list": {
-            "text_align": "center"
+            "text_align": "center",
+            "style": "emphasised"
           },
           "style_list": [
-            "background-color: rgba(158, 203, 245, 0.1)",
+            "color: var(--ion-color-primary-700)",
             "flex:1"
           ],
           "condition": "@local.no_of_follow_ups > 1",
@@ -2453,7 +2457,7 @@
     }
   ],
   "_source": {
-    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "name": "CW Sheets",
     "path": "templates/actions_cw.xlsx",
     "url": "https://docs.google.com/spreadsheets/d/1K5Xmj_oCVcV_OTuDwYawORDk0P45JD2nlonvcIoMSrE"
   }

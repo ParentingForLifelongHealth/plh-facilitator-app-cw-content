@@ -33,37 +33,19 @@
     },
     {
       "type": "text",
-      "name": "text_6",
-      "_nested_name": "text_6"
-    },
-    {
-      "type": "text",
-      "name": "text_7",
-      "_nested_name": "text_7"
-    },
-    {
-      "type": "text",
-      "name": "text_8",
-      "_nested_name": "text_8"
-    },
-    {
-      "type": "text",
-      "name": "text_9",
-      "_nested_name": "text_9"
-    },
-    {
-      "type": "text",
       "value": "@local.group_name",
       "_translations": {
         "value": {}
       },
       "parameter_list": {
-        "text_align": "center",
         "style": "emphasised"
       },
+      "style_list": [
+        "margin-top: 10px"
+      ],
       "exclude_from_translation": true,
-      "name": "text_10",
-      "_nested_name": "text_10",
+      "name": "text_6",
+      "_nested_name": "text_6",
       "_dynamicFields": {
         "value": [
           {
@@ -86,6 +68,10 @@
       "parameter_list": {
         "style": "column"
       },
+      "style_list": [
+        "margin-top: -12px",
+        "margin-bottom: -20px"
+      ],
       "rows": [
         {
           "type": "template",
@@ -183,6 +169,10 @@
         {
           "type": "template",
           "value": "action_group_overview",
+          "style_list": [
+            "margin-top: -15px",
+            "margin-bottom: -10px"
+          ],
           "rows": [
             {
               "name": "group_id",
@@ -264,10 +254,30 @@
           "_nested_name"
         ]
       }
+    },
+    {
+      "type": "text",
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "text",
+      "name": "text_10",
+      "_nested_name": "text_10"
+    },
+    {
+      "type": "text",
+      "name": "text_11",
+      "_nested_name": "text_11"
+    },
+    {
+      "type": "text",
+      "name": "text_12",
+      "_nested_name": "text_12"
     }
   ],
   "_source": {
-    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "name": "CW Sheets",
     "path": "templates/Parent Groups CW.xlsx",
     "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
   }

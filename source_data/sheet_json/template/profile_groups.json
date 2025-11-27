@@ -57,6 +57,13 @@
       "exclude_from_translation": true
     },
     {
+      "type": "begin_display_group",
+      "action_list": "click | set_field: current_group_id: @item.id;\nclick | set_field: current_group_no: @item.name;\nclick | set_field: current_group_name: @item.text;\nclick | set_field: current_package: @item.content_package;\nclick | go_to: view_parent_group;",
+      "parameter_list": "style: column",
+      "condition": "!@item.archived",
+      "style_list": "border-bottom: 1px solid var(--ion-color-primary-100);\n"
+    },
+    {
       "type": "begin_template",
       "name": "parent_group",
       "value": "parent_group",
@@ -85,6 +92,15 @@
     {
       "type": "end_template",
       "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "______________________",
+      "parameter_list": "text_align:center;",
+      "condition": false
+    },
+    {
+      "type": "end_display_group"
     },
     {
       "type": "end_data_items",
@@ -131,8 +147,10 @@
       "type": "text",
       "name": "text_@item.id",
       "value": "@item.text",
+      "parameter_list": "style:emphasised",
       "exclude_from_translation": true,
-      "style_list": "flex: 1"
+      "style_list": "flex: 1",
+      "comments": "text_align:center; "
     },
     {
       "type": "round_button",
@@ -147,7 +165,8 @@
     },
     {
       "type": "begin_template",
-      "value": "module_progress"
+      "value": "module_progress",
+      "style_list": "margin-top: -10px; "
     },
     {
       "name": "group_id",
@@ -167,7 +186,8 @@
     },
     {
       "type": "text",
-      "value": "@global.archived_date_prefix @local.archive_date"
+      "value": "@global.archived_date_prefix @local.archive_date",
+      "style_list": "margin-top: -10px; color: #6B6B6B"
     },
     {
       "type": "end_data_items",
