@@ -613,9 +613,12 @@
                   "_translations": {
                     "value": {}
                   },
+                  "parameter_list": {
+                    "style": "emphasised"
+                  },
                   "style_list": [
                     "flex:1",
-                    "margin-bottom: 12px"
+                    "margin-bottom: 10px"
                   ],
                   "_nested_name": "display_group_20.data_items_1.display_group_5_@item.id.module_title_text",
                   "_dynamicFields": {
@@ -855,9 +858,9 @@
                     "value": {}
                   },
                   "style_list": [
-                    "font-size: 12px",
+                    "font-size: 14px",
                     "color: #46607F",
-                    "margin-top: -10px",
+                    "margin-top: -16px",
                     "margin-bottom: 12px"
                   ],
                   "condition": "@local.group_id == @item.name",
@@ -1090,7 +1093,7 @@
     }
   ],
   "_source": {
-    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "name": "CW Sheets",
     "path": "templates/actions_cw.xlsx",
     "url": "https://docs.google.com/spreadsheets/d/1K5Xmj_oCVcV_OTuDwYawORDk0P45JD2nlonvcIoMSrE"
   }

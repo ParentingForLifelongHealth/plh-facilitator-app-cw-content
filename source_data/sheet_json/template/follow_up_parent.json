@@ -25,7 +25,8 @@
     },
     {
       "type": "begin_display_group",
-      "parameter_list": "style: column"
+      "parameter_list": "style: column",
+      "style_list": "margin-bottom: 20px;"
     },
     {
       "type": "begin_display_group"
@@ -38,6 +39,7 @@
     {
       "type": "text",
       "value": "@local.first_name @local.last_name",
+      "parameter_list": "style:emphasised",
       "style_list": "margin: 0px;",
       "exclude_from_translation": true
     },
@@ -51,7 +53,7 @@
       "type": "text",
       "name": "group_name",
       "value": "@item.text",
-      "style_list": "font-size: 12px; \ncolor: #46607F;\nmargin-top: -15px;\n",
+      "style_list": "font-size: 14px; \ncolor: #46607F;\nmargin-top: -18px;\n",
       "condition": "@local.group_id == @item.name"
     },
     {
@@ -82,7 +84,7 @@
       "value": "<u>How to follow up</u>",
       "action_list": "click | go_to: library_article_follow_up_1;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -25px;",
+      "style_list": "margin-top: -30px;",
       "condition": "@local.new_followup_count == 1"
     },
     {
@@ -90,7 +92,7 @@
       "value": "<u>How to follow up</u>",
       "action_list": "click | go_to: library_article_follow_up_2;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -25px;",
+      "style_list": "margin-top: -30px;",
       "condition": "@local.new_followup_count == 2"
     },
     {
@@ -98,7 +100,7 @@
       "value": "<u>How to follow up</u>",
       "action_list": "click | go_to: library_article_follow_up_3;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -25px;",
+      "style_list": "margin-top: -30px;",
       "condition": "@local.new_followup_count == 3"
     },
     {

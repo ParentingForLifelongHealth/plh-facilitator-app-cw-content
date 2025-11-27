@@ -19,18 +19,18 @@
       "name": "content_package"
     },
     {
-      "type": "button",
+      "type": "text",
       "value": "@local.group_name",
-      "action_list": "click | set_field: current_group_id: @local.group_id;\nclick | set_field: current_group_no: @local.group_no;\nclick | set_field: current_group_name: @local.group_name;\nclick | set_field: current_package: @local.content_package;\nclick | go_to: view_parent_group;",
-      "parameter_list": "style: no-background;\nvariant: card;",
-      "style_list": "font-size: 16px;",
+      "parameter_list": "style:emphasised",
+      "style_list": "margin-top: 10px; ",
       "exclude_from_translation": true,
-      "comments": "button_align: centre; style: flexible;' are doing nothing when 'style: alternative' is added"
+      "comments": "button_align: centre; style: flexible;' are doing nothing when 'style: alternative' is added\n\ntext_align:center; "
     },
     {
       "type": "begin_display_group",
       "name": "dg_parent_@item.parent_no",
-      "parameter_list": "style: column"
+      "parameter_list": "style: column",
+      "style_list": "margin-top: -12px; margin-bottom: -20px;"
     },
     {
       "type": "begin_template",
@@ -49,7 +49,8 @@
     },
     {
       "type": "begin_template",
-      "value": "action_group_overview"
+      "value": "action_group_overview",
+      "style_list": "margin-top: -15px; margin-bottom: -10px;"
     },
     {
       "name": "group_id",
@@ -60,6 +61,18 @@
     },
     {
       "type": "end_display_group"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "text"
     }
   ]
 }

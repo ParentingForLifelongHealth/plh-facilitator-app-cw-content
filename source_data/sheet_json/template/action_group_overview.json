@@ -379,7 +379,8 @@
       "type": "text",
       "name": "single_report",
       "value": "@local.no_pending_reports @global.report_pending",
-      "style_list": "background-color: rgba(255, 204, 0, 0.6);\nborder-radius: 4px;\npadding: 0 2px;\nbox-decoration-break: clone;  ",
+      "parameter_list": "text_align:center; style: emphasised",
+      "style_list": "color: var(--ion-color-secondary-700); flex:1",
       "condition": "@local.no_pending_reports == 1",
       "exclude_from_translation": true
     },
@@ -387,7 +388,8 @@
       "type": "text",
       "name": "multiple_reports",
       "value": "@local.no_pending_reports @global.reports_pending",
-      "style_list": "background-color: rgba(255, 204, 0, 0.6);\nborder-radius: 4px;\npadding: 0 2px;\nbox-decoration-break: clone;  ",
+      "parameter_list": "text_align:center; style: emphasised",
+      "style_list": "color: var(--ion-color-secondary-700); flex:1",
       "condition": "@local.no_pending_reports > 1",
       "exclude_from_translation": true
     },
@@ -398,7 +400,8 @@
       "type": "text",
       "name": "single_follow_up",
       "value": "@local.no_of_follow_ups @global.follow_up",
-      "style_list": "background-color: rgba(158, 203, 245, 0.6);\nborder-radius: 4px;\npadding: 0 2px;\nbox-decoration-break: clone;  ",
+      "parameter_list": "text_align:center; style: emphasised",
+      "style_list": "color: var(--ion-color-primary-700); flex:1",
       "condition": "@local.no_of_follow_ups == 1",
       "exclude_from_translation": true
     },
@@ -406,7 +409,8 @@
       "type": "text",
       "name": "multiple_follow_ups",
       "value": "@local.no_of_follow_ups @global.follow_ups",
-      "style_list": "background-color: rgba(158, 203, 245, 0.6);\nborder-radius: 4px;\npadding: 0 2px;\nbox-decoration-break: clone;  ",
+      "parameter_list": "text_align:center; style: emphasised",
+      "style_list": "color: var(--ion-color-primary-700); flex:1",
       "condition": "@local.no_of_follow_ups > 1",
       "exclude_from_translation": true
     },

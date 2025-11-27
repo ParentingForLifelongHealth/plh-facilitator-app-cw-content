@@ -9,7 +9,7 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 3 |
-| button | 134 |
+| button | 133 |
 | carousel | 2 |
 | combo_box | 16 |
 | data_items | 110 |
@@ -29,13 +29,13 @@
 | round_button | 37 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1058 |
+| set_variable | 1060 |
 | simple_checkbox | 6 |
 | task_card | 1 |
 | task_progress_bar | 4 |
-| template | 145 |
+| template | 146 |
 | test | 1 |
-| text | 382 |
+| text | 383 |
 | text_area | 4 |
 | text_box | 32 |
 | title | 72 |
@@ -54,13 +54,13 @@
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
-| emit: completed | 65 |
+| emit: completed | 66 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 22 |
 | emit: set_language | 4 |
-| emit: uncompleted | 98 |
+| emit: uncompleted | 99 |
 | feedback | 24 |
 | go_to | 43 |
 | nav | 7 |
@@ -82,8 +82,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 99703 KB | 99.7 MB |
-| unused | 10791 KB | 10.8 MB |
+| total | 99857 KB | 99.9 MB |
+| unused | 11076 KB | 11.1 MB |
 </details>
 
 <details open>
@@ -147,8 +147,11 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/settings.svg | 1.2 |
 | images/icons/unarchive-outline-white.svg | 1.8 |
 | images/icons/world.svg | 6.2 |
+| images/logos/IDEMS.png | 84.6 |
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
+| images/logos/SOAW_PAP.JPG | 172.7 |
+| images/logos/UNICEF.jpg | 27.7 |
 | images/modules/chat.png | 1669 |
 | pdf/module_1_core_lesson_teen_pap.pdf | 393.1 |
 </details>
@@ -162,17 +165,11 @@ Assets that have references within sheets but do not appear in app-data
 | --- | --- |
 | .png | 1 |
 | @data.pdf | 3 |
-| images/logos/KEMAS.png | 1 |
-| images/logos/LPPKN.png | 1 |
-| images/logos/Oxford.png | 1 |
-| images/logos/UPM.png | 1 |
+| images/logos/SOAW_PAP.jpg | 1 |
 | images/logos/app_logo.png | 1 |
 | images/logos/bird_white.svg | 1 |
 | images/logos/favicon.png | 1 |
-| images/logos/lego.png | 1 |
-| images/logos/masw.png | 1 |
 | images/logos/plh_logomark.png | 1 |
-| images/logos/thsn.png | 1 |
 | images/no_group_selected.svg | 1 |
 | pdf/modile_1_core_lesson_teen_pap.pdf | 1 |
 </details>
@@ -233,10 +230,9 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/unarchive.svg | 1.1 | 1 |
 | images/icons/verified.svg | 0.5 | 5 |
 | images/icons/visibility.svg | 0.5 | 1 |
-| images/logos/IDEMS.png | 84.6 | 1 |
 | images/logos/MK_whitewithcolor.png | 7376.2 | 1 |
-| images/logos/PLH.png | 26.6 | 1 |
-| images/logos/UNICEF.jpg | 27.7 | 1 |
+| images/logos/PLH.png | 40.3 | 1 |
+| images/logos/UNICEF_Netherlands_PAP.png | 252.8 | 1 |
 | images/modules/module_1_teen.png | 4666.2 | 4 |
 | images/modules/module_1_yc.png | 5450.7 | 2 |
 | images/modules/module_2_teen.png | 5054.3 | 1 |
@@ -291,6 +287,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
 | template |  | 102 |
-| template | generated | 80 |
+| template | generated | 81 |
 | template | legal_terms | 4 |
 </details>

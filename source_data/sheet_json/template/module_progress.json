@@ -79,7 +79,8 @@
     },
     {
       "type": "text",
-      "value": "@local.complete_count@local.divide@local.module_count @local.sessions"
+      "value": "@local.complete_count@local.divide@local.module_count @local.sessions",
+      "style_list": "margin-top: -10px; color: #6B6B6B"
     },
     {
       "type": "end_display_group"

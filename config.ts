@@ -6,16 +6,16 @@ const config = generateDeploymentConfig("plh_facilitator_cw");
  * The default config should ideally be a superset of any extended configs
  * to allow for easier post-processing
  */
-
-config.google_drive.sheets_folder_ids =  [
-  "19wSspWYMbRc75een-kS0q0aq24--75u8", // library_app_menu
-  "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC",  //Global
-  "1XBq4iGIZHEwzwPk3xbHDAm9WCesjR7kR", // library PLH onboarding
-  "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B"   //CW Sheets
+config.google_drive.sheets_folders = [
+  { id: "19wSspWYMbRc75een-kS0q0aq24--75u8", name: "library_app_menu" },
+  { id: "1Jo1-q7KOE4gC2XRKEMcU9bXnrwB5oCRC", name: "Global" },
+  { id: "1XBq4iGIZHEwzwPk3xbHDAm9WCesjR7kR", name: "library PLH onboarding" },
+  { id: "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B", name: "CW Sheets" },
 ];
-config.google_drive.assets_folder_ids = [
-"1nrj0QSvhVKdUaPFrnCB6CyXSCvpozBDK", //Global
-"1pjCAps6KARSLUbceF7DaI-W156QaIqum" //CW Assets
+
+config.google_drive.assets_folders = [
+  { id: "1nrj0QSvhVKdUaPFrnCB6CyXSCvpozBDK", name: "Global" },
+  { id: "1pjCAps6KARSLUbceF7DaI-W156QaIqum", name: "CW Assets" }
 ];
 
 config.android = {
@@ -32,7 +32,7 @@ config.ios.app_name = "Mayor Konektá";
 
 config.git = {
   content_repo: "https://github.com/ParentingForLifelongHealth/plh-facilitator-app-cw-content.git",
-  content_tag_latest: "1.2.52",
+  content_tag_latest: "1.2.53",
 };
 
 config.firebase = {

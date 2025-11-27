@@ -67,6 +67,9 @@
       "parameter_list": {
         "style": "column"
       },
+      "style_list": [
+        "margin-bottom: 20px"
+      ],
       "rows": [
         {
           "type": "display_group",
@@ -85,6 +88,9 @@
                   "value": "@local.first_name @local.last_name",
                   "_translations": {
                     "value": {}
+                  },
+                  "parameter_list": {
+                    "style": "emphasised"
                   },
                   "style_list": [
                     "margin: 0px"
@@ -132,9 +138,9 @@
                         "value": {}
                       },
                       "style_list": [
-                        "font-size: 12px",
+                        "font-size: 14px",
                         "color: #46607F",
-                        "margin-top: -15px"
+                        "margin-top: -18px"
                       ],
                       "condition": "@local.group_id == @item.name",
                       "_nested_name": "display_group_8.display_group_1.display_group_1.data_items_2.group_name",
@@ -345,7 +351,7 @@
                 "style": "no-background short"
               },
               "style_list": [
-                "margin-top: -25px"
+                "margin-top: -30px"
               ],
               "condition": "@local.new_followup_count == 1",
               "name": "button_1",
@@ -387,7 +393,7 @@
                 "style": "no-background short"
               },
               "style_list": [
-                "margin-top: -25px"
+                "margin-top: -30px"
               ],
               "condition": "@local.new_followup_count == 2",
               "name": "button_2",
@@ -429,7 +435,7 @@
                 "style": "no-background short"
               },
               "style_list": [
-                "margin-top: -25px"
+                "margin-top: -30px"
               ],
               "condition": "@local.new_followup_count == 3",
               "name": "button_3",
@@ -472,7 +478,7 @@
     }
   ],
   "_source": {
-    "name": "1n2MF2kDpRxryIr5Rd_O1OssQRkFor97B",
+    "name": "CW Sheets",
     "path": "templates/actions_cw.xlsx",
     "url": "https://docs.google.com/spreadsheets/d/1K5Xmj_oCVcV_OTuDwYawORDk0P45JD2nlonvcIoMSrE"
   }
