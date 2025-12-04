@@ -23,6 +23,10 @@
       "value": 0
     },
     {
+      "name": "groups_count_closed",
+      "value": 0
+    },
+    {
       "type": "data_items",
       "name": "get_module_count",
       "value": "@data.modules",
@@ -36,9 +40,16 @@
       "parameter_list": "filter: !@item.archived"
     },
     {
+      "type": "data_items",
+      "name": "get_groups_count",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local : groups_count_closed: @items.length;",
+      "parameter_list": "filter: @item.archived"
+    },
+    {
       "type": "text",
       "value": "🚀 Once you create a parent group, it will appear here.",
-      "condition": "@local.groups_count == 0"
+      "condition": "(@local.groups_count == 0) && (@local.groups_count_closed == 0)"
     },
     {
       "type": "begin_display_group",
@@ -122,22 +133,35 @@
       "exclude_from_translation": true
     },
     {
+      "type": "end_display_group",
       "exclude_from_translation": true
     },
     {
-      "exclude_from_translation": true
+      "type": "title",
+      "value": "@global.archived_group_title",
+      "exclude_from_translation": false
+    },
+    {
+      "name": "hidden_count"
+    },
+    {
+      "type": "data_items",
+      "name": "get_hidden_count",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local : hidden_count: @items.length;",
+      "parameter_list": "filter: @item.hidden"
+    },
+    {
+      "type": "text",
+      "name": "text_no_closed",
+      "value": "Once a group completes all its sessions, you can mark it as closed and it will appear here.",
+      "condition": "@local.hidden_count == 0"
     },
     {
       "type": "begin_data_items",
       "value": "@data.parent_groups",
       "parameter_list": "filter: @item.hidden == true;",
       "exclude_from_translation": true
-    },
-    {
-      "type": "title",
-      "value": "@global.archived_group_title",
-      "condition": "@item._first",
-      "exclude_from_translation": false
     },
     {
       "type": "begin_display_group",
@@ -166,7 +190,8 @@
     {
       "type": "begin_template",
       "value": "module_progress",
-      "style_list": "margin-top: -10px; "
+      "style_list": "margin-top: -10px; ",
+      "comments": "margin-top: calc(0 - var(--row-margin-top));"
     },
     {
       "name": "group_id",
@@ -192,9 +217,6 @@
     {
       "type": "end_data_items",
       "exclude_from_translation": true
-    },
-    {
-      "type": "end_display_group"
     },
     {
       "type": "begin_display_group",

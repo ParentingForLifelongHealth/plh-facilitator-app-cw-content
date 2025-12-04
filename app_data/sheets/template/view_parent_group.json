@@ -30,7 +30,7 @@
         },
         {
           "name": "confirm_exit",
-          "value": true,
+          "value": false,
           "exclude_from_translation": true,
           "type": "set_variable",
           "_nested_name": "header.confirm_exit"

@@ -96,6 +96,33 @@
           "exclude_from_translation": true,
           "rows": [
             {
+              "name": "media_asset",
+              "value": "initial",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "dg_box.display_group_2.media_asset"
+            },
+            {
+              "name": "media_type",
+              "value": "initial",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "dg_box.display_group_2.media_type"
+            },
+            {
+              "name": "media_asset_cw",
+              "value": "initial",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "dg_box.display_group_2.media_asset_cw"
+            },
+            {
               "type": "display_group",
               "condition": "@local.asset_type == \"media\"",
               "parameter_list": {
@@ -104,43 +131,182 @@
               "exclude_from_translation": true,
               "rows": [
                 {
-                  "name": "media_asset",
-                  "type": "set_variable",
-                  "_nested_name": "dg_box.display_group_2.display_group_1.media_asset"
-                },
-                {
-                  "name": "media_type",
-                  "type": "set_variable",
-                  "_nested_name": "dg_box.display_group_2.display_group_1.media_type"
-                },
-                {
                   "type": "data_items",
-                  "action_list": [
-                    {
-                      "trigger": "data_changed",
-                      "action_id": "set_local",
-                      "args": [
-                        "media_asset",
-                        "@items[0].media_asset"
-                      ],
-                      "_raw": "data_changed | set_local : media_asset: @items[0].media_asset"
-                    },
-                    {
-                      "trigger": "data_changed",
-                      "action_id": "set_local",
-                      "args": [
-                        "media_type",
-                        "@items[0].type"
-                      ],
-                      "_raw": "data_changed | set_local : media_type: @items[0].type"
-                    }
-                  ],
+                  "value": "media_data",
                   "parameter_list": {
                     "filter": "@item.id == @local.asset",
                     "limit": "1"
                   },
-                  "name": "data_items_3",
-                  "_nested_name": "dg_box.display_group_2.display_group_1.data_items_3",
+                  "rows": [
+                    {
+                      "type": "video",
+                      "name": "message_video",
+                      "value": "@item.media_asset",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "condition": "@item.type == \"video\"",
+                      "exclude_from_translation": true,
+                      "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1.message_video",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.media_asset",
+                            "matchedExpression": "@item.media_asset",
+                            "type": "item",
+                            "fieldName": "media_asset"
+                          }
+                        ],
+                        "condition": [
+                          {
+                            "fullExpression": "@item.type == \"video\"",
+                            "matchedExpression": "@item.type",
+                            "type": "item",
+                            "fieldName": "type"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.media_asset": [
+                          "value"
+                        ],
+                        "@item.type": [
+                          "condition"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "audio",
+                      "name": "message_audio",
+                      "value": "@item.media_asset",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "condition": "@item.type == \"audio\"",
+                      "exclude_from_translation": true,
+                      "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1.message_audio",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.media_asset",
+                            "matchedExpression": "@item.media_asset",
+                            "type": "item",
+                            "fieldName": "media_asset"
+                          }
+                        ],
+                        "condition": [
+                          {
+                            "fullExpression": "@item.type == \"audio\"",
+                            "matchedExpression": "@item.type",
+                            "type": "item",
+                            "fieldName": "type"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.media_asset": [
+                          "value"
+                        ],
+                        "@item.type": [
+                          "condition"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "youtube",
+                      "name": "message_youtube",
+                      "value": "@item.media_asset_cw",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "condition": "(@fields._app_language == \"cw_pap\") && (@item.type == \"youtube\")",
+                      "exclude_from_translation": true,
+                      "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1.message_youtube",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.media_asset_cw",
+                            "matchedExpression": "@item.media_asset_cw",
+                            "type": "item",
+                            "fieldName": "media_asset_cw"
+                          }
+                        ],
+                        "condition": [
+                          {
+                            "fullExpression": "(@fields._app_language == \"cw_pap\") && (@item.type == \"youtube\")",
+                            "matchedExpression": "@fields._app_language",
+                            "type": "fields",
+                            "fieldName": "_app_language"
+                          },
+                          {
+                            "fullExpression": "(@fields._app_language == \"cw_pap\") && (@item.type == \"youtube\")",
+                            "matchedExpression": "@item.type",
+                            "type": "item",
+                            "fieldName": "type"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.media_asset_cw": [
+                          "value"
+                        ],
+                        "@fields._app_language": [
+                          "condition"
+                        ],
+                        "@item.type": [
+                          "condition"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "youtube",
+                      "name": "message_youtube_cw",
+                      "value": "@item.media_asset",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "condition": "(@fields._app_language !== \"cw_pap\") && (@item.type == \"youtube\")",
+                      "exclude_from_translation": true,
+                      "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1.message_youtube_cw",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.media_asset",
+                            "matchedExpression": "@item.media_asset",
+                            "type": "item",
+                            "fieldName": "media_asset"
+                          }
+                        ],
+                        "condition": [
+                          {
+                            "fullExpression": "(@fields._app_language !== \"cw_pap\") && (@item.type == \"youtube\")",
+                            "matchedExpression": "@fields._app_language",
+                            "type": "fields",
+                            "fieldName": "_app_language"
+                          },
+                          {
+                            "fullExpression": "(@fields._app_language !== \"cw_pap\") && (@item.type == \"youtube\")",
+                            "matchedExpression": "@item.type",
+                            "type": "item",
+                            "fieldName": "type"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.media_asset": [
+                          "value"
+                        ],
+                        "@fields._app_language": [
+                          "condition"
+                        ],
+                        "@item.type": [
+                          "condition"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": "data_items_1",
+                  "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1",
                   "_dynamicFields": {
                     "parameter_list": {
                       "filter": [
@@ -169,82 +335,86 @@
                   }
                 },
                 {
-                  "type": "video",
-                  "name": "message_video",
-                  "value": "@local.media_asset",
+                  "type": "data_items",
+                  "value": "media",
                   "_translations": {
                     "value": {}
                   },
-                  "condition": "@local.media_type == \"video\"",
-                  "exclude_from_translation": true,
-                  "_nested_name": "dg_box.display_group_2.display_group_1.message_video",
+                  "action_list": [
+                    {
+                      "trigger": "data_changed",
+                      "action_id": "set_local",
+                      "args": [
+                        "media_asset",
+                        "@items[0].media_asset"
+                      ],
+                      "_raw": "data_changed | set_local : media_asset: @items[0].media_asset"
+                    }
+                  ],
+                  "condition": false,
+                  "name": "data_items_2",
+                  "_nested_name": "dg_box.display_group_2.display_group_4.data_items_2"
+                },
+                {
+                  "type": "data_items",
+                  "value": "@data.media",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "action_list": [
+                    {
+                      "trigger": "data_changed",
+                      "action_id": "set_local",
+                      "args": [
+                        "media_type",
+                        "@items[0].type"
+                      ],
+                      "_raw": "data_changed | set_local : media_type: @items[0].type"
+                    }
+                  ],
+                  "condition": false,
+                  "name": "data_items_3",
+                  "_nested_name": "dg_box.display_group_2.display_group_4.data_items_3",
                   "_dynamicFields": {
                     "value": [
                       {
-                        "fullExpression": "@local.media_asset",
-                        "matchedExpression": "@local.media_asset",
-                        "type": "local",
-                        "fieldName": "media_asset"
-                      }
-                    ],
-                    "condition": [
-                      {
-                        "fullExpression": "@local.media_type == \"video\"",
-                        "matchedExpression": "@local.media_type",
-                        "type": "local",
-                        "fieldName": "media_type"
+                        "fullExpression": "@data.media",
+                        "matchedExpression": "@data.media",
+                        "type": "data",
+                        "fieldName": "media"
                       }
                     ]
                   },
                   "_dynamicDependencies": {
-                    "@local.media_asset": [
+                    "@data.media": [
                       "value"
-                    ],
-                    "@local.media_type": [
-                      "condition"
                     ]
                   }
                 },
                 {
-                  "type": "audio",
-                  "name": "message_audio",
-                  "value": "@local.media_asset",
+                  "type": "data_items",
+                  "value": "media_data",
                   "_translations": {
                     "value": {}
                   },
-                  "condition": "@local.media_type == \"audio\"",
-                  "exclude_from_translation": true,
-                  "_nested_name": "dg_box.display_group_2.display_group_1.message_audio",
-                  "_dynamicFields": {
-                    "value": [
-                      {
-                        "fullExpression": "@local.media_asset",
-                        "matchedExpression": "@local.media_asset",
-                        "type": "local",
-                        "fieldName": "media_asset"
-                      }
-                    ],
-                    "condition": [
-                      {
-                        "fullExpression": "@local.media_type == \"audio\"",
-                        "matchedExpression": "@local.media_type",
-                        "type": "local",
-                        "fieldName": "media_type"
-                      }
-                    ]
-                  },
-                  "_dynamicDependencies": {
-                    "@local.media_asset": [
-                      "value"
-                    ],
-                    "@local.media_type": [
-                      "condition"
-                    ]
-                  }
+                  "action_list": [
+                    {
+                      "trigger": "data_changed",
+                      "action_id": "set_local",
+                      "args": [
+                        "media_asset_cw",
+                        "@items[0].media_asset_cw"
+                      ],
+                      "_raw": "data_changed | set_local : media_asset_cw: @items[0].media_asset_cw"
+                    }
+                  ],
+                  "condition": false,
+                  "name": "data_items_4",
+                  "_nested_name": "dg_box.display_group_2.display_group_4.data_items_4"
                 }
               ],
-              "name": "display_group_1",
-              "_nested_name": "dg_box.display_group_2.display_group_1",
+              "name": "display_group_4",
+              "_nested_name": "dg_box.display_group_2.display_group_4",
               "_dynamicFields": {
                 "condition": [
                   {

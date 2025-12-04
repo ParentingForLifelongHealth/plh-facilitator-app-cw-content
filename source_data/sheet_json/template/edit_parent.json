@@ -129,6 +129,7 @@
     },
     {
       "type": "text",
+      "value": "@global.label_first_name",
       "exclude_from_translation": true
     },
     {
@@ -214,7 +215,7 @@
     {
       "type": "text",
       "name": "coparenting_with",
-      "value": "No other current caregiver",
+      "value": "No other caregivers",
       "style_list": "flex:1",
       "condition": "@local.number_of_coparents == 0"
     },
@@ -256,10 +257,11 @@
       "type": "end_data_items"
     },
     {
-      "type": "text",
-      "value": "Engagement",
-      "parameter_list": "style: emphasised",
-      "exclude_from_translation": "FASLE"
+      "type": "plh_module_list_item",
+      "name": "details_button",
+      "value": "Details from Individual Consultation",
+      "action_list": "click | go_to: parent_details;",
+      "parameter_list": "nav_image_asset: images/icons/expand_circle_right.svg;"
     },
     {
       "name": "number_reported_sessions"
@@ -343,18 +345,17 @@
     },
     {
       "type": "text",
+      "value": "Engagement",
+      "parameter_list": "style: emphasised",
+      "exclude_from_translation": false
+    },
+    {
+      "type": "text",
       "name": "attendance",
       "value": "Attended @local.attended_6 / @local.number_reported_sessions reported sessions"
     },
     {
       "type": "end_data_items"
-    },
-    {
-      "type": "plh_module_list_item",
-      "name": "details_button",
-      "value": "Details from Individual Consultation",
-      "action_list": "click | go_to: parent_details;",
-      "parameter_list": "nav_image_asset: images/icons/expand_circle_right.svg;"
     },
     {
       "name": "valid",
@@ -365,16 +366,18 @@
       "type": "text",
       "value": "Danger Zone",
       "parameter_list": "style: emphasised",
-      "exclude_from_translation": "FASLE"
+      "exclude_from_translation": false
     },
     {
       "type": "text",
-      "value": "Delete parent to permanently delete all their data. This action cannot be undone."
+      "value": "Delete parent to permanently delete all their data. This action cannot be undone.",
+      "style_list": "margin-top: -15px"
     },
     {
       "type": "button",
       "value": "Delete Parent",
-      "action_list": "click | pop_up: delete_parent;"
+      "action_list": "click | pop_up: delete_parent;",
+      "parameter_list": "style: alternative"
     },
     {
       "type": "begin_display_group",
@@ -387,7 +390,7 @@
       "name": "save",
       "value": "Save Profile",
       "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name;\nclick | emit: completed;\nclick | emit: server_sync;",
-      "parameter_list": "variant: card;\ndisabled: !@local.valid;",
+      "parameter_list": "disabled: !@local.valid;",
       "style_list": "flex: 1"
     },
     {

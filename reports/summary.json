@@ -39,7 +39,7 @@
       },
       {
         "type": "data_items",
-        "count": 110
+        "count": 115
       },
       {
         "type": "date_time_picker",
@@ -107,7 +107,7 @@
       },
       {
         "type": "set_variable",
-        "count": 1060
+        "count": 1099
       },
       {
         "type": "simple_checkbox",
@@ -123,7 +123,7 @@
       },
       {
         "type": "template",
-        "count": 146
+        "count": 165
       },
       {
         "type": "test",
@@ -131,7 +131,7 @@
       },
       {
         "type": "text",
-        "count": 383
+        "count": 384
       },
       {
         "type": "text_area",
@@ -159,7 +159,7 @@
       },
       {
         "type": "youtube",
-        "count": 1
+        "count": 3
       }
     ]
   },
@@ -183,7 +183,7 @@
       },
       {
         "type": "emit: completed",
-        "count": 66
+        "count": 85
       },
       {
         "type": "emit: force_reload",
@@ -207,7 +207,7 @@
       },
       {
         "type": "emit: uncompleted",
-        "count": 99
+        "count": 118
       },
       {
         "type": "feedback",
@@ -255,7 +255,7 @@
       },
       {
         "type": "set_local",
-        "count": 135
+        "count": 138
       },
       {
         "type": "share",
@@ -271,13 +271,13 @@
     "data": [
       {
         "assets": "total",
-        "KB": "99857 KB",
-        "MB": "99.9 MB"
+        "KB": "101525 KB",
+        "MB": "101.5 MB"
       },
       {
         "assets": "unused",
-        "KB": "11076 KB",
-        "MB": "11.1 MB"
+        "KB": "9408 KB",
+        "MB": "9.4 MB"
       }
     ]
   },
@@ -424,6 +424,10 @@
         "size_kb": 2.1
       },
       {
+        "path": "images/icons/people.svg",
+        "size_kb": 1
+      },
+      {
         "path": "images/icons/people_network.svg",
         "size_kb": 6.9
       },
@@ -520,10 +524,6 @@
         "size_kb": 27.7
       },
       {
-        "path": "images/modules/chat.png",
-        "size_kb": 1669
-      },
-      {
         "path": "pdf/module_1_core_lesson_teen_pap.pdf",
         "size_kb": 393.1
       }
@@ -582,7 +582,7 @@
     "data": [
       {
         "path": "images/articles/facilitation.png",
-        "count": 10,
+        "count": 1,
         "size_kb": 1706
       },
       {
@@ -772,18 +772,13 @@
       },
       {
         "path": "images/icons/people-outline-brown.svg",
-        "count": 1,
+        "count": 4,
         "size_kb": 1.1
       },
       {
         "path": "images/icons/people-outline.svg",
         "count": 1,
         "size_kb": 0.9
-      },
-      {
-        "path": "images/icons/people.svg",
-        "count": 1,
-        "size_kb": 1
       },
       {
         "path": "images/icons/person-circle-outline.svg",
@@ -839,6 +834,11 @@
         "path": "images/logos/UNICEF_Netherlands_PAP.png",
         "count": 1,
         "size_kb": 252.8
+      },
+      {
+        "path": "images/modules/chat.png",
+        "count": 9,
+        "size_kb": 1669
       },
       {
         "path": "images/modules/module_1_teen.png",
@@ -1082,7 +1082,7 @@
       {
         "type": "template",
         "subtype": "generated",
-        "total": 81
+        "total": 100
       },
       {
         "type": "template",

@@ -560,9 +560,28 @@
         },
         {
           "type": "text",
+          "value": "@global.label_first_name",
+          "_translations": {
+            "value": {}
+          },
           "exclude_from_translation": true,
           "name": "text_3",
-          "_nested_name": "display_group_22.text_3"
+          "_nested_name": "display_group_22.text_3",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.label_first_name",
+                "matchedExpression": "@global.label_first_name",
+                "type": "global",
+                "fieldName": "label_first_name"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@global.label_first_name": [
+              "value"
+            ]
+          }
         },
         {
           "type": "text_box",
@@ -931,7 +950,7 @@
         {
           "type": "text",
           "name": "coparenting_with",
-          "value": "No other current caregiver",
+          "value": "No other caregivers",
           "_translations": {
             "value": {}
           },
@@ -1319,17 +1338,26 @@
       }
     },
     {
-      "type": "text",
-      "value": "Engagement",
+      "type": "plh_module_list_item",
+      "name": "details_button",
+      "value": "Details from Individual Consultation",
       "_translations": {
         "value": {}
       },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "parent_details"
+          ],
+          "_raw": "click | go_to: parent_details"
+        }
+      ],
       "parameter_list": {
-        "style": "emphasised"
+        "nav_image_asset": "images/icons/expand_circle_right.svg"
       },
-      "exclude_from_translation": "FASLE",
-      "name": "text_32",
-      "_nested_name": "text_32"
+      "_nested_name": "details_button"
     },
     {
       "name": "number_reported_sessions",
@@ -1981,6 +2009,43 @@
         },
         {
           "type": "text",
+          "value": "Engagement",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "style": "emphasised"
+          },
+          "exclude_from_translation": false,
+          "name": "text_2_@item.id",
+          "_nested_name": "data_items_35.text_2_@item.id",
+          "_dynamicFields": {
+            "name": [
+              {
+                "fullExpression": "text_2_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "data_items_35.text_2_@item.id",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.id": [
+              "name",
+              "_nested_name"
+            ]
+          }
+        },
+        {
+          "type": "text",
           "name": "attendance",
           "value": "Attended @local.attended_6 / @local.number_reported_sessions reported sessions",
           "_translations": {
@@ -2054,28 +2119,6 @@
       }
     },
     {
-      "type": "plh_module_list_item",
-      "name": "details_button",
-      "value": "Details from Individual Consultation",
-      "_translations": {
-        "value": {}
-      },
-      "action_list": [
-        {
-          "trigger": "click",
-          "action_id": "go_to",
-          "args": [
-            "parent_details"
-          ],
-          "_raw": "click | go_to: parent_details"
-        }
-      ],
-      "parameter_list": {
-        "nav_image_asset": "images/icons/expand_circle_right.svg"
-      },
-      "_nested_name": "details_button"
-    },
-    {
       "name": "valid",
       "value": "!!@local.first_name && !!@local.last_name && @local.first_name_valid && @local.last_name_valid",
       "_translations": {
@@ -2138,9 +2181,9 @@
       "parameter_list": {
         "style": "emphasised"
       },
-      "exclude_from_translation": "FASLE",
-      "name": "text_39",
-      "_nested_name": "text_39"
+      "exclude_from_translation": false,
+      "name": "text_38",
+      "_nested_name": "text_38"
     },
     {
       "type": "text",
@@ -2150,8 +2193,11 @@
           "cw_pap": true
         }
       },
-      "name": "text_40",
-      "_nested_name": "text_40"
+      "style_list": [
+        "margin-top: -15px"
+      ],
+      "name": "text_39",
+      "_nested_name": "text_39"
     },
     {
       "type": "button",
@@ -2171,8 +2217,11 @@
           "_raw": "click | pop_up: delete_parent"
         }
       ],
-      "name": "button_41",
-      "_nested_name": "button_41"
+      "parameter_list": {
+        "style": "alternative"
+      },
+      "name": "button_40",
+      "_nested_name": "button_40"
     },
     {
       "type": "display_group",
@@ -2226,13 +2275,12 @@
             }
           ],
           "parameter_list": {
-            "variant": "card",
             "disabled": "!@local.valid"
           },
           "style_list": [
             "flex: 1"
           ],
-          "_nested_name": "display_group_42.save",
+          "_nested_name": "display_group_41.save",
           "_dynamicFields": {
             "action_list": {
               "0": {
@@ -2314,8 +2362,8 @@
           }
         }
       ],
-      "name": "display_group_42",
-      "_nested_name": "display_group_42",
+      "name": "display_group_41",
+      "_nested_name": "display_group_41",
       "_dynamicFields": {
         "condition": [
           {

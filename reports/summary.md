@@ -12,7 +12,7 @@
 | button | 133 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 110 |
+| data_items | 115 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -29,20 +29,20 @@
 | round_button | 37 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1060 |
+| set_variable | 1099 |
 | simple_checkbox | 6 |
 | task_card | 1 |
 | task_progress_bar | 4 |
-| template | 146 |
+| template | 165 |
 | test | 1 |
-| text | 383 |
+| text | 384 |
 | text_area | 4 |
 | text_box | 32 |
 | title | 72 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 3 |
-| youtube | 1 |
+| youtube | 3 |
 </details>
 
 <details >
@@ -54,13 +54,13 @@
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
-| emit: completed | 66 |
+| emit: completed | 85 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 22 |
 | emit: set_language | 4 |
-| emit: uncompleted | 99 |
+| emit: uncompleted | 118 |
 | feedback | 24 |
 | go_to | 43 |
 | nav | 7 |
@@ -72,7 +72,7 @@
 | set_data | 29 |
 | set_field | 90 |
 | set_item | 13 |
-| set_local | 135 |
+| set_local | 138 |
 | share | 4 |
 | user | 4 |
 </details>
@@ -82,8 +82,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 99857 KB | 99.9 MB |
-| unused | 11076 KB | 11.1 MB |
+| total | 101525 KB | 101.5 MB |
+| unused | 9408 KB | 9.4 MB |
 </details>
 
 <details open>
@@ -128,6 +128,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/pencil-outline-white.svg | 1.4 |
 | images/icons/pencil-outline.svg | 0.3 |
 | images/icons/people-brown.svg | 2.1 |
+| images/icons/people.svg | 1 |
 | images/icons/people_network.svg | 6.9 |
 | images/icons/person-add-outline.svg | 0.6 |
 | images/icons/person-remove-outline.svg | 0.6 |
@@ -152,7 +153,6 @@ Assets that appear in app-data but do not have references within sheets
 | images/logos/MK_whitebg.png | 1237.1 |
 | images/logos/SOAW_PAP.JPG | 172.7 |
 | images/logos/UNICEF.jpg | 27.7 |
-| images/modules/chat.png | 1669 |
 | pdf/module_1_core_lesson_teen_pap.pdf | 393.1 |
 </details>
 
@@ -181,7 +181,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | path | size_kb | count |
 | --- | --- | --- |
-| images/articles/facilitation.png | 1706 | 10 |
+| images/articles/facilitation.png | 1706 | 1 |
 | images/articles/faq.png | 1840.9 | 1 |
 | images/articles/guide.png | 282.4 | 1 |
 | images/articles/programme.png | 617.5 | 1 |
@@ -219,9 +219,8 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/log-in-outline.svg | 0.4 | 1 |
 | images/icons/log-out-outline.svg | 0.3 | 1 |
 | images/icons/pencil_white.svg | 2 | 1 |
-| images/icons/people-outline-brown.svg | 1.1 | 1 |
+| images/icons/people-outline-brown.svg | 1.1 | 4 |
 | images/icons/people-outline.svg | 0.9 | 1 |
-| images/icons/people.svg | 1 | 1 |
 | images/icons/person-circle-outline.svg | 0.7 | 1 |
 | images/icons/person_cog.svg | 2.9 | 1 |
 | images/icons/qr-code-outline.svg | 1 | 1 |
@@ -233,6 +232,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/logos/MK_whitewithcolor.png | 7376.2 | 1 |
 | images/logos/PLH.png | 40.3 | 1 |
 | images/logos/UNICEF_Netherlands_PAP.png | 252.8 | 1 |
+| images/modules/chat.png | 1669 | 9 |
 | images/modules/module_1_teen.png | 4666.2 | 4 |
 | images/modules/module_1_yc.png | 5450.7 | 2 |
 | images/modules/module_2_teen.png | 5054.3 | 1 |
@@ -287,6 +287,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
 | template |  | 102 |
-| template | generated | 81 |
+| template | generated | 100 |
 | template | legal_terms | 4 |
 </details>
