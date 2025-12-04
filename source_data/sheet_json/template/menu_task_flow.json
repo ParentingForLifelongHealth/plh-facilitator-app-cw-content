@@ -381,7 +381,7 @@
     },
     {
       "type": "text",
-      "value": "@global.sessions_no_groups",
+      "value": "@global.sessions_no_groups ",
       "parameter_list": "text_align:center",
       "exclude_from_translation": true
     },
@@ -389,7 +389,7 @@
       "type": "round_button",
       "name": "groups_go_to",
       "action_list": "click | go_to: profile_groups",
-      "parameter_list": "variant: no-background;\nicon_src: @global.add_group_icon;",
+      "parameter_list": "variant: no-background; \nicon_src: images/icons/people-outline-brown.svg;",
       "exclude_from_translation": true,
       "style_list": "max-width: max-content;\nmargin-top: -10px;"
     },

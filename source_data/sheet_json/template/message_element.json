@@ -54,35 +54,78 @@
       "exclude_from_translation": true
     },
     {
+      "name": "media_asset",
+      "value": "initial"
+    },
+    {
+      "name": "media_type",
+      "value": "initial"
+    },
+    {
+      "name": "media_asset_cw",
+      "value": "initial"
+    },
+    {
       "type": "begin_display_group",
       "condition": "@local.asset_type == \"media\"",
       "parameter_list": "style: column",
       "exclude_from_translation": true
     },
     {
-      "name": "media_asset"
-    },
-    {
-      "name": "media_type"
-    },
-    {
-      "type": "data_items",
-      "action_list": "data_changed | set_local : media_asset: @items[0].media_asset;\ndata_changed | set_local : media_type: @items[0].type;",
+      "type": "begin_data_items",
+      "value": "media_data",
       "parameter_list": "filter: @item.id == @local.asset;\nlimit: 1;"
     },
     {
       "type": "video",
       "name": "message_video",
-      "value": "@local.media_asset",
-      "condition": "@local.media_type == \"video\"",
+      "value": "@item.media_asset",
+      "condition": "@item.type == \"video\"",
       "exclude_from_translation": true
     },
     {
       "type": "audio",
       "name": "message_audio",
-      "value": "@local.media_asset",
-      "condition": "@local.media_type == \"audio\"",
+      "value": "@item.media_asset",
+      "condition": "@item.type == \"audio\"",
       "exclude_from_translation": true
+    },
+    {
+      "type": "youtube",
+      "name": "message_youtube",
+      "value": "@item.media_asset_cw",
+      "condition": "(@fields._app_language == \"cw_pap\") && (@item.type == \"youtube\")",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "youtube",
+      "name": "message_youtube_cw",
+      "value": "@item.media_asset",
+      "condition": "(@fields._app_language !== \"cw_pap\") && (@item.type == \"youtube\")",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_data_items"
+    },
+    {
+      "type": "data_items",
+      "value": "media",
+      "action_list": "data_changed | set_local : media_asset: @items[0].media_asset;",
+      "condition": false,
+      "comments": "?!?!"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.media",
+      "action_list": "data_changed | set_local : media_type: @items[0].type;",
+      "condition": false
+    },
+    {
+      "type": "data_items",
+      "value": "media_data",
+      "action_list": "data_changed | set_local : media_asset_cw: @items[0].media_asset_cw;\n\n",
+      "condition": false,
+      "comments": "(@fields.app.language == \"cw_pap\") && (@local.media_type == \"youtube\")"
     },
     {
       "type": "end_display_group",

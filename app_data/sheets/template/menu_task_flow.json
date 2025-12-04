@@ -1825,31 +1825,14 @@
           ],
           "parameter_list": {
             "variant": "no-background",
-            "icon_src": "@global.add_group_icon"
+            "icon_src": "images/icons/people-outline-brown.svg"
           },
           "exclude_from_translation": true,
           "style_list": [
             "max-width: max-content",
             "margin-top: -10px"
           ],
-          "_nested_name": "display_group_16.groups_go_to",
-          "_dynamicFields": {
-            "parameter_list": {
-              "icon_src": [
-                {
-                  "fullExpression": "@global.add_group_icon",
-                  "matchedExpression": "@global.add_group_icon",
-                  "type": "global",
-                  "fieldName": "add_group_icon"
-                }
-              ]
-            }
-          },
-          "_dynamicDependencies": {
-            "@global.add_group_icon": [
-              "parameter_list.icon_src"
-            ]
-          }
+          "_nested_name": "display_group_16.groups_go_to"
         }
       ],
       "name": "display_group_16",
