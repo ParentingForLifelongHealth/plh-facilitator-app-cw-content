@@ -2539,6 +2539,9 @@
               "cw_pap": true
             }
           },
+          "style_list": [
+            "flex:1"
+          ],
           "condition": "@local.no_of_parents == 1",
           "_nested_name": "display_group_67.text_follow_up_one",
           "_dynamicFields": {
@@ -2575,6 +2578,9 @@
               "cw_pap": true
             }
           },
+          "style_list": [
+            "flex:1"
+          ],
           "condition": "@local.no_of_parents > 1",
           "_nested_name": "display_group_67.text_follow_up_multiple",
           "_dynamicFields": {
@@ -2621,10 +2627,6 @@
               "_raw": "click | go_to: follow_up"
             }
           ],
-          "parameter_list": {
-            "variant": "card",
-            "style": "no-background short"
-          },
           "condition": "@local.has_limit && @local.no_of_parents > 2",
           "_nested_name": "display_group_67.show_all",
           "_dynamicFields": {

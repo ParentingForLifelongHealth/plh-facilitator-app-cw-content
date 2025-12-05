@@ -85,13 +85,13 @@
       "type": "text",
       "name": "age_group",
       "value": "Age group: @local.current_age_group_text",
-      "style_list": "color: gray;margin-top: -10px; margin-bottom: 12px; font-size: 14px;"
+      "style_list": "color: gray; margin-top: -10px; font-size: 14px;"
     },
     {
       "type": "text",
       "name": "delivery_type",
       "value": "Delivery type: @local.current_content_package_text ",
-      "style_list": "color: gray;margin-top: -20px; margin-bottom: 12px; font-size: 14px;"
+      "style_list": "color: gray; margin-bottom: 12px; margin-top: -11px; font-size: 14px;"
     },
     {
       "type": "begin_template",

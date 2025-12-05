@@ -369,6 +369,9 @@
           "parameter_list": {
             "style": "column"
           },
+          "style_list": [
+            "margin-top: -6px"
+          ],
           "rows": [
             {
               "type": "button",
@@ -436,6 +439,9 @@
                 "variant": "card",
                 "style": "no-background"
               },
+              "style_list": [
+                "margin-top: -14px"
+              ],
               "exclude_from_translation": true,
               "_nested_name": "before_login.dg_buttons_terms.button_privacy",
               "_dynamicFields": {
@@ -994,8 +1000,8 @@
     }
   ],
   "_source": {
-    "name": "library PLH onboarding",
-    "path": "PLH onboarding.xlsx",
-    "url": "https://docs.google.com/spreadsheets/d/1LUIu_aqkzYjyUq0ecQEmWJa62CEvQ4E2L4Fkz_94ydw"
+    "name": "CW Sheets",
+    "path": "templates/CW onboarding templates.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1TNX4ZCxAqcKlU6D1trphMQs-WqIrZ4Rwu_amXGonyg0"
   }
 }

@@ -131,42 +131,48 @@
       "value": "@data.report_answers",
       "action_list": "data_changed | set_local : report_6 : @items.map(item => item.group_id);",
       "exclude_from_translation": true,
-      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_6\";"
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_6\";",
+      "comments": "add the archived group filter here filter: ([@local.all_groups].includes(Number(@item.group_id)) "
     },
     {
       "type": "data_items",
       "value": "@data.report_answers",
       "action_list": "data_changed | set_local : report_5 : @items.map(item => item.group_id);",
       "exclude_from_translation": true,
-      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_5\";"
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_5\";",
+      "comments": "add the archived group filter here filter: ([@local.all_groups].includes(Number(@item.group_id)) "
     },
     {
       "type": "data_items",
       "value": "@data.report_answers",
       "action_list": "data_changed | set_local : report_4 : @items.map(item => item.group_id);",
       "exclude_from_translation": true,
-      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_4\";"
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_4\";",
+      "comments": "add the archived group filter here filter: ([@local.all_groups].includes(Number(@item.group_id)) "
     },
     {
       "type": "data_items",
       "value": "@data.report_answers",
       "action_list": "data_changed | set_local : report_3 : @items.map(item => item.group_id);",
       "exclude_from_translation": true,
-      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_3\";"
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_3\";",
+      "comments": "add the archived group filter here filter: ([@local.all_groups].includes(Number(@item.group_id)) "
     },
     {
       "type": "data_items",
       "value": "@data.report_answers",
       "action_list": "data_changed | set_local : report_2 : @items.map(item => item.group_id);",
       "exclude_from_translation": true,
-      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_2\";"
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_2\";",
+      "comments": "add the archived group filter here filter: ([@local.all_groups].includes(Number(@item.group_id)) "
     },
     {
       "type": "data_items",
       "value": "@data.report_answers",
       "action_list": "data_changed | set_local : report_1 : @items.map(item => item.group_id);",
       "exclude_from_translation": true,
-      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_1\";"
+      "parameter_list": "filter: !@item.pending && @item.report_id == \"week_1\";",
+      "comments": "add the archived group filter here filter: ([@local.all_groups].includes(Number(@item.group_id)) "
     },
     {
       "exclude_from_translation": true
@@ -394,12 +400,14 @@
       "type": "title",
       "name": "text_follow_up_one",
       "value": "@local.no_of_parents Follow up",
+      "style_list": "flex:1",
       "condition": "@local.no_of_parents == 1"
     },
     {
       "type": "title",
       "name": "text_follow_up_multiple",
       "value": "@local.no_of_parents Follow ups",
+      "style_list": "flex:1",
       "condition": "@local.no_of_parents > 1"
     },
     {
@@ -407,8 +415,8 @@
       "name": "show_all",
       "value": "Show all",
       "action_list": "click | go_to: follow_up;",
-      "parameter_list": "variant: card; style: no-background short;",
-      "condition": "@local.has_limit && @local.no_of_parents > 2"
+      "condition": "@local.has_limit && @local.no_of_parents > 2",
+      "comments": "variant: card; style: no-background short;"
     },
     {
       "type": "end_display_group"
