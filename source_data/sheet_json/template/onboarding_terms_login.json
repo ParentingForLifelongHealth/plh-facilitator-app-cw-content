@@ -80,7 +80,8 @@
     {
       "type": "begin_display_group",
       "name": "dg_buttons_terms",
-      "parameter_list": "style: column;"
+      "parameter_list": "style: column;",
+      "style_list": "margin-top: -6px"
     },
     {
       "type": "button",
@@ -96,6 +97,7 @@
       "value": "<u>@global.privacy_policy</u>",
       "action_list": "click | pop_up: app_menu_privacy_policy | fullscreen: true",
       "parameter_list": "variant: card;\nstyle: no-background;",
+      "style_list": "margin-top: -14px",
       "exclude_from_translation": true
     },
     {

@@ -53,8 +53,9 @@
       "type": "text",
       "name": "group_name",
       "value": "@item.text",
-      "style_list": "font-size: 14px; \ncolor: #46607F;\nmargin-top: -18px;\n",
-      "condition": "@local.group_id == @item.name"
+      "style_list": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -18px;\n",
+      "condition": "@local.group_id == @item.name",
+      "comments": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -16px;\nmargin-bottom: 12px;\n"
     },
     {
       "type": "end_data_items"
