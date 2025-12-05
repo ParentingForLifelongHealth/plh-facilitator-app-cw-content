@@ -140,7 +140,7 @@
                       "style_list": [
                         "font-size: 16px",
                         "color: var(--ion-color-primary-700)",
-                        "margin-top: -18px"
+                        "margin-top: -20px"
                       ],
                       "condition": "@local.group_id == @item.name",
                       "_nested_name": "display_group_8.display_group_1.display_group_1.data_items_2.group_name",
@@ -230,9 +230,9 @@
                     }
                   },
                   "style_list": [
-                    "color: #FF0000",
-                    "font-size: 14px",
-                    "margin-top: -10px"
+                    "font-size: 16px",
+                    "color: var(--ion-color-primary-700)",
+                    "margin-top: -12px"
                   ],
                   "name": "text_3",
                   "_nested_name": "display_group_8.display_group_1.display_group_1.text_3"
@@ -351,7 +351,8 @@
                 "style": "no-background short"
               },
               "style_list": [
-                "margin-top: -30px"
+                "margin-top: -36px",
+                "margin-left: -22px"
               ],
               "condition": "@local.new_followup_count == 1",
               "name": "button_1",
@@ -393,7 +394,8 @@
                 "style": "no-background short"
               },
               "style_list": [
-                "margin-top: -30px"
+                "margin-top: -36px",
+                "margin-left: -22px"
               ],
               "condition": "@local.new_followup_count == 2",
               "name": "button_2",
@@ -435,7 +437,8 @@
                 "style": "no-background short"
               },
               "style_list": [
-                "margin-top: -30px"
+                "margin-top: -36px",
+                "margin-left: -22px"
               ],
               "condition": "@local.new_followup_count == 3",
               "name": "button_3",
