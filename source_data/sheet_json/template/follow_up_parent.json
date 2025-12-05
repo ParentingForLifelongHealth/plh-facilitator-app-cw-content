@@ -53,7 +53,7 @@
       "type": "text",
       "name": "group_name",
       "value": "@item.text",
-      "style_list": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -18px;\n",
+      "style_list": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -20px;\n",
       "condition": "@local.group_id == @item.name",
       "comments": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -16px;\nmargin-bottom: 12px;\n"
     },
@@ -63,7 +63,7 @@
     {
       "type": "text",
       "value": "Missed the last 2 group sessions",
-      "style_list": "color: #FF0000;\nfont-size: 14px; \nmargin-top: -10px;"
+      "style_list": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -12px;"
     },
     {
       "type": "end_display_group"
@@ -85,7 +85,7 @@
       "value": "<u>How to follow up</u>",
       "action_list": "click | go_to: library_article_follow_up_1;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -30px;",
+      "style_list": "margin-top: -36px; margin-left: -22px;",
       "condition": "@local.new_followup_count == 1"
     },
     {
@@ -93,7 +93,7 @@
       "value": "<u>How to follow up</u>",
       "action_list": "click | go_to: library_article_follow_up_2;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -30px;",
+      "style_list": "margin-top: -36px; margin-left: -22px;",
       "condition": "@local.new_followup_count == 2"
     },
     {
@@ -101,7 +101,7 @@
       "value": "<u>How to follow up</u>",
       "action_list": "click | go_to: library_article_follow_up_3;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -30px;",
+      "style_list": "margin-top: -36px; margin-left: -22px;",
       "condition": "@local.new_followup_count == 3"
     },
     {
