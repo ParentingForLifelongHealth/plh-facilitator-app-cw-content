@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 3 |
-| button | 133 |
+| button | 132 |
 | carousel | 2 |
-| combo_box | 16 |
-| data_items | 115 |
+| combo_box | 14 |
+| data_items | 119 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 173 |
+| display_group | 174 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
@@ -26,18 +26,21 @@
 | plh_module_list_item | 6 |
 | qr_code | 2 |
 | radio_button_grid | 15 |
-| round_button | 37 |
+| radio_list | 2 |
+| round_button | 38 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1099 |
+| set_variable | 1136 |
 | simple_checkbox | 6 |
+| tab | 2 |
+| tabs | 1 |
 | task_card | 1 |
 | task_progress_bar | 4 |
-| template | 165 |
+| template | 166 |
 | test | 1 |
-| text | 384 |
+| text | 386 |
 | text_area | 4 |
-| text_box | 32 |
+| text_box | 31 |
 | title | 72 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
@@ -50,6 +53,7 @@
 
 | type | count |
 | --- | --- |
+| DEBUG | 2 |
 | add_data | 10 |
 | app_update | 1 |
 | auth | 4 |
@@ -60,9 +64,9 @@
 | emit: force_restart | 2 |
 | emit: server_sync | 22 |
 | emit: set_language | 4 |
-| emit: uncompleted | 118 |
+| emit: uncompleted | 119 |
 | feedback | 24 |
-| go_to | 43 |
+| go_to | 45 |
 | nav | 7 |
 | nav_stack | 9 |
 | pop_up | 19 |
@@ -70,10 +74,11 @@
 | reset_data | 3 |
 | save_to_device | 4 |
 | set_data | 29 |
-| set_field | 90 |
+| set_field | 93 |
 | set_item | 13 |
 | set_local | 138 |
 | share | 4 |
+| toast | 1 |
 | user | 4 |
 </details>
 
@@ -82,8 +87,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 101525 KB | 101.5 MB |
-| unused | 9408 KB | 9.4 MB |
+| total | 101526 KB | 101.5 MB |
+| unused | 9832 KB | 9.8 MB |
 </details>
 
 <details open>
@@ -93,6 +98,10 @@ Assets that appear in app-data but do not have references within sheets
 
 | path | size_kb |
 | --- | --- |
+| android/icon-background.png | 7.7 |
+| android/icon-foreground.png | 119.4 |
+| android/icon.png | 93.8 |
+| android/splash.png | 202.8 |
 | images/articles/about_app_1.png | 109.2 |
 | images/backgrounds/home_bottom_right.svg | 2.3 |
 | images/backgrounds/library_bottom_left.svg | 2.3 |
@@ -213,6 +222,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/help.svg | 0.5 | 1 |
 | images/icons/home-outline-brown.svg | 1.6 | 1 |
 | images/icons/home_white.svg | 1.7 | 1 |
+| images/icons/incomplete.svg | 0.8 | 1 |
 | images/icons/information-circle-outline.svg | 0.5 | 1 |
 | images/icons/library.png | 1 | 1 |
 | images/icons/library_white.svg | 2.8 | 1 |
@@ -286,7 +296,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 13 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 102 |
+| template |  | 103 |
 | template | generated | 100 |
 | template | legal_terms | 4 |
 </details>

@@ -398,6 +398,9 @@
         },
         "no_follow_up": {
           "type": "number"
+        },
+        "follow_up_week": {
+          "type": "number"
         }
       }
     },
@@ -1607,6 +1610,15 @@
         "name": "Global",
         "path": "templates/reports.xlsx",
         "url": "https://docs.google.com/spreadsheets/d/1pqNDT__R83Co4cyz-E-Y5wiw0i020Bg7HnQ5t_wHqrA"
+      }
+    },
+    "delivery_selection": {
+      "flow_type": "template",
+      "flow_name": "delivery_selection",
+      "_source": {
+        "name": "CW Sheets",
+        "path": "templates/Parent Groups CW.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
       }
     },
     "download_header": {

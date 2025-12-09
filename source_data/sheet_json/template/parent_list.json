@@ -108,12 +108,25 @@
       "exclude_from_translation": true
     },
     {
+      "type": "begin_display_group"
+    },
+    {
       "type": "text",
       "name": "text_@item.parent_no",
       "value": "@local.first_name @local.last_name",
       "style_list": "color: #46607F;\n",
       "condition": true,
       "exclude_from_translation": true
+    },
+    {
+      "type": "round_button",
+      "action_list": "click | toast | message: @global.incomplete_parent",
+      "parameter_list": "icon_src: images/icons/incomplete.svg;\nvariant: no-background; ",
+      "style_list": "max-width: 32px;\nmargin-left: -10px;",
+      "condition": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation"
+    },
+    {
+      "type": "end_display_group"
     },
     {
       "name": "co_parent_id",

@@ -229,41 +229,41 @@
     },
     {
       "name": "child_age_valid",
-      "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 10 && @local.child_age<= 17))",
-      "condition": "@local.current_age_group == \"teen_\"",
+      "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 10 && @local.child_age<= 17) || @local.child_age== '' || !@local.child_age || (@global.edit_child_age == @local.child_age))",
+      "condition": "@fields.current_age_group == \"teen_\"",
       "exclude_from_translation": true
     },
     {
       "name": "child_age_valid",
-      "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 9))",
-      "condition": "@local.current_age_group == \"yc_\"",
+      "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 9) || @local.child_age== '' || !@local.child_age || (@global.edit_child_age == @local.child_age))",
+      "condition": "@fields.current_age_group == \"yc_\"",
       "exclude_from_translation": true
     },
     {
       "name": "child_age_valid",
-      "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 17))",
-      "condition": "@local.current_age_group == \"mixed_\"",
+      "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 17) || @local.child_age== '' || !@local.child_age || (@global.edit_child_age == @local.child_age))",
+      "condition": "@fields.current_age_group == \"mixed_\"",
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "@global.error_child_age (10 - 17)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
-      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"teen_\")",
+      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"teen_\")",
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "@global.error_child_age (2 - 9)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
-      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"yc_\")",
+      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"yc_\")",
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "@global.error_child_age (2 - 17)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
-      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"mixed_\")",
+      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"mixed_\")",
       "exclude_from_translation": true
     },
     {
@@ -283,7 +283,7 @@
     },
     {
       "name": "child_sex_valid",
-      "value": "!!@local.child_sex",
+      "value": "!!@local.child_sex|| @local.child_sex== '' || !@local.child_sex",
       "exclude_from_translation": true
     },
     {
@@ -310,7 +310,7 @@
     },
     {
       "name": "other_home_valid",
-      "value": "!!@local.other_home",
+      "value": "!!@local.other_home || @local.other_home== '' || !@local.other_home",
       "exclude_from_translation": true
     },
     {
@@ -334,7 +334,7 @@
     },
     {
       "name": "hours_valid",
-      "value": "@calc((/^\\d{1,2}$/.test(@local.hours) && @local.hours>= 0 && @local.hours<= 24))",
+      "value": "@calc((/^\\d{1,2}$/.test(@local.hours) && @local.hours>= 0 && @local.hours<= 24) || @local.hours== '' || !@local.hours)",
       "exclude_from_translation": true
     },
     {
@@ -405,88 +405,84 @@
       "exclude_from_translation": true
     },
     {
-      "__EMPTY": "first_name_valid"
+      "action_list": "DEBUG",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "current_content_package = @fields.current_age_group ",
+      "condition": false,
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "first_name: @local.first_name_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "last_name_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "last_name @local.last_name_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "number_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "number: @local.number_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "age_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "age: @local.age_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "sex_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "sex: @local.sex_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "child_count_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "child count: @local.child_count_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "child_age_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "child age: @local.child_age_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "child_sex_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "child sex: @local.child_sex_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "other_home_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "other_home: @local.other_home_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "hours_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "hours: @local.hours_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "goal_valid"
+      "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "goal: @local.goal_valid",
       "condition": false,
-      "exclude_from_translation": true,
-      "__EMPTY": "consoltation"
+      "exclude_from_translation": true
     },
     {
       "name": "valid",
-      "value": true,
+      "value": "@local.number_valid && @local.age_valid && @local.child_age_valid && @local.child_count_valid && @local.hours_valid &&@local.goal_valid",
       "exclude_from_translation": true
     },
     {

@@ -1,0 +1,397 @@
+{
+  "flow_type": "template",
+  "flow_name": "delivery_selection",
+  "status": "released",
+  "rows": [
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_2",
+      "_nested_name": "set_variable_2"
+    },
+    {
+      "name": "title_label",
+      "value": "@global.new_parent_group",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "title_label",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.new_parent_group",
+            "matchedExpression": "@global.new_parent_group",
+            "type": "global",
+            "fieldName": "new_parent_group"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.new_parent_group": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "group number: @fields.current_group_no",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "exclude_from_translation": true,
+      "name": "text_4",
+      "_nested_name": "text_4",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "group number: @fields.current_group_no",
+            "matchedExpression": "@fields.current_group_no",
+            "type": "fields",
+            "fieldName": "current_group_no"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.current_group_no": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "name": "header",
+      "value": "section_header",
+      "action_list": [
+        {
+          "trigger": "uncompleted",
+          "action_id": "emit",
+          "args": [
+            "uncompleted"
+          ],
+          "_raw": "uncompleted | emit: uncompleted"
+        }
+      ],
+      "exclude_from_translation": true,
+      "rows": [
+        {
+          "name": "title",
+          "value": "@local.title_label",
+          "_translations": {
+            "value": {}
+          },
+          "exclude_from_translation": true,
+          "type": "set_variable",
+          "_nested_name": "header.title",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.title_label",
+                "matchedExpression": "@local.title_label",
+                "type": "local",
+                "fieldName": "title_label"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.title_label": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "confirm_exit",
+          "value": true,
+          "type": "set_variable",
+          "_nested_name": "header.confirm_exit"
+        }
+      ],
+      "_nested_name": "header"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_7",
+      "_nested_name": "set_variable_7"
+    },
+    {
+      "type": "text",
+      "name": "text_group_name",
+      "value": "@fields.temporary_group_name",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "style": "emphasised"
+      },
+      "_nested_name": "text_group_name",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields.temporary_group_name",
+            "matchedExpression": "@fields.temporary_group_name",
+            "type": "fields",
+            "fieldName": "temporary_group_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.temporary_group_name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "before: @fields.current_group_no",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "exclude_from_translation": true,
+      "name": "text_9",
+      "_nested_name": "text_9",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "before: @fields.current_group_no",
+            "matchedExpression": "@fields.current_group_no",
+            "type": "fields",
+            "fieldName": "current_group_no"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields.current_group_no": [
+          "value"
+        ]
+      }
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_10",
+      "_nested_name": "set_variable_10"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_11",
+      "_nested_name": "set_variable_11"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_12",
+      "_nested_name": "set_variable_12"
+    },
+    {
+      "type": "text",
+      "value": "@global.delivery_mode",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_13",
+      "_nested_name": "text_13",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.delivery_mode",
+            "matchedExpression": "@global.delivery_mode",
+            "type": "global",
+            "fieldName": "delivery_mode"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.delivery_mode": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "radio_list",
+      "name": "delivery_tag",
+      "rows": [
+        {
+          "type": "data_items",
+          "value": "delivery_data",
+          "rows": [],
+          "name": "data_items_1",
+          "_nested_name": "delivery_tag.data_items_1"
+        }
+      ],
+      "_nested_name": "delivery_tag"
+    },
+    {
+      "type": "display_group",
+      "parameter_list": {
+        "sticky": "bottom"
+      },
+      "style_list": [
+        "padding: 12px 24px"
+      ],
+      "exclude_from_translation": true,
+      "rows": [
+        {
+          "type": "template",
+          "name": "add_group_button",
+          "value": "add_group_button",
+          "action_list": [
+            {
+              "trigger": "completed",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "completed | emit: completed"
+            }
+          ],
+          "exclude_from_translation": true,
+          "rows": [
+            {
+              "name": "name",
+              "value": "@fields.current_group_no",
+              "_translations": {
+                "value": {}
+              },
+              "exclude_from_translation": true,
+              "type": "set_variable",
+              "_nested_name": "display_group_16.add_group_button.name",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@fields.current_group_no",
+                    "matchedExpression": "@fields.current_group_no",
+                    "type": "fields",
+                    "fieldName": "current_group_no"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@fields.current_group_no": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "text",
+              "value": "@fields.temporary_group_name",
+              "_translations": {
+                "value": {}
+              },
+              "exclude_from_translation": true,
+              "type": "set_variable",
+              "_nested_name": "display_group_16.add_group_button.text",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@fields.temporary_group_name",
+                    "matchedExpression": "@fields.temporary_group_name",
+                    "type": "fields",
+                    "fieldName": "temporary_group_name"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@fields.temporary_group_name": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "age_group",
+              "value": "@fields.temporary_age_group",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "display_group_16.add_group_button.age_group",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@fields.temporary_age_group",
+                    "matchedExpression": "@fields.temporary_age_group",
+                    "type": "fields",
+                    "fieldName": "temporary_age_group"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@fields.temporary_age_group": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "delivery_type",
+              "value": "@local.delivery_tag",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "display_group_16.add_group_button.delivery_type",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.delivery_tag",
+                    "matchedExpression": "@local.delivery_tag",
+                    "type": "local",
+                    "fieldName": "delivery_tag"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.delivery_tag": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "content_package",
+              "value": "@fields.temporary_age_group@local.delivery_tag",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "display_group_16.add_group_button.content_package",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@fields.temporary_age_group@local.delivery_tag",
+                    "matchedExpression": "@fields.temporary_age_group",
+                    "type": "fields",
+                    "fieldName": "temporary_age_group"
+                  },
+                  {
+                    "fullExpression": "@fields.temporary_age_group@local.delivery_tag",
+                    "matchedExpression": "@local.delivery_tag",
+                    "type": "local",
+                    "fieldName": "delivery_tag"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@fields.temporary_age_group": [
+                  "value"
+                ],
+                "@local.delivery_tag": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "display_group_16.add_group_button"
+        }
+      ],
+      "name": "display_group_16",
+      "_nested_name": "display_group_16"
+    }
+  ],
+  "_source": {
+    "name": "CW Sheets",
+    "path": "templates/Parent Groups CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1J_fEngLyEzP64X7PE1XZyYGf3kDo_EpXx1fSzgY0sdo"
+  }
+}

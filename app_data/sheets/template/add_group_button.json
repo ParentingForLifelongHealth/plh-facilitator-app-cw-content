@@ -181,6 +181,14 @@
         },
         {
           "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "profile_groups"
+          ],
+          "_raw": "click | go_to: profile_groups"
+        },
+        {
+          "trigger": "click",
           "action_id": "emit",
           "args": [
             "server_sync"

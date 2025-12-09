@@ -349,6 +349,21 @@
         "value": {}
       },
       "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "countdown_days",
+      "value": "@calc(@fields.user_type === \"tester\" ? 0 : 7)",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "maximum_follow_ups",
+      "value": 3,
+      "exclude_from_translation": true
     }
   ],
   "_source": {

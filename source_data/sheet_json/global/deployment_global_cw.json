@@ -206,6 +206,18 @@
       "name": "close_stack_icon",
       "value": "images/icons/close-circle-brown.svg",
       "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "countdown_days",
+      "value": "@calc(@fields.user_type === \"tester\" ? 0 : 7)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_field_default",
+      "name": "maximum_follow_ups",
+      "value": 3,
+      "exclude_from_translation": true
     }
   ]
 }

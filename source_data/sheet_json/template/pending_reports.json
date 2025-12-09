@@ -24,10 +24,21 @@
       "value": 2
     },
     {
+      "name": "all_groups"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local : all_groups: @items.map(item => item.name);",
+      "parameter_list": "filter: !@item.archived;",
+      "comments": "(1,2,3,4)"
+    },
+    {
       "type": "begin_data_items",
       "name": "counting_delivered",
       "value": "@data.report_answers",
-      "action_list": "data_changed | set_local : number_delivered_sessions : @items.length -1;",
+      "action_list": "data_changed | set_local : number_delivered_sessions : @items.length;",
+      "parameter_list": "filter: ([@local.all_groups].includes(Number(@item.group_id)));",
       "comments": "Counts all sessions delivered"
     },
     {
@@ -37,8 +48,8 @@
       "type": "begin_data_items",
       "name": "counting_pending",
       "value": "@data.report_answers",
-      "action_list": "data_changed | set_local : number_pending_reports : @items.length -1;",
-      "parameter_list": "filter: @item.pending;",
+      "action_list": "data_changed | set_local : number_pending_reports : @items.length;",
+      "parameter_list": "filter: @item.pending && ([@local.all_groups].includes(Number(@item.group_id)));",
       "comments": "Counts pending reports "
     },
     {
@@ -126,7 +137,7 @@
     {
       "type": "begin_data_items",
       "value": "@data.report_answers",
-      "parameter_list": "filter: @item.pending && !(@item.id=='text');\nlimit: @local.show_limit;",
+      "parameter_list": "filter: @item.pending && ([@local.all_groups].includes(Number(@item.group_id)));\nlimit: @local.show_limit;",
       "comments": "Looks at all pending reports up to the limit"
     },
     {
