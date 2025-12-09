@@ -75,69 +75,38 @@
       "exclude_from_translation": true
     },
     {
-      "type": "combo_box",
-      "name": "age_tag",
-      "parameter_list": "answer_list: @data.tag_data;"
+      "type": "begin_radio_list",
+      "name": "age_tag"
     },
     {
-      "type": "text",
-      "value": "@global.delivery_mode"
+      "type": "begin_data_items",
+      "value": "tag_data"
     },
     {
-      "type": "combo_box",
-      "name": "delivery_tag",
-      "parameter_list": "answer_list: @data.delivery_data;"
+      "type": "end_data_items"
     },
     {
-      "exclude_from_translation": true
+      "type": "end_radio_list"
     },
     {
-      "exclude_from_translation": true
-    },
-    {
-      "exclude_from_translation": true
+      "name": "valid",
+      "value": "@local.text_box && @local.age_tag"
     },
     {
       "type": "begin_display_group",
-      "parameter_list": "sticky: bottom;",
-      "style_list": "padding: 12px 24px;",
-      "exclude_from_translation": true
+      "parameter_list": "sticky: bottom;"
     },
     {
-      "type": "begin_template",
-      "name": "add_group_button",
-      "value": "add_group_button",
-      "action_list": "completed | emit: completed;",
-      "exclude_from_translation": true
+      "type": "button",
+      "name": "continue",
+      "value": "Continue",
+      "action_list": "\nclick | set_field: temporary_group_name: @local.text_box;\nclick | set_field: temporary_age_group: @local.age_tag;\nclick | go_to: delivery_selection;\n",
+      "parameter_list": "variant: card; \ndisabled: !@local.valid; "
     },
     {
-      "name": "name",
-      "value": "@fields.current_group_no",
-      "exclude_from_translation": true
+      "type": "end_display_group"
     },
     {
-      "name": "text",
-      "value": "@local.text_box",
-      "exclude_from_translation": true
-    },
-    {
-      "name": "age_group",
-      "value": "@local.age_tag"
-    },
-    {
-      "name": "delivery_type",
-      "value": "@local.delivery_tag"
-    },
-    {
-      "name": "content_package",
-      "value": "@local.age_tag@local.delivery_tag"
-    },
-    {
-      "type": "end_template",
-      "exclude_from_translation": true
-    },
-    {
-      "type": "end_display_group",
       "exclude_from_translation": true
     }
   ]

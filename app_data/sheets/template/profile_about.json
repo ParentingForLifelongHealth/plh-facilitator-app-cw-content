@@ -66,6 +66,30 @@
     },
     {
       "name": "user_name",
+      "value": "@fields._auth_user_given_name",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "user_name",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields._auth_user_given_name",
+            "matchedExpression": "@fields._auth_user_given_name",
+            "type": "fields",
+            "fieldName": "_auth_user_given_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields._auth_user_given_name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "user_name",
       "value": "@fields.user_name",
       "_translations": {
         "value": {}
@@ -141,52 +165,6 @@
         ],
         "@global.type_prompt": [
           "parameter_list.placeholder"
-        ],
-        "@global.user_name_default": [
-          "condition"
-        ]
-      }
-    },
-    {
-      "type": "text_box",
-      "name": "text_box",
-      "parameter_list": {
-        "placeholder": "@global.type_prompt"
-      },
-      "condition": "@local.user_name == @global.user_name_default",
-      "_nested_name": "text_box",
-      "_dynamicFields": {
-        "parameter_list": {
-          "placeholder": [
-            {
-              "fullExpression": "@global.type_prompt",
-              "matchedExpression": "@global.type_prompt",
-              "type": "global",
-              "fieldName": "type_prompt"
-            }
-          ]
-        },
-        "condition": [
-          {
-            "fullExpression": "@local.user_name == @global.user_name_default",
-            "matchedExpression": "@local.user_name",
-            "type": "local",
-            "fieldName": "user_name"
-          },
-          {
-            "fullExpression": "@local.user_name == @global.user_name_default",
-            "matchedExpression": "@global.user_name_default",
-            "type": "global",
-            "fieldName": "user_name_default"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@global.type_prompt": [
-          "parameter_list.placeholder"
-        ],
-        "@local.user_name": [
-          "condition"
         ],
         "@global.user_name_default": [
           "condition"

@@ -28,7 +28,13 @@
     },
     {
       "name": "user_name",
-      "value": "@fields.user_name"
+      "value": "@fields._auth_user_given_name",
+      "comments": "!@fields.user_name"
+    },
+    {
+      "name": "user_name",
+      "value": "@fields.user_name",
+      "comments": "!!@fields.user_name"
     },
     {
       "type": "text_box",
@@ -36,12 +42,6 @@
       "value": "@local.user_name",
       "parameter_list": "placeholder: @global.type_prompt",
       "condition": "@local.user_name != @global.user_name_default"
-    },
-    {
-      "type": "text_box",
-      "name": "text_box",
-      "parameter_list": "placeholder: @global.type_prompt",
-      "condition": "@local.user_name == @global.user_name_default"
     },
     {
       "type": "text",

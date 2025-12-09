@@ -229,7 +229,7 @@
     },
     {
       "name": "seven_days_ago",
-      "value": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
+      "value": "@calc(now() - (@fields.countdown_days * 24 * 60 * 60 * 1000))",
       "_translations": {
         "value": {}
       },
@@ -239,15 +239,24 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
-            "matchedExpression": "@calc(now() - (7 * 24 * 60 * 60 * 1000))",
+            "fullExpression": "@calc(now() - (@fields.countdown_days * 24 * 60 * 60 * 1000))",
+            "matchedExpression": "@fields.countdown_days",
+            "type": "fields",
+            "fieldName": "countdown_days"
+          },
+          {
+            "fullExpression": "@calc(now() - (@fields.countdown_days * 24 * 60 * 60 * 1000))",
+            "matchedExpression": "@calc(now() - (@fields.countdown_days * 24 * 60 * 60 * 1000))",
             "type": "calc",
-            "fieldName": "now() - (7 * 24 * 60 * 60 * 1000)"
+            "fieldName": "now() - (@fields.countdown_days * 24 * 60 * 60 * 1000)"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@calc(now() - (7 * 24 * 60 * 60 * 1000))": [
+        "@fields.countdown_days": [
+          "value"
+        ],
+        "@calc(now() - (@fields.countdown_days * 24 * 60 * 60 * 1000))": [
           "value"
         ]
       }
@@ -1953,7 +1962,7 @@
         }
       ],
       "parameter_list": {
-        "filter": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))"
+        "filter": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))"
       },
       "exclude_from_translation": true,
       "_nested_name": "follow_up_count_group",
@@ -1969,160 +1978,202 @@
         "parameter_list": {
           "filter": [
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.archived",
               "type": "item",
               "fieldName": "archived"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@item.group_id",
               "type": "item",
               "fieldName": "group_id"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@local.group_id",
               "type": "local",
               "fieldName": "group_id"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
+              "matchedExpression": "@item.no_follow_up",
+              "type": "item",
+              "fieldName": "no_follow_up"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
+              "matchedExpression": "@fields.maximum_follow_ups",
+              "type": "fields",
+              "fieldName": "maximum_follow_ups"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.last_follow_up",
               "type": "item",
               "fieldName": "last_follow_up"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@item.last_follow_up",
               "type": "item",
               "fieldName": "last_follow_up"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@local.seven_days_ago",
               "type": "local",
               "fieldName": "seven_days_ago"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@local.check_5_6",
               "type": "local",
               "fieldName": "check_5_6"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@item.group_id",
               "type": "item",
               "fieldName": "group_id"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_5",
               "type": "item",
               "fieldName": "week_5"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_6",
               "type": "item",
               "fieldName": "week_6"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
+              "matchedExpression": "@item.follow_up_week",
+              "type": "item",
+              "fieldName": "follow_up_week"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@local.check_4_5",
               "type": "local",
               "fieldName": "check_4_5"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@item.group_id",
               "type": "item",
               "fieldName": "group_id"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_4",
               "type": "item",
               "fieldName": "week_4"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_5",
               "type": "item",
               "fieldName": "week_5"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
+              "matchedExpression": "@item.follow_up_week",
+              "type": "item",
+              "fieldName": "follow_up_week"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@local.check_3_4",
               "type": "local",
               "fieldName": "check_3_4"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@item.group_id",
               "type": "item",
               "fieldName": "group_id"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_3",
               "type": "item",
               "fieldName": "week_3"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_4",
               "type": "item",
               "fieldName": "week_4"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
+              "matchedExpression": "@item.follow_up_week",
+              "type": "item",
+              "fieldName": "follow_up_week"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@local.check_2_3",
               "type": "local",
               "fieldName": "check_2_3"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@item.group_id",
               "type": "item",
               "fieldName": "group_id"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_2",
               "type": "item",
               "fieldName": "week_2"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_3",
               "type": "item",
               "fieldName": "week_3"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
+              "matchedExpression": "@item.follow_up_week",
+              "type": "item",
+              "fieldName": "follow_up_week"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@local.check_1_2",
               "type": "local",
               "fieldName": "check_1_2"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "@item.group_id",
               "type": "item",
               "fieldName": "group_id"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_1",
               "type": "item",
               "fieldName": "week_1"
             },
             {
-              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && ((!@item.last_follow_up) || (Number(@item.last_follow_up) < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2))",
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
               "matchedExpression": "!@item.week_2",
               "type": "item",
               "fieldName": "week_2"
+            },
+            {
+              "fullExpression": "!@item.archived && (@item.group_id == @local.group_id) && !(@item.no_follow_up >= @fields.maximum_follow_ups) && ((!@item.last_follow_up) || (new Date(@item.last_follow_up).getTime() || 0 < Number(@local.seven_days_ago))) && (([@local.check_5_6].includes(Number(@item.group_id)) && !@item.week_5 && !@item.week_6 && !(@item.follow_up_week >=6)) || ([@local.check_4_5].includes(Number(@item.group_id)) && !@item.week_4 && !@item.week_5  && !(@item.follow_up_week >= 5)) || ([@local.check_3_4].includes(Number(@item.group_id)) && !@item.week_3 && !@item.week_4 && !(@item.follow_up_week >= 4)) || ([@local.check_2_3].includes(Number(@item.group_id)) && !@item.week_2 && !@item.week_3 && !(@item.follow_up_week >= 3)) || ([@local.check_1_2].includes(Number(@item.group_id)) && !@item.week_1 && !@item.week_2 && !(@item.follow_up_week >= 2)))",
+              "matchedExpression": "@item.follow_up_week",
+              "type": "item",
+              "fieldName": "follow_up_week"
             }
           ]
         }
@@ -2145,6 +2196,12 @@
         "@local.group_id": [
           "parameter_list.filter"
         ],
+        "@item.no_follow_up": [
+          "parameter_list.filter"
+        ],
+        "@fields.maximum_follow_ups": [
+          "parameter_list.filter"
+        ],
         "!@item.last_follow_up": [
           "parameter_list.filter"
         ],
@@ -2162,6 +2219,13 @@
           "parameter_list.filter"
         ],
         "!@item.week_6": [
+          "parameter_list.filter"
+        ],
+        "@item.follow_up_week": [
+          "parameter_list.filter",
+          "parameter_list.filter",
+          "parameter_list.filter",
+          "parameter_list.filter",
           "parameter_list.filter"
         ],
         "@local.check_4_5": [
@@ -2241,12 +2305,10 @@
             "value": {}
           },
           "parameter_list": {
-            "text_align": "center",
             "style": "emphasised"
           },
           "style_list": [
-            "color: var(--ion-color-secondary-700)",
-            "flex:1"
+            "color: #B14674"
           ],
           "condition": "@local.no_pending_reports == 1",
           "exclude_from_translation": true,
@@ -2293,12 +2355,10 @@
             "value": {}
           },
           "parameter_list": {
-            "text_align": "center",
             "style": "emphasised"
           },
           "style_list": [
-            "color: var(--ion-color-secondary-700)",
-            "flex:1"
+            "color: #B14674"
           ],
           "condition": "@local.no_pending_reports > 1",
           "exclude_from_translation": true,
@@ -2345,12 +2405,10 @@
             "value": {}
           },
           "parameter_list": {
-            "text_align": "center",
             "style": "emphasised"
           },
           "style_list": [
-            "color: var(--ion-color-primary-700)",
-            "flex:1"
+            "color: #B14674"
           ],
           "condition": "@local.no_of_follow_ups == 1",
           "exclude_from_translation": true,
@@ -2397,12 +2455,10 @@
             "value": {}
           },
           "parameter_list": {
-            "text_align": "center",
             "style": "emphasised"
           },
           "style_list": [
-            "color: var(--ion-color-primary-700)",
-            "flex:1"
+            "color: #B14674"
           ],
           "condition": "@local.no_of_follow_ups > 1",
           "exclude_from_translation": true,

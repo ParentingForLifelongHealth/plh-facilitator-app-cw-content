@@ -301,6 +301,15 @@
                 },
                 {
                   "trigger": "click",
+                  "action_id": "set_field",
+                  "args": [
+                    "current_age_group",
+                    "@item.age_group"
+                  ],
+                  "_raw": "click | set_field: current_age_group: @item.age_group"
+                },
+                {
+                  "trigger": "click",
                   "action_id": "go_to",
                   "args": [
                     "view_parent_group"
@@ -607,6 +616,26 @@
                         "fieldName": "content_package"
                       }
                     ]
+                  },
+                  "4": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@item.age_group",
+                          "matchedExpression": "@item.age_group",
+                          "type": "item",
+                          "fieldName": "age_group"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | set_field: current_age_group: @item.age_group",
+                        "matchedExpression": "@item.age_group",
+                        "type": "item",
+                        "fieldName": "age_group"
+                      }
+                    ]
                   }
                 },
                 "condition": [
@@ -652,6 +681,10 @@
                 "@item.content_package": [
                   "action_list.3.args.1",
                   "action_list.3._raw"
+                ],
+                "@item.age_group": [
+                  "action_list.4.args.1",
+                  "action_list.4._raw"
                 ],
                 "!@item.archived": [
                   "condition"

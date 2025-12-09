@@ -438,113 +438,41 @@
       "_nested_name": "display_actions"
     },
     {
-      "type": "display_group",
+      "type": "tabs",
       "rows": [
         {
-          "type": "button",
+          "type": "tab",
           "value": "Actions",
-          "_translations": {
-            "value": {
-              "cw_pap": true
-            }
-          },
-          "action_list": [
+          "rows": [
             {
-              "trigger": "click",
-              "action_id": "set_local",
-              "args": [
-                "display_actions",
-                true
-              ],
-              "_raw": "click | set_local: display_actions : TRUE"
+              "type": "template",
+              "value": "group_actions",
+              "rows": [],
+              "name": "group_actions",
+              "_nested_name": "tabs_20.tab_1.group_actions"
             }
           ],
-          "parameter_list": {
-            "style": "alternative flexible"
-          },
-          "style_list": [
-            "flex:1"
-          ],
-          "name": "button_1",
-          "_nested_name": "display_group_20.button_1"
+          "name": "tab_1",
+          "_nested_name": "tabs_20.tab_1"
         },
         {
-          "type": "button",
-          "value": "Parents",
-          "_translations": {
-            "value": {
-              "cw_pap": true
-            }
-          },
-          "action_list": [
+          "type": "tab",
+          "value": "Caregivers",
+          "rows": [
             {
-              "trigger": "click",
-              "action_id": "set_local",
-              "args": [
-                "display_actions",
-                false
-              ],
-              "_raw": "click | set_local: display_actions : FALSE"
+              "type": "template",
+              "value": "parent_list",
+              "rows": [],
+              "name": "parent_list",
+              "_nested_name": "tabs_20.tab_2.parent_list"
             }
           ],
-          "parameter_list": {
-            "style": "alternative flexible"
-          },
-          "style_list": [
-            "flex:1"
-          ],
-          "name": "button_2",
-          "_nested_name": "display_group_20.button_2"
+          "name": "tab_2",
+          "_nested_name": "tabs_20.tab_2"
         }
       ],
-      "name": "display_group_20",
-      "_nested_name": "display_group_20"
-    },
-    {
-      "type": "template",
-      "value": "group_actions",
-      "condition": "!!@local.display_actions",
-      "rows": [],
-      "name": "group_actions",
-      "_nested_name": "group_actions",
-      "_dynamicFields": {
-        "condition": [
-          {
-            "fullExpression": "!!@local.display_actions",
-            "matchedExpression": "!@local.display_actions",
-            "type": "local",
-            "fieldName": "display_actions"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "!@local.display_actions": [
-          "condition"
-        ]
-      }
-    },
-    {
-      "type": "template",
-      "value": "parent_list",
-      "condition": "!@local.display_actions",
-      "rows": [],
-      "name": "parent_list",
-      "_nested_name": "parent_list",
-      "_dynamicFields": {
-        "condition": [
-          {
-            "fullExpression": "!@local.display_actions",
-            "matchedExpression": "!@local.display_actions",
-            "type": "local",
-            "fieldName": "display_actions"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "!@local.display_actions": [
-          "condition"
-        ]
-      }
+      "name": "tabs_20",
+      "_nested_name": "tabs_20"
     }
   ],
   "_source": {

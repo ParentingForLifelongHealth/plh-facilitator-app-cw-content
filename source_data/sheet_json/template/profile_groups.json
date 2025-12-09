@@ -69,7 +69,7 @@
     },
     {
       "type": "begin_display_group",
-      "action_list": "click | set_field: current_group_id: @item.id;\nclick | set_field: current_group_no: @item.name;\nclick | set_field: current_group_name: @item.text;\nclick | set_field: current_package: @item.content_package;\nclick | go_to: view_parent_group;",
+      "action_list": "click | set_field: current_group_id: @item.id;\nclick | set_field: current_group_no: @item.name;\nclick | set_field: current_group_name: @item.text;\nclick | set_field: current_package: @item.content_package;\nclick | set_field: current_age_group: @item.age_group;\nclick | go_to: view_parent_group;",
       "parameter_list": "style: column",
       "condition": "!@item.archived",
       "style_list": "border-bottom: 1px solid var(--ion-color-primary-100);\n"

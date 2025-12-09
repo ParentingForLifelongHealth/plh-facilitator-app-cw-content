@@ -27,6 +27,7 @@
       "week_5": false,
       "week_6": false,
       "no_follow_up": 0,
+      "follow_up_week": 0,
       "last_follow_up": "text_field"
     }
   ],
@@ -58,6 +59,9 @@
       "type": "boolean"
     },
     "no_follow_up": {
+      "type": "number"
+    },
+    "follow_up_week": {
       "type": "number"
     }
   }

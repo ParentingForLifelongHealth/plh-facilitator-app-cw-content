@@ -231,260 +231,177 @@
       }
     },
     {
-      "type": "combo_box",
+      "type": "radio_list",
       "name": "age_tag",
-      "parameter_list": {
-        "answer_list": "@data.tag_data"
-      },
-      "_nested_name": "age_tag",
-      "_dynamicFields": {
-        "parameter_list": {
-          "answer_list": [
-            {
-              "fullExpression": "@data.tag_data",
-              "matchedExpression": "@data.tag_data",
-              "type": "data",
-              "fieldName": "tag_data"
-            }
-          ]
+      "rows": [
+        {
+          "type": "data_items",
+          "value": "tag_data",
+          "rows": [],
+          "name": "data_items_1",
+          "_nested_name": "age_tag.data_items_1"
         }
-      },
-      "_dynamicDependencies": {
-        "@data.tag_data": [
-          "parameter_list.answer_list"
-        ]
-      }
+      ],
+      "_nested_name": "age_tag"
     },
     {
-      "type": "text",
-      "value": "@global.delivery_mode",
+      "name": "valid",
+      "value": "@local.text_box && @local.age_tag",
       "_translations": {
         "value": {}
       },
-      "name": "text_17",
-      "_nested_name": "text_17",
+      "type": "set_variable",
+      "_nested_name": "valid",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@global.delivery_mode",
-            "matchedExpression": "@global.delivery_mode",
-            "type": "global",
-            "fieldName": "delivery_mode"
+            "fullExpression": "@local.text_box && @local.age_tag",
+            "matchedExpression": "@local.text_box",
+            "type": "local",
+            "fieldName": "text_box"
+          },
+          {
+            "fullExpression": "@local.text_box && @local.age_tag",
+            "matchedExpression": "@local.age_tag",
+            "type": "local",
+            "fieldName": "age_tag"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@global.delivery_mode": [
+        "@local.text_box": [
+          "value"
+        ],
+        "@local.age_tag": [
           "value"
         ]
       }
-    },
-    {
-      "type": "combo_box",
-      "name": "delivery_tag",
-      "parameter_list": {
-        "answer_list": "@data.delivery_data"
-      },
-      "_nested_name": "delivery_tag",
-      "_dynamicFields": {
-        "parameter_list": {
-          "answer_list": [
-            {
-              "fullExpression": "@data.delivery_data",
-              "matchedExpression": "@data.delivery_data",
-              "type": "data",
-              "fieldName": "delivery_data"
-            }
-          ]
-        }
-      },
-      "_dynamicDependencies": {
-        "@data.delivery_data": [
-          "parameter_list.answer_list"
-        ]
-      }
-    },
-    {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_19",
-      "_nested_name": "set_variable_19"
-    },
-    {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_20",
-      "_nested_name": "set_variable_20"
-    },
-    {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_21",
-      "_nested_name": "set_variable_21"
     },
     {
       "type": "display_group",
       "parameter_list": {
         "sticky": "bottom"
       },
-      "style_list": [
-        "padding: 12px 24px"
-      ],
-      "exclude_from_translation": true,
       "rows": [
         {
-          "type": "template",
-          "name": "add_group_button",
-          "value": "add_group_button",
+          "type": "button",
+          "name": "continue",
+          "value": "Continue",
+          "_translations": {
+            "value": {
+              "cw_pap": true
+            }
+          },
           "action_list": [
             {
-              "trigger": "completed",
-              "action_id": "emit",
+              "trigger": "click",
+              "action_id": "set_field",
               "args": [
-                "completed"
+                "temporary_group_name",
+                "@local.text_box"
               ],
-              "_raw": "completed | emit: completed"
-            }
-          ],
-          "exclude_from_translation": true,
-          "rows": [
-            {
-              "name": "name",
-              "value": "@fields.current_group_no",
-              "_translations": {
-                "value": {}
-              },
-              "exclude_from_translation": true,
-              "type": "set_variable",
-              "_nested_name": "display_group_22.add_group_button.name",
-              "_dynamicFields": {
-                "value": [
-                  {
-                    "fullExpression": "@fields.current_group_no",
-                    "matchedExpression": "@fields.current_group_no",
-                    "type": "fields",
-                    "fieldName": "current_group_no"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@fields.current_group_no": [
-                  "value"
-                ]
-              }
+              "_raw": "click | set_field: temporary_group_name: @local.text_box"
             },
             {
-              "name": "text",
-              "value": "@local.text_box",
-              "_translations": {
-                "value": {}
-              },
-              "exclude_from_translation": true,
-              "type": "set_variable",
-              "_nested_name": "display_group_22.add_group_button.text",
-              "_dynamicFields": {
-                "value": [
+              "trigger": "click",
+              "action_id": "set_field",
+              "args": [
+                "temporary_age_group",
+                "@local.age_tag"
+              ],
+              "_raw": "click | set_field: temporary_age_group: @local.age_tag"
+            },
+            {
+              "trigger": "click",
+              "action_id": "go_to",
+              "args": [
+                "delivery_selection"
+              ],
+              "_raw": "click | go_to: delivery_selection"
+            }
+          ],
+          "parameter_list": {
+            "variant": "card",
+            "disabled": "!@local.valid"
+          },
+          "_nested_name": "display_group_19.continue",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "args": {
+                  "1": [
+                    {
+                      "fullExpression": "@local.text_box",
+                      "matchedExpression": "@local.text_box",
+                      "type": "local",
+                      "fieldName": "text_box"
+                    }
+                  ]
+                },
+                "_raw": [
                   {
-                    "fullExpression": "@local.text_box",
+                    "fullExpression": "click | set_field: temporary_group_name: @local.text_box",
                     "matchedExpression": "@local.text_box",
                     "type": "local",
                     "fieldName": "text_box"
                   }
                 ]
               },
-              "_dynamicDependencies": {
-                "@local.text_box": [
-                  "value"
-                ]
-              }
-            },
-            {
-              "name": "age_group",
-              "value": "@local.age_tag",
-              "_translations": {
-                "value": {}
-              },
-              "type": "set_variable",
-              "_nested_name": "display_group_22.add_group_button.age_group",
-              "_dynamicFields": {
-                "value": [
+              "1": {
+                "args": {
+                  "1": [
+                    {
+                      "fullExpression": "@local.age_tag",
+                      "matchedExpression": "@local.age_tag",
+                      "type": "local",
+                      "fieldName": "age_tag"
+                    }
+                  ]
+                },
+                "_raw": [
                   {
-                    "fullExpression": "@local.age_tag",
+                    "fullExpression": "click | set_field: temporary_age_group: @local.age_tag",
                     "matchedExpression": "@local.age_tag",
                     "type": "local",
                     "fieldName": "age_tag"
                   }
                 ]
-              },
-              "_dynamicDependencies": {
-                "@local.age_tag": [
-                  "value"
-                ]
               }
             },
-            {
-              "name": "delivery_type",
-              "value": "@local.delivery_tag",
-              "_translations": {
-                "value": {}
-              },
-              "type": "set_variable",
-              "_nested_name": "display_group_22.add_group_button.delivery_type",
-              "_dynamicFields": {
-                "value": [
-                  {
-                    "fullExpression": "@local.delivery_tag",
-                    "matchedExpression": "@local.delivery_tag",
-                    "type": "local",
-                    "fieldName": "delivery_tag"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@local.delivery_tag": [
-                  "value"
-                ]
-              }
-            },
-            {
-              "name": "content_package",
-              "value": "@local.age_tag@local.delivery_tag",
-              "_translations": {
-                "value": {}
-              },
-              "type": "set_variable",
-              "_nested_name": "display_group_22.add_group_button.content_package",
-              "_dynamicFields": {
-                "value": [
-                  {
-                    "fullExpression": "@local.age_tag@local.delivery_tag",
-                    "matchedExpression": "@local.age_tag",
-                    "type": "local",
-                    "fieldName": "age_tag"
-                  },
-                  {
-                    "fullExpression": "@local.age_tag@local.delivery_tag",
-                    "matchedExpression": "@local.delivery_tag",
-                    "type": "local",
-                    "fieldName": "delivery_tag"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@local.age_tag": [
-                  "value"
-                ],
-                "@local.delivery_tag": [
-                  "value"
-                ]
-              }
+            "parameter_list": {
+              "disabled": [
+                {
+                  "fullExpression": "!@local.valid",
+                  "matchedExpression": "!@local.valid",
+                  "type": "local",
+                  "fieldName": "valid"
+                }
+              ]
             }
-          ],
-          "_nested_name": "display_group_22.add_group_button"
+          },
+          "_dynamicDependencies": {
+            "@local.text_box": [
+              "action_list.0.args.1",
+              "action_list.0._raw"
+            ],
+            "@local.age_tag": [
+              "action_list.1.args.1",
+              "action_list.1._raw"
+            ],
+            "!@local.valid": [
+              "parameter_list.disabled"
+            ]
+          }
         }
       ],
-      "name": "display_group_22",
-      "_nested_name": "display_group_22"
+      "name": "display_group_19",
+      "_nested_name": "display_group_19"
+    },
+    {
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "name": "set_variable_21",
+      "_nested_name": "set_variable_21"
     }
   ],
   "_source": {

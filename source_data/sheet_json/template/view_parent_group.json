@@ -114,40 +114,38 @@
       "value": true
     },
     {
-      "type": "begin_display_group"
+      "type": "begin_tabs"
     },
     {
-      "type": "button",
-      "value": "Actions",
-      "action_list": "click | set_local: display_actions : TRUE;",
-      "parameter_list": "style: alternative flexible",
-      "style_list": "flex:1"
-    },
-    {
-      "type": "button",
-      "value": "Parents",
-      "action_list": "click | set_local: display_actions : FALSE;",
-      "parameter_list": "style: alternative flexible",
-      "style_list": "flex:1"
-    },
-    {
-      "type": "end_display_group"
+      "type": "begin_tab",
+      "value": "Actions"
     },
     {
       "type": "begin_template",
-      "value": "group_actions",
-      "condition": "!!@local.display_actions"
+      "value": "group_actions"
     },
     {
       "type": "end_template"
     },
     {
+      "type": "end_tab"
+    },
+    {
+      "type": "begin_tab",
+      "value": "Caregivers"
+    },
+    {
       "type": "begin_template",
-      "value": "parent_list",
-      "condition": "!@local.display_actions"
+      "value": "parent_list"
     },
     {
       "type": "end_template"
+    },
+    {
+      "type": "end_tab"
+    },
+    {
+      "type": "end_tabs"
     }
   ]
 }

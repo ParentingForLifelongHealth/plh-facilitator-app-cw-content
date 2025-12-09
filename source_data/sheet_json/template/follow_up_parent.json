@@ -4,6 +4,10 @@
   "status": "released",
   "rows": [
     {
+      "name": "show_group",
+      "value": true
+    },
+    {
       "name": "group_id"
     },
     {
@@ -22,6 +26,47 @@
     {
       "name": "new_followup_count",
       "value": "@calc(@local.no_follow_up + 1)"
+    },
+    {
+      "name": "one_two_list"
+    },
+    {
+      "name": "two_three_list"
+    },
+    {
+      "name": "three_four_list"
+    },
+    {
+      "name": "four_five_list"
+    },
+    {
+      "name": "five_six_list"
+    },
+    {
+      "name": "last_week",
+      "value": 2,
+      "condition": "@calc(@local.one_two_list.includes(@local.group_id))",
+      "comments": "@calc(@local.three_four_list.includes(Number(@local.group_id)) || @local.three_four_list.includes(\"@local.group_id\"))"
+    },
+    {
+      "name": "last_week",
+      "value": 3,
+      "condition": "@calc(@local.two_three_list.includes(@local.group_id))"
+    },
+    {
+      "name": "last_week",
+      "value": 4,
+      "condition": "@calc(@local.three_four_list.includes(@local.group_id))"
+    },
+    {
+      "name": "last_week",
+      "value": 5,
+      "condition": "@calc(@local.four_five_list.includes(@local.group_id))"
+    },
+    {
+      "name": "last_week",
+      "value": 6,
+      "condition": "@calc(@local.five_six_list.includes(@local.group_id))"
     },
     {
       "type": "begin_display_group",
@@ -47,6 +92,7 @@
       "type": "begin_data_items",
       "value": "@data.parent_groups",
       "parameter_list": "filter: @local.group_id == @item.name",
+      "condition": "@local.show_group",
       "comments": "Looks for the name of the parent group"
     },
     {
@@ -72,7 +118,7 @@
       "type": "button",
       "name": "submit_button",
       "value": "Followed up",
-      "action_list": "click | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now()),\nno_follow_up: @local.new_followup_count;"
+      "action_list": "click | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now()),\nno_follow_up: @local.new_followup_count,\nfollow_up_week: @local.last_week;"
     },
     {
       "type": "end_display_group"
@@ -82,27 +128,30 @@
     },
     {
       "type": "button",
-      "value": "<u>How to follow up</u>",
+      "value": "<u>@global.how_to_follow_up</u>",
       "action_list": "click | go_to: library_article_follow_up_1;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -36px; margin-left: -22px;",
-      "condition": "@local.new_followup_count == 1"
+      "style_list": "margin-top: -30px; margin-left: -22px;",
+      "condition": "@local.new_followup_count == 1",
+      "exclude_from_translation": true
     },
     {
       "type": "button",
-      "value": "<u>How to follow up</u>",
+      "value": "<u>@global.how_to_follow_up</u>",
       "action_list": "click | go_to: library_article_follow_up_2;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -36px; margin-left: -22px;",
-      "condition": "@local.new_followup_count == 2"
+      "style_list": "margin-top: -30px; margin-left: -22px;",
+      "condition": "@local.new_followup_count == 2",
+      "exclude_from_translation": true
     },
     {
       "type": "button",
-      "value": "<u>How to follow up</u>",
+      "value": "<u>@global.how_to_follow_up</u>",
       "action_list": "click | go_to: library_article_follow_up_3;",
       "parameter_list": "variant: card; style: no-background short;",
-      "style_list": "margin-top: -36px; margin-left: -22px;",
-      "condition": "@local.new_followup_count == 3"
+      "style_list": "margin-top: -30px; margin-left: -22px;",
+      "condition": "@local.new_followup_count == 3",
+      "exclude_from_translation": true
     },
     {
       "type": "text",
