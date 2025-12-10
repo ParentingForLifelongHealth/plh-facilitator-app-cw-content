@@ -87,7 +87,7 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 101786 KB | 101.8 MB |
+| total | 101697 KB | 101.7 MB |
 | unused | 9659 KB | 9.7 MB |
 </details>
 
@@ -238,9 +238,9 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/visibility.svg | 0.5 | 1 |
 | images/logos/MK_whitewithcolor.png | 7376.2 | 1 |
 | images/logos/PLH.png | 33.9 | 1 |
-| images/logos/SOAW_PAP.jpg | 172.7 | 1 |
+| images/logos/SOAW_PAP.jpg | 150.8 | 1 |
 | images/logos/UNICEF_Netherlands_PAP.png | 252.8 | 1 |
-| images/logos/favicon.png | 93.8 | 1 |
+| images/logos/favicon.png | 26.2 | 1 |
 | images/modules/chat.png | 1669 | 9 |
 | images/modules/module_1_teen.png | 4666.2 | 4 |
 | images/modules/module_1_yc.png | 5450.7 | 2 |
