@@ -72,6 +72,7 @@
     {
       "type": "text",
       "value": "@global.age_group",
+      "parameter_list": "style: emphasised",
       "exclude_from_translation": true
     },
     {
@@ -94,7 +95,8 @@
     },
     {
       "type": "begin_display_group",
-      "parameter_list": "sticky: bottom;"
+      "parameter_list": "sticky: bottom;",
+      "style_list": "padding: 12px 24px;"
     },
     {
       "type": "button",
