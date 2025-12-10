@@ -26,12 +26,17 @@
     {
       "type": "declare_global_constant",
       "name": "age_group",
-      "value": "Age Group"
+      "value": "This caregiver group supports parents of children ages:"
     },
     {
       "type": "declare_global_constant",
       "name": "delivery_mode",
-      "value": "Mode of Delivery"
+      "value": "How will you deliver your sessions?"
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "delivery_mode_subtext",
+      "value": "If you're not sure, please ask your supervisor or trainer."
     },
     {
       "type": "declare_global_constant",

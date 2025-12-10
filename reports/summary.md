@@ -30,7 +30,7 @@
 | round_button | 38 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1136 |
+| set_variable | 1138 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -38,9 +38,9 @@
 | task_progress_bar | 4 |
 | template | 166 |
 | test | 1 |
-| text | 386 |
+| text | 388 |
 | text_area | 4 |
-| text_box | 31 |
+| text_box | 32 |
 | title | 72 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
@@ -87,8 +87,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 101526 KB | 101.5 MB |
-| unused | 9832 KB | 9.8 MB |
+| total | 101786 KB | 101.8 MB |
+| unused | 9659 KB | 9.7 MB |
 </details>
 
 <details open>
@@ -160,7 +160,6 @@ Assets that appear in app-data but do not have references within sheets
 | images/logos/IDEMS.png | 84.6 |
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
-| images/logos/SOAW_PAP.JPG | 172.7 |
 | images/logos/UNICEF.jpg | 27.7 |
 | pdf/module_1_core_lesson_teen_pap.pdf | 393.1 |
 </details>
@@ -174,10 +173,8 @@ Assets that have references within sheets but do not appear in app-data
 | --- | --- |
 | .png | 1 |
 | @data.pdf | 3 |
-| images/logos/SOAW_PAP.jpg | 1 |
 | images/logos/app_logo.png | 1 |
 | images/logos/bird_white.svg | 1 |
-| images/logos/favicon.png | 1 |
 | images/logos/plh_logomark.png | 1 |
 | images/no_group_selected.svg | 1 |
 | pdf/modile_1_core_lesson_teen_pap.pdf | 1 |
@@ -240,8 +237,10 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/verified.svg | 0.5 | 5 |
 | images/icons/visibility.svg | 0.5 | 1 |
 | images/logos/MK_whitewithcolor.png | 7376.2 | 1 |
-| images/logos/PLH.png | 40.3 | 1 |
+| images/logos/PLH.png | 33.9 | 1 |
+| images/logos/SOAW_PAP.jpg | 172.7 | 1 |
 | images/logos/UNICEF_Netherlands_PAP.png | 252.8 | 1 |
+| images/logos/favicon.png | 93.8 | 1 |
 | images/modules/chat.png | 1669 | 9 |
 | images/modules/module_1_teen.png | 4666.2 | 4 |
 | images/modules/module_1_yc.png | 5450.7 | 2 |
