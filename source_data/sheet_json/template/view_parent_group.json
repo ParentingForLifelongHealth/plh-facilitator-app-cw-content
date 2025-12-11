@@ -114,38 +114,42 @@
       "value": true
     },
     {
-      "type": "begin_tabs"
+      "comments": "begin_tabs"
     },
     {
-      "type": "begin_tab",
-      "value": "Actions"
-    },
-    {
-      "type": "begin_template",
-      "value": "group_actions"
-    },
-    {
-      "type": "end_template"
-    },
-    {
-      "type": "end_tab"
-    },
-    {
-      "type": "begin_tab",
-      "value": "Caregivers"
+      "value": "Actions",
+      "comments": "begin_tab"
     },
     {
       "type": "begin_template",
-      "value": "parent_list"
+      "value": "group_actions",
+      "comments": "begin_template"
     },
     {
-      "type": "end_template"
+      "type": "end_template",
+      "comments": "end_template"
     },
     {
-      "type": "end_tab"
+      "comments": "end_tab"
     },
     {
-      "type": "end_tabs"
+      "value": "Caregivers",
+      "comments": "begin_tab"
+    },
+    {
+      "type": "begin_template",
+      "value": "parent_list",
+      "comments": "begin_template"
+    },
+    {
+      "type": "end_template",
+      "comments": "end_template"
+    },
+    {
+      "comments": "end_tab"
+    },
+    {
+      "comments": "end_tabs"
     }
   ]
 }

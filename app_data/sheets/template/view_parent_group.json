@@ -438,41 +438,38 @@
       "_nested_name": "display_actions"
     },
     {
-      "type": "tabs",
-      "rows": [
-        {
-          "type": "tab",
-          "value": "Actions",
-          "rows": [
-            {
-              "type": "template",
-              "value": "group_actions",
-              "rows": [],
-              "name": "group_actions",
-              "_nested_name": "tabs_20.tab_1.group_actions"
-            }
-          ],
-          "name": "tab_1",
-          "_nested_name": "tabs_20.tab_1"
-        },
-        {
-          "type": "tab",
-          "value": "Caregivers",
-          "rows": [
-            {
-              "type": "template",
-              "value": "parent_list",
-              "rows": [],
-              "name": "parent_list",
-              "_nested_name": "tabs_20.tab_2.parent_list"
-            }
-          ],
-          "name": "tab_2",
-          "_nested_name": "tabs_20.tab_2"
+      "value": "Actions",
+      "_translations": {
+        "value": {
+          "cw_pap": true
         }
-      ],
-      "name": "tabs_20",
-      "_nested_name": "tabs_20"
+      },
+      "type": "set_variable",
+      "name": "set_variable_21",
+      "_nested_name": "set_variable_21"
+    },
+    {
+      "type": "template",
+      "value": "group_actions",
+      "rows": [],
+      "name": "group_actions",
+      "_nested_name": "group_actions"
+    },
+    {
+      "value": "Caregivers",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "name": "set_variable_25",
+      "_nested_name": "set_variable_25"
+    },
+    {
+      "type": "template",
+      "value": "parent_list",
+      "rows": [],
+      "name": "parent_list",
+      "_nested_name": "parent_list"
     }
   ],
   "_source": {
