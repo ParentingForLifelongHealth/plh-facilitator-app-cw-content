@@ -29,8 +29,12 @@
     {
       "type": "text",
       "name": "test",
-      "value": "fields._auth_user_given_name = @fields._auth_user_given_name",
-      "condition": false
+      "value": "fields._auth_user_name = @fields._auth_user_name"
+    },
+    {
+      "type": "text",
+      "name": "test",
+      "value": "fields._auth_user_given_name = @fields._auth_user_given_name"
     },
     {
       "name": "user_name",
