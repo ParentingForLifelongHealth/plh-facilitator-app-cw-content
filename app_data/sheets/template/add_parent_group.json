@@ -211,6 +211,9 @@
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "style": "emphasised"
+      },
       "exclude_from_translation": true,
       "name": "text_15",
       "_nested_name": "text_15",
@@ -282,6 +285,9 @@
       "parameter_list": {
         "sticky": "bottom"
       },
+      "style_list": [
+        "padding: 12px 24px"
+      ],
       "rows": [
         {
           "type": "button",

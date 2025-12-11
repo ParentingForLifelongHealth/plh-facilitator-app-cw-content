@@ -27,13 +27,21 @@
       "value": "@global.user_name_question"
     },
     {
+      "type": "text",
+      "name": "test",
+      "value": "fields._auth_user_given_name = @fields._auth_user_given_name",
+      "condition": false
+    },
+    {
       "name": "user_name",
-      "value": "@fields._auth_user_given_name",
+      "value": "@fields.name_from_login",
+      "condition": false,
       "comments": "!@fields.user_name"
     },
     {
       "name": "user_name",
       "value": "@fields.user_name",
+      "condition": false,
       "comments": "!!@fields.user_name"
     },
     {
@@ -41,7 +49,24 @@
       "name": "text_box",
       "value": "@local.user_name",
       "parameter_list": "placeholder: @global.type_prompt",
-      "condition": "@local.user_name != @global.user_name_default"
+      "condition": false,
+      "comments": "@local.user_name != @global.user_name_default"
+    },
+    {
+      "name": "user_name",
+      "value": "@fields._auth_user_name",
+      "condition": "!@fields.user_name"
+    },
+    {
+      "name": "user_name",
+      "value": "@fields.user_name",
+      "condition": "!!@fields.user_name"
+    },
+    {
+      "type": "text_box",
+      "name": "tex_box",
+      "value": "@local.user_name",
+      "parameter_list": "placeholder: @global.type_prompt"
     },
     {
       "type": "text",
