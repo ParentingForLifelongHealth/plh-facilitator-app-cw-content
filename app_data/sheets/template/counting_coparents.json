@@ -51,14 +51,10 @@
       "_nested_name": "others"
     },
     {
-      "name": "space",
-      "value": "",
-      "_translations": {
-        "value": {}
-      },
       "exclude_from_translation": true,
       "type": "set_variable",
-      "_nested_name": "space"
+      "name": "set_variable_9",
+      "_nested_name": "set_variable_9"
     },
     {
       "type": "data_items",
@@ -67,6 +63,24 @@
         "value": {}
       },
       "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "first_name",
+            "@items[0].first_name"
+          ],
+          "_raw": "data_changed | set_local : first_name: @items[0].first_name"
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "last_name",
+            "@items[0].last_name"
+          ],
+          "_raw": "data_changed | set_local : last_name: @items[0].last_name"
+        },
         {
           "trigger": "data_changed",
           "action_id": "set_local",
@@ -80,6 +94,7 @@
       "parameter_list": {
         "filter": "!@item.archived && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')"
       },
+      "condition": "(@local.co_parent_id_template !== 'empty')",
       "name": "data_items_10",
       "_nested_name": "data_items_10",
       "_dynamicFields": {
@@ -130,7 +145,15 @@
               "fieldName": "co_parent_id"
             }
           ]
-        }
+        },
+        "condition": [
+          {
+            "fullExpression": "(@local.co_parent_id_template !== 'empty')",
+            "matchedExpression": "@local.co_parent_id_template",
+            "type": "local",
+            "fieldName": "co_parent_id_template"
+          }
+        ]
       },
       "_dynamicDependencies": {
         "@data.parents": [
@@ -144,7 +167,8 @@
           "parameter_list.filter"
         ],
         "@local.co_parent_id_template": [
-          "parameter_list.filter"
+          "parameter_list.filter",
+          "condition"
         ],
         "@item.id": [
           "parameter_list.filter"
@@ -157,7 +181,7 @@
     {
       "type": "text",
       "name": "coparenting_with",
-      "value": "@local.caregiving_with@local.first_name@local.space@local.last_name",
+      "value": "@local.caregiving_with @local.first_name @local.last_name",
       "_translations": {
         "value": {}
       },
@@ -167,32 +191,35 @@
         "margin-bottom: 12px",
         "font-size: 14px"
       ],
+      "condition": "@local.number_of_coparents == 1",
       "_nested_name": "coparenting_with",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@local.caregiving_with@local.first_name@local.space@local.last_name",
+            "fullExpression": "@local.caregiving_with @local.first_name @local.last_name",
             "matchedExpression": "@local.caregiving_with",
             "type": "local",
             "fieldName": "caregiving_with"
           },
           {
-            "fullExpression": "@local.caregiving_with@local.first_name@local.space@local.last_name",
+            "fullExpression": "@local.caregiving_with @local.first_name @local.last_name",
             "matchedExpression": "@local.first_name",
             "type": "local",
             "fieldName": "first_name"
           },
           {
-            "fullExpression": "@local.caregiving_with@local.first_name@local.space@local.last_name",
-            "matchedExpression": "@local.space",
-            "type": "local",
-            "fieldName": "space"
-          },
-          {
-            "fullExpression": "@local.caregiving_with@local.first_name@local.space@local.last_name",
+            "fullExpression": "@local.caregiving_with @local.first_name @local.last_name",
             "matchedExpression": "@local.last_name",
             "type": "local",
             "fieldName": "last_name"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.number_of_coparents == 1",
+            "matchedExpression": "@local.number_of_coparents",
+            "type": "local",
+            "fieldName": "number_of_coparents"
           }
         ]
       },
@@ -203,18 +230,18 @@
         "@local.first_name": [
           "value"
         ],
-        "@local.space": [
-          "value"
-        ],
         "@local.last_name": [
           "value"
+        ],
+        "@local.number_of_coparents": [
+          "condition"
         ]
       }
     },
     {
       "type": "text",
       "name": "coparenting_with",
-      "value": "@local.caregiving_with@local.number_of_coparents@local.others",
+      "value": "@local.caregiving_with @local.number_of_coparents @local.others",
       "_translations": {
         "value": {}
       },
@@ -224,27 +251,35 @@
         "margin-bottom: 12px",
         "font-size: 14px"
       ],
-      "condition": false,
+      "condition": "@local.number_of_coparents > 1",
       "_nested_name": "coparenting_with",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@local.caregiving_with@local.number_of_coparents@local.others",
+            "fullExpression": "@local.caregiving_with @local.number_of_coparents @local.others",
             "matchedExpression": "@local.caregiving_with",
             "type": "local",
             "fieldName": "caregiving_with"
           },
           {
-            "fullExpression": "@local.caregiving_with@local.number_of_coparents@local.others",
+            "fullExpression": "@local.caregiving_with @local.number_of_coparents @local.others",
             "matchedExpression": "@local.number_of_coparents",
             "type": "local",
             "fieldName": "number_of_coparents"
           },
           {
-            "fullExpression": "@local.caregiving_with@local.number_of_coparents@local.others",
+            "fullExpression": "@local.caregiving_with @local.number_of_coparents @local.others",
             "matchedExpression": "@local.others",
             "type": "local",
             "fieldName": "others"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.number_of_coparents > 1",
+            "matchedExpression": "@local.number_of_coparents",
+            "type": "local",
+            "fieldName": "number_of_coparents"
           }
         ]
       },
@@ -253,7 +288,8 @@
           "value"
         ],
         "@local.number_of_coparents": [
-          "value"
+          "value",
+          "condition"
         ],
         "@local.others": [
           "value"
