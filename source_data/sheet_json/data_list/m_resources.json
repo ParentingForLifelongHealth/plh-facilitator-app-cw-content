@@ -3,5 +3,10 @@
   "flow_name": "m_resources",
   "status": "released",
   "data_list_name": "m_resources",
-  "rows": []
+  "rows": [
+    {
+      "id": "test",
+      "foreign_key": "test"
+    }
+  ]
 }
