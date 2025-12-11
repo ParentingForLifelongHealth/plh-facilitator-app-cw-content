@@ -30,7 +30,7 @@
 | round_button | 38 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1138 |
+| set_variable | 1141 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -76,7 +76,7 @@
 | set_data | 29 |
 | set_field | 93 |
 | set_item | 13 |
-| set_local | 138 |
+| set_local | 136 |
 | share | 4 |
 | toast | 1 |
 | user | 4 |
