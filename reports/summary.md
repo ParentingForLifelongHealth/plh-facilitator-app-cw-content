@@ -76,7 +76,7 @@
 | set_data | 29 |
 | set_field | 93 |
 | set_item | 13 |
-| set_local | 136 |
+| set_local | 138 |
 | share | 4 |
 | toast | 1 |
 | user | 4 |
