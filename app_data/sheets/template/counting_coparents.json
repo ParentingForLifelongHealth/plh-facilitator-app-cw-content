@@ -14,19 +14,51 @@
       "_nested_name": "this_parent_id_template"
     },
     {
-      "name": "fn",
+      "name": "first_name",
       "type": "set_variable",
-      "_nested_name": "fn"
+      "_nested_name": "first_name"
     },
     {
-      "name": "ln",
+      "name": "last_name",
       "type": "set_variable",
-      "_nested_name": "ln"
+      "_nested_name": "last_name"
     },
     {
       "name": "number_of_coparents",
       "type": "set_variable",
       "_nested_name": "number_of_coparents"
+    },
+    {
+      "name": "caregiving_with",
+      "value": "Caregiving with",
+      "_translations": {
+        "value": {
+          "cw_pap": true
+        }
+      },
+      "exclude_from_translation": false,
+      "type": "set_variable",
+      "_nested_name": "caregiving_with"
+    },
+    {
+      "name": "others",
+      "value": "others",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": false,
+      "type": "set_variable",
+      "_nested_name": "others"
+    },
+    {
+      "name": "space",
+      "value": "",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true,
+      "type": "set_variable",
+      "_nested_name": "space"
     },
     {
       "type": "data_items",
@@ -43,31 +75,13 @@
             "@items.length"
           ],
           "_raw": "data_changed | set_local : number_of_coparents: @items.length"
-        },
-        {
-          "trigger": "data_changed",
-          "action_id": "set_local",
-          "args": [
-            "fn",
-            "@items[0].first_name"
-          ],
-          "_raw": "data_changed | set_local : fn: @items[0].first_name"
-        },
-        {
-          "trigger": "data_changed",
-          "action_id": "set_local",
-          "args": [
-            "ln",
-            "@items[0].last_name"
-          ],
-          "_raw": "data_changed | set_local : ln: @items[0].last_name"
         }
       ],
       "parameter_list": {
-        "filter": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')"
+        "filter": "!@item.archived && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')"
       },
-      "name": "data_items_7",
-      "_nested_name": "data_items_7",
+      "name": "data_items_10",
+      "_nested_name": "data_items_10",
       "_dynamicFields": {
         "value": [
           {
@@ -80,37 +94,37 @@
         "parameter_list": {
           "filter": [
             {
-              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
-              "matchedExpression": "@item.archived",
+              "fullExpression": "!@item.archived && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "matchedExpression": "!@item.archived",
               "type": "item",
               "fieldName": "archived"
             },
             {
-              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "fullExpression": "!@item.archived && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
               "matchedExpression": "@item.co_parent_id",
               "type": "item",
               "fieldName": "co_parent_id"
             },
             {
-              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "fullExpression": "!@item.archived && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
               "matchedExpression": "@local.co_parent_id_template",
               "type": "local",
               "fieldName": "co_parent_id_template"
             },
             {
-              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "fullExpression": "!@item.archived && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
               "matchedExpression": "@item.id",
               "type": "item",
               "fieldName": "id"
             },
             {
-              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "fullExpression": "!@item.archived && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
               "matchedExpression": "@local.this_parent_id_template",
               "type": "local",
               "fieldName": "this_parent_id_template"
             },
             {
-              "fullExpression": "(@item.archived == false) && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
+              "fullExpression": "!@item.archived && (@item.co_parent_id == @local.co_parent_id_template) && !(@item.id == @local.this_parent_id_template) && !(@item.co_parent_id == 'empty')",
               "matchedExpression": "@item.co_parent_id",
               "type": "item",
               "fieldName": "co_parent_id"
@@ -122,7 +136,7 @@
         "@data.parents": [
           "value"
         ],
-        "@item.archived": [
+        "!@item.archived": [
           "parameter_list.filter"
         ],
         "@item.co_parent_id": [
@@ -143,11 +157,9 @@
     {
       "type": "text",
       "name": "coparenting_with",
-      "value": "Caregiving with @local.fn @local.ln",
+      "value": "@local.caregiving_with@local.first_name@local.space@local.last_name",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "style_list": [
         "color: gray",
@@ -155,52 +167,56 @@
         "margin-bottom: 12px",
         "font-size: 14px"
       ],
-      "condition": "@local.number_of_coparents == 1",
       "_nested_name": "coparenting_with",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "Caregiving with @local.fn @local.ln",
-            "matchedExpression": "@local.fn",
+            "fullExpression": "@local.caregiving_with@local.first_name@local.space@local.last_name",
+            "matchedExpression": "@local.caregiving_with",
             "type": "local",
-            "fieldName": "fn"
+            "fieldName": "caregiving_with"
           },
           {
-            "fullExpression": "Caregiving with @local.fn @local.ln",
-            "matchedExpression": "@local.ln",
+            "fullExpression": "@local.caregiving_with@local.first_name@local.space@local.last_name",
+            "matchedExpression": "@local.first_name",
             "type": "local",
-            "fieldName": "ln"
-          }
-        ],
-        "condition": [
+            "fieldName": "first_name"
+          },
           {
-            "fullExpression": "@local.number_of_coparents == 1",
-            "matchedExpression": "@local.number_of_coparents",
+            "fullExpression": "@local.caregiving_with@local.first_name@local.space@local.last_name",
+            "matchedExpression": "@local.space",
             "type": "local",
-            "fieldName": "number_of_coparents"
+            "fieldName": "space"
+          },
+          {
+            "fullExpression": "@local.caregiving_with@local.first_name@local.space@local.last_name",
+            "matchedExpression": "@local.last_name",
+            "type": "local",
+            "fieldName": "last_name"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@local.fn": [
+        "@local.caregiving_with": [
           "value"
         ],
-        "@local.ln": [
+        "@local.first_name": [
           "value"
         ],
-        "@local.number_of_coparents": [
-          "condition"
+        "@local.space": [
+          "value"
+        ],
+        "@local.last_name": [
+          "value"
         ]
       }
     },
     {
       "type": "text",
       "name": "coparenting_with",
-      "value": "Caregiving with @local.number_of_coparents others",
+      "value": "@local.caregiving_with@local.number_of_coparents@local.others",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "style_list": [
         "color: gray",
@@ -208,30 +224,39 @@
         "margin-bottom: 12px",
         "font-size: 14px"
       ],
-      "condition": "@local.number_of_coparents > 1",
+      "condition": false,
       "_nested_name": "coparenting_with",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "Caregiving with @local.number_of_coparents others",
-            "matchedExpression": "@local.number_of_coparents",
+            "fullExpression": "@local.caregiving_with@local.number_of_coparents@local.others",
+            "matchedExpression": "@local.caregiving_with",
             "type": "local",
-            "fieldName": "number_of_coparents"
-          }
-        ],
-        "condition": [
+            "fieldName": "caregiving_with"
+          },
           {
-            "fullExpression": "@local.number_of_coparents > 1",
+            "fullExpression": "@local.caregiving_with@local.number_of_coparents@local.others",
             "matchedExpression": "@local.number_of_coparents",
             "type": "local",
             "fieldName": "number_of_coparents"
+          },
+          {
+            "fullExpression": "@local.caregiving_with@local.number_of_coparents@local.others",
+            "matchedExpression": "@local.others",
+            "type": "local",
+            "fieldName": "others"
           }
         ]
       },
       "_dynamicDependencies": {
+        "@local.caregiving_with": [
+          "value"
+        ],
         "@local.number_of_coparents": [
-          "value",
-          "condition"
+          "value"
+        ],
+        "@local.others": [
+          "value"
         ]
       }
     },
