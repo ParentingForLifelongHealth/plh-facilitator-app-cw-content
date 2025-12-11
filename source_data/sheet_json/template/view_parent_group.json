@@ -96,7 +96,8 @@
     {
       "type": "begin_template",
       "value": "module_progress",
-      "style_list": "margin-top: -25px;"
+      "style_list": "margin-top: -25px;",
+      "condition": false
     },
     {
       "name": "group_id",
@@ -122,7 +123,8 @@
     },
     {
       "type": "begin_template",
-      "value": "group_actions"
+      "value": "group_actions",
+      "condition": false
     },
     {
       "type": "end_template"
@@ -136,7 +138,8 @@
     },
     {
       "type": "begin_template",
-      "value": "parent_list"
+      "value": "parent_list",
+      "condition": false
     },
     {
       "type": "end_template"

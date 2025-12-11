@@ -47,6 +47,12 @@
       "parameter_list": "filter: @item.archived"
     },
     {
+      "type": "title",
+      "name": "group_desc",
+      "value": "@global.active_group_title",
+      "exclude_from_translation": false
+    },
+    {
       "type": "text",
       "value": "🚀 Once you create a parent group, it will appear here.",
       "condition": "(@local.groups_count == 0) && (@local.groups_count_closed == 0)"
@@ -55,12 +61,6 @@
       "type": "begin_display_group",
       "parameter_list": "style: column",
       "condition": "@local.groups_count !== 0"
-    },
-    {
-      "type": "title",
-      "name": "group_desc",
-      "value": "@global.active_group_title",
-      "exclude_from_translation": false
     },
     {
       "type": "begin_data_items",
