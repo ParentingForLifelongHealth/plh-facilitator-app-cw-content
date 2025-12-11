@@ -67,11 +67,34 @@
     {
       "type": "text",
       "name": "test",
+      "value": "fields._auth_user_name = @fields._auth_user_name",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "test",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "fields._auth_user_name = @fields._auth_user_name",
+            "matchedExpression": "@fields._auth_user_name",
+            "type": "fields",
+            "fieldName": "_auth_user_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@fields._auth_user_name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "test",
       "value": "fields._auth_user_given_name = @fields._auth_user_given_name",
       "_translations": {
         "value": {}
       },
-      "condition": false,
       "_nested_name": "test",
       "_dynamicFields": {
         "value": [
