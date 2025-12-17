@@ -116,102 +116,11 @@
     },
     {
       "name": "user_name",
-      "value": "@fields.name_from_login",
-      "_translations": {
-        "value": {}
-      },
-      "condition": false,
-      "type": "set_variable",
-      "_nested_name": "user_name",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@fields.name_from_login",
-            "matchedExpression": "@fields.name_from_login",
-            "type": "fields",
-            "fieldName": "name_from_login"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@fields.name_from_login": [
-          "value"
-        ]
-      }
-    },
-    {
-      "name": "user_name",
-      "value": "@fields.user_name",
-      "_translations": {
-        "value": {}
-      },
-      "condition": false,
-      "type": "set_variable",
-      "_nested_name": "user_name",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@fields.user_name",
-            "matchedExpression": "@fields.user_name",
-            "type": "fields",
-            "fieldName": "user_name"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@fields.user_name": [
-          "value"
-        ]
-      }
-    },
-    {
-      "type": "text_box",
-      "name": "text_box",
-      "value": "@local.user_name",
-      "_translations": {
-        "value": {}
-      },
-      "parameter_list": {
-        "placeholder": "@global.type_prompt"
-      },
-      "condition": false,
-      "_nested_name": "text_box",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@local.user_name",
-            "matchedExpression": "@local.user_name",
-            "type": "local",
-            "fieldName": "user_name"
-          }
-        ],
-        "parameter_list": {
-          "placeholder": [
-            {
-              "fullExpression": "@global.type_prompt",
-              "matchedExpression": "@global.type_prompt",
-              "type": "global",
-              "fieldName": "type_prompt"
-            }
-          ]
-        }
-      },
-      "_dynamicDependencies": {
-        "@local.user_name": [
-          "value"
-        ],
-        "@global.type_prompt": [
-          "parameter_list.placeholder"
-        ]
-      }
-    },
-    {
-      "name": "user_name",
       "value": "@fields._auth_user_name",
       "_translations": {
         "value": {}
       },
-      "condition": "!@fields.user_name",
+      "condition": "!@fields.user_name_edited",
       "type": "set_variable",
       "_nested_name": "user_name",
       "_dynamicFields": {
@@ -225,10 +134,10 @@
         ],
         "condition": [
           {
-            "fullExpression": "!@fields.user_name",
-            "matchedExpression": "!@fields.user_name",
+            "fullExpression": "!@fields.user_name_edited",
+            "matchedExpression": "!@fields.user_name_edited",
             "type": "fields",
-            "fieldName": "user_name"
+            "fieldName": "user_name_edited"
           }
         ]
       },
@@ -236,50 +145,50 @@
         "@fields._auth_user_name": [
           "value"
         ],
-        "!@fields.user_name": [
+        "!@fields.user_name_edited": [
           "condition"
         ]
       }
     },
     {
       "name": "user_name",
-      "value": "@fields.user_name",
+      "value": "@fields.user_name_edited",
       "_translations": {
         "value": {}
       },
-      "condition": "!!@fields.user_name",
+      "condition": "!!@fields.user_name_edited",
       "type": "set_variable",
       "_nested_name": "user_name",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@fields.user_name",
-            "matchedExpression": "@fields.user_name",
+            "fullExpression": "@fields.user_name_edited",
+            "matchedExpression": "@fields.user_name_edited",
             "type": "fields",
-            "fieldName": "user_name"
+            "fieldName": "user_name_edited"
           }
         ],
         "condition": [
           {
-            "fullExpression": "!!@fields.user_name",
-            "matchedExpression": "!@fields.user_name",
+            "fullExpression": "!!@fields.user_name_edited",
+            "matchedExpression": "!@fields.user_name_edited",
             "type": "fields",
-            "fieldName": "user_name"
+            "fieldName": "user_name_edited"
           }
         ]
       },
       "_dynamicDependencies": {
-        "@fields.user_name": [
+        "@fields.user_name_edited": [
           "value"
         ],
-        "!@fields.user_name": [
+        "!@fields.user_name_edited": [
           "condition"
         ]
       }
     },
     {
       "type": "text_box",
-      "name": "tex_box",
+      "name": "text_box",
       "value": "@local.user_name",
       "_translations": {
         "value": {}
@@ -287,7 +196,7 @@
       "parameter_list": {
         "placeholder": "@global.type_prompt"
       },
-      "_nested_name": "tex_box",
+      "_nested_name": "text_box",
       "_dynamicFields": {
         "value": [
           {
@@ -723,10 +632,10 @@
               "trigger": "click",
               "action_id": "set_field",
               "args": [
-                "user_name",
+                "user_name_edited",
                 "@local.text_box"
               ],
-              "_raw": "click | set_field: user_name: @local.text_box"
+              "_raw": "click | set_field: user_name_edited: @local.text_box"
             },
             {
               "trigger": "click",
@@ -789,7 +698,7 @@
                 },
                 "_raw": [
                   {
-                    "fullExpression": "click | set_field: user_name: @local.text_box",
+                    "fullExpression": "click | set_field: user_name_edited: @local.text_box",
                     "matchedExpression": "@local.text_box",
                     "type": "local",
                     "fieldName": "text_box"
