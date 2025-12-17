@@ -40,37 +40,17 @@
     },
     {
       "name": "user_name",
-      "value": "@fields.name_from_login",
-      "condition": false,
-      "comments": "!@fields.user_name"
+      "value": "@fields._auth_user_name",
+      "condition": "!@fields.user_name_edited"
     },
     {
       "name": "user_name",
-      "value": "@fields.user_name",
-      "condition": false,
-      "comments": "!!@fields.user_name"
+      "value": "@fields.user_name_edited",
+      "condition": "!!@fields.user_name_edited"
     },
     {
       "type": "text_box",
       "name": "text_box",
-      "value": "@local.user_name",
-      "parameter_list": "placeholder: @global.type_prompt",
-      "condition": false,
-      "comments": "@local.user_name != @global.user_name_default"
-    },
-    {
-      "name": "user_name",
-      "value": "@fields._auth_user_name",
-      "condition": "!@fields.user_name"
-    },
-    {
-      "name": "user_name",
-      "value": "@fields.user_name",
-      "condition": "!!@fields.user_name"
-    },
-    {
-      "type": "text_box",
-      "name": "tex_box",
       "value": "@local.user_name",
       "parameter_list": "placeholder: @global.type_prompt"
     },
@@ -144,7 +124,7 @@
       "type": "button",
       "name": "save",
       "value": "Save",
-      "action_list": "click | set_field: user_name: @local.text_box;\nclick | set_field: user_state: @local.user_state;\nclick | set_field: user_organisation: @local.user_organisation_select;\nclick | set_field: user_type: @local.user_type_select;\nclick | emit: set_language: @local.language_grid;\nclick | emit:completed;"
+      "action_list": "click | set_field: user_name_edited: @local.text_box;\nclick | set_field: user_state: @local.user_state;\nclick | set_field: user_organisation: @local.user_organisation_select;\nclick | set_field: user_type: @local.user_type_select;\nclick | emit: set_language: @local.language_grid;\nclick | emit:completed;"
     },
     {
       "type": "end_display_group"

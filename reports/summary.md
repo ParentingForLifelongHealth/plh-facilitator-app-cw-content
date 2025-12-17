@@ -30,7 +30,7 @@
 | round_button | 38 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1141 |
+| set_variable | 1139 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -40,7 +40,7 @@
 | test | 1 |
 | text | 389 |
 | text_area | 4 |
-| text_box | 32 |
+| text_box | 31 |
 | title | 72 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
