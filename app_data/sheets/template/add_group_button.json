@@ -147,7 +147,7 @@
           "trigger": "click",
           "action_id": "add_data",
           "args": [],
-          "_raw": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+          "_raw": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package,\ntime_created: @calc(now())",
           "params": {
             "_list_id": "parent_groups",
             "archived": false,
@@ -155,7 +155,8 @@
             "text": "@local.text",
             "delivery_type": "@local.delivery_type",
             "age_group": "@local.age_group",
-            "content_package": "@local.content_package"
+            "content_package": "@local.content_package",
+            "time_created": "@calc(now())"
           }
         },
         {
@@ -206,34 +207,40 @@
           "1": {
             "_raw": [
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package,\ntime_created: @calc(now())",
                 "matchedExpression": "@local.name",
                 "type": "local",
                 "fieldName": "name"
               },
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package,\ntime_created: @calc(now())",
                 "matchedExpression": "@local.text",
                 "type": "local",
                 "fieldName": "text"
               },
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package,\ntime_created: @calc(now())",
                 "matchedExpression": "@local.delivery_type",
                 "type": "local",
                 "fieldName": "delivery_type"
               },
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package,\ntime_created: @calc(now())",
                 "matchedExpression": "@local.age_group",
                 "type": "local",
                 "fieldName": "age_group"
               },
               {
-                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package",
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package,\ntime_created: @calc(now())",
                 "matchedExpression": "@local.content_package",
                 "type": "local",
                 "fieldName": "content_package"
+              },
+              {
+                "fullExpression": "click | add_data |\n_list_id: parent_groups,\narchived: FALSE,\nname: @local.name,\ntext: @local.text,\ndelivery_type: @local.delivery_type,\nage_group: @local.age_group,\ncontent_package: @local.content_package,\ntime_created: @calc(now())",
+                "matchedExpression": "@calc(now())",
+                "type": "calc",
+                "fieldName": "now()"
               }
             ],
             "params": {
@@ -275,6 +282,14 @@
                   "matchedExpression": "@local.content_package",
                   "type": "local",
                   "fieldName": "content_package"
+                }
+              ],
+              "time_created": [
+                {
+                  "fullExpression": "@calc(now())",
+                  "matchedExpression": "@calc(now())",
+                  "type": "calc",
+                  "fieldName": "now()"
                 }
               ]
             }
@@ -337,6 +352,10 @@
         "@local.content_package": [
           "action_list.1._raw",
           "action_list.1.params.content_package"
+        ],
+        "@calc(now())": [
+          "action_list.1._raw",
+          "action_list.1.params.time_created"
         ],
         "@local.completed_field": [
           "action_list.2._raw",
