@@ -147,7 +147,7 @@
       "type": "button",
       "name": "save",
       "value": "Save",
-      "action_list": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name;\nclick | set_field | current_group_name : @local.group_name;\nclick | emit: completed;\nclick | emit: server_sync;",
+      "action_list": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name,\nlast_updated: @calc(now());\nclick | set_field | current_group_name : @local.group_name;\nclick | emit: completed;\nclick | emit: server_sync;",
       "parameter_list": "variant: card; "
     },
     {

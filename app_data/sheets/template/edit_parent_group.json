@@ -630,11 +630,12 @@
               "trigger": "click",
               "action_id": "set_data",
               "args": [],
-              "_raw": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name",
+              "_raw": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name,\nlast_updated: @calc(now())",
               "params": {
                 "_list_id": "parent_groups",
                 "_id": "@fields.current_group_id",
-                "text": "@local.group_name"
+                "text": "@local.group_name",
+                "last_updated": "@calc(now())"
               }
             },
             {
@@ -672,16 +673,22 @@
               "0": {
                 "_raw": [
                   {
-                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name",
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name,\nlast_updated: @calc(now())",
                     "matchedExpression": "@fields.current_group_id",
                     "type": "fields",
                     "fieldName": "current_group_id"
                   },
                   {
-                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name",
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.group_name",
                     "type": "local",
                     "fieldName": "group_name"
+                  },
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\ntext: @local.group_name,\nlast_updated: @calc(now())",
+                    "matchedExpression": "@calc(now())",
+                    "type": "calc",
+                    "fieldName": "now()"
                   }
                 ],
                 "params": {
@@ -699,6 +706,14 @@
                       "matchedExpression": "@local.group_name",
                       "type": "local",
                       "fieldName": "group_name"
+                    }
+                  ],
+                  "last_updated": [
+                    {
+                      "fullExpression": "@calc(now())",
+                      "matchedExpression": "@calc(now())",
+                      "type": "calc",
+                      "fieldName": "now()"
                     }
                   ]
                 }
@@ -735,6 +750,10 @@
               "action_list.0.params.text",
               "action_list.1._raw",
               "action_list.1.params.current_group_name "
+            ],
+            "@calc(now())": [
+              "action_list.0._raw",
+              "action_list.0.params.last_updated"
             ]
           }
         }
