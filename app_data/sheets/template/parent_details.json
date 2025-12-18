@@ -2763,7 +2763,7 @@
               "trigger": "click",
               "action_id": "set_data",
               "args": [],
-              "_raw": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+              "_raw": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
               "params": {
                 "_list_id": "parents",
                 "_id": "@fields.current_parent_no",
@@ -2776,7 +2776,8 @@
                 "other_home": "@local.other_home",
                 "hours": "@local.hours",
                 "goal": "@local.goal",
-                "consoltation": "@local.consoltation"
+                "consoltation": "@local.consoltation",
+                "last_updated": "@calc(now())"
               }
             },
             {
@@ -2809,70 +2810,76 @@
               "0": {
                 "_raw": [
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@fields.current_parent_no",
                     "type": "fields",
                     "fieldName": "current_parent_no"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.number",
                     "type": "local",
                     "fieldName": "number"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.age",
                     "type": "local",
                     "fieldName": "age"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.sex",
                     "type": "local",
                     "fieldName": "sex"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.child_count",
                     "type": "local",
                     "fieldName": "child_count"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.child_age",
                     "type": "local",
                     "fieldName": "child_age"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.child_sex",
                     "type": "local",
                     "fieldName": "child_sex"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.other_home",
                     "type": "local",
                     "fieldName": "other_home"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.hours",
                     "type": "local",
                     "fieldName": "hours"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.goal",
                     "type": "local",
                     "fieldName": "goal"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.consoltation",
                     "type": "local",
                     "fieldName": "consoltation"
+                  },
+                  {
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now())",
+                    "matchedExpression": "@calc(now())",
+                    "type": "calc",
+                    "fieldName": "now()"
                   }
                 ],
                 "params": {
@@ -2963,6 +2970,14 @@
                       "type": "local",
                       "fieldName": "consoltation"
                     }
+                  ],
+                  "last_updated": [
+                    {
+                      "fullExpression": "@calc(now())",
+                      "matchedExpression": "@calc(now())",
+                      "type": "calc",
+                      "fieldName": "now()"
+                    }
                   ]
                 }
               }
@@ -3022,6 +3037,10 @@
             "@local.consoltation": [
               "action_list.0._raw",
               "action_list.0.params.consoltation"
+            ],
+            "@calc(now())": [
+              "action_list.0._raw",
+              "action_list.0.params.last_updated"
             ],
             "!@local.valid": [
               "parameter_list.disabled"

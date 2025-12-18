@@ -2249,12 +2249,13 @@
               "trigger": "click",
               "action_id": "set_data",
               "args": [],
-              "_raw": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name",
+              "_raw": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nlast_updated: @calc(now())",
               "params": {
                 "_list_id": "parents",
                 "_id": "@fields.current_parent_no",
                 "first_name": "@local.first_name",
-                "last_name": "@local.last_name"
+                "last_name": "@local.last_name",
+                "last_updated": "@calc(now())"
               }
             },
             {
@@ -2286,22 +2287,28 @@
               "0": {
                 "_raw": [
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nlast_updated: @calc(now())",
                     "matchedExpression": "@fields.current_parent_no",
                     "type": "fields",
                     "fieldName": "current_parent_no"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.first_name",
                     "type": "local",
                     "fieldName": "first_name"
                   },
                   {
-                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name",
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nlast_updated: @calc(now())",
                     "matchedExpression": "@local.last_name",
                     "type": "local",
                     "fieldName": "last_name"
+                  },
+                  {
+                    "fullExpression": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nlast_updated: @calc(now())",
+                    "matchedExpression": "@calc(now())",
+                    "type": "calc",
+                    "fieldName": "now()"
                   }
                 ],
                 "params": {
@@ -2327,6 +2334,14 @@
                       "matchedExpression": "@local.last_name",
                       "type": "local",
                       "fieldName": "last_name"
+                    }
+                  ],
+                  "last_updated": [
+                    {
+                      "fullExpression": "@calc(now())",
+                      "matchedExpression": "@calc(now())",
+                      "type": "calc",
+                      "fieldName": "now()"
                     }
                   ]
                 }
@@ -2355,6 +2370,10 @@
             "@local.last_name": [
               "action_list.0._raw",
               "action_list.0.params.last_name"
+            ],
+            "@calc(now())": [
+              "action_list.0._raw",
+              "action_list.0.params.last_updated"
             ],
             "!@local.valid": [
               "parameter_list.disabled"

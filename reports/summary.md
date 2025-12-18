@@ -87,8 +87,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 101697 KB | 101.7 MB |
-| unused | 9659 KB | 9.7 MB |
+| total | 118312 KB | 118.3 MB |
+| unused | 10132 KB | 10.1 MB |
 </details>
 
 <details open>
@@ -161,7 +161,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
 | images/logos/UNICEF.jpg | 27.7 |
-| pdf/module_1_core_lesson_teen_pap.pdf | 393.1 |
+| pdf/module_1_core_lesson_teen_pap.pdf | 865.7 |
 </details>
 
 <details open>
@@ -262,21 +262,21 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/onboarding/splash_5.png | 1314.2 | 1 |
 | lottie/checkmark_blue.json | 17 | 3 |
 | lottie/cw_profile_complete.json | 13.4 | 4 |
-| pdf/aecp_pap.pdf | 673.9 | 1 |
-| pdf/child_development_domain_pap.pdf | 650.9 | 1 |
-| pdf/child_development_stages_pap.pdf | 676.9 | 1 |
-| pdf/children_with_disabilities_pap.pdf | 686.8 | 1 |
-| pdf/individual_consultation_pap.pdf | 726.5 | 1 |
-| pdf/module_1_core_lesson_pap.pdf | 435.2 | 1 |
-| pdf/module_1_core_lesson_yc_pap.pdf | 383 | 1 |
-| pdf/module_1_home_activity_pap.pdf | 353.5 | 1 |
-| pdf/module_1_overview_pap.pdf | 363.2 | 1 |
-| pdf/module_1_welcome_pap.pdf | 2236.9 | 1 |
-| pdf/module_6_closing_pap.pdf | 353.6 | 1 |
-| pdf/module_6_core_lesson_1_pap.pdf | 330.5 | 1 |
-| pdf/module_6_core_lesson_2_pap.pdf | 355.6 | 1 |
-| pdf/module_6_welcome_pap.pdf | 2217.7 | 1 |
-| pdf/one_on_one_time_development_stages_pap.pdf | 711.7 | 1 |
+| pdf/aecp_pap.pdf | 741.7 | 1 |
+| pdf/child_development_domain_pap.pdf | 723.1 | 1 |
+| pdf/child_development_stages_pap.pdf | 13062.1 | 1 |
+| pdf/children_with_disabilities_pap.pdf | 786.1 | 1 |
+| pdf/individual_consultation_pap.pdf | 782.7 | 1 |
+| pdf/module_1_core_lesson_pap.pdf | 865.7 | 1 |
+| pdf/module_1_core_lesson_yc_pap.pdf | 865.7 | 1 |
+| pdf/module_1_home_activity_pap.pdf | 780.4 | 1 |
+| pdf/module_1_overview_pap.pdf | 799.1 | 1 |
+| pdf/module_1_welcome_pap.pdf | 2624.9 | 1 |
+| pdf/module_6_closing_pap.pdf | 770 | 1 |
+| pdf/module_6_core_lesson_1_pap.pdf | 759.3 | 1 |
+| pdf/module_6_core_lesson_2_pap.pdf | 796.3 | 1 |
+| pdf/module_6_welcome_pap.pdf | 2632.3 | 1 |
+| pdf/one_on_one_time_development_stages_pap.pdf | 781.3 | 1 |
 </details>
 
 <details >
