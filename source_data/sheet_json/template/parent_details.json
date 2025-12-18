@@ -495,7 +495,7 @@
       "type": "button",
       "name": "save",
       "value": "Save Profile",
-      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation;\nclick | emit: completed;\nclick | emit: server_sync;",
+      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now());\nclick | emit: completed;\nclick | emit: server_sync;",
       "parameter_list": "variant: card;\ndisabled: !@local.valid;",
       "style_list": "flex: 1"
     },

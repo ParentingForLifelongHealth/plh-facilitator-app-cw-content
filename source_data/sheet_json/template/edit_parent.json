@@ -389,7 +389,7 @@
       "type": "button",
       "name": "save",
       "value": "Save Profile",
-      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name;\nclick | emit: completed;\nclick | emit: server_sync;",
+      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nlast_updated: @calc(now());\nclick | emit: completed;\nclick | emit: server_sync;",
       "parameter_list": "disabled: !@local.valid;",
       "style_list": "flex: 1"
     },
