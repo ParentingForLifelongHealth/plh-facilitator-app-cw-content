@@ -412,8 +412,12 @@
       "foreign_key": "follow_up_1",
       "title": "Send a direct message",
       "_translations": {
-        "title": {},
-        "text": {},
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
         "guidance": {
           "cw_pap": true
         }
@@ -437,8 +441,12 @@
       "foreign_key": "follow_up_3",
       "title": "Send a final reminder message",
       "_translations": {
-        "title": {},
-        "text": {},
+        "title": {
+          "cw_pap": true
+        },
+        "text": {
+          "cw_pap": true
+        },
         "guidance": {
           "cw_pap": true
         }

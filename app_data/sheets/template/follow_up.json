@@ -1903,7 +1903,9 @@
           "name": "text_first_time",
           "value": "This is where you’ll see parents who need follow-up.",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "parameter_list": {
             "style": "contextual"
@@ -1961,7 +1963,9 @@
           "name": "text_first_time",
           "value": "This is where you’ll see parents who need follow-up.",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "parameter_list": {
             "style": "contextual"

@@ -437,7 +437,9 @@
       "type": "text",
       "value": "remaining count =@local.remaining_count",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": false,
       "name": "text_19",
@@ -462,7 +464,9 @@
       "type": "text",
       "value": "No other parents to choose. Add more parents or go back to the other caregivers to add this parent.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.remaining_count == 0",
       "style_list": [

@@ -13,7 +13,9 @@
       "name": "title_label",
       "value": "Edit Caregiver Group",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "title_label"
@@ -241,7 +243,9 @@
       "name": "text_postfix",
       "value": ".text",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "text_postfix"
@@ -365,7 +369,9 @@
       "name": "age_group",
       "value": "Age group: @local.current_age_group_text",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "style_list": [
         "color: gray",
@@ -395,7 +401,9 @@
       "name": "delivery_type",
       "value": "Delivery type: @local.current_content_package_text",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "style_list": [
         "color: gray",

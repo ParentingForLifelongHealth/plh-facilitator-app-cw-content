@@ -20,7 +20,9 @@
       "name": "title",
       "value": "Before you go",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": false,
       "_nested_name": "title"
@@ -30,7 +32,9 @@
       "name": "text_warning",
       "value": "If you leave now, your changes will not be saved.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": false,
       "_nested_name": "text_warning"
@@ -72,7 +76,9 @@
           "name": "button_delete",
           "value": "Leave without saving",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {

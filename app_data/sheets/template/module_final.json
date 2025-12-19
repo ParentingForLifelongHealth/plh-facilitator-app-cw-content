@@ -633,7 +633,9 @@
                   "name": "test_lottie_2",
                   "value": "test 2",
                   "_translations": {
-                    "value": {}
+                    "value": {
+                      "cw_pap": true
+                    }
                   },
                   "condition": false,
                   "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.message_not_shared.test_lottie_2"
@@ -773,7 +775,9 @@
                   "name": "test_lottie_3",
                   "value": "test 3",
                   "_translations": {
-                    "value": {}
+                    "value": {
+                      "cw_pap": true
+                    }
                   },
                   "condition": false,
                   "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.module_not_complete_no_report.test_lottie_3"
@@ -968,7 +972,9 @@
                   "name": "test_lottie_4",
                   "value": "test 4",
                   "_translations": {
-                    "value": {}
+                    "value": {
+                      "cw_pap": true
+                    }
                   },
                   "condition": false,
                   "_nested_name": "facilitator_wrapper.module_not_complete_wrapper.module_not_complete_report.test_lottie_4"
@@ -1306,7 +1312,9 @@
                       "name": "test_lottie_5",
                       "value": "test 5",
                       "_translations": {
-                        "value": {}
+                        "value": {
+                          "cw_pap": true
+                        }
                       },
                       "condition": false,
                       "_nested_name": "facilitator_wrapper.module_complete_wrapper.report_wrapper.report_to_do.test_lottie_5"
@@ -1540,7 +1548,9 @@
                       "name": "test_lottie_6",
                       "value": "test 6",
                       "_translations": {
-                        "value": {}
+                        "value": {
+                          "cw_pap": true
+                        }
                       },
                       "condition": false,
                       "_nested_name": "facilitator_wrapper.module_complete_wrapper.report_wrapper.report_complete.test_lottie_6"
@@ -1753,7 +1763,9 @@
                   "name": "test_lottie_7",
                   "value": "test 7",
                   "_translations": {
-                    "value": {}
+                    "value": {
+                      "cw_pap": true
+                    }
                   },
                   "condition": false,
                   "_nested_name": "facilitator_wrapper.module_complete_wrapper.no_report.test_lottie_7"
