@@ -24,8 +24,12 @@
       "foreign_key": "about_app",
       "text_1": "The @global.app_name is your digital companion for delivering the @global.prog_name programme with confidence. \n\nIt is designed to support you as a facilitator, offering practical tools, guidance, and ready-to-use resources so you can focus on what matters most - building positive connections with parents.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -72,8 +76,12 @@
       "foreign_key": "prog_delivery",
       "text_1": "As a facilitator, your role is to guide small groups of caregivers (usually 12–15 people) through the programme.\n\nThe @global.prog_name is designed to be flexible so that you can deliver it in a way that best fits your parent group.\n\nThe programme is delivered mainly through a **WhatsApp group**. You will set up and manage the group, share the curriculum with caregivers, and lead group discussions.\n\nWhen you create a parent group in the app, you will choose the age group focus: Caregivers of young children (2-9), Caregivers of teens (10-17), Caregivers of young children and teens (2-17)\n\nThe programme has **six sessions**. These can be a mix of in-person and remote (WhatsApp-based) sessions.\n\nYou and your organisation can decide which format is best for your group:\n\n- **Onboarding only (Session 1 in person)**: Meet parents face-to-face to build trust, explain how the programme works, and practice the first skills together.\n\n- **Closing only (Session 6 in person)**: Meet parents face-to-face at the end to reflect, celebrate progress, and encourage continued practice.\n- **Both onboarding and closing (Sessions 1 & 6 in person)**: Start strong with group connection and finish with a meaningful celebration.\n- **Fully remote (all sessions on WhatsApp)**: Run everything online if in-person meetings are not possible.\nThe core of the programme always happens in the WhatsApp group, whether or not you have in-person sessions.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -156,7 +164,9 @@
       "foreign_key": "lesson_content",
       "text_1": "You’ll help parents learn one new parenting skill each week by sharing lesson content across the week.\n\n📹 **What You’ll Share**\n\nEach week, you’ll send videos with parenting tips. These tips are the main part of the module.\n\nMost videos include two short stories:\n👶 One for children aged 2–9\n🧑‍🎓 One for teens aged 10–17\n\n👉 If your group includes only young children or only teens, you’ll send one story video.\n👉 If your group includes both, you’ll send both videos.\n\n\n📖 **What’s in the videos?**\n\nEach story uses illustrations to show real-life situations.\n\nA short explainer at the end helps parents reflect and understand the parenting tips.\n\nThese stories make it easier for parents to relate to the skill and think about how to use it at home.\n\n\n🏡 **Home Practice**\n\nEach week, parents are encouraged to try the tips at home.\n\nThis is a key part of the programme!\n\nIt helps parents practice new skills in real life.\n\nYou can support them by helping them plan:\n🕓 When to try the tip\n📍 Where they can do it\n📝 How they might do it with their child",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -184,8 +194,12 @@
       "foreign_key": "live_chat_session",
       "text_1": "**Welcome and Check-in** \n\nBegin each session with a message that welcomes the parents to the session chat. \n\nCheck-in to make sure that everyone is ready to begin the session. This is easier said than done when you are online! You may want to ask if that everybody’s connection is steady and that they are comfortable and sitting somewhere where they can ‘chat’. \n\nPraise parents for making the effort to join the session and let them know you are excited to get going!\n\nTake responsibility for ensuring that everybody’s contribution is heard. This means making sure you understand the language needs and abilities of participants before you begin – will everybody be typing? Or will there be a mix of audio and text from parents?\n\nFraming the session: It’s important to let parents know what to expect from each session. Start each session by letting them know what home activity are we discussing.\n\nAsk parents how they are feeling today. You can model this process by sending a message that shares about how you are feeling today and describing where you are feeling it in your body, for example: “Today I am tired! I was up at night with my child. I can feel it in my sore, heavy feet, which don’t seem to want to walk anywhere very fast!”\n\n\n**Checking in on home activity**\n\nStart by reminding parents what last week’s parenting tip was. Ask a simple question to see who tried it — like a 👍 or “Yes/Not yet.” Keep it light and supportive. Praise parents who gave it a try, even if it was just a little. Encourage those who didn’t — remind them it’s okay to try again this week.\n\n**Voting on a challenge to discuss** \n\nAfter checking in on the home activity, give parents a chance to vote on a common challenge they may have faced. Share 3–4 relatable options. This helps parents feel seen and makes it easy to respond.\n\nLet them know it’s normal to face challenges — voting creates a safe space to talk about what was hard.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -494,7 +508,9 @@
       "foreign_key": "module_1_prepare",
       "text_1": "The first step to building healthier and happier relationships is to spend dedicated time together. When parents spend one-on-one time with their children away from work and household duties and other people, they create space to be available to their child, to get more involved in their lives, and to build trust and communication skills. A strong parent-child relationship requires spending time together in this way.\n\n**Key building blocks for one-on-one time**\n\nThe key building blocks for One-on-One time are Day, Play, and Stay:\n\n**DAY**- Try to do it every day\nSpend 5 minutes (or more!) One-on-One time with your child each day.\n\n**PLAY** - Let them choose the activity\nTell your child or teen that you would like to spend some time with them and that they can choose what to do or talk about. They might think this is weird at first but will come to enjoy this time with you!\n\n**STAY** - Focus on your child or teen\nSwitch off TV and put aside phones. Look at your child or teen. Nod or say “I see” to show you are really paying attention. Accept what they say without judging them.",
       "_translations": {
-        "text_1": {}
+        "text_1": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -707,8 +723,12 @@
       "foreign_key": "follow_up_1",
       "text_1": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nAfter the third follow-up, if the parent still does not rejoin, they will no longer appear in your list.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -725,8 +745,12 @@
       "foreign_key": "follow_up_2",
       "text_1": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nAfter the third follow-up, if the parent still does not rejoin, they will no longer appear in your list.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {
@@ -743,8 +767,12 @@
       "foreign_key": "follow_up_3",
       "text_1": "Parents who have missed the last 2 consecutive chat sessions will appear in your list.\nYou will follow up with each parent up to 3 times.\nThis is the third follow-up. If the parent still does not rejoin, they will no longer appear in your list.",
       "_translations": {
-        "text_1": {},
-        "text_2": {}
+        "text_1": {
+          "cw_pap": true
+        },
+        "text_2": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text_1": {

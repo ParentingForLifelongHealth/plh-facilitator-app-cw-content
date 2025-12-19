@@ -878,7 +878,9 @@
           "name": "coparenting_with",
           "value": "Caregiving with @local.number_of_coparents other:",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "style_list": [
             "flex:1"
@@ -915,7 +917,9 @@
           "name": "coparenting_with",
           "value": "Caregiving with @local.number_of_coparents others:",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "style_list": [
             "flex:1"
@@ -1342,7 +1346,9 @@
       "name": "details_button",
       "value": "Details from Individual Consultation",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "action_list": [
         {
@@ -2049,7 +2055,9 @@
           "name": "attendance",
           "value": "Attended @local.attended_6 / @local.number_reported_sessions reported sessions",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "_nested_name": "data_items_35.attendance",
           "_dynamicFields": {

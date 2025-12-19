@@ -7,7 +7,9 @@
       "name": "create_new_group",
       "value": "Create a Caregiver Group",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": false,
       "type": "set_variable",
@@ -212,7 +214,9 @@
       "type": "text",
       "value": "🚀 Once you create a parent group, it will appear here.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "(@local.groups_count == 0) && (@local.groups_count_closed == 0)",
       "name": "text_11",
