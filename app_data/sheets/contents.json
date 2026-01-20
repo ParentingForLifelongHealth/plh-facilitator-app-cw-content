@@ -519,10 +519,10 @@
         "url": "https://docs.google.com/spreadsheets/d/1VVHcts85jXT-kJPs3nysC_qNiS7bZj4hP_QhPOXr4hE"
       }
     },
-    "user_municipality": {
+    "user_neighbourhoods": {
       "flow_type": "data_list",
-      "flow_name": "user_municipality",
-      "data_list_name": "user_municipality",
+      "flow_name": "user_neighbourhoods",
+      "data_list_name": "user_neighbourhoods",
       "_source": {
         "name": "CW Sheets",
         "path": "data/deployment_data_cw.xlsx",
@@ -533,6 +533,16 @@
       "flow_type": "data_list",
       "flow_name": "user_organisation",
       "data_list_name": "user_organisation",
+      "_source": {
+        "name": "CW Sheets",
+        "path": "data/deployment_data_cw.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
+      }
+    },
+    "user_regions": {
+      "flow_type": "data_list",
+      "flow_name": "user_regions",
+      "data_list_name": "user_regions",
       "_source": {
         "name": "CW Sheets",
         "path": "data/deployment_data_cw.xlsx",
@@ -1078,6 +1088,16 @@
         },
         {
           "flow_name": "media_take_a_pause",
+          "flow_subtype": "generated",
+          "flow_type": "template"
+        },
+        {
+          "flow_name": "media_loving_kindness",
+          "flow_subtype": "generated",
+          "flow_type": "template"
+        },
+        {
+          "flow_name": "media_body_scan",
           "flow_subtype": "generated",
           "flow_type": "template"
         }
@@ -2096,6 +2116,16 @@
       "flow_subtype": "generated",
       "flow_type": "template"
     },
+    "media_body_scan": {
+      "flow_name": "media_body_scan",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "media_loving_kindness": {
+      "flow_name": "media_loving_kindness",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
     "media_module_1_teen": {
       "flow_name": "media_module_1_teen",
       "flow_subtype": "generated",
@@ -2561,6 +2591,15 @@
     "onboarding_settings_page_2": {
       "flow_type": "template",
       "flow_name": "onboarding_settings_page_2",
+      "_source": {
+        "name": "CW Sheets",
+        "path": "templates/CW onboarding templates.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1TNX4ZCxAqcKlU6D1trphMQs-WqIrZ4Rwu_amXGonyg0"
+      }
+    },
+    "onboarding_settings_page_3": {
+      "flow_type": "template",
+      "flow_name": "onboarding_settings_page_3",
       "_source": {
         "name": "CW Sheets",
         "path": "templates/CW onboarding templates.xlsx",

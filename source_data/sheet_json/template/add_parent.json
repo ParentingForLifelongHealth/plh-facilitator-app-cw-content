@@ -42,6 +42,12 @@
       "parameter_list": "filter: (@item.name == @local.current_parent_group)"
     },
     {
+      "type": "text",
+      "name": "test_ag",
+      "value": "@local.current_age_group",
+      "condition": false
+    },
+    {
       "name": "gender_select_options",
       "value": "@data.gender",
       "exclude_from_translation": true
@@ -314,19 +320,19 @@
     {
       "name": "child_age_valid",
       "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 10 && @local.child_age<= 17) || @local.child_age== '' || !@local.child_age)",
-      "condition": "@local.current_age_group == \"teen_\"",
+      "condition": "@fields.current_age_group == \"teen_\"",
       "exclude_from_translation": true
     },
     {
       "name": "child_age_valid",
       "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 9) || @local.child_age== '' || !@local.child_age)",
-      "condition": "@local.current_age_group == \"yc_\"",
+      "condition": "@fields.current_age_group == \"yc_\"",
       "exclude_from_translation": true
     },
     {
       "name": "child_age_valid",
       "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 17) || @local.child_age== '' || !@local.child_age)",
-      "condition": "@local.current_age_group == \"mixed_\"",
+      "condition": "@fields.current_age_group == \"mixed_\"",
       "exclude_from_translation": true
     },
     {
@@ -491,73 +497,61 @@
       "exclude_from_translation": true
     },
     {
-      "action_list": "DEBUG",
-      "condition": false
+      "action_list": "DEBUG"
     },
     {
       "type": "text",
       "value": "first_name: @local.first_name_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "last_name @local.last_name_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "number: @local.number_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "age: @local.age_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "sex: @local.sex_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "child count: @local.child_count_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "child age: @local.child_age_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "child sex: @local.child_sex_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "other_home: @local.other_home_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "hours: @local.hours_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "value": "goal: @local.goal_valid",
-      "condition": false,
       "exclude_from_translation": true
     },
     {

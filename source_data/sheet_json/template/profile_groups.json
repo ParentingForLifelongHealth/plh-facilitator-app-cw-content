@@ -41,7 +41,7 @@
     },
     {
       "type": "data_items",
-      "name": "get_groups_count",
+      "name": "get_groups_count_closed",
       "value": "@data.parent_groups",
       "action_list": "data_changed | set_local : groups_count_closed: @items.length;",
       "parameter_list": "filter: @item.archived"
