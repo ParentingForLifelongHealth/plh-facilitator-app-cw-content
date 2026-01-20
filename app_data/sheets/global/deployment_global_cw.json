@@ -335,6 +335,30 @@
     },
     {
       "type": "declare_global_constant",
+      "name": "choose_region",
+      "value": "Select Region",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "no_region",
+      "value": "Select your Region",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "choose_neighbourhood",
+      "value": "Select Neighbourhood",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
       "name": "supervisor_name",
       "value": "your supervisor",
       "_translations": {

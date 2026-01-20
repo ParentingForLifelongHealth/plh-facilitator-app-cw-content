@@ -115,6 +115,55 @@
       "condition": "!@fields.user_organisation"
     },
     {
+      "type": "text",
+      "name": "choose_region",
+      "value": "@global.choose_region",
+      "parameter_list": "style: emphasised;"
+    },
+    {
+      "name": "user_region_select"
+    },
+    {
+      "type": "combo_box",
+      "name": "user_region_select",
+      "value": "@fields.user_region",
+      "parameter_list": "answer_list: @data.user_regions;\nplaceholder: @global.choose_region;\nvariant: dropdown;"
+    },
+    {
+      "type": "text",
+      "name": "choose_neighbourhood",
+      "value": "@global.choose_neighbourhood",
+      "parameter_list": "style: emphasised;",
+      "exclude_from_translation": true
+    },
+    {
+      "name": "neighbourhood_disabled_text",
+      "value": "@global.no_region"
+    },
+    {
+      "name": "neighbourhood_count"
+    },
+    {
+      "name": "user_neighbourhood_select",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_combo_box",
+      "name": "user_neighbourhood_select",
+      "value": "@fields.user_neighbourhood",
+      "parameter_list": "placeholder: @global.choose_neighbourhood;\ndisabled_text: @local.choose_neighbourhood;\nvariant: dropdown;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "@data.user_neighbourhoods",
+      "parameter_list": "filter: @item.region_id == @local.user_region_select"
+    },
+    {
+      "type": "end_combo_box",
+      "exclude_from_translation": true
+    },
+    {
       "type": "begin_display_group",
       "name": "dg_bottom",
       "condition": "sticky: bottom;",
@@ -124,7 +173,7 @@
       "type": "button",
       "name": "save",
       "value": "Save",
-      "action_list": "click | set_field: user_name_edited: @local.text_box;\nclick | set_field: user_state: @local.user_state;\nclick | set_field: user_organisation: @local.user_organisation_select;\nclick | set_field: user_type: @local.user_type_select;\nclick | emit: set_language: @local.language_grid;\nclick | emit:completed;"
+      "action_list": "click | set_field: user_name_edited: @local.text_box;\nclick | set_field: user_state: @local.user_state;\nclick | set_field: user_organisation: @local.user_organisation_select;\nclick | set_field: user_type: @local.user_type_select;\nclick | set_field: user_region: @local.user_region_select;\nclick | set_field: user_neighbourhood: @local.user_neighbourhood_select;\nclick | emit: set_language: @local.language_grid;\nclick | emit:completed;"
     },
     {
       "type": "end_display_group"

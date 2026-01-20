@@ -1,0 +1,169 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "user_neighbourhoods",
+  "status": "released",
+  "data_list_name": "user_neighbourhoods",
+  "rows": [
+    {
+      "id": "br_jo",
+      "name": "Br_Jo",
+      "text": "Brievengat / Jongbloed",
+      "region_id": "pariba"
+    },
+    {
+      "id": "sa_bo_za_ro_sa_kw_ab",
+      "name": "Sa_Bo_Za_Ro_Sa_Kw_Ab",
+      "text": "Santa Rosa / Bonam / Zapateer / Ronde Klip / Santa Catharina / Kwarchi / Abrahamsz",
+      "region_id": "pariba"
+    },
+    {
+      "id": "mo_fu_ro_ha_ho",
+      "name": "Mo_Fu_Ro_Ha_Ho",
+      "text": "Montaña / Fuik / Rooi Santoe / Hanenberg / Hoenderberg",
+      "region_id": "pariba"
+    },
+    {
+      "id": "ma_ku_vr_st_ko_do",
+      "name": "Ma_Ku_Vr_St_Ko_Do",
+      "text": "Marie Pampoen / Kustbatterij / Vredenberg / Steenrijk / Koraal Specht / Dominguito",
+      "region_id": "pariba"
+    },
+    {
+      "id": "bo_zu_sc_ja",
+      "name": "Bo_Zu_Sc_Ja",
+      "text": "Bottelier / Zuurzak / Scherpenheuvel / Janwe",
+      "region_id": "pariba"
+    },
+    {
+      "id": "br_ja_ja_sa_ka",
+      "name": "Br_Ja_Ja_Sa_Ka",
+      "text": "Brakkeput / Jan Sofat / Jan Thiel / Santa Barbara / Kas Grandi",
+      "region_id": "pariba"
+    },
+    {
+      "id": "ma_kl_ca",
+      "name": "Ma_Kl_Ca",
+      "text": "Mahaai / Klein Kwartier / Cas Cora",
+      "region_id": "pariba"
+    },
+    {
+      "id": "bu",
+      "name": "Bu",
+      "text": "Buena Vista",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "ma_wi",
+      "name": "Ma_Wi",
+      "text": "Marchena / Wishi",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "mu",
+      "name": "Mu",
+      "text": "Muizenberg",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "ot_do_mu",
+      "name": "Ot_Do_Mu",
+      "text": "Otrabanda / Domi / Mundu Nobo",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "pi",
+      "name": "Pi",
+      "text": "Pietermaai",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "sc_fl_zw",
+      "name": "Sc_Fl_Zw",
+      "text": "Scharloo / Fleur de Marie / Zwaan",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "gr_em_ri_su_mu",
+      "name": "Gr_Em_Ri_Su_Mu",
+      "text": "Groot Kwartier / Emmastad / Rio Canario / Suffisant / Muizenberg",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "am_ra_sc_su_su",
+      "name": "Am_Ra_Sc_Su_Su",
+      "text": "Amerikanenkamp / Rancho / Schelpwijk / Sun Valley / Sunset Heights",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "sa_ma",
+      "name": "Sa_Ma",
+      "text": "Santa Maria / Mahuma",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "se_se_fo_fo",
+      "name": "Se_Se_Fo_Fo",
+      "text": "Seru Fortuna / Ser’i Papaya / Fortuna Ariba / Fortuna abou",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "sa",
+      "name": "Sa",
+      "text": "Saliña",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "te",
+      "name": "Te",
+      "text": "Tera Kòra",
+      "region_id": "pabou"
+    },
+    {
+      "id": "sa_ba_so_sa",
+      "name": "Sa_Ba_So_Sa",
+      "text": "Santa Martha Klein & Groot / Barber / Soto / Santa Cruz",
+      "region_id": "pabou"
+    },
+    {
+      "id": "we_la",
+      "name": "We_La",
+      "text": "Westpunt / Lagun",
+      "region_id": "pabou"
+    },
+    {
+      "id": "gr",
+      "name": "Gr",
+      "text": "Grote Berg",
+      "region_id": "pabou"
+    },
+    {
+      "id": "ju",
+      "name": "Ju",
+      "text": "Julianadorp",
+      "region_id": "pabou"
+    },
+    {
+      "id": "so_se_ju_ga",
+      "name": "So_Se_Ju_Ga",
+      "text": "Soaux / Ser’i Kandela /  Juan Domingo / Gato",
+      "region_id": "pabou"
+    },
+    {
+      "id": "bo_si_ja_bl",
+      "name": "Bo_Si_Ja_Bl",
+      "text": "Boca Sami / Sint Michiel / Jandoret / Blue Bay",
+      "region_id": "pabou"
+    },
+    {
+      "id": "ch_pi",
+      "name": "Ch_Pi",
+      "text": "Charo / Piscadera",
+      "region_id": "pabou"
+    }
+  ],
+  "_source": {
+    "name": "CW Sheets",
+    "path": "data/deployment_data_cw.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
+  }
+}
