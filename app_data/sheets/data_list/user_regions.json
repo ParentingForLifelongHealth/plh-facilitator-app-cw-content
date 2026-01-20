@@ -1,0 +1,28 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "user_regions",
+  "status": "released",
+  "data_list_name": "user_regions",
+  "rows": [
+    {
+      "id": "pariba",
+      "name": "pariba",
+      "text": "Pariba"
+    },
+    {
+      "id": "mei_mei",
+      "name": "mei_mei",
+      "text": "Mei mei"
+    },
+    {
+      "id": "pabou",
+      "name": "pabou",
+      "text": "Pabou"
+    }
+  ],
+  "_source": {
+    "name": "CW Sheets",
+    "path": "data/deployment_data_cw.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
+  }
+}

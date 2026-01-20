@@ -136,7 +136,7 @@
     },
     {
       "type": "data_items",
-      "name": "get_groups_count",
+      "name": "get_groups_count_closed",
       "value": "@data.parent_groups",
       "_translations": {
         "value": {}
@@ -155,7 +155,7 @@
       "parameter_list": {
         "filter": "@item.archived"
       },
-      "_nested_name": "get_groups_count",
+      "_nested_name": "get_groups_count_closed",
       "_dynamicFields": {
         "value": [
           {
