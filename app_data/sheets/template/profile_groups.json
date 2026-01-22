@@ -839,7 +839,9 @@
       "name": "text_no_closed",
       "value": "Once a group completes all its sessions, you can mark it as closed and it will appear here.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "condition": "@local.hidden_count == 0",
       "_nested_name": "text_no_closed",

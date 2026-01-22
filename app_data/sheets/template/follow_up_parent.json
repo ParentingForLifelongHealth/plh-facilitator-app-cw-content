@@ -39,7 +39,9 @@
       "name": "new_followup_count",
       "value": "@calc(@local.no_follow_up + 1)",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "new_followup_count",

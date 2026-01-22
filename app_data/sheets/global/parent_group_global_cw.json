@@ -46,7 +46,9 @@
       "name": "age_group",
       "value": "This caregiver group supports parents of children ages:",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -54,7 +56,9 @@
       "name": "delivery_mode",
       "value": "How will you deliver your sessions?",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -62,7 +66,9 @@
       "name": "delivery_mode_subtext",
       "value": "If you're not sure, please ask your supervisor or trainer.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -530,7 +536,9 @@
       "name": "error_child_age",
       "value": "Please enter an consistent with the range of this group.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
