@@ -295,13 +295,16 @@
       }
     },
     {
-      "type": "title",
+      "type": "text",
       "name": "text_initial",
       "value": "🚀 Your parents are waiting! Once you deliver your first session, your reports will appear here.",
       "_translations": {
         "value": {
           "cw_pap": true
         }
+      },
+      "parameter_list": {
+        "style": "contextual"
       },
       "condition": "@local.number_delivered_sessions == 0",
       "_nested_name": "text_initial",

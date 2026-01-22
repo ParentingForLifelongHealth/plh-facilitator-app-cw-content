@@ -38,10 +38,10 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 394 |
+| text | 395 |
 | text_area | 4 |
 | text_box | 31 |
-| title | 72 |
+| title | 71 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 3 |
