@@ -119,6 +119,10 @@
       "exclude_from_translation": true
     },
     {
+      "name": "reduced_margin",
+      "value": "-8px"
+    },
+    {
       "type": "text",
       "value": "@global.label_first_name",
       "exclude_from_translation": true
@@ -127,6 +131,7 @@
       "type": "text_box",
       "name": "first_name",
       "parameter_list": "placeholder: @global.edit_first_name",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -153,6 +158,7 @@
       "type": "text_box",
       "name": "last_name",
       "parameter_list": "placeholder: @global.edit_last_name",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -179,7 +185,8 @@
     {
       "type": "combo_box",
       "name": "region_select",
-      "parameter_list": "answer_list: @data.regions;\nplaceholder: @global.choose_region;"
+      "parameter_list": "answer_list: @data.regions;\nplaceholder: @global.choose_region;",
+      "style_list": "margin-top: @local.reduced_margin"
     },
     {
       "name": "region_select_valid",
@@ -204,6 +211,7 @@
       "type": "begin_combo_box",
       "name": "neighbourhood_select",
       "parameter_list": "placeholder: @global.choose_neighbourhood;\ndisabled_text: @local.choose_neighbourhood;",
+      "style_list": "margin-top: @local.reduced_margin",
       "condition": true
     },
     {
@@ -230,6 +238,7 @@
       "name": "number",
       "action_list": "changed | set_local: show_number_error: TRUE",
       "parameter_list": "placeholder: @global.edit_number; number_input: true",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -257,6 +266,7 @@
       "name": "age",
       "action_list": "changed | set_local: show_age_error: TRUE",
       "parameter_list": "placeholder: @global.edit_age; number_input: true",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -284,6 +294,7 @@
       "name": "sex",
       "action_list": "changed | set_local: show_sex_error: TRUE",
       "parameter_list": "placeholder:@global.edit_sex;\nanswer_list: @local.gender_select_options;",
+      "style_list": "margin-top: @local.reduced_margin",
       "condition": "answer_list: @local.gender_select_options",
       "exclude_from_translation": true
     },
@@ -321,6 +332,7 @@
       "name": "child_count",
       "action_list": "changed | set_local: show_child_count_error: TRUE",
       "parameter_list": "placeholder:@global.edit_child_count; number_input: true",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -365,6 +377,7 @@
       "name": "child_age",
       "action_list": "changed | set_local: show_child_age_error: TRUE",
       "parameter_list": "placeholder:@global.edit_child_age; number_input: true",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -419,6 +432,7 @@
       "name": "child_sex",
       "action_list": "changed | set_local: show_child_sex_error: TRUE",
       "parameter_list": "placeholder:@global.edit_child_sex;\nanswer_list: @local.child_gender_select_options;",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -446,6 +460,7 @@
       "name": "other_home",
       "action_list": "changed | set_local: show_other_home_error: TRUE",
       "parameter_list": "placeholder:@global.edit_other_home;\nanswer_list: @local.other_home_options;",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -470,6 +485,7 @@
       "name": "hours",
       "action_list": "changed | set_local: show_hours_error: TRUE",
       "parameter_list": "placeholder:@global.edit_hours; number_input: true",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -496,6 +512,7 @@
       "type": "text_box",
       "name": "goal",
       "parameter_list": "placeholder:@global.edit_goal",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -522,7 +539,7 @@
       "type": "date_time_picker",
       "name": "consoltation",
       "parameter_list": "type: date",
-      "style_list": "margin-top: 0px",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -635,12 +652,10 @@
       "value": "Save and Add New",
       "action_list": "click | add_data | \n_list_id: parents,\ngroup_id: @fields.current_group_no,\narchived: false,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nnumber: @local.number,\nregion: @local.region_select,\nneighbourhood: @local.neighbourhood_select,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,       \nconsoltation: @local.consoltation,\nco_parent_id: empty,\ntime_created: @calc(now());\nclick | emit: server_sync;\nclick | emit: force_reload;\n",
       "parameter_list": "variant: card;\ndisabled: !@local.valid;",
-      "style_list": "flex: 1",
-      "comments": "region: @local.region_select,"
+      "style_list": "flex: 1"
     },
     {
-      "type": "end_display_group",
-      "comments": "neighbourhood: @local.neighbourhood_select,"
+      "type": "end_display_group"
     }
   ]
 }
