@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 3 |
-| button | 133 |
+| button | 132 |
 | carousel | 2 |
 | combo_box | 18 |
 | data_items | 121 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 175 |
+| display_group | 174 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
@@ -27,7 +27,7 @@
 | qr_code | 2 |
 | radio_button_grid | 15 |
 | radio_list | 2 |
-| round_button | 39 |
+| round_button | 38 |
 | select_text | 2 |
 | set_field | 5 |
 | set_variable | 1152 |
@@ -58,13 +58,13 @@
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
-| emit: completed | 87 |
+| emit: completed | 86 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 2 |
 | emit: server_sync | 22 |
 | emit: set_language | 4 |
-| emit: uncompleted | 122 |
+| emit: uncompleted | 121 |
 | feedback | 24 |
 | go_to | 45 |
 | nav | 7 |
@@ -74,9 +74,9 @@
 | reset_data | 3 |
 | save_to_device | 4 |
 | set_data | 29 |
-| set_field | 97 |
+| set_field | 93 |
 | set_item | 13 |
-| set_local | 138 |
+| set_local | 140 |
 | share | 4 |
 | toast | 1 |
 | user | 4 |
@@ -296,7 +296,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 13 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 104 |
+| template |  | 103 |
 | template | generated | 102 |
 | template | legal_terms | 4 |
 </details>

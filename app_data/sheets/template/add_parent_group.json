@@ -251,7 +251,9 @@
       "name": "valid",
       "value": "@local.text_box && @local.age_tag",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "valid",

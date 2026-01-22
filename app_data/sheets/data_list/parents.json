@@ -9,6 +9,8 @@
       "group_id": "text_field",
       "first_name": "text_field",
       "last_name": "text_field",
+      "region": "text_field",
+      "neighbourhood": "text_field",
       "number": "text_field",
       "age": "text_field",
       "sex": "text_field",
@@ -28,7 +30,8 @@
       "week_6": false,
       "no_follow_up": 0,
       "follow_up_week": 0,
-      "last_follow_up": "text_field"
+      "last_follow_up": "text_field",
+      "time_created": "text_field"
     }
   ],
   "_source": {

@@ -249,6 +249,15 @@
   },
   {
     "flow_type": "data_list",
+    "flow_name": "neighbourhoods",
+    "_source": {
+      "name": "CW Sheets",
+      "path": "data/deployment_data_cw.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
+    }
+  },
+  {
+    "flow_type": "data_list",
     "flow_name": "number_data",
     "_source": {
       "name": "Global",
@@ -405,6 +414,15 @@
   },
   {
     "flow_type": "data_list",
+    "flow_name": "regions",
+    "_source": {
+      "name": "CW Sheets",
+      "path": "data/deployment_data_cw.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
+    }
+  },
+  {
+    "flow_type": "data_list",
     "flow_name": "report_answers",
     "_source": {
       "name": "Global",
@@ -497,25 +515,7 @@
   },
   {
     "flow_type": "data_list",
-    "flow_name": "user_neighbourhoods",
-    "_source": {
-      "name": "CW Sheets",
-      "path": "data/deployment_data_cw.xlsx",
-      "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
-    }
-  },
-  {
-    "flow_type": "data_list",
     "flow_name": "user_organisation",
-    "_source": {
-      "name": "CW Sheets",
-      "path": "data/deployment_data_cw.xlsx",
-      "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
-    }
-  },
-  {
-    "flow_type": "data_list",
-    "flow_name": "user_regions",
     "_source": {
       "name": "CW Sheets",
       "path": "data/deployment_data_cw.xlsx",
@@ -1743,15 +1743,6 @@
   {
     "flow_type": "template",
     "flow_name": "onboarding_settings_page_2",
-    "_source": {
-      "name": "CW Sheets",
-      "path": "templates/CW onboarding templates.xlsx",
-      "url": "https://docs.google.com/spreadsheets/d/1TNX4ZCxAqcKlU6D1trphMQs-WqIrZ4Rwu_amXGonyg0"
-    }
-  },
-  {
-    "flow_type": "template",
-    "flow_name": "onboarding_settings_page_3",
     "_source": {
       "name": "CW Sheets",
       "path": "templates/CW onboarding templates.xlsx",
