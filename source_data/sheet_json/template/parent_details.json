@@ -97,6 +97,7 @@
     {
       "name": "region_select_valid",
       "value": "@calc(!!@local.region_select || @local.region_select == '' || !@local.region_select)",
+      "comments": true,
       "exclude_from_translation": true
     },
     {
@@ -132,6 +133,9 @@
       "name": "neighbourhood_select_valid",
       "value": "@calc(!!@local.neighbourhood_select || @local.neighbourhood_select == '' || !@local.neighbourhood_select)",
       "exclude_from_translation": true
+    },
+    {
+      "condition": false
     },
     {
       "type": "text",
