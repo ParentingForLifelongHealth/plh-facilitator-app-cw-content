@@ -109,6 +109,10 @@
       "value": false
     },
     {
+      "name": "reduced_margin",
+      "value": "-8px"
+    },
+    {
       "type": "begin_display_group",
       "parameter_list": "style: column",
       "exclude_from_translation": true
@@ -137,6 +141,7 @@
       "name": "first_name",
       "value": "@local.first_name",
       "parameter_list": "placeholder: @global.edit_first_name",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -163,6 +168,7 @@
       "type": "text_box",
       "name": "last_name",
       "parameter_list": "placeholder: @global.edit_last_name",
+      "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },
     {
@@ -371,7 +377,7 @@
     {
       "type": "text",
       "value": "Delete parent to permanently delete all their data. This action cannot be undone.",
-      "style_list": "margin-top: -15px"
+      "style_list": "margin-top: -4px"
     },
     {
       "type": "button",

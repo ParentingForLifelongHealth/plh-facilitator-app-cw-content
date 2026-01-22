@@ -5,159 +5,477 @@
   "data_list_name": "neighbourhoods",
   "rows": [
     {
-      "id": "br_jo",
-      "name": "Br_Jo",
-      "text": "Brievengat / Jongbloed",
+      "id": "brievengat",
+      "name": "Brievengat",
+      "text": "Brievengat",
       "region_id": "pariba"
     },
     {
-      "id": "sa_bo_za_ro_sa_kw_ab",
-      "name": "Sa_Bo_Za_Ro_Sa_Kw_Ab",
-      "text": "Santa Rosa / Bonam / Zapateer / Ronde Klip / Santa Catharina / Kwarchi / Abrahamsz",
+      "id": "jongbloed",
+      "name": "Jongbloed",
+      "text": "Jongbloed",
       "region_id": "pariba"
     },
     {
-      "id": "mo_fu_ro_ha_ho",
-      "name": "Mo_Fu_Ro_Ha_Ho",
-      "text": "Montaña / Fuik / Rooi Santoe / Hanenberg / Hoenderberg",
+      "id": "santa_rosa",
+      "name": "Santa Rosa",
+      "text": "Santa Rosa",
       "region_id": "pariba"
     },
     {
-      "id": "ma_ku_vr_st_ko_do",
-      "name": "Ma_Ku_Vr_St_Ko_Do",
-      "text": "Marie Pampoen / Kustbatterij / Vredenberg / Steenrijk / Koraal Specht / Dominguito",
+      "id": "bonam",
+      "name": "Bonam",
+      "text": "Bonam",
+      "region_id": "pariba"
+    },
+    {
+      "id": "zapateer",
+      "name": "Zapateer",
+      "text": "Zapateer",
+      "region_id": "pariba"
+    },
+    {
+      "id": "ronde_klip",
+      "name": "Ronde Klip",
+      "text": "Ronde Klip",
+      "region_id": "pariba"
+    },
+    {
+      "id": "santa_catharina",
+      "name": "Santa Catharina",
+      "text": "Santa Catharina",
+      "region_id": "pariba"
+    },
+    {
+      "id": "kwarchi",
+      "name": "Kwarchi",
+      "text": "Kwarchi",
+      "region_id": "pariba"
+    },
+    {
+      "id": "abrahamsz",
+      "name": "Abrahamsz",
+      "text": "Abrahamsz",
+      "region_id": "pariba"
+    },
+    {
+      "id": "montaña",
+      "name": "Montaña",
+      "text": "Montaña",
+      "region_id": "pariba"
+    },
+    {
+      "id": "fuik",
+      "name": "Fuik",
+      "text": "Fuik",
+      "region_id": "pariba"
+    },
+    {
+      "id": "rooi_santoe",
+      "name": "Rooi Santoe",
+      "text": "Rooi Santoe",
+      "region_id": "pariba"
+    },
+    {
+      "id": "hanenberg",
+      "name": "Hanenberg",
+      "text": "Hanenberg",
+      "region_id": "pariba"
+    },
+    {
+      "id": "hoenderberg",
+      "name": "Hoenderberg",
+      "text": "Hoenderberg",
+      "region_id": "pariba"
+    },
+    {
+      "id": "marie_pampoen",
+      "name": "Marie Pampoen",
+      "text": "Marie Pampoen",
+      "region_id": "pariba"
+    },
+    {
+      "id": "kustbatterij",
+      "name": "Kustbatterij",
+      "text": "Kustbatterij",
+      "region_id": "pariba"
+    },
+    {
+      "id": "vredenberg",
+      "name": "Vredenberg",
+      "text": "Vredenberg",
+      "region_id": "pariba"
+    },
+    {
+      "id": "steenrijk",
+      "name": "Steenrijk",
+      "text": "Steenrijk",
+      "region_id": "pariba"
+    },
+    {
+      "id": "koraal_specht",
+      "name": "Koraal Specht",
+      "text": "Koraal Specht",
+      "region_id": "pariba"
+    },
+    {
+      "id": "dominguito",
+      "name": "Dominguito",
+      "text": "Dominguito",
       "region_id": "pariba"
     },
     {
       "id": "bo_zu_sc_ja",
       "name": "Bo_Zu_Sc_Ja",
-      "text": "Bottelier / Zuurzak / Scherpenheuvel / Janwe",
+      "text": "Bottelier",
       "region_id": "pariba"
     },
     {
-      "id": "br_ja_ja_sa_ka",
-      "name": "Br_Ja_Ja_Sa_Ka",
-      "text": "Brakkeput / Jan Sofat / Jan Thiel / Santa Barbara / Kas Grandi",
+      "id": "zuurzak",
+      "name": "Zuurzak",
+      "text": "Zuurzak",
       "region_id": "pariba"
     },
     {
-      "id": "ma_kl_ca",
-      "name": "Ma_Kl_Ca",
-      "text": "Mahaai / Klein Kwartier / Cas Cora",
+      "id": "scherpenheuvel",
+      "name": "Scherpenheuvel",
+      "text": "Scherpenheuvel",
       "region_id": "pariba"
     },
     {
-      "id": "bu",
-      "name": "Bu",
+      "id": "janwe",
+      "name": "Janwe",
+      "text": "Janwe",
+      "region_id": "pariba"
+    },
+    {
+      "id": "brakkeput",
+      "name": "Brakkeput",
+      "text": "Brakkeput",
+      "region_id": "pariba"
+    },
+    {
+      "id": "jan_sofat",
+      "name": "Jan Sofat",
+      "text": "Jan Sofat",
+      "region_id": "pariba"
+    },
+    {
+      "id": "jan_thiel",
+      "name": "Jan Thiel",
+      "text": "Jan Thiel",
+      "region_id": "pariba"
+    },
+    {
+      "id": "santa_barbara",
+      "name": "Santa Barbara",
+      "text": "Santa Barbara",
+      "region_id": "pariba"
+    },
+    {
+      "id": "kas_grandi",
+      "name": "Kas Grandi",
+      "text": "Kas Grandi",
+      "region_id": "pariba"
+    },
+    {
+      "id": "mahaai",
+      "name": "Mahaai",
+      "text": "Mahaai",
+      "region_id": "pariba"
+    },
+    {
+      "id": "klein_kwartier",
+      "name": "Klein Kwartier",
+      "text": "Klein Kwartier",
+      "region_id": "pariba"
+    },
+    {
+      "id": "cas_cora",
+      "name": "Cas Cora",
+      "text": "Cas Cora",
+      "region_id": "pariba"
+    },
+    {
+      "id": "buena_vista",
+      "name": "Buena Vista",
       "text": "Buena Vista",
       "region_id": "mei_mei"
     },
     {
-      "id": "ma_wi",
-      "name": "Ma_Wi",
-      "text": "Marchena / Wishi",
+      "id": "marchena",
+      "name": "Marchena",
+      "text": "Marchena",
       "region_id": "mei_mei"
     },
     {
-      "id": "mu",
-      "name": "Mu",
+      "id": "wishi",
+      "name": "Wishi",
+      "text": "Wishi",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "muizenberg",
+      "name": "Muizenberg",
       "text": "Muizenberg",
       "region_id": "mei_mei"
     },
     {
-      "id": "ot_do_mu",
-      "name": "Ot_Do_Mu",
-      "text": "Otrabanda / Domi / Mundu Nobo",
+      "id": "otrabanda",
+      "name": "Otrabanda",
+      "text": "Otrabanda",
       "region_id": "mei_mei"
     },
     {
-      "id": "pi",
-      "name": "Pi",
+      "id": "domi_",
+      "name": "Domi",
+      "text": "Domi",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "mundu_nobo",
+      "name": "Mundu Nobo",
+      "text": "Mundu Nobo",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "pietermaai",
+      "name": "Pietermaai",
       "text": "Pietermaai",
       "region_id": "mei_mei"
     },
     {
-      "id": "sc_fl_zw",
-      "name": "Sc_Fl_Zw",
-      "text": "Scharloo / Fleur de Marie / Zwaan",
+      "id": "scharloo",
+      "name": "Scharloo",
+      "text": "Scharloo",
       "region_id": "mei_mei"
     },
     {
-      "id": "gr_em_ri_su_mu",
-      "name": "Gr_Em_Ri_Su_Mu",
-      "text": "Groot Kwartier / Emmastad / Rio Canario / Suffisant / Muizenberg",
+      "id": "fleur_de_marie",
+      "name": "Fleur de Marie",
+      "text": "Fleur de Marie",
       "region_id": "mei_mei"
     },
     {
-      "id": "am_ra_sc_su_su",
-      "name": "Am_Ra_Sc_Su_Su",
-      "text": "Amerikanenkamp / Rancho / Schelpwijk / Sun Valley / Sunset Heights",
+      "id": "zwaan",
+      "name": "Zwaan",
+      "text": "Zwaan",
       "region_id": "mei_mei"
     },
     {
-      "id": "sa_ma",
-      "name": "Sa_Ma",
-      "text": "Santa Maria / Mahuma",
+      "id": "groot_kwartier",
+      "name": "Groot Kwartier",
+      "text": "Groot Kwartier",
       "region_id": "mei_mei"
     },
     {
-      "id": "se_se_fo_fo",
-      "name": "Se_Se_Fo_Fo",
-      "text": "Seru Fortuna / Ser’i Papaya / Fortuna Ariba / Fortuna abou",
+      "id": "emmastad",
+      "name": "Emmastad",
+      "text": "Emmastad",
       "region_id": "mei_mei"
     },
     {
-      "id": "sa",
-      "name": "Sa",
+      "id": "rio_canario",
+      "name": "Rio Canario",
+      "text": "Rio Canario",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "suffisant",
+      "name": "Suffisant",
+      "text": "Suffisant",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "muizenberg",
+      "name": "Muizenberg",
+      "text": "Muizenberg",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "amerikanenkamp",
+      "name": "Amerikanenkamp",
+      "text": "Amerikanenkamp",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "rancho",
+      "name": "Rancho",
+      "text": "Rancho",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "schelpwijk",
+      "name": "Schelpwijk",
+      "text": "Schelpwijk",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "sun_valley",
+      "name": "Sun Valley",
+      "text": "Sun Valley",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "sunset_heights",
+      "name": "Sunset Heights",
+      "text": "Sunset Heights",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "santa_maria",
+      "name": "Santa Maria",
+      "text": "Santa Maria",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "mahuma",
+      "name": "Mahuma",
+      "text": "Mahuma",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "seru_fortuna",
+      "name": "Seru Fortuna",
+      "text": "Seru Fortuna",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "ser’i_papaya",
+      "name": "Ser’i Papaya",
+      "text": "Ser’i Papaya",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "fortuna_ariba",
+      "name": "Fortuna Ariba",
+      "text": "Fortuna Ariba",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "fortuna_abou",
+      "name": "Fortuna abou",
+      "text": "Fortuna abou",
+      "region_id": "mei_mei"
+    },
+    {
+      "id": "saliña",
+      "name": "Saliña",
       "text": "Saliña",
       "region_id": "mei_mei"
     },
     {
-      "id": "te",
-      "name": "Te",
+      "id": "tera_kòra",
+      "name": "Tera Kòra",
       "text": "Tera Kòra",
       "region_id": "pabou"
     },
     {
-      "id": "sa_ba_so_sa",
-      "name": "Sa_Ba_So_Sa",
-      "text": "Santa Martha Klein & Groot / Barber / Soto / Santa Cruz",
+      "id": "santa_martha_klein_&_groot",
+      "name": "Santa Martha Klein & Groot",
+      "text": "Santa Martha Klein & Groot",
       "region_id": "pabou"
     },
     {
-      "id": "we_la",
-      "name": "We_La",
-      "text": "Westpunt / Lagun",
+      "id": "barber",
+      "name": "Barber",
+      "text": "Barber",
       "region_id": "pabou"
     },
     {
-      "id": "gr",
-      "name": "Gr",
+      "id": "soto",
+      "name": "Soto",
+      "text": "Soto",
+      "region_id": "pabou"
+    },
+    {
+      "id": "santa_cruz",
+      "name": "Santa Cruz",
+      "text": "Santa Cruz",
+      "region_id": "pabou"
+    },
+    {
+      "id": "westpunt",
+      "name": "Westpunt",
+      "text": "Westpunt",
+      "region_id": "pabou"
+    },
+    {
+      "id": "lagun",
+      "name": "Lagun",
+      "text": "Lagun",
+      "region_id": "pabou"
+    },
+    {
+      "id": "grote_berg",
+      "name": "Grote Berg",
       "text": "Grote Berg",
       "region_id": "pabou"
     },
     {
-      "id": "ju",
-      "name": "Ju",
+      "id": "julianadorp",
+      "name": "Julianadorp",
       "text": "Julianadorp",
       "region_id": "pabou"
     },
     {
-      "id": "so_se_ju_ga",
-      "name": "So_Se_Ju_Ga",
-      "text": "Soaux / Ser’i Kandela /  Juan Domingo / Gato",
+      "id": "soaux_/_ser’i_kandela",
+      "name": "Soaux / Ser’i Kandela",
+      "text": "Soaux / Ser’i Kandela",
       "region_id": "pabou"
     },
     {
-      "id": "bo_si_ja_bl",
-      "name": "Bo_Si_Ja_Bl",
-      "text": "Boca Sami / Sint Michiel / Jandoret / Blue Bay",
+      "id": "ser’i_kandela",
+      "name": "Ser’i Kandela",
+      "text": "Ser’i Kandela",
       "region_id": "pabou"
     },
     {
-      "id": "ch_pi",
-      "name": "Ch_Pi",
-      "text": "Charo / Piscadera",
+      "id": "juan_domingo",
+      "name": "Juan Domingo",
+      "text": "Juan Domingo",
+      "region_id": "pabou"
+    },
+    {
+      "id": "gato",
+      "name": "Gato",
+      "text": "Gato",
+      "region_id": "pabou"
+    },
+    {
+      "id": "boca_sami",
+      "name": "Boca Sami",
+      "text": "Boca Sami",
+      "region_id": "pabou"
+    },
+    {
+      "id": "sint_michiel",
+      "name": "Sint Michiel",
+      "text": "Sint Michiel",
+      "region_id": "pabou"
+    },
+    {
+      "id": "jandoret",
+      "name": "Jandoret",
+      "text": "Jandoret",
+      "region_id": "pabou"
+    },
+    {
+      "id": "blue_bay",
+      "name": "Blue Bay",
+      "text": "Blue Bay",
+      "region_id": "pabou"
+    },
+    {
+      "id": "charo",
+      "name": "Charo",
+      "text": "Charo",
+      "region_id": "pabou"
+    },
+    {
+      "id": "piscadera",
+      "name": "Piscadera",
+      "text": "Piscadera",
       "region_id": "pabou"
     }
   ],
