@@ -218,30 +218,21 @@
           "cw_pap": true
         }
       },
-      "condition": "(@local.groups_count == 0) && (@local.groups_count_closed == 0)",
+      "condition": "(@local.groups_count == 0)",
       "name": "text_11",
       "_nested_name": "text_11",
       "_dynamicFields": {
         "condition": [
           {
-            "fullExpression": "(@local.groups_count == 0) && (@local.groups_count_closed == 0)",
+            "fullExpression": "(@local.groups_count == 0)",
             "matchedExpression": "@local.groups_count",
             "type": "local",
             "fieldName": "groups_count"
-          },
-          {
-            "fullExpression": "(@local.groups_count == 0) && (@local.groups_count_closed == 0)",
-            "matchedExpression": "@local.groups_count_closed",
-            "type": "local",
-            "fieldName": "groups_count_closed"
           }
         ]
       },
       "_dynamicDependencies": {
         "@local.groups_count": [
-          "condition"
-        ],
-        "@local.groups_count_closed": [
           "condition"
         ]
       }

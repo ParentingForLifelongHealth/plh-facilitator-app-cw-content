@@ -123,10 +123,9 @@
       "name": "text_postfix",
       "value": ".text",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
+      "exclude_from_translation": false,
       "type": "set_variable",
       "_nested_name": "text_postfix"
     },
