@@ -55,7 +55,7 @@
     {
       "type": "text",
       "value": "🚀 Once you create a parent group, it will appear here.",
-      "condition": "(@local.groups_count == 0) && (@local.groups_count_closed == 0)"
+      "condition": "(@local.groups_count == 0) "
     },
     {
       "type": "begin_display_group",

@@ -387,21 +387,21 @@
     },
     {
       "type": "text",
-      "value": "@global.error_child_age (10 - 17)",
+      "value": "(10 - 17)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
       "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"teen_\")",
       "exclude_from_translation": true
     },
     {
       "type": "text",
-      "value": "@global.error_child_age (2 - 9)",
+      "value": "(2 - 9)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
       "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"yc_\")",
       "exclude_from_translation": true
     },
     {
       "type": "text",
-      "value": "@global.error_child_age (2 - 17)",
+      "value": "(2 - 17)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
       "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"mixed_\")",
       "exclude_from_translation": true
