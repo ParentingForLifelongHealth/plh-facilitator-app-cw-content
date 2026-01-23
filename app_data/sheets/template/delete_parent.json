@@ -16,6 +16,68 @@
       "_nested_name": "set_variable_3"
     },
     {
+      "type": "data_items",
+      "value": "@data.parents",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_field",
+          "args": [
+            "current_parent_name",
+            "@fields.current_parent_first_name"
+          ],
+          "_raw": "data_changed | set_field: current_parent_name: @fields.current_parent_first_name"
+        }
+      ],
+      "exclude_from_translation": true,
+      "name": "data_items_4",
+      "_nested_name": "data_items_4",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.parents",
+            "matchedExpression": "@data.parents",
+            "type": "data",
+            "fieldName": "parents"
+          }
+        ],
+        "action_list": {
+          "0": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@fields.current_parent_first_name",
+                  "matchedExpression": "@fields.current_parent_first_name",
+                  "type": "fields",
+                  "fieldName": "current_parent_first_name"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "data_changed | set_field: current_parent_name: @fields.current_parent_first_name",
+                "matchedExpression": "@fields.current_parent_first_name",
+                "type": "fields",
+                "fieldName": "current_parent_first_name"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.parents": [
+          "value"
+        ],
+        "@fields.current_parent_first_name": [
+          "action_list.0.args.1",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
       "type": "title",
       "name": "title",
       "value": "Are you sure you want to delete @fields.current_parent_name?",
@@ -108,8 +170,8 @@
       "parameter_list": {
         "filter": "(@item.co_parent_id == @fields.current_co_parent_id) && (@item.id !== @fields.current_parent_no) && !(@item.archived)"
       },
-      "name": "data_items_8",
-      "_nested_name": "data_items_8",
+      "name": "data_items_9",
+      "_nested_name": "data_items_9",
       "_dynamicFields": {
         "value": [
           {

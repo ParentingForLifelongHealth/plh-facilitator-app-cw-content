@@ -12,6 +12,12 @@
       "comments": "@fields.current_parent_name"
     },
     {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_field: current_parent_name: @fields.current_parent_first_name;",
+      "exclude_from_translation": true
+    },
+    {
       "type": "title",
       "name": "title",
       "value": "Are you sure you want to delete @fields.current_parent_name?",

@@ -56,20 +56,6 @@
       "type": "end_data_items"
     },
     {
-      "type": "text",
-      "name": "test_delivered",
-      "value": "delivered = @local.number_delivered_sessions",
-      "condition": false,
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text",
-      "name": "test_pending",
-      "value": "pending = @local.number_pending_reports",
-      "condition": false,
-      "exclude_from_translation": true
-    },
-    {
       "comments": "If no sessions have been completed"
     },
     {
