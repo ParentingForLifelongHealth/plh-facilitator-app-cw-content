@@ -39,7 +39,9 @@
       "name": "welcome_closing",
       "text": "Welcome & closing sessions in-person",
       "_translations": {
-        "text": {}
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text": {
@@ -52,7 +54,9 @@
       "name": "remote",
       "text": "No in-person sessions",
       "_translations": {
-        "text": {}
+        "text": {
+          "cw_pap": true
+        }
       },
       "_translatedFields": {
         "text": {

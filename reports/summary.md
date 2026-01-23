@@ -12,7 +12,7 @@
 | button | 132 |
 | carousel | 2 |
 | combo_box | 18 |
-| data_items | 121 |
+| data_items | 122 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -38,7 +38,7 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 395 |
+| text | 393 |
 | text_area | 4 |
 | text_box | 31 |
 | title | 71 |
@@ -74,7 +74,7 @@
 | reset_data | 3 |
 | save_to_device | 4 |
 | set_data | 29 |
-| set_field | 93 |
+| set_field | 94 |
 | set_item | 13 |
 | set_local | 140 |
 | share | 4 |
