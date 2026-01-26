@@ -681,9 +681,17 @@
               "trigger": "click",
               "action_id": "emit",
               "args": [
+                "force_restart"
+              ],
+              "_raw": "click | emit: force_restart"
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
                 "completed"
               ],
-              "_raw": "click | emit:completed"
+              "_raw": "click | emit: completed"
             }
           ],
           "_nested_name": "dg_bottom.save",

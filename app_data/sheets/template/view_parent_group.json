@@ -445,41 +445,93 @@
       "_nested_name": "display_actions"
     },
     {
+      "name": "actions_tab_title",
+      "value": "Actions",
+      "_translations": {
+        "value": {
+          "cw_pap": true
+        }
+      },
+      "type": "set_variable",
+      "_nested_name": "actions_tab_title"
+    },
+    {
+      "name": "caregivers_tab_title",
+      "value": "Caregivers",
+      "_translations": {
+        "value": {
+          "cw_pap": true
+        }
+      },
+      "type": "set_variable",
+      "_nested_name": "caregivers_tab_title"
+    },
+    {
       "type": "tabs",
       "rows": [
         {
           "type": "tab",
-          "value": "Actions",
+          "value": "@local.actions_tab_title",
           "rows": [
             {
               "type": "template",
               "value": "group_actions",
               "rows": [],
               "name": "group_actions",
-              "_nested_name": "tabs_20.tab_1.group_actions"
+              "_nested_name": "tabs_22.tab_1.group_actions"
             }
           ],
           "name": "tab_1",
-          "_nested_name": "tabs_20.tab_1"
+          "_nested_name": "tabs_22.tab_1",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.actions_tab_title",
+                "matchedExpression": "@local.actions_tab_title",
+                "type": "local",
+                "fieldName": "actions_tab_title"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.actions_tab_title": [
+              "value"
+            ]
+          }
         },
         {
           "type": "tab",
-          "value": "Caregivers",
+          "value": "@local.caregivers_tab_title",
           "rows": [
             {
               "type": "template",
               "value": "parent_list",
               "rows": [],
               "name": "parent_list",
-              "_nested_name": "tabs_20.tab_2.parent_list"
+              "_nested_name": "tabs_22.tab_2.parent_list"
             }
           ],
           "name": "tab_2",
-          "_nested_name": "tabs_20.tab_2"
+          "_nested_name": "tabs_22.tab_2",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.caregivers_tab_title",
+                "matchedExpression": "@local.caregivers_tab_title",
+                "type": "local",
+                "fieldName": "caregivers_tab_title"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.caregivers_tab_title": [
+              "value"
+            ]
+          }
         }
       ],
-      "name": "tabs_20",
-      "_nested_name": "tabs_20"
+      "name": "tabs_22",
+      "_nested_name": "tabs_22"
     }
   ],
   "_source": {

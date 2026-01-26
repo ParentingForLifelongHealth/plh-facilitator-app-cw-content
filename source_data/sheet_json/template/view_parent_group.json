@@ -115,11 +115,19 @@
       "value": true
     },
     {
+      "name": "actions_tab_title",
+      "value": "Actions"
+    },
+    {
+      "name": "caregivers_tab_title",
+      "value": "Caregivers"
+    },
+    {
       "type": "begin_tabs"
     },
     {
       "type": "begin_tab",
-      "value": "Actions"
+      "value": "@local.actions_tab_title"
     },
     {
       "type": "begin_template",
@@ -133,7 +141,7 @@
     },
     {
       "type": "begin_tab",
-      "value": "Caregivers"
+      "value": "@local.caregivers_tab_title"
     },
     {
       "type": "begin_template",
