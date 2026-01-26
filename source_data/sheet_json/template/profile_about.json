@@ -124,7 +124,7 @@
       "type": "button",
       "name": "save",
       "value": "Save",
-      "action_list": "click | set_field: user_name_edited: @local.text_box;\nclick | set_field: user_state: @local.user_state;\nclick | set_field: user_organisation: @local.user_organisation_select;\nclick | set_field: user_type: @local.user_type_select;\nclick | emit: set_language: @local.language_grid;\nclick | emit: force_restart;\nclick | emit: completed;"
+      "action_list": "click | set_field: user_name_edited: @local.text_box;\nclick | set_field: user_state: @local.user_state;\nclick | set_field: user_organisation: @local.user_organisation_select;\nclick | set_field: user_type: @local.user_type_select;\nclick | emit: set_language: @local.language_grid;\nclick | emit: force_restart;"
     },
     {
       "type": "end_display_group"
