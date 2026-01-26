@@ -30,7 +30,7 @@
 | round_button | 38 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1156 |
+| set_variable | 1158 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -61,7 +61,7 @@
 | emit: completed | 86 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
-| emit: force_restart | 2 |
+| emit: force_restart | 3 |
 | emit: server_sync | 22 |
 | emit: set_language | 4 |
 | emit: uncompleted | 121 |
