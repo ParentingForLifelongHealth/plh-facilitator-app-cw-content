@@ -32,7 +32,7 @@ config.ios.app_name = "Mayor Konektá";
 
 config.git = {
   content_repo: "https://github.com/ParentingForLifelongHealth/plh-facilitator-app-cw-content.git",
-  content_tag_latest: "1.2.85",
+  content_tag_latest: "1.3.0",
 };
 
 config.firebase = {
