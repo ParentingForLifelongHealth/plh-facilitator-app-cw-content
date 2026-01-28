@@ -189,7 +189,12 @@
     {
       "name": "share_message",
       "value": "@local.message_text @local.asset",
-      "condition": "@local.asset_type == \"youtube\""
+      "condition": "(!!@local.message_text) && (@local.asset_type == \"youtube\")"
+    },
+    {
+      "name": "share_message",
+      "value": "@local.asset",
+      "condition": "(!@local.message_text) && (@local.asset_type == \"youtube\")"
     },
     {
       "type": "begin_display_group",
