@@ -744,7 +744,7 @@
               "_translations": {
                 "value": {}
               },
-              "condition": "@local.asset_type == \"youtube\"",
+              "condition": "(!!@local.message_text) && (@local.asset_type == \"youtube\")",
               "type": "set_variable",
               "_nested_name": "dg_box.dg_bottom.share_message",
               "_dynamicFields": {
@@ -764,7 +764,13 @@
                 ],
                 "condition": [
                   {
-                    "fullExpression": "@local.asset_type == \"youtube\"",
+                    "fullExpression": "(!!@local.message_text) && (@local.asset_type == \"youtube\")",
+                    "matchedExpression": "!@local.message_text",
+                    "type": "local",
+                    "fieldName": "message_text"
+                  },
+                  {
+                    "fullExpression": "(!!@local.message_text) && (@local.asset_type == \"youtube\")",
                     "matchedExpression": "@local.asset_type",
                     "type": "local",
                     "fieldName": "asset_type"
@@ -777,6 +783,54 @@
                 ],
                 "@local.asset": [
                   "value"
+                ],
+                "!@local.message_text": [
+                  "condition"
+                ],
+                "@local.asset_type": [
+                  "condition"
+                ]
+              }
+            },
+            {
+              "name": "share_message",
+              "value": "@local.asset",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "(!@local.message_text) && (@local.asset_type == \"youtube\")",
+              "type": "set_variable",
+              "_nested_name": "dg_box.dg_bottom.share_message",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.asset",
+                    "matchedExpression": "@local.asset",
+                    "type": "local",
+                    "fieldName": "asset"
+                  }
+                ],
+                "condition": [
+                  {
+                    "fullExpression": "(!@local.message_text) && (@local.asset_type == \"youtube\")",
+                    "matchedExpression": "!@local.message_text",
+                    "type": "local",
+                    "fieldName": "message_text"
+                  },
+                  {
+                    "fullExpression": "(!@local.message_text) && (@local.asset_type == \"youtube\")",
+                    "matchedExpression": "@local.asset_type",
+                    "type": "local",
+                    "fieldName": "asset_type"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.asset": [
+                  "value"
+                ],
+                "!@local.message_text": [
+                  "condition"
                 ],
                 "@local.asset_type": [
                   "condition"
