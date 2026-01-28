@@ -123,8 +123,168 @@
               "_nested_name": "dg_box.display_group_2.media_asset_cw"
             },
             {
+              "type": "data_items",
+              "value": "media_data",
+              "_translations": {
+                "value": {}
+              },
+              "action_list": [
+                {
+                  "trigger": "data_changed",
+                  "action_id": "set_local",
+                  "args": [
+                    "asset",
+                    "@items[0].media_asset_cw"
+                  ],
+                  "_raw": "data_changed | set_local : asset: @items[0].media_asset_cw"
+                },
+                {
+                  "trigger": "data_changed",
+                  "action_id": "set_local",
+                  "args": [
+                    "asset_type",
+                    "@items[0].type"
+                  ],
+                  "_raw": "data_changed | set_local : asset_type: @items[0].type"
+                }
+              ],
+              "condition": "(@fields._app_language == \"cw_pap\") && (@local.asset_type == \"media\")",
+              "parameter_list": {
+                "filter": "@item.id == @local.asset",
+                "limit": "1"
+              },
+              "name": "data_items_4",
+              "_nested_name": "dg_box.display_group_2.data_items_4",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "(@fields._app_language == \"cw_pap\") && (@local.asset_type == \"media\")",
+                    "matchedExpression": "@fields._app_language",
+                    "type": "fields",
+                    "fieldName": "_app_language"
+                  },
+                  {
+                    "fullExpression": "(@fields._app_language == \"cw_pap\") && (@local.asset_type == \"media\")",
+                    "matchedExpression": "@local.asset_type",
+                    "type": "local",
+                    "fieldName": "asset_type"
+                  }
+                ],
+                "parameter_list": {
+                  "filter": [
+                    {
+                      "fullExpression": "@item.id == @local.asset",
+                      "matchedExpression": "@item.id",
+                      "type": "item",
+                      "fieldName": "id"
+                    },
+                    {
+                      "fullExpression": "@item.id == @local.asset",
+                      "matchedExpression": "@local.asset",
+                      "type": "local",
+                      "fieldName": "asset"
+                    }
+                  ]
+                }
+              },
+              "_dynamicDependencies": {
+                "@fields._app_language": [
+                  "condition"
+                ],
+                "@local.asset_type": [
+                  "condition"
+                ],
+                "@item.id": [
+                  "parameter_list.filter"
+                ],
+                "@local.asset": [
+                  "parameter_list.filter"
+                ]
+              }
+            },
+            {
+              "type": "data_items",
+              "value": "media_data",
+              "_translations": {
+                "value": {}
+              },
+              "action_list": [
+                {
+                  "trigger": "data_changed",
+                  "action_id": "set_local",
+                  "args": [
+                    "asset",
+                    "@items[0].media_asset"
+                  ],
+                  "_raw": "data_changed | set_local : asset: @items[0].media_asset"
+                },
+                {
+                  "trigger": "data_changed",
+                  "action_id": "set_local",
+                  "args": [
+                    "asset_type",
+                    "@items[0].type"
+                  ],
+                  "_raw": "data_changed | set_local : asset_type: @items[0].type"
+                }
+              ],
+              "condition": "(@fields._app_language !== \"cw_pap\") && (@local.asset_type == \"media\")",
+              "parameter_list": {
+                "filter": "@item.id == @local.asset",
+                "limit": "1"
+              },
+              "name": "data_items_5",
+              "_nested_name": "dg_box.display_group_2.data_items_5",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "(@fields._app_language !== \"cw_pap\") && (@local.asset_type == \"media\")",
+                    "matchedExpression": "@fields._app_language",
+                    "type": "fields",
+                    "fieldName": "_app_language"
+                  },
+                  {
+                    "fullExpression": "(@fields._app_language !== \"cw_pap\") && (@local.asset_type == \"media\")",
+                    "matchedExpression": "@local.asset_type",
+                    "type": "local",
+                    "fieldName": "asset_type"
+                  }
+                ],
+                "parameter_list": {
+                  "filter": [
+                    {
+                      "fullExpression": "@item.id == @local.asset",
+                      "matchedExpression": "@item.id",
+                      "type": "item",
+                      "fieldName": "id"
+                    },
+                    {
+                      "fullExpression": "@item.id == @local.asset",
+                      "matchedExpression": "@local.asset",
+                      "type": "local",
+                      "fieldName": "asset"
+                    }
+                  ]
+                }
+              },
+              "_dynamicDependencies": {
+                "@fields._app_language": [
+                  "condition"
+                ],
+                "@local.asset_type": [
+                  "condition"
+                ],
+                "@item.id": [
+                  "parameter_list.filter"
+                ],
+                "@local.asset": [
+                  "parameter_list.filter"
+                ]
+              }
+            },
+            {
               "type": "display_group",
-              "condition": "@local.asset_type == \"media\"",
+              "condition": false,
               "parameter_list": {
                 "style": "column"
               },
@@ -147,7 +307,7 @@
                       },
                       "condition": "@item.type == \"video\"",
                       "exclude_from_translation": true,
-                      "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1.message_video",
+                      "_nested_name": "dg_box.display_group_2.display_group_6.data_items_1.message_video",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -184,7 +344,7 @@
                       },
                       "condition": "@item.type == \"audio\"",
                       "exclude_from_translation": true,
-                      "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1.message_audio",
+                      "_nested_name": "dg_box.display_group_2.display_group_6.data_items_1.message_audio",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -221,7 +381,7 @@
                       },
                       "condition": "(@fields._app_language == \"cw_pap\") && (@item.type == \"youtube\")",
                       "exclude_from_translation": true,
-                      "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1.message_youtube",
+                      "_nested_name": "dg_box.display_group_2.display_group_6.data_items_1.message_youtube",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -267,7 +427,7 @@
                       },
                       "condition": "(@fields._app_language !== \"cw_pap\") && (@item.type == \"youtube\")",
                       "exclude_from_translation": true,
-                      "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1.message_youtube_cw",
+                      "_nested_name": "dg_box.display_group_2.display_group_6.data_items_1.message_youtube_cw",
                       "_dynamicFields": {
                         "value": [
                           {
@@ -306,7 +466,7 @@
                     }
                   ],
                   "name": "data_items_1",
-                  "_nested_name": "dg_box.display_group_2.display_group_4.data_items_1",
+                  "_nested_name": "dg_box.display_group_2.display_group_6.data_items_1",
                   "_dynamicFields": {
                     "parameter_list": {
                       "filter": [
@@ -353,7 +513,7 @@
                   ],
                   "condition": false,
                   "name": "data_items_2",
-                  "_nested_name": "dg_box.display_group_2.display_group_4.data_items_2"
+                  "_nested_name": "dg_box.display_group_2.display_group_6.data_items_2"
                 },
                 {
                   "type": "data_items",
@@ -374,7 +534,7 @@
                   ],
                   "condition": false,
                   "name": "data_items_3",
-                  "_nested_name": "dg_box.display_group_2.display_group_4.data_items_3",
+                  "_nested_name": "dg_box.display_group_2.display_group_6.data_items_3",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -410,26 +570,11 @@
                   ],
                   "condition": false,
                   "name": "data_items_4",
-                  "_nested_name": "dg_box.display_group_2.display_group_4.data_items_4"
+                  "_nested_name": "dg_box.display_group_2.display_group_6.data_items_4"
                 }
               ],
-              "name": "display_group_4",
-              "_nested_name": "dg_box.display_group_2.display_group_4",
-              "_dynamicFields": {
-                "condition": [
-                  {
-                    "fullExpression": "@local.asset_type == \"media\"",
-                    "matchedExpression": "@local.asset_type",
-                    "type": "local",
-                    "fieldName": "asset_type"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@local.asset_type": [
-                  "condition"
-                ]
-              }
+              "name": "display_group_6",
+              "_nested_name": "dg_box.display_group_2.display_group_6"
             },
             {
               "type": "image",
@@ -1007,6 +1152,7 @@
                       }
                     }
                   ],
+                  "condition": "@local.asset_type !== \"youtube\"",
                   "parameter_list": {
                     "icon_src": "images/icons/share.svg"
                   },
@@ -1109,7 +1255,15 @@
                           ]
                         }
                       }
-                    }
+                    },
+                    "condition": [
+                      {
+                        "fullExpression": "@local.asset_type !== \"youtube\"",
+                        "matchedExpression": "@local.asset_type",
+                        "type": "local",
+                        "fieldName": "asset_type"
+                      }
+                    ]
                   },
                   "_dynamicDependencies": {
                     "@fields.current_group_no": [
@@ -1135,6 +1289,167 @@
                     "@local.asset": [
                       "action_list.1._raw",
                       "action_list.1.params.file"
+                    ],
+                    "@local.asset_type": [
+                      "condition"
+                    ]
+                  }
+                },
+                {
+                  "type": "round_button",
+                  "name": "button",
+                  "value": "Share",
+                  "_translations": {
+                    "value": {
+                      "cw_pap": true
+                    }
+                  },
+                  "action_list": [
+                    {
+                      "trigger": "click",
+                      "action_id": "add_data",
+                      "args": [],
+                      "_raw": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                      "params": {
+                        "_list_id": "message_log",
+                        "group_id": "@fields.current_group_no",
+                        "module": "@fields.current_module_no",
+                        "message": "@local.title",
+                        "date": "@calc(now())"
+                      }
+                    },
+                    {
+                      "trigger": "click",
+                      "action_id": "share",
+                      "args": [],
+                      "_raw": "click | share |\ntext: @local.share_message",
+                      "params": {
+                        "text": "@local.share_message"
+                      }
+                    }
+                  ],
+                  "condition": "@local.asset_type == \"youtube\"",
+                  "parameter_list": {
+                    "icon_src": "images/icons/share.svg"
+                  },
+                  "_nested_name": "dg_box.dg_bottom.log_buttons.button",
+                  "_dynamicFields": {
+                    "action_list": {
+                      "0": {
+                        "_raw": [
+                          {
+                            "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                            "matchedExpression": "@fields.current_group_no",
+                            "type": "fields",
+                            "fieldName": "current_group_no"
+                          },
+                          {
+                            "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                            "matchedExpression": "@fields.current_module_no",
+                            "type": "fields",
+                            "fieldName": "current_module_no"
+                          },
+                          {
+                            "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                            "matchedExpression": "@local.title",
+                            "type": "local",
+                            "fieldName": "title"
+                          },
+                          {
+                            "fullExpression": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now())",
+                            "matchedExpression": "@calc(now())",
+                            "type": "calc",
+                            "fieldName": "now()"
+                          }
+                        ],
+                        "params": {
+                          "group_id": [
+                            {
+                              "fullExpression": "@fields.current_group_no",
+                              "matchedExpression": "@fields.current_group_no",
+                              "type": "fields",
+                              "fieldName": "current_group_no"
+                            }
+                          ],
+                          "module": [
+                            {
+                              "fullExpression": "@fields.current_module_no",
+                              "matchedExpression": "@fields.current_module_no",
+                              "type": "fields",
+                              "fieldName": "current_module_no"
+                            }
+                          ],
+                          "message": [
+                            {
+                              "fullExpression": "@local.title",
+                              "matchedExpression": "@local.title",
+                              "type": "local",
+                              "fieldName": "title"
+                            }
+                          ],
+                          "date": [
+                            {
+                              "fullExpression": "@calc(now())",
+                              "matchedExpression": "@calc(now())",
+                              "type": "calc",
+                              "fieldName": "now()"
+                            }
+                          ]
+                        }
+                      },
+                      "1": {
+                        "_raw": [
+                          {
+                            "fullExpression": "click | share |\ntext: @local.share_message",
+                            "matchedExpression": "@local.share_message",
+                            "type": "local",
+                            "fieldName": "share_message"
+                          }
+                        ],
+                        "params": {
+                          "text": [
+                            {
+                              "fullExpression": "@local.share_message",
+                              "matchedExpression": "@local.share_message",
+                              "type": "local",
+                              "fieldName": "share_message"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "condition": [
+                      {
+                        "fullExpression": "@local.asset_type == \"youtube\"",
+                        "matchedExpression": "@local.asset_type",
+                        "type": "local",
+                        "fieldName": "asset_type"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@fields.current_group_no": [
+                      "action_list.0._raw",
+                      "action_list.0.params.group_id"
+                    ],
+                    "@fields.current_module_no": [
+                      "action_list.0._raw",
+                      "action_list.0.params.module"
+                    ],
+                    "@local.title": [
+                      "action_list.0._raw",
+                      "action_list.0.params.message"
+                    ],
+                    "@calc(now())": [
+                      "action_list.0._raw",
+                      "action_list.0.params.date"
+                    ],
+                    "@local.share_message": [
+                      "action_list.1._raw",
+                      "action_list.1.params.text"
+                    ],
+                    "@local.asset_type": [
+                      "condition"
                     ]
                   }
                 }

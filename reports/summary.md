@@ -12,7 +12,7 @@
 | button | 132 |
 | carousel | 2 |
 | combo_box | 18 |
-| data_items | 122 |
+| data_items | 124 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -27,7 +27,7 @@
 | qr_code | 2 |
 | radio_button_grid | 15 |
 | radio_list | 2 |
-| round_button | 38 |
+| round_button | 39 |
 | select_text | 2 |
 | set_field | 5 |
 | set_variable | 1158 |
@@ -54,7 +54,7 @@
 | type | count |
 | --- | --- |
 | DEBUG | 2 |
-| add_data | 10 |
+| add_data | 11 |
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
@@ -76,8 +76,8 @@
 | set_data | 29 |
 | set_field | 94 |
 | set_item | 13 |
-| set_local | 140 |
-| share | 4 |
+| set_local | 144 |
+| share | 5 |
 | toast | 1 |
 | user | 4 |
 </details>
@@ -231,7 +231,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/person_cog.svg | 2.9 | 1 |
 | images/icons/qr-code-outline.svg | 1 | 1 |
 | images/icons/settings-outline-brown.svg | 2.3 | 1 |
-| images/icons/share.svg | 2.3 | 4 |
+| images/icons/share.svg | 2.3 | 5 |
 | images/icons/unarchive.svg | 1.1 | 1 |
 | images/icons/verified.svg | 0.5 | 5 |
 | images/icons/visibility.svg | 0.5 | 1 |

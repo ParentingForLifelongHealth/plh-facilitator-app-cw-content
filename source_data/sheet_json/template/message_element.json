@@ -66,10 +66,25 @@
       "value": "initial"
     },
     {
+      "type": "data_items",
+      "value": "media_data",
+      "action_list": "data_changed | set_local : asset: @items[0].media_asset_cw;\ndata_changed | set_local : asset_type: @items[0].type;",
+      "condition": "(@fields._app_language == \"cw_pap\") && (@local.asset_type == \"media\")",
+      "parameter_list": "filter: @item.id == @local.asset;\nlimit: 1;"
+    },
+    {
+      "type": "data_items",
+      "value": "media_data",
+      "action_list": "data_changed | set_local : asset: @items[0].media_asset;\ndata_changed | set_local : asset_type: @items[0].type;",
+      "condition": "(@fields._app_language !== \"cw_pap\") && (@local.asset_type == \"media\")",
+      "parameter_list": "filter: @item.id == @local.asset;\nlimit: 1;"
+    },
+    {
       "type": "begin_display_group",
-      "condition": "@local.asset_type == \"media\"",
+      "condition": false,
       "parameter_list": "style: column",
-      "exclude_from_translation": true
+      "exclude_from_translation": true,
+      "comments": "@local.asset_type == \"media\""
     },
     {
       "type": "begin_data_items",
@@ -208,8 +223,17 @@
       "name": "button",
       "value": "Share",
       "action_list": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now());\nclick | share |\ntext: @local.message_text,\nfile: @local.asset;",
+      "condition": "@local.asset_type !== \"youtube\"",
       "parameter_list": "icon_src: images/icons/share.svg;",
       "comments": "icon: images/icons/share.svg;\nicon_position: right;"
+    },
+    {
+      "type": "round_button",
+      "name": "button",
+      "value": "Share",
+      "action_list": "click | add_data | \n_list_id: message_log,\ngroup_id: @fields.current_group_no,\nmodule: @fields.current_module_no,\nmessage: @local.title,\ndate: @calc(now());\nclick | share |\ntext: @local.share_message;",
+      "condition": "@local.asset_type == \"youtube\"",
+      "parameter_list": "icon_src: images/icons/share.svg;"
     },
     {
       "type": "end_display_group"
