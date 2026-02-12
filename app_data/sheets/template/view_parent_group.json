@@ -471,36 +471,6 @@
       "rows": [
         {
           "type": "tab",
-          "value": "@local.actions_tab_title",
-          "rows": [
-            {
-              "type": "template",
-              "value": "group_actions",
-              "rows": [],
-              "name": "group_actions",
-              "_nested_name": "tabs_22.tab_1.group_actions"
-            }
-          ],
-          "name": "tab_1",
-          "_nested_name": "tabs_22.tab_1",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@local.actions_tab_title",
-                "matchedExpression": "@local.actions_tab_title",
-                "type": "local",
-                "fieldName": "actions_tab_title"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@local.actions_tab_title": [
-              "value"
-            ]
-          }
-        },
-        {
-          "type": "tab",
           "value": "@local.caregivers_tab_title",
           "rows": [
             {
@@ -508,11 +478,11 @@
               "value": "parent_list",
               "rows": [],
               "name": "parent_list",
-              "_nested_name": "tabs_22.tab_2.parent_list"
+              "_nested_name": "tabs_22.tab_1.parent_list"
             }
           ],
-          "name": "tab_2",
-          "_nested_name": "tabs_22.tab_2",
+          "name": "tab_1",
+          "_nested_name": "tabs_22.tab_1",
           "_dynamicFields": {
             "value": [
               {
@@ -525,6 +495,36 @@
           },
           "_dynamicDependencies": {
             "@local.caregivers_tab_title": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "tab",
+          "value": "@local.actions_tab_title",
+          "rows": [
+            {
+              "type": "template",
+              "value": "group_actions",
+              "rows": [],
+              "name": "group_actions",
+              "_nested_name": "tabs_22.tab_2.group_actions"
+            }
+          ],
+          "name": "tab_2",
+          "_nested_name": "tabs_22.tab_2",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.actions_tab_title",
+                "matchedExpression": "@local.actions_tab_title",
+                "type": "local",
+                "fieldName": "actions_tab_title"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.actions_tab_title": [
               "value"
             ]
           }

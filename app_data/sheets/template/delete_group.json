@@ -153,27 +153,11 @@
             },
             {
               "trigger": "click",
-              "action_id": "emit",
+              "action_id": "go_to",
               "args": [
-                "completed"
+                "profile_groups"
               ],
-              "_raw": "click | emit: completed"
-            },
-            {
-              "trigger": "click",
-              "action_id": "nav",
-              "args": [
-                "back"
-              ],
-              "_raw": "click | nav: back"
-            },
-            {
-              "trigger": "click",
-              "action_id": "nav",
-              "args": [
-                "back"
-              ],
-              "_raw": "click | nav: back"
+              "_raw": "click | go_to: profile_groups"
             }
           ],
           "parameter_list": {

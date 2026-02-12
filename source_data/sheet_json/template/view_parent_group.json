@@ -127,11 +127,11 @@
     },
     {
       "type": "begin_tab",
-      "value": "@local.actions_tab_title"
+      "value": "@local.caregivers_tab_title"
     },
     {
       "type": "begin_template",
-      "value": "group_actions"
+      "value": "parent_list"
     },
     {
       "type": "end_template"
@@ -141,11 +141,11 @@
     },
     {
       "type": "begin_tab",
-      "value": "@local.caregivers_tab_title"
+      "value": "@local.actions_tab_title"
     },
     {
       "type": "begin_template",
-      "value": "parent_list"
+      "value": "group_actions"
     },
     {
       "type": "end_template"
