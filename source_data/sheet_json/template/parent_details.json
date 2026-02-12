@@ -97,7 +97,7 @@
     {
       "type": "combo_box",
       "name": "region_select",
-      "parameter_list": "answer_list: @data.regions;\nplaceholder: @global.choose_region;",
+      "parameter_list": "answer_list: @data.regions;\nplaceholder: @global.choose_region;\nvariant: dropdown;",
       "style_list": "margin-top: @local.reduced_margin"
     },
     {
@@ -110,11 +110,18 @@
       "type": "text",
       "name": "choose_neighbourhood",
       "value": "@global.choose_neighbourhood",
-      "condition": true
+      "condition": false
     },
     {
       "name": "neighbourhood_disabled_text",
-      "value": "@global.no_region"
+      "value": "@global.no_region",
+      "condition": false
+    },
+    {
+      "condition": false
+    },
+    {
+      "condition": false
     },
     {
       "name": "neighbourhood_select",
@@ -125,20 +132,22 @@
       "name": "neighbourhood_select",
       "parameter_list": "placeholder: @global.choose_neighbourhood;\ndisabled_text: @local.choose_neighbourhood;",
       "style_list": "margin-top: @local.reduced_margin",
-      "condition": true
+      "condition": false
     },
     {
       "type": "data_items",
       "value": "@data.neighbourhoods",
-      "parameter_list": "filter: @item.region_id == @local.region_select"
+      "parameter_list": "filter: @item.region_id == @local.region_select",
+      "condition": false
     },
     {
       "type": "end_combo_box",
-      "condition": true
+      "condition": false
     },
     {
       "name": "neighbourhood_select_valid",
       "value": "@calc(!!@local.neighbourhood_select || @local.neighbourhood_select == '' || !@local.neighbourhood_select)",
+      "condition": false,
       "exclude_from_translation": true
     },
     {
@@ -463,7 +472,7 @@
     {
       "type": "data_items",
       "value": "@data.parents",
-      "action_list": "data_changed | set_local : region_select: @items[0].region;\ndata_changed | set_local : neighbourhood_select: @items[0].neighbourhood;\ndata_changed | set_local : number: @items[0].number;\ndata_changed | set_local : age: @items[0].age;\ndata_changed | set_local : sex: @items[0].sex;\ndata_changed | set_local : child_count: @items[0]?.child_count;\ndata_changed | set_local : child_age: @items[0]?.child_age;\ndata_changed | set_local : child_sex: @items[0].child_sex;\ndata_changed | set_local : other_home: @items[0].other_home;\ndata_changed | set_local : hours: @items[0].hours;\ndata_changed | set_local : goal: @items[0].goal;\ndata_changed | set_local : consoltation: @items[0].consoltation;",
+      "action_list": "data_changed | set_local : region_select: @items[0].region;\ndata_changed | set_local : number: @items[0].number;\ndata_changed | set_local : age: @items[0].age;\ndata_changed | set_local : sex: @items[0].sex;\ndata_changed | set_local : child_count: @items[0]?.child_count;\ndata_changed | set_local : child_age: @items[0]?.child_age;\ndata_changed | set_local : child_sex: @items[0].child_sex;\ndata_changed | set_local : other_home: @items[0].other_home;\ndata_changed | set_local : hours: @items[0].hours;\ndata_changed | set_local : goal: @items[0].goal;\ndata_changed | set_local : consoltation: @items[0].consoltation;",
       "parameter_list": "filter: @item.id == @fields.current_parent_no;\nlimit: 1;\n",
       "exclude_from_translation": true
     },

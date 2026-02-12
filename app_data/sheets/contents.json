@@ -284,16 +284,6 @@
         }
       }
     },
-    "neighbourhoods": {
-      "flow_type": "data_list",
-      "flow_name": "neighbourhoods",
-      "data_list_name": "neighbourhoods",
-      "_source": {
-        "name": "CW Sheets",
-        "path": "data/deployment_data_cw.xlsx",
-        "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
-      }
-    },
     "number_data": {
       "flow_type": "data_list",
       "flow_name": "number_data",

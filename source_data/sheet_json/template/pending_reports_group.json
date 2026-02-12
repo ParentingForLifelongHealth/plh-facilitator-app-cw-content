@@ -63,8 +63,15 @@
     },
     {
       "type": "title",
+      "name": "text_no_pending_reports_1",
+      "value": "🎊 No Pending Reports",
+      "condition": "@local.number_delivered_sessions == 0"
+    },
+    {
+      "type": "text",
       "name": "text_initial",
       "value": "🚀 Your parents are waiting! Once you deliver your first session, your reports will appear here.",
+      "parameter_list": "style: contextual",
       "condition": "@local.number_delivered_sessions == 0"
     },
     {
