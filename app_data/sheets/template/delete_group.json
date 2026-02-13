@@ -153,6 +153,14 @@
             },
             {
               "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed"
+            },
+            {
+              "trigger": "click",
               "action_id": "go_to",
               "args": [
                 "profile_groups"

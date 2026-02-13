@@ -39,7 +39,7 @@
       "type": "button",
       "name": "button_delete",
       "value": "Delete",
-      "action_list": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived: TRUE; \nclick | set_field: current_group_no: NULL;\nclick | go_to: profile_groups;",
+      "action_list": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived: TRUE; \nclick | set_field: current_group_no: NULL;\nclick | emit: completed;\nclick | go_to: profile_groups;",
       "parameter_list": "style: card",
       "style_list": "flex:1",
       "comments": "click | set_data |\n_list_id: parent_groups,\n_id: @fields.current_group_id,\narchived: TRUE; \nclick | set_field: current_group_no: NULL;\nclick | emit: completed;\nclick | nav: back;\nclick | nav: back;"
