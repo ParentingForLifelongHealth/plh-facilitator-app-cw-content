@@ -124,16 +124,29 @@
     {
       "type": "text",
       "name": "text_group_name",
-      "value": "Group Name",
+      "value": "@global.group_name",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
       "parameter_list": {
         "style": "emphasised"
       },
-      "_nested_name": "text_group_name"
+      "_nested_name": "text_group_name",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.group_name",
+            "matchedExpression": "@global.group_name",
+            "type": "global",
+            "fieldName": "group_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.group_name": [
+          "value"
+        ]
+      }
     },
     {
       "type": "text",

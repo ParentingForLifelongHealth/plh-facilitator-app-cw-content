@@ -204,11 +204,9 @@
     {
       "type": "declare_global_constant",
       "name": "label_first_name",
-      "value": "Caregiver's First Name*",
+      "value": "Caregiver's Name*",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       }
     },
     {
@@ -354,11 +352,9 @@
     {
       "type": "declare_global_constant",
       "name": "edit_first_name",
-      "value": "Enter caregiver's first name",
+      "value": "Enter caregiver's first and last name",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       }
     },
     {
@@ -587,6 +583,14 @@
         "value": {
           "cw_pap": true
         }
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "group_created_confirmation",
+      "value": "Your caregiver group is created",
+      "_translations": {
+        "value": {}
       }
     },
     {

@@ -82,9 +82,6 @@
               "_translations": {
                 "value": {}
               },
-              "parameter_list": {
-                "style": "emphasised"
-              },
               "style_list": [
                 "flex:1"
               ],
@@ -226,6 +223,9 @@
                   "_raw": "completed | emit: server_sync"
                 }
               ],
+              "parameter_list": {
+                "variant": "card"
+              },
               "_nested_name": "data_items_5.display_group_1_@item.id.goto_module",
               "_dynamicFields": {
                 "action_list": {

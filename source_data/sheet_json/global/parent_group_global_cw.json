@@ -106,7 +106,7 @@
     {
       "type": "declare_global_constant",
       "name": "label_first_name",
-      "value": "Caregiver's First Name*"
+      "value": "Caregiver's Name*"
     },
     {
       "type": "declare_global_constant",
@@ -181,7 +181,7 @@
     {
       "type": "declare_global_constant",
       "name": "edit_first_name",
-      "value": "Enter caregiver's first name"
+      "value": "Enter caregiver's first and last name"
     },
     {
       "type": "declare_global_constant",
@@ -297,6 +297,11 @@
       "type": "declare_global_constant",
       "name": "error_consoltation",
       "value": "Please enter a date."
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "group_created_confirmation",
+      "value": "Your caregiver group is created"
     },
     {
       "type": "declare_global_constant",

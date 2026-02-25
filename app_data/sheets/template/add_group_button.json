@@ -187,6 +187,15 @@
             "server_sync"
           ],
           "_raw": "click | emit: server_sync"
+        },
+        {
+          "trigger": "click",
+          "action_id": "toast",
+          "args": [],
+          "_raw": "click | toast | message: @global.group_created_confirmation",
+          "params": {
+            "message": "@global.group_created_confirmation"
+          }
         }
       ],
       "parameter_list": {
@@ -311,6 +320,26 @@
                 "fieldName": "pages_field"
               }
             ]
+          },
+          "5": {
+            "_raw": [
+              {
+                "fullExpression": "click | toast | message: @global.group_created_confirmation",
+                "matchedExpression": "@global.group_created_confirmation",
+                "type": "global",
+                "fieldName": "group_created_confirmation"
+              }
+            ],
+            "params": {
+              "message": [
+                {
+                  "fullExpression": "@global.group_created_confirmation",
+                  "matchedExpression": "@global.group_created_confirmation",
+                  "type": "global",
+                  "fieldName": "group_created_confirmation"
+                }
+              ]
+            }
           }
         },
         "parameter_list": {
@@ -355,6 +384,10 @@
         ],
         "@local.pages_field": [
           "action_list.2._raw"
+        ],
+        "@global.group_created_confirmation": [
+          "action_list.5._raw",
+          "action_list.5.params.message"
         ],
         "!@local.valid": [
           "parameter_list.disabled"

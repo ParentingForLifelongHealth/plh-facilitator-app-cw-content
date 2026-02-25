@@ -30,10 +30,18 @@
       "name": "current_age_group"
     },
     {
+      "parameter_list": "sort: @item.name;",
+      "condition": false
+    },
+    {
+      "parameter_list": "limit: 1",
+      "condition": false
+    },
+    {
       "type": "data_items",
       "value": "@data.parent_groups",
       "action_list": "data_changed | set_local: current_age_group: @items[0].age_group;\ndata_changed | set_local: current_delivery_type: @items[0].delivery_type;",
-      "parameter_list": "filter: (@item.id == @fields.current_group_id)"
+      "parameter_list": "filter: (@item.id == @fields.current_group_id);\n"
     },
     {
       "name": "text_postfix",

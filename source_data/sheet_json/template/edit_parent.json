@@ -160,30 +160,6 @@
       "exclude_from_translation": true
     },
     {
-      "type": "text",
-      "value": "@global.label_last_name",
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text_box",
-      "name": "last_name",
-      "parameter_list": "placeholder: @global.edit_last_name",
-      "style_list": "margin-top: @local.reduced_margin",
-      "exclude_from_translation": true
-    },
-    {
-      "name": "last_name_valid",
-      "value": "@calc(/^[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ' -]*$/.test(@local.last_name))",
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text",
-      "value": "@global.error_last_name",
-      "style_list": "color: #FF0000;\nfont-size: 14px; ",
-      "condition": "!@local.last_name_valid",
-      "exclude_from_translation": true
-    },
-    {
       "type": "end_display_group"
     },
     {
@@ -365,7 +341,7 @@
     },
     {
       "name": "valid",
-      "value": "!!@local.first_name && !!@local.last_name && @local.first_name_valid && @local.last_name_valid",
+      "value": "!!@local.first_name && @local.first_name_valid ",
       "exclude_from_translation": true
     },
     {
@@ -395,7 +371,7 @@
       "type": "button",
       "name": "save",
       "value": "Save Profile",
-      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_name: @local.last_name,\nlast_updated: @calc(now());\nclick | emit: completed;\nclick | emit: server_sync;",
+      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nfirst_name: @local.first_name,\nlast_updated: @calc(now());\nclick | emit: completed;\nclick | emit: server_sync;",
       "parameter_list": "disabled: !@local.valid;",
       "style_list": "flex: 1"
     },

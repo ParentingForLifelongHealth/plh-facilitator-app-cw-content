@@ -86,9 +86,17 @@
       "exclude_from_translation": true
     },
     {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local : neighbourhood_select: @items[0].neighbourhood;\ndata_changed | set_local : number: @items[0].number;\ndata_changed | set_local : age: @items[0].age;\ndata_changed | set_local : sex: @items[0].sex;\ndata_changed | set_local : child_count: @items[0]?.child_count;\ndata_changed | set_local : child_age: @items[0]?.child_age;\ndata_changed | set_local : child_sex: @items[0].child_sex;\ndata_changed | set_local : goal: @items[0].goal;\ndata_changed | set_local : consoltation: @items[0].consoltation;",
+      "parameter_list": "filter: @item.id == @fields.current_parent_no;\nlimit: 1;\n",
+      "exclude_from_translation": true
+    },
+    {
       "type": "text",
       "name": "choose_region",
-      "value": "@global.choose_region"
+      "value": "@global.choose_region",
+      "condition": false
     },
     {
       "name": "region_select",
@@ -98,60 +106,43 @@
       "type": "combo_box",
       "name": "region_select",
       "parameter_list": "answer_list: @data.regions;\nplaceholder: @global.choose_region;\nvariant: dropdown;",
-      "style_list": "margin-top: @local.reduced_margin"
+      "style_list": "margin-top: @local.reduced_margin",
+      "condition": false
     },
     {
       "name": "region_select_valid",
       "value": "@calc(!!@local.region_select || @local.region_select == '' || !@local.region_select)",
+      "condition": false,
       "comments": true,
       "exclude_from_translation": true
     },
     {
       "type": "text",
       "name": "choose_neighbourhood",
-      "value": "@global.choose_neighbourhood",
-      "condition": false
-    },
-    {
-      "name": "neighbourhood_disabled_text",
-      "value": "@global.no_region",
-      "condition": false
-    },
-    {
-      "condition": false
-    },
-    {
-      "condition": false
+      "value": "@global.choose_neighbourhood"
     },
     {
       "name": "neighbourhood_select",
       "condition": false
     },
     {
-      "type": "begin_combo_box",
+      "type": "combo_box",
       "name": "neighbourhood_select",
-      "parameter_list": "placeholder: @global.choose_neighbourhood;\ndisabled_text: @local.choose_neighbourhood;",
+      "parameter_list": "answer_list: @data.neighbourhoods;\nplaceholder: @local.neighbourhood_select;\nvariant: dropdown;",
       "style_list": "margin-top: @local.reduced_margin",
-      "condition": false
+      "condition": "!!@local.neighbourhood_select || @local.neighbourhood_select == '' || !@local.neighbourhood_select"
     },
     {
-      "type": "data_items",
-      "value": "@data.neighbourhoods",
-      "parameter_list": "filter: @item.region_id == @local.region_select",
-      "condition": false
-    },
-    {
-      "type": "end_combo_box",
-      "condition": false
+      "type": "combo_box",
+      "name": "neighbourhood_select",
+      "parameter_list": "answer_list: @data.neighbourhoods;\nplaceholder: @global.choose_neighbourhood;\nvariant: dropdown;",
+      "style_list": "margin-top: @local.reduced_margin",
+      "condition": "!(!!@local.neighbourhood_select || @local.neighbourhood_select == '' || !@local.neighbourhood_select)"
     },
     {
       "name": "neighbourhood_select_valid",
       "value": "@calc(!!@local.neighbourhood_select || @local.neighbourhood_select == '' || !@local.neighbourhood_select)",
-      "condition": false,
       "exclude_from_translation": true
-    },
-    {
-      "condition": false
     },
     {
       "type": "text",
@@ -376,56 +367,6 @@
       "exclude_from_translation": true
     },
     {
-      "type": "text",
-      "value": "@global.label_other_home",
-      "exclude_from_translation": true
-    },
-    {
-      "type": "combo_box",
-      "name": "other_home",
-      "action_list": "changed | set_local: show_other_home_error: TRUE",
-      "parameter_list": "placeholder:@global.edit_other_home;\nanswer_list: @local.other_home_options;",
-      "style_list": "margin-top: @local.reduced_margin",
-      "exclude_from_translation": true
-    },
-    {
-      "name": "other_home_valid",
-      "value": "!!@local.other_home || @local.other_home== '' || !@local.other_home",
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text",
-      "value": "@global.error_other_home",
-      "style_list": "color: #FF0000;\nfont-size: 14px; ",
-      "condition": "!@local.other_home_valid && @local.show_other_home_error",
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text",
-      "value": "@global.label_hours",
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text_box",
-      "name": "hours",
-      "action_list": "changed | set_local: show_hours_error: TRUE",
-      "parameter_list": "placeholder:@global.edit_hours; number_input: true",
-      "style_list": "margin-top: @local.reduced_margin",
-      "exclude_from_translation": true
-    },
-    {
-      "name": "hours_valid",
-      "value": "@calc((/^\\d{1,2}$/.test(@local.hours) && @local.hours>= 0 && @local.hours<= 24) || @local.hours== '' || !@local.hours)",
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text",
-      "value": "@global.error_hours",
-      "style_list": "color: #FF0000;\nfont-size: 14px; ",
-      "condition": "!@local.hours_valid && @local.show_hours_error",
-      "exclude_from_translation": true
-    },
-    {
       "exclude_from_translation": true
     },
     {
@@ -467,13 +408,6 @@
       "exclude_from_translation": true
     },
     {
-      "exclude_from_translation": true
-    },
-    {
-      "type": "data_items",
-      "value": "@data.parents",
-      "action_list": "data_changed | set_local : region_select: @items[0].region;\ndata_changed | set_local : number: @items[0].number;\ndata_changed | set_local : age: @items[0].age;\ndata_changed | set_local : sex: @items[0].sex;\ndata_changed | set_local : child_count: @items[0]?.child_count;\ndata_changed | set_local : child_age: @items[0]?.child_age;\ndata_changed | set_local : child_sex: @items[0].child_sex;\ndata_changed | set_local : other_home: @items[0].other_home;\ndata_changed | set_local : hours: @items[0].hours;\ndata_changed | set_local : goal: @items[0].goal;\ndata_changed | set_local : consoltation: @items[0].consoltation;",
-      "parameter_list": "filter: @item.id == @fields.current_parent_no;\nlimit: 1;\n",
       "exclude_from_translation": true
     },
     {
@@ -546,25 +480,13 @@
     },
     {
       "type": "text",
-      "value": "other_home: @local.other_home_valid",
-      "condition": false,
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text",
-      "value": "hours: @local.hours_valid",
-      "condition": false,
-      "exclude_from_translation": true
-    },
-    {
-      "type": "text",
       "value": "goal: @local.goal_valid",
       "condition": false,
       "exclude_from_translation": true
     },
     {
       "name": "valid",
-      "value": "@local.number_valid && @local.age_valid && @local.child_age_valid && @local.child_count_valid && @local.hours_valid &&@local.goal_valid",
+      "value": "@local.number_valid && @local.age_valid && @local.child_age_valid && @local.child_count_valid &&@local.goal_valid",
       "exclude_from_translation": true
     },
     {
@@ -577,7 +499,7 @@
       "type": "button",
       "name": "save",
       "value": "Save Profile",
-      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\nother_home: @local.other_home,\nhours: @local.hours,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now());\nclick | emit: completed;\nclick | emit: server_sync;",
+      "action_list": "click | set_data | \n_list_id: parents,\n_id: @fields.current_parent_no,\nnumber: @local.number,\nage: @local.age,\nsex: @local.sex,\nchild_count: @local.child_count,\nchild_age: @local.child_age,\nchild_sex: @local.child_sex,\ngoal: @local.goal,     \nconsoltation: @local.consoltation,\nlast_updated: @calc(now());\nclick | emit: completed;\nclick | emit: server_sync;",
       "parameter_list": "variant: card;\ndisabled: !@local.valid;",
       "style_list": "flex: 1"
     },

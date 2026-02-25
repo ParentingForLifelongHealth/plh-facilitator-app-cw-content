@@ -508,8 +508,7 @@
       },
       "parameter_list": {
         "answer_list": "@data.user_organisation",
-        "placeholder": "@global.placeholder_user_organisation",
-        "variant": "dropdown"
+        "placeholder": "@global.placeholder_user_organisation"
       },
       "condition": "!!@fields.user_organisation",
       "_nested_name": "user_organisation_select",
@@ -569,8 +568,7 @@
       "name": "user_organisation_select",
       "parameter_list": {
         "answer_list": "@data.user_organisation",
-        "placeholder": "@global.placeholder_user_organisation",
-        "variant": "dropdown"
+        "placeholder": "@global.placeholder_user_organisation"
       },
       "condition": "!@fields.user_organisation",
       "_nested_name": "user_organisation_select",
