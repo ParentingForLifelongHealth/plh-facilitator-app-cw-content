@@ -13,22 +13,27 @@
       "id": "module_1_lesson1",
       "foreign_key": "module_1_lesson1",
       "text::eng": "Let’s see how @data.characters.f1_father.name spends one-on-one time with @data.characters.f1_son_5.name. ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_yc"
     },
     {
       "id": "module_1_lesson2",
       "foreign_key": "module_1_lesson2",
       "text::eng": "Let’s see how @data.characters.f1_father.name spends one-on-one time with his teen son, @data.characters.f1_son_17.name. ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_teen"
     },
     {
       "id": "module_1_lesson3",
       "foreign_key": "module_1_lesson3",
       "text::eng": "💡Here are 3 things to try when you are spending one-on-one time with your children and your home activity for the week! ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_tips"
+    },
+    {
+      "id": "module_1_lesson4",
+      "foreign_key": "module_1_lesson4",
+      "text::eng": "Your home activity this week is to try at least five minutes of One-on-One time every day."
     },
     {
       "id": "module_1_lesson_yc0",
@@ -39,15 +44,20 @@
       "id": "module_1_lesson_yc1",
       "foreign_key": "module_1_lesson_yc1",
       "text::eng": "Let’s see how @data.characters.f1_father.name spends one-on-one time with @data.characters.f1_son_5.name. ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_yc"
     },
     {
       "id": "module_1_lesson_yc2",
       "foreign_key": "module_1_lesson_yc2",
       "text::eng": "💡Here are 3 things to try when you are spending one-on-one time with your children and your home activity for the week! ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_tips"
+    },
+    {
+      "id": "module_1_lesson_yc3",
+      "foreign_key": "module_1_lesson_yc3",
+      "text::eng": "Your home activity this week is to try at least five minutes of One-on-One time every day."
     },
     {
       "id": "module_1_lesson_teen0",
@@ -58,15 +68,20 @@
       "id": "module_1_lesson_teen1",
       "foreign_key": "module_1_lesson_teen1",
       "text::eng": "Let’s see how @data.characters.f1_father.name spends one-on-one time with his teen son, @data.characters.f1_son_17.name. ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_teen"
     },
     {
       "id": "module_1_lesson_teen2",
       "foreign_key": "module_1_lesson_teen2",
       "text::eng": "💡Here are 3 things to try when you are spending one-on-one time with your children and your home activity for the week! ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_tips"
+    },
+    {
+      "id": "module_1_lesson_teen3",
+      "foreign_key": "module_1_lesson_teen3",
+      "text::eng": "Your home activity this week is to try at least five minutes of One-on-One time every day."
     },
     {
       "id": "module_1_in_person0",
@@ -78,21 +93,21 @@
       "id": "module_1_in_person1",
       "foreign_key": "module_1_in_person3",
       "title::eng": "Video Story 1 (2-9) ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_yc"
     },
     {
       "id": "module_1_in_person2",
       "foreign_key": "module_1_in_person3",
       "title::eng": "Video Story 2 (10-17) ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_teen"
     },
     {
       "id": "module_1_in_person3",
       "foreign_key": "module_1_in_person3",
       "title::eng": "Summary of tips",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_tips"
     },
     {
@@ -105,14 +120,14 @@
       "id": "module_1_in_person_yc1",
       "foreign_key": "module_1_in_person_yc3",
       "title::eng": "Video Story 1 (2-9) ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_yc"
     },
     {
       "id": "module_1_in_person_yc2",
       "foreign_key": "module_1_in_person_yc3",
       "title::eng": "Summary of tips",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_tips"
     },
     {
@@ -125,14 +140,14 @@
       "id": "module_1_in_person_teen1",
       "foreign_key": "module_1_in_person_teen3",
       "title::eng": "Video Story 1 (10-17) ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_teen"
     },
     {
       "id": "module_1_in_person_teen2",
       "foreign_key": "module_1_in_person_teen3",
       "title::eng": "Summary of tips",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_1_tips"
     },
     {
@@ -145,8 +160,8 @@
       "id": "module_1_reminder_2 0",
       "foreign_key": "module_1_reminder_2 0",
       "title::eng": "Chat session reminder",
-      "text::eng": "Hello! I look forward to hearing how the rest of your week goes when we next meet on [ENTER DATE HERE]. Chat then!",
-      "guidance::eng": "Replace [ENTER DATE HERE] with the date of the chat session"
+      "text::eng": "Hello! I look forward to hearing how the rest of your week goes when we next meet on **[ENTER DATE HERE]**. Chat then!",
+      "guidance::eng": "Replace **[ENTER DATE HERE]** with the date of the chat session"
     },
     {
       "id": "module_1_chat0",
@@ -158,8 +173,8 @@
       "id": "module_1_chat1",
       "foreign_key": "module_1_chat1",
       "title::eng": "Message 2: Introductions",
-      "text::eng": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is [INSERT NAME] and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message.",
-      "guidance::eng": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, [Insert Name]!” or “Great goal, [Insert Name]!”"
+      "text::eng": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is **[INSERT NAME]** and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message.",
+      "guidance::eng": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, **[Insert Name]**!” or “Great goal, **[Insert Name]**!”"
     },
     {
       "id": "module_1_chat2",
@@ -185,7 +200,7 @@
       "id": "module_1_chat5",
       "foreign_key": "module_1_chat5",
       "title::eng": "Message 6: Discussing solution",
-      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "text::eng": "Can we work together to think of a positive solution to **[name challenge]**?",
       "guidance::eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges. "
     },
     {
@@ -199,7 +214,7 @@
       "foreign_key": "module_1_chat7",
       "title::eng": "Message 8: Take a Pause ",
       "text::eng": "Before we end today’s session let’s take a pause together. This is something you can do whenever you are feeling stressed or overwhelmed. I really appreciate everyone’s contribution today. I’ll be in touch throughout the week with reminders about what’s coming next. Until then, have a peaceful and happy day!",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "take_a_pause"
     },
     {
@@ -212,8 +227,8 @@
       "id": "module_1_chat_inperson1",
       "foreign_key": "module_1_chat_inperson1",
       "title::eng": "Message 2: Introductions",
-      "text::eng": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is [INSERT NAME] and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message.",
-      "guidance::eng": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, [Insert Name]!” or “Great goal, [Insert Name]!”"
+      "text::eng": "Let’s introduce ourselves! Please share your name and your goal for the programme. As an example, my name is **[INSERT NAME]** and I want to learn more about how to help my child go to bed by 8 every night. Feel free to add your own to the chat using text or audio message.",
+      "guidance::eng": "Allow some time for parents to share.  Remember to praise each response. For example, you can say “Thanks for the response, **[Insert Name]**!” or “Great goal, **[Insert Name]**!”"
     },
     {
       "id": "module_1_chat_inperson2",
@@ -239,7 +254,7 @@
       "id": "module_1_chat_inperson5",
       "foreign_key": "module_1_chat_inperson5",
       "title::eng": "Message 6: Discussing solution",
-      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "text::eng": "Can we work together to think of a positive solution to **[name challenge]**?",
       "guidance::eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
     },
     {
@@ -253,7 +268,7 @@
       "foreign_key": "module_1_chat_inperson7",
       "title::eng": "Message 8: Take a Pause ",
       "text::eng": "Before we end today’s session let’s take a pause together. This is something you can do whenever you are feeling stressed or overwhelmed. I really appreciate everyone’s contribution today. I’ll be in touch throughout the week with reminders about what’s coming next. Until then, have a peaceful and happy day!",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "take_a_pause"
     },
     {
@@ -265,22 +280,27 @@
       "id": "module_2_lesson1",
       "foreign_key": "module_2_lesson1",
       "text::eng": "Let’s look at a story that shows a child talking about emotions while they are spending one-on-one time with their parent",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_2_yc"
     },
     {
       "id": "module_2_lesson2",
       "foreign_key": "module_2_lesson2",
       "text::eng": "Let’s see a story of parents talking about a difficult emotion with their teen",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_2_teen"
     },
     {
       "id": "module_2_lesson3",
       "foreign_key": "module_2_lesson3",
       "text::eng": "💡Here are 5 things about how to talk about emotions with your children & your home activity for the week. ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_2_tips"
+    },
+    {
+      "id": "module_2_lesson4",
+      "foreign_key": "module_2_lesson4",
+      "text::eng": "This week, your home activity is to practice talking to your children about their emotions, during One-on-One Time and at other moments during the week.\nAnd don’t forget to check in with yourself, too. Notice how you’re feeling as you go about your day."
     },
     {
       "id": "module_2_lesson_yc0",
@@ -291,15 +311,20 @@
       "id": "module_2_lesson_yc1",
       "foreign_key": "module_2_lesson_yc1",
       "text::eng": "Let’s look at a story that shows a child talking about emotions while they are spending one-on-one time with their parent",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_2_yc"
     },
     {
       "id": "module_2_lesson_yc2",
       "foreign_key": "module_2_lesson_yc2",
       "text::eng": "💡Here are 5 things about how to talk about emotions with your children & your home activity for the week. ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_2_tips"
+    },
+    {
+      "id": "module_2_lesson_yc3",
+      "foreign_key": "module_2_lesson_yc3",
+      "text::eng": "This week, your home activity is to practice talking to your children about their emotions, during One-on-One Time and at other moments during the week.\nAnd don’t forget to check in with yourself, too. Notice how you’re feeling as you go about your day."
     },
     {
       "id": "module_2_lesson_teen0",
@@ -310,15 +335,20 @@
       "id": "module_2_lesson_teen1",
       "foreign_key": "module_2_lesson_teen1",
       "text::eng": "Let’s see a story of parents talking about a difficult emotion with their teen.",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_2_teen"
     },
     {
       "id": "module_2_lesson_teen2",
       "foreign_key": "module_2_lesson_teen2",
       "text::eng": "💡Here are 5 things about how to talk about emotions with your children & your home activity for the week. ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_2_tips"
+    },
+    {
+      "id": "module_2_lesson_teen3",
+      "foreign_key": "module_2_lesson_teen3",
+      "text::eng": "This week, your home activity is to practice talking to your children about their emotions, during One-on-One Time and at other moments during the week.\nAnd don’t forget to check in with yourself, too. Notice how you’re feeling as you go about your day."
     },
     {
       "id": "module_2_reminder_1 0",
@@ -330,8 +360,8 @@
       "id": "module_2_reminder_2 0",
       "foreign_key": "module_2_reminder_2 0",
       "title::eng": "Chat session reminder",
-      "text::eng": "Can you believe that a whole week has gone by? Our next chat session will be later at [INSERT DATE & TIME]. We will continue learning about the benefits of talking about emotions with our children. Chat soon! ",
-      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session"
+      "text::eng": "Can you believe that a whole week has gone by? Our next chat session will be later at **[INSERT DATE & TIME]**. We will continue learning about the benefits of talking about emotions with our children. Chat soon! ",
+      "guidance::eng": "Replace **[INSERT DATE & TIME]** with the date of the chat session"
     },
     {
       "id": "module_2_chat0",
@@ -357,8 +387,8 @@
       "id": "module_2_chat3",
       "foreign_key": "module_2_chat3",
       "title::eng": "Message 4: Discussing solution",
-      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
-      "guidance::eng": "Replace [name challenge] with the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
+      "text::eng": "Can we work together to think of a positive solution to **[name challenge]**?",
+      "guidance::eng": "Replace **[name challenge]** with the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible solutions to the challenges."
     },
     {
       "id": "module_2_chat4",
@@ -371,7 +401,7 @@
       "foreign_key": "module_2_chat5",
       "title::eng": "Message 6: Take a Pause ",
       "text::eng": "Before we end today’s chat session, let's take a pause together. Remember that this is something you can do whenever you are feeling stressed, or your children are annoying you. \n\nThank you. The work you have done today is hard work – but it’s also very valuable work. It will help you to manage your own stress and give your children the tools they need to manage theirs. Have a peaceful and happy day!",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "take_a_pause"
     },
     {
@@ -383,22 +413,27 @@
       "id": "module_3_lesson1",
       "foreign_key": "module_3_lesson1",
       "text::eng": "Let’s look at a story that shows a parent giving specific and positive instructions to their teen: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_3_teen"
     },
     {
       "id": "module_3_lesson2",
       "foreign_key": "module_3_lesson2",
       "text::eng": "Let’s see a story of parents giving praise to their child for following instructions: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_3_yc"
     },
     {
       "id": "module_3_lesson3",
       "foreign_key": "module_3_lesson3",
       "text::eng": "Now let’s move on to the parenting tip. Here are 3 steps to help you to get your children to follow your instructions more often:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_3_tips"
+    },
+    {
+      "id": "module_3_lesson4",
+      "foreign_key": "module_3_lesson4",
+      "text::eng": "For home activity this week, continue spending one-on-one time with your child and sharing emotions. Try to be positive, specific, and realistic when giving instructions and praise them afterwards. You can also try praising yourself and other people in your household!"
     },
     {
       "id": "module_3_lesson_yc0",
@@ -409,15 +444,20 @@
       "id": "module_3_lesson_yc1",
       "foreign_key": "module_3_lesson_yc1",
       "text::eng": "Let’s see a story of parents giving praise to their child for following instructions: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_3_yc"
     },
     {
       "id": "module_3_lesson_yc2",
       "foreign_key": "module_3_lesson_yc2",
       "text::eng": "Now let’s move on to the parenting tip. Here are 3 steps to help you to get your children to follow your instructions more often:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_3_tips"
+    },
+    {
+      "id": "module_3_lesson_yc3",
+      "foreign_key": "module_3_lesson_yc3",
+      "text::eng": "For home activity this week, continue spending one-on-one time with your child and sharing emotions. Try to be positive, specific, and realistic when giving instructions and praise them afterwards. You can also try praising yourself and other people in your household!"
     },
     {
       "id": "module_3_lesson_teen0",
@@ -428,15 +468,20 @@
       "id": "module_3_lesson_teen1",
       "foreign_key": "module_3_lesson_teen1",
       "text::eng": "Let’s look at a story that shows a parent giving specific and positive instructions to their teen: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_3_teen"
     },
     {
       "id": "module_3_lesson_teen2",
       "foreign_key": "module_3_lesson_teen2",
       "text::eng": "Now let’s move on to the parenting tip. Here are 3 steps to help you to get your children to follow your instructions more often:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_3_tips"
+    },
+    {
+      "id": "module_3_lesson_teen3",
+      "foreign_key": "module_3_lesson_teen3",
+      "text::eng": "For home activity this week, continue spending one-on-one time with your child and sharing emotions. Try to be positive, specific, and realistic when giving instructions and praise them afterwards. You can also try praising yourself and other people in your household!"
     },
     {
       "id": "module_3_reminder_1 0",
@@ -448,15 +493,15 @@
       "id": "module_3_reminder_2 0",
       "foreign_key": "module_3_reminder_2 0",
       "title::eng": "Chat session reminder",
-      "text::eng": "Hello! Can you believe that another week has gone by? Our next chat session will be later at [INSERT DATE & TIME]. We will continue chatting about how to get your children to follow instructions. Chat soon!",
-      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session"
+      "text::eng": "Hello! Can you believe that another week has gone by? Our next chat session will be later at **[INSERT DATE & TIME]**. We will continue chatting about how to get your children to follow instructions. Chat soon!",
+      "guidance::eng": "Replace **[INSERT DATE & TIME]** with the date of the chat session"
     },
     {
       "id": "module_3_chat0",
       "foreign_key": "module_3_chat0",
       "title::eng": "Message 1: Welcome",
-      "text::eng": "Welcome to Module 3 of @global.prog_name! Well done for making the time today. How is everybody doing? I am feeling [INSERT EMOTION]. Anyone else want to share?",
-      "guidance::eng": "Replace [INSERT EMOTION] with what you are feeling.Allow time for parents to share how they are feeling. "
+      "text::eng": "Welcome to Module 3 of @global.prog_name! Well done for making the time today. How is everybody doing? I am feeling **[INSERT EMOTION]**. Anyone else want to share?",
+      "guidance::eng": "Replace **[INSERT EMOTION]** with what you are feeling.Allow time for parents to share how they are feeling. "
     },
     {
       "id": "module_3_chat1",
@@ -475,7 +520,7 @@
       "id": "module_3_chat3",
       "foreign_key": "module_3_chat3",
       "title::eng": "Message 4: Discussing solution",
-      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "text::eng": "Can we work together to think of a positive solution to **[name challenge]**?",
       "guidance::eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible challenges and solutions."
     },
     {
@@ -489,7 +534,7 @@
       "foreign_key": "module_3_chat5",
       "title::eng": "Message 6: Take a Pause ",
       "text::eng": "Before we end today’s module, let's take a pause together. Remember that this is something you can do whenever you are feeling stressed, or your children are annoying you.\n\nThank you for working as hard as you do as parents. The commitment you are showing to improving the lives of your children just by being here is worth the final note of praise in our module today: Truly well done.",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "take_a_pause"
     },
     {
@@ -501,22 +546,27 @@
       "id": "module_4_lesson1",
       "foreign_key": "module_4_lesson1",
       "text::eng": "Let’s look at a story about parents making a rule about tablet use with their teen: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_4_teen"
     },
     {
       "id": "module_4_lesson2",
       "foreign_key": "module_4_lesson2",
       "text::eng": "Let’s see a story of parents setting routines for bedtime: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_4_yc"
     },
     {
       "id": "module_4_lesson3",
       "foreign_key": "module_4_lesson3",
       "text::eng": "Now let’s move on to today’s parent tip. Here are 4 steps you can take to help your children follow household rules and routines:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_4_tips"
+    },
+    {
+      "id": "module_4_lesson4",
+      "foreign_key": "module_4_lesson4",
+      "text::eng": "This week’s home activity is to continue spending One-on-One time with your children. Also try to create one household rule and one routine with your children. Remember to involve them in the discussion about why it is important and what the rule or routine can be."
     },
     {
       "id": "module_4_lesson_yc0",
@@ -527,22 +577,27 @@
       "id": "module_4_lesson_yc1",
       "foreign_key": "module_4_lesson_yc1",
       "text::eng": "Let’s look at a story about parents making a rule about playing soccerball use with their child: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_4_yc_1"
     },
     {
       "id": "module_4_lesson_yc2",
       "foreign_key": "module_4_lesson_yc2",
       "text::eng": "Let’s see a story of parents setting routines for bedtime: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_4_yc"
     },
     {
       "id": "module_4_lesson_yc3",
       "foreign_key": "module_4_lesson_yc3",
       "text::eng": "Now let’s move on to today’s parent tip. Here are 4 steps you can take to help your children follow household rules and routines:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_4_tips"
+    },
+    {
+      "id": "module_4_lesson_yc4",
+      "foreign_key": "module_4_lesson_yc4",
+      "text::eng": "This week’s home activity is to continue spending One-on-One time with your children. Also try to create one household rule and one routine with your children. Remember to involve them in the discussion about why it is important and what the rule or routine can be."
     },
     {
       "id": "module_4_lesson_teen0",
@@ -553,15 +608,20 @@
       "id": "module_4_lesson_teen1",
       "foreign_key": "module_4_lesson_teen1",
       "text::eng": "Let’s look at a story about parents making a rule about tablet use with their teen: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_4_teen"
     },
     {
       "id": "module_4_lesson_teen2",
       "foreign_key": "module_4_lesson_teen2",
       "text::eng": "Now let’s move on to today’s parent tip. Here are 4 steps you can take to help your children follow household rules and routines:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_4_tips"
+    },
+    {
+      "id": "module_4_lesson_teen3",
+      "foreign_key": "module_4_lesson_teen3",
+      "text::eng": "This week’s home activity is to continue spending One-on-One time with your children. Also try to create one household rule and one routine with your children. Remember to involve them in the discussion about why it is important and what the rule or routine can be."
     },
     {
       "id": "module_4_reminder_1 0",
@@ -573,8 +633,8 @@
       "id": "module_4_reminder_2 0",
       "foreign_key": "module_4_reminder_2 0",
       "title::eng": "Chat session reminder",
-      "text::eng": "Hello! It is the time of the week again! Our next session will be later at [INSERT DATE & TIME]. We will be learning about how to make rules and routines with our children. Chat soon! ",
-      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session"
+      "text::eng": "Hello! It is the time of the week again! Our next session will be later at **[INSERT DATE & TIME]**. We will be learning about how to make rules and routines with our children. Chat soon! ",
+      "guidance::eng": "Replace **[INSERT DATE & TIME]** with the date of the chat session"
     },
     {
       "id": "module_4_chat0",
@@ -600,7 +660,7 @@
       "id": "module_4_chat3",
       "foreign_key": "module_4_chat3",
       "title::eng": "Message 4: Discussing solution",
-      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
+      "text::eng": "Can we work together to think of a positive solution to **[name challenge]**?",
       "guidance::eng": "Choose the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible challenges and solutions."
     },
     {
@@ -614,7 +674,7 @@
       "foreign_key": "module_4_chat5",
       "title::eng": "Message 6: Take a Pause ",
       "text::eng": "Before we end today’s module let’s take a pause together. Remember that this is something you can do whenever you are feeling stressed, or your children are annoying you.\n\nThank you so much for a wonderful session. I hope the rules and routines you introduce into your homes help make your household more manageable. Have a peaceful and happy day!",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "take_a_pause"
     },
     {
@@ -626,22 +686,27 @@
       "id": "module_5_lesson1",
       "foreign_key": "module_5_lesson1",
       "text::eng": "Let’s look at a story that shows how you can redirect your children from negative to positive behaviours before they get worse.",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_5_yc"
     },
     {
       "id": "module_5_lesson2",
       "foreign_key": "module_5_lesson2",
       "text::eng": "Let’s look at how parents can use consequences with their children and teens:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_5_teen"
     },
     {
       "id": "module_5_lesson3",
       "foreign_key": "module_5_lesson3",
       "text::eng": "Now let’s chat about today’s parent tip - how to respond with positive discipline when children misbehave. Here are 3 steps you can follow: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_5_tips"
+    },
+    {
+      "id": "module_5_lesson4",
+      "foreign_key": "module_5_lesson4",
+      "text::eng": "For this week, continue spending One-on-One time with your children. Also, try to avoid the need to use discipline by redirecting your children to positive behaviours. You can also think of 1 behaviour and consequence that you might need to use. "
     },
     {
       "id": "module_5_lesson_yc0",
@@ -652,22 +717,27 @@
       "id": "module_5_lesson_yc1",
       "foreign_key": "module_5_lesson_yc1",
       "text::eng": "Let’s look at a story that shows how you can redirect your children from negative to positive behaviours before they get worse.",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_5_yc"
     },
     {
       "id": "module_5_lesson_yc2",
       "foreign_key": "module_5_lesson_yc2",
       "text::eng": "Let’s look at how parents can use consequences with their children:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_5_yc_1"
     },
     {
       "id": "module_5_lesson_yc3",
       "foreign_key": "module_5_lesson_yc3",
       "text::eng": "Now let’s chat about today’s parent tip - how to respond with positive discipline when children misbehave. Here are 3 steps you can follow: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_5_tips"
+    },
+    {
+      "id": "module_5_lesson_yc4",
+      "foreign_key": "module_5_lesson_yc4",
+      "text::eng": "For this week, continue spending One-on-One time with your children. Also, try to avoid the need to use discipline by redirecting your children to positive behaviours. You can also think of 1 behaviour and consequence that you might need to use. "
     },
     {
       "id": "module_5_lesson_teen0",
@@ -678,15 +748,20 @@
       "id": "module_5_lesson_teen1",
       "foreign_key": "module_5_lesson_teen1",
       "text::eng": "Let’s look at how parents can use consequences with their children:  ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_5_teen"
     },
     {
       "id": "module_5_lesson_teen2",
       "foreign_key": "module_5_lesson_teen2",
       "text::eng": "Now let’s chat about today’s parent tip - how to respond with positive discipline when children misbehave. Here are 3 steps you can follow: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_5_tips"
+    },
+    {
+      "id": "module_5_lesson_teen3",
+      "foreign_key": "module_5_lesson_teen3",
+      "text::eng": "For this week, continue spending One-on-One time with your children. Also, try to avoid the need to use discipline by redirecting your children to positive behaviours. You can also think of 1 behaviour and consequence that you might need to use. "
     },
     {
       "id": "module_5_reminder_1 0",
@@ -710,8 +785,8 @@
       "id": "module_5_reminder_2 0",
       "foreign_key": "module_5_reminder_2 0",
       "title::eng": "Chat session reminder",
-      "text::eng": "Hello! It is the time of the week again! Our next session will be later at [INSERT DATE & TIME]. We will be learning about how to make rules and routines with our children. Chat soon! ",
-      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session"
+      "text::eng": "Hello! It is the time of the week again! Our next session will be later at **[INSERT DATE & TIME]**. We will be learning about how to make rules and routines with our children. Chat soon! ",
+      "guidance::eng": "Replace **[INSERT DATE & TIME]** with the date of the chat session"
     },
     {
       "id": "module_5_chat0",
@@ -737,8 +812,8 @@
       "id": "module_5_chat3",
       "foreign_key": "module_5_chat3",
       "title::eng": "Message 4: Discussing solution",
-      "text::eng": "Can we work together to think of a positive solution to [name challenge]?",
-      "guidance::eng": "Replace [name challenge] with the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible challenges and solutions."
+      "text::eng": "Can we work together to think of a positive solution to **[name challenge]**?",
+      "guidance::eng": "Replace **[name challenge]** with the challenge with the highest vote. Encourage parents to work together to identify positive solutions. Here are some possible challenges and solutions."
     },
     {
       "id": "module_5_chat4",
@@ -751,7 +826,7 @@
       "foreign_key": "module_5_chat5",
       "title::eng": "Message 6: Take a Pause ",
       "text::eng": "Before we end today’s module let’s take a short pause together. Remember that this is something you can do whenever you are feeling stressed or overwhelmed. You can also do it to appreciate a positive moment, too! \n\nWhat a wonderful session! Have a peaceful and happy day!",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "take_a_pause"
     },
     {
@@ -763,21 +838,21 @@
       "id": "module_6_lesson1",
       "foreign_key": "module_6_lesson1",
       "text::eng": "Let’s look at a story about how you can work with your children to find a solution to a problem instead of having to use consequences: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_6_yc"
     },
     {
       "id": "module_6_lesson2",
       "foreign_key": "module_6_lesson2",
       "text::eng": "Let's look at how a situation when our children get bullied by others online: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_6_teen"
     },
     {
       "id": "module_6_lesson3",
       "foreign_key": "module_6_lesson3",
       "text::eng": "Now let’s move on to the final parenting tip on problem solving with your children. We have been doing this throughout the programme. Now it is time to learn how we can involve our children in the process! Here are the 4 basic steps for problem solving:",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_6_tips"
     },
     {
@@ -789,14 +864,14 @@
       "id": "module_6_lesson_yc1",
       "foreign_key": "module_6_lesson_yc1",
       "text::eng": "Let’s look at a story about how you can work with your children to find a solution to a problem instead of having to use consequences: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_6_yc"
     },
     {
       "id": "module_6_lesson_yc2",
       "foreign_key": "module_6_lesson_yc2",
       "text::eng": "Now let’s move on to the final parenting tip on problem solving with your children. We have been doing this throughout the programme. Now it is time to learn how we can involve our children in the process! Here are the 4 basic steps for problem solving:",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_6_tips"
     },
     {
@@ -808,14 +883,14 @@
       "id": "module_6_lesson_teen1",
       "foreign_key": "module_6_lesson_teen1",
       "text::eng": "Let's look at how a situation when our children get bullied by others online: ",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_6_teen"
     },
     {
       "id": "module_6_lesson_teen2",
       "foreign_key": "module_6_lesson_teen2",
       "text::eng": "Now let’s move on to the final parenting tip on problem solving with your children. We have been doing this throughout the programme. Now it is time to learn how we can involve our children in the process! Here are the 4 basic steps for problem solving:",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "module_6_tips"
     },
     {
@@ -835,15 +910,15 @@
       "id": "module_6_reminder_2 0",
       "foreign_key": "module_6_reminder_2 0",
       "title::eng": "Chat session reminder",
-      "text::eng": "Hello! I hope everybody had a good week! Our final session will be later at [INSERT DATE & TIME]. ",
-      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session. If a new group leader has not yet volunteered to administrate the group, send an additional message asking once again if anybody would like to volunteer after the programme ends next week."
+      "text::eng": "Hello! I hope everybody had a good week! Our final session will be later at ****[INSERT DATE & TIME]****. ",
+      "guidance::eng": "Replace **[INSERT DATE & TIME]** with the date of the chat session. If a new group leader has not yet volunteered to administrate the group, send an additional message asking once again if anybody would like to volunteer after the programme ends next week."
     },
     {
       "id": "module_6_reminder_2_inperson 0",
       "foreign_key": "module_6_reminder_2_inperson 0",
       "title::eng": "Chat session reminder",
-      "text::eng": "Hello! I hope everybody had a good week! Our final session will be later at [INSERT DATE & TIME]. We will be meeting in person at [VENUE]. See you all soon!",
-      "guidance::eng": "Replace [INSERT DATE & TIME] with the date of the chat session. \nReplace [VENUE] with the venue of the session. \n\nIf a new group leader has not yet volunteered to administrate the group, send an additional message asking once again if anybody would like to volunteer after the programme ends next week."
+      "text::eng": "Hello! I hope everybody had a good week! Our final session will be later at **[INSERT DATE & TIME]**. We will be meeting in person at **[VENUE]**. See you all soon!",
+      "guidance::eng": "Replace **[INSERT DATE & TIME]** with the date of the chat session. \nReplace **[VENUE]** with the venue of the session. \n\nIf a new group leader has not yet volunteered to administrate the group, send an additional message asking once again if anybody would like to volunteer after the programme ends next week."
     },
     {
       "id": "module_6_chat0",
@@ -864,7 +939,7 @@
       "foreign_key": "module_6_chat3",
       "title::eng": "Message 3: Stone Soup",
       "text::eng": "Thank you for sharing. Now you can sit back and enjoy a story that we have shared at the end of all of our parenting programmes.",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "stone_soup"
     },
     {
@@ -878,7 +953,7 @@
       "id": "module_6_chat4",
       "foreign_key": "module_6_chat5",
       "title::eng": "Message 5: Offer for Questions about ongoing support through the group",
-      "text::eng": "Thank you to [Insert Name of New Group Administrator] who will be taking over as the group administrator. Do any of you have any questions about how you can continue to use the group going forward?",
+      "text::eng": "Thank you to **[Insert Name of New Group Administrator]** who will be taking over as the group administrator. Do any of you have any questions about how you can continue to use the group going forward?",
       "guidance::eng": "Allow a few minutes for parents to raise any questions. Remember to thank parents for their questions and let them take the lead in the ongoing planning for the group."
     },
     {
@@ -886,7 +961,7 @@
       "foreign_key": "module_6_chat6",
       "title::eng": "Message 6: Thank you & closing",
       "text::eng": "Let’s close with an activity that is similar to Taking a Pause. Since it is the last module of the programme, we take this opportunity to reconnect with ourselves and our families through a sense of love and support.\n\nThank you and well done for completing the ParentChat programme! You have shown great love and commitment to your families by being here. It has been a pleasure to be on this journey with you.",
-      "asset_type": "media",
+      "asset_type": "youtube",
       "asset": "take_a_pause"
     },
     {

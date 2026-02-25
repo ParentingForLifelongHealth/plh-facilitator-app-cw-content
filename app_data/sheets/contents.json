@@ -122,8 +122,8 @@
       "data_list_name": "delivery",
       "_source": {
         "name": "CW Sheets",
-        "path": "data/articles_CW.xlsx",
-        "url": "https://docs.google.com/spreadsheets/d/1VVHcts85jXT-kJPs3nysC_qNiS7bZj4hP_QhPOXr4hE"
+        "path": "data/deployment_data_cw.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
       }
     },
     "gender": {
@@ -284,6 +284,16 @@
         }
       }
     },
+    "neighbourhoods": {
+      "flow_type": "data_list",
+      "flow_name": "neighbourhoods",
+      "data_list_name": "neighbourhoods",
+      "_source": {
+        "name": "CW Sheets",
+        "path": "data/deployment_data_cw.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
+      }
+    },
     "number_data": {
       "flow_type": "data_list",
       "flow_name": "number_data",
@@ -441,16 +451,6 @@
         "name": {
           "type": "number"
         }
-      }
-    },
-    "regions": {
-      "flow_type": "data_list",
-      "flow_name": "regions",
-      "data_list_name": "regions",
-      "_source": {
-        "name": "CW Sheets",
-        "path": "data/deployment_data_cw.xlsx",
-        "url": "https://docs.google.com/spreadsheets/d/12QVXjDCOl2_BIjplQOsyf7HiRZZSOsw2txEMv-5D9zQ"
       }
     },
     "report_answers": {
@@ -2805,9 +2805,9 @@
       "flow_type": "template",
       "flow_name": "section_header",
       "_source": {
-        "name": "Global",
-        "path": "templates/navigation.xlsx",
-        "url": "https://docs.google.com/spreadsheets/d/15eLW60hvhMB4AeBmbWm1S9dpNDYrOhFHndJTveLRtjQ"
+        "name": "CW Sheets",
+        "path": "templates/navigation_cw.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1V_yaJDr0JmBPB3i3y_0qcpvs5U5_9hTyT92OM-03KAA"
       }
     },
     "single_attendance": {

@@ -29,7 +29,6 @@
     {
       "type": "text",
       "value": "@item.title",
-      "parameter_list": "style: emphasised; ",
       "style_list": "flex:1;"
     },
     {
@@ -40,7 +39,8 @@
       "type": "button",
       "name": "goto_module",
       "value": "Deliver",
-      "action_list": "click | set_field: current_module_no: @item.id;\nclick | set_field: current_module: @item.title;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: home_screen;\nclick | nav_stack: open | template: article_loop, header: false;\ncompleted | emit: force_reload;\ncompleted | emit: server_sync;"
+      "action_list": "click | set_field: current_module_no: @item.id;\nclick | set_field: current_module: @item.title;\nclick | set_field: current_report_id: @local.report_id;\nclick | go_to: home_screen;\nclick | nav_stack: open | template: article_loop, header: false;\ncompleted | emit: force_reload;\ncompleted | emit: server_sync;",
+      "parameter_list": "variant: card; "
     },
     {
       "type": "end_display_group"

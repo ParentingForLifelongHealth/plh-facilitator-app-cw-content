@@ -11,8 +11,8 @@
 | audio | 3 |
 | button | 132 |
 | carousel | 2 |
-| combo_box | 18 |
-| data_items | 124 |
+| combo_box | 16 |
+| data_items | 122 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -30,7 +30,7 @@
 | round_button | 39 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1163 |
+| set_variable | 1149 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -38,9 +38,9 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 394 |
+| text | 376 |
 | text_area | 4 |
-| text_box | 31 |
+| text_box | 27 |
 | title | 71 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
@@ -76,9 +76,9 @@
 | set_data | 29 |
 | set_field | 94 |
 | set_item | 13 |
-| set_local | 143 |
+| set_local | 137 |
 | share | 5 |
-| toast | 1 |
+| toast | 2 |
 | user | 4 |
 </details>
 
@@ -120,6 +120,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/icons/book_white.svg | 1.5 |
 | images/icons/bookmarks-outline.svg | 0.4 |
 | images/icons/check_circle.svg | 1.2 |
+| images/icons/chevron-back.svg | 0.3 |
 | images/icons/close-circle-navy.svg | 1.4 |
 | images/icons/content.svg | 7.2 |
 | images/icons/create-outline.svg | 0.6 |

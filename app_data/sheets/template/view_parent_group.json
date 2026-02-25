@@ -51,6 +51,41 @@
       "_nested_name": "current_age_group"
     },
     {
+      "parameter_list": {
+        "sort": "@item.name"
+      },
+      "condition": false,
+      "type": "set_variable",
+      "name": "set_variable_6",
+      "_nested_name": "set_variable_6",
+      "_dynamicFields": {
+        "parameter_list": {
+          "sort": [
+            {
+              "fullExpression": "@item.name",
+              "matchedExpression": "@item.name",
+              "type": "item",
+              "fieldName": "name"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@item.name": [
+          "parameter_list.sort"
+        ]
+      }
+    },
+    {
+      "parameter_list": {
+        "limit": "1"
+      },
+      "condition": false,
+      "type": "set_variable",
+      "name": "set_variable_7",
+      "_nested_name": "set_variable_7"
+    },
+    {
       "type": "data_items",
       "value": "@data.parent_groups",
       "_translations": {
@@ -79,8 +114,8 @@
       "parameter_list": {
         "filter": "(@item.id == @fields.current_group_id)"
       },
-      "name": "data_items_6",
-      "_nested_name": "data_items_6",
+      "name": "data_items_8",
+      "_nested_name": "data_items_8",
       "_dynamicFields": {
         "value": [
           {
@@ -478,11 +513,11 @@
               "value": "parent_list",
               "rows": [],
               "name": "parent_list",
-              "_nested_name": "tabs_22.tab_1.parent_list"
+              "_nested_name": "tabs_24.tab_1.parent_list"
             }
           ],
           "name": "tab_1",
-          "_nested_name": "tabs_22.tab_1",
+          "_nested_name": "tabs_24.tab_1",
           "_dynamicFields": {
             "value": [
               {
@@ -508,11 +543,11 @@
               "value": "group_actions",
               "rows": [],
               "name": "group_actions",
-              "_nested_name": "tabs_22.tab_2.group_actions"
+              "_nested_name": "tabs_24.tab_2.group_actions"
             }
           ],
           "name": "tab_2",
-          "_nested_name": "tabs_22.tab_2",
+          "_nested_name": "tabs_24.tab_2",
           "_dynamicFields": {
             "value": [
               {
@@ -530,8 +565,8 @@
           }
         }
       ],
-      "name": "tabs_22",
-      "_nested_name": "tabs_22"
+      "name": "tabs_24",
+      "_nested_name": "tabs_24"
     }
   ],
   "_source": {
