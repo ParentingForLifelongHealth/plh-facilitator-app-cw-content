@@ -53,7 +53,7 @@
       "name": "button_apple_sign_in",
       "value": "@global.login_apple",
       "action_list": "click | emit: force_reprocess;",
-      "condition": "@fields._platform === \"ios\" || @fields._operating_system === \"ios\" || @fields._operating_system === \"mac\"",
+      "condition": "@fields._platform === \"ios\" || @fields._operating_system === \"ios\"",
       "comment": "max-width: max-content;"
     },
     {

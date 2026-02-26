@@ -271,11 +271,85 @@
                       "trigger": "click",
                       "action_id": "save_to_device",
                       "args": [
+                        "@item.pdf_asset_eng"
+                      ],
+                      "_raw": "click | save_to_device: @item.pdf_asset_eng"
+                    }
+                  ],
+                  "condition": "@fields._app_language == \"cw_en\"",
+                  "parameter_list": {
+                    "variant": "no-background",
+                    "icon_src": "images/icons/download.svg"
+                  },
+                  "exclude_from_translation": true,
+                  "_nested_name": "display_group_7.data_items_1.display_group_1_@item.id.download",
+                  "_dynamicFields": {
+                    "action_list": {
+                      "0": {
+                        "args": {
+                          "0": [
+                            {
+                              "fullExpression": "@item.pdf_asset_eng",
+                              "matchedExpression": "@item.pdf_asset_eng",
+                              "type": "item",
+                              "fieldName": "pdf_asset_eng"
+                            }
+                          ]
+                        },
+                        "_raw": [
+                          {
+                            "fullExpression": "click | save_to_device: @item.pdf_asset_eng",
+                            "matchedExpression": "@item.pdf_asset_eng",
+                            "type": "item",
+                            "fieldName": "pdf_asset_eng"
+                          }
+                        ]
+                      }
+                    },
+                    "condition": [
+                      {
+                        "fullExpression": "@fields._app_language == \"cw_en\"",
+                        "matchedExpression": "@fields._app_language",
+                        "type": "fields",
+                        "fieldName": "_app_language"
+                      }
+                    ],
+                    "_nested_name": [
+                      {
+                        "fullExpression": "display_group_7.data_items_1.display_group_1_@item.id.download",
+                        "matchedExpression": "@item.id.download",
+                        "type": "item",
+                        "fieldName": "id"
+                      }
+                    ]
+                  },
+                  "_dynamicDependencies": {
+                    "@item.pdf_asset_eng": [
+                      "action_list.0.args.0",
+                      "action_list.0._raw"
+                    ],
+                    "@fields._app_language": [
+                      "condition"
+                    ],
+                    "@item.id.download": [
+                      "_nested_name"
+                    ]
+                  }
+                },
+                {
+                  "type": "round_button",
+                  "name": "download",
+                  "action_list": [
+                    {
+                      "trigger": "click",
+                      "action_id": "save_to_device",
+                      "args": [
                         "@item.pdf_asset"
                       ],
                       "_raw": "click | save_to_device: @item.pdf_asset"
                     }
                   ],
+                  "condition": "@fields._app_language == \"cw_pap\"",
                   "parameter_list": {
                     "variant": "no-background",
                     "icon_src": "images/icons/download.svg"
@@ -305,6 +379,14 @@
                         ]
                       }
                     },
+                    "condition": [
+                      {
+                        "fullExpression": "@fields._app_language == \"cw_pap\"",
+                        "matchedExpression": "@fields._app_language",
+                        "type": "fields",
+                        "fieldName": "_app_language"
+                      }
+                    ],
                     "_nested_name": [
                       {
                         "fullExpression": "display_group_7.data_items_1.display_group_1_@item.id.download",
@@ -318,6 +400,9 @@
                     "@item.pdf_asset": [
                       "action_list.0.args.0",
                       "action_list.0._raw"
+                    ],
+                    "@fields._app_language": [
+                      "condition"
                     ],
                     "@item.id.download": [
                       "_nested_name"
@@ -695,8 +780,8 @@
     }
   ],
   "_source": {
-    "name": "Global",
-    "path": "templates/article_elements.xlsx",
-    "url": "https://docs.google.com/spreadsheets/d/1xoJQVGFuWx9EwRsSTIRYa_b-8655dQNzjGKr5gfarE4"
+    "name": "CW Sheets",
+    "path": "templates/article_elements CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1CZ4Wqut1IVfxu8lsN4_JFEuKqeGk1tIn0BB5m-MSnjQ"
   }
 }

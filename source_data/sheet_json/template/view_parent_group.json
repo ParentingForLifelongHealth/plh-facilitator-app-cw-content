@@ -30,6 +30,13 @@
       "name": "current_age_group"
     },
     {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_field: current_group_id: @items[0].id;\ndata_changed | set_field: current_group_name: @items[0].text;",
+      "parameter_list": "sort: @item.name;\nlimit: 1",
+      "condition": "@fields.current_group_id == new"
+    },
+    {
       "parameter_list": "sort: @item.name;",
       "condition": false
     },

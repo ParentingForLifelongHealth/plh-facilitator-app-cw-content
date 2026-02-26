@@ -174,11 +174,20 @@
         },
         {
           "trigger": "click",
+          "action_id": "set_field",
+          "args": [
+            "current_group_id",
+            "new"
+          ],
+          "_raw": "click | set_field: current_group_id: new"
+        },
+        {
+          "trigger": "click",
           "action_id": "go_to",
           "args": [
-            "profile_groups"
+            "view_parent_group"
           ],
-          "_raw": "click | go_to: profile_groups"
+          "_raw": "click | go_to: view_parent_group"
         },
         {
           "trigger": "click",
@@ -321,7 +330,7 @@
               }
             ]
           },
-          "5": {
+          "6": {
             "_raw": [
               {
                 "fullExpression": "click | toast | message: @global.group_created_confirmation",
@@ -386,8 +395,8 @@
           "action_list.2._raw"
         ],
         "@global.group_created_confirmation": [
-          "action_list.5._raw",
-          "action_list.5.params.message"
+          "action_list.6._raw",
+          "action_list.6.params.message"
         ],
         "!@local.valid": [
           "parameter_list.disabled"

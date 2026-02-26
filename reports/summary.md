@@ -12,7 +12,7 @@
 | button | 132 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 122 |
+| data_items | 124 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -27,7 +27,7 @@
 | qr_code | 2 |
 | radio_button_grid | 15 |
 | radio_list | 2 |
-| round_button | 39 |
+| round_button | 40 |
 | select_text | 2 |
 | set_field | 5 |
 | set_variable | 1149 |
@@ -72,11 +72,11 @@
 | pop_up | 19 |
 | reset_app | 4 |
 | reset_data | 3 |
-| save_to_device | 4 |
+| save_to_device | 5 |
 | set_data | 29 |
-| set_field | 94 |
+| set_field | 97 |
 | set_item | 13 |
-| set_local | 137 |
+| set_local | 139 |
 | share | 5 |
 | toast | 2 |
 | user | 4 |
@@ -87,8 +87,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 120645 KB | 120.6 MB |
-| unused | 10006 KB | 10 MB |
+| total | 120789 KB | 120.8 MB |
+| unused | 10008 KB | 10 MB |
 </details>
 
 <details open>
@@ -113,6 +113,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/flags/tz.svg | 0.5 |
 | images/flags/ug.svg | 3.9 |
 | images/flags/zm.svg | 5.4 |
+| images/icons/add-outline-brown.svg | 1.2 |
 | images/icons/add-outline-white.svg | 1.5 |
 | images/icons/add-outline.svg | 0.2 |
 | images/icons/archive.svg | 0.5 |
@@ -195,7 +196,6 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/articles/sessions.png | 759.8 | 1 |
 | images/backgrounds/home_top_left.svg | 2.4 | 1 |
 | images/backgrounds/reports_top_right.svg | 2 | 1 |
-| images/icons/add-outline-brown.svg | 1.2 | 1 |
 | images/icons/add_circle.svg | 0.4 | 1 |
 | images/icons/arrow_back.svg | 0.2 | 1 |
 | images/icons/arrow_forward.svg | 0.2 | 1 |
@@ -203,6 +203,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/cancel.svg | 0.4 | 3 |
 | images/icons/check_circle.png | 0.6 | 1 |
 | images/icons/checkmark-outline.svg | 0.2 | 2 |
+| images/icons/clipboard.svg | 6.5 | 1 |
 | images/icons/close-circle-brown.svg | 1.4 | 1 |
 | images/icons/cog_white.svg | 3.6 | 2 |
 | images/icons/copy-outline.svg | 0.4 | 2 |
@@ -210,7 +211,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/icons/docs.svg | 0.5 | 1 |
 | images/icons/document-lock-outline.svg | 0.7 | 1 |
 | images/icons/document-text-outline.svg | 0.5 | 1 |
-| images/icons/download.svg | 0.4 | 2 |
+| images/icons/download.svg | 0.4 | 3 |
 | images/icons/download_white.svg | 0.7 | 1 |
 | images/icons/edit.svg | 0.9 | 3 |
 | images/icons/expand_circle_right.svg | 0.5 | 6 |
@@ -268,6 +269,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | pdf/child_development_domain_pap.pdf | 723 | 1 |
 | pdf/child_development_stages_pap.pdf | 13058.3 | 1 |
 | pdf/children_with_disabilities_pap.pdf | 777.5 | 1 |
+| pdf/example_pdf.pdf | 139.4 | 16 |
 | pdf/individual_consultation_pap.pdf | 774.3 | 1 |
 | pdf/module_1_core_lesson_pap.pdf | 2896.6 | 1 |
 | pdf/module_1_core_lesson_yc_pap.pdf | 814.8 | 1 |

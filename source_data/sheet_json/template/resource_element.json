@@ -66,7 +66,16 @@
     {
       "type": "round_button",
       "name": "download",
+      "action_list": "click | save_to_device: @item.pdf_asset_eng",
+      "condition": "@fields._app_language == \"cw_en\"",
+      "parameter_list": "variant: no-background; \nicon_src: images/icons/download.svg;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "round_button",
+      "name": "download",
       "action_list": "click | save_to_device: @item.pdf_asset",
+      "condition": "@fields._app_language == \"cw_pap\"",
       "parameter_list": "variant: no-background; \nicon_src: images/icons/download.svg;",
       "exclude_from_translation": true
     },

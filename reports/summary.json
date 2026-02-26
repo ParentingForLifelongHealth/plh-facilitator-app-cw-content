@@ -39,7 +39,7 @@
       },
       {
         "type": "data_items",
-        "count": 122
+        "count": 124
       },
       {
         "type": "date_time_picker",
@@ -99,7 +99,7 @@
       },
       {
         "type": "round_button",
-        "count": 39
+        "count": 40
       },
       {
         "type": "select_text",
@@ -255,7 +255,7 @@
       },
       {
         "type": "save_to_device",
-        "count": 4
+        "count": 5
       },
       {
         "type": "set_data",
@@ -263,7 +263,7 @@
       },
       {
         "type": "set_field",
-        "count": 94
+        "count": 97
       },
       {
         "type": "set_item",
@@ -271,7 +271,7 @@
       },
       {
         "type": "set_local",
-        "count": 137
+        "count": 139
       },
       {
         "type": "share",
@@ -291,12 +291,12 @@
     "data": [
       {
         "assets": "total",
-        "KB": "120645 KB",
-        "MB": "120.6 MB"
+        "KB": "120789 KB",
+        "MB": "120.8 MB"
       },
       {
         "assets": "unused",
-        "KB": "10006 KB",
+        "KB": "10008 KB",
         "MB": "10 MB"
       }
     ]
@@ -362,6 +362,10 @@
       {
         "path": "images/flags/zm.svg",
         "size_kb": 5.4
+      },
+      {
+        "path": "images/icons/add-outline-brown.svg",
+        "size_kb": 1.2
       },
       {
         "path": "images/icons/add-outline-white.svg",
@@ -643,11 +647,6 @@
         "size_kb": 2
       },
       {
-        "path": "images/icons/add-outline-brown.svg",
-        "count": 1,
-        "size_kb": 1.2
-      },
-      {
         "path": "images/icons/add_circle.svg",
         "count": 1,
         "size_kb": 0.4
@@ -681,6 +680,11 @@
         "path": "images/icons/checkmark-outline.svg",
         "count": 2,
         "size_kb": 0.2
+      },
+      {
+        "path": "images/icons/clipboard.svg",
+        "count": 1,
+        "size_kb": 6.5
       },
       {
         "path": "images/icons/close-circle-brown.svg",
@@ -719,7 +723,7 @@
       },
       {
         "path": "images/icons/download.svg",
-        "count": 2,
+        "count": 3,
         "size_kb": 0.4
       },
       {
@@ -1006,6 +1010,11 @@
         "path": "pdf/children_with_disabilities_pap.pdf",
         "count": 1,
         "size_kb": 777.5
+      },
+      {
+        "path": "pdf/example_pdf.pdf",
+        "count": 16,
+        "size_kb": 139.4
       },
       {
         "path": "pdf/individual_consultation_pap.pdf",
