@@ -34,7 +34,7 @@
       "type": "button",
       "value": "@global.add_parent",
       "action_list": "click | go_to: add_parent;",
-      "parameter_list": "style: alternative"
+      "parameter_list": "style: alternative;\nvariant: compact;"
     },
     {
       "type": "end_display_group"

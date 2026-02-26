@@ -13,14 +13,14 @@
       "type": "combo_box",
       "name": "user_organisation_select",
       "value": "@fields.user_organisation",
-      "parameter_list": "answer_list: @data.user_organisation;\nplaceholder: @global.placeholder_user_organisation;\nvariant: dropdown;",
+      "parameter_list": "answer_list: @data.user_organisation;\nplaceholder: @global.placeholder_user_organisation;\n",
       "condition": "!!@fields.user_organisation",
       "exclude_from_translation": true
     },
     {
       "type": "combo_box",
       "name": "user_organisation_select",
-      "parameter_list": "answer_list: @data.user_organisation;\nplaceholder: @global.placeholder_user_organisation;\nvariant: dropdown;",
+      "parameter_list": "answer_list: @data.user_organisation;\nplaceholder: @global.placeholder_user_organisation;\n",
       "condition": "!@fields.user_organisation",
       "exclude_from_translation": true
     },

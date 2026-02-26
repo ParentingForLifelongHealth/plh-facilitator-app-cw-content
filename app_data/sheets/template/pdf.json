@@ -38,9 +38,9 @@
           "action_id": "set_local",
           "args": [
             "pdf_asset",
-            "@items[0].pdf_asset"
+            "@items[0].pdf_asset_eng"
           ],
-          "_raw": "data_changed | set_local : pdf_asset: @items[0].pdf_asset"
+          "_raw": "data_changed | set_local : pdf_asset: @items[0].pdf_asset_eng"
         },
         {
           "trigger": "data_changed",
@@ -52,6 +52,7 @@
           "_raw": "data_changed | set_local : pdf_title: @items[0].title"
         }
       ],
+      "condition": "@fields._app_language == \"cw_en\"",
       "exclude_from_translation": true,
       "name": "data_items_5",
       "_nested_name": "data_items_5",
@@ -71,7 +72,15 @@
               "fieldName": "pdf_id"
             }
           ]
-        }
+        },
+        "condition": [
+          {
+            "fullExpression": "@fields._app_language == \"cw_en\"",
+            "matchedExpression": "@fields._app_language",
+            "type": "fields",
+            "fieldName": "_app_language"
+          }
+        ]
       },
       "_dynamicDependencies": {
         "@item.id": [
@@ -79,6 +88,81 @@
         ],
         "@local.pdf_id": [
           "parameter_list.filter"
+        ],
+        "@fields._app_language": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "data_items",
+      "value": "pdf",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "filter": "@item.id == @local.pdf_id",
+        "limit": "1"
+      },
+      "action_list": [
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "pdf_asset",
+            "@items[0].pdf_asset"
+          ],
+          "_raw": "data_changed | set_local : pdf_asset: @items[0].pdf_asset"
+        },
+        {
+          "trigger": "data_changed",
+          "action_id": "set_local",
+          "args": [
+            "pdf_title",
+            "@items[0].title"
+          ],
+          "_raw": "data_changed | set_local : pdf_title: @items[0].title"
+        }
+      ],
+      "condition": "@fields._app_language == \"cw_pap\"",
+      "exclude_from_translation": true,
+      "name": "data_items_6",
+      "_nested_name": "data_items_6",
+      "_dynamicFields": {
+        "parameter_list": {
+          "filter": [
+            {
+              "fullExpression": "@item.id == @local.pdf_id",
+              "matchedExpression": "@item.id",
+              "type": "item",
+              "fieldName": "id"
+            },
+            {
+              "fullExpression": "@item.id == @local.pdf_id",
+              "matchedExpression": "@local.pdf_id",
+              "type": "local",
+              "fieldName": "pdf_id"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "fullExpression": "@fields._app_language == \"cw_pap\"",
+            "matchedExpression": "@fields._app_language",
+            "type": "fields",
+            "fieldName": "_app_language"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@item.id": [
+          "parameter_list.filter"
+        ],
+        "@local.pdf_id": [
+          "parameter_list.filter"
+        ],
+        "@fields._app_language": [
+          "condition"
         ]
       }
     },
@@ -151,7 +235,7 @@
           "style_list": [
             "flex: 1"
           ],
-          "_nested_name": "display_group_8.spacer"
+          "_nested_name": "display_group_9.spacer"
         },
         {
           "type": "round_button",
@@ -170,7 +254,7 @@
               "_raw": "click | save_to_device: @local.pdf_asset"
             }
           ],
-          "_nested_name": "display_group_8.download",
+          "_nested_name": "display_group_9.download",
           "_dynamicFields": {
             "action_list": {
               "0": {
@@ -203,8 +287,8 @@
           }
         }
       ],
-      "name": "display_group_8",
-      "_nested_name": "display_group_8"
+      "name": "display_group_9",
+      "_nested_name": "display_group_9"
     },
     {
       "type": "pdf",
@@ -261,8 +345,8 @@
     }
   ],
   "_source": {
-    "name": "Global",
-    "path": "templates/media.xlsx",
-    "url": "https://docs.google.com/spreadsheets/d/1sSfCRjKSDd7ZW2ILStLMbC2WjkJmUyosLnyoR62Jaf0"
+    "name": "CW Sheets",
+    "path": "data/media_data CW.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1s_CD8uRdXtAf6aVD7CpeGHI0mclyzEcg7whKxKsxt7k"
   }
 }

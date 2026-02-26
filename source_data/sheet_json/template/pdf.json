@@ -17,7 +17,16 @@
       "type": "data_items",
       "value": "pdf",
       "parameter_list": "filter: @item.id == @local.pdf_id;\nlimit: 1;",
+      "action_list": "data_changed | set_local : pdf_asset: @items[0].pdf_asset_eng;\ndata_changed | set_local : pdf_title: @items[0].title;",
+      "condition": "@fields._app_language == \"cw_en\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "data_items",
+      "value": "pdf",
+      "parameter_list": "filter: @item.id == @local.pdf_id;\nlimit: 1;",
       "action_list": "data_changed | set_local : pdf_asset: @items[0].pdf_asset;\ndata_changed | set_local : pdf_title: @items[0].title;",
+      "condition": "@fields._app_language == \"cw_pap\"",
       "exclude_from_translation": true
     },
     {
