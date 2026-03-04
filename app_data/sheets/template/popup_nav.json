@@ -72,8 +72,7 @@
       ],
       "rows": [
         {
-          "type": "round_button",
-          "name": "previous_article",
+          "type": "display_group",
           "action_list": [
             {
               "trigger": "click",
@@ -84,27 +83,54 @@
               "_raw": "click | emit:uncompleted"
             }
           ],
-          "parameter_list": {
-            "variant": "no-background",
-            "icon_src": "images/icons/arrow_back.svg"
-          },
-          "condition": "@local.show_previous",
-          "_nested_name": "display_group_6.previous_article",
-          "_dynamicFields": {
-            "condition": [
-              {
-                "fullExpression": "@local.show_previous",
-                "matchedExpression": "@local.show_previous",
-                "type": "local",
-                "fieldName": "show_previous"
+          "rows": [
+            {
+              "type": "round_button",
+              "name": "previous_article",
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "emit",
+                  "args": [
+                    "uncompleted"
+                  ],
+                  "_raw": "click | emit:uncompleted"
+                }
+              ],
+              "parameter_list": {
+                "variant": "no-background",
+                "icon_src": "images/icons/arrow_back.svg"
+              },
+              "condition": "@local.show_previous",
+              "_nested_name": "display_group_6.display_group_1.previous_article",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "@local.show_previous",
+                    "matchedExpression": "@local.show_previous",
+                    "type": "local",
+                    "fieldName": "show_previous"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.show_previous": [
+                  "condition"
+                ]
               }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@local.show_previous": [
-              "condition"
-            ]
-          }
+            },
+            {
+              "type": "text",
+              "name": "Back",
+              "value": "Back",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "display_group_6.display_group_1.Back"
+            }
+          ],
+          "name": "display_group_1",
+          "_nested_name": "display_group_6.display_group_1"
         },
         {
           "type": "text",
@@ -115,8 +141,7 @@
           "_nested_name": "display_group_6.spacer"
         },
         {
-          "type": "round_button",
-          "name": "next_article",
+          "type": "display_group",
           "action_list": [
             {
               "trigger": "click",
@@ -127,26 +152,55 @@
               "_raw": "click | emit:completed"
             }
           ],
-          "parameter_list": {
-            "icon_src": "images/icons/arrow_forward.svg"
-          },
-          "condition": "@local.show_next",
-          "_nested_name": "display_group_6.next_article",
-          "_dynamicFields": {
-            "condition": [
-              {
-                "fullExpression": "@local.show_next",
-                "matchedExpression": "@local.show_next",
-                "type": "local",
-                "fieldName": "show_next"
+          "rows": [
+            {
+              "type": "text",
+              "name": "Next",
+              "value": "Next",
+              "_translations": {
+                "value": {
+                  "cw_pap": true
+                }
+              },
+              "_nested_name": "display_group_6.display_group_3.Next"
+            },
+            {
+              "type": "round_button",
+              "name": "next_article",
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "emit",
+                  "args": [
+                    "completed"
+                  ],
+                  "_raw": "click | emit:completed"
+                }
+              ],
+              "parameter_list": {
+                "icon_src": "images/icons/arrow_forward.svg"
+              },
+              "condition": "@local.show_next",
+              "_nested_name": "display_group_6.display_group_3.next_article",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "@local.show_next",
+                    "matchedExpression": "@local.show_next",
+                    "type": "local",
+                    "fieldName": "show_next"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.show_next": [
+                  "condition"
+                ]
               }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@local.show_next": [
-              "condition"
-            ]
-          }
+            }
+          ],
+          "name": "display_group_3",
+          "_nested_name": "display_group_6.display_group_3"
         },
         {
           "type": "round_button",
@@ -366,8 +420,8 @@
     }
   ],
   "_source": {
-    "name": "Global",
-    "path": "templates/module_flow.xlsx",
-    "url": "https://docs.google.com/spreadsheets/d/1a_caZOGQfuJ6UEXGwdh78q4WBWXAUO0Uz3w391DaDeo"
+    "name": "CW Sheets",
+    "path": "templates/module_flow_cw.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1g1yY88AG9AnB-Dx-BeLjRxrsWJLS5v2KXJgn-8TdmiU"
   }
 }

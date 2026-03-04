@@ -1949,7 +1949,7 @@
         },
         {
           "type": "text",
-          "value": "(10 - 17)",
+          "value": "@global.error_child_age (10 - 17)",
           "_translations": {
             "value": {}
           },
@@ -1962,6 +1962,14 @@
           "name": "text_43",
           "_nested_name": "display_group_20.text_43",
           "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.error_child_age (10 - 17)",
+                "matchedExpression": "@global.error_child_age",
+                "type": "global",
+                "fieldName": "error_child_age"
+              }
+            ],
             "condition": [
               {
                 "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"teen_\")",
@@ -1984,6 +1992,9 @@
             ]
           },
           "_dynamicDependencies": {
+            "@global.error_child_age": [
+              "value"
+            ],
             "!@local.child_age_valid": [
               "condition"
             ],
@@ -1997,7 +2008,7 @@
         },
         {
           "type": "text",
-          "value": "(2 - 9)",
+          "value": "@global.error_child_age (2 - 9)",
           "_translations": {
             "value": {}
           },
@@ -2010,6 +2021,14 @@
           "name": "text_44",
           "_nested_name": "display_group_20.text_44",
           "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.error_child_age (2 - 9)",
+                "matchedExpression": "@global.error_child_age",
+                "type": "global",
+                "fieldName": "error_child_age"
+              }
+            ],
             "condition": [
               {
                 "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"yc_\")",
@@ -2032,6 +2051,9 @@
             ]
           },
           "_dynamicDependencies": {
+            "@global.error_child_age": [
+              "value"
+            ],
             "!@local.child_age_valid": [
               "condition"
             ],
@@ -2045,7 +2067,7 @@
         },
         {
           "type": "text",
-          "value": "(2 - 17)",
+          "value": "@global.error_child_age (2 - 17)",
           "_translations": {
             "value": {}
           },
@@ -2058,6 +2080,14 @@
           "name": "text_45",
           "_nested_name": "display_group_20.text_45",
           "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.error_child_age (2 - 17)",
+                "matchedExpression": "@global.error_child_age",
+                "type": "global",
+                "fieldName": "error_child_age"
+              }
+            ],
             "condition": [
               {
                 "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"mixed_\")",
@@ -2080,6 +2110,9 @@
             ]
           },
           "_dynamicDependencies": {
+            "@global.error_child_age": [
+              "value"
+            ],
             "!@local.child_age_valid": [
               "condition"
             ],

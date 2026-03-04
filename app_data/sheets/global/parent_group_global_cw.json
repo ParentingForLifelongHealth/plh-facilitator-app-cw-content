@@ -83,7 +83,15 @@
     },
     {
       "type": "declare_global_constant",
-      "name": "parent_count_text",
+      "name": "parent_count_text_sing",
+      "value": "Caregiver",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "parent_count_text_plur",
       "value": "Caregivers",
       "_translations": {
         "value": {
@@ -139,6 +147,14 @@
         "value": {
           "cw_pap": true
         }
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "group_details",
+      "value": "Group Details",
+      "_translations": {
+        "value": {}
       }
     },
     {
@@ -607,6 +623,14 @@
       "type": "declare_field_default",
       "name": "current_follow_ups_number",
       "value": 0
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "info_message_unchangable",
+      "value": "Age group and delivery type cannot be changed after the group is created.\nTo change these, delete this group and create a new one.",
+      "_translations": {
+        "value": {}
+      }
     }
   ],
   "_source": {

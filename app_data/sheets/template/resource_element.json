@@ -97,8 +97,7 @@
               "exclude_from_translation": true,
               "rows": [
                 {
-                  "type": "round_button",
-                  "name": "main_view",
+                  "type": "display_group",
                   "action_list": [
                     {
                       "trigger": "click",
@@ -112,12 +111,114 @@
                       }
                     }
                   ],
-                  "parameter_list": {
-                    "variant": "no-background",
-                    "icon_src": "images/icons/docs.svg"
-                  },
                   "exclude_from_translation": true,
-                  "_nested_name": "display_group_7.data_items_1.display_group_1_@item.id.main_view",
+                  "rows": [
+                    {
+                      "type": "round_button",
+                      "name": "main_view",
+                      "action_list": [
+                        {
+                          "trigger": "click",
+                          "action_id": "pop_up",
+                          "args": [
+                            "pdf_@local.resource_id"
+                          ],
+                          "_raw": "click | pop_up : pdf_@local.resource_id | fullscreen: true",
+                          "params": {
+                            "fullscreen": true
+                          }
+                        }
+                      ],
+                      "parameter_list": {
+                        "variant": "no-background",
+                        "icon_src": "images/icons/docs.svg"
+                      },
+                      "exclude_from_translation": true,
+                      "_nested_name": "display_group_7.data_items_1.display_group_1_@item.id.display_group_1.main_view",
+                      "_dynamicFields": {
+                        "action_list": {
+                          "0": {
+                            "args": {
+                              "0": [
+                                {
+                                  "fullExpression": "pdf_@local.resource_id",
+                                  "matchedExpression": "@local.resource_id",
+                                  "type": "local",
+                                  "fieldName": "resource_id"
+                                }
+                              ]
+                            },
+                            "_raw": [
+                              {
+                                "fullExpression": "click | pop_up : pdf_@local.resource_id | fullscreen: true",
+                                "matchedExpression": "@local.resource_id",
+                                "type": "local",
+                                "fieldName": "resource_id"
+                              }
+                            ]
+                          }
+                        },
+                        "_nested_name": [
+                          {
+                            "fullExpression": "display_group_7.data_items_1.display_group_1_@item.id.display_group_1.main_view",
+                            "matchedExpression": "@item.id.display_group_1.main_view",
+                            "type": "item",
+                            "fieldName": "id"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@local.resource_id": [
+                          "action_list.0.args.0",
+                          "action_list.0._raw"
+                        ],
+                        "@item.id.display_group_1.main_view": [
+                          "_nested_name"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": "@item.title",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "style_list": [
+                        "flex: 1"
+                      ],
+                      "exclude_from_translation": true,
+                      "name": "text_2",
+                      "_nested_name": "display_group_7.data_items_1.display_group_1_@item.id.display_group_1.text_2",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.title",
+                            "matchedExpression": "@item.title",
+                            "type": "item",
+                            "fieldName": "title"
+                          }
+                        ],
+                        "_nested_name": [
+                          {
+                            "fullExpression": "display_group_7.data_items_1.display_group_1_@item.id.display_group_1.text_2",
+                            "matchedExpression": "@item.id.display_group_1.text_2",
+                            "type": "item",
+                            "fieldName": "id"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.title": [
+                          "value"
+                        ],
+                        "@item.id.display_group_1.text_2": [
+                          "_nested_name"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": "display_group_1",
+                  "_nested_name": "display_group_7.data_items_1.display_group_1_@item.id.display_group_1",
                   "_dynamicFields": {
                     "action_list": {
                       "0": {
@@ -143,8 +244,8 @@
                     },
                     "_nested_name": [
                       {
-                        "fullExpression": "display_group_7.data_items_1.display_group_1_@item.id.main_view",
-                        "matchedExpression": "@item.id.main_view",
+                        "fullExpression": "display_group_7.data_items_1.display_group_1_@item.id.display_group_1",
+                        "matchedExpression": "@item.id.display_group_1",
                         "type": "item",
                         "fieldName": "id"
                       }
@@ -155,46 +256,7 @@
                       "action_list.0.args.0",
                       "action_list.0._raw"
                     ],
-                    "@item.id.main_view": [
-                      "_nested_name"
-                    ]
-                  }
-                },
-                {
-                  "type": "text",
-                  "value": "@item.title",
-                  "_translations": {
-                    "value": {}
-                  },
-                  "style_list": [
-                    "flex: 1"
-                  ],
-                  "exclude_from_translation": true,
-                  "name": "text_2",
-                  "_nested_name": "display_group_7.data_items_1.display_group_1_@item.id.text_2",
-                  "_dynamicFields": {
-                    "value": [
-                      {
-                        "fullExpression": "@item.title",
-                        "matchedExpression": "@item.title",
-                        "type": "item",
-                        "fieldName": "title"
-                      }
-                    ],
-                    "_nested_name": [
-                      {
-                        "fullExpression": "display_group_7.data_items_1.display_group_1_@item.id.text_2",
-                        "matchedExpression": "@item.id.text_2",
-                        "type": "item",
-                        "fieldName": "id"
-                      }
-                    ]
-                  },
-                  "_dynamicDependencies": {
-                    "@item.title": [
-                      "value"
-                    ],
-                    "@item.id.text_2": [
+                    "@item.id.display_group_1": [
                       "_nested_name"
                     ]
                   }
