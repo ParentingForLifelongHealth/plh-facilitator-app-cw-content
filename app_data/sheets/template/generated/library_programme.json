@@ -31,11 +31,9 @@
         },
         {
           "name": "display_title",
-          "value": "About @global.prog_name",
+          "value": "LEARN: About @global.prog_name",
           "_translations": {
-            "value": {
-              "cw_pap": true
-            }
+            "value": {}
           },
           "exclude_from_translation": true,
           "type": "set_variable",
@@ -43,7 +41,7 @@
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "About @global.prog_name",
+                "fullExpression": "LEARN: About @global.prog_name",
                 "matchedExpression": "@global.prog_name",
                 "type": "global",
                 "fieldName": "prog_name"

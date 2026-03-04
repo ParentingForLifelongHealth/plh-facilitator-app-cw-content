@@ -364,6 +364,33 @@
     },
     {
       "type": "text",
+      "name": "text_group_name",
+      "value": "@global.group_details",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "style": "emphasised"
+      },
+      "_nested_name": "text_group_name",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.group_details",
+            "matchedExpression": "@global.group_details",
+            "type": "global",
+            "fieldName": "group_details"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.group_details": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
       "name": "age_group",
       "value": "Age group: @local.current_age_group_text",
       "_translations": {
@@ -372,10 +399,7 @@
         }
       },
       "style_list": [
-        "color: gray",
-        "margin-top: -5px",
-        "margin-bottom: 12px",
-        "font-size: 14px"
+        "margin-top: -2px"
       ],
       "_nested_name": "age_group",
       "_dynamicFields": {
@@ -404,10 +428,7 @@
         }
       },
       "style_list": [
-        "color: gray",
-        "margin-top: -20px",
-        "margin-bottom: 12px",
-        "font-size: 14px"
+        "margin-top: -6px"
       ],
       "_nested_name": "delivery_type",
       "_dynamicFields": {
@@ -427,10 +448,49 @@
       }
     },
     {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_21",
-      "_nested_name": "set_variable_21"
+      "type": "text_bubble",
+      "value": "@global.info_message_unchangable",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "variant",
+          "args": [
+            "primary"
+          ],
+          "_raw": "variant: primary"
+        },
+        {
+          "trigger": "click",
+          "action_id": "speaker_name",
+          "args": [
+            "info"
+          ],
+          "_raw": "speaker_name: info"
+        }
+      ],
+      "style_list": [
+        "margin-top: -6px"
+      ],
+      "name": "text_bubble_22",
+      "_nested_name": "text_bubble_22",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.info_message_unchangable",
+            "matchedExpression": "@global.info_message_unchangable",
+            "type": "global",
+            "fieldName": "info_message_unchangable"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.info_message_unchangable": [
+          "value"
+        ]
+      }
     },
     {
       "type": "text",
@@ -466,8 +526,8 @@
         "value": {}
       },
       "exclude_from_translation": true,
-      "name": "text_23",
-      "_nested_name": "text_23",
+      "name": "text_24",
+      "_nested_name": "text_24",
       "_dynamicFields": {
         "value": [
           {
@@ -504,8 +564,8 @@
         "button_align": "center",
         "style": "alternative flexible"
       },
-      "name": "button_24",
-      "_nested_name": "button_24",
+      "name": "button_25",
+      "_nested_name": "button_25",
       "_dynamicFields": {
         "value": [
           {
@@ -556,8 +616,8 @@
         "value": {}
       },
       "exclude_from_translation": true,
-      "name": "text_26",
-      "_nested_name": "text_26",
+      "name": "text_27",
+      "_nested_name": "text_27",
       "_dynamicFields": {
         "value": [
           {
@@ -593,8 +653,8 @@
       "parameter_list": {
         "style": "alternative flexible"
       },
-      "name": "button_27",
-      "_nested_name": "button_27",
+      "name": "button_28",
+      "_nested_name": "button_28",
       "_dynamicFields": {
         "value": [
           {
@@ -673,7 +733,7 @@
           "parameter_list": {
             "variant": "card"
           },
-          "_nested_name": "display_group_28.save",
+          "_nested_name": "display_group_29.save",
           "_dynamicFields": {
             "action_list": {
               "0": {
@@ -764,8 +824,8 @@
           }
         }
       ],
-      "name": "display_group_28",
-      "_nested_name": "display_group_28",
+      "name": "display_group_29",
+      "_nested_name": "display_group_29",
       "_dynamicFields": {
         "condition": [
           {

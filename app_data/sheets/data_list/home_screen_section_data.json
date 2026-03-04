@@ -7,90 +7,78 @@
     {
       "id": "programme",
       "image": "images/articles/programme.png",
-      "title": "About @global.prog_name",
+      "title": "LEARN: About @global.prog_name",
       "_translations": {
-        "title": {
-          "cw_pap": true
-        }
+        "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "About @global.prog_name"
-        }
-      }
-    },
-    {
-      "id": "guide",
-      "image": "images/articles/guide.png",
-      "title": "Guide for delivering @global.prog_name",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Guide for delivering @global.prog_name"
-        }
-      }
-    },
-    {
-      "id": "facilitation",
-      "image": "images/articles/facilitation.png",
-      "title": "Facilitation skills",
-      "_translations": {
-        "title": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "title": {
-          "eng": "Facilitation skills"
+          "eng": "LEARN: About @global.prog_name"
         }
       }
     },
     {
       "id": "session_prep",
       "image": "images/articles/sessions.png",
-      "title": "Session preparation",
+      "title": "LEARN: About the sessions",
       "_translations": {
-        "title": {
-          "cw_pap": true
-        }
+        "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Session preparation"
+          "eng": "LEARN: About the sessions"
+        }
+      }
+    },
+    {
+      "id": "facilitation",
+      "image": "images/articles/facilitation.png",
+      "title": "LEARN: How to facilitate",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "LEARN: How to facilitate"
+        }
+      }
+    },
+    {
+      "id": "guide",
+      "image": "images/articles/guide.png",
+      "title": "IMPLEMENT: Guide for delivering @global.prog_name",
+      "_translations": {
+        "title": {}
+      },
+      "_translatedFields": {
+        "title": {
+          "eng": "IMPLEMENT: Guide for delivering @global.prog_name"
         }
       }
     },
     {
       "id": "faq",
       "image": "images/articles/faq.png",
-      "title": "Frequently asked questions",
+      "title": "SUPPORT: Frequently asked questions",
       "_translations": {
-        "title": {
-          "cw_pap": true
-        }
+        "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Frequently asked questions"
+          "eng": "SUPPORT: Frequently asked questions"
         }
       }
     },
     {
       "id": "safeguarding",
       "image": "images/articles/safeguarding.png",
-      "title": "Safeguarding",
+      "title": "SUPPORT: Safeguarding",
       "_translations": {
-        "title": {
-          "cw_pap": true
-        }
+        "title": {}
       },
       "_translatedFields": {
         "title": {
-          "eng": "Safeguarding"
+          "eng": "SUPPORT: Safeguarding"
         }
       }
     }

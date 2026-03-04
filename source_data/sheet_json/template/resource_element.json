@@ -44,6 +44,11 @@
       "exclude_from_translation": true
     },
     {
+      "type": "begin_display_group",
+      "action_list": "click | pop_up : pdf_@local.resource_id | fullscreen: true;",
+      "exclude_from_translation": true
+    },
+    {
       "type": "round_button",
       "name": "main_view",
       "action_list": "click | pop_up : pdf_@local.resource_id | fullscreen: true;",
@@ -54,6 +59,10 @@
       "type": "text",
       "value": "@item.title",
       "style_list": "flex: 1;",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
       "exclude_from_translation": true
     },
     {

@@ -117,33 +117,86 @@
       "rows": [
         {
           "type": "text",
-          "value": "@local.parent_count @global.parent_count_text",
+          "value": "@local.parent_count @global.parent_count_text_sing",
           "_translations": {
             "value": {}
           },
+          "condition": "@local.parent_count == 1",
           "name": "text_1",
           "_nested_name": "display_group_7.text_1",
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "@local.parent_count @global.parent_count_text",
+                "fullExpression": "@local.parent_count @global.parent_count_text_sing",
                 "matchedExpression": "@local.parent_count",
                 "type": "local",
                 "fieldName": "parent_count"
               },
               {
-                "fullExpression": "@local.parent_count @global.parent_count_text",
-                "matchedExpression": "@global.parent_count_text",
+                "fullExpression": "@local.parent_count @global.parent_count_text_sing",
+                "matchedExpression": "@global.parent_count_text_sing",
                 "type": "global",
-                "fieldName": "parent_count_text"
+                "fieldName": "parent_count_text_sing"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "@local.parent_count == 1",
+                "matchedExpression": "@local.parent_count",
+                "type": "local",
+                "fieldName": "parent_count"
               }
             ]
           },
           "_dynamicDependencies": {
             "@local.parent_count": [
-              "value"
+              "value",
+              "condition"
             ],
-            "@global.parent_count_text": [
+            "@global.parent_count_text_sing": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "value": "@local.parent_count @global.parent_count_text_plur",
+          "_translations": {
+            "value": {}
+          },
+          "condition": "@local.parent_count > 1",
+          "name": "text_2",
+          "_nested_name": "display_group_7.text_2",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.parent_count @global.parent_count_text_plur",
+                "matchedExpression": "@local.parent_count",
+                "type": "local",
+                "fieldName": "parent_count"
+              },
+              {
+                "fullExpression": "@local.parent_count @global.parent_count_text_plur",
+                "matchedExpression": "@global.parent_count_text_plur",
+                "type": "global",
+                "fieldName": "parent_count_text_plur"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "@local.parent_count > 1",
+                "matchedExpression": "@local.parent_count",
+                "type": "local",
+                "fieldName": "parent_count"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.parent_count": [
+              "value",
+              "condition"
+            ],
+            "@global.parent_count_text_plur": [
               "value"
             ]
           }
@@ -168,8 +221,8 @@
             "style": "alternative",
             "variant": "compact"
           },
-          "name": "button_2",
-          "_nested_name": "display_group_7.button_2",
+          "name": "button_3",
+          "_nested_name": "display_group_7.button_3",
           "_dynamicFields": {
             "value": [
               {

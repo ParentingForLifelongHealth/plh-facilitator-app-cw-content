@@ -34,7 +34,7 @@
       "value": "@data.parent_groups",
       "action_list": "data_changed | set_field: current_group_id: @items[0].id;\ndata_changed | set_field: current_group_name: @items[0].text;",
       "parameter_list": "sort: @item.name;\nlimit: 1",
-      "condition": "@fields.current_group_id == new"
+      "condition": "@fields.current_group_id == \"new\""
     },
     {
       "parameter_list": "sort: @item.name;",
@@ -101,7 +101,7 @@
       "type": "text",
       "name": "age_group",
       "value": "Age group: @local.current_age_group_text",
-      "style_list": "color: gray; margin-top: -10px; font-size: 14px;"
+      "style_list": "color: gray; margin-top: 0px; font-size: 14px;"
     },
     {
       "type": "text",

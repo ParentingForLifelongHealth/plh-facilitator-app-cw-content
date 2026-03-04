@@ -16,7 +16,7 @@
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 174 |
+| display_group | 177 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
@@ -30,7 +30,7 @@
 | round_button | 40 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1149 |
+| set_variable | 1148 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -38,9 +38,10 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 376 |
+| text | 380 |
 | text_area | 4 |
 | text_box | 27 |
+| text_bubble | 1 |
 | title | 71 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
@@ -58,18 +59,18 @@
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
-| emit: completed | 85 |
+| emit: completed | 86 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 3 |
 | emit: server_sync | 22 |
 | emit: set_language | 4 |
-| emit: uncompleted | 121 |
+| emit: uncompleted | 122 |
 | feedback | 24 |
 | go_to | 47 |
 | nav | 3 |
 | nav_stack | 9 |
-| pop_up | 19 |
+| pop_up | 20 |
 | reset_app | 4 |
 | reset_data | 3 |
 | save_to_device | 5 |
@@ -78,8 +79,10 @@
 | set_item | 13 |
 | set_local | 139 |
 | share | 5 |
+| speaker_name | 1 |
 | toast | 2 |
 | user | 4 |
+| variant | 1 |
 </details>
 
 <details open>
@@ -87,8 +90,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 120789 KB | 120.8 MB |
-| unused | 10008 KB | 10 MB |
+| total | 139925 KB | 139.9 MB |
+| unused | 12321 KB | 12.3 MB |
 </details>
 
 <details open>
@@ -162,7 +165,10 @@ Assets that appear in app-data but do not have references within sheets
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
 | images/logos/UNICEF.jpg | 27.7 |
+| pdf/mocule_1_home_activity_pap.pdf | 748.2 |
+| pdf/module_1_core_lesson_teen_eng.pdf | 821.4 |
 | pdf/module_1_core_lesson_teen_pap.pdf | 824.6 |
+| pdf/module_6-core_lesson_1_pap.pdf | 743.8 |
 </details>
 
 <details open>
@@ -178,7 +184,10 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/bird_white.svg | 1 |
 | images/logos/plh_logomark.png | 1 |
 | images/no_group_selected.svg | 1 |
+| pdf/modile_1_core_lesson_teen_eng.pdf | 1 |
 | pdf/modile_1_core_lesson_teen_pap.pdf | 1 |
+| pdf/module_1_home_activity_eng.pdf | 1 |
+| pdf/module_6_core_lesson_1_eng.pdf | 1 |
 </details>
 
 <details >
@@ -265,21 +274,33 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | images/onboarding/splash_5.png | 1314.2 | 1 |
 | lottie/checkmark_blue.json | 17 | 3 |
 | lottie/cw_profile_complete.json | 13.4 | 4 |
+| pdf/aecp_eng.pdf | 739 | 1 |
 | pdf/aecp_pap.pdf | 738.4 | 1 |
+| pdf/child_development_domain_eng.pdf | 104.5 | 1 |
 | pdf/child_development_domain_pap.pdf | 723 | 1 |
+| pdf/child_development_stages_eng.pdf | 9545 | 1 |
 | pdf/child_development_stages_pap.pdf | 13058.3 | 1 |
+| pdf/children_with_disabilities_eng.pdf | 766.7 | 1 |
 | pdf/children_with_disabilities_pap.pdf | 777.5 | 1 |
-| pdf/example_pdf.pdf | 139.4 | 16 |
+| pdf/individual_consultation_eng.pdf | 770.5 | 1 |
 | pdf/individual_consultation_pap.pdf | 774.3 | 1 |
+| pdf/module_1_core_lesson_eng.pdf | 848.6 | 1 |
 | pdf/module_1_core_lesson_pap.pdf | 2896.6 | 1 |
+| pdf/module_1_core_lesson_yc_eng.pdf | 819.6 | 1 |
 | pdf/module_1_core_lesson_yc_pap.pdf | 814.8 | 1 |
 | pdf/module_1_home_activity_pap.pdf | 776.8 | 1 |
+| pdf/module_1_overview_eng.pdf | 366.2 | 1 |
 | pdf/module_1_overview_pap.pdf | 793.1 | 1 |
+| pdf/module_1_welcome_eng.pdf | 2287.5 | 1 |
 | pdf/module_1_welcome_pap.pdf | 2623 | 1 |
+| pdf/module_6_closing_eng.pdf | 787.5 | 1 |
 | pdf/module_6_closing_pap.pdf | 769.9 | 1 |
 | pdf/module_6_core_lesson_1_pap.pdf | 743.2 | 1 |
+| pdf/module_6_core_lesson_2_eng.pdf | 761 | 1 |
 | pdf/module_6_core_lesson_2_pap.pdf | 774.3 | 1 |
+| pdf/module_6_welcome_eng.pdf | 723.4 | 1 |
 | pdf/module_6_welcome_pap.pdf | 2633.4 | 1 |
+| pdf/one_on_one_time_development_stages_eng.pdf | 755.2 | 1 |
 | pdf/one_on_one_time_development_stages_pap.pdf | 779.8 | 1 |
 </details>
 

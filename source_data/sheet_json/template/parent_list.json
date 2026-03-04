@@ -28,7 +28,13 @@
     },
     {
       "type": "text",
-      "value": "@local.parent_count @global.parent_count_text"
+      "value": "@local.parent_count @global.parent_count_text_sing",
+      "condition": "@local.parent_count == 1"
+    },
+    {
+      "type": "text",
+      "value": "@local.parent_count @global.parent_count_text_plur",
+      "condition": "@local.parent_count > 1"
     },
     {
       "type": "button",
