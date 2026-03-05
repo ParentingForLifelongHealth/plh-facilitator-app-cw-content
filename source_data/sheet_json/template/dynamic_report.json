@@ -12,13 +12,17 @@
       "value": " "
     },
     {
+      "name": "today",
+      "value": "@calc(now())"
+    },
+    {
       "type": "text",
       "value": "Date of session"
     },
     {
       "type": "date_time_picker",
       "name": "session_date",
-      "parameter_list": "type: date"
+      "parameter_list": "type: date;\nmax: @local.today;"
     },
     {
       "name": "session_date_valid",

@@ -36,7 +36,8 @@
     {
       "type": "text",
       "name": "Back",
-      "value": "Back"
+      "value": "Back",
+      "condition": "@local.show_previous"
     },
     {
       "type": "end_display_group"
@@ -53,7 +54,8 @@
     {
       "type": "text",
       "name": "Next",
-      "value": "Next"
+      "value": "Next",
+      "condition": "@local.show_next"
     },
     {
       "type": "round_button",

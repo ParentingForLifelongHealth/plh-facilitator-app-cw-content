@@ -707,11 +707,11 @@
             {
               "trigger": "click",
               "action_id": "set_field",
-              "args": [],
-              "_raw": "click | set_field | current_group_name : @local.group_name",
-              "params": {
-                "current_group_name ": "@local.group_name"
-              }
+              "args": [
+                "current_group_name",
+                "@local.group_name"
+              ],
+              "_raw": "click | set_field: current_group_name: @local.group_name"
             },
             {
               "trigger": "click",
@@ -785,16 +785,8 @@
                 }
               },
               "1": {
-                "_raw": [
-                  {
-                    "fullExpression": "click | set_field | current_group_name : @local.group_name",
-                    "matchedExpression": "@local.group_name",
-                    "type": "local",
-                    "fieldName": "group_name"
-                  }
-                ],
-                "params": {
-                  "current_group_name ": [
+                "args": {
+                  "1": [
                     {
                       "fullExpression": "@local.group_name",
                       "matchedExpression": "@local.group_name",
@@ -802,7 +794,15 @@
                       "fieldName": "group_name"
                     }
                   ]
-                }
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | set_field: current_group_name: @local.group_name",
+                    "matchedExpression": "@local.group_name",
+                    "type": "local",
+                    "fieldName": "group_name"
+                  }
+                ]
               }
             }
           },
@@ -814,8 +814,8 @@
             "@local.group_name": [
               "action_list.0._raw",
               "action_list.0.params.text",
-              "action_list.1._raw",
-              "action_list.1.params.current_group_name "
+              "action_list.1.args.1",
+              "action_list.1._raw"
             ],
             "@calc(now())": [
               "action_list.0._raw",
