@@ -126,7 +126,23 @@
               "_translations": {
                 "value": {}
               },
-              "_nested_name": "display_group_6.display_group_1.Back"
+              "condition": "@local.show_previous",
+              "_nested_name": "display_group_6.display_group_1.Back",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "@local.show_previous",
+                    "matchedExpression": "@local.show_previous",
+                    "type": "local",
+                    "fieldName": "show_previous"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.show_previous": [
+                  "condition"
+                ]
+              }
             }
           ],
           "name": "display_group_1",
@@ -162,7 +178,23 @@
                   "cw_pap": true
                 }
               },
-              "_nested_name": "display_group_6.display_group_3.Next"
+              "condition": "@local.show_next",
+              "_nested_name": "display_group_6.display_group_3.Next",
+              "_dynamicFields": {
+                "condition": [
+                  {
+                    "fullExpression": "@local.show_next",
+                    "matchedExpression": "@local.show_next",
+                    "type": "local",
+                    "fieldName": "show_next"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.show_next": [
+                  "condition"
+                ]
+              }
             },
             {
               "type": "round_button",
