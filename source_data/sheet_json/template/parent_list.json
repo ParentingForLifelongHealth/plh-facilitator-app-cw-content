@@ -129,7 +129,7 @@
       "action_list": "click | toast | message: @global.incomplete_parent",
       "parameter_list": "icon_src: images/icons/incomplete.svg;\nvariant: no-background; ",
       "style_list": "max-width: 32px;\nmargin-left: -10px;",
-      "condition": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation"
+      "condition": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation"
     },
     {
       "type": "end_display_group"

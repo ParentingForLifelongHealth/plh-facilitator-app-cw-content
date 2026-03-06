@@ -24,6 +24,24 @@
       "exclude_from_translation": true
     },
     {
+      "name": "current_parent_group"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parents",
+      "action_list": "data_changed | set_local: current_parent_group: @items[0].group_id;",
+      "parameter_list": "filter: (@item.id == @fields.current_parent_no)"
+    },
+    {
+      "name": "current_age_group"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local: current_age_group: @items[0].age_group;",
+      "parameter_list": "filter: (@item.name == @fields.current_group_no)"
+    },
+    {
       "name": "no_of_co_groups",
       "value": "+@fields.no_of_co_groups"
     },
@@ -316,21 +334,21 @@
     },
     {
       "type": "text",
-      "value": "(10 - 17)",
+      "value": "@global.error_child_age (10 - 17)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
       "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"teen_\")",
       "exclude_from_translation": true
     },
     {
       "type": "text",
-      "value": "(2 - 9)",
+      "value": "@global.error_child_age (2 - 9)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
       "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"yc_\")",
       "exclude_from_translation": true
     },
     {
       "type": "text",
-      "value": "(2 - 17)",
+      "value": "@global.error_child_age (2 - 17)",
       "style_list": "color: #FF0000;\nfont-size: 14px; ",
       "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"mixed_\")",
       "exclude_from_translation": true

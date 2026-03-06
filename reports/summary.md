@@ -12,7 +12,7 @@
 | button | 132 |
 | carousel | 2 |
 | combo_box | 16 |
-| data_items | 124 |
+| data_items | 126 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -30,7 +30,7 @@
 | round_button | 40 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1149 |
+| set_variable | 1152 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -38,7 +38,7 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 380 |
+| text | 383 |
 | text_area | 4 |
 | text_box | 27 |
 | text_bubble | 1 |
@@ -77,7 +77,7 @@
 | set_data | 29 |
 | set_field | 97 |
 | set_item | 13 |
-| set_local | 139 |
+| set_local | 141 |
 | share | 5 |
 | speaker_name | 1 |
 | toast | 2 |
