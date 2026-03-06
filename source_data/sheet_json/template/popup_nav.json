@@ -35,7 +35,7 @@
     },
     {
       "type": "text",
-      "name": "Back",
+      "name": "back",
       "value": "Back",
       "condition": "@local.show_previous"
     },
@@ -53,7 +53,7 @@
     },
     {
       "type": "text",
-      "name": "Next",
+      "name": "next",
       "value": "Next",
       "condition": "@local.show_next"
     },
@@ -68,6 +68,16 @@
       "type": "end_display_group"
     },
     {
+      "type": "begin_display_group",
+      "action_list": "click | nav_stack: close_all;\nclick | go_to : module_final;\nclick | emit:completed; \nclick | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.pages_complete_field: true;"
+    },
+    {
+      "type": "text",
+      "name": "finish",
+      "value": "Finish",
+      "condition": "!@local.show_next && @local.show_previous"
+    },
+    {
       "type": "round_button",
       "name": "go_module_final",
       "action_list": "click | nav_stack: close_all;\nclick | go_to : module_final;\nclick | emit:completed; \nclick | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.pages_complete_field: true;",
@@ -80,6 +90,9 @@
       "action_list": "click | nav_stack: close_all;\nclick | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true;\nclick | emit:completed; ",
       "parameter_list": "icon_src: images/icons/checkmark-outline.svg;",
       "condition": "!@local.show_next && !@local.show_previous"
+    },
+    {
+      "type": "end_display_group"
     },
     {
       "type": "end_display_group"
