@@ -24,6 +24,11 @@
       "exclude_from_translation": true
     },
     {
+      "type": "text",
+      "value": "fields pcurrent parent no = @fields.current_parent_no",
+      "condition": false
+    },
+    {
       "name": "current_parent_group"
     },
     {
@@ -33,13 +38,18 @@
       "parameter_list": "filter: (@item.id == @fields.current_parent_no)"
     },
     {
+      "type": "text",
+      "value": "current parent group= @local.current_parent_group",
+      "condition": false
+    },
+    {
       "name": "current_age_group"
     },
     {
       "type": "data_items",
       "value": "@data.parent_groups",
       "action_list": "data_changed | set_local: current_age_group: @items[0].age_group;",
-      "parameter_list": "filter: (@item.name == @local.current_parent_group)"
+      "parameter_list": "filter: (@item.name == @fields.current_group_no)"
     },
     {
       "type": "text",
@@ -362,6 +372,11 @@
       "exclude_from_translation": true
     },
     {
+      "type": "text",
+      "value": " age group = @local.current_age_group  show= @local.show_child_age_error ",
+      "condition": false
+    },
+    {
       "exclude_from_translation": true
     },
     {
@@ -428,9 +443,13 @@
       "exclude_from_translation": true
     },
     {
+      "name": "today",
+      "value": "@calc(now())"
+    },
+    {
       "type": "date_time_picker",
       "name": "consoltation",
-      "parameter_list": "type: date",
+      "parameter_list": "type: date;\nmax: @local.today;",
       "style_list": "margin-top: @local.reduced_margin",
       "exclude_from_translation": true
     },

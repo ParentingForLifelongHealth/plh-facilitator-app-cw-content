@@ -676,7 +676,7 @@
                         "max-width: 32px",
                         "margin-left: -10px"
                       ],
-                      "condition": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                      "condition": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                       "name": "round_button_2",
                       "_nested_name": "data_items_11.display_group_3_@item.id.display_group_3.display_group_5.round_button_2",
                       "_dynamicFields": {
@@ -704,61 +704,49 @@
                         },
                         "condition": [
                           {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                             "matchedExpression": "!@item.number",
                             "type": "item",
                             "fieldName": "number"
                           },
                           {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                             "matchedExpression": "!@item.age",
                             "type": "item",
                             "fieldName": "age"
                           },
                           {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                             "matchedExpression": "!@item.sex",
                             "type": "item",
                             "fieldName": "sex"
                           },
                           {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                             "matchedExpression": "!@item.child_count",
                             "type": "item",
                             "fieldName": "child_count"
                           },
                           {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                             "matchedExpression": "!@item.child_age",
                             "type": "item",
                             "fieldName": "child_age"
                           },
                           {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                             "matchedExpression": "!@item.child_sex",
                             "type": "item",
                             "fieldName": "child_sex"
                           },
                           {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
-                            "matchedExpression": "!@item.other_home",
-                            "type": "item",
-                            "fieldName": "other_home"
-                          },
-                          {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
-                            "matchedExpression": "!@item.hours",
-                            "type": "item",
-                            "fieldName": "hours"
-                          },
-                          {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                             "matchedExpression": "!@item.goal",
                             "type": "item",
                             "fieldName": "goal"
                           },
                           {
-                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.other_home || !@item.hours || !@item.goal || !@item.consoltation",
+                            "fullExpression": "!@item.number || !@item.age || !@item.sex || !@item.child_count || !@item.child_age || !@item.child_sex || !@item.goal || !@item.consoltation",
                             "matchedExpression": "!@item.consoltation",
                             "type": "item",
                             "fieldName": "consoltation"
@@ -794,12 +782,6 @@
                           "condition"
                         ],
                         "!@item.child_sex": [
-                          "condition"
-                        ],
-                        "!@item.other_home": [
-                          "condition"
-                        ],
-                        "!@item.hours": [
                           "condition"
                         ],
                         "!@item.goal": [
