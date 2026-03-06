@@ -72,6 +72,45 @@
       ],
       "rows": [
         {
+          "type": "round_button",
+          "name": "previous_article",
+          "value": "Back",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "uncompleted"
+              ],
+              "_raw": "click | emit:uncompleted"
+            }
+          ],
+          "parameter_list": {
+            "variant": "no-background",
+            "icon_src": "images/icons/arrow_back.svg"
+          },
+          "condition": "@local.show_previous",
+          "_nested_name": "display_group_6.previous_article",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@local.show_previous",
+                "matchedExpression": "@local.show_previous",
+                "type": "local",
+                "fieldName": "show_previous"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.show_previous": [
+              "condition"
+            ]
+          }
+        },
+        {
           "type": "display_group",
           "action_list": [
             {
@@ -83,51 +122,17 @@
               "_raw": "click | emit:uncompleted"
             }
           ],
+          "condition": "@local.show_previous",
           "rows": [
             {
-              "type": "round_button",
-              "name": "previous_article",
-              "action_list": [
-                {
-                  "trigger": "click",
-                  "action_id": "emit",
-                  "args": [
-                    "uncompleted"
-                  ],
-                  "_raw": "click | emit:uncompleted"
-                }
-              ],
-              "parameter_list": {
-                "variant": "no-background",
-                "icon_src": "images/icons/arrow_back.svg"
-              },
-              "condition": "@local.show_previous",
-              "_nested_name": "display_group_6.display_group_1.previous_article",
-              "_dynamicFields": {
-                "condition": [
-                  {
-                    "fullExpression": "@local.show_previous",
-                    "matchedExpression": "@local.show_previous",
-                    "type": "local",
-                    "fieldName": "show_previous"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@local.show_previous": [
-                  "condition"
-                ]
-              }
-            },
-            {
               "type": "text",
-              "name": "back",
               "value": "Back",
               "_translations": {
                 "value": {}
               },
               "condition": "@local.show_previous",
-              "_nested_name": "display_group_6.display_group_1.back",
+              "name": "text_1",
+              "_nested_name": "display_group_6.display_group_2.text_1",
               "_dynamicFields": {
                 "condition": [
                   {
@@ -145,8 +150,23 @@
               }
             }
           ],
-          "name": "display_group_1",
-          "_nested_name": "display_group_6.display_group_1"
+          "name": "display_group_2",
+          "_nested_name": "display_group_6.display_group_2",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@local.show_previous",
+                "matchedExpression": "@local.show_previous",
+                "type": "local",
+                "fieldName": "show_previous"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.show_previous": [
+              "condition"
+            ]
+          }
         },
         {
           "type": "text",
@@ -157,7 +177,14 @@
           "_nested_name": "display_group_6.spacer"
         },
         {
-          "type": "display_group",
+          "type": "button",
+          "name": "next_article",
+          "value": "Next",
+          "_translations": {
+            "value": {
+              "cw_pap": true
+            }
+          },
           "action_list": [
             {
               "trigger": "click",
@@ -168,74 +195,35 @@
               "_raw": "click | emit:completed"
             }
           ],
-          "rows": [
-            {
-              "type": "text",
-              "name": "next",
-              "value": "Next",
-              "_translations": {
-                "value": {
-                  "cw_pap": true
-                }
-              },
-              "condition": "@local.show_next",
-              "_nested_name": "display_group_6.display_group_3.next",
-              "_dynamicFields": {
-                "condition": [
-                  {
-                    "fullExpression": "@local.show_next",
-                    "matchedExpression": "@local.show_next",
-                    "type": "local",
-                    "fieldName": "show_next"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@local.show_next": [
-                  "condition"
-                ]
+          "parameter_list": {
+            "icon": "images/icons/arrow_forward.svg",
+            "icon_align": "right"
+          },
+          "condition": "@local.show_next",
+          "_nested_name": "display_group_6.next_article",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@local.show_next",
+                "matchedExpression": "@local.show_next",
+                "type": "local",
+                "fieldName": "show_next"
               }
-            },
-            {
-              "type": "round_button",
-              "name": "next_article",
-              "action_list": [
-                {
-                  "trigger": "click",
-                  "action_id": "emit",
-                  "args": [
-                    "completed"
-                  ],
-                  "_raw": "click | emit:completed"
-                }
-              ],
-              "parameter_list": {
-                "icon_src": "images/icons/arrow_forward.svg"
-              },
-              "condition": "@local.show_next",
-              "_nested_name": "display_group_6.display_group_3.next_article",
-              "_dynamicFields": {
-                "condition": [
-                  {
-                    "fullExpression": "@local.show_next",
-                    "matchedExpression": "@local.show_next",
-                    "type": "local",
-                    "fieldName": "show_next"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@local.show_next": [
-                  "condition"
-                ]
-              }
-            }
-          ],
-          "name": "display_group_3",
-          "_nested_name": "display_group_6.display_group_3"
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.show_next": [
+              "condition"
+            ]
+          }
         },
         {
-          "type": "display_group",
+          "type": "button",
+          "name": "go_module_final",
+          "value": "Finish",
+          "_translations": {
+            "value": {}
+          },
           "action_list": [
             {
               "trigger": "click",
@@ -273,256 +261,12 @@
               }
             }
           ],
-          "rows": [
-            {
-              "type": "text",
-              "name": "finish",
-              "value": "Finish",
-              "_translations": {
-                "value": {}
-              },
-              "condition": "!@local.show_next && @local.show_previous",
-              "_nested_name": "display_group_6.display_group_4.finish",
-              "_dynamicFields": {
-                "condition": [
-                  {
-                    "fullExpression": "!@local.show_next && @local.show_previous",
-                    "matchedExpression": "!@local.show_next",
-                    "type": "local",
-                    "fieldName": "show_next"
-                  },
-                  {
-                    "fullExpression": "!@local.show_next && @local.show_previous",
-                    "matchedExpression": "@local.show_previous",
-                    "type": "local",
-                    "fieldName": "show_previous"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "!@local.show_next": [
-                  "condition"
-                ],
-                "@local.show_previous": [
-                  "condition"
-                ]
-              }
-            },
-            {
-              "type": "round_button",
-              "name": "go_module_final",
-              "action_list": [
-                {
-                  "trigger": "click",
-                  "action_id": "nav_stack",
-                  "args": [
-                    "close_all"
-                  ],
-                  "_raw": "click | nav_stack: close_all"
-                },
-                {
-                  "trigger": "click",
-                  "action_id": "go_to",
-                  "args": [
-                    "module_final"
-                  ],
-                  "_raw": "click | go_to : module_final"
-                },
-                {
-                  "trigger": "click",
-                  "action_id": "emit",
-                  "args": [
-                    "completed"
-                  ],
-                  "_raw": "click | emit:completed"
-                },
-                {
-                  "trigger": "click",
-                  "action_id": "set_data",
-                  "args": [],
-                  "_raw": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.pages_complete_field: true",
-                  "params": {
-                    "_list_id": "modules",
-                    "_id": "@fields.current_module_no",
-                    "@local.pages_complete_field": true
-                  }
-                }
-              ],
-              "parameter_list": {
-                "icon_src": "images/icons/checkmark-outline.svg"
-              },
-              "condition": "!@local.show_next && @local.show_previous",
-              "_nested_name": "display_group_6.display_group_4.go_module_final",
-              "_dynamicFields": {
-                "action_list": {
-                  "3": {
-                    "_raw": [
-                      {
-                        "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.pages_complete_field: true",
-                        "matchedExpression": "@fields.current_module_no",
-                        "type": "fields",
-                        "fieldName": "current_module_no"
-                      },
-                      {
-                        "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.pages_complete_field: true",
-                        "matchedExpression": "@local.pages_complete_field",
-                        "type": "local",
-                        "fieldName": "pages_complete_field"
-                      }
-                    ],
-                    "params": {
-                      "_id": [
-                        {
-                          "fullExpression": "@fields.current_module_no",
-                          "matchedExpression": "@fields.current_module_no",
-                          "type": "fields",
-                          "fieldName": "current_module_no"
-                        }
-                      ]
-                    }
-                  }
-                },
-                "condition": [
-                  {
-                    "fullExpression": "!@local.show_next && @local.show_previous",
-                    "matchedExpression": "!@local.show_next",
-                    "type": "local",
-                    "fieldName": "show_next"
-                  },
-                  {
-                    "fullExpression": "!@local.show_next && @local.show_previous",
-                    "matchedExpression": "@local.show_previous",
-                    "type": "local",
-                    "fieldName": "show_previous"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@fields.current_module_no": [
-                  "action_list.3._raw",
-                  "action_list.3.params._id"
-                ],
-                "@local.pages_complete_field": [
-                  "action_list.3._raw"
-                ],
-                "!@local.show_next": [
-                  "condition"
-                ],
-                "@local.show_previous": [
-                  "condition"
-                ]
-              }
-            },
-            {
-              "type": "round_button",
-              "name": "go_modules_and_complete",
-              "action_list": [
-                {
-                  "trigger": "click",
-                  "action_id": "nav_stack",
-                  "args": [
-                    "close_all"
-                  ],
-                  "_raw": "click | nav_stack: close_all"
-                },
-                {
-                  "trigger": "click",
-                  "action_id": "set_data",
-                  "args": [],
-                  "_raw": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true",
-                  "params": {
-                    "_list_id": "modules",
-                    "_id": "@fields.current_module_no",
-                    "@local.completed_field": true,
-                    "@local.pages_complete_field": true
-                  }
-                },
-                {
-                  "trigger": "click",
-                  "action_id": "emit",
-                  "args": [
-                    "completed"
-                  ],
-                  "_raw": "click | emit:completed"
-                }
-              ],
-              "parameter_list": {
-                "icon_src": "images/icons/checkmark-outline.svg"
-              },
-              "condition": "!@local.show_next && !@local.show_previous",
-              "_nested_name": "display_group_6.display_group_4.go_modules_and_complete",
-              "_dynamicFields": {
-                "action_list": {
-                  "1": {
-                    "_raw": [
-                      {
-                        "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true",
-                        "matchedExpression": "@fields.current_module_no",
-                        "type": "fields",
-                        "fieldName": "current_module_no"
-                      },
-                      {
-                        "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true",
-                        "matchedExpression": "@local.completed_field",
-                        "type": "local",
-                        "fieldName": "completed_field"
-                      },
-                      {
-                        "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true",
-                        "matchedExpression": "@local.pages_complete_field",
-                        "type": "local",
-                        "fieldName": "pages_complete_field"
-                      }
-                    ],
-                    "params": {
-                      "_id": [
-                        {
-                          "fullExpression": "@fields.current_module_no",
-                          "matchedExpression": "@fields.current_module_no",
-                          "type": "fields",
-                          "fieldName": "current_module_no"
-                        }
-                      ]
-                    }
-                  }
-                },
-                "condition": [
-                  {
-                    "fullExpression": "!@local.show_next && !@local.show_previous",
-                    "matchedExpression": "!@local.show_next",
-                    "type": "local",
-                    "fieldName": "show_next"
-                  },
-                  {
-                    "fullExpression": "!@local.show_next && !@local.show_previous",
-                    "matchedExpression": "!@local.show_previous",
-                    "type": "local",
-                    "fieldName": "show_previous"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@fields.current_module_no": [
-                  "action_list.1._raw",
-                  "action_list.1.params._id"
-                ],
-                "@local.completed_field": [
-                  "action_list.1._raw"
-                ],
-                "@local.pages_complete_field": [
-                  "action_list.1._raw"
-                ],
-                "!@local.show_next": [
-                  "condition"
-                ],
-                "!@local.show_previous": [
-                  "condition"
-                ]
-              }
-            }
-          ],
-          "name": "display_group_4",
-          "_nested_name": "display_group_6.display_group_4",
+          "parameter_list": {
+            "icon": "images/icons/checkmark-outline.svg",
+            "icon_align": "right"
+          },
+          "condition": "!@local.show_next && @local.show_previous",
+          "_nested_name": "display_group_6.go_module_final",
           "_dynamicFields": {
             "action_list": {
               "3": {
@@ -551,7 +295,21 @@
                   ]
                 }
               }
-            }
+            },
+            "condition": [
+              {
+                "fullExpression": "!@local.show_next && @local.show_previous",
+                "matchedExpression": "!@local.show_next",
+                "type": "local",
+                "fieldName": "show_next"
+              },
+              {
+                "fullExpression": "!@local.show_next && @local.show_previous",
+                "matchedExpression": "@local.show_previous",
+                "type": "local",
+                "fieldName": "show_previous"
+              }
+            ]
           },
           "_dynamicDependencies": {
             "@fields.current_module_no": [
@@ -560,6 +318,124 @@
             ],
             "@local.pages_complete_field": [
               "action_list.3._raw"
+            ],
+            "!@local.show_next": [
+              "condition"
+            ],
+            "@local.show_previous": [
+              "condition"
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "name": "go_modules_and_complete",
+          "value": "Finish",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "nav_stack",
+              "args": [
+                "close_all"
+              ],
+              "_raw": "click | nav_stack: close_all"
+            },
+            {
+              "trigger": "click",
+              "action_id": "set_data",
+              "args": [],
+              "_raw": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true",
+              "params": {
+                "_list_id": "modules",
+                "_id": "@fields.current_module_no",
+                "@local.completed_field": true,
+                "@local.pages_complete_field": true
+              }
+            },
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit:completed"
+            }
+          ],
+          "parameter_list": {
+            "icon": "images/icons/checkmark-outline.svg",
+            "icon_align": "right"
+          },
+          "condition": "!@local.show_next && !@local.show_previous",
+          "_nested_name": "display_group_6.go_modules_and_complete",
+          "_dynamicFields": {
+            "action_list": {
+              "1": {
+                "_raw": [
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true",
+                    "matchedExpression": "@fields.current_module_no",
+                    "type": "fields",
+                    "fieldName": "current_module_no"
+                  },
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true",
+                    "matchedExpression": "@local.completed_field",
+                    "type": "local",
+                    "fieldName": "completed_field"
+                  },
+                  {
+                    "fullExpression": "click | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true",
+                    "matchedExpression": "@local.pages_complete_field",
+                    "type": "local",
+                    "fieldName": "pages_complete_field"
+                  }
+                ],
+                "params": {
+                  "_id": [
+                    {
+                      "fullExpression": "@fields.current_module_no",
+                      "matchedExpression": "@fields.current_module_no",
+                      "type": "fields",
+                      "fieldName": "current_module_no"
+                    }
+                  ]
+                }
+              }
+            },
+            "condition": [
+              {
+                "fullExpression": "!@local.show_next && !@local.show_previous",
+                "matchedExpression": "!@local.show_next",
+                "type": "local",
+                "fieldName": "show_next"
+              },
+              {
+                "fullExpression": "!@local.show_next && !@local.show_previous",
+                "matchedExpression": "!@local.show_previous",
+                "type": "local",
+                "fieldName": "show_previous"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@fields.current_module_no": [
+              "action_list.1._raw",
+              "action_list.1.params._id"
+            ],
+            "@local.completed_field": [
+              "action_list.1._raw"
+            ],
+            "@local.pages_complete_field": [
+              "action_list.1._raw"
+            ],
+            "!@local.show_next": [
+              "condition"
+            ],
+            "!@local.show_previous": [
+              "condition"
             ]
           }
         }

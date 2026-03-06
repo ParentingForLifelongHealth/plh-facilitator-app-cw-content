@@ -9,14 +9,14 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 3 |
-| button | 132 |
+| button | 135 |
 | carousel | 2 |
 | combo_box | 16 |
 | data_items | 126 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
-| display_group | 178 |
+| display_group | 176 |
 | google_sign_in_button | 3 |
 | image | 19 |
 | items | 16 |
@@ -27,7 +27,7 @@
 | qr_code | 2 |
 | radio_button_grid | 15 |
 | radio_list | 2 |
-| round_button | 40 |
+| round_button | 37 |
 | select_text | 2 |
 | set_field | 5 |
 | set_variable | 1152 |
@@ -38,7 +38,7 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 384 |
+| text | 382 |
 | text_area | 4 |
 | text_box | 27 |
 | text_bubble | 1 |
@@ -59,7 +59,7 @@
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
-| emit: completed | 87 |
+| emit: completed | 85 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 3 |
@@ -67,14 +67,14 @@
 | emit: set_language | 4 |
 | emit: uncompleted | 122 |
 | feedback | 24 |
-| go_to | 48 |
+| go_to | 47 |
 | nav | 3 |
-| nav_stack | 10 |
+| nav_stack | 9 |
 | pop_up | 20 |
 | reset_app | 4 |
 | reset_data | 3 |
 | save_to_device | 5 |
-| set_data | 30 |
+| set_data | 29 |
 | set_field | 97 |
 | set_item | 13 |
 | set_local | 141 |

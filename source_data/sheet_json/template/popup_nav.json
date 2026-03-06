@@ -23,19 +23,20 @@
       "style_list": "padding: 12px 24px;"
     },
     {
-      "type": "begin_display_group",
-      "action_list": "click | emit:uncompleted;"
-    },
-    {
       "type": "round_button",
       "name": "previous_article",
+      "value": "Back",
       "action_list": "click | emit:uncompleted;",
       "parameter_list": "variant: no-background; \nicon_src: images/icons/arrow_back.svg;",
       "condition": "@local.show_previous"
     },
     {
+      "type": "begin_display_group",
+      "action_list": "click | emit:uncompleted;",
+      "condition": "@local.show_previous"
+    },
+    {
       "type": "text",
-      "name": "back",
       "value": "Back",
       "condition": "@local.show_previous"
     },
@@ -48,51 +49,28 @@
       "style_list": "flex: 1"
     },
     {
-      "type": "begin_display_group",
-      "action_list": "click | emit:completed;"
-    },
-    {
-      "type": "text",
-      "name": "next",
-      "value": "Next",
-      "condition": "@local.show_next"
-    },
-    {
-      "type": "round_button",
+      "type": "button",
       "name": "next_article",
+      "value": "Next",
       "action_list": "click | emit:completed;",
-      "parameter_list": "icon_src: images/icons/arrow_forward.svg;",
+      "parameter_list": "icon: images/icons/arrow_forward.svg;\nicon_align: right;",
       "condition": "@local.show_next"
     },
     {
-      "type": "end_display_group"
-    },
-    {
-      "type": "begin_display_group",
-      "action_list": "click | nav_stack: close_all;\nclick | go_to : module_final;\nclick | emit:completed; \nclick | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.pages_complete_field: true;"
-    },
-    {
-      "type": "text",
-      "name": "finish",
-      "value": "Finish",
-      "condition": "!@local.show_next && @local.show_previous"
-    },
-    {
-      "type": "round_button",
+      "type": "button",
       "name": "go_module_final",
+      "value": "Finish",
       "action_list": "click | nav_stack: close_all;\nclick | go_to : module_final;\nclick | emit:completed; \nclick | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.pages_complete_field: true;",
-      "parameter_list": "icon_src: images/icons/checkmark-outline.svg;",
+      "parameter_list": "icon: images/icons/checkmark-outline.svg;\nicon_align: right;",
       "condition": "!@local.show_next && @local.show_previous"
     },
     {
-      "type": "round_button",
+      "type": "button",
       "name": "go_modules_and_complete",
+      "value": "Finish",
       "action_list": "click | nav_stack: close_all;\nclick | set_data |\n_list_id: modules,\n_id: @fields.current_module_no,\n@local.completed_field: true,\n@local.pages_complete_field: true;\nclick | emit:completed; ",
-      "parameter_list": "icon_src: images/icons/checkmark-outline.svg;",
+      "parameter_list": "icon: images/icons/checkmark-outline.svg;\nicon_align: right;",
       "condition": "!@local.show_next && !@local.show_previous"
-    },
-    {
-      "type": "end_display_group"
     },
     {
       "type": "end_display_group"
