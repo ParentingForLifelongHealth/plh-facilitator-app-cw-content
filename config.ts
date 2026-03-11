@@ -27,8 +27,13 @@ config.android = {
   icon_asset_background_path: "./app_data/assets/android/icon-background.png",
 };
 
-config.ios.app_id = "international.idems.plh-facilitator-cw";
-config.ios.app_name = "Mayor Konektá";
+config.ios = {
+  app_id: "international.idems.plh-facilitator-cw",
+  app_name: "Mayor Konekta",
+  app_display_name: "Mayor Konektá",
+  logo_asset_path: "./app_data/assets/android/icon-foreground.png",
+  logo_background_color: "#E7E6E2",
+}
 
 config.git = {
   content_repo: "https://github.com/ParentingForLifelongHealth/plh-facilitator-app-cw-content.git",
