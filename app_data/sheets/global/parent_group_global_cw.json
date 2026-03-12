@@ -86,7 +86,9 @@
       "name": "parent_count_text_sing",
       "value": "Caregiver",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -154,7 +156,9 @@
       "name": "group_details",
       "value": "Group Details",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -222,7 +226,9 @@
       "name": "label_first_name",
       "value": "Caregiver's Name*",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -370,7 +376,9 @@
       "name": "edit_first_name",
       "value": "Enter caregiver's first and last name",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -548,7 +556,9 @@
       "name": "error_child_age",
       "value": "Please enter the age consistent with the range of this group.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -606,7 +616,9 @@
       "name": "group_created_confirmation",
       "value": "Your caregiver group is created",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     },
     {
@@ -629,7 +641,9 @@
       "name": "info_message_unchangable",
       "value": "Age group and delivery type cannot be changed after the group is created.\nTo change these, delete this group and create a new one.",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       }
     }
   ],

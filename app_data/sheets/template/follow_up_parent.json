@@ -318,7 +318,7 @@
               "rows": [
                 {
                   "type": "text",
-                  "value": "@local.first_name @local.last_name",
+                  "value": "@local.first_name",
                   "_translations": {
                     "value": {}
                   },
@@ -326,7 +326,8 @@
                     "style": "emphasised"
                   },
                   "style_list": [
-                    "margin: 0px"
+                    "margin: 0px",
+                    "word-break: break-word"
                   ],
                   "exclude_from_translation": true,
                   "name": "text_1",
@@ -334,24 +335,15 @@
                   "_dynamicFields": {
                     "value": [
                       {
-                        "fullExpression": "@local.first_name @local.last_name",
+                        "fullExpression": "@local.first_name",
                         "matchedExpression": "@local.first_name",
                         "type": "local",
                         "fieldName": "first_name"
-                      },
-                      {
-                        "fullExpression": "@local.first_name @local.last_name",
-                        "matchedExpression": "@local.last_name",
-                        "type": "local",
-                        "fieldName": "last_name"
                       }
                     ]
                   },
                   "_dynamicDependencies": {
                     "@local.first_name": [
-                      "value"
-                    ],
-                    "@local.last_name": [
                       "value"
                     ]
                   }
@@ -374,7 +366,8 @@
                       "style_list": [
                         "font-size: 16px",
                         "color: var(--ion-color-primary-700)",
-                        "margin-top: -20px"
+                        "margin-top: -20px",
+                        "word-break: break-word"
                       ],
                       "condition": "@local.group_id == @item.name",
                       "_nested_name": "display_group_19.display_group_1.display_group_1.data_items_2.group_name",
@@ -510,6 +503,9 @@
                   }
                 }
               ],
+              "parameter_list": {
+                "variant": "card"
+              },
               "_nested_name": "display_group_19.display_group_1.submit_button",
               "_dynamicFields": {
                 "action_list": {

@@ -2834,6 +2834,44 @@
         },
         {
           "type": "button",
+          "value": "Show less",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "nav",
+              "args": [
+                "back"
+              ],
+              "_raw": "click | nav: back"
+            }
+          ],
+          "parameter_list": {
+            "variant": "card"
+          },
+          "condition": "!@local.has_limit",
+          "name": "button_3",
+          "_nested_name": "display_group_65.button_3",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "!@local.has_limit",
+                "matchedExpression": "!@local.has_limit",
+                "type": "local",
+                "fieldName": "has_limit"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "!@local.has_limit": [
+              "condition"
+            ]
+          }
+        },
+        {
+          "type": "button",
           "name": "show_all",
           "value": "Show all",
           "_translations": {
@@ -2851,18 +2889,21 @@
               "_raw": "click | go_to: follow_up"
             }
           ],
-          "condition": "@local.has_limit && @local.no_of_parents > 2",
+          "parameter_list": {
+            "variant": "card"
+          },
+          "condition": "@local.has_limit && (@local.no_of_parents > 2)",
           "_nested_name": "display_group_65.show_all",
           "_dynamicFields": {
             "condition": [
               {
-                "fullExpression": "@local.has_limit && @local.no_of_parents > 2",
+                "fullExpression": "@local.has_limit && (@local.no_of_parents > 2)",
                 "matchedExpression": "@local.has_limit",
                 "type": "local",
                 "fieldName": "has_limit"
               },
               {
-                "fullExpression": "@local.has_limit && @local.no_of_parents > 2",
+                "fullExpression": "@local.has_limit && (@local.no_of_parents > 2)",
                 "matchedExpression": "@local.no_of_parents",
                 "type": "local",
                 "fieldName": "no_of_parents"

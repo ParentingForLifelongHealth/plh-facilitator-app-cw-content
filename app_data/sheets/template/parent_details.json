@@ -339,7 +339,9 @@
       "name": "reduced_margin",
       "value": "-8px",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": true,
       "type": "set_variable",
@@ -1802,7 +1804,7 @@
       "_translations": {
         "value": {}
       },
-      "condition": "@fields.current_age_group == \"teen_\"",
+      "condition": "@local.current_age_group == \"teen_\"",
       "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "child_age_valid",
@@ -1859,9 +1861,9 @@
         ],
         "condition": [
           {
-            "fullExpression": "@fields.current_age_group == \"teen_\"",
-            "matchedExpression": "@fields.current_age_group",
-            "type": "fields",
+            "fullExpression": "@local.current_age_group == \"teen_\"",
+            "matchedExpression": "@local.current_age_group",
+            "type": "local",
             "fieldName": "current_age_group"
           }
         ]
@@ -1883,7 +1885,7 @@
         "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 10 && @local.child_age<= 17) || @local.child_age== '' || !@local.child_age || (@global.edit_child_age == @local.child_age))": [
           "value"
         ],
-        "@fields.current_age_group": [
+        "@local.current_age_group": [
           "condition"
         ]
       }
@@ -1894,7 +1896,7 @@
       "_translations": {
         "value": {}
       },
-      "condition": "@fields.current_age_group == \"yc_\"",
+      "condition": "@local.current_age_group == \"yc_\"",
       "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "child_age_valid",
@@ -1951,9 +1953,9 @@
         ],
         "condition": [
           {
-            "fullExpression": "@fields.current_age_group == \"yc_\"",
-            "matchedExpression": "@fields.current_age_group",
-            "type": "fields",
+            "fullExpression": "@local.current_age_group == \"yc_\"",
+            "matchedExpression": "@local.current_age_group",
+            "type": "local",
             "fieldName": "current_age_group"
           }
         ]
@@ -1975,7 +1977,7 @@
         "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 9) || @local.child_age== '' || !@local.child_age || (@global.edit_child_age == @local.child_age))": [
           "value"
         ],
-        "@fields.current_age_group": [
+        "@local.current_age_group": [
           "condition"
         ]
       }
@@ -1986,7 +1988,7 @@
       "_translations": {
         "value": {}
       },
-      "condition": "@fields.current_age_group == \"mixed_\"",
+      "condition": "@local.current_age_group == \"mixed_\"",
       "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "child_age_valid",
@@ -2043,9 +2045,9 @@
         ],
         "condition": [
           {
-            "fullExpression": "@fields.current_age_group == \"mixed_\"",
-            "matchedExpression": "@fields.current_age_group",
-            "type": "fields",
+            "fullExpression": "@local.current_age_group == \"mixed_\"",
+            "matchedExpression": "@local.current_age_group",
+            "type": "local",
             "fieldName": "current_age_group"
           }
         ]
@@ -2067,7 +2069,7 @@
         "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 17) || @local.child_age== '' || !@local.child_age || (@global.edit_child_age == @local.child_age))": [
           "value"
         ],
-        "@fields.current_age_group": [
+        "@local.current_age_group": [
           "condition"
         ]
       }
@@ -2082,7 +2084,7 @@
         "color: #FF0000",
         "font-size: 14px"
       ],
-      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"teen_\")",
+      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"teen_\")",
       "exclude_from_translation": true,
       "name": "text_61",
       "_nested_name": "text_61",
@@ -2097,21 +2099,21 @@
         ],
         "condition": [
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"teen_\")",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"teen_\")",
             "matchedExpression": "!@local.child_age_valid",
             "type": "local",
             "fieldName": "child_age_valid"
           },
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"teen_\")",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"teen_\")",
             "matchedExpression": "@local.show_child_age_error",
             "type": "local",
             "fieldName": "show_child_age_error"
           },
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"teen_\")",
-            "matchedExpression": "@fields.current_age_group",
-            "type": "fields",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"teen_\")",
+            "matchedExpression": "@local.current_age_group",
+            "type": "local",
             "fieldName": "current_age_group"
           }
         ]
@@ -2126,7 +2128,7 @@
         "@local.show_child_age_error": [
           "condition"
         ],
-        "@fields.current_age_group": [
+        "@local.current_age_group": [
           "condition"
         ]
       }
@@ -2141,7 +2143,7 @@
         "color: #FF0000",
         "font-size: 14px"
       ],
-      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"yc_\")",
+      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"yc_\")",
       "exclude_from_translation": true,
       "name": "text_62",
       "_nested_name": "text_62",
@@ -2156,21 +2158,21 @@
         ],
         "condition": [
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"yc_\")",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"yc_\")",
             "matchedExpression": "!@local.child_age_valid",
             "type": "local",
             "fieldName": "child_age_valid"
           },
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"yc_\")",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"yc_\")",
             "matchedExpression": "@local.show_child_age_error",
             "type": "local",
             "fieldName": "show_child_age_error"
           },
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"yc_\")",
-            "matchedExpression": "@fields.current_age_group",
-            "type": "fields",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"yc_\")",
+            "matchedExpression": "@local.current_age_group",
+            "type": "local",
             "fieldName": "current_age_group"
           }
         ]
@@ -2185,7 +2187,7 @@
         "@local.show_child_age_error": [
           "condition"
         ],
-        "@fields.current_age_group": [
+        "@local.current_age_group": [
           "condition"
         ]
       }
@@ -2200,7 +2202,7 @@
         "color: #FF0000",
         "font-size: 14px"
       ],
-      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"mixed_\")",
+      "condition": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"mixed_\")",
       "exclude_from_translation": true,
       "name": "text_63",
       "_nested_name": "text_63",
@@ -2215,21 +2217,21 @@
         ],
         "condition": [
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"mixed_\")",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"mixed_\")",
             "matchedExpression": "!@local.child_age_valid",
             "type": "local",
             "fieldName": "child_age_valid"
           },
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"mixed_\")",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"mixed_\")",
             "matchedExpression": "@local.show_child_age_error",
             "type": "local",
             "fieldName": "show_child_age_error"
           },
           {
-            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@fields.current_age_group == \"mixed_\")",
-            "matchedExpression": "@fields.current_age_group",
-            "type": "fields",
+            "fullExpression": "!@local.child_age_valid && @local.show_child_age_error && (@local.current_age_group == \"mixed_\")",
+            "matchedExpression": "@local.current_age_group",
+            "type": "local",
             "fieldName": "current_age_group"
           }
         ]
@@ -2244,7 +2246,7 @@
         "@local.show_child_age_error": [
           "condition"
         ],
-        "@fields.current_age_group": [
+        "@local.current_age_group": [
           "condition"
         ]
       }

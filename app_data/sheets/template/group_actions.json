@@ -496,6 +496,12 @@
               "value"
             ]
           }
+        },
+        {
+          "name": "has_limit",
+          "value": true,
+          "type": "set_variable",
+          "_nested_name": "follow_up.has_limit"
         }
       ],
       "_nested_name": "follow_up"
