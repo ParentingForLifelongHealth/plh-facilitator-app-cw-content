@@ -83,9 +83,9 @@
     },
     {
       "type": "text",
-      "value": "@local.first_name @local.last_name",
+      "value": "@local.first_name",
       "parameter_list": "style:emphasised",
-      "style_list": "margin: 0px;",
+      "style_list": "margin: 0px; word-break: break-word;",
       "exclude_from_translation": true
     },
     {
@@ -99,7 +99,7 @@
       "type": "text",
       "name": "group_name",
       "value": "@item.text",
-      "style_list": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -20px;\n",
+      "style_list": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -20px;\nword-break: break-word;",
       "condition": "@local.group_id == @item.name",
       "comments": "font-size: 16px; \ncolor: var(--ion-color-primary-700);\nmargin-top: -16px;\nmargin-bottom: 12px;\n"
     },
@@ -118,7 +118,8 @@
       "type": "button",
       "name": "submit_button",
       "value": "Followed up",
-      "action_list": "click | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now()),\nno_follow_up: @local.new_followup_count,\nfollow_up_week: @local.last_week;"
+      "action_list": "click | set_data |\n_list_id: parents,\n_id: @local.parent_id,\nlast_follow_up: @calc(now()),\nno_follow_up: @local.new_followup_count,\nfollow_up_week: @local.last_week;",
+      "parameter_list": "variant: card;"
     },
     {
       "type": "end_display_group"

@@ -71,9 +71,9 @@
     },
     {
       "type": "text",
-      "value": "@local.first_name @local.last_name",
+      "value": "@local.first_name",
       "exclude_from_translation": true,
-      "style_list": "flex: 1"
+      "style_list": "flex: 1; word-break: break-word;"
     },
     {
       "type": "simple_checkbox  ",

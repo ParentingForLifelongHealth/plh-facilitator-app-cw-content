@@ -76,7 +76,9 @@
           "name": "previous_article",
           "value": "Back",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
@@ -128,7 +130,9 @@
               "type": "text",
               "value": "Back",
               "_translations": {
-                "value": {}
+                "value": {
+                  "cw_pap": true
+                }
               },
               "condition": "@local.show_previous",
               "name": "text_1",
@@ -222,7 +226,9 @@
           "name": "go_module_final",
           "value": "Finish",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
@@ -332,7 +338,9 @@
           "name": "go_modules_and_complete",
           "value": "Finish",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
