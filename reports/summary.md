@@ -9,9 +9,9 @@
 | animated_slides | 1 |
 | apple_sign_in_button | 2 |
 | audio | 3 |
-| button | 135 |
+| button | 137 |
 | carousel | 2 |
-| combo_box | 16 |
+| combo_box | 19 |
 | data_items | 126 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
@@ -30,7 +30,7 @@
 | round_button | 37 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1152 |
+| set_variable | 1154 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -38,11 +38,11 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 382 |
-| text_area | 4 |
+| text | 387 |
+| text_area | 5 |
 | text_box | 27 |
 | text_bubble | 1 |
-| title | 71 |
+| title | 72 |
 | toggle_bar | 7 |
 | update_action_list | 1 |
 | video | 3 |
@@ -55,7 +55,7 @@
 | type | count |
 | --- | --- |
 | DEBUG | 2 |
-| add_data | 11 |
+| add_data | 12 |
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
@@ -68,7 +68,7 @@
 | emit: uncompleted | 122 |
 | feedback | 24 |
 | go_to | 47 |
-| nav | 3 |
+| nav | 4 |
 | nav_stack | 9 |
 | pop_up | 20 |
 | reset_app | 4 |
@@ -80,7 +80,7 @@
 | set_local | 141 |
 | share | 5 |
 | speaker_name | 1 |
-| toast | 2 |
+| toast | 3 |
 | user | 4 |
 | variant | 1 |
 </details>
@@ -90,8 +90,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 139925 KB | 139.9 MB |
-| unused | 12321 KB | 12.3 MB |
+| total | 140876 KB | 140.9 MB |
+| unused | 10830 KB | 10.8 MB |
 </details>
 
 <details open>
@@ -165,10 +165,8 @@ Assets that appear in app-data but do not have references within sheets
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
 | images/logos/UNICEF.jpg | 27.7 |
-| pdf/mocule_1_home_activity_pap.pdf | 748.2 |
 | pdf/module_1_core_lesson_teen_eng.pdf | 821.4 |
-| pdf/module_1_core_lesson_teen_pap.pdf | 824.6 |
-| pdf/module_6-core_lesson_1_pap.pdf | 743.8 |
+| pdf/module_1_core_lesson_teen_pap.pdf | 825.6 |
 </details>
 
 <details open>
@@ -187,7 +185,6 @@ Assets that have references within sheets but do not appear in app-data
 | pdf/modile_1_core_lesson_teen_eng.pdf | 1 |
 | pdf/modile_1_core_lesson_teen_pap.pdf | 1 |
 | pdf/module_1_home_activity_eng.pdf | 1 |
-| pdf/module_6_core_lesson_1_eng.pdf | 1 |
 </details>
 
 <details >
@@ -275,33 +272,34 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | lottie/checkmark_blue.json | 17 | 3 |
 | lottie/cw_profile_complete.json | 13.4 | 4 |
 | pdf/aecp_eng.pdf | 739 | 1 |
-| pdf/aecp_pap.pdf | 738.4 | 1 |
+| pdf/aecp_pap.pdf | 743.8 | 1 |
 | pdf/child_development_domain_eng.pdf | 104.5 | 1 |
-| pdf/child_development_domain_pap.pdf | 723 | 1 |
+| pdf/child_development_domain_pap.pdf | 722.9 | 1 |
 | pdf/child_development_stages_eng.pdf | 9545 | 1 |
-| pdf/child_development_stages_pap.pdf | 13058.3 | 1 |
+| pdf/child_development_stages_pap.pdf | 13227.4 | 1 |
 | pdf/children_with_disabilities_eng.pdf | 766.7 | 1 |
-| pdf/children_with_disabilities_pap.pdf | 777.5 | 1 |
+| pdf/children_with_disabilities_pap.pdf | 787.7 | 1 |
 | pdf/individual_consultation_eng.pdf | 770.5 | 1 |
-| pdf/individual_consultation_pap.pdf | 774.3 | 1 |
+| pdf/individual_consultation_pap.pdf | 778 | 1 |
 | pdf/module_1_core_lesson_eng.pdf | 848.6 | 1 |
-| pdf/module_1_core_lesson_pap.pdf | 2896.6 | 1 |
+| pdf/module_1_core_lesson_pap.pdf | 2901.9 | 1 |
 | pdf/module_1_core_lesson_yc_eng.pdf | 819.6 | 1 |
-| pdf/module_1_core_lesson_yc_pap.pdf | 814.8 | 1 |
-| pdf/module_1_home_activity_pap.pdf | 776.8 | 1 |
+| pdf/module_1_core_lesson_yc_pap.pdf | 815.1 | 1 |
+| pdf/module_1_home_activity_pap.pdf | 778.2 | 1 |
 | pdf/module_1_overview_eng.pdf | 366.2 | 1 |
-| pdf/module_1_overview_pap.pdf | 793.1 | 1 |
+| pdf/module_1_overview_pap.pdf | 786.7 | 1 |
 | pdf/module_1_welcome_eng.pdf | 2287.5 | 1 |
-| pdf/module_1_welcome_pap.pdf | 2623 | 1 |
+| pdf/module_1_welcome_pap.pdf | 2632.1 | 1 |
 | pdf/module_6_closing_eng.pdf | 787.5 | 1 |
-| pdf/module_6_closing_pap.pdf | 769.9 | 1 |
-| pdf/module_6_core_lesson_1_pap.pdf | 743.2 | 1 |
+| pdf/module_6_closing_pap.pdf | 774.7 | 1 |
+| pdf/module_6_core_lesson_1_eng.pdf | 743.8 | 1 |
+| pdf/module_6_core_lesson_1_pap.pdf | 743.5 | 1 |
 | pdf/module_6_core_lesson_2_eng.pdf | 761 | 1 |
-| pdf/module_6_core_lesson_2_pap.pdf | 774.3 | 1 |
+| pdf/module_6_core_lesson_2_pap.pdf | 767.3 | 1 |
 | pdf/module_6_welcome_eng.pdf | 723.4 | 1 |
-| pdf/module_6_welcome_pap.pdf | 2633.4 | 1 |
+| pdf/module_6_welcome_pap.pdf | 2643.5 | 1 |
 | pdf/one_on_one_time_development_stages_eng.pdf | 755.2 | 1 |
-| pdf/one_on_one_time_development_stages_pap.pdf | 779.8 | 1 |
+| pdf/one_on_one_time_development_stages_pap.pdf | 781.4 | 1 |
 </details>
 
 <details >
@@ -309,7 +307,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | type | subtype | total |
 | --- | --- | --- |
-| data_list |  | 41 |
+| data_list |  | 44 |
 | data_list | app_config_language_list | 1 |
 | data_list | generated | 1 |
 | data_list | legal_terms | 2 |
@@ -320,7 +318,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | global |  | 13 |
 | global | legal_terms | 2 |
 | global | onboarding | 2 |
-| template |  | 103 |
+| template |  | 104 |
 | template | generated | 102 |
 | template | legal_terms | 4 |
 </details>

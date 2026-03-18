@@ -231,7 +231,9 @@
       "name": "text_postfix",
       "value": ".text",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "exclude_from_translation": false,
       "type": "set_variable",
@@ -383,7 +385,8 @@
             "value": {}
           },
           "style_list": [
-            "flex:1"
+            "flex:1",
+            "word-break: break-word"
           ],
           "_nested_name": "dg_header.group_name",
           "_dynamicFields": {

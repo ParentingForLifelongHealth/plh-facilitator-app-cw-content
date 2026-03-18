@@ -293,29 +293,24 @@
             },
             {
               "type": "text",
-              "value": "@local.first_name @local.last_name",
+              "value": "@local.first_name",
               "_translations": {
                 "value": {}
               },
               "exclude_from_translation": true,
               "style_list": [
-                "flex: 1"
+                "flex: 1",
+                "word-break: break-word"
               ],
               "name": "text_5",
               "_nested_name": "data_items_10.display_group_1_@item.id.text_5",
               "_dynamicFields": {
                 "value": [
                   {
-                    "fullExpression": "@local.first_name @local.last_name",
+                    "fullExpression": "@local.first_name",
                     "matchedExpression": "@local.first_name",
                     "type": "local",
                     "fieldName": "first_name"
-                  },
-                  {
-                    "fullExpression": "@local.first_name @local.last_name",
-                    "matchedExpression": "@local.last_name",
-                    "type": "local",
-                    "fieldName": "last_name"
                   }
                 ],
                 "_nested_name": [
@@ -329,9 +324,6 @@
               },
               "_dynamicDependencies": {
                 "@local.first_name": [
-                  "value"
-                ],
-                "@local.last_name": [
                   "value"
                 ],
                 "@item.id.text_5": [

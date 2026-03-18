@@ -1,0 +1,32 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "what_is_going_on_options",
+  "status": "released",
+  "rows": [
+    {
+      "id": "id_1",
+      "name": "isnt_working",
+      "text": "Something isn't working"
+    },
+    {
+      "id": "id_2",
+      "name": "have_idea",
+      "text": "I have an idea or suggestion"
+    },
+    {
+      "id": "id_3",
+      "name": "confused",
+      "text": "I'm confused / don't understand something"
+    },
+    {
+      "id": "id_4",
+      "name": "else",
+      "text": "Something else"
+    }
+  ],
+  "_source": {
+    "name": "Global",
+    "path": "templates/feedback_form.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1lTQEFW_sbBFXp4NW4t-Pyo0kdmFABWUFgBTqX-pOdEY"
+  }
+}

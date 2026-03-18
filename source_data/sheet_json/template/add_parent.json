@@ -335,19 +335,25 @@
     {
       "name": "child_age_valid",
       "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 10 && @local.child_age<= 17) || @local.child_age== '' || !@local.child_age)",
-      "condition": "@fields.current_age_group == \"teen_\"",
+      "condition": "@local.current_age_group == \"teen_\"",
       "exclude_from_translation": true
     },
     {
       "name": "child_age_valid",
       "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 9) || @local.child_age== '' || !@local.child_age)",
-      "condition": "@fields.current_age_group == \"yc_\"",
+      "condition": "@local.current_age_group == \"yc_\"",
       "exclude_from_translation": true
     },
     {
       "name": "child_age_valid",
       "value": "@calc((/^\\d{1,2}$/.test(@local.child_age) && @local.child_age>= 2 && @local.child_age<= 17) || @local.child_age== '' || !@local.child_age)",
-      "condition": "@fields.current_age_group == \"mixed_\"",
+      "condition": "@local.current_age_group == \"mixed_\"",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "text",
+      "value": "child_age_valid: @local.child_age_valid",
+      "condition": false,
       "exclude_from_translation": true
     },
     {
