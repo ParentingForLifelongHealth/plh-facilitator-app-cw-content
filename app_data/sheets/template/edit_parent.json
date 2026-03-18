@@ -424,7 +424,9 @@
       "name": "reduced_margin",
       "value": "-8px",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "reduced_margin"

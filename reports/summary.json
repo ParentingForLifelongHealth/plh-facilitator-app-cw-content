@@ -27,7 +27,7 @@
       },
       {
         "type": "button",
-        "count": 135
+        "count": 137
       },
       {
         "type": "carousel",
@@ -35,7 +35,7 @@
       },
       {
         "type": "combo_box",
-        "count": 16
+        "count": 19
       },
       {
         "type": "data_items",
@@ -111,7 +111,7 @@
       },
       {
         "type": "set_variable",
-        "count": 1152
+        "count": 1154
       },
       {
         "type": "simple_checkbox",
@@ -143,11 +143,11 @@
       },
       {
         "type": "text",
-        "count": 382
+        "count": 387
       },
       {
         "type": "text_area",
-        "count": 4
+        "count": 5
       },
       {
         "type": "text_box",
@@ -159,7 +159,7 @@
       },
       {
         "type": "title",
-        "count": 71
+        "count": 72
       },
       {
         "type": "toggle_bar",
@@ -187,7 +187,7 @@
       },
       {
         "type": "add_data",
-        "count": 11
+        "count": 12
       },
       {
         "type": "app_update",
@@ -239,7 +239,7 @@
       },
       {
         "type": "nav",
-        "count": 3
+        "count": 4
       },
       {
         "type": "nav_stack",
@@ -287,7 +287,7 @@
       },
       {
         "type": "toast",
-        "count": 2
+        "count": 3
       },
       {
         "type": "user",
@@ -303,13 +303,13 @@
     "data": [
       {
         "assets": "total",
-        "KB": "139925 KB",
-        "MB": "139.9 MB"
+        "KB": "140876 KB",
+        "MB": "140.9 MB"
       },
       {
         "assets": "unused",
-        "KB": "12321 KB",
-        "MB": "12.3 MB"
+        "KB": "10830 KB",
+        "MB": "10.8 MB"
       }
     ]
   },
@@ -572,20 +572,12 @@
         "size_kb": 27.7
       },
       {
-        "path": "pdf/mocule_1_home_activity_pap.pdf",
-        "size_kb": 748.2
-      },
-      {
         "path": "pdf/module_1_core_lesson_teen_eng.pdf",
         "size_kb": 821.4
       },
       {
         "path": "pdf/module_1_core_lesson_teen_pap.pdf",
-        "size_kb": 824.6
-      },
-      {
-        "path": "pdf/module_6-core_lesson_1_pap.pdf",
-        "size_kb": 743.8
+        "size_kb": 825.6
       }
     ]
   },
@@ -633,11 +625,6 @@
       },
       {
         "path": "pdf/module_1_home_activity_eng.pdf",
-        "count": 1,
-        "missing": true
-      },
-      {
-        "path": "pdf/module_6_core_lesson_1_eng.pdf",
         "count": 1,
         "missing": true
       }
@@ -1038,7 +1025,7 @@
       {
         "path": "pdf/aecp_pap.pdf",
         "count": 1,
-        "size_kb": 738.4
+        "size_kb": 743.8
       },
       {
         "path": "pdf/child_development_domain_eng.pdf",
@@ -1048,7 +1035,7 @@
       {
         "path": "pdf/child_development_domain_pap.pdf",
         "count": 1,
-        "size_kb": 723
+        "size_kb": 722.9
       },
       {
         "path": "pdf/child_development_stages_eng.pdf",
@@ -1058,7 +1045,7 @@
       {
         "path": "pdf/child_development_stages_pap.pdf",
         "count": 1,
-        "size_kb": 13058.3
+        "size_kb": 13227.4
       },
       {
         "path": "pdf/children_with_disabilities_eng.pdf",
@@ -1068,7 +1055,7 @@
       {
         "path": "pdf/children_with_disabilities_pap.pdf",
         "count": 1,
-        "size_kb": 777.5
+        "size_kb": 787.7
       },
       {
         "path": "pdf/individual_consultation_eng.pdf",
@@ -1078,7 +1065,7 @@
       {
         "path": "pdf/individual_consultation_pap.pdf",
         "count": 1,
-        "size_kb": 774.3
+        "size_kb": 778
       },
       {
         "path": "pdf/module_1_core_lesson_eng.pdf",
@@ -1088,7 +1075,7 @@
       {
         "path": "pdf/module_1_core_lesson_pap.pdf",
         "count": 1,
-        "size_kb": 2896.6
+        "size_kb": 2901.9
       },
       {
         "path": "pdf/module_1_core_lesson_yc_eng.pdf",
@@ -1098,12 +1085,12 @@
       {
         "path": "pdf/module_1_core_lesson_yc_pap.pdf",
         "count": 1,
-        "size_kb": 814.8
+        "size_kb": 815.1
       },
       {
         "path": "pdf/module_1_home_activity_pap.pdf",
         "count": 1,
-        "size_kb": 776.8
+        "size_kb": 778.2
       },
       {
         "path": "pdf/module_1_overview_eng.pdf",
@@ -1113,7 +1100,7 @@
       {
         "path": "pdf/module_1_overview_pap.pdf",
         "count": 1,
-        "size_kb": 793.1
+        "size_kb": 786.7
       },
       {
         "path": "pdf/module_1_welcome_eng.pdf",
@@ -1123,7 +1110,7 @@
       {
         "path": "pdf/module_1_welcome_pap.pdf",
         "count": 1,
-        "size_kb": 2623
+        "size_kb": 2632.1
       },
       {
         "path": "pdf/module_6_closing_eng.pdf",
@@ -1133,12 +1120,17 @@
       {
         "path": "pdf/module_6_closing_pap.pdf",
         "count": 1,
-        "size_kb": 769.9
+        "size_kb": 774.7
+      },
+      {
+        "path": "pdf/module_6_core_lesson_1_eng.pdf",
+        "count": 1,
+        "size_kb": 743.8
       },
       {
         "path": "pdf/module_6_core_lesson_1_pap.pdf",
         "count": 1,
-        "size_kb": 743.2
+        "size_kb": 743.5
       },
       {
         "path": "pdf/module_6_core_lesson_2_eng.pdf",
@@ -1148,7 +1140,7 @@
       {
         "path": "pdf/module_6_core_lesson_2_pap.pdf",
         "count": 1,
-        "size_kb": 774.3
+        "size_kb": 767.3
       },
       {
         "path": "pdf/module_6_welcome_eng.pdf",
@@ -1158,7 +1150,7 @@
       {
         "path": "pdf/module_6_welcome_pap.pdf",
         "count": 1,
-        "size_kb": 2633.4
+        "size_kb": 2643.5
       },
       {
         "path": "pdf/one_on_one_time_development_stages_eng.pdf",
@@ -1168,7 +1160,7 @@
       {
         "path": "pdf/one_on_one_time_development_stages_pap.pdf",
         "count": 1,
-        "size_kb": 779.8
+        "size_kb": 781.4
       }
     ]
   },
@@ -1177,7 +1169,7 @@
       {
         "type": "data_list",
         "subtype": null,
-        "total": 41
+        "total": 44
       },
       {
         "type": "data_list",
@@ -1232,7 +1224,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 103
+        "total": 104
       },
       {
         "type": "template",

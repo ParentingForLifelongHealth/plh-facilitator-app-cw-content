@@ -120,7 +120,7 @@
       "type": "text",
       "name": "text_@item.parent_no",
       "value": "@local.first_name @local.last_name",
-      "style_list": "color: #46607F;\n",
+      "style_list": "color: #46607F; word-break: break-word;\n",
       "condition": true,
       "exclude_from_translation": true
     },

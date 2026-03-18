@@ -86,7 +86,7 @@
       "type": "title",
       "name": "group_name",
       "value": "@fields.current_group_name",
-      "style_list": "flex:1;"
+      "style_list": "flex:1; word-break: break-word;"
     },
     {
       "type": "round_button",

@@ -1,0 +1,19 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "feedback_data",
+  "status": "released",
+  "rows": [
+    {
+      "id": "text_field",
+      "what_is_going_on": "text_field",
+      "which_app": "text_field",
+      "where": "text_field",
+      "text_area": "text_field"
+    }
+  ],
+  "_source": {
+    "name": "Global",
+    "path": "templates/feedback_form.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1lTQEFW_sbBFXp4NW4t-Pyo0kdmFABWUFgBTqX-pOdEY"
+  }
+}

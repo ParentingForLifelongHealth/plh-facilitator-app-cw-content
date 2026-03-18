@@ -399,10 +399,18 @@
     },
     {
       "type": "button",
+      "value": "Show less",
+      "action_list": "click | nav: back;",
+      "parameter_list": "variant: card;",
+      "condition": "!@local.has_limit"
+    },
+    {
+      "type": "button",
       "name": "show_all",
       "value": "Show all",
       "action_list": "click | go_to: follow_up;",
-      "condition": "@local.has_limit && @local.no_of_parents > 2",
+      "parameter_list": "variant: card;",
+      "condition": "@local.has_limit && (@local.no_of_parents > 2)",
       "comments": "variant: card; style: no-background short;"
     },
     {

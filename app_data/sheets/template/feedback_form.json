@@ -1,0 +1,293 @@
+{
+  "flow_type": "template",
+  "flow_name": "feedback_form",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "Feedback Form",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_2",
+      "_nested_name": "title_2"
+    },
+    {
+      "type": "text",
+      "value": "What's going on?",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "combo_box",
+      "name": "what_is_going_on",
+      "parameter_list": {
+        "placeholder": "What's going on?",
+        "answer_list": "@data.what_is_going_on_options"
+      },
+      "_nested_name": "what_is_going_on",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@data.what_is_going_on_options",
+              "matchedExpression": "@data.what_is_going_on_options",
+              "type": "data",
+              "fieldName": "what_is_going_on_options"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.what_is_going_on_options": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "name": "which_app_options",
+      "value": "name: parent | text: @global.parent_app_name;  \nname: facilitator | text: @global.app_name;",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "which_app_options",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "name: parent | text: @global.parent_app_name;  \nname: facilitator | text: @global.app_name;",
+            "matchedExpression": "@global.parent_app_name",
+            "type": "global",
+            "fieldName": "parent_app_name"
+          },
+          {
+            "fullExpression": "name: parent | text: @global.parent_app_name;  \nname: facilitator | text: @global.app_name;",
+            "matchedExpression": "@global.app_name",
+            "type": "global",
+            "fieldName": "app_name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.parent_app_name": [
+          "value"
+        ],
+        "@global.app_name": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "Which app?",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "combo_box",
+      "name": "which_app",
+      "parameter_list": {
+        "placeholder": "Which app?",
+        "answer_list": "@local.which_app_options"
+      },
+      "_nested_name": "which_app",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.which_app_options",
+              "matchedExpression": "@local.which_app_options",
+              "type": "local",
+              "fieldName": "which_app_options"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.which_app_options": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "Where?",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_8",
+      "_nested_name": "text_8"
+    },
+    {
+      "type": "combo_box",
+      "name": "where",
+      "parameter_list": {
+        "placeholder": "Where?",
+        "answer_list": "@data.where_options"
+      },
+      "_nested_name": "where",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@data.where_options",
+              "matchedExpression": "@data.where_options",
+              "type": "data",
+              "fieldName": "where_options"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@data.where_options": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "Tell us more",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_10",
+      "_nested_name": "text_10"
+    },
+    {
+      "type": "text_area",
+      "name": "text_area",
+      "parameter_list": {
+        "placeholder": "Tell us more"
+      },
+      "_nested_name": "text_area"
+    },
+    {
+      "type": "button",
+      "value": "Send",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "add_data",
+          "args": [],
+          "_raw": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
+          "params": {
+            "_list_id": "feedback_data",
+            "what_is_going_on": "@local.what_is_going_on",
+            "which_app": "@local.which_app",
+            "where": "@local.where",
+            "text_area": "@local.text_area"
+          }
+        },
+        {
+          "trigger": "click",
+          "action_id": "toast",
+          "args": [],
+          "_raw": "click | toast | message: Thanks! This helps us improve your experience on the app",
+          "params": {
+            "message": "Thanks! This helps us improve your experience on the app"
+          }
+        }
+      ],
+      "name": "button_12",
+      "_nested_name": "button_12",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "_raw": [
+              {
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
+                "matchedExpression": "@local.what_is_going_on",
+                "type": "local",
+                "fieldName": "what_is_going_on"
+              },
+              {
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
+                "matchedExpression": "@local.which_app",
+                "type": "local",
+                "fieldName": "which_app"
+              },
+              {
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
+                "matchedExpression": "@local.where",
+                "type": "local",
+                "fieldName": "where"
+              },
+              {
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
+                "matchedExpression": "@local.text_area",
+                "type": "local",
+                "fieldName": "text_area"
+              }
+            ],
+            "params": {
+              "what_is_going_on": [
+                {
+                  "fullExpression": "@local.what_is_going_on",
+                  "matchedExpression": "@local.what_is_going_on",
+                  "type": "local",
+                  "fieldName": "what_is_going_on"
+                }
+              ],
+              "which_app": [
+                {
+                  "fullExpression": "@local.which_app",
+                  "matchedExpression": "@local.which_app",
+                  "type": "local",
+                  "fieldName": "which_app"
+                }
+              ],
+              "where": [
+                {
+                  "fullExpression": "@local.where",
+                  "matchedExpression": "@local.where",
+                  "type": "local",
+                  "fieldName": "where"
+                }
+              ],
+              "text_area": [
+                {
+                  "fullExpression": "@local.text_area",
+                  "matchedExpression": "@local.text_area",
+                  "type": "local",
+                  "fieldName": "text_area"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.what_is_going_on": [
+          "action_list.0._raw",
+          "action_list.0.params.what_is_going_on"
+        ],
+        "@local.which_app": [
+          "action_list.0._raw",
+          "action_list.0.params.which_app"
+        ],
+        "@local.where": [
+          "action_list.0._raw",
+          "action_list.0.params.where"
+        ],
+        "@local.text_area": [
+          "action_list.0._raw",
+          "action_list.0.params.text_area"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "Global",
+    "path": "templates/feedback_form.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1lTQEFW_sbBFXp4NW4t-Pyo0kdmFABWUFgBTqX-pOdEY"
+  }
+}
