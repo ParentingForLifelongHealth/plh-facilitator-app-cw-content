@@ -112,6 +112,9 @@
                 "variant": "dropdown"
               },
               "exclude_from_translation": true,
+              "style_list": [
+                "max-width:90vw"
+              ],
               "rows": [
                 {
                   "type": "data_items",

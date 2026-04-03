@@ -44,6 +44,7 @@
       "action_list": "changed | set_field: current_group_no: this.value;\nchanged | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value};\n",
       "parameter_list": "placeholder: @global.select_group;\ndisabled_text: @global.no_groups;\nvariant: dropdown;\n",
       "exclude_from_translation": true,
+      "style_list": "max-width:90vw;",
       "comments": "This syntax feels very wrong and against the templating system Johnny McQuade let's find a time to discuss.\n\nchanged | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix@local.selected_group;"
     },
     {

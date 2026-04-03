@@ -399,7 +399,7 @@
     },
     {
       "type": "button",
-      "value": "Show less",
+      "value": "Show Less",
       "action_list": "click | nav: back;",
       "parameter_list": "variant: card;",
       "condition": "!@local.has_limit"
