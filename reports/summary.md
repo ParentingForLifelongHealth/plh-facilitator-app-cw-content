@@ -11,7 +11,7 @@
 | audio | 3 |
 | button | 137 |
 | carousel | 2 |
-| combo_box | 19 |
+| combo_box | 17 |
 | data_items | 126 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
@@ -26,11 +26,11 @@
 | plh_module_list_item | 6 |
 | qr_code | 2 |
 | radio_button_grid | 15 |
-| radio_list | 2 |
+| radio_list | 3 |
 | round_button | 37 |
 | select_text | 2 |
 | set_field | 5 |
-| set_variable | 1154 |
+| set_variable | 1159 |
 | simple_checkbox | 6 |
 | tab | 2 |
 | tabs | 1 |
@@ -38,9 +38,9 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 387 |
+| text | 386 |
 | text_area | 5 |
-| text_box | 27 |
+| text_box | 28 |
 | text_bubble | 1 |
 | title | 72 |
 | toggle_bar | 7 |
@@ -59,7 +59,7 @@
 | app_update | 1 |
 | auth | 4 |
 | copy | 2 |
-| emit: completed | 85 |
+| emit: completed | 86 |
 | emit: force_reload | 9 |
 | emit: force_reprocess | 21 |
 | emit: force_restart | 3 |
@@ -307,7 +307,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | type | subtype | total |
 | --- | --- | --- |
-| data_list |  | 44 |
+| data_list |  | 43 |
 | data_list | app_config_language_list | 1 |
 | data_list | generated | 1 |
 | data_list | legal_terms | 2 |

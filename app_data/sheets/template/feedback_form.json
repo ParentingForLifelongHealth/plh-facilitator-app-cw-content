@@ -14,7 +14,7 @@
     },
     {
       "type": "text",
-      "value": "What's going on?",
+      "value": "Your Feedback",
       "_translations": {
         "value": {}
       },
@@ -22,28 +22,43 @@
       "_nested_name": "text_3"
     },
     {
-      "type": "combo_box",
-      "name": "what_is_going_on",
+      "type": "text_area",
+      "name": "text_feedback",
       "parameter_list": {
-        "placeholder": "What's going on?",
-        "answer_list": "@data.what_is_going_on_options"
+        "placeholder": "Tell us what's on your mind..."
       },
-      "_nested_name": "what_is_going_on",
+      "_nested_name": "text_feedback"
+    },
+    {
+      "name": "text_feedback_valid",
+      "value": "@calc(!!@local.text_feedback)",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "text_feedback_valid",
       "_dynamicFields": {
-        "parameter_list": {
-          "answer_list": [
-            {
-              "fullExpression": "@data.what_is_going_on_options",
-              "matchedExpression": "@data.what_is_going_on_options",
-              "type": "data",
-              "fieldName": "what_is_going_on_options"
-            }
-          ]
-        }
+        "value": [
+          {
+            "fullExpression": "@calc(!!@local.text_feedback)",
+            "matchedExpression": "!@local.text_feedback",
+            "type": "local",
+            "fieldName": "text_feedback"
+          },
+          {
+            "fullExpression": "@calc(!!@local.text_feedback)",
+            "matchedExpression": "@calc(!!@local.text_feedback)",
+            "type": "calc",
+            "fieldName": "!!@local.text_feedback"
+          }
+        ]
       },
       "_dynamicDependencies": {
-        "@data.what_is_going_on_options": [
-          "parameter_list.answer_list"
+        "!@local.text_feedback": [
+          "value"
+        ],
+        "@calc(!!@local.text_feedback)": [
+          "value"
         ]
       }
     },
@@ -86,11 +101,11 @@
       "_translations": {
         "value": {}
       },
-      "name": "text_6",
-      "_nested_name": "text_6"
+      "name": "text_7",
+      "_nested_name": "text_7"
     },
     {
-      "type": "combo_box",
+      "type": "radio_list",
       "name": "which_app",
       "parameter_list": {
         "placeholder": "Which app?",
@@ -116,13 +131,46 @@
       }
     },
     {
+      "name": "which_app_valid",
+      "value": "@calc(!!@local.which_app)",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "which_app_valid",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(!!@local.which_app)",
+            "matchedExpression": "!@local.which_app",
+            "type": "local",
+            "fieldName": "which_app"
+          },
+          {
+            "fullExpression": "@calc(!!@local.which_app)",
+            "matchedExpression": "@calc(!!@local.which_app)",
+            "type": "calc",
+            "fieldName": "!!@local.which_app"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.which_app": [
+          "value"
+        ],
+        "@calc(!!@local.which_app)": [
+          "value"
+        ]
+      }
+    },
+    {
       "type": "text",
       "value": "Where?",
       "_translations": {
         "value": {}
       },
-      "name": "text_8",
-      "_nested_name": "text_8"
+      "name": "text_10",
+      "_nested_name": "text_10"
     },
     {
       "type": "combo_box",
@@ -151,25 +199,112 @@
       }
     },
     {
-      "type": "text",
-      "value": "Tell us more",
+      "name": "specify_location",
+      "type": "set_variable",
+      "_nested_name": "specify_location"
+    },
+    {
+      "type": "text_box",
+      "name": "specify_location",
+      "parameter_list": {
+        "placeholder": "Please specify the location"
+      },
+      "condition": "@local.where == \"other\"",
+      "_nested_name": "specify_location",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.where == \"other\"",
+            "matchedExpression": "@local.where",
+            "type": "local",
+            "fieldName": "where"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.where": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "where_valid",
+      "value": "@calc(!!@local.where)",
       "_translations": {
         "value": {}
       },
-      "name": "text_10",
-      "_nested_name": "text_10"
+      "type": "set_variable",
+      "_nested_name": "where_valid",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@calc(!!@local.where)",
+            "matchedExpression": "!@local.where",
+            "type": "local",
+            "fieldName": "where"
+          },
+          {
+            "fullExpression": "@calc(!!@local.where)",
+            "matchedExpression": "@calc(!!@local.where)",
+            "type": "calc",
+            "fieldName": "!!@local.where"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.where": [
+          "value"
+        ],
+        "@calc(!!@local.where)": [
+          "value"
+        ]
+      }
     },
     {
-      "type": "text_area",
-      "name": "text_area",
-      "parameter_list": {
-        "placeholder": "Tell us more"
+      "name": "valid",
+      "value": "@local.text_feedback_valid && @local.which_app_valid && @local.where_valid",
+      "_translations": {
+        "value": {}
       },
-      "_nested_name": "text_area"
+      "type": "set_variable",
+      "_nested_name": "valid",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.text_feedback_valid && @local.which_app_valid && @local.where_valid",
+            "matchedExpression": "@local.text_feedback_valid",
+            "type": "local",
+            "fieldName": "text_feedback_valid"
+          },
+          {
+            "fullExpression": "@local.text_feedback_valid && @local.which_app_valid && @local.where_valid",
+            "matchedExpression": "@local.which_app_valid",
+            "type": "local",
+            "fieldName": "which_app_valid"
+          },
+          {
+            "fullExpression": "@local.text_feedback_valid && @local.which_app_valid && @local.where_valid",
+            "matchedExpression": "@local.where_valid",
+            "type": "local",
+            "fieldName": "where_valid"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.text_feedback_valid": [
+          "value"
+        ],
+        "@local.which_app_valid": [
+          "value"
+        ],
+        "@local.where_valid": [
+          "value"
+        ]
+      }
     },
     {
       "type": "button",
-      "value": "Send",
+      "value": "Submit Feedback",
       "_translations": {
         "value": {}
       },
@@ -178,14 +313,23 @@
           "trigger": "click",
           "action_id": "add_data",
           "args": [],
-          "_raw": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
+          "_raw": "click | add_data | \n_list_id: feedback_data,\ntext: @local.text_feedback,\nwhich_app: @local.which_app,\nwhere: @local.where,\nspecify_location: @local.specify_location,\ntimestamp: @calc(timestamp())",
           "params": {
             "_list_id": "feedback_data",
-            "what_is_going_on": "@local.what_is_going_on",
+            "text": "@local.text_feedback",
             "which_app": "@local.which_app",
             "where": "@local.where",
-            "text_area": "@local.text_area"
+            "specify_location": "@local.specify_location",
+            "timestamp": "@calc(timestamp())"
           }
+        },
+        {
+          "trigger": "click",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "click | emit: completed"
         },
         {
           "trigger": "click",
@@ -197,44 +341,58 @@
           }
         }
       ],
-      "name": "button_12",
-      "_nested_name": "button_12",
+      "parameter_list": {
+        "disabled": "!@local.valid",
+        "style": "flexible"
+      },
+      "style_list": [
+        "margin-bottom: 24px",
+        "padding: 12px 24px"
+      ],
+      "name": "button_16",
+      "_nested_name": "button_16",
       "_dynamicFields": {
         "action_list": {
           "0": {
             "_raw": [
               {
-                "fullExpression": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
-                "matchedExpression": "@local.what_is_going_on",
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\ntext: @local.text_feedback,\nwhich_app: @local.which_app,\nwhere: @local.where,\nspecify_location: @local.specify_location,\ntimestamp: @calc(timestamp())",
+                "matchedExpression": "@local.text_feedback",
                 "type": "local",
-                "fieldName": "what_is_going_on"
+                "fieldName": "text_feedback"
               },
               {
-                "fullExpression": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\ntext: @local.text_feedback,\nwhich_app: @local.which_app,\nwhere: @local.where,\nspecify_location: @local.specify_location,\ntimestamp: @calc(timestamp())",
                 "matchedExpression": "@local.which_app",
                 "type": "local",
                 "fieldName": "which_app"
               },
               {
-                "fullExpression": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\ntext: @local.text_feedback,\nwhich_app: @local.which_app,\nwhere: @local.where,\nspecify_location: @local.specify_location,\ntimestamp: @calc(timestamp())",
                 "matchedExpression": "@local.where",
                 "type": "local",
                 "fieldName": "where"
               },
               {
-                "fullExpression": "click | add_data | \n_list_id: feedback_data,\nwhat_is_going_on: @local.what_is_going_on,\nwhich_app: @local.which_app,\nwhere: @local.where,\ntext_area: @local.text_area",
-                "matchedExpression": "@local.text_area",
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\ntext: @local.text_feedback,\nwhich_app: @local.which_app,\nwhere: @local.where,\nspecify_location: @local.specify_location,\ntimestamp: @calc(timestamp())",
+                "matchedExpression": "@local.specify_location",
                 "type": "local",
-                "fieldName": "text_area"
+                "fieldName": "specify_location"
+              },
+              {
+                "fullExpression": "click | add_data | \n_list_id: feedback_data,\ntext: @local.text_feedback,\nwhich_app: @local.which_app,\nwhere: @local.where,\nspecify_location: @local.specify_location,\ntimestamp: @calc(timestamp())",
+                "matchedExpression": "@calc(timestamp())",
+                "type": "calc",
+                "fieldName": "timestamp()"
               }
             ],
             "params": {
-              "what_is_going_on": [
+              "text": [
                 {
-                  "fullExpression": "@local.what_is_going_on",
-                  "matchedExpression": "@local.what_is_going_on",
+                  "fullExpression": "@local.text_feedback",
+                  "matchedExpression": "@local.text_feedback",
                   "type": "local",
-                  "fieldName": "what_is_going_on"
+                  "fieldName": "text_feedback"
                 }
               ],
               "which_app": [
@@ -253,22 +411,40 @@
                   "fieldName": "where"
                 }
               ],
-              "text_area": [
+              "specify_location": [
                 {
-                  "fullExpression": "@local.text_area",
-                  "matchedExpression": "@local.text_area",
+                  "fullExpression": "@local.specify_location",
+                  "matchedExpression": "@local.specify_location",
                   "type": "local",
-                  "fieldName": "text_area"
+                  "fieldName": "specify_location"
+                }
+              ],
+              "timestamp": [
+                {
+                  "fullExpression": "@calc(timestamp())",
+                  "matchedExpression": "@calc(timestamp())",
+                  "type": "calc",
+                  "fieldName": "timestamp()"
                 }
               ]
             }
           }
+        },
+        "parameter_list": {
+          "disabled": [
+            {
+              "fullExpression": "!@local.valid",
+              "matchedExpression": "!@local.valid",
+              "type": "local",
+              "fieldName": "valid"
+            }
+          ]
         }
       },
       "_dynamicDependencies": {
-        "@local.what_is_going_on": [
+        "@local.text_feedback": [
           "action_list.0._raw",
-          "action_list.0.params.what_is_going_on"
+          "action_list.0.params.text"
         ],
         "@local.which_app": [
           "action_list.0._raw",
@@ -278,9 +454,16 @@
           "action_list.0._raw",
           "action_list.0.params.where"
         ],
-        "@local.text_area": [
+        "@local.specify_location": [
           "action_list.0._raw",
-          "action_list.0.params.text_area"
+          "action_list.0.params.specify_location"
+        ],
+        "@calc(timestamp())": [
+          "action_list.0._raw",
+          "action_list.0.params.timestamp"
+        ],
+        "!@local.valid": [
+          "parameter_list.disabled"
         ]
       }
     }

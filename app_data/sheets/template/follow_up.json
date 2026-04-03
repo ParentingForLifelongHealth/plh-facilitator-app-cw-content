@@ -2834,9 +2834,11 @@
         },
         {
           "type": "button",
-          "value": "Show less",
+          "value": "Show Less",
           "_translations": {
-            "value": {}
+            "value": {
+              "cw_pap": true
+            }
           },
           "action_list": [
             {
