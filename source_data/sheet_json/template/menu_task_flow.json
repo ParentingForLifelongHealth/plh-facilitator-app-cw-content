@@ -71,10 +71,30 @@
       "exclude_from_translation": true
     },
     {
+      "type": "number_parent_groups"
+    },
+    {
+      "type": "data_items",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_local : number_parent_groups: @items.length",
+      "parameter_list": "filter: !@item.archived"
+    },
+    {
       "type": "data_items",
       "value": "@data.parent_groups",
       "action_list": "data_changed | set_field : current_package: @items[0].content_package;",
-      "parameter_list": "filter: @item.name == @local.selected_group;"
+      "parameter_list": "filter: @item.name == @local.selected_group;",
+      "condition": "@local.number_parent_groups >0 "
+    },
+    {
+      "type": "text",
+      "value": "fields.current_group_no = @fields.current_group_no",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "selected_group = @local.selected_group",
+      "condition": false
     },
     {
       "exclude_from_translation": true

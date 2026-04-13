@@ -12,7 +12,7 @@
 | button | 137 |
 | carousel | 2 |
 | combo_box | 17 |
-| data_items | 126 |
+| data_items | 127 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -21,6 +21,7 @@
 | image | 19 |
 | items | 16 |
 | lottie_animation | 8 |
+| number_parent_groups | 1 |
 | pdf | 1 |
 | plh_bottom_nav | 1 |
 | plh_module_list_item | 6 |
@@ -38,7 +39,7 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 386 |
+| text | 388 |
 | text_area | 5 |
 | text_box | 28 |
 | text_bubble | 1 |
@@ -77,7 +78,7 @@
 | set_data | 29 |
 | set_field | 97 |
 | set_item | 13 |
-| set_local | 141 |
+| set_local | 142 |
 | share | 5 |
 | speaker_name | 1 |
 | toast | 3 |
