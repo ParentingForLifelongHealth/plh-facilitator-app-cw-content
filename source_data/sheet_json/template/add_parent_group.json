@@ -14,12 +14,6 @@
       "value": "@global.new_parent_group"
     },
     {
-      "type": "text",
-      "value": "group number: @fields.current_group_no",
-      "condition": false,
-      "exclude_from_translation": true
-    },
-    {
       "type": "begin_template",
       "name": "header",
       "value": "section_header",
@@ -47,12 +41,6 @@
       "name": "text_group_name",
       "value": "@global.group_name",
       "parameter_list": "style: emphasised"
-    },
-    {
-      "type": "text",
-      "value": "before: @fields.current_group_no",
-      "condition": false,
-      "exclude_from_translation": true
     },
     {
       "exclude_from_translation": true

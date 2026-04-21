@@ -66,18 +66,21 @@
     },
     {
       "type": "text",
+      "name": "test1",
       "value": "comp: @local.completed",
       "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
+      "name": "test2",
       "value": "pagecomp: @local.all_pages_complete",
       "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
+      "name": "test3",
       "value": "count: @local.page_count",
       "condition": false,
       "exclude_from_translation": true

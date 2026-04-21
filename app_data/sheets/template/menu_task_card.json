@@ -264,14 +264,14 @@
     },
     {
       "type": "text",
+      "name": "test1",
       "value": "comp: @local.completed",
       "_translations": {
         "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
-      "name": "text_16",
-      "_nested_name": "text_16",
+      "_nested_name": "test1",
       "_dynamicFields": {
         "value": [
           {
@@ -290,14 +290,14 @@
     },
     {
       "type": "text",
+      "name": "test2",
       "value": "pagecomp: @local.all_pages_complete",
       "_translations": {
         "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
-      "name": "text_17",
-      "_nested_name": "text_17",
+      "_nested_name": "test2",
       "_dynamicFields": {
         "value": [
           {
@@ -316,14 +316,14 @@
     },
     {
       "type": "text",
+      "name": "test3",
       "value": "count: @local.page_count",
       "_translations": {
         "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
-      "name": "text_18",
-      "_nested_name": "text_18",
+      "_nested_name": "test3",
       "_dynamicFields": {
         "value": [
           {

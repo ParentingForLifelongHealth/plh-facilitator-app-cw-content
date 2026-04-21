@@ -225,15 +225,10 @@
       "style_list": "padding: 12px 24px;"
     },
     {
-      "name": "no_of_parent_groups",
-      "value": "+@fields.no_of_parent_groups",
-      "exclude_from_translation": false
-    },
-    {
       "type": "button",
       "name": "add_group",
       "value": "@local.create_new_group",
-      "action_list": "click | set_field: no_of_parent_groups: @local.no_of_parent_groups + 1; \nclick | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1;\nclick | set_field: current_group_no: @local.no_of_parent_groups;\nclick | set_field: current_group_name:  ;\nclick | go_to: add_parent_group;",
+      "action_list": "click | set_field: current_group_name:  ;\nclick | go_to: add_parent_group;",
       "parameter_list": "button_align: centre;",
       "exclude_from_translation": false
     },

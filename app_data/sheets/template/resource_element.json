@@ -25,14 +25,14 @@
     },
     {
       "type": "text",
+      "name": "test1",
       "value": "@local.resource_type",
       "_translations": {
         "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
-      "name": "text_4",
-      "_nested_name": "text_4",
+      "_nested_name": "test1",
       "_dynamicFields": {
         "value": [
           {
@@ -51,14 +51,14 @@
     },
     {
       "type": "text",
+      "name": "test2",
       "value": "@local.resource_id",
       "_translations": {
         "value": {}
       },
       "condition": false,
       "exclude_from_translation": true,
-      "name": "text_5",
-      "_nested_name": "text_5",
+      "_nested_name": "test2",
       "_dynamicFields": {
         "value": [
           {
@@ -541,12 +541,6 @@
       }
     },
     {
-      "exclude_from_translation": true,
-      "type": "set_variable",
-      "name": "set_variable_9",
-      "_nested_name": "set_variable_9"
-    },
-    {
       "type": "display_group",
       "condition": "@local.resource_type == \"media\"",
       "exclude_from_translation": true,
@@ -571,9 +565,9 @@
                   "_translations": {
                     "value": {}
                   },
-                  "condition": "@item.type == \"video\"",
+                  "condition": "@item.type == \"youtube\"",
                   "exclude_from_translation": true,
-                  "_nested_name": "display_group_10.data_items_1.display_group_1_@item.id.video",
+                  "_nested_name": "display_group_9.data_items_1.display_group_1_@item.id.video",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -585,7 +579,7 @@
                     ],
                     "condition": [
                       {
-                        "fullExpression": "@item.type == \"video\"",
+                        "fullExpression": "@item.type == \"youtube\"",
                         "matchedExpression": "@item.type",
                         "type": "item",
                         "fieldName": "type"
@@ -593,7 +587,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "display_group_10.data_items_1.display_group_1_@item.id.video",
+                        "fullExpression": "display_group_9.data_items_1.display_group_1_@item.id.video",
                         "matchedExpression": "@item.id.video",
                         "type": "item",
                         "fieldName": "id"
@@ -621,7 +615,7 @@
                   },
                   "condition": "@item.type == \"audio\"",
                   "exclude_from_translation": true,
-                  "_nested_name": "display_group_10.data_items_1.display_group_1_@item.id.audio",
+                  "_nested_name": "display_group_9.data_items_1.display_group_1_@item.id.audio",
                   "_dynamicFields": {
                     "value": [
                       {
@@ -641,7 +635,7 @@
                     ],
                     "_nested_name": [
                       {
-                        "fullExpression": "display_group_10.data_items_1.display_group_1_@item.id.audio",
+                        "fullExpression": "display_group_9.data_items_1.display_group_1_@item.id.audio",
                         "matchedExpression": "@item.id.audio",
                         "type": "item",
                         "fieldName": "id"
@@ -671,11 +665,11 @@
                       ],
                       "exclude_from_translation": true,
                       "name": "text_1",
-                      "_nested_name": "display_group_10.data_items_1.display_group_1_@item.id.display_group_3.text_1",
+                      "_nested_name": "display_group_9.data_items_1.display_group_1_@item.id.display_group_3.text_1",
                       "_dynamicFields": {
                         "_nested_name": [
                           {
-                            "fullExpression": "display_group_10.data_items_1.display_group_1_@item.id.display_group_3.text_1",
+                            "fullExpression": "display_group_9.data_items_1.display_group_1_@item.id.display_group_3.text_1",
                             "matchedExpression": "@item.id.display_group_3.text_1",
                             "type": "item",
                             "fieldName": "id"
@@ -709,7 +703,7 @@
                         "icon_src": "images/icons/download_white.svg"
                       },
                       "exclude_from_translation": true,
-                      "_nested_name": "display_group_10.data_items_1.display_group_1_@item.id.display_group_3.download",
+                      "_nested_name": "display_group_9.data_items_1.display_group_1_@item.id.display_group_3.download",
                       "_dynamicFields": {
                         "action_list": {
                           "0": {
@@ -735,7 +729,7 @@
                         },
                         "_nested_name": [
                           {
-                            "fullExpression": "display_group_10.data_items_1.display_group_1_@item.id.display_group_3.download",
+                            "fullExpression": "display_group_9.data_items_1.display_group_1_@item.id.display_group_3.download",
                             "matchedExpression": "@item.id.display_group_3.download",
                             "type": "item",
                             "fieldName": "id"
@@ -754,11 +748,11 @@
                     }
                   ],
                   "name": "display_group_3",
-                  "_nested_name": "display_group_10.data_items_1.display_group_1_@item.id.display_group_3",
+                  "_nested_name": "display_group_9.data_items_1.display_group_1_@item.id.display_group_3",
                   "_dynamicFields": {
                     "_nested_name": [
                       {
-                        "fullExpression": "display_group_10.data_items_1.display_group_1_@item.id.display_group_3",
+                        "fullExpression": "display_group_9.data_items_1.display_group_1_@item.id.display_group_3",
                         "matchedExpression": "@item.id.display_group_3",
                         "type": "item",
                         "fieldName": "id"
@@ -773,7 +767,7 @@
                 }
               ],
               "name": "display_group_1_@item.id",
-              "_nested_name": "display_group_10.data_items_1.display_group_1_@item.id",
+              "_nested_name": "display_group_9.data_items_1.display_group_1_@item.id",
               "_dynamicFields": {
                 "condition": [
                   {
@@ -799,7 +793,7 @@
                 ],
                 "_nested_name": [
                   {
-                    "fullExpression": "display_group_10.data_items_1.display_group_1_@item.id",
+                    "fullExpression": "display_group_9.data_items_1.display_group_1_@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -819,11 +813,11 @@
             }
           ],
           "name": "data_items_1",
-          "_nested_name": "display_group_10.data_items_1"
+          "_nested_name": "display_group_9.data_items_1"
         }
       ],
-      "name": "display_group_10",
-      "_nested_name": "display_group_10",
+      "name": "display_group_9",
+      "_nested_name": "display_group_9",
       "_dynamicFields": {
         "condition": [
           {
