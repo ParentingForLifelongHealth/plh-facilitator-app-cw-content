@@ -231,13 +231,36 @@
       "name": "text_postfix",
       "value": ".text",
       "_translations": {
-        "value": {
-          "cw_pap": true
-        }
+        "value": {}
       },
-      "exclude_from_translation": false,
+      "exclude_from_translation": true,
       "type": "set_variable",
       "_nested_name": "text_postfix"
+    },
+    {
+      "type": "text",
+      "value": "@local.text_postfix",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "name": "text_11",
+      "_nested_name": "text_11",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.text_postfix",
+            "matchedExpression": "@local.text_postfix",
+            "type": "local",
+            "fieldName": "text_postfix"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.text_postfix": [
+          "value"
+        ]
+      }
     },
     {
       "name": "temp_1",
@@ -491,6 +514,26 @@
       }
     },
     {
+      "value": "Age group:' = 'Grupo di edat:'",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "type": "set_variable",
+      "name": "set_variable_21",
+      "_nested_name": "set_variable_21"
+    },
+    {
+      "value": "Delivery type:' = 'Formato:'",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "type": "set_variable",
+      "name": "set_variable_22",
+      "_nested_name": "set_variable_22"
+    },
+    {
       "type": "template",
       "value": "module_progress",
       "style_list": [
@@ -589,11 +632,11 @@
               "value": "parent_list",
               "rows": [],
               "name": "parent_list",
-              "_nested_name": "tabs_25.tab_1.parent_list"
+              "_nested_name": "tabs_28.tab_1.parent_list"
             }
           ],
           "name": "tab_1",
-          "_nested_name": "tabs_25.tab_1",
+          "_nested_name": "tabs_28.tab_1",
           "_dynamicFields": {
             "value": [
               {
@@ -619,11 +662,11 @@
               "value": "group_actions",
               "rows": [],
               "name": "group_actions",
-              "_nested_name": "tabs_25.tab_2.group_actions"
+              "_nested_name": "tabs_28.tab_2.group_actions"
             }
           ],
           "name": "tab_2",
-          "_nested_name": "tabs_25.tab_2",
+          "_nested_name": "tabs_28.tab_2",
           "_dynamicFields": {
             "value": [
               {
@@ -641,8 +684,8 @@
           }
         }
       ],
-      "name": "tabs_25",
-      "_nested_name": "tabs_25"
+      "name": "tabs_28",
+      "_nested_name": "tabs_28"
     }
   ],
   "_source": {

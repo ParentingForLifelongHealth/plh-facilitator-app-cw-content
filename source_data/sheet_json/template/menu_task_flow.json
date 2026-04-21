@@ -38,6 +38,13 @@
       "exclude_from_translation": true
     },
     {
+      "type": "data_items",
+      "name": "get_current_group_name",
+      "value": "@data.parent_groups",
+      "action_list": "data_changed | set_field : current_group_name: @items.text",
+      "parameter_list": "filter: @fields.current_group_no"
+    },
+    {
       "type": "begin_combo_box",
       "name": "selected_group",
       "value": "@fields.current_group_no",
@@ -71,20 +78,15 @@
       "exclude_from_translation": true
     },
     {
-      "type": "number_parent_groups"
-    },
-    {
-      "type": "data_items",
-      "value": "@data.parent_groups",
-      "action_list": "data_changed | set_local : number_parent_groups: @items.length",
-      "parameter_list": "filter: !@item.archived"
-    },
-    {
       "type": "data_items",
       "value": "@data.parent_groups",
       "action_list": "data_changed | set_field : current_package: @items[0].content_package;",
-      "parameter_list": "filter: @item.name == @local.selected_group;",
-      "condition": "@local.number_parent_groups >0 "
+      "parameter_list": "filter: @item.name == @local.selected_group;"
+    },
+    {
+      "type": "text",
+      "value": "@fields.current_package",
+      "condition": false
     },
     {
       "type": "text",
@@ -97,7 +99,17 @@
       "condition": false
     },
     {
-      "exclude_from_translation": true
+      "type": "text",
+      "value": "@fields.current_group_no == 0",
+      "condition": false,
+      "exclude_from_translation": true,
+      "comments": "@fields.current_group_no == 0"
+    },
+    {
+      "type": "text",
+      "value": "@fields.current_group_no != 0",
+      "condition": false,
+      "comments": "@fields.current_group_no != 0"
     },
     {
       "name": "t_group_data",
@@ -132,7 +144,7 @@
       "type": "begin_display_group",
       "name": "dg_modules",
       "parameter_list": "style: column",
-      "condition": "@local.selected_group && @fields.current_group_no !== \"NULL\"",
+      "condition": "@local.selected_group && @fields.current_group_no != 0",
       "exclude_from_translation": true,
       "style_list": "margin-top: -24px"
     },
@@ -397,7 +409,7 @@
     {
       "type": "begin_display_group",
       "parameter_list": "style: column",
-      "condition": "!@local.selected_group || @fields.current_group_no == \"NULL\"",
+      "condition": "!@local.selected_group || @fields.current_group_no == 0",
       "exclude_from_translation": true
     },
     {

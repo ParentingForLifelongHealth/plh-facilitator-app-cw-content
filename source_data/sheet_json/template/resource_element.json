@@ -15,12 +15,14 @@
     },
     {
       "type": "text",
+      "name": "test1",
       "value": "@local.resource_type",
       "condition": false,
       "exclude_from_translation": true
     },
     {
       "type": "text",
+      "name": "test2",
       "value": "@local.resource_id",
       "condition": false,
       "exclude_from_translation": true
@@ -101,9 +103,6 @@
       "exclude_from_translation": true
     },
     {
-      "exclude_from_translation": true
-    },
-    {
       "type": "begin_display_group",
       "condition": "@local.resource_type == \"media\"",
       "exclude_from_translation": true
@@ -123,7 +122,7 @@
       "type": "video",
       "name": "video",
       "value": "@item.media_asset",
-      "condition": "@item.type == \"video\"",
+      "condition": "@item.type == \"youtube\"",
       "exclude_from_translation": true
     },
     {

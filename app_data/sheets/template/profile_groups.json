@@ -1253,31 +1253,6 @@
       }
     },
     {
-      "name": "no_of_parent_groups",
-      "value": "+@fields.no_of_parent_groups",
-      "_translations": {
-        "value": {}
-      },
-      "exclude_from_translation": false,
-      "type": "set_variable",
-      "_nested_name": "no_of_parent_groups",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "+@fields.no_of_parent_groups",
-            "matchedExpression": "@fields.no_of_parent_groups",
-            "type": "fields",
-            "fieldName": "no_of_parent_groups"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@fields.no_of_parent_groups": [
-          "value"
-        ]
-      }
-    },
-    {
       "type": "display_group",
       "parameter_list": {
         "sticky": "bottom"
@@ -1295,33 +1270,6 @@
             "value": {}
           },
           "action_list": [
-            {
-              "trigger": "click",
-              "action_id": "set_field",
-              "args": [
-                "no_of_parent_groups",
-                "@local.no_of_parent_groups + 1"
-              ],
-              "_raw": "click | set_field: no_of_parent_groups: @local.no_of_parent_groups + 1"
-            },
-            {
-              "trigger": "click",
-              "action_id": "set_local",
-              "args": [
-                "no_of_parent_groups",
-                "@local.no_of_parent_groups + 1"
-              ],
-              "_raw": "click | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1"
-            },
-            {
-              "trigger": "click",
-              "action_id": "set_field",
-              "args": [
-                "current_group_no",
-                "@local.no_of_parent_groups"
-              ],
-              "_raw": "click | set_field: current_group_no: @local.no_of_parent_groups"
-            },
             {
               "trigger": "click",
               "action_id": "set_field",
@@ -1353,81 +1301,11 @@
                 "type": "local",
                 "fieldName": "create_new_group"
               }
-            ],
-            "action_list": {
-              "0": {
-                "args": {
-                  "1": [
-                    {
-                      "fullExpression": "@local.no_of_parent_groups + 1",
-                      "matchedExpression": "@local.no_of_parent_groups",
-                      "type": "local",
-                      "fieldName": "no_of_parent_groups"
-                    }
-                  ]
-                },
-                "_raw": [
-                  {
-                    "fullExpression": "click | set_field: no_of_parent_groups: @local.no_of_parent_groups + 1",
-                    "matchedExpression": "@local.no_of_parent_groups",
-                    "type": "local",
-                    "fieldName": "no_of_parent_groups"
-                  }
-                ]
-              },
-              "1": {
-                "args": {
-                  "1": [
-                    {
-                      "fullExpression": "@local.no_of_parent_groups + 1",
-                      "matchedExpression": "@local.no_of_parent_groups",
-                      "type": "local",
-                      "fieldName": "no_of_parent_groups"
-                    }
-                  ]
-                },
-                "_raw": [
-                  {
-                    "fullExpression": "click | set_local: no_of_parent_groups: @local.no_of_parent_groups + 1",
-                    "matchedExpression": "@local.no_of_parent_groups",
-                    "type": "local",
-                    "fieldName": "no_of_parent_groups"
-                  }
-                ]
-              },
-              "2": {
-                "args": {
-                  "1": [
-                    {
-                      "fullExpression": "@local.no_of_parent_groups",
-                      "matchedExpression": "@local.no_of_parent_groups",
-                      "type": "local",
-                      "fieldName": "no_of_parent_groups"
-                    }
-                  ]
-                },
-                "_raw": [
-                  {
-                    "fullExpression": "click | set_field: current_group_no: @local.no_of_parent_groups",
-                    "matchedExpression": "@local.no_of_parent_groups",
-                    "type": "local",
-                    "fieldName": "no_of_parent_groups"
-                  }
-                ]
-              }
-            }
+            ]
           },
           "_dynamicDependencies": {
             "@local.create_new_group": [
               "value"
-            ],
-            "@local.no_of_parent_groups": [
-              "action_list.0.args.1",
-              "action_list.0._raw",
-              "action_list.1.args.1",
-              "action_list.1._raw",
-              "action_list.2.args.1",
-              "action_list.2._raw"
             ]
           }
         }

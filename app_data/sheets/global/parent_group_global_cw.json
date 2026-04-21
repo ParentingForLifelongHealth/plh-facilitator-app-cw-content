@@ -645,6 +645,11 @@
           "cw_pap": true
         }
       }
+    },
+    {
+      "type": "declare_field_default",
+      "name": "current_group_no",
+      "value": 0
     }
   ],
   "_source": {
