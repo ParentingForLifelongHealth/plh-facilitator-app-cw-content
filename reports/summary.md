@@ -11,8 +11,8 @@
 | audio | 3 |
 | button | 137 |
 | carousel | 2 |
-| combo_box | 17 |
-| data_items | 127 |
+| combo_box | 18 |
+| data_items | 128 |
 | date_time_picker | 3 |
 | debug_toggle | 1 |
 | display_grid | 2 |
@@ -38,7 +38,7 @@
 | task_progress_bar | 4 |
 | template | 168 |
 | test | 1 |
-| text | 388 |
+| text | 390 |
 | text_area | 5 |
 | text_box | 28 |
 | text_bubble | 1 |
@@ -74,8 +74,8 @@
 | reset_app | 4 |
 | reset_data | 3 |
 | save_to_device | 5 |
-| set_data | 29 |
-| set_field | 98 |
+| set_data | 30 |
+| set_field | 99 |
 | set_item | 13 |
 | set_local | 141 |
 | share | 5 |
