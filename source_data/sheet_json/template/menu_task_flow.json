@@ -45,36 +45,90 @@
       "parameter_list": "filter: @fields.current_group_no"
     },
     {
+      "type": "text",
+      "value": "true = @fields.current_group_no == 0",
+      "condition": false,
+      "comments": "@fields.current_group_no == 0"
+    },
+    {
+      "type": "text",
+      "value": "true =  !(@fields.current_group_no == 0)",
+      "condition": false,
+      "comments": "!(@fields.current_group_no == 0)"
+    },
+    {
       "type": "begin_combo_box",
       "name": "selected_group",
       "value": "@fields.current_group_no",
       "action_list": "changed | set_field: current_group_no: this.value;\nchanged | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value};\n",
       "parameter_list": "placeholder: @global.select_group;\ndisabled_text: @global.no_groups;\nvariant: dropdown;\n",
+      "condition": "!(@fields.current_group_no == 0)",
       "exclude_from_translation": true,
-      "style_list": "max-width:90vw;",
-      "comments": "This syntax feels very wrong and against the templating system Johnny McQuade let's find a time to discuss.\n\nchanged | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix@local.selected_group;"
+      "style_list": "max-width:90vw;"
     },
     {
       "type": "begin_data_items",
       "value": "parent_groups",
       "parameter_list": "filter: !@item.archived",
+      "condition": "!(@fields.current_group_no == 0)",
       "exclude_from_translation": true,
       "comments": "Data list should include columns for name and text"
     },
     {
       "type": "end_data_items",
+      "condition": "!(@fields.current_group_no == 0)",
       "exclude_from_translation": true
     },
     {
       "type": "end_combo_box",
+      "condition": "!(@fields.current_group_no == 0)",
       "exclude_from_translation": true
     },
     {
       "type": "end_display_group",
+      "condition": "!(@fields.current_group_no == 0)",
       "exclude_from_translation": true
     },
     {
       "type": "end_display_group",
+      "condition": "!(@fields.current_group_no == 0)",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "begin_combo_box",
+      "name": "selected_group",
+      "action_list": "changed | set_field: current_group_no: this.value;\nchanged | set_data |\n_list_id: sub_items,\ncompleted: @item.@local.completed_prefix{this.value};\n",
+      "parameter_list": "placeholder: @global.select_group;\ndisabled_text: @global.no_groups;\nvariant: dropdown;\n",
+      "condition": "@fields.current_group_no == 0",
+      "exclude_from_translation": true,
+      "style_list": "max-width:90vw;"
+    },
+    {
+      "type": "begin_data_items",
+      "value": "parent_groups",
+      "parameter_list": "filter: !@item.archived",
+      "condition": "@fields.current_group_no == 0",
+      "exclude_from_translation": true,
+      "comments": "Data list should include columns for name and text"
+    },
+    {
+      "type": "end_data_items",
+      "condition": "@fields.current_group_no == 0",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_combo_box",
+      "condition": "@fields.current_group_no == 0",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "condition": "@fields.current_group_no == 0",
+      "exclude_from_translation": true
+    },
+    {
+      "type": "end_display_group",
+      "condition": "@fields.current_group_no == 0",
       "exclude_from_translation": true
     },
     {
