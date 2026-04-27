@@ -90,8 +90,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 140876 KB | 140.9 MB |
-| unused | 10830 KB | 10.8 MB |
+| total | 140874 KB | 140.9 MB |
+| unused | 13602 KB | 13.6 MB |
 </details>
 
 <details open>
@@ -167,6 +167,7 @@ Assets that appear in app-data but do not have references within sheets
 | images/logos/UNICEF.jpg | 27.7 |
 | pdf/module_1_core_lesson_teen_eng.pdf | 821.4 |
 | pdf/module_1_core_lesson_teen_pap.pdf | 825.6 |
+| pdf/module_6_pap.pdf | 2772.2 |
 </details>
 
 <details open>
@@ -282,24 +283,24 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | pdf/individual_consultation_eng.pdf | 770.5 | 1 |
 | pdf/individual_consultation_pap.pdf | 778 | 1 |
 | pdf/module_1_core_lesson_eng.pdf | 848.6 | 1 |
-| pdf/module_1_core_lesson_pap.pdf | 2901.9 | 1 |
+| pdf/module_1_core_lesson_pap.pdf | 2898.7 | 1 |
 | pdf/module_1_core_lesson_yc_eng.pdf | 819.6 | 1 |
 | pdf/module_1_core_lesson_yc_pap.pdf | 815.1 | 1 |
 | pdf/module_1_home_activity_pap.pdf | 778.2 | 1 |
 | pdf/module_1_overview_eng.pdf | 366.2 | 1 |
-| pdf/module_1_overview_pap.pdf | 786.7 | 1 |
+| pdf/module_1_overview_pap.pdf | 786.8 | 1 |
 | pdf/module_1_welcome_eng.pdf | 2287.5 | 1 |
 | pdf/module_1_welcome_pap.pdf | 2632.1 | 1 |
 | pdf/module_6_closing_eng.pdf | 787.5 | 1 |
-| pdf/module_6_closing_pap.pdf | 774.7 | 1 |
+| pdf/module_6_closing_pap.pdf | 775.7 | 1 |
 | pdf/module_6_core_lesson_1_eng.pdf | 743.8 | 1 |
 | pdf/module_6_core_lesson_1_pap.pdf | 743.5 | 1 |
 | pdf/module_6_core_lesson_2_eng.pdf | 761 | 1 |
-| pdf/module_6_core_lesson_2_pap.pdf | 767.3 | 1 |
+| pdf/module_6_core_lesson_2_pap.pdf | 767.4 | 1 |
 | pdf/module_6_welcome_eng.pdf | 723.4 | 1 |
-| pdf/module_6_welcome_pap.pdf | 2643.5 | 1 |
+| pdf/module_6_welcome_pap.pdf | 2643.6 | 1 |
 | pdf/one_on_one_time_development_stages_eng.pdf | 755.2 | 1 |
-| pdf/one_on_one_time_development_stages_pap.pdf | 781.4 | 1 |
+| pdf/one_on_one_time_development_stages_pap.pdf | 781 | 1 |
 </details>
 
 <details >
