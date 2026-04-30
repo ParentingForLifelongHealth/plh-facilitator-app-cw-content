@@ -19,7 +19,8 @@
       "type": "radio_button_grid",
       "name": "language_grid",
       "action_list": "changed | emit: set_language: this.value;\nchanged | emit: completed;\nchanged | set_field: onboarding_language_select_completed: true;",
-      "parameter_list": "answer_list: @local.language_select_options; \nitem_width: 200px;"
+      "parameter_list": "answer_list: @local.language_select_options; \nitem_width: 200px;",
+      "style_list": "margin-top: 48px;"
     },
     {
       "type": "begin_template",

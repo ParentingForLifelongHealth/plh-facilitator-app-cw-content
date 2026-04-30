@@ -132,21 +132,6 @@
     {
       "id": "in_person_session0",
       "foreign_key": "in_person_session",
-      "text_1": "_Only if you are delivering in-person session for your parent group_\n\n- Make sure all materials and venues are prepared in advance of the session.\n\n- Greet caregivers when they arrive at the session.\n\n- Create a safe, comfortable and empathetic space, make them feel welcome with a smile and eye contact.\n\n- Understand the relationship between the parent and their children. Remember that each relationship will be different.\n\n- Remember that every child develops at different speeds and stages. \n\n- Respect what participants share and be aware of different ages, genders, values, and circumstances. \n\n- Encourage caregivers to share and respond to each other - and praise them when they do it!\n\n- Remind caregivers of group rules when needed.\n\n- Notice when a parent is quiet or struggles with something and provides support. \n\n- Model the behaviour you want to see among the mothers, fathers, and caregivers. \n\n- Use energisers to keep live interactions engaging and fun.",
-      "_translations": {
-        "text_1": {
-          "cw_pap": true
-        }
-      },
-      "_translatedFields": {
-        "text_1": {
-          "eng": "_Only if you are delivering in-person session for your parent group_\n\n- Make sure all materials and venues are prepared in advance of the session.\n\n- Greet caregivers when they arrive at the session.\n\n- Create a safe, comfortable and empathetic space, make them feel welcome with a smile and eye contact.\n\n- Understand the relationship between the parent and their children. Remember that each relationship will be different.\n\n- Remember that every child develops at different speeds and stages. \n\n- Respect what participants share and be aware of different ages, genders, values, and circumstances. \n\n- Encourage caregivers to share and respond to each other - and praise them when they do it!\n\n- Remind caregivers of group rules when needed.\n\n- Notice when a parent is quiet or struggles with something and provides support. \n\n- Model the behaviour you want to see among the mothers, fathers, and caregivers. \n\n- Use energisers to keep live interactions engaging and fun."
-        }
-      }
-    },
-    {
-      "id": "prepare0",
-      "foreign_key": "prepare",
       "text_1": "It’s important to be **well prepared**. This shows respect for the parents and will help ensure that they get as much out of the module as they can. \n\nEach module begins with ways you can prepare to deliver a session.\n\nBefore the day begins:\n\n1️⃣ Ensure you know what needs to take place. \n\n2️⃣ On Learn with a Story, Home Practice Reminder and Chat Coming Soon that means thinking through when you will send messages.\n\n3️⃣ On Let’s Connect that means re-reading the module you will be giving, scrolling through messages that parents have sent about home practice (if any) and making sure that you are absolutely clear on what needs to take place. \n\n4️⃣ Go through any notes you have to personalise or direct message parents as necessary. This will also help you to remember what took place and prepare you for the next module.\n\n5️⃣ Ensure that any technology that you need is prepared: Phones charged, videos, recordings and illustration files have been tested and are ready to upload, internet connection secure. Make a back-up plan for any tech failures – including alternative ways to communicate with parents and re-scheduling group sessions if needed.\n\n6️⃣ If you’re creating audio or video files of yourself to upload, make sure that the audio or video message is as clear as possible – they don’t need to be professional, but they do need to communicate clearly! Make sure there’s enough light and that you are clearly visible, don’t change the direction of the video you are shooting (for video), avoid background sounds and speak clearly.",
       "_translations": {
         "text_1": {
@@ -158,6 +143,10 @@
           "eng": "It’s important to be **well prepared**. This shows respect for the parents and will help ensure that they get as much out of the module as they can. \n\nEach module begins with ways you can prepare to deliver a session.\n\nBefore the day begins:\n\n1️⃣ Ensure you know what needs to take place. \n\n2️⃣ On Learn with a Story, Home Practice Reminder and Chat Coming Soon that means thinking through when you will send messages.\n\n3️⃣ On Let’s Connect that means re-reading the module you will be giving, scrolling through messages that parents have sent about home practice (if any) and making sure that you are absolutely clear on what needs to take place. \n\n4️⃣ Go through any notes you have to personalise or direct message parents as necessary. This will also help you to remember what took place and prepare you for the next module.\n\n5️⃣ Ensure that any technology that you need is prepared: Phones charged, videos, recordings and illustration files have been tested and are ready to upload, internet connection secure. Make a back-up plan for any tech failures – including alternative ways to communicate with parents and re-scheduling group sessions if needed.\n\n6️⃣ If you’re creating audio or video files of yourself to upload, make sure that the audio or video message is as clear as possible – they don’t need to be professional, but they do need to communicate clearly! Make sure there’s enough light and that you are clearly visible, don’t change the direction of the video you are shooting (for video), avoid background sounds and speak clearly."
         }
       }
+    },
+    {
+      "id": "prepare0",
+      "foreign_key": "prepare"
     },
     {
       "id": "lesson_content0",

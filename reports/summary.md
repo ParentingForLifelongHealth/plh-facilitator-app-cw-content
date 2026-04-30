@@ -90,8 +90,8 @@
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 140874 KB | 140.9 MB |
-| unused | 13602 KB | 13.6 MB |
+| total | 140531 KB | 140.5 MB |
+| unused | 11955 KB | 12 MB |
 </details>
 
 <details open>
@@ -165,8 +165,6 @@ Assets that appear in app-data but do not have references within sheets
 | images/logos/MK_transparent.png | 7196.8 |
 | images/logos/MK_whitebg.png | 1237.1 |
 | images/logos/UNICEF.jpg | 27.7 |
-| pdf/module_1_core_lesson_teen_eng.pdf | 821.4 |
-| pdf/module_1_core_lesson_teen_pap.pdf | 825.6 |
 | pdf/module_6_pap.pdf | 2772.2 |
 </details>
 
@@ -183,8 +181,6 @@ Assets that have references within sheets but do not appear in app-data
 | images/logos/bird_white.svg | 1 |
 | images/logos/plh_logomark.png | 1 |
 | images/no_group_selected.svg | 1 |
-| pdf/modile_1_core_lesson_teen_eng.pdf | 1 |
-| pdf/modile_1_core_lesson_teen_pap.pdf | 1 |
 | pdf/module_1_home_activity_eng.pdf | 1 |
 </details>
 
@@ -283,7 +279,9 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | pdf/individual_consultation_eng.pdf | 770.5 | 1 |
 | pdf/individual_consultation_pap.pdf | 778 | 1 |
 | pdf/module_1_core_lesson_eng.pdf | 848.6 | 1 |
-| pdf/module_1_core_lesson_pap.pdf | 2898.7 | 1 |
+| pdf/module_1_core_lesson_pap.pdf | 908.5 | 1 |
+| pdf/module_1_core_lesson_teen_eng.pdf | 821.4 | 1 |
+| pdf/module_1_core_lesson_teen_pap.pdf | 825.6 | 1 |
 | pdf/module_1_core_lesson_yc_eng.pdf | 819.6 | 1 |
 | pdf/module_1_core_lesson_yc_pap.pdf | 815.1 | 1 |
 | pdf/module_1_home_activity_pap.pdf | 778.2 | 1 |
