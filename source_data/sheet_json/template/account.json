@@ -38,7 +38,7 @@
       "name": "button_apple_sign_in",
       "value": "@global.login_apple",
       "action_list": "click | emit: force_reprocess;\nclick | set_local: just_logged_in: true",
-      "condition": "@fields._platform === \"ios\" || @fields._operating_system === \"ios\" || @fields._operating_system === \"mac\""
+      "condition": "@fields._platform === \"ios\" || @fields._operating_system === \"ios\""
     },
     {
       "type": "google_sign_in_button",
@@ -125,7 +125,7 @@
       "type": "begin_data_items",
       "name": "find_last_synced_id",
       "value": "_auth_profiles",
-      "condition": "@local.just_logged_in && !@global.login_is_mandatory",
+      "condition": "@local.just_logged_in",
       "parameter_list": "sort: updatedAt;\nreverse;\nlimit: 1"
     },
     {
