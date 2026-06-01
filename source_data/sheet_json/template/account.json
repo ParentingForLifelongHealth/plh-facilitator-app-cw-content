@@ -38,7 +38,7 @@
       "name": "button_apple_sign_in",
       "value": "@global.login_apple",
       "action_list": "click | emit: force_reprocess;\nclick | set_local: just_logged_in: true",
-      "condition": "@fields._platform === \"ios\" || @fields._operating_system === \"ios\""
+      "condition": "@fields._platform === \"ios\" || @fields._operating_system === \"ios\"  || !@fields._user_mode"
     },
     {
       "type": "google_sign_in_button",
