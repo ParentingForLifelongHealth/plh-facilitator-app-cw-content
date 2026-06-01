@@ -28,11 +28,11 @@
     },
     {
       "name": "copy",
-      "value": "Copy code"
+      "value": "@global.user_id_copy_code"
     },
     {
       "name": "copied",
-      "value": "Copied!"
+      "value": "@global.user_id_copied"
     },
     {
       "type": "title",
@@ -60,7 +60,7 @@
     {
       "type": "text",
       "name": "last_sync_text",
-      "value": "Last sync at: @local.sync_latest"
+      "value": "@global.user_id_last_sync"
     },
     {
       "type": "end_display_group"
@@ -74,7 +74,7 @@
     {
       "type": "text",
       "name": "not_synced_text",
-      "value": "This device has never been synced. Sync to reveal your code."
+      "value": "@global.user_id_never_synced"
     },
     {
       "type": "end_display_group"
@@ -82,14 +82,14 @@
     {
       "type": "button",
       "name": "sync_button",
-      "value": "Sync now",
+      "value": "@global.user_id_sync_button",
       "action_list": "click | set_local: sync_status: \"syncing...\";\nclick | set_local: sync_status: \"syncing...\";\nclick | emit: force_reprocess;\nclick | emit: server_sync;\nclick | set_local: sync_status: ;\nclick | set_local: sync_button_clicked: true;\nclick | emit: force_reprocess;",
       "condition": "!@local.sync_status"
     },
     {
       "type": "button",
       "name": "sync_button_disabled",
-      "value": "Syncing...",
+      "value": "@global.user_id_syncing",
       "condition": "@local.sync_status",
       "parameter_list": "disabled:true"
     }
