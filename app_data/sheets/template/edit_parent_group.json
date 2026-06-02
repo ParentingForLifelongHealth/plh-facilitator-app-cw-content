@@ -243,7 +243,9 @@
       "name": "text_postfix",
       "value": ".text",
       "_translations": {
-        "value": {}
+        "value": {
+          "cw_pap": true
+        }
       },
       "type": "set_variable",
       "_nested_name": "text_postfix"
