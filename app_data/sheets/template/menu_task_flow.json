@@ -64,6 +64,9 @@
                 "variant": "page_banner"
               },
               "exclude_from_translation": true,
+              "style_list": [
+                "word-break: break-word"
+              ],
               "_nested_name": "dg_top.dg_top_column.label_group",
               "_dynamicFields": {
                 "value": [
