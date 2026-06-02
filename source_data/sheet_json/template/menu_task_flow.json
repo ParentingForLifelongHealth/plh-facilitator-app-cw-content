@@ -35,7 +35,8 @@
       "name": "label_group",
       "value": "@global.main_menu_title",
       "parameter_list": "variant: page_banner",
-      "exclude_from_translation": true
+      "exclude_from_translation": true,
+      "style_list": "word-break: break-word;"
     },
     {
       "type": "data_items",
