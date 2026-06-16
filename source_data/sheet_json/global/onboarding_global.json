@@ -11,8 +11,13 @@
     },
     {
       "type": "declare_global_constant",
-      "name": "has_remote_language_specific_assets",
+      "name": "has_remote_assets",
       "value": false
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "asset_pack_id",
+      "value": "assets_@fields._app_language"
     },
     {
       "type": "declare_global_constant",
