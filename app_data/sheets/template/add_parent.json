@@ -55,7 +55,7 @@
     },
     {
       "type": "text",
-      "value": "fields pcurrent parent no = @fields.current_parent_no",
+      "value": "fields pcurrent parent no = @fields.current_parent_no TEST",
       "_translations": {
         "value": {}
       },
@@ -65,7 +65,7 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "fields pcurrent parent no = @fields.current_parent_no",
+            "fullExpression": "fields pcurrent parent no = @fields.current_parent_no TEST",
             "matchedExpression": "@fields.current_parent_no",
             "type": "fields",
             "fieldName": "current_parent_no"
